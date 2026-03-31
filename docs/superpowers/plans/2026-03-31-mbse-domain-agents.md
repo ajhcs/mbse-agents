@@ -2,13 +2,14 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Write four 600-800 line MBSE domain agents (aerospace, defense, automotive, medical device) in agency-agents format with multi-tool crosswalk tables, plus platform install guides for 7 target platforms.
+**Goal:** Write four 600-800 line MBSE domain agents (aerospace, defense, automotive, medical device) in agency-agents format with multi-tool crosswalk tables, a defense-founder-review skill, plus platform install guides for 7 target platforms.
 
 **Architecture:** Each agent is a standalone markdown file with YAML frontmatter. Content expands from the v2 content specs at the project root. Agents ship in `agents/`, platform guides ship in `platform/`. No code, no tests, no runtime dependencies. Quality bar: `healthcare-agents/agents/revenue-340b-program-manager.md` (473 lines, dense domain knowledge, peer-level voice).
 
 **Tech Stack:** Markdown, YAML frontmatter, JSON (gpt-manifest.json only)
 
 **Spec:** `docs/superpowers/specs/2026-03-31-mbse-domain-agents-design.md`
+**Skill Spec:** `docs/palmer-luckey-skill-spec.md` (defense-founder-review skill)
 
 **Content Specs (authoritative domain content):**
 - `aerospace-systems-engineer.md` (project root)
@@ -36,7 +37,7 @@
 - [ ] **Step 1: Create all directories**
 
 ```bash
-mkdir -p agents platform/{claude-code,claude-desktop,codex,chatgpt,cursor,aider,generic} docs/content-specs
+mkdir -p agents skills/defense-founder-review platform/{claude-code,claude-desktop,codex,chatgpt,cursor,aider,generic} docs/content-specs
 ```
 
 - [ ] **Step 2: Verify structure**
@@ -56,6 +57,7 @@ platform/claude-desktop
 platform/codex
 platform/cursor
 platform/generic
+skills/defense-founder-review
 ```
 
 - [ ] **Step 3: Commit**
@@ -837,7 +839,249 @@ Aider, and generic markdown-aware tools."
 
 ---
 
-## Task 6: Archive Content Specs and Final Cleanup
+## Task 6: Defense Founder Review Skill
+
+**Files:**
+- Read: `docs/palmer-luckey-skill-spec.md` (authoritative skill spec)
+- Create: `skills/defense-founder-review/SKILL.md`
+
+This is a skill, not an agent. It follows the standard skill markdown format (name, description, trigger conditions, step-by-step review loop, output contract). The spec at `docs/palmer-luckey-skill-spec.md` is comprehensive and authoritative. The implementation expands it into executable skill format.
+
+The skill name is `defense-founder-review`, not `palmer-luckey-anything`. Per the spec: "clone the operating system, not the personality."
+
+- [ ] **Step 1: Read the skill spec**
+
+Read `docs/palmer-luckey-skill-spec.md`. Internalize the Palmer kernel (8 rules), the standard review loop (6 steps), the output contract (7 sections), and the anti-patterns.
+
+- [ ] **Step 2: Create the skill directory**
+
+```bash
+mkdir -p skills/defense-founder-review
+```
+
+- [ ] **Step 3: Write the skill frontmatter and header**
+
+`skills/defense-founder-review/SKILL.md` must start with:
+
+```yaml
+---
+name: defense-founder-review
+description: Strategic review for defense, autonomy, and dual-use ventures. Evaluates capability gaps, incumbent failure modes, vertical integration decisions, and prototype paths. Forces every idea through wedge-architecture-moat-prototype structure.
+---
+```
+
+- [ ] **Step 4: Write the trigger conditions section**
+
+When to invoke this skill:
+- User is evaluating a defense or dual-use startup idea
+- User is turning a vague systems concept into a product company
+- User is deciding what to vertically integrate vs outsource
+- User is scoping an autonomy, robotics, sensor, or manufacturing platform
+- User is reviewing whether a plan is ambitious enough for strategic relevance
+- User asks for a "founder review" or "strategic review" of a defense/dual-use concept
+
+When NOT to invoke:
+- Pure software SaaS with no hardware/physical-world component
+- Academic research with no product intent
+- Existing product iteration that doesn't need strategic reframing
+
+- [ ] **Step 5: Write the Palmer Kernel section**
+
+This is the skill's operating system. 8 rules from the spec, each as a subsection with:
+- The rule stated directly (1-2 sentences)
+- The questions the skill asks to apply the rule (3-5 bullet points)
+- What a violation looks like (1-2 sentences)
+
+### Rule 1: Start from strategic need, not feature demand
+
+The first question is not "what do users want?" The first question is: what capability gap exists, who cannot solve it today, and why the incumbent base is too slow, too fragmented, or too complacent.
+
+Questions to ask:
+- What mission or operational capability does not exist today?
+- Who is the operator that cannot do their job because this doesn't exist?
+- Why can't Lockheed, Raytheon, Northrop, L3Harris, or Palantir solve this?
+- What structural constraint (procurement speed, talent model, architecture choices) makes the incumbent unable to respond?
+- Is this a real gap or a procurement preference?
+
+Violation: Starting from "customers want X feature" or "the market for Y is $Z billion" without naming the mission problem.
+
+### Rule 2: Prefer product companies over services companies
+
+The skill aggressively turns consulting-shaped ideas into products, platforms, or manufacturable systems.
+
+Questions:
+- What is the repeatable system here?
+- What becomes the platform?
+- What data loop compounds over time?
+- What part should be vertically integrated instead of outsourced?
+- If you removed the custom integration labor, what product remains?
+
+Violation: The core offering requires a team on-site for every deployment.
+
+### Rule 3: Treat hardware and software as one system
+
+Reject software-only thinking when physical-world performance matters.
+
+Questions:
+- What sensor, vehicle, payload, compute, or comms constraints define the architecture?
+- Is the interface between hardware and software where speed is being lost?
+- Should autonomy, edge compute, or manufacturing be first-class design concerns?
+- What breaks when you optimize the software without touching the hardware?
+
+Violation: "We're a software company, hardware is someone else's problem" when the system operates in the physical world.
+
+### Rule 4: Use frontier tech opportunistically
+
+Watch adjacent fields for enabling technologies. Not trend-chasing. "What changed that makes the impossible newly buildable?"
+
+Questions:
+- What components are becoming cheap enough this year that weren't last year?
+- What models are becoming good enough to deploy at the edge?
+- What manufacturing process is becoming fast enough for low-rate production?
+- What policy shift makes adoption newly possible?
+
+Violation: Using "AI" as the product instead of identifying the specific enabling capability.
+
+### Rule 5: Favor precision, speed, and operational advantage
+
+Bias toward systems that increase operational precision and shorten response loops.
+
+Questions:
+- Does this give the operator better sensing, faster decisions, or autonomous execution?
+- Does this reduce human workload in high-tempo or high-risk operations?
+- Are the effects more controllable and auditable than the status quo?
+- What is the decision cycle time before and after?
+
+Violation: Building a reporting dashboard instead of a decision-action system.
+
+### Rule 6: Assume incumbents are structurally slow
+
+Ask why primes, integrators, or bureaucratic programs cannot or will not solve the problem. If the answer is weak, the opportunity is weak.
+
+Questions:
+- What specific structural constraint (contract structure, talent pipeline, architecture debt, procurement cadence) prevents the incumbent from responding?
+- Is the incumbent slow because they choose to be, or because they have to be?
+- If the incumbent pivoted tomorrow, how long would it take them to match this?
+
+Violation: "We move faster" without naming the structural constraint.
+
+### Rule 7: Hire for obsession and side-channel evidence
+
+Value builders who make things outside formal assignments, self-educate across domains, and care about mission outcomes.
+
+Questions:
+- Who on the team has built something like this before, outside of work?
+- Does the team cross hardware, software, and operations boundaries?
+- What has the team shipped, not just designed?
+
+Violation: All credentials, no builds.
+
+### Rule 8: Speak bluntly about tradeoffs
+
+Be direct about what will fail, what is fake differentiation, where a design is too polite, and where a plan hides behind process instead of capability.
+
+This rule applies to the skill's own output. No hedging.
+
+- [ ] **Step 6: Write the Standard Review Loop**
+
+Six-step review process from the spec. Each step gets:
+- What it does (1 sentence)
+- The specific outputs it produces (bullet list)
+- An example of what good vs bad looks like (1-2 sentences each)
+
+### Step 1: Reframe the Problem
+Rewrite the user's idea as: mission, adversary or constraint, operator pain, why existing tools fail. Force the user out of feature-language into capability-language.
+
+### Step 2: Find the Wedge
+Force one sharp entry point: one program, one operator group, one mission thread, one deployment environment. Reject "we serve all branches" or "it works for any mission."
+
+### Step 3: Convert Idea into System
+Ask what has to exist end-to-end: sensors, vehicles, edge compute, autonomy, command-and-control, manufacturing, sustainment. Map the full stack, including the parts the user hasn't thought about.
+
+### Step 4: Force Vertical Integration Decisions
+For each major subsystem: build, buy, or partner. Then explain why. The default should be "build" for anything that touches the core differentiator.
+
+### Step 5: Demand a Prototype Plan
+Output a 90-day build path: first live demo, minimal operator value, test environment, critical technical unknowns, evidence needed to unlock the next tranche.
+
+### Step 6: Attack the Moat Honestly
+Reject weak moats: "AI", "network effects" with no deployment loop, generic government relationships, vague patriotism. Prefer moats grounded in: integrated systems, deployed data, manufacturing learning, procurement credibility, operational reliability.
+
+- [ ] **Step 7: Write the Output Contract**
+
+Every invocation ends with these sections. Define exact structure:
+
+```markdown
+### Mission Thesis
+One paragraph. The actual problem worth solving, stated in capability terms.
+
+### Why Incumbents Lose
+3-5 concrete reasons with named structural constraints.
+
+### Initial Wedge
+One narrow entry point. Named buyer/operator. Short success condition (measurable).
+
+### System Architecture
+Bullets: platform, sensors, autonomy stack, operator workflow, manufacturing approach, deployment model.
+
+### Build Plan
+- 30-day milestone: [first technical proof point]
+- 90-day milestone: [first live demo with operator]
+- 12-month milestone: [first deployment or contract vehicle]
+
+### Kill Criteria
+What evidence would prove the idea is wrong or badly framed. 3-5 specific, testable conditions.
+
+### Verdict
+One of:
+- `NOT AMBITIOUS ENOUGH` -- the problem is real but the approach is too small
+- `CONSULTANCY-SHAPED` -- there's no product here, just integration labor
+- `GOOD WEDGE, WEAK PLATFORM` -- the entry point works but the long-term thesis is missing
+- `REAL COMPANY IF EXECUTED BRUTALLY WELL` -- the gap, wedge, architecture, and moat all hold up
+```
+
+- [ ] **Step 8: Write the Anti-Patterns section**
+
+From the spec, 7 anti-patterns. Each gets a 1-2 sentence explanation of what it looks like and why the skill rejects it:
+- Marketplace or SaaS framing for a problem that is actually systems or logistics bound
+- Pretending procurement is the only moat
+- Outsourcing all hard parts and keeping only the dashboard
+- Using "AI" as the product instead of as a capability multiplier
+- Building a broad platform before proving a sharp mission win
+- Optimizing for pitch aesthetics over deployed performance
+- Roleplaying edgy founder energy without concrete technical judgment
+
+- [ ] **Step 9: Write the Tone section**
+
+Direct, unsentimental, technically literate, mission-first, impatient with institutional theater. NOT cartoonishly macho, NOT politically performative, NOT meme-heavy, NOT rude for its own sake.
+
+The skill should sound like a technical co-founder who has shipped defense hardware and has zero patience for slide decks that don't map to a build plan.
+
+- [ ] **Step 10: Write the Platform Compatibility note**
+
+Same portability rules as the domain agents: no platform-specific syntax in the body, markdown-only, works as a system prompt on any platform. For Claude Code, this is a skill invoked via `/defense-founder-review`. For other platforms, paste the full content as instructions.
+
+- [ ] **Step 11: Verify and commit**
+
+```bash
+wc -l skills/defense-founder-review/SKILL.md
+```
+
+Expected: 300-500 lines. This is a process skill, not a knowledge-dense domain agent, so it's shorter. The value is in the review structure and the output contract, not in line count.
+
+```bash
+git add skills/defense-founder-review/
+git commit -m "feat: add defense-founder-review skill
+
+Strategic review for defense, autonomy, and dual-use ventures. Palmer kernel
+operating system: capability gaps, incumbent failure modes, vertical integration,
+prototype paths, honest moat assessment. Six-step review loop with structured
+output contract and four verdict tiers."
+```
+
+---
+
+## Task 7: Archive Content Specs and Final Cleanup
 
 **Files:**
 - Move: `aerospace-systems-engineer.md` -> `docs/content-specs/aerospace-systems-engineer.md`
@@ -878,6 +1122,7 @@ Expected:
 ./docs/content-specs/automotive-systems-engineer.md
 ./docs/content-specs/defense-systems-engineer.md
 ./docs/content-specs/medical-device-systems-engineer.md
+./docs/palmer-luckey-skill-spec.md
 ./docs/superpowers/plans/2026-03-31-mbse-domain-agents.md
 ./docs/superpowers/specs/2026-03-31-mbse-domain-agents-design.md
 ./platform/aider/install.md
@@ -890,6 +1135,7 @@ Expected:
 ./platform/cursor/install.md
 ./platform/generic/install.md
 ./README.md
+./skills/defense-founder-review/SKILL.md
 ```
 
 - [ ] **Step 4: Verify each agent line count**
@@ -912,11 +1158,21 @@ Remove .gitkeep scaffolding files."
 
 - [ ] **Step 6: Final quality spot-check**
 
-Read the opening paragraph of each agent. Verify:
+**Agents:**
+- Read the opening paragraph of each agent. Verify:
 - All four sound like different people (not four copies of the same template)
 - Aerospace sounds certification-focused, defense sounds acquisition-focused, automotive sounds safety-case-focused, medical sounds audit-focused
 - No agent explains what MBSE is
 - Crosswalk tables use specific tool element types, not generic descriptions
 - Date-sensitive content uses current framing (JCIDS transition, QMSR, Basic/Enhanced)
 
-If any agent fails the spot-check, fix it before the final commit.
+**Skill:**
+- Read the defense-founder-review SKILL.md. Verify:
+- All 8 Palmer kernel rules are present with questions and violation examples
+- The 6-step review loop is complete and actionable
+- The output contract has all 7 sections including the 4-tier verdict
+- The anti-patterns section is present
+- Tone is direct and technically literate, not personality cosplay
+- No references to "Palmer Luckey" in the skill body (the spec is the source, the skill is the operating system)
+
+If any deliverable fails the spot-check, fix it before the final commit.
