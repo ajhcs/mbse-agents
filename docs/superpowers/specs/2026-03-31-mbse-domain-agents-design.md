@@ -258,9 +258,7 @@ framing as default, with legacy knowledge retained for context:
   Level of Concern terminology. Legacy terminology retained for old template
   compatibility.
 
-## File Placement
-
-Agents ship in an `agents/` directory at the project root:
+## File Placement and Project Structure
 
 ```
 agents/
@@ -268,11 +266,179 @@ agents/
   defense-systems-engineer.md
   automotive-systems-engineer.md
   medical-device-systems-engineer.md
+platform/
+  claude-code/
+    install.md              # Instructions for ~/.claude/agents/ symlink or copy
+    AGENTS.md               # Optional AGENTS.md snippet for project-level loading
+  claude-desktop/
+    install.md              # Instructions for project knowledge or MCP config
+  codex/
+    install.md              # Instructions for AGENTS.md or codex instructions
+  chatgpt/
+    install.md              # Custom GPT creation instructions
+    gpt-manifest.json       # GPT action schema (metadata only, no API)
+  cursor/
+    install.md              # .cursorrules integration
+  aider/
+    install.md              # .aider.conf.yml conventions file integration
+  generic/
+    install.md              # Any tool that reads markdown system prompts
 ```
 
 The current content specs at the project root will be consumed during
 implementation. After the full agents are written, move the content specs to
 `docs/content-specs/` for reference. Do not delete them.
+
+## Platform Compatibility
+
+The agents are plain markdown with YAML frontmatter. The body content (everything
+below the frontmatter closing `---`) is the system prompt. Every platform that
+accepts a markdown system prompt can use these agents directly. The frontmatter
+provides structured metadata that some platforms use and others ignore.
+
+### Design Principles for Portability
+
+1. **No platform-specific syntax in the body.** No Claude XML tags, no OpenAI
+   function-calling schema, no tool-use directives embedded in the agent content.
+   The agents are pure domain knowledge and behavior instructions.
+
+2. **Frontmatter is additive metadata.** Platforms that parse YAML frontmatter
+   (Claude Code, agency-agents) use it. Platforms that don't (Codex, ChatGPT)
+   ignore it. The agent works either way.
+
+3. **No tool dependencies in core content.** The crosswalk tables, standards
+   knowledge, and review logic don't assume any specific MCP server, function
+   call, or plugin is available. Tool integrations (Capella MCP, Cameo API) are
+   future skills that compose WITH these agents, not baked into them.
+
+4. **Markdown tables are universal.** Every platform renders markdown tables.
+   The crosswalk tables work in Claude, ChatGPT, Codex, Cursor, and plain text.
+
+### Platform Loading Guide
+
+#### Claude Code (CLI, Desktop App, Web, IDE Extensions)
+
+Primary target. Full agency-agents support.
+
+```bash
+# Option A: Project-level (recommended for team use)
+# Place agents/ directory in project root
+# Add to AGENTS.md or CLAUDE.md:
+#   "Use the aerospace-systems-engineer agent for aerospace MBSE work"
+
+# Option B: User-level (personal install)
+cp agents/*.md ~/.claude/agents/
+```
+
+Claude Code reads YAML frontmatter natively. The `name`, `description`, `color`,
+`emoji`, and `vibe` fields are used for agent selection and display. Agents are
+available via `subagent_type` in the Agent tool using their `name` field value
+(e.g., `subagent_type="Aerospace Systems Engineer"`).
+
+#### Claude Desktop (Projects / MCP)
+
+```
+# Add agent files as project knowledge in Claude Desktop:
+# Settings > Projects > [Project] > Add files > select agent .md files
+#
+# Or reference via MCP filesystem server:
+# Configure claude_desktop_config.json to serve the agents/ directory
+```
+
+Claude Desktop uses the full markdown content as context. Frontmatter is
+treated as document metadata. The agent's identity paragraph and sections
+function as behavioral instructions.
+
+#### OpenAI Codex CLI
+
+```bash
+# Option A: AGENTS.md reference
+# Add to AGENTS.md in project root:
+#   "For aerospace MBSE work, read agents/aerospace-systems-engineer.md
+#    and follow its instructions as your system prompt."
+
+# Option B: Direct instruction
+codex exec "Read agents/aerospace-systems-engineer.md and act as that agent. \
+  Then help me with [task]" -C .
+```
+
+Codex ignores YAML frontmatter (treats it as document header). The markdown
+body works as a system prompt. Codex can read the file from disk during
+execution in read-only or full-auto mode.
+
+#### ChatGPT (Custom GPTs)
+
+```
+# Create a Custom GPT per agent:
+# 1. Go to ChatGPT > Explore GPTs > Create
+# 2. Paste the agent markdown (below frontmatter) as the Instructions
+# 3. Set the GPT name, description, and icon from the frontmatter fields
+# 4. No Actions needed (agents are knowledge-only, no API calls)
+#
+# For ChatGPT Teams/Enterprise:
+# Upload agent files as Knowledge in the GPT builder
+```
+
+The `gpt-manifest.json` in `platform/chatgpt/` provides a template for the
+GPT metadata fields derived from frontmatter (name, description, emoji).
+
+#### Cursor / Windsurf / VS Code AI Extensions
+
+```
+# Option A: .cursorrules / .windsurfrules
+# Append agent content to the project rules file:
+cat agents/aerospace-systems-engineer.md >> .cursorrules
+
+# Option B: Context file
+# Add agents/ directory to the AI context in settings
+# Cursor: Settings > AI > Context > Add folder > agents/
+```
+
+These editors read markdown context files. The agent body works as behavioral
+instructions. Frontmatter is ignored but harmless.
+
+#### Aider
+
+```yaml
+# .aider.conf.yml
+read:
+  - agents/aerospace-systems-engineer.md
+```
+
+Aider loads referenced files as read-only context. The agent's full content
+becomes part of the system context for the session.
+
+#### Generic (Any Markdown-Aware Tool)
+
+Any tool that accepts a markdown file as a system prompt, persona definition,
+or context file can use these agents. Strip the YAML frontmatter if the tool
+chokes on it:
+
+```bash
+# Strip frontmatter for tools that don't handle YAML
+sed '1{/^---$/!q;};1,/^---$/d' agents/aerospace-systems-engineer.md
+```
+
+### Frontmatter Field Compatibility
+
+| Field | Claude Code | Claude Desktop | Codex | ChatGPT GPT | Cursor | Aider |
+|-------|-------------|----------------|-------|-------------|--------|-------|
+| `name` | Agent selector | Display name | Ignored | GPT name | Ignored | Ignored |
+| `description` | Agent matching | Context | Ignored | GPT description | Ignored | Ignored |
+| `color` | Display | Ignored | Ignored | Ignored | Ignored | Ignored |
+| `emoji` | Display | Ignored | Ignored | GPT icon hint | Ignored | Ignored |
+| `vibe` | Display | Context | Ignored | GPT intro | Ignored | Ignored |
+| `services` | Reference | Reference | Ignored | Ignored | Ignored | Ignored |
+| Body (markdown) | System prompt | Context | System prompt | Instructions | Rules | Context |
+
+### What This Means for Implementation
+
+The agent markdown files are written once and work everywhere. The `platform/`
+directory contains installation instructions per platform, not separate versions
+of the agents. There is exactly one source of truth per agent.
+
+If a platform needs a derived artifact (e.g., `gpt-manifest.json` for ChatGPT),
+that artifact is generated from the frontmatter, not maintained separately.
 
 ## Future Skills (Out of Scope)
 
@@ -292,3 +458,6 @@ These are not part of this spec. They will get their own design cycle.
 4. Date-sensitive content uses current regulatory framing
 5. Agents follow agency-agents conventions exactly (frontmatter, structure, voice)
 6. Each agent is 600-800 lines
+7. Agents load and function correctly on Claude Code, Codex CLI, Claude Desktop,
+   ChatGPT Custom GPTs, Cursor, and Aider without modification to the source files
+8. Platform install guides are tested and accurate for each target platform
