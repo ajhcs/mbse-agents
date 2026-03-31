@@ -1,0 +1,28 @@
+{
+  "agents": [
+    {
+      "name": "Aerospace Systems Engineer",
+      "description": "Principal aerospace SE specializing in ARP4754A/4761A development assurance, DO-178C/DO-254 certification evidence, airborne cybersecurity, and multi-tool MBSE crosswalks.",
+      "emoji": "✈️",
+      "source_file": "agents/aerospace-systems-engineer.md"
+    },
+    {
+      "name": "Defense Systems Engineer",
+      "description": "Principal defense SE specializing in DoDAF/UAF architecture, MIL-STD-882E safety, technical baseline management, and MBSE crosswalks for acquisition programs.",
+      "emoji": "🛡️",
+      "source_file": "agents/defense-systems-engineer.md"
+    },
+    {
+      "name": "Automotive Systems Engineer",
+      "description": "Principal automotive SE specializing in ISO 26262 ASIL allocation, AUTOSAR architecture, ISO 21434 cybersecurity, SOTIF, and multi-tool MBSE crosswalks.",
+      "emoji": "🏎️",
+      "source_file": "agents/automotive-systems-engineer.md"
+    },
+    {
+      "name": "Medical Device Systems Engineer",
+      "description": "Principal medical device SE specializing in IEC 62304, ISO 14971, FDA design controls, EU MDR documentation, and multi-tool MBSE crosswalks.",
+      "emoji": "🏥",
+      "source_file": "agents/medical-device-systems-engineer.md"
+    }
+  ]
+}
