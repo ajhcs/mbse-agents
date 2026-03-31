@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 120" fill="none">
+  <defs>
+    <linearGradient id="accent-dark" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon: layered system diagram -->
+  <g transform="translate(12, 16)">
+    <!-- Outer hexagon -->
+    <polygon points="44,4 78,24 78,64 44,84 10,64 10,24" stroke="#60A5FA" stroke-width="2.5" fill="none" opacity="0.5"/>
+    <!-- Inner hexagon -->
+    <polygon points="44,20 64,32 64,56 44,68 24,56 24,32" stroke="#93C5FD" stroke-width="2" fill="none" opacity="0.7"/>
+    <!-- Center node -->
+    <circle cx="44" cy="44" r="8" fill="url(#accent-dark)"/>
+    <!-- Connection lines -->
+    <line x1="44" y1="36" x2="44" y2="20" stroke="#93C5FD" stroke-width="1.5" opacity="0.6"/>
+    <line x1="50" y1="48" x2="64" y2="56" stroke="#93C5FD" stroke-width="1.5" opacity="0.6"/>
+    <line x1="38" y1="48" x2="24" y2="56" stroke="#93C5FD" stroke-width="1.5" opacity="0.6"/>
+    <!-- Corner nodes -->
+    <circle cx="44" cy="20" r="3.5" fill="#93C5FD" opacity="0.8"/>
+    <circle cx="64" cy="56" r="3.5" fill="#93C5FD" opacity="0.8"/>
+    <circle cx="24" cy="56" r="3.5" fill="#93C5FD" opacity="0.8"/>
+  </g>
+  <!-- Text -->
+  <text x="112" y="62" font-family="'SF Mono', 'Cascadia Code', 'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="48" font-weight="700" fill="#F1F5F9" letter-spacing="-1">
+    MBSE
+  </text>
+  <text x="295" y="62" font-family="'SF Mono', 'Cascadia Code', 'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="48" font-weight="400" fill="#94A3B8" letter-spacing="-1">
+    Agents
+  </text>
+  <!-- Tagline -->
+  <text x="114" y="92" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#64748B" letter-spacing="0.5">
+    Practitioner-grade systems engineering knowledge for AI assistants
+  </text>
+</svg>
