@@ -18,17 +18,19 @@ cp -r agents/ /path/to/your-project/agents/
 
 ## Direct Execution
 
-Run an agent's instructions directly with `codex exec`:
+Run `codex exec` from the project root and tell Codex which files to read:
 
 ```bash
-# Feed an agent file as context for a task
-codex exec --file agents/aerospace-systems-engineer.md \
-  "Review this SysML model for ARP4754A compliance"
+# Run from the repository root so Codex can read the referenced files
+cd /path/to/your-project
 
-# Combine with a specific file
-codex exec --file agents/defense-systems-engineer.md \
-  --file docs/architecture.md \
-  "Map this architecture to DoDAF OV-1 and SV-1 views"
+# Ask Codex to read the agent file and apply it to your artifact
+codex exec \
+  "Read agents/aerospace-systems-engineer.md, then review docs/model.md for ARP4754A compliance."
+
+# Or point Codex at a different working directory explicitly
+codex exec -C /path/to/your-project \
+  "Read agents/defense-systems-engineer.md and docs/architecture.md, then map this architecture to DoDAF OV-1 and SV-1 views."
 ```
 
 ## In Codex Sessions
@@ -42,10 +44,9 @@ the ISO 26262 ASIL decomposition in docs/safety-analysis.md.
 
 ## With Defense Founder Review
 
-The `skills/defense-founder-review/SKILL.md` can be passed as an additional context file:
+Reference the skill file alongside the defense agent in the prompt:
 
 ```bash
-codex exec --file agents/defense-systems-engineer.md \
-  --file skills/defense-founder-review/SKILL.md \
-  "Review this acquisition program's SE artifacts"
+codex exec -C /path/to/your-project \
+  "Read agents/defense-systems-engineer.md and skills/defense-founder-review/SKILL.md, then review this acquisition program's SE artifacts."
 ```

@@ -1,4 +1,4 @@
-# Sexy Systems (MBSE Domain Agents)
+# MBSE Agents
 
 ## Skill routing
 

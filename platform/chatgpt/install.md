@@ -25,7 +25,7 @@ Use `platform/chatgpt/gpt-manifest.json` as a reference for all four agents. It 
 
 ## Defense Founder Review
 
-For the defense domain, create an additional GPT using `skills/defense-founder-review/SKILL.md` as Instructions. This provides a Palmer Luckey-style acquisition review persona.
+For the defense domain, create an additional GPT using `skills/defense-founder-review/SKILL.md` as Instructions. This provides a direct strategic review process for defense and dual-use concepts; use it as an operating system, not a persona.
 
 ## Tips
 

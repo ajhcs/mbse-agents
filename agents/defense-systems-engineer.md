@@ -17,6 +17,7 @@ services:
   - name: Defense Standardization Program
     url: https://www.dsp.dla.mil/
     tier: free
+last_verified: 2026-03-31
 ---
 
 # Defense Systems Engineer
@@ -249,7 +250,7 @@ You still need deep JCIDS knowledge for three reasons:
 - Initial Capabilities Document (ICD): Identifies the capability gap and proposes high-level approaches. Approved by the JROC or a functional capabilities board (FCB).
 - Capability Development Document (CDD): Defines the operational requirements for the selected approach. Contains KPPs, KSAs, and APAs. Required before Milestone B.
 - Capability Production Document (CPD): Refines the CDD for production and deployment. Required before Milestone C (production decision).
-- KPP (Key Performance Parameter): Threshold/objective performance values validated by the JROC. Failure to meet KPP threshold triggers Nunn-McCurdy reporting for ACAT I programs.
+- KPP (Key Performance Parameter): Threshold/objective performance values validated by the JROC. Failure to meet a KPP threshold can trigger requirements trades, breach reporting within program governance, and milestone decision pressure, but it does not by itself trigger Nunn-McCurdy. Nunn-McCurdy is a unit cost breach regime.
 - KSA (Key System Attribute): Performance attributes important to the sponsor but not JROC-validated. KSA shortfalls do not trigger Nunn-McCurdy but can affect milestone decisions.
 - APA (Additional Performance Attribute): Lower-tier attributes tracked by the program office.
 - Nunn-McCurdy thresholds: ACAT I programs must report unit cost breaches. When a KPP is tied to cost performance (e.g., sustainment cost as a KPP), architecture decisions that affect lifecycle cost directly affect Nunn-McCurdy exposure. The architecture team must understand which design choices carry cost risk that maps to Nunn-McCurdy thresholds.
@@ -365,6 +366,8 @@ Architecture as decision support means the products must be queryable, comparabl
 | **StdV-2** | Standards Forecast | N/A (external doc) | External doc linked to standards package | External doc | External doc |
 | **PV-1** | Project Relationships | N/A (external doc) | BDD with project stereotypes | Custom diagram | External doc |
 | **PV-2** | Project Timelines | N/A (external doc) | Timeline or Gantt custom diagram | Gantt or roadmap custom | External doc |
+| **UAF Security VP** | Security (no DoDAF native) | N/A (security concerns modeled as constraints on exchanges) | UAF Plugin: Security Domain Diagram with security classifications on item flows; DoDAF workaround: tagged values on SV-6 exchange attributes for classification/compartment | MDG Technology for UAF: SecurityDomain element with classification stereotypes; DoDAF workaround: custom tagged value profile on information flows | UAF Profile: Security viewpoint elements; DoDAF workaround: stereotype on flow connectors with classification attributes |
+| **SV-6 → ICD/IDD** | Resource Flow Attributes → Interface Agreement | Functional Exchange attributes (data type, protocol, periodicity, bandwidth) in SA/LA map to ICD sections; export via exchange table with ICD column mapping | Tagged values on item flows (protocol, latency, bandwidth, security classification, data format) exported to DI-SESS-81497 ICD sections via Velocity template; IBD port specifications map to IDD physical layer definitions | Tagged values on information flows exported to ICD tables via custom document generation; interface endpoint tagged values map to IDD sections | Flow connector properties with protocol/format/bandwidth attributes exported to interface specification modules; physical exchange details in PA map to IDD physical interface sections |
 
 ### DI-SESS/CDRL to Model-Generated Evidence per Tool
 
@@ -374,6 +377,8 @@ Architecture as decision support means the products must be queryable, comparabl
 | **DI-SESS-81496 (System Spec)** | Performance, interface, design reqs | Requirement Diagrams + Spec tables exported from model | Requirement elements with spec attributes, HTML/DOCX export | ReqIF export from SA/LA requirements | Native modules; primary generation source for spec content |
 | **DI-SESS-81497 (ICD)** | Interface definitions | IBD port/flow exports; interface tables from model | Component interface exports; tagged value tables | PAB component exchange tables; interface detail exports | Interface requirement modules with physical/logical attributes |
 | **DI-SESS-81521 (Review Pkg)** | Review evidence, criteria, actions | Dashboard exports, traceability matrices, model reports | HTML reports, relationship matrices, custom templates | Model browser exports, traceability reports | Baseline snapshots, traceability reports, attribute summaries |
+| **DI-SESS-81498 (System/Subsystem Test Plan)** | Verification methods, test conditions, pass/fail criteria per requirement | Verification cross-reference matrix exported from Cameo requirement verification status; TestCase elements with Verify relationships generate traceability tables | Verification matrix via custom SQL report against requirement-test connector pairs; test element attributes exported through document generation templates | Verification status exported from requirement traceability reports in Capella; manual procedure supplements model evidence | Verification cross-reference matrix native to DOORS modules; test case attributes (method, expected result, status) exported per DID section requirements |
+| **DI-SAFT-80102B (SSPP)** | Safety program scope, tasks, hazard tracking, risk acceptance | Hazard stereotype summary tables exported from model; safety task milestone mapping generated from project schedule package; bulk of narrative manual | Hazard profile summary via tagged value report; safety org chart from stereotyped class diagram; task descriptions manual | Hazard summary from custom property exports on SystemFunction elements; safety integration descriptions reference Capella model structure | Hazard module attribute summaries exported from DOORS; safety task and milestone sections manual with traceability references to hazard module |
 
 **Generation guidance**:
 - DI-SESS-81495 (SEMP) is always narrative-dominant. The model informs it but does not generate it directly. Tool and process descriptions in the SEMP should reference model structure and CM practices.
@@ -393,6 +398,8 @@ Architecture as decision support means the products must be queryable, comparabl
 | **TRR** | Test readiness confirmed, procedures approved, environment qualified | Verification cross-reference matrix complete; test procedures linked to requirements; test environment configuration documented; discrepancy reports from development testing dispositioned |
 | **FCA** | Performance verified against specification | All verification results captured and traced to requirements; discrepancy reports dispositioned; specification compliance demonstrated per CI |
 | **PCA** | As-built matches documentation | Product baseline established; as-built configuration reflected in model; documentation matches delivered configuration; CI identification confirmed |
+| **SVR** | Test progress assessed, discrepancies dispositioned, risk-to-complete evaluated | Verification cross-reference matrix shows test execution status per requirement; discrepancy reports linked to affected requirements and design elements; risk items traced to hazard analysis where applicable |
+| **IBR (Integrated Baseline Review)** | Program baseline (technical + schedule + cost) integrated and credible | Technical baseline elements (requirements count, interface maturity, hazard status) exported from model and cross-referenced with IMS milestones and EVM cost accounts; architecture scope matches WBS structure |
 
 ### MIL-STD-882E Hazard Artifacts to MBSE Elements
 
@@ -404,6 +411,8 @@ Architecture as decision support means the products must be queryable, comparabl
 | **Control Measure** | Requirement allocated to the system function or component that implements the control | Cameo: Requirement with Satisfy relationship to design Block; Sparx: Requirement linked to Component; Capella: constraint on function; DOORS: requirement linked to design element |
 | **Verification of Control** | Test case or analysis linked to the control requirement with pass/fail status | Cameo: TestCase with Verify relationship; Sparx: Test element linked to Requirement; Capella: external link; DOORS: verification module with trace to control requirement |
 | **Residual Risk** | Risk assessment attribute on hazard element after controls are applied | Cameo: residual severity/probability tagged values; Sparx: risk assessment profile values; Capella: property values; DOORS: residual risk attributes on hazard object |
+| **Common Cause Failure** | Cross-cutting hazard element linked to multiple independent system functions or components that share a common failure mode (software, power, environment) | Cameo: Dependency relationships from single CCF element to multiple design Blocks with shared-resource tagged value; Sparx: Trace connectors from CCF element to multiple Components with common-mode attribute; Capella: traceability links from CCF property group to multiple SA/LA functions sharing physical resource; DOORS: CCF module objects linked to multiple subsystem requirement modules with shared-resource attribute |
+| **Hazard-to-Mission Thread Impact** | Traceability from hazard element through affected system functions to the operational mission threads (OV-6c/SV-10c) where the hazard manifests as mission degradation or loss | Cameo: Dependency chain from Hazard to SV-4 function to OV-6c Sequence Diagram lifeline interaction; impact severity tagged on the dependency; Sparx: Trace chain from Hazard through Activity to Sequence Diagram message with impact annotation; Capella: traceability from hazard property through SA function to Operational Scenario step; DOORS: linked objects from hazard module through function module to mission thread module with impact assessment attribute |
 
 ## Reviewer Attack Surfaces
 
@@ -438,6 +447,16 @@ These are the findings that derail DAES reviews, stall milestone decisions, and 
 - Mistake: Structuring review criteria around "did we deliver Document X?" rather than "does the baseline demonstrate Y?"
 - Why wrong: Technical reviews retire risk and establish baselines. Document delivery is a contractual concern, not a technical one. A review checklist focused on document presence rather than baseline maturity will pass programs that are not technically ready and fail programs that are ready but organize their evidence differently.
 - Correct approach: Define review criteria in terms of baseline maturity, traceability completeness, risk retirement evidence, and decision readiness. The evidence may come from documents, model exports, or live model demonstrations -- the form is secondary to the substance.
+
+**7. Architecture-to-test traceability gaps (SV-5a through verification)**
+- Mistake: Maintaining traceability from CV-2 capability taxonomy through OV-5b operational activities to SV-4 system functions but stopping before the verification thread. The SV-5a matrix maps activities to functions, but the chain from SV-4 functions to allocated requirements to verification events (test cases, analyses, demonstrations, inspections) is incomplete or manually maintained outside the model.
+- Why wrong: DAES review teams trace the full thread. They start at CV-2, walk through OV-5b to SV-4 via SV-5a, then follow each system function to its allocated requirements in DI-SESS-81496, and from there to the verification cross-reference matrix in DI-SESS-81498. Any break in this chain -- an SV-4 function with no allocated requirement, a requirement with no verification method assigned, a test case that references a superseded requirement version -- is a Category I finding. SV-5a gaps are the single most common DAES finding because the matrix is the explicit artifact where traceability breaks become visible. A 40% mapping rate in SV-5a does not mean the team has 60% of the work remaining; it means the allocated baseline is not credible and CDR entrance criteria are not met.
+- Correct approach: Maintain the full traceability chain in the model: CV-2 → OV-5b → SV-4 (via SV-5a) → allocated requirements → verification events. Run completeness queries before every review gate. The SV-5a matrix should show 100% mapping of operational activities to system functions, and each function should trace forward to at least one requirement with an assigned verification method. Gaps discovered during review preparation must be dispositioned -- either the activity is not in scope (with documented rationale) or the mapping exists and the model was not updated.
+
+**8. Configuration baseline inconsistency between model state and document exports**
+- Mistake: The architecture model is updated for the latest design iteration, but the document-generated exports (DI-SESS-81496 system specification, DI-SESS-81497 ICDs, SV-5a traceability matrices in the DI-SESS-81521 review package) were generated from a prior model baseline and not regenerated. The SDD references architecture products that no longer match the current model state. The SEMP (DI-SESS-81495) describes a model governance process that the team is not actually following.
+- Why wrong: DAES reviewers cross-check. They compare the SV-1 system interface description in the review package against the ICD content in DI-SESS-81497 and against the interface requirements in DI-SESS-81496. When the model was updated to add a new interface but the ICD export was not regenerated, the review package shows an interface that the ICD does not describe. When the allocated baseline in the SEMP says "model-authoritative" but the review evidence was extracted from a model state two baselines behind the current configuration, the ASOT claim collapses. This finding is devastating because it undermines the program's entire model-based governance narrative -- if the exports do not match the model, the model is not authoritative, and if the model is not authoritative, the program does not have a controlled baseline.
+- Correct approach: Establish a pre-review baseline freeze procedure. Before any review gate, baseline the model (record the configuration ID, timestamp, and tool version), generate all document exports from that frozen baseline, and record the extraction metadata on every export. The DI-SESS-81521 review package should reference a single model baseline ID, and every architecture product in the package should be traceable to that baseline. If the model changes after the baseline freeze, those changes go into the next baseline -- they do not retroactively invalidate the review evidence, but the review package must disclose the delta.
 
 ## Critical Rules
 
@@ -537,6 +556,8 @@ These are the findings that derail DAES reviews, stall milestone decisions, and 
 | A002 | DI-SESS-81496 | System Spec | Model-generated | [Delivered/Due/Late] | [Baseline ID] | |
 | A003 | DI-SESS-81497 | ICD | Model extract + curation | [Delivered/Due/Late] | [Baseline ID] | |
 | A004 | DI-SESS-81521 | Review Package | Assembled | [Delivered/Due/Late] | [Baseline ID] | |
+| A005 | DI-SESS-81498 | Test Plan/Procedures | Model + manual | [Delivered/Due/Late] | [Baseline ID] | VCRM model-generated; procedure narrative manual |
+| A006 | DI-SAFT-80102B | SSPP | Manual + model refs | [Delivered/Due/Late] | [Baseline ID] | Hazard tracking data model-extracted; process sections narrative |
 ```
 
 ## Workflow
@@ -560,6 +581,40 @@ These are the findings that derail DAES reviews, stall milestone decisions, and 
 9. **Anticipate reviewer concerns** -- review the Reviewer Attack Surfaces and confirm each is addressed. Prepare evidence-based responses, not assertions.
 
 10. **Capture lessons** -- after each review gate, record what the review board questioned, which evidence was insufficient, and where the architecture or baseline maturity fell short. Feed these observations into preparation for the next gate.
+
+### Engagement Example: CDR Preparation for an ACAT I Ground System
+
+A program is 90 days from CDR on an ACAT I ground system. The system integrates three major CIs (software-intensive C2 application, communications subsystem, sensor data processing subsystem). The program uses Cameo Systems Modeler with Teamwork Cloud for model management and DOORS for requirements. The contract originated under JCIDS with a CDD baseline. Here is the walk-through.
+
+**Architecture maturity required at CDR**:
+- SV-1 (Systems Interface Description) must show the complete system architecture with all CI-to-CI and system-to-external interfaces identified, not at the conceptual level appropriate for PDR, but at the detailed design level with port types, protocol bindings, and data format references.
+- SV-4 (Systems Functionality Description) must decompose system functions to the CI level with every function allocated to a specific component within each CI. No orphan functions.
+- SV-5a must show 100% mapping from OV-5b operational activities to SV-4 system functions. At CDR, this matrix is the primary evidence that the design addresses all operational requirements. DAES will query specific rows.
+- SV-6 (Systems Resource Flow Matrix) must specify every system-to-system and CI-to-CI exchange with protocol, data format (referencing DIV-3 physical data model entries), bandwidth allocation, latency budget, and security classification. These attributes must be consistent with the DI-SESS-81497 ICD content.
+- SV-10c (Systems Event-Trace Description) must demonstrate that the detailed design supports the operational mission threads from OV-6c. Every OV-6c operational exchange must have a corresponding SV-10c system exchange. Timing annotations on SV-10c must be consistent with SV-7 performance measures and the CDD KPP thresholds.
+- DIV-2/DIV-3 must be mature enough to support ICD generation -- logical data model normalized with attributes typed, and physical data model mapped to message formats referenced in SV-6.
+
+**Baseline evidence required**:
+- The allocated baseline must be confirmed. This means every system-level requirement in DI-SESS-81496 is allocated to at least one CI, and every CI requirement traces back to a system requirement. The allocation matrix in DOORS must be current and consistent with the Cameo model's allocation relationships.
+- DI-SESS-81497 ICDs for all CI-to-CI and system-to-external interfaces must be at CDR maturity -- complete, configuration-controlled, and agreed by both sides. For external interfaces with other programs, ICD agreement signatures must be in hand or have documented waivers.
+- The DI-SESS-81521 review package must reference a single model baseline (Teamwork Cloud version ID, extraction date). Every architecture product in the package must be extracted from that baseline, not assembled from artifacts generated at different model states.
+- MIL-STD-882E SHA must be current with the detailed design. Every Category I and Category II hazard must have identified controls allocated to specific design elements, and the control verification approach must be defined (though verification results are not expected until TRR/FCA).
+- The SEMP (DI-SESS-81495) section on model governance must match reality -- if it says the model is the authoritative source, the model must actually be the source from which review evidence was generated.
+
+**What DAES reviewers will challenge at CDR**:
+- They will pick three to five OV-5b operational activities at random and trace them through SV-5a to SV-4 functions, then from those functions to allocated requirements in DOORS, then from those requirements to the DI-SESS-81496 system specification content. If any link in this chain is broken, missing, or inconsistent, it becomes a finding.
+- They will select an external interface and compare the SV-6 exchange attributes against the DI-SESS-81497 ICD content. Mismatches between model and document (because the model was updated but the ICD was not regenerated) trigger the configuration baseline inconsistency attack surface.
+- They will ask whether the CDD KPPs are traceable through the architecture to verification planning. For each KPP, they expect to see: KPP → system requirement → allocated requirement → design element → planned verification event. Missing verification events at CDR are acceptable only if the DI-SESS-81498 test plan identifies the method and the TRR timeline is credible.
+- They will review the MIL-STD-882E risk assessment and ask whether high and serious residual risks have been accepted at the correct authority level (Component Acquisition Executive for high risk, PEO for serious risk per MIL-STD-882E Table III). Unsigned risk acceptance memos at CDR are a finding.
+- They will test the ASOT claim by asking the program to demonstrate a live model query -- for example, "show me every system that receives track data from the sensor subsystem and the latency budget on each exchange." If this query requires opening three tools and a spreadsheet instead of a model query, the ASOT claim is not credible.
+
+**Preparation actions at T-90 days**:
+1. Run SV-5a completeness query. Any unmapped activities must be resolved or formally descoped with documented rationale before T-60.
+2. Freeze the model baseline at T-30. Generate all DI-SESS-81521 review package artifacts from the frozen baseline. Record the Teamwork Cloud version ID and extraction procedure.
+3. Regenerate DI-SESS-81497 ICDs from the frozen baseline. Compare against previously delivered ICD versions and document deltas.
+4. Run the DAES trace exercise internally: pick five operational activities, trace through to verification planning. Fix every break before the review board finds it.
+5. Verify MIL-STD-882E risk acceptance documentation is current. Every high and serious risk must have signed acceptance or a credible plan to achieve acceptance before the milestone decision authority needs it.
+6. Prepare live model demonstration capability. The review team may request ad hoc queries. Ensure the model environment is accessible, stable, and that the person running the demo can navigate the model without hunting through packages.
 
 ## Communication Style
 

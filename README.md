@@ -1,90 +1,97 @@
-# Sexy Systems
+# MBSE Agents
 
-**Project Vision & Description -- Working Draft v0.1**
+Portable AI agents packed with practitioner-level systems engineering knowledge. Drop one into your AI coding assistant and get a principal SE who knows the standards at the clause level, maps artifacts across 7 MBSE tools, and has survived the reviews your program is heading into.
 
-## Summary
+Four domain verticals. Six MBSE tools. Seven AI platforms. One source of truth per agent.
 
-Sexy Systems is a plugin that transforms Claude into a full-fledged systems
-engineering program. It bridges AI with Model-Based Systems Engineering (MBSE)
-by connecting to Capella/Arcadia (open source) and using a novel architecture
-where sub-agents and engineering rules live as data inside an advanced
-vector database.
+## Agents
 
-The core idea: Claude doesn't just assist with systems engineering -- it
-BECOMES a systems engineering platform, powered by a swarm of specialized
-sub-agents that are themselves stored, queried, and orchestrated as entries
-in a peer database.
+| Agent | Domain | Key Standards | Lines |
+|-------|--------|---------------|-------|
+| [Aerospace Systems Engineer](agents/aerospace-systems-engineer.md) | Civil aviation, space | ARP4754A, ARP4761A, DO-178C/DO-254, DO-326A | 600+ |
+| [Defense Systems Engineer](agents/defense-systems-engineer.md) | DoD acquisition | DoDAF/UAF, MIL-STD-882E, DI-SESS, JCIDS transition | 600+ |
+| [Automotive Systems Engineer](agents/automotive-systems-engineer.md) | ADAS, powertrain | ISO 26262, ISO 21434, ISO 21448 (SOTIF), AUTOSAR | 600+ |
+| [Medical Device Systems Engineer](agents/medical-device-systems-engineer.md) | Class II/III, SaMD | IEC 62304, ISO 14971, FDA QMSR, EU MDR 2017/745 | 600+ |
 
-## Core Architecture
+Each agent includes multi-tool crosswalk tables, reviewer attack surfaces, workflow guidance, and deliverable templates.
 
-### 1. Capella/Arcadia Integration
+## Supported MBSE Tools
 
-- Bidirectional JSON communication with Capella MBSE
-- JSON intercept layer: reads model data OUT of Capella, writes changes back IN
-- Supports the Arcadia methodology (Operational Analysis, System Analysis, Logical Architecture, Physical Architecture)
-- Capella is open source -- no licensing barriers
+The crosswalk tables in each agent map domain artifacts to model elements across:
 
-### 2. The Vector/Peer Database
+| Tool | Vendor | Coverage |
+|------|--------|----------|
+| Capella | Eclipse/Thales | Arcadia phases, element types, checkpoints |
+| Cameo Systems Modeler / CATIA Magic | Dassault | SysML elements, profiles, stereotypes |
+| IBM Rhapsody | IBM | SysML/UML elements, model structure |
+| Sparx Enterprise Architect | Sparx | SysML/UML/UAF elements, MDG profiles |
+| DOORS / DOORS Next | IBM | ReqIF, OSLC, requirements structure |
+| MATLAB / Simulink | MathWorks | FMU/FMI, analysis model integration |
 
-- An advanced vector database that Claude has direct access to
-- Stores TWO kinds of things:
-  - Engineering rules, patterns, and MBSE process knowledge
-  - The sub-agents themselves -- agents ARE data
-- This creates a "peer database" where agents and knowledge coexist
-- Agents can be queried, composed, and orchestrated just like any other data in the system
-- Vector search enables semantic matching of rules and agents to engineering problems
+See [docs/crosswalk-reference.md](docs/crosswalk-reference.md) for all crosswalk tables in one place.
 
-### 3. Sub-Agent Architecture
+## Quick Start
 
-- Sub-agents explore and execute the MBSE process
-- Each agent is specialized for different aspects of systems engineering
-- Agents operate according to rules stored in the vector database
-- Agents themselves are stored IN the database (agents-as-data)
-- This means the system can:
-  - Search for the right agent to handle a task
-  - Compose agents dynamically based on the problem
-  - Evolve agents over time as new rules are added
-  - Treat agent creation/modification as a data operation
+**Claude Code** (recommended):
 
-### 4. Claude as Systems Engineer
+```bash
+# Copy agents to your project
+cp -r agents/ /path/to/your-project/agents/
 
-- Claude becomes the orchestrator and execution engine
-- Uses the sub-agents + database to perform full systems engineering
-- Not just a chatbot helper -- a complete SE program
-- Handles the full Arcadia/MBSE lifecycle through its agent swarm
+# Or install globally
+cp agents/*.md ~/.claude/agents/
+```
 
-## Key Concepts
+Then invoke: `subagent_type="Aerospace Systems Engineer"`
 
-**Agents-as-Data** --
-Sub-agents aren't just code that runs. They're entries in the database,
-with embeddings, metadata, rules, and capabilities. You can search for
-them, filter them, version them, and compose them -- the same way you
-would query any other data.
+**ChatGPT Custom GPT:**
 
-**JSON Intercept Layer** --
-The bridge between Claude's world and Capella's world. Capella models
-are rich structured data (functions, components, interfaces, exchanges).
-The intercept layer translates these to/from JSON so Claude and its
-agents can reason about and modify real MBSE models.
+1. Go to ChatGPT > Explore GPTs > Create
+2. Paste the agent markdown (below the frontmatter `---`) as Instructions
+3. Set GPT name and description from the frontmatter fields
 
-**Rule-Driven Agents** --
-Agents don't operate on hardcoded logic. Their behavior comes from
-rules in the vector database. Change the rules, change the agent
-behavior. Add new rules, expand what agents can do. The system evolves
-by adding data, not rewriting code.
+See [platform/](platform/) for install guides for all 7 platforms: [Claude Code](platform/claude-code/install.md) | [Claude Desktop](platform/claude-desktop/install.md) | [Codex CLI](platform/codex/install.md) | [ChatGPT](platform/chatgpt/install.md) | [Cursor](platform/cursor/install.md) | [Aider](platform/aider/install.md) | [Generic](platform/generic/install.md)
 
-**Peer Database** --
-A database where agents and the knowledge they operate on are peers --
-both are queryable, both are data, both can reference each other. This
-breaks the traditional separation between "the program" and "the data."
+## Example: What These Agents Actually Do
 
-## Target MBSE Tool
+Ask the Aerospace agent:
 
-- [Capella](https://mbse-capella.org/) -- open source, Eclipse-based
-- Implements the Arcadia methodology
-- Model data accessible via Java API, REST API, and file export (XML/JSON)
+> "I have a dual-channel flight control system and need to demonstrate independence for my PSSA. What common-mode failures should I analyze?"
 
-## Status
+The agent walks you through ARP4761A CMA methodology: zonal safety analysis for physical proximity, particular risks (lightning, HIRF, bird strike), common-cause failures across redundant channels, cascading failures through shared resources. It maps each analysis type to specific Arcadia model views and Cameo SysML elements. It tells you what the DER will look for at SOI #3.
 
-- **Phase:** Initial concept definition
-- **Next:** Architecture design, database schema, JSON intercept prototype
+That is not a generic AI answer. That is the answer from someone who has closed an SSA with 200+ failure conditions.
+
+### More Examples
+
+**Defense:** "Map this system-of-systems architecture to DoDAF OV-5b and SV-1 views for the upcoming DAES review." The agent produces viewpoint-specific guidance with DI-SESS deliverable mappings and DAES scrutiny points.
+
+**Automotive:** "Walk me through ASIL decomposition for a redundant braking system where the primary is ASIL D." The agent explains Part 9 decomposition rules, freedom-from-interference arguments, and what the assessor will challenge.
+
+**Medical Device:** "My IEC 62304 Class C software has SOUP components. How do I handle SOUP risk management for my FDA submission?" The agent distinguishes IEC 62304 SOUP requirements from FDA expectations on OTS software, maps the risk controls to ISO 14971 artifacts, and identifies the documentation gaps that trip up premarket inspections.
+
+## Companion: Cameo MCP Bridge
+
+For direct MBSE tool integration, pair these agents with [cameo-mcp-bridge](https://github.com/ajhcs/cameo-mcp-bridge), an MCP server that connects AI assistants to a running Cameo/CATIA Magic instance with 37 tools for querying, creating, and modifying SysML models.
+
+The agents provide the domain knowledge. The MCP bridge provides the tool access. Together: an AI that knows ARP4754A at the clause level AND can modify your Cameo model directly.
+
+## Also Included
+
+**[Defense Founder Review](skills/defense-founder-review/SKILL.md)** -- A strategic review skill for defense, autonomy, and dual-use ventures. Evaluates capability gaps, incumbent failure modes, vertical integration decisions, and prototype paths. Not a persona. An operating system for reviewing defense product concepts.
+
+## Standards Attribution
+
+Standards referenced in these agents are the property of their respective standards bodies: SAE International (ARP4754A, ARP4761A), RTCA/EUROCAE (DO-178C, DO-254, DO-326A, DO-330, DO-331), ISO (26262, 21434, 14971, 13485), IEC (62304, 60601-1), IEEE, and others. This project provides practitioner guidance and synthesis, not reproductions of copyrighted standard text. Clause numbers, work product identifiers, and process descriptions reference publicly available standard metadata. Purchase standards from their respective publishers for authoritative text.
+
+## Disclaimer
+
+These agents are reference material for experienced systems engineering practitioners. They are not a substitute for reading the applicable standards, consulting with your program's designated engineering representative (DER/DAR/DA), or obtaining program-specific compliance guidance. Tool crosswalk mappings are illustrative based on publicly available tool documentation and are not endorsed by tool vendors. All content is derived from publicly available information. No export-controlled, classified, or proprietary content is included.
+
+## Contributing
+
+Domain experts welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add new agents, improve crosswalk tables, or report inaccuracies.
+
+## License
+
+[MIT](LICENSE)

@@ -48,4 +48,4 @@ subagent_type="Medical Device Systems Engineer"
 
 ## With Defense Founder Review Skill
 
-If the `defense-founder-review` skill is installed, use `/defense-founder-review` to run Palmer Luckey-style acquisition review on defense SE outputs.
+If the `defense-founder-review` skill is installed, use `/defense-founder-review` to run a direct strategic review of defense and dual-use concepts and SE outputs.

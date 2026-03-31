@@ -11,4 +11,4 @@
 
 | Skill | Use For |
 |---|---|
-| defense-founder-review | Palmer Luckey-style founder review of defense acquisition programs and SE artifacts |
+| defense-founder-review | Direct strategic review of defense and dual-use concepts, acquisition programs, and SE artifacts |

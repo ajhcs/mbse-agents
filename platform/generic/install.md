@@ -45,7 +45,7 @@ awk 'BEGIN{f=0} /^---$/{f++; next} f>=2||f==0' agents/aerospace-systems-engineer
 
 ## Additional Skill
 
-`skills/defense-founder-review/SKILL.md` provides a Palmer Luckey-style defense acquisition review. Load it alongside the Defense Systems Engineer agent for acquisition program reviews.
+`skills/defense-founder-review/SKILL.md` provides a direct strategic review process for defense and dual-use concepts. Load it alongside the Defense Systems Engineer agent for acquisition program reviews.
 
 ## Integration Pattern
 
