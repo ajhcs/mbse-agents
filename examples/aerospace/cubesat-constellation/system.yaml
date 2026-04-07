@@ -1,0 +1,14 @@
+title: CubeSat Constellation
+domain: aerospace
+tier: fleet
+status: draft
+standards:
+  - NPR 7123.1
+  - CCSDS
+  - NASA-STD-8739.8
+assurance_framework: NASA mission assurance (Class C)
+system_class: Class C mission
+summary: >
+  12-unit LEO constellation for Earth observation with intersatellite
+  links. NASA NPR 7123.1 tailored for Class C mission assurance.
+  CCSDS communication protocols.

@@ -1,0 +1,13 @@
+title: FPGA Radar Signal Processor
+domain: electronic-systems
+tier: fleet
+status: draft
+standards:
+  - DO-254
+  - MIL-STD-882E
+  - MIL-HDBK-217
+assurance_framework: DO-254 DAL B + MIL-STD-882E safety
+system_class: DO-254 DAL B
+summary: >
+  FPGA-based real-time signal processor for phased array radar. Pulse
+  compression, Doppler processing, CFAR detection, track-before-detect.

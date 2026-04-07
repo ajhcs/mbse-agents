@@ -1,0 +1,17 @@
+title: Autonomous Emergency Braking System
+domain: automotive
+tier: flagship
+status: draft
+standards:
+  - ISO 26262
+  - ISO 21448
+  - ISO 21434
+  - AUTOSAR Classic 4.4
+  - AUTOSAR Adaptive R22-11
+  - UN R152
+assurance_framework: ISO 26262 safety lifecycle (ASIL D) + third-party assessment
+system_class: ASIL D
+summary: >
+  Camera + radar fusion AEB for passenger vehicles. ASIL D safety
+  case, SOTIF analysis for perception limitations, ISO 21434
+  cybersecurity TARA. AUTOSAR Classic/Adaptive split architecture.

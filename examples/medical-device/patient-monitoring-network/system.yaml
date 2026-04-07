@@ -1,0 +1,16 @@
+title: Patient Monitoring Network
+domain: medical-device
+tier: fleet
+status: draft
+standards:
+  - IEC 62304
+  - ISO 14971
+  - IEC 60601-1
+  - IEC 60601-1-8
+  - IEC 80001-1
+assurance_framework: FDA 510(k) (Class II) + EU MDR (Class IIa)
+system_class: FDA Class II, IEC 62304 Class B
+summary: >
+  Multi-parameter bedside monitoring with central station aggregation.
+  SpO2, ECG, NIBP, temperature, capnography. IEC 60601-1-8 alarm
+  management.

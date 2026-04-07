@@ -1,0 +1,15 @@
+title: V2X Communication Unit
+domain: automotive
+tier: fleet
+status: draft
+standards:
+  - ISO 21434
+  - ISO 21448
+  - ETSI ITS-G5
+  - SAE J3161
+  - IEEE 802.11p
+assurance_framework: ISO 21434 cybersecurity lifecycle + SOTIF
+system_class: QM (communication), ASIL B (safety-relevant messaging)
+summary: >
+  C-V2X (PC5 + Uu) on-board unit for cooperative perception and
+  platooning. ETSI ITS-G5 / SAE J3161 compliant.

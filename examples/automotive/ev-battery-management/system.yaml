@@ -1,0 +1,14 @@
+title: EV Battery Management System
+domain: automotive
+tier: fleet
+status: draft
+standards:
+  - ISO 26262
+  - UN R100
+  - IEC 62619
+  - ISO 6469
+assurance_framework: ISO 26262 safety lifecycle (ASIL C/D)
+system_class: ASIL D (contactor control), ASIL C (monitoring)
+summary: >
+  High-voltage lithium-ion BMS for 800V architecture. Cell monitoring,
+  thermal management, state estimation (SoC/SoH), contactor control.

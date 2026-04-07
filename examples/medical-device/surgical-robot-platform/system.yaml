@@ -1,0 +1,15 @@
+title: Surgical Robot Platform
+domain: medical-device
+tier: fleet
+status: draft
+standards:
+  - IEC 62304
+  - ISO 14971
+  - IEC 60601-1
+  - IEC 80601-2-77
+  - IEC 62443
+assurance_framework: FDA De Novo (Class II) + EU MDR (Class IIb)
+system_class: FDA Class II (De Novo), IEC 62304 Class C
+summary: >
+  Multi-arm teleoperated surgical system for minimally invasive
+  procedures. Master-slave architecture, haptic feedback, vision system.

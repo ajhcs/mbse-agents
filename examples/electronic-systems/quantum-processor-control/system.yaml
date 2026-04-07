@@ -1,0 +1,15 @@
+title: Quantum Processor Control System
+domain: electronic-systems
+tier: flagship
+status: draft
+standards:
+  - IEC 61508
+  - IEEE 1076
+  - IEEE 1800
+assurance_framework: IEC 61508 (safety-critical calibration) + formal verification
+system_class: SIL 2 (safety-critical calibration subsystem)
+summary: >
+  Cryogenic control electronics and room-temperature orchestration
+  stack for a 100+ qubit superconducting quantum processor. RF pulse
+  generation, qubit readout, error correction feedback loop,
+  calibration automation.

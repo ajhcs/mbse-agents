@@ -1,0 +1,15 @@
+title: Continuous Glucose Monitor
+domain: medical-device
+tier: fleet
+status: draft
+standards:
+  - IEC 62304
+  - ISO 14971
+  - IEC 62366-1
+  - IMDRF SaMD N41
+  - FDA SaMD guidance
+assurance_framework: FDA 510(k) (Class II) + EU MDR (Class IIb)
+system_class: FDA Class II, IEC 62304 Class B/A (SaMD component)
+summary: >
+  Wearable CGM with mobile app and cloud analytics. SaMD component
+  for trend prediction and insulin dosing guidance.

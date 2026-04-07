@@ -1,0 +1,13 @@
+title: HPC Cluster Orchestration System
+domain: electronic-systems
+tier: fleet
+status: draft
+standards:
+  - IEC 61508
+  - ALCOA+
+assurance_framework: IEC 61508 SIL 1 (safety-critical batch processes)
+system_class: SIL 1
+summary: >
+  Workload orchestration for a 500-node GPU compute cluster. Job
+  scheduling, resource allocation, fault recovery, power management.
+  Data integrity per ALCOA+ principles.

@@ -1,0 +1,15 @@
+title: EVA Suit Life Support System
+domain: aerospace
+tier: fleet
+status: draft
+standards:
+  - NPR 7123.1
+  - NPR 8705.2
+  - NASA-STD-5005
+  - NASA-STD-5019
+assurance_framework: NASA human-rating (NPR 8705.2)
+system_class: Human-rated life-critical
+summary: >
+  Extravehicular activity portable life support system for ISS and
+  Artemis missions. Pressure regulation, O2/CO2 management, thermal
+  control. NASA-STD-5005 fracture control.

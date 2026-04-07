@@ -1,0 +1,19 @@
+title: Integrated Flight Management System
+domain: aerospace
+tier: flagship
+status: draft
+standards:
+  - ARP4754A
+  - ARP4761A
+  - DO-178C
+  - DO-254
+  - DO-326A
+  - DO-330
+  - DO-331
+assurance_framework: FAA development assurance (SOI #1 through SOI #4)
+system_class: DAL A airborne system
+summary: >
+  Multi-channel FMS with flight planning, navigation, and performance
+  computation functions. Dual FMC architecture with dissimilar backup.
+  DAL A software (DO-178C), DAL A programmable hardware (DO-254),
+  cybersecurity assessment (DO-326A).

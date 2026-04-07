@@ -1,0 +1,15 @@
+title: Naval Combat Management System
+domain: defense
+tier: fleet
+status: draft
+standards:
+  - DoDAF 2.02
+  - MIL-STD-882E
+  - MIL-STD-1553
+  - MIL-STD-3022
+assurance_framework: Navy PEO IWS acquisition
+system_class: ACAT I, mission-critical
+summary: >
+  Surface combatant CMS integrating sensors, weapons, and C2. Track
+  fusion, engagement planning, cooperative engagement capability.
+  MIL-STD-1553/VME to GigE modernization path.

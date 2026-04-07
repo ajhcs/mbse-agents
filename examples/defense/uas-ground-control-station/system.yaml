@@ -1,0 +1,17 @@
+title: UAS Ground Control Station
+domain: defense
+tier: flagship
+status: draft
+standards:
+  - DoDAF 2.02
+  - MIL-STD-882E
+  - MIL-STD-1553
+  - DI-SESS-81785A
+  - FACE 3.1
+  - MOSA
+assurance_framework: DoD acquisition (ACAT II) with DAES review
+system_class: ACAT II, SIL 4 (safety-critical functions)
+summary: >
+  Multi-vehicle ground control station for Group 4/5 UAS. C2 link
+  management, mission planning, sensor payload control, airspace
+  integration. MOSA/FACE compliant open architecture.

@@ -1,0 +1,14 @@
+title: Safety-Critical SoC
+domain: electronic-systems
+tier: fleet
+status: draft
+standards:
+  - ISO 26262-11
+  - AEC-Q100
+  - IEC 61508
+assurance_framework: ISO 26262-11 (semiconductor) + AEC-Q100 qualification
+system_class: ASIL D (random HW fault metrics)
+summary: >
+  Automotive-grade SoC for ADAS compute. Lockstep CPU cores, hardware
+  safety mechanisms (BIST, ECC, watchdog). ASIL D random hardware
+  fault metrics per ISO 26262-11.

@@ -1,0 +1,15 @@
+title: Launch Vehicle Avionics
+domain: aerospace
+tier: fleet
+status: draft
+standards:
+  - EWR 127-1
+  - DO-178C
+  - NASA-STD-8719.24
+  - RCC 319
+assurance_framework: Range safety (EWR 127-1) + DO-178C Level A (FTS)
+system_class: DAL A (FTS), DAL C (GN&C)
+summary: >
+  Upper stage avionics for medium-lift launch vehicle. Flight
+  termination system (FTS), guidance/navigation/control, telemetry.
+  Range safety per EWR 127-1.

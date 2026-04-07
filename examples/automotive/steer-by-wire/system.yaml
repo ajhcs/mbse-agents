@@ -1,0 +1,14 @@
+title: Steer-by-Wire System
+domain: automotive
+tier: fleet
+status: draft
+standards:
+  - ISO 26262
+  - ISO 21448
+  - UN R79
+assurance_framework: ISO 26262 safety lifecycle (ASIL D, fail-operational)
+system_class: ASIL D, fail-operational
+summary: >
+  Full steer-by-wire with no mechanical fallback. Dual-redundant
+  steering actuators, torque feedback, rack position control.
+  Fail-operational architecture.

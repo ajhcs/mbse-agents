@@ -1,0 +1,15 @@
+title: Tactical SDR Radio
+domain: defense
+tier: fleet
+status: draft
+standards:
+  - SCA 4.1
+  - FACE 3.1
+  - MIL-STD-882E
+  - NSA CNSS
+assurance_framework: NSA Type 1 certification + SCA conformance
+system_class: NSA Type 1, FACE conformant
+summary: >
+  Software-defined radio for JTRS waveform hosting. Multi-channel
+  MANET, COMSEC/TRANSEC, NSA Type 1. SCA 4.1 compliant with FACE
+  transport/platform profiles.
