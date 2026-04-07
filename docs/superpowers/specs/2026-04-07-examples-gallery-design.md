@@ -5,7 +5,7 @@ Reference architecture examples for each MBSE domain agent, providing real artif
 ## Scope
 
 - 5 domains: aerospace, defense, automotive, medical-device, electronic-systems
-- 1 flagship system per domain (full artifact set, 6-7 files)
+- 1 flagship system per domain (full artifact set, 7-8 files)
 - 3 fleet systems per domain (core artifacts, 4 files each)
 - 1 new agent: Electronic Systems Engineer (~600 lines)
 - Agent integration: reference systems section added to all 5 agents
@@ -202,9 +202,12 @@ Every system uses a shared ID prefix registry. IDs are unique within a system.
 | Prefix | Scope | Example | Defined In |
 |--------|-------|---------|------------|
 | `MODE-` | Operating mode | `MODE-001` | `README.md` |
+| `FUN-` | System/subsystem function | `FUN-NAV-01` | `architecture.md` |
 | `REQ-` | Requirement (all categories) | `REQ-FUN-012` | `requirements.md` |
 | `HZ-` | Hazard / hazardous situation | `HZ-003` | `hazard-analysis.md` |
 | `CTL-` | Risk control / mitigation | `CTL-007` | `hazard-analysis.md` |
+| `THR-` | Cybersecurity threat | `THR-012` | `cybersecurity.md` |
+| `AST-` | Cybersecurity asset | `AST-003` | `cybersecurity.md` |
 | `CMP-` | Component (HW or SW) | `CMP-FMC-01` | `architecture.md` |
 | `IFC-` | Interface | `IFC-EXT-003` | `architecture.md` |
 | `VER-` | Verification activity | `VER-T-015` | `traceability.md` |
@@ -212,7 +215,7 @@ Every system uses a shared ID prefix registry. IDs are unique within a system.
 
 ### Fleet Systems and IDs
 
-Fleet systems use the same ID prefixes for `MODE-`, `REQ-`, and `CMP-` in their core files. They do not have `HZ-`, `CTL-`, `VER-`, or `EVD-` IDs since those are defined in flagship-only assurance files. If a fleet system is later promoted to flagship, the assurance files add IDs that reference the existing `REQ-` and `CMP-` IDs without renumbering.
+Fleet systems use the same ID prefixes for `MODE-`, `FUN-`, `REQ-`, `CMP-`, and `IFC-` in their core files. They do not have `HZ-`, `CTL-`, `THR-`, `AST-`, `VER-`, or `EVD-` IDs since those are defined in flagship-only assurance files. If a fleet system is later promoted to flagship, the assurance files add IDs that reference the existing `REQ-`, `FUN-`, and `CMP-` IDs without renumbering.
 
 ### Cross-File Integrity Rules (flagships)
 
@@ -318,7 +321,7 @@ All requirements are atomic, testable shall-statements.
 | ID            | Unique identifier (e.g., REQ-FUN-001)                               |
 | Statement     | Atomic shall-statement                                               |
 | Rationale     | Why this requirement exists                                          |
-| Source        | Hazard ID, risk control ID, regulatory clause, or stakeholder need   |
+| Source        | Hazard ID (HZ-), control ID (CTL-), threat ID (THR-), regulatory clause, or stakeholder need |
 | Parent        | Parent requirement ID (if derived)                                   |
 | Verification  | Method: test, analysis, inspection, demonstration                    |
 | Allocation    | Target component ID(s) from architecture.md                          |
@@ -330,6 +333,13 @@ REQ-FUN-001 through REQ-FUN-0xx
 ## Safety / Assurance Requirements
 Source must reference a hazard ID (HZ-xxx), risk control ID (CTL-xxx),
 or regulatory clause. No prose-only sourcing.
+
+## Security Requirements
+Present for systems where cybersecurity is a standalone concern
+(aerospace DO-326A, automotive ISO 21434). Source must reference
+a threat ID (THR-xxx) from cybersecurity.md. Security requirements
+also appear in cybersecurity.md for context but requirements.md
+is the authoritative location.
 
 ## Interface Requirements
 Each entry includes: data item, direction (in/out/bidirectional),
@@ -361,7 +371,7 @@ Redundancy and dissimilarity decisions.
 
 ## Allocation
 
-| Function ID | REQ ID(s) | CMP ID | Assurance Level | Rationale |
+| FUN ID | REQ ID(s) | CMP ID | Assurance Level | Rationale |
 
 ## Interfaces
 
@@ -516,8 +526,9 @@ Regulatory/certification regime and review progression.
 
 ## Evidence Index
 
-| EVD ID | Artifact Name | Demonstrates | Standard Clause | Review Milestone | Evidence Consumer | Status |
+| EVD ID | Artifact Name | Location | Demonstrates | Standard Clause | Review Milestone | Evidence Consumer | Status |
 
+- Location: file path or external reference where this evidence artifact lives
 - Review Milestone: which gate this evidence supports
 - Evidence Consumer: who reviews/accepts this evidence
 
@@ -589,23 +600,26 @@ Function-to-system allocation referencing architecture.md.
 - Automotive: ISO/SAE 21434
 
 ## Asset Identification
-| Asset ID | Asset Name | CMP ID | C | I | A | Safety Relevance (HZ ID) |
+| AST ID | Asset Name | CMP ID | C | I | A | Safety Relevance (HZ ID) |
 
 ## Threat Analysis
 
 ### Aerospace (DO-326A)
-| Threat ID | Threat Condition | Attack Vector | Asset ID(s) | Security Risk | HZ ID(s) |
+| THR ID | Threat Condition | Attack Vector | AST ID(s) | Security Risk | HZ ID(s) |
 
 ### Automotive (ISO 21434 TARA)
-| Threat ID | Threat Scenario | Attack Path | Asset ID(s) | Feasibility | Impact | Risk | HZ ID(s) |
+| THR ID | Threat Scenario | Attack Path | AST ID(s) | Feasibility | Impact | Risk | HZ ID(s) |
 
 ## Security Requirements
-| REQ-SEC-xxx | Statement | Threat ID(s) | CTL ID(s) | Verification |
+| REQ-SEC-xxx | Statement | THR ID(s) | CTL ID(s) | Verification |
 
-Must also appear in requirements.md with source = Threat ID.
+requirements.md is the authoritative location for all requirements.
+Security requirements appear here for context with their threat
+linkage, but the canonical record is in requirements.md with
+source = THR-xxx.
 
 ## Security-Safety Interaction
-| Threat ID | Attack Consequence | HZ ID | Combined Risk | Mitigation Strategy |
+| THR ID | Attack Consequence | HZ ID | Combined Risk | Mitigation Strategy |
 ```
 
 ## Agent Integration
@@ -622,12 +636,12 @@ systems. Each demonstrates real artifact structure, ID conventions,
 and cross-file traceability.
 
 ### Flagship
-- **[{Name}](../../examples/{domain}/{dir}/)** — {one-line description}.
+- **[{Name}](../examples/{domain}/{dir}/)** — {one-line description}.
   Full artifact set: system definition, requirements, architecture,
   hazard analysis, traceability, assurance evidence.
 
 ### Fleet
-- **[{Name}](../../examples/{domain}/{dir}/)** — {one-line description}.
+- **[{Name}](../examples/{domain}/{dir}/)** — {one-line description}.
   Core artifacts: system definition, requirements, architecture.
 - ...
 
