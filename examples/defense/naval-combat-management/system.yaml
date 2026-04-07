@@ -1,7 +1,7 @@
 title: Naval Combat Management System
 domain: defense
 tier: fleet
-status: draft
+status: complete
 standards:
   - DoDAF 2.02
   - MIL-STD-882E

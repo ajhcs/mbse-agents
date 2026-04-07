@@ -1,7 +1,7 @@
 title: V2X Communication Unit
 domain: automotive
 tier: fleet
-status: draft
+status: complete
 standards:
   - ISO 21434
   - ISO 21448

@@ -1,7 +1,7 @@
 title: CubeSat Constellation
 domain: aerospace
 tier: fleet
-status: draft
+status: complete
 standards:
   - NPR 7123.1
   - CCSDS

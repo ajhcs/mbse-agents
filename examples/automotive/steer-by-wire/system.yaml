@@ -1,7 +1,7 @@
 title: Steer-by-Wire System
 domain: automotive
 tier: fleet
-status: draft
+status: complete
 standards:
   - ISO 26262
   - ISO 21448

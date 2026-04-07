@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/github/license/ajhcs/mbse-agents?style=flat)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/ajhcs/mbse-agents?style=flat)](https://github.com/ajhcs/mbse-agents/stargazers)
-![Agents](https://img.shields.io/badge/agents-4-blue?style=flat)
+![Agents](https://img.shields.io/badge/agents-5-blue?style=flat)
 ![MBSE Tools](https://img.shields.io/badge/MBSE_tools-6-teal?style=flat)
 ![Platforms](https://img.shields.io/badge/platforms-7-green?style=flat)
 ![Standards](https://img.shields.io/badge/standards-20%2B-orange?style=flat)
@@ -66,8 +66,23 @@ That is not a generic AI answer. That is the answer from someone who has closed 
 | [Defense Systems Engineer](agents/defense-systems-engineer.md) | DoD acquisition | DoDAF/UAF, MIL-STD-882E, DI-SESS, JCIDS | 600+ |
 | [Automotive Systems Engineer](agents/automotive-systems-engineer.md) | ADAS, powertrain | ISO 26262, ISO 21434, ISO 21448 (SOTIF), AUTOSAR | 600+ |
 | [Medical Device Systems Engineer](agents/medical-device-systems-engineer.md) | Class II/III, SaMD | IEC 62304, ISO 14971, FDA QMSR, EU MDR 2017/745 | 600+ |
+| [Electronic Systems Engineer](agents/electronic-systems-engineer.md) | ASIC, FPGA, SoC, quantum | DO-254, IEC 61508, IEEE 1800, AEC-Q100 | 600+ |
 
 Each agent includes multi-tool crosswalk tables, reviewer attack surfaces, workflow guidance, and deliverable templates.
+
+## Example Systems
+
+Each agent is grounded in reference architectures with real artifact structure — requirements, architecture decomposition, hazard analysis, traceability matrices, and assurance evidence packages.
+
+| Domain | Flagship | Fleet Systems |
+|:-------|:---------|:--------------|
+| Aerospace | [Integrated FMS](examples/aerospace/flight-management-system/) | CubeSat constellation, EVA suit life support, launch vehicle avionics |
+| Defense | [UAS Ground Control Station](examples/defense/uas-ground-control-station/) | Ballistic missile defense, tactical SDR radio, naval combat management |
+| Automotive | [Autonomous Emergency Braking](examples/automotive/autonomous-emergency-braking/) | EV battery management, steer-by-wire, V2X communication |
+| Medical Device | [Smart Infusion Pump](examples/medical-device/smart-infusion-pump/) | Surgical robot, continuous glucose monitor, patient monitoring |
+| Electronic Systems | [Quantum Processor Control](examples/electronic-systems/quantum-processor-control/) | Safety-critical SoC, FPGA radar signal processor, HPC cluster |
+
+Full gallery: [examples/](examples/)
 
 ## Supported MBSE Tools
 

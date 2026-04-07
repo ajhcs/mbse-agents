@@ -1,7 +1,7 @@
 title: Tactical SDR Radio
 domain: defense
 tier: fleet
-status: draft
+status: complete
 standards:
   - SCA 4.1
   - FACE 3.1

@@ -1,7 +1,7 @@
 title: Launch Vehicle Avionics
 domain: aerospace
 tier: fleet
-status: draft
+status: complete
 standards:
   - EWR 127-1
   - DO-178C

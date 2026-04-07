@@ -1,7 +1,7 @@
 title: HPC Cluster Orchestration System
 domain: electronic-systems
 tier: fleet
-status: draft
+status: complete
 standards:
   - IEC 61508
   - ALCOA+

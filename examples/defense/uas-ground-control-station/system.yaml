@@ -1,7 +1,7 @@
 title: UAS Ground Control Station
 domain: defense
 tier: flagship
-status: draft
+status: complete
 standards:
   - DoDAF 2.02
   - MIL-STD-882E

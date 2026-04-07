@@ -1,7 +1,7 @@
 title: FPGA Radar Signal Processor
 domain: electronic-systems
 tier: fleet
-status: draft
+status: complete
 standards:
   - DO-254
   - MIL-STD-882E

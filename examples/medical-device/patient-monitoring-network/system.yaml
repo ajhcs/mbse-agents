@@ -1,7 +1,7 @@
 title: Patient Monitoring Network
 domain: medical-device
 tier: fleet
-status: draft
+status: complete
 standards:
   - IEC 62304
   - ISO 14971
