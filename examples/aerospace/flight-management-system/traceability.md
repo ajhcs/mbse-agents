@@ -188,7 +188,7 @@ This traceability matrix establishes bidirectional linkage across all FMS system
 | HZ-003  | CTL-003              | REQ-FUN-008, REQ-FUN-009, REQ-SEC-003                                          | Yes              |
 | HZ-004  | CTL-004              | REQ-SAF-004                                                                    | Yes              |
 | HZ-005  | CTL-005              | REQ-SAF-005, REQ-SAF-006                                                       | Yes              |
-| HZ-006  | CTL-006              | REQ-SAF-007, REQ-FUN-004                                                       | Yes              |
+| HZ-006  | CTL-006              | REQ-SAF-007                                                                    | Yes              |
 | HZ-007  | CTL-001, CTL-008     | REQ-SAF-003, REQ-SAF-008, REQ-SAF-009                                          | Yes              |
 | HZ-008  | CTL-008              | REQ-SAF-009                                                                    | Yes              |
 | HZ-009  | CTL-009              | REQ-FUN-022, REQ-SEC-001                                                       | Yes              |
@@ -267,10 +267,10 @@ This traceability matrix establishes bidirectional linkage across all FMS system
 
 ## Coverage Summary
 
-- **Requirements with architecture allocation**: 47/47 (100%)
+- **Requirements with architecture allocation**: 49/49 (100%)
 - **Safety requirements with hazard source**: 10/10 (100%)
 - **Security requirements with threat source**: 5/5 (100%)
-- **Requirements with verification activity**: 47/47 (100%)
+- **Requirements with verification activity**: 49/49 (100%)
 - **Verification activities with evidence artifact**: 54/54 (100%)
 - **Components with at least one requirement**: 18/19 (94.7%) — GAP-001 (CMP-DCU-01D)
 - **Hazards with at least one control**: 12/12 (100%)

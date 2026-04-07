@@ -55,7 +55,7 @@ All requirements are atomic, testable shall-statements.
 |--------------|-------|
 | **Statement**    | The FMS shall validate each flight plan leg for performance feasibility before sequencing the leg as active, and shall annunciate to the flight crew if a leg exceeds aircraft performance capabilities. |
 | **Rationale**    | Prevents guidance to an infeasible profile that could result in airspeed or altitude deviations. |
-| **Source**       | CTL-006; 14 CFR 25.1329 |
+| **Source**       | 14 CFR 25.1329; operational integrity |
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-FMC-01A, CMP-FMC-01B |
@@ -515,6 +515,7 @@ All requirements are atomic, testable shall-statements.
 | **Statement**    | The FMS navigation solution shall achieve a horizontal position accuracy of 0.05 NM (95%) or better when GNSS and IRS are both available. |
 | **Rationale**    | Position accuracy drives RNP 0.1 and RNP 0.3 approach capability. |
 | **Source**       | AC 90-105A; operational performance requirement |
+| **Parent**       | — |
 | **Verification** | Test, Analysis |
 | **Allocation**   | CMP-FMC-01E, CMP-FMC-01F |
 | **Status**       | Baselined |
@@ -525,6 +526,7 @@ All requirements are atomic, testable shall-statements.
 | **Statement**    | The FMS shall maintain navigation solution continuity such that the probability of unscheduled loss of navigation output does not exceed 1 x 10^-5 per flight hour in MODE-001 (Normal). |
 | **Rationale**    | Navigation continuity supports RNP containment and operational approval. |
 | **Source**       | AC 90-105A; DO-229F |
+| **Parent**       | — |
 | **Verification** | Analysis |
 | **Allocation**   | CMP-FMC-01E, CMP-FMC-01F |
 | **Status**       | Baselined |
@@ -535,6 +537,7 @@ All requirements are atomic, testable shall-statements.
 | **Statement**    | The FMS shall complete power-up initialization, including BIT, database verification, and system self-test, within 90 seconds of power application at ambient temperatures between -40C and +70C. |
 | **Rationale**    | Rapid power-up supports operational turnaround and dispatch requirements. |
 | **Source**       | Stakeholder need (airline operations) |
+| **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-FMC-01, CMP-DMC-01, CMP-DCU-01 |
 | **Status**       | Baselined |
@@ -545,6 +548,7 @@ All requirements are atomic, testable shall-statements.
 | **Statement**    | The FMS guidance computation loop shall execute with a worst-case execution time (WCET) of not more than 15 ms on a 20 ms cycle, providing a minimum 25% timing margin under all partition scheduling scenarios. |
 | **Rationale**    | WCET margin ensures guidance computation completes within its ARINC 653 time window under worst-case multi-core interference conditions per CAST-32A. |
 | **Source**       | CAST-32A; ARP4754A Section 5.2 |
+| **Parent**       | — |
 | **Verification** | Analysis, Test |
 | **Allocation**   | CMP-FMC-01G, CMP-FMC-01D |
 | **Status**       | Baselined |
@@ -555,6 +559,7 @@ All requirements are atomic, testable shall-statements.
 | **Statement**    | The FMS shall operate within a total power consumption of 150 watts across all three LRUs under maximum computational load conditions. |
 | **Rationale**    | Power budget constraint for aircraft electrical load analysis. |
 | **Source**       | Aircraft electrical load analysis; 14 CFR 25.1351 |
+| **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-FMC-01, CMP-DMC-01, CMP-DCU-01 |
 | **Status**       | Baselined |
