@@ -1,6 +1,6 @@
 # Example Systems Gallery
 
-Reference architectures demonstrating real artifact structure for each MBSE domain. Flagships include full traceability from hazard analysis through assurance evidence. Fleet systems provide core artifacts expandable over time.
+Reference architectures demonstrating real artifact structure for each MBSE domain. Flagships include end-to-end traceability matrices from hazard analysis through assurance evidence, with any known gaps called out explicitly in the gap register. Fleet systems provide core artifacts expandable over time.
 
 ## ID Conventions
 
@@ -22,7 +22,7 @@ All systems use a shared ID taxonomy:
 
 ## Cross-File Integrity
 
-Every flagship maintains:
+Every flagship is structured to maintain:
 - Every HZ has at least one CTL or explicit acceptability rationale
 - Every CTL maps to at least one REQ
 - Every assurance-relevant REQ maps to at least one CMP and at least one VER
