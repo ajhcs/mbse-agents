@@ -9,14 +9,27 @@
 [![License: MIT](https://img.shields.io/github/license/ajhcs/mbse-agents?style=flat)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/ajhcs/mbse-agents?style=flat)](https://github.com/ajhcs/mbse-agents/stargazers)
 ![Agents](https://img.shields.io/badge/agents-5-blue?style=flat)
-![MBSE Tools](https://img.shields.io/badge/MBSE_tools-6-teal?style=flat)
+![Examples](https://img.shields.io/badge/examples-20-teal?style=flat)
+![Standards](https://img.shields.io/badge/standards-30%2B-orange?style=flat)
 ![Platforms](https://img.shields.io/badge/platforms-7-green?style=flat)
-![Standards](https://img.shields.io/badge/standards-20%2B-orange?style=flat)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat)](CONTRIBUTING.md)
 
----
+Agent files that turn AI coding assistants into domain-expert principal systems engineers — standards knowledge at the clause level, artifact mapping across six MBSE tools, and reviewer attack surfaces built in.
 
-Drop a domain agent into your AI coding assistant and get a principal systems engineer who knows the standards at the clause level, maps artifacts across six MBSE tools, and has survived the reviews your program is heading into.
+## Why This Exists
+
+**The Problem.** Ask a general-purpose AI about ARP4761A common-mode analysis or ISO 26262 ASIL decomposition and you get a Wikipedia summary. It knows the acronyms but not the clauses, not the tool mappings, and not what the DER/assessor actually challenges during review.
+
+**The Solution.** Drop a domain agent file into your AI coding assistant. It becomes a principal systems engineer who has closed SSAs, survived DAES reviews, and shipped 510(k) submissions -- with opinions about what the reviewer will flag.
+
+**Why MBSE Agents?**
+
+| | MBSE Agents | Generic AI | No AI |
+|:---|:---|:---|:---|
+| Standards depth | Clause-level (e.g., ARP4761A Appendix L) | Summary-level | Your memory |
+| Tool mapping | 6 MBSE tools, element-by-element | "Use a SysML tool" | Manual lookup |
+| Reviewer prep | Attack surfaces per review gate | Generic checklists | Tribal knowledge |
+| Setup time | 30 seconds | N/A | N/A |
+| Cost | Free, MIT-licensed | Included with LLM | N/A |
 
 ## Quick Start
 
@@ -27,7 +40,7 @@ Drop a domain agent into your AI coding assistant and get a principal systems en
 mkdir -p ~/.claude/agents
 cp agents/*.md ~/.claude/agents/
 
-# Or copy to your project
+# Or install per-project
 cp -r agents/ /path/to/your-project/.claude/agents/
 ```
 
@@ -37,7 +50,7 @@ Then invoke by name:
 subagent_type="Aerospace Systems Engineer"
 ```
 
-**Other platforms:** See install guides for [Claude Desktop](platform/claude-desktop/install.md) | [Codex CLI](platform/codex/install.md) | [ChatGPT](platform/chatgpt/install.md) | [Cursor](platform/cursor/install.md) | [Aider](platform/aider/install.md) | [Generic](platform/generic/install.md)
+**Other platforms:** [Claude Desktop](platform/claude-desktop/install.md) | [Codex CLI](platform/codex/install.md) | [ChatGPT](platform/chatgpt/install.md) | [Cursor](platform/cursor/install.md) | [Aider](platform/aider/install.md) | [Generic](platform/generic/install.md)
 
 ## See It in Action
 
@@ -62,25 +75,27 @@ That is not a generic AI answer. That is the answer from someone who has closed 
 
 | Agent | Domain | Key Standards | Lines |
 |:------|:-------|:--------------|------:|
-| [Aerospace Systems Engineer](agents/aerospace-systems-engineer.md) | Civil aviation, space | ARP4754A, ARP4761A, DO-178C/DO-254, DO-326A | 600+ |
-| [Defense Systems Engineer](agents/defense-systems-engineer.md) | DoD acquisition | DoDAF/UAF, MIL-STD-882E, DI-SESS, JCIDS | 600+ |
-| [Automotive Systems Engineer](agents/automotive-systems-engineer.md) | ADAS, powertrain | ISO 26262, ISO 21434, ISO 21448 (SOTIF), AUTOSAR | 600+ |
-| [Medical Device Systems Engineer](agents/medical-device-systems-engineer.md) | Class II/III, SaMD | IEC 62304, ISO 14971, FDA QMSR, EU MDR 2017/745 | 600+ |
-| [Electronic Systems Engineer](agents/electronic-systems-engineer.md) | ASIC, FPGA, SoC, quantum | DO-254, IEC 61508, IEEE 1800, AEC-Q100 | 600+ |
+| [Aerospace Systems Engineer](agents/aerospace-systems-engineer.md) | Civil aviation, space | ARP4754A, ARP4761A, DO-178C/DO-254, DO-326A/DO-356A, DO-330/DO-331 | 673 |
+| [Defense Systems Engineer](agents/defense-systems-engineer.md) | DoD acquisition | DoDAF/UAF, MIL-STD-882E, DI-SESS, JCIDS | 674 |
+| [Automotive Systems Engineer](agents/automotive-systems-engineer.md) | ADAS, powertrain | ISO 26262, ISO 21434, ISO 21448 (SOTIF), AUTOSAR | 653 |
+| [Medical Device Systems Engineer](agents/medical-device-systems-engineer.md) | Class II/III, SaMD | IEC 62304, ISO 14971, FDA QMSR, EU MDR 2017/745 | 687 |
+| [Electronic Systems Engineer](agents/electronic-systems-engineer.md) | ASIC, FPGA, SoC, quantum | DO-254, IEC 61508, IEEE 1800/1076, AEC-Q100 | 604 |
 
-Each agent includes multi-tool crosswalk tables, reviewer attack surfaces, workflow guidance, and deliverable templates.
+Each agent includes multi-tool crosswalk tables, reviewer attack surfaces, workflow guidance, and deliverable templates. 3,291 lines total.
 
 ## Example Systems
 
 Each agent is grounded in reference architectures with real artifact structure — requirements, architecture decomposition, hazard analysis, traceability matrices, and assurance evidence packages.
 
-| Domain | Flagship | Fleet Systems |
-|:-------|:---------|:--------------|
+| Domain | Flagship (full traceability) | Fleet Systems |
+|:-------|:-----------------------------|:--------------|
 | Aerospace | [Integrated FMS](examples/aerospace/flight-management-system/) | CubeSat constellation, EVA suit life support, launch vehicle avionics |
 | Defense | [UAS Ground Control Station](examples/defense/uas-ground-control-station/) | Ballistic missile defense, tactical SDR radio, naval combat management |
 | Automotive | [Autonomous Emergency Braking](examples/automotive/autonomous-emergency-braking/) | EV battery management, steer-by-wire, V2X communication |
-| Medical Device | [Smart Infusion Pump](examples/medical-device/smart-infusion-pump/) | Surgical robot, continuous glucose monitor, patient monitoring |
+| Medical Device | [Smart Infusion Pump](examples/medical-device/smart-infusion-pump/) | Surgical robot, continuous glucose monitor, patient monitoring network |
 | Electronic Systems | [Quantum Processor Control](examples/electronic-systems/quantum-processor-control/) | Safety-critical SoC, FPGA radar signal processor, HPC cluster |
+
+5 flagships with end-to-end traceability: requirements, architecture, hazard analysis, traceability matrices, assurance evidence, and cybersecurity analysis where applicable. 15 fleet systems with requirements and architecture artifacts.
 
 Full gallery: [examples/](examples/)
 
@@ -144,15 +159,13 @@ These MCP servers complement MBSE Agents across the SE toolchain. Sorted by rele
 
 **[Defense Founder Review](skills/defense-founder-review/SKILL.md)** — A strategic review skill for defense, autonomy, and dual-use ventures. Evaluates capability gaps, incumbent failure modes, vertical integration decisions, and prototype paths.
 
-## Contributing
+## About Contributions
 
-Domain experts welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add new agents, improve crosswalk tables, or report inaccuracies.
-
-**Wanted agents:** Nuclear, naval, space, railway, industrial control systems. If you work in a regulated domain and know the standards cold, we want your contribution.
+> *About Contributions:* Please don't take this the wrong way, but I do not accept outside contributions for any of my projects. I simply don't have the mental bandwidth to review anything, and it's my name on the thing, so I'm responsible for any problems it causes; thus, the risk-reward is highly asymmetric from my perspective. I'd also have to worry about other "stakeholders," which seems unwise for tools I mostly make for myself for free. Feel free to submit issues, and even PRs if you want to illustrate a proposed fix, but know I won't merge them directly. Instead, I'll have Claude or Codex review submissions via `gh` and independently decide whether and how to address them. Bug reports in particular are welcome. Sorry if this offends, but I want to avoid wasted time and hurt feelings. I understand this isn't in sync with the prevailing open-source ethos that seeks community contributions, but it's the only way I can move at this velocity and keep my sanity.
 
 ## Standards Attribution
 
-Standards referenced in these agents are the property of their respective standards bodies: SAE International (ARP4754A, ARP4761A), RTCA/EUROCAE (DO-178C, DO-254, DO-326A, DO-330, DO-331), ISO (26262, 21434, 14971, 13485), IEC (62304, 60601-1), IEEE, and others. This project provides practitioner guidance and synthesis, not reproductions of copyrighted standard text.
+Standards referenced in these agents are the property of their respective standards bodies: SAE International (ARP4754A, ARP4761A), RTCA/EUROCAE (DO-178C, DO-254, DO-326A, DO-330, DO-331), ISO (26262, 21434, 21448, 14971, 13485), IEC (62304, 61508, 60601-1), IEEE (1800, 1076), and others. This project provides practitioner guidance and synthesis, not reproductions of copyrighted standard text.
 
 <details>
 <summary><strong>Full disclaimer</strong></summary>
