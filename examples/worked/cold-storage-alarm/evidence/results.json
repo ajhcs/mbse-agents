@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "scope": "illustrative-reference-model",
+  "tool": "Python 3.12.10",
+  "configuration": {
+    "reference_model.py": "b297ead973c3b18d94b1b790d89528dba443b4b4fff82f9ba9631966e66f793a",
+    "run_checks.py": "6c30af77c3f42c7638651b639418143d218cd67d73e0e8a3718c1a85910fa966",
+    "baseline.json": "40276d1f87c61d5c5b9112e227850c1416a2c75df82700523d061ed6ba71b840",
+    "verification.md": "d22c0793bb986e49fd6a4f78abf13265b9e47c58389a3712ecd269d9fe2f9bc1",
+    "requirements.md": "bf196b5278fc248ce2934d61e31a03be197633e83260245d7894d980c95747dc",
+    "architecture.md": "866eabd62ebdb4f00b7e7cd7076d68e4bd73089a3294e375d8ae7f5d78c9e9bf",
+    "brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974"
+  },
+  "results": [
+    {
+      "verification": "VER-01",
+      "result": "pass",
+      "observed": {
+        "first_high_ms": 2000,
+        "asserted_before_2s": false
+      }
+    },
+    {
+      "verification": "VER-02",
+      "result": "pass",
+      "observed": {
+        "high_assertions": 0,
+        "below_threshold_ms": 1900
+      }
+    },
+    {
+      "verification": "VER-03",
+      "result": "pass",
+      "observed": {
+        "first_sensor_fault_ms": 1000
+      }
+    },
+    {
+      "verification": "VER-04",
+      "result": "pass",
+      "observed": {
+        "high_after_unsafe_ack": true,
+        "high_after_recovery_only": true,
+        "high_after_valid_ack": false
+      }
+    },
+    {
+      "verification": "VER-05",
+      "result": "pass",
+      "observed": {
+        "events": [
+          {
+            "time_ms": 2000,
+            "high": true,
+            "sensor_fault": false
+          },
+          {
+            "time_ms": 2300,
+            "high": false,
+            "sensor_fault": false
+          }
+        ],
+        "expected_event_count": 2
+      }
+    },
+    {
+      "verification": "VER-06",
+      "result": "pass",
+      "observed": {
+        "invalid_nan_fault": true,
+        "recovered": {
+          "high": false,
+          "sensor_fault": false,
+          "local_alarm": false
+        },
+        "events": [
+          {
+            "time_ms": 1000,
+            "high": false,
+            "sensor_fault": true
+          },
+          {
+            "time_ms": 1100,
+            "high": false,
+            "sensor_fault": false
+          }
+        ]
+      }
+    }
+  ],
+  "acceptance": "not_accepted_for_hardware",
+  "review": "pending"
+}

@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "scope": "illustrative-reference-model",
+  "sources": [
+    {
+      "id": "NEED-01",
+      "artifact": "brief.md"
+    },
+    {
+      "id": "NEED-02",
+      "artifact": "brief.md"
+    },
+    {
+      "id": "NEED-03",
+      "artifact": "brief.md"
+    },
+    {
+      "id": "NEED-04",
+      "artifact": "brief.md"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-01",
+      "source": "NEED-01",
+      "functions": [
+        "FUN-01"
+      ],
+      "status": "proposed"
+    },
+    {
+      "id": "REQ-02",
+      "source": "NEED-02",
+      "functions": [
+        "FUN-02"
+      ],
+      "status": "proposed"
+    },
+    {
+      "id": "REQ-03",
+      "source": "NEED-03",
+      "functions": [
+        "FUN-03"
+      ],
+      "status": "proposed"
+    },
+    {
+      "id": "REQ-04",
+      "source": "NEED-04",
+      "functions": [
+        "FUN-04"
+      ],
+      "status": "proposed"
+    }
+  ],
+  "functions": [
+    {
+      "id": "FUN-01",
+      "components": [
+        "COMP-02"
+      ]
+    },
+    {
+      "id": "FUN-02",
+      "components": [
+        "COMP-01",
+        "COMP-02"
+      ]
+    },
+    {
+      "id": "FUN-03",
+      "components": [
+        "COMP-02",
+        "COMP-03"
+      ]
+    },
+    {
+      "id": "FUN-04",
+      "components": [
+        "COMP-02",
+        "COMP-04"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "COMP-01"
+    },
+    {
+      "id": "COMP-02"
+    },
+    {
+      "id": "COMP-03"
+    },
+    {
+      "id": "COMP-04"
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "IFC-01",
+      "from": "COMP-01",
+      "to": "COMP-02"
+    },
+    {
+      "id": "IFC-03",
+      "from": "COMP-02",
+      "to": "COMP-03"
+    },
+    {
+      "id": "IFC-04",
+      "from": "COMP-02",
+      "to": "COMP-04"
+    }
+  ],
+  "verification": [
+    {
+      "id": "VER-01",
+      "requirements": [
+        "REQ-01"
+      ],
+      "evidence": "EVD-01"
+    },
+    {
+      "id": "VER-02",
+      "requirements": [
+        "REQ-01"
+      ],
+      "evidence": "EVD-01"
+    },
+    {
+      "id": "VER-03",
+      "requirements": [
+        "REQ-02"
+      ],
+      "evidence": "EVD-01"
+    },
+    {
+      "id": "VER-04",
+      "requirements": [
+        "REQ-03"
+      ],
+      "evidence": "EVD-01"
+    },
+    {
+      "id": "VER-05",
+      "requirements": [
+        "REQ-04"
+      ],
+      "evidence": "EVD-01"
+    },
+    {
+      "id": "VER-06",
+      "requirements": [
+        "REQ-02",
+        "REQ-04"
+      ],
+      "evidence": "EVD-01"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EVD-01",
+      "status": "executed",
+      "artifact": "evidence/results.json",
+      "scope": "illustrative-reference-model"
+    }
+  ],
+  "configuration_files": [
+    "reference_model.py",
+    "run_checks.py",
+    "baseline.json",
+    "verification.md",
+    "requirements.md",
+    "architecture.md",
+    "brief.md"
+  ]
+}

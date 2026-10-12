@@ -1,0 +1,1334 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>MBSE Agents — review preview</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#1f2937;font:16px/1.6 system-ui,sans-serif}header{padding:26px 32px;background:#172554;color:white;border-bottom:5px solid #3b82f6}header p{margin:8px 0 0;color:#dbeafe}header strong{font-size:26px}.layout{display:grid;grid-template-columns:255px minmax(0,1fr);max-width:1440px;margin:auto}nav{padding:24px 16px;position:sticky;top:0;max-height:100vh;overflow:auto}nav a{display:block;padding:6px 10px;border-radius:6px;font-size:14px;text-decoration:none;color:#1e40af}nav a:hover,nav a:focus{background:#dbeafe}main{padding:28px 36px;min-width:0}section{background:white;border:1px solid #dbe3ee;border-radius:12px;padding:30px;margin-bottom:30px;scroll-margin-top:16px}h1{font-size:29px;line-height:1.3;color:#172554}h2{font-size:22px;margin-top:30px}a{color:#1d4ed8}table{border-collapse:collapse;width:100%;display:block;overflow:auto;font-size:14px}th,td{padding:10px;border:1px solid #dbe3ee;vertical-align:top}th{background:#eff6ff;text-align:left}td:first-child{white-space:nowrap}pre{overflow:auto;background:#172554;color:#e0f2fe;padding:18px;border-radius:8px}code{font:13px/1.5 ui-monospace,Consolas,monospace;word-break:break-word}blockquote{margin:20px 0;border-left:4px solid #3b82f6;padding:1px 16px;background:#eff6ff}.source{color:#64748b;font-size:12px;border-bottom:1px solid #e2e8f0;padding-bottom:12px}svg{width:100%;height:auto}section:not(:target){display:none}section#start{display:block}body:has(section:target) section#start:not(:target){display:none}.badge{display:inline-block;background:#dbeafe;color:#172554;border-radius:20px;padding:3px 12px;font-size:13px;margin:8px 8px 0 0}@media(max-width:800px){.layout{display:block}nav{position:static;max-height:260px;border-bottom:1px solid #cbd5e1}main{padding:16px}section{padding:20px}header{padding:22px}}@media print{nav,header{display:none}.layout{display:block}section,section:not(:target){display:block!important;break-before:page}main{padding:0}}
+</style></head><body><header><strong>MBSE Agents · engineering artifacts</strong><p>Skills, linked workflows, primary-source corrections, and reproducible evidence.</p><span class="badge">13 skill packages</span><span class="badge">6 executed model procedures</span><span class="badge">No comparative Sol/Astra evaluation</span></header><div class="layout"><nav aria-label="Review sections"><a href="#start">Start here</a><a href="#workflows">Task workflows</a><a href="#models">Model upgrades</a><a href="#installation">Install and discover</a><a href="#mbse-system-concept">Develop a System Concept</a><a href="#mbse-conops">Develop a Concept of Operations</a><a href="#mbse-operational-scenarios">Develop Operational Scenarios</a><a href="#mbse-requirements">Engineer Requirements</a><a href="#mbse-architecture">Design a System Architecture</a><a href="#mbse-verification-evidence">Plan Verification and Evidence</a><a href="#mbse-baseline-review">Review an MBSE Baseline</a><a href="#mbse-aerospace">Aerospace Systems Engineering</a><a href="#mbse-defense">Defense Systems Engineering</a><a href="#mbse-automotive">Automotive Systems Engineering</a><a href="#mbse-medical-device">Medical Device Systems Engineering</a><a href="#mbse-electronic-systems">Electronic Systems Engineering</a><a href="#defense-founder-review">Defense Founder Review</a><a href="#walkthrough">Executed walkthrough</a><a href="#brief">Stakeholder brief</a><a href="#requirements">Linked requirements</a><a href="#architecture">Allocated architecture</a><a href="#verification">Verification and results</a><a href="#sources">Source corrections</a><a href="#evaluation">Evaluation boundaries</a><a href="#contribute">Requests and contributions</a><a href="#ho01-guide">Fresh skill exercise</a><a href="#ho01-requirements">Exercise requirements</a><a href="#ho01-architecture">Exercise architecture</a><a href="#ho01-verification">Exercise evidence plan</a><a href="#ho01-checks">Exercise document checks</a></nav><main><section id="start" aria-label="Start here"><p class="source">Rendered from README.md</p><h1>Engineering skills for reviewable system decisions</h1>
+<p>MBSE Agents turns system questions into usable concepts, scenarios, requirements,
+architectures, risk analyses, and verification/evidence plans. Its skills preserve
+domain analysis and review questions while giving GPT-6.1 Sol and GPT-6 Astra
+room to work. No persona claims, prescribed document size, or future-model promises.</p>
+<p>The collection contains <strong>13 skills: seven engineering tasks, five domains, and
+one founder review</strong>. The <a href="skills.md">generated catalog</a> is the inventory.
+This is an instruction/resource library with offline maintenance tools; it is
+not a running agent service or an MBSE modeling engine. Model quality has not
+been comparatively evaluated for this release.</p>
+<h2>Start with a task</h2>
+<p>Requires Python 3.10+ for the optional installer/checks; no packages or credentials.
+Clone the repository, then either launch Codex here (the <code>.agents/skills</code> folders
+are discoverable) or install selected packages into your own project:</p>
+<pre><code class="language-sh">git clone https://github.com/ajhcs/mbse-agents.git
+cd mbse-agents
+python scripts/install.py --list
+python scripts/install.py --project /path/to/project --skill mbse-requirements --skill mbse-architecture --dry-run
+python scripts/install.py --project /path/to/project --skill mbse-requirements --skill mbse-architecture
+</code></pre>
+<p>On Windows, replace <code>/path/to/project</code> with a quoted Windows path; use <code>py</code> if
+that is your Python launcher. The installer never overwrites <code>AGENTS.md</code> or model
+settings. Existing unmanaged or edited skills are preserved. Updates to unchanged
+managed packages require <code>--update</code> and retain backups.</p>
+<blockquote>
+<p>Use $mbse-requirements and $mbse-architecture on our system brief. Develop
+measurable requirements, function/component allocations, interface contracts,
+and design rationale. Carry source IDs through the artifacts and identify the
+missing decisions that could change the design. Save a coherent reviewable draft.</p>
+</blockquote>
+<p>Add a domain skill when domain context matters: <code>mbse-aerospace</code>, <code>mbse-defense</code>,
+<code>mbse-automotive</code>, <code>mbse-medical-device</code>, or <code>mbse-electronic-systems</code>.
+For operations, use the concept, ConOps, or scenario skills. For assurance work,
+use verification/evidence or baseline review. See <a href="#workflows">task workflows</a>.</p>
+<h2>Follow the evidence</h2>
+<p>The <a href="#walkthrough">cold-storage alarm walkthrough</a>
+carries a stakeholder brief through requirements, architecture, procedures, and
+actual local reference-model results. It demonstrates trace and evidence handling,
+with hardware validation still open. The <a href="../examples/README.md">domain gallery</a>
+retains 20 illustrative system baselines; their planned evidence is not executed
+or accepted evidence. It is teaching material, not an approved design.</p>
+<p><a href="#sources">Primary-source corrections</a> include the general infusion-pump
+classification and the aerospace tool-qualification mapping. Exact licensed
+standard clauses still need the program's applicable edition. Cole's formalized
+chapter/lecture methods will be integrated after the actual source material is
+supplied, with provenance.</p>
+<h2>Install, maintain, and contribute</h2>
+<ul>
+<li><a href="#installation">Codex</a>, <a href="../platform/chatgpt/install.md">ChatGPT</a>, and
+  <a href="../platform/generic/install.md">portable hosts</a>: installation and discovery.</li>
+<li><a href="#models">Model choice and upgrades</a>: profiles that can change without
+  rewriting the engineering contracts.</li>
+<li><a href="#evaluation">Evaluation</a>: offline checks and separate behavioral review.</li>
+<li><a href="crosswalk-reference.md">Crosswalks</a>: proposed relationships and export checks.</li>
+<li><a href="#contribute">Contributing</a>: welcoming reports, features, and new skill/agent requests.</li>
+</ul>
+<pre><code class="language-sh">python scripts/catalog.py --write
+python scripts/validate.py
+python -m unittest discover -s tests
+</code></pre>
+<p>Skills do not supply tool authentication, authority approvals, or access to a live
+model. Use available authorized tools or deliver a clearly labeled proposal.
+Standards remain the property of their publishers; this project synthesizes
+engineering guidance and does not reproduce their text. <a href="../LICENSE">MIT license</a>.</p></section><section id="workflows" aria-label="Task workflows"><p class="source">Rendered from docs/workflows.md</p><h1>From a question to an engineering baseline</h1>
+<p>Start with the decision the user needs to make and the artifacts available.
+Choose a task skill for the work, adding a domain skill when the domain changes
+the analysis. Neither requires the full catalog to be loaded.</p>
+<table>
+<thead>
+<tr>
+<th>User goal</th>
+<th>Task skill</th>
+<th>Useful input</th>
+<th>Reviewable result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Explore a system idea</td>
+<td><code>mbse-system-concept</code></td>
+<td>Problem, desired outcome, constraints</td>
+<td>Alternatives, boundaries, feasibility tests, recommendation</td>
+</tr>
+<tr>
+<td>Explain how a system will be used</td>
+<td><code>mbse-conops</code></td>
+<td>Stakeholders, environment, mission</td>
+<td>Operations concept, responsibilities, lifecycle, open decisions</td>
+</tr>
+<tr>
+<td>Walk through an operation</td>
+<td><code>mbse-operational-scenarios</code></td>
+<td>Actors, trigger, context</td>
+<td>Normal and exception flows, modes, exchanges, evaluation conditions</td>
+</tr>
+<tr>
+<td>Establish a requirement baseline</td>
+<td><code>mbse-requirements</code></td>
+<td>Needs, scenarios, constraints</td>
+<td>Identified requirements, rationale, source links, acceptance conditions</td>
+</tr>
+<tr>
+<td>Allocate behavior to an architecture</td>
+<td><code>mbse-architecture</code></td>
+<td>Requirements, functions, interfaces</td>
+<td>Alternatives, allocations, contracts, trade decisions, unresolved risks</td>
+</tr>
+<tr>
+<td>Plan verification and evidence</td>
+<td><code>mbse-verification-evidence</code></td>
+<td>Baseline, risks, available methods</td>
+<td>Procedures, criteria, configuration, trace, evidence gaps</td>
+</tr>
+<tr>
+<td>Challenge a baseline or change</td>
+<td><code>mbse-baseline-review</code></td>
+<td>Artifacts and review decision</td>
+<td>Located findings, impact, repair options, disposition</td>
+</tr>
+</tbody>
+</table>
+<p>For a full workflow, carry the same IDs and assumptions from needs through
+requirements, functions, components, interfaces, verification, and evidence.
+Feed architecture-derived requirements and test failures back into the earlier
+artifacts. A diagram cannot close a verification gap. Verification asks whether
+the specified requirements are met; validation asks whether the system serves
+stakeholder needs in the intended use context.</p>
+<p>For a small task, produce the relevant artifact directly. For sustained work,
+maintain a brief decision and assumption log so a later session can continue
+from the actual baseline. Ask about missing facts that could change the answer;
+make labeled provisional assumptions for independent work. Scale artifact depth
+to the decision, system risk, and user's chosen process.</p>
+<p>Example request:</p>
+<blockquote>
+<p>Use $mbse-requirements and $mbse-architecture on our cold-storage alarm brief.
+Carry source IDs into measurable requirements and component allocations.
+Continue through verification planning and run the local reference-model checks.
+Deliver a linked baseline, executed evidence with its configuration, and open
+hardware validation work. Save reviewable artifacts in the project workspace.</p>
+</blockquote>
+<p>See the <a href="#walkthrough">worked example</a> and
+<a href="#models">model setup</a>. This repository supplies instructions and offline
+maintenance tools. It does not supply an MBSE engine or certification authority.</p></section><section id="models" aria-label="Model upgrades"><p class="source">Rendered from docs/models.md</p><h1>Choosing and upgrading a model</h1>
+<p>The skills are authored for GPT-6.1 Sol and GPT-6 Astra, using the same engineering
+contracts. No comparative model evaluation has been run for this release.
+OpenAI describes Sol as a balance of speed, cost, and intelligence, and Astra
+as the choice for demanding reasoning. Use Sol as a practical starting point;
+consider Astra for difficult cross-domain tradeoffs or unresolved review findings.
+This routing is a project recommendation to evaluate, not a measured advantage.
+See the <a href="https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra">official GPT-6 guide</a>.</p>
+<p><code>config/model-profiles.json</code> records editable model IDs and documentation links.
+It is informational; installing a skill does not change the host's model setting.
+Choose a model and supported reasoning setting in your host. For Codex CLI,
+explicit selection looks like:</p>
+<pre><code class="language-sh">codex -m gpt-6.1-sol
+codex -m gpt-6-astra
+</code></pre>
+<p>Check the models available to your account and the current CLI documentation.
+The documented API limitation is that these two models do not support <code>none</code>
+reasoning effort. This project deliberately has no API runner, credentials, or
+hardcoded budget defaults.</p>
+<p>The <a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra">Astra skill guidance</a>
+informs our authoring choices: precise discovery descriptions, task-specific
+references, fewer repeated instructions, and completion boundaries tied to the
+requested result. Keep local assumptions and engineering evidence visible while
+giving the model room to choose methods. Do not require every skill or every
+reference for every request.</p>
+<p>To upgrade:</p>
+<ol>
+<li>Fetch official guidance for the exact candidate model and verify availability,
+   tool support, output contracts, and supported settings in the intended host.</li>
+<li>Change only the relevant profile and documented invocation. Preserve a baseline
+   revision and record the candidate revision, settings, tools, and sources.</li>
+<li>Run the same task cases with baseline and candidate, withholding reviewer
+   rubrics from the producing model. Use <a href="#evaluation">the evaluation protocol</a>.</li>
+<li>Review failures and total task quality, evidence accuracy, latency, and cost.
+   Update a skill only for observed needs; retain or revert the profile if the
+   candidate does not meet the workload's acceptance conditions.</li>
+</ol>
+<p>No promised capability of a future model is part of a skill's contract.</p></section><section id="installation" aria-label="Install and discover"><p class="source">Rendered from platform/codex/install.md</p><h1>Codex installation and discovery</h1>
+<p>Canonical packages are <code>.agents/skills/&lt;name&gt;</code>. Codex discovers repository skills
+from the working directory up to the repository root. Launching Codex in this
+checkout exposes the catalog. In another project, copy selected self-contained
+packages using the installer (Python 3.10+, standard library only):</p>
+<pre><code class="language-sh">python scripts/install.py --list
+python scripts/install.py --project /path/to/project --skill mbse-medical-device --skill mbse-verification-evidence --dry-run
+python scripts/install.py --project /path/to/project --skill mbse-medical-device --skill mbse-verification-evidence
+</code></pre>
+<p>PowerShell example from this checkout:</p>
+<pre><code class="language-powershell">py scripts/install.py --project 'C:\Projects\pump-study' --skill mbse-medical-device --skill mbse-verification-evidence
+</code></pre>
+<p>Use <code>--destination</code> for an explicit personal skills directory, such as
+<code>$HOME/.agents/skills</code>, if you want the packages available beyond one project.
+Select only what you need. The installer leaves existing project instructions,
+credentials, and host model settings alone. It preflights all selected targets;
+unmanaged or locally edited packages cause a refusal before any package is copied.
+Repeat installation is idempotent. To update unchanged managed packages, rerun
+with <code>--update</code>; previous folders remain under the skills parent's <code>.mbse-backups</code>.
+Locally edited packages need manual reconciliation in a separate location.</p>
+<p>Use <code>/skills</code> or type <code>$</code> to select a skill. Explicit invocation:</p>
+<blockquote>
+<p>Use $mbse-aerospace and $mbse-baseline-review to examine our flight-control
+architecture's independence argument. Locate shared dependencies and evidence
+gaps. Produce a review with affected IDs and concrete repair options.</p>
+</blockquote>
+<p>Implicit discovery is enabled through the descriptions; the model chooses the
+relevant skill rather than loading every package. If a change does not appear,
+restart Codex. Verify model availability in the host; see <a href="#models">model setup</a>.</p>
+<p>For removal, identify the selected package and its <code>.mbse-install.json</code> receipt
+before removing it through your ordinary file manager. Keep local work and backups.
+No uninstall or update requires overwriting the project's <code>AGENTS.md</code>.</p>
+<p>Source: <a href="https://learn.chatgpt.com/docs/build-skills">official skill discovery</a>.
+The old <code>agents/*.md</code> files are migration notices, not skill packages.</p></section><section id="mbse-system-concept" aria-label="Develop a System Concept"><p class="source">Rendered from .agents/skills/mbse-system-concept/SKILL.md</p><h1>Develop a System Concept</h1>
+<p>Turn the user's problem into a defensible system direction. Understand whose outcome matters, the current situation, the system boundary, and the decision being made. Explore alternatives that differ meaningfully in how they deliver value, including changes to operations and the option to retain the current approach when relevant.</p>
+<p>Connect each candidate's essential functions to stakeholder outcomes and constraints. Examine enabling technologies, interfaces, human roles, lifecycle costs, supply dependencies, and uncertainty at the depth needed for the decision. Test ambitious options against concrete feasibility limits; avoid assuming the first proposed implementation is the system concept.</p>
+<p>Deliver the preferred concept, alternatives considered, rationale, assumptions, and the next evidence that could change the choice. Identify infeasible constraints or conflicting outcomes plainly. Continue through a coherent draft and consistency review; ask about missing information that materially affects selection while developing independent parts.</p>
+<p>Use <a href="../.agents/skills/mbse-system-concept/references/concept-decisions.md">concept decisions</a> when a comparison or feasibility plan would help. This skill develops the concept; detailed operating narratives and component designs can follow as the user requests.</p></section><section id="mbse-conops" aria-label="Develop a Concept of Operations"><p class="source">Rendered from .agents/skills/mbse-conops/SKILL.md</p><h1>Develop a Concept of Operations</h1>
+<p>Describe how the system will serve its stakeholders in its intended setting. Establish the operational problem, actors, responsibilities, boundary, environment, external systems, and measures of success. Capture normal use and the exceptions that could change the concept: degraded resources, handovers, maintenance, recovery, and retirement as relevant.</p>
+<p>Keep operational need separate from a selected implementation. Make interactions and decision authority explicit, including who initiates, supervises, overrides, maintains, and accepts outcomes. Trace assumptions and unresolved stakeholder conflicts to the scenarios or decisions they affect.</p>
+<p>Produce a usable ConOps at the user's chosen level of maturity. Connect operational claims to scenario references and evaluation conditions. Review consistency between roles, boundaries, modes, and desired outcomes. Develop what the available facts support and ask targeted questions about consequential gaps.</p>
+<p>Use <a href="../.agents/skills/mbse-conops/references/operational-framing.md">operational framing</a> for a longer ConOps. Do not force a document template onto a focused revision.</p></section><section id="mbse-operational-scenarios" aria-label="Develop Operational Scenarios"><p class="source">Rendered from .agents/skills/mbse-operational-scenarios/SKILL.md</p><h1>Develop Operational Scenarios</h1>
+<p>Develop the requested scenario or scenario set from a recognizable operational trigger and outcome. Define actors, context, preconditions, system mode, and boundary. Describe actor actions and observable system responses, including exchanged information, material, or energy where relevant.</p>
+<p>Explore exceptions that matter to this use case: interrupted work, invalid input, unavailable dependencies, degraded resources, misuse, and recovery. Expose ambiguous authority, hidden timing constraints, and unsafe transitions. Choose scenario coverage based on operational consequence and variation; do not mechanically enumerate every combination.</p>
+<p>Deliver coherent normal and exception flows, final conditions, assumptions, and observations that could become requirements or validation cases. Preserve source facts and IDs. Check that an alternative path actually rejoins a defined state or ends with a clear disposition.</p>
+<p>Use <a href="../.agents/skills/mbse-operational-scenarios/references/scenario-records.md">scenario records</a> for structured handoffs. These records describe operations; do not silently convert every action into a design requirement.</p></section><section id="mbse-requirements" aria-label="Engineer Requirements"><p class="source">Rendered from .agents/skills/mbse-requirements/SKILL.md</p><h1>Engineer Requirements</h1>
+<p>Build a requirement baseline that supports design and verification. Work from stakeholder needs, scenarios, constraints, and existing artifacts. Preserve IDs and agreed wording when possible. Separate source obligations, derived requirements, design choices, and provisional proposals.</p>
+<p>Write requirements with a responsible subject, observable behavior or constraint, relevant conditions, and measurable acceptance conditions. Use units, tolerances, timing reference points, and operating envelope where they affect meaning. Flag compound, ambiguous, conflicting, infeasible, or unverifiable requirements and propose repairs tied to their consequence.</p>
+<p>Carry source and rationale links into decomposition. Identify derived requirements and feed their implications back to the concept, safety analysis, or stakeholder decision. Do not invent thresholds or standards obligations to make a table look complete.</p>
+<p>Deliver the requested baseline or located review findings, with allocations if known, verification intent, and unresolved decisions. Review coverage and consistency before handing off. Use <a href="../.agents/skills/mbse-requirements/references/requirement-contracts.md">requirement contracts</a> for a structured baseline.</p></section><section id="mbse-architecture" aria-label="Design a System Architecture"><p class="source">Rendered from .agents/skills/mbse-architecture/SKILL.md</p><h1>Design a System Architecture</h1>
+<p>Connect the required behavior to a workable system structure. Use the actual boundary, operating modes, requirements, and constraints. Decompose functions before treating a component list as a complete architecture. Consider alternative allocations or mechanisms when they affect performance, risk, maintainability, or feasibility.</p>
+<p>Define interfaces with direction, exchanged item, semantics, units, timing, validity, error handling, and responsibility as relevant. Make resource budgets and dependencies visible. Evaluate shared power, clocks, processors, data, suppliers, and human roles before claiming redundancy or isolation.</p>
+<p>Deliver traceable function-to-component and requirement allocations, interface contracts, design decisions with rationale, and unresolved assumptions. Feed newly derived constraints back into requirements and risk analysis. Use the user's modeling tool when available; otherwise provide a clearly labeled textual or diagrammatic proposal without claiming a live model was changed.</p>
+<p>Use <a href="../.agents/skills/mbse-architecture/references/architecture-records.md">architecture records</a> for deeper allocation or trade work. Continue until the requested architecture is consistent enough for review, with gaps explicitly located.</p></section><section id="mbse-verification-evidence" aria-label="Plan Verification and Evidence"><p class="source">Rendered from .agents/skills/mbse-verification-evidence/SKILL.md</p><h1>Plan Verification and Evidence</h1>
+<p>Build an evidence plan from requirements, stakeholder needs, risks, and the implemented or proposed configuration. Select test, analysis, inspection, demonstration, or formal analysis based on what can establish each claim. Distinguish verification of requirements from validation of intended use.</p>
+<p>Define acceptance conditions, environment, stimuli, observations, uncertainties, and configuration before declaring success. Include relevant normal, boundary, failure, and recovery behavior. Check independence or qualification requirements against the actual program basis and tool use; do not assume a test name or tool output establishes compliance.</p>
+<p>Connect each verification activity to the requirements it addresses and the artifact that records its result. Separate planned, executed, failed, reviewed, and accepted states. Missing files, stale configurations, inconclusive results, and unresolved failures remain gaps. Describe the limited scope of simulations and proofs.</p>
+<p>Deliver a reviewable plan or evidence assessment and pursue authorized local execution through results and relevant repairs. Do not fabricate execution, certification, or approval. Use <a href="../.agents/skills/mbse-verification-evidence/references/evidence-contracts.md">evidence contracts</a> when creating a trace or evidence package.</p></section><section id="mbse-baseline-review" aria-label="Review an MBSE Baseline"><p class="source">Rendered from .agents/skills/mbse-baseline-review/SKILL.md</p><h1>Review an MBSE Baseline</h1>
+<p>Review the artifacts against the user's actual decision, program basis, and baseline. Follow representative threads from need through requirement, architecture, risk control, verification, and evidence. Inspect uncovered obligations and changed interfaces as well as plausible-looking links.</p>
+<p>Prioritize findings by engineering consequence. Locate each finding, explain the mismatch or missing evidence, identify affected IDs and downstream impact, and offer a repair or required decision. Distinguish verified defects from open questions and editorial preferences. Challenge unsupported compliance, independence, test, or proof claims using the sources and artifacts available.</p>
+<p>For change reviews, compare the old and new configurations and identify affected requirements, hazards, interfaces, suppliers, verification, and accepted evidence. Reused evidence needs a applicability argument. Do not use the repository's teaching benchmarks as an answer oracle.</p>
+<p>Deliver a decision-focused review with findings, evidence examined, coverage limits, and residual gaps. Use <a href="../.agents/skills/mbse-baseline-review/references/review-records.md">review records</a> for larger reviews. Independent review means a fresh assessment with an identified scope; do not claim independence from a self-review.</p></section><section id="mbse-aerospace" aria-label="Aerospace Systems Engineering"><p class="source">Rendered from .agents/skills/mbse-aerospace/SKILL.md</p><h1>Aerospace Systems Engineering</h1>
+<p>Connect aircraft or spacecraft functions, safety assessment, architecture, and assurance evidence. Treat civil aviation and space as different program bases, with tailoring justified for the actual mission.</p>
+<p>Start from the user's engineering decision, system boundary, operating context, and existing artifacts. Identify the governing program basis, jurisdiction, standards editions, and tool versions when they affect the answer. Distinguish obligations, guidance, and proposed practice; verify exact claims before relying on them. If a source is unavailable, mark the uncertainty and continue work that does not depend on it.</p>
+<p>Use <a href="../.agents/skills/mbse-aerospace/references/domain-analysis.md">domain analysis and review</a> for the relevant discipline. Select the applicable topics, retaining the user's task and chosen methods. Preserve IDs and carry derived requirements, architectural assumptions, risk controls, and evidence gaps across the baseline.</p>
+<p>Produce the requested artifact or review with rationale, sources, assumptions, and open decisions. Complete consistency checks and authorized artifact work. No fictional professional history, invented authority approval, or implied live tool access belongs in the result. Combine with a task skill when useful; a full lifecycle itinerary is unnecessary for a focused question.</p></section><section id="mbse-defense" aria-label="Defense Systems Engineering"><p class="source">Rendered from .agents/skills/mbse-defense/SKILL.md</p><h1>Defense Systems Engineering</h1>
+<p>Connect mission needs and operational threads to allocated system behavior, interfaces, lifecycle support, and the evidence needed for a program decision.</p>
+<p>Start from the user's engineering decision, system boundary, operating context, and existing artifacts. Identify the governing program basis, jurisdiction, standards editions, and tool versions when they affect the answer. Distinguish obligations, guidance, and proposed practice; verify exact claims before relying on them. If a source is unavailable, mark the uncertainty and continue work that does not depend on it.</p>
+<p>Use <a href="../.agents/skills/mbse-defense/references/domain-analysis.md">domain analysis and review</a> for the relevant discipline. Select the applicable topics, retaining the user's task and chosen methods. Preserve IDs and carry derived requirements, architectural assumptions, risk controls, and evidence gaps across the baseline.</p>
+<p>Produce the requested artifact or review with rationale, sources, assumptions, and open decisions. Complete consistency checks and authorized artifact work. No fictional professional history, invented authority approval, or implied live tool access belongs in the result. Combine with a task skill when useful; a full lifecycle itinerary is unnecessary for a focused question.</p></section><section id="mbse-automotive" aria-label="Automotive Systems Engineering"><p class="source">Rendered from .agents/skills/mbse-automotive/SKILL.md</p><h1>Automotive Systems Engineering</h1>
+<p>Connect vehicle behavior and operating context to safety goals, E/E architecture, interfaces, and verification. Keep malfunction safety, intended-function limitations, and cybersecurity analyses related but distinct.</p>
+<p>Start from the user's engineering decision, system boundary, operating context, and existing artifacts. Identify the governing program basis, jurisdiction, standards editions, and tool versions when they affect the answer. Distinguish obligations, guidance, and proposed practice; verify exact claims before relying on them. If a source is unavailable, mark the uncertainty and continue work that does not depend on it.</p>
+<p>Use <a href="../.agents/skills/mbse-automotive/references/domain-analysis.md">domain analysis and review</a> for the relevant discipline. Select the applicable topics, retaining the user's task and chosen methods. Preserve IDs and carry derived requirements, architectural assumptions, risk controls, and evidence gaps across the baseline.</p>
+<p>Produce the requested artifact or review with rationale, sources, assumptions, and open decisions. Complete consistency checks and authorized artifact work. No fictional professional history, invented authority approval, or implied live tool access belongs in the result. Combine with a task skill when useful; a full lifecycle itinerary is unnecessary for a focused question.</p></section><section id="mbse-medical-device" aria-label="Medical Device Systems Engineering"><p class="source">Rendered from .agents/skills/mbse-medical-device/SKILL.md</p><h1>Medical Device Systems Engineering</h1>
+<p>Connect intended use and patient/user risk to device requirements, architecture, software lifecycle, and evidence. Treat regulatory product class, software safety class, and submission documentation level as separate decisions.</p>
+<p>Start from the user's engineering decision, system boundary, operating context, and existing artifacts. Identify the governing program basis, jurisdiction, standards editions, and tool versions when they affect the answer. Distinguish obligations, guidance, and proposed practice; verify exact claims before relying on them. If a source is unavailable, mark the uncertainty and continue work that does not depend on it.</p>
+<p>Use <a href="../.agents/skills/mbse-medical-device/references/domain-analysis.md">domain analysis and review</a> for the relevant discipline. Select the applicable topics, retaining the user's task and chosen methods. Preserve IDs and carry derived requirements, architectural assumptions, risk controls, and evidence gaps across the baseline.</p>
+<p>Produce the requested artifact or review with rationale, sources, assumptions, and open decisions. Complete consistency checks and authorized artifact work. No fictional professional history, invented authority approval, or implied live tool access belongs in the result. Combine with a task skill when useful; a full lifecycle itinerary is unnecessary for a focused question.</p></section><section id="mbse-electronic-systems" aria-label="Electronic Systems Engineering"><p class="source">Rendered from .agents/skills/mbse-electronic-systems/SKILL.md</p><h1>Electronic Systems Engineering</h1>
+<p>Connect hardware requirements and physical constraints to design choices, HW/SW interfaces, implementation verification, and evidence. Adapt assurance to the application rather than treating all electronics as avionics.</p>
+<p>Start from the user's engineering decision, system boundary, operating context, and existing artifacts. Identify the governing program basis, jurisdiction, standards editions, and tool versions when they affect the answer. Distinguish obligations, guidance, and proposed practice; verify exact claims before relying on them. If a source is unavailable, mark the uncertainty and continue work that does not depend on it.</p>
+<p>Use <a href="../.agents/skills/mbse-electronic-systems/references/domain-analysis.md">domain analysis and review</a> for the relevant discipline. Select the applicable topics, retaining the user's task and chosen methods. Preserve IDs and carry derived requirements, architectural assumptions, risk controls, and evidence gaps across the baseline.</p>
+<p>Produce the requested artifact or review with rationale, sources, assumptions, and open decisions. Complete consistency checks and authorized artifact work. No fictional professional history, invented authority approval, or implied live tool access belongs in the result. Combine with a task skill when useful; a full lifecycle itinerary is unnecessary for a focused question.</p></section><section id="defense-founder-review" aria-label="Defense Founder Review"><p class="source">Rendered from .agents/skills/defense-founder-review/SKILL.md</p><h1>Defense Founder Review</h1>
+<p>Evaluate whether the proposed venture can deliver meaningful operational value and become a repeatable product. Start from the actual capability gap and operator, then test the proposed wedge against deployment, procurement, integration, manufacturing, and sustainment constraints.</p>
+<p>Examine the whole system, including sensors, compute, software, operators, and support where relevant. Compare build/buy/partner choices by differentiation, interfaces, cost, reversibility, and execution risk. Identify enabling changes with evidence. Investigate incumbent constraints rather than assuming named organizations are incapable or slow.</p>
+<p>Shape a prototype plan around the hardest uncertain claim and measurable operator value. Choose milestones that fit resources and the actual setting. Test defensibility through deployed learning, reliability, supply/manufacturing capability, and switching costs; do not treat "AI," relationships, or a pitch deck as proof of a moat.</p>
+<p>Deliver a direct, evidence-based recommendation, the system/product thesis, feasible entry point, critical bets, prototype evidence, and conditions that would change or kill the idea. Keep uncertainty visible, respect the user's business objective, and challenge ambition through outcomes rather than forced verdict labels or blanket preference for vertical integration. Engineering design work can use the relevant task/domain skill when requested.</p></section><section id="walkthrough" aria-label="Executed walkthrough"><p class="source">Rendered from examples/worked/cold-storage-alarm/README.md</p><h1>Requirements to architecture to executed evidence</h1>
+<p>This fictional walkthrough demonstrates the skills' artifact contracts. It is
+hand-authored and executed locally, not a controlled Sol/Astra evaluation output.</p>
+<ol>
+<li><a href="#brief">Brief</a>: needs, scenarios, boundary, teaching assumptions.</li>
+<li><a href="#requirements">Requirements</a>: sources, conditions, time reference, units, acceptance.</li>
+<li><a href="#architecture">Architecture</a>: allocations, interfaces, decisions, hazards/controls.</li>
+<li><a href="#verification">Verification</a>: six reproducible procedures and observations.</li>
+<li><a href="../examples/worked/cold-storage-alarm/baseline.json">Baseline</a>: connected sources, allocations, verification, evidence.
+   <a href="../examples/worked/cold-storage-alarm/evidence/results.json">Executed record</a>: configuration hashes and measured results.</li>
+</ol>
+<pre><code class="language-sh">python examples/worked/cold-storage-alarm/run_checks.py
+python examples/worked/cold-storage-alarm/run_checks.py --check
+python scripts/check_trace.py examples/worked/cold-storage-alarm/baseline.json
+</code></pre>
+<p>In an authorized host, provide the brief and invoke <code>$mbse-requirements</code>, then
+<code>$mbse-architecture</code> and <code>$mbse-verification-evidence</code>. Preserve IDs and request
+artifacts through local execution. Withhold this worked answer when evaluating behavior.</p>
+<p>Results establish sampled reference behavior only. Physical sensing/annunciation,
+power loss, jitter, calibration, persistence, environmental qualification, and
+operator response remain open. No real device, risk acceptance, or stakeholder
+validation is claimed.</p></section><section id="brief" aria-label="Stakeholder brief"><p class="source">Rendered from examples/worked/cold-storage-alarm/brief.md</p><h1>Stakeholder brief</h1>
+<p>This fictional project monitors a laboratory cabinet holding temperature-sensitive
+research reagents. It is not claimed to be a medical device or validated storage system.</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Need / teaching-project decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NEED-01</td>
+<td>Local warning after temperature has remained at or above 8 deg C for 2 s. This project threshold is not a sourced clinical/reagent limit.</td>
+</tr>
+<tr>
+<td>NEED-02</td>
+<td>Distinguishable sensor-unavailable indication after 1 s of invalid readings.</td>
+</tr>
+<tr>
+<td>NEED-03</td>
+<td>High warning remains visible until temperature is below 8 deg C and a technician acknowledges.</td>
+</tr>
+<tr>
+<td>NEED-04</td>
+<td>Timestamped alarm changes for investigation.</td>
+</tr>
+</tbody>
+</table>
+<p>SCN-01: monitor storage, detect a sustained excursion, latch warning, observe
+recovery, acknowledge, retain event record. SCN-02: invalid/missing readings
+produce sensor fault; valid reading clears that fault; an existing high warning
+still needs valid recovery and acknowledgement.</p>
+<p>Boundary: sensing interface, alarm logic, local annunciation, event record.
+Refrigeration control, networks, reagent disposition, and lab quality decisions
+are outside this demonstration.</p>
+<p>Assumptions: samples every 100 ms; monotonic timestamps; power available; a valid
+reading represents cabinet temperature. Physical accuracy, sound/light perception,
+power loss, calibration, retention across reset, and staffing/response time require
+subsequent design and stakeholder validation.</p></section><section id="requirements" aria-label="Linked requirements"><p class="source">Rendered from examples/worked/cold-storage-alarm/requirements.md</p><h1>Proposed requirement baseline</h1>
+<p>Values come from <a href="#brief">the brief</a>, not regulation. Requirements apply to
+sampled reference behavior. Timer intervals begin at the first applicable sample,
+not a physical threshold crossing between samples.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Source</th>
+<th>Acceptance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REQ-01</td>
+<td>The evaluator shall latch high within 100 ms after valid samples have been at or above 8 deg C continuously for 2 s, and not before that interval.</td>
+<td>NEED-01</td>
+<td>First high 2000-2100 ms from first qualifying sample; below-threshold/invalid sample resets pending interval.</td>
+</tr>
+<tr>
+<td>REQ-02</td>
+<td>The evaluator shall assert sensor fault within 100 ms after readings have been invalid continuously for 1 s; the next valid sample shall clear sensor fault.</td>
+<td>NEED-02</td>
+<td>First fault 1000-1100 ms; clearance on next valid sample. Nonfinite/nonnumeric readings are invalid.</td>
+</tr>
+<tr>
+<td>REQ-03</td>
+<td>The evaluator shall retain latched high until acknowledgement while the current sample is valid and below 8 deg C.</td>
+<td>NEED-03</td>
+<td>Early acknowledgement, recovery alone, and sensor recovery cannot silently clear high.</td>
+</tr>
+<tr>
+<td>REQ-04</td>
+<td>The event recorder shall record each change of high/fault state once, with sample time and resulting states.</td>
+<td>NEED-04</td>
+<td>Exact ordered transition records; no event for unchanged state.</td>
+</tr>
+</tbody>
+</table>
+<p>Derived interface IFC-01 uses contiguous 100 ms ticks, supporting the model timing
+claims. Jitter, transport/actuator latency, and persistence need further requirements.
+No requirement is marked stakeholder approved.</p></section><section id="architecture" aria-label="Allocated architecture"><p class="source">Rendered from examples/worked/cold-storage-alarm/architecture.md</p><svg viewBox="0 0 900 250" role="img" aria-label="Sensor adapter sends input to evaluator; evaluator drives annunciator and event recorder">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker></defs>
+<g fill="#eff6ff" stroke="#2563eb" stroke-width="2"><rect x="20" y="85" width="200" height="70" rx="10"/><rect x="335" y="85" width="210" height="70" rx="10"/><rect x="665" y="20" width="215" height="70" rx="10"/><rect x="665" y="165" width="215" height="70" rx="10"/></g>
+<g stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M220,120 L335,120"/><path d="M545,105 L665,55"/><path d="M545,135 L665,200"/></g>
+<g fill="#172554" font-size="19" text-anchor="middle"><text x="120" y="112">COMP-01</text><text x="120" y="140">Sensor adapter</text><text x="440" y="112">COMP-02</text><text x="440" y="140">Evaluator</text><text x="772" y="47">COMP-03</text><text x="772" y="75">Annunciator</text><text x="772" y="192">COMP-04</text><text x="772" y="220">Event recorder</text></g></svg><h1>Architecture and allocation</h1>
+<p>The logical design separates sensing, evaluation, local annunciation, and events.
+<code>reference_model.py</code> emulates evaluation/event behavior and returns output flags;
+it does not implement the sensor or sound/light actuator.</p>
+
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Requirements</th>
+<th>Allocation</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FUN-01 Qualify temperature interval</td>
+<td>REQ-01</td>
+<td>COMP-02</td>
+<td>Reset pending timer on invalid/low input; latch after interval</td>
+</tr>
+<tr>
+<td>FUN-02 Diagnose input availability</td>
+<td>REQ-02</td>
+<td>COMP-01, COMP-02</td>
+<td>Invalid input detection and valid recovery</td>
+</tr>
+<tr>
+<td>FUN-03 Retain/acknowledge warning</td>
+<td>REQ-03</td>
+<td>COMP-02, COMP-03</td>
+<td>Preserve high latch and expose state</td>
+</tr>
+<tr>
+<td>FUN-04 Record state changes</td>
+<td>REQ-04</td>
+<td>COMP-02, COMP-04</td>
+<td>Once per changed state pair</td>
+</tr>
+</tbody>
+</table>
+<p>IFC-01: <code>(time_ms, temperature_c)</code> on contiguous 100 ms ticks. None, NaN, infinity,
+booleans, and nonnumeric values are invalid temperatures. The model rejects gaps,
+duplicate/out-of-order ticks, noninteger times, and nonboolean acknowledgement.
+IFC-02: acknowledgement at current tick. IFC-03: separate high/fault and their OR
+as local alarm. IFC-04: ordered <code>time_ms</code>, <code>high</code>, <code>sensor_fault</code> records in volatile memory.</p>
+<p>AD-01: high latches, fault automatically clears on valid recovery to distinguish
+an excursion requiring acknowledgement from a current diagnostic condition.
+AD-02: discrete ticks make teaching checks reproducible; continuous timing and
+missing-tick handling remain open. AD-03: transitions are logged once; persistence is open.</p>
+<p>HAZ-01: unnoticed excursion, CTL-01: warning plus operator action. HAZ-02:
+misleading healthy indication during sensor failure, CTL-02: invalid-input detection.
+Tests check modeled controls; noisy-lab effectiveness and reagent protection are
+unvalidated. Shared power is a common dependency, not redundancy.</p></section><section id="verification" aria-label="Verification and results"><p class="source">Rendered from examples/worked/cold-storage-alarm/verification.md</p><h1>Verification procedures</h1>
+<p>Run <code>python examples/worked/cold-storage-alarm/run_checks.py</code> from repository root.
+The runner uses explicit inputs, saves observations, and hashes implementation,
+baseline, procedure, and design sources. No model API or physical equipment is used.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Procedure</th>
+<th>Acceptance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VER-01</td>
+<td>REQ-01</td>
+<td>Feed 8 deg C from t=0 through 2100 ms.</td>
+<td>No early high; first at 2000 ms.</td>
+</tr>
+<tr>
+<td>VER-02</td>
+<td>REQ-01</td>
+<td>High, one 7.9 deg C sample at 1900 ms, then high through 3800 ms.</td>
+<td>Pending interval restarts; no high yet.</td>
+</tr>
+<tr>
+<td>VER-03</td>
+<td>REQ-02</td>
+<td>Missing readings t=0 through 1100 ms.</td>
+<td>First fault 1000 ms.</td>
+</tr>
+<tr>
+<td>VER-04</td>
+<td>REQ-03</td>
+<td>Latch high, acknowledge at 9 deg C, recover without acknowledgement, acknowledge at 7 deg C.</td>
+<td>Only final action clears high.</td>
+</tr>
+<tr>
+<td>VER-05</td>
+<td>REQ-04</td>
+<td>Inspect VER-04 records, including unchanged ticks.</td>
+<td>Exactly assertion at 2000 and clearance at 2300, correct states.</td>
+</tr>
+<tr>
+<td>VER-06</td>
+<td>REQ-02, REQ-04</td>
+<td>NaN through 1000 ms, then valid 7 deg C.</td>
+<td>Fault and recovery with exactly their two records.</td>
+</tr>
+</tbody>
+</table>
+<p>Input-contract rejection and additional boundaries/interactions are in
+<code>tests/test_reference_model.py</code>, separate from the stored evidence record.
+None establishes physical performance, accuracy, persistence, or stakeholder acceptance.
+The tracked evidence is executed against the reference model. Design is proposed;
+review and hardware acceptance remain separate. Changed hashes or procedures need
+rerun and applicability review. Structural trace checks do not prove semantic adequacy.</p><h2>Actual saved reference-model observations</h2><table><thead><tr><th>Procedure</th><th>Result</th><th>Observed</th></tr></thead><tbody><tr><td>VER-01</td><td>pass</td><td><code>{&quot;first_high_ms&quot;: 2000, &quot;asserted_before_2s&quot;: false}</code></td></tr><tr><td>VER-02</td><td>pass</td><td><code>{&quot;high_assertions&quot;: 0, &quot;below_threshold_ms&quot;: 1900}</code></td></tr><tr><td>VER-03</td><td>pass</td><td><code>{&quot;first_sensor_fault_ms&quot;: 1000}</code></td></tr><tr><td>VER-04</td><td>pass</td><td><code>{&quot;high_after_unsafe_ack&quot;: true, &quot;high_after_recovery_only&quot;: true, &quot;high_after_valid_ack&quot;: false}</code></td></tr><tr><td>VER-05</td><td>pass</td><td><code>{&quot;events&quot;: [{&quot;time_ms&quot;: 2000, &quot;high&quot;: true, &quot;sensor_fault&quot;: false}, {&quot;time_ms&quot;: 2300, &quot;high&quot;: false, &quot;sensor_fault&quot;: false}], &quot;expected_event_count&quot;: 2}</code></td></tr><tr><td>VER-06</td><td>pass</td><td><code>{&quot;invalid_nan_fault&quot;: true, &quot;recovered&quot;: {&quot;high&quot;: false, &quot;sensor_fault&quot;: false, &quot;local_alarm&quot;: false}, &quot;events&quot;: [{&quot;time_ms&quot;: 1000, &quot;high&quot;: false, &quot;sensor_fault&quot;: true}, {&quot;time_ms&quot;: 1100, &quot;high&quot;: false, &quot;sensor_fault&quot;: false}]}</code></td></tr></tbody></table><p>Scope: sampled reference model. Hardware acceptance and comparative model evaluation remain open.</p></section><section id="sources" aria-label="Source corrections"><p class="source">Rendered from docs/sources.md</p><h1>Source checks and limits</h1>
+<p>Checked 2026-10-12. This ledger records narrow source checks, not verification of
+the entire standards catalog. All linked material is primary; summaries and
+project recommendations remain distinct from normative text.</p>
+<table>
+<thead>
+<tr>
+<th>Claim / correction</th>
+<th>Primary source and locator</th>
+<th>What this establishes / limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task-specific discovery, progressive disclosure, proportionate instructions</td>
+<td><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra">OpenAI Astra skills article</a>, “Better skills,” “Decision boundaries,” “Persistence”</td>
+<td>Authoring approach, not measured MBSE performance</td>
+</tr>
+<tr>
+<td>Required skill entrypoint and resource/tool boundary</td>
+<td><a href="https://developers.openai.com/plugins/concepts/skills">OpenAI skills concepts</a>, “Skills” and “How skills activate”</td>
+<td>Instructions/resources can work without MCP; skills do not grant authorization</td>
+</tr>
+<tr>
+<td>Local skill locations and invocation</td>
+<td><a href="https://learn.chatgpt.com/docs/build-skills">OpenAI skill authoring</a>, “Where Codex loads local skills” and “How ChatGPT and Codex use skills”</td>
+<td><code>.agents/skills</code> discovery; explicit/implicit use; host availability can differ</td>
+</tr>
+<tr>
+<td>Current model identities and settings</td>
+<td><a href="https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra">GPT-6 guide</a>, model choices/limitations/prompting; <a href="https://developers.openai.com/api/docs/models/gpt-6.1-sol">Sol model page</a>, reasoning and snapshot fields</td>
+<td>Sol/Astra IDs and family guidance; no local comparison or future-capability claim</td>
+</tr>
+<tr>
+<td>General infusion pump class</td>
+<td><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-880/subpart-F/section-880.5725">21 CFR 880.5725</a>, (a)-(b)</td>
+<td>General healthcare-facility pumps are Class II; actual intended use/product code still matters</td>
+</tr>
+<tr>
+<td>Former pump regulation was unrelated</td>
+<td><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-876/subpart-F/section-876.5820">21 CFR 876.5820</a>, title and (a)-(b)</td>
+<td>Hemodialysis systems/accessories; does not establish Class III for a general pump</td>
+</tr>
+<tr>
+<td>Pump submission context</td>
+<td><a href="https://www.fda.gov/media/78369/download">FDA infusion-pump guidance</a>, section 3, printed page 5</td>
+<td>Class II scope and Class III-system distinction; guidance is recommendations, not clearance</td>
+</tr>
+<tr>
+<td>EU pump rule</td>
+<td><a href="https://health.ec.europa.eu/system/files/2021-10/mdcg_2021-24_en_0.pdf">MDCG 2021-24 Rev.1</a>, Rule 11 notes and Rule 12 table, printed pages 47-48</td>
+<td>Rule 12 administration, potentially hazardous IIb examples; Rule 11 software; provisional device-specific assessment</td>
+</tr>
+<tr>
+<td>Current FDA quality basis</td>
+<td><a href="https://www.fda.gov/medical-devices/postmarket-requirements-devices/quality-management-system-regulation-qmsr">FDA QMSR</a>, effective-date notice; <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820/subpart-A/section-820.10">21 CFR 820.10</a>, (a)-(c)</td>
+<td>Effective February 2, 2026; ISO 13485 incorporation and design/development applicability; old 820.30 is historical</td>
+</tr>
+<tr>
+<td>Tool qualification mapping and model-based supplement scope</td>
+<td><a href="https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-115D.pdf">FAA AC 20-115D</a>, paragraphs 6 and 10, Table 2, printed page 11</td>
+<td>Criterion 1: A/B/C/D -&gt; TQL 1/2/3/4; Criterion 2: A/B -&gt; 4, C/D -&gt; 5; Criterion 3 -&gt; 5. Table is a legacy correlation; new-use criteria require actual DO-178C basis. DO-331 is software model-based guidance</td>
+</tr>
+</tbody>
+</table>
+<p>eCFR is authoritative but unofficial; pages fetched showed Title 21 current to
+2026-10-08. Preserve the accessed edition/date for a real regulatory decision.
+FAA's public table supports the correction; we did not obtain licensed DO-178C,
+DO-330, SAE, ISO, or IEC text. Unverified exact clause assertions were removed
+from the new domain references and the pump evidence index. The remaining
+gallery still needs section-level source review before regulated program use.</p>
+<p>The official DoDAF site blocked page retrieval (403). The SV-5a wording is a
+well-established view-definition correction, but that page was not freshly
+retrieved here; verify the applicable official release before normative use.
+Other crosswalks are explicitly engineering proposals, not vendor mappings.</p>
+<p>Cole's chapter notes and lectures were not supplied. No method is attributed to
+them. Future integration needs the actual material, provenance, and a focused
+review; no textbook passages have been copied.</p></section><section id="evaluation" aria-label="Evaluation boundaries"><p class="source">Rendered from docs/evaluation.md</p><h1>What validation establishes</h1>
+<p><code>python scripts/validate.py</code> checks the catalog against discoverable packages,
+frontmatter/UI metadata, generated indexes, local Markdown links, the worked
+example's trace/configuration hashes, and rerun reference-model outcomes.
+<code>python -m unittest discover -s tests</code> adds negative cases for installer collisions,
+local edits, managed updates/backups, missing allocations/evidence, stale hashes,
+planned/failed/inconclusive evidence, input-contract failures, and alarm recovery.
+Fixtures use owned temporary folders inside the checkout, avoiding host temp
+permission differences. No dependencies, credentials, network, or model calls.</p>
+<p>These are offline checks of packaging and selected artifact behavior. They do
+not establish standards compliance, stakeholder validation, or Sol/Astra quality.
+The domain gallery remains illustrative and source review is incomplete.</p>
+<h2>Separate behavior assessment</h2>
+<p><code>evals/cases.json</code> contains requests and raw input facts. <code>evals/rubrics.json</code>
+contains reviewer criteria, stored separately and omitted from installed packages
+and prepared task packets. Prepare a case for an authorized host:</p>
+<pre><code class="language-sh">python scripts/prepare_eval.py --case HO-01 --output /path/to/isolated-packet
+</code></pre>
+<p>The packet contains only the request and selected skill packages. Its inputs
+exclude the worked answer, previous benchmark prose, and reviewer criteria.
+The public cases are held out from the skill entrypoints/references, not a secure
+hidden benchmark. After an agent has seen one, use a fresh variant for a credible
+subsequent assessment. Do not claim leak-proof evaluation or tune on a final
+test set and report it as untouched.</p>
+<p>Run realistic artifact-producing tasks, including ambiguous inputs, changes,
+evidence gaps, and misleading source claims. Judge observable results:
+source-grounded requirements, plausible alternatives, preserved IDs and semantics,
+usable interface/verification contracts, truthful execution status, completed
+artifacts, and useful handling of unresolved decisions. Include narrow tasks
+and requests that should not load domain skills. For discovery tests, expose the
+whole catalog with <code>--catalog</code> (for example, HO-08) and observe actual activation
+in the host; an empty selected-skills packet cannot establish implicit routing.
+No full-catalog behavioral routing run has been performed here. Do not grade wording similarity
+or require a particular document length.</p>
+<p>For each run, record case/version, skill commit and hashes, model ID and supported
+settings, host/tool versions, source access, actual output paths, tokens/latency/cost
+when available, exceptions, and reviewer identity/dispositions. Separate producer
+from reviewer and withhold expected findings from the producer. Review accepted
+and rejected outcomes against original facts and primary sources; generated
+rubrics are proposals requiring expert adjudication, not validated oracles.</p>
+<p>For comparisons, use baseline and candidate with the same inputs and available
+tools. Include repeated runs for consequential decisions and document variability.
+Track completion, important errors, evidence integrity, reviewer repairs, and task
+cost. Set workload-specific acceptance before deciding on the upgrade. No paid
+runner is provided or invoked automatically.</p>
+<p>Independent repository review and a fresh skill-use smoke exercise can identify
+defects, but are not a controlled comparison of GPT-6.1 Sol and GPT-6 Astra. Record
+what was actually done and any unavailable model/settings or primary sources.</p></section><section id="contribute" aria-label="Requests and contributions"><p class="source">Rendered from CONTRIBUTING.md</p><h1>Help improve MBSE Agents</h1>
+<p>Bug reports, domain corrections, workflow ideas, examples, and requests for new
+skills or agents are welcome. You do not need a finished implementation or deep
+MBSE experience to open an issue. Tell us the task you wanted to complete, what
+happened, and what a useful result would look like. Please omit confidential,
+classified, export-controlled, proprietary, or patient-identifying material.</p>
+<p>Use the issue forms for a <a href="https://github.com/ajhcs/mbse-agents/issues/new?template=bug.yml">bug</a>,
+<a href="https://github.com/ajhcs/mbse-agents/issues/new?template=feature.yml">feature</a>, or
+<a href="https://github.com/ajhcs/mbse-agents/issues/new?template=new-agent.yml">new skill/agent</a>.
+Sources and small reproductions help, but are optional for an initial request.</p>
+<p>Cole Lyons (@ajhcs) maintains the project and decides what ships. Illustrative
+PRs are welcome; they may inform an independently implemented change rather
+than be merged directly. Opening one does not guarantee acceptance or review
+timing. This policy applies consistently to all five domains and the task skills.</p>
+<p>For an implementation:</p>
+<ol>
+<li>Start a branch and keep the change tied to a concrete engineering use case.</li>
+<li>Follow <a href="design-spec.md">the skill design</a>; read the relevant skill and
+   references. Preserve domain substance without invented credentials or rigid
+   output itineraries.</li>
+<li>Cite corrections at the precision you verified. Include edition, locator,
+   access limits, and the practical impact of a standards change. Do not globally
+   replace a legacy program's approved basis with a new edition.</li>
+<li>Regenerate discovery metadata with <code>python scripts/catalog.py --write</code>.
+   Run <code>python scripts/validate.py</code> and <code>python -m unittest discover -s tests</code>.
+   For behavior changes, add a realistic case and describe independent assessment
+   under <a href="#evaluation">the evaluation protocol</a>.</li>
+<li>Explain the problem, resulting behavior, verification, and remaining gaps in
+   the PR. A standards-aware reviewer should assess regulated-domain changes.</li>
+</ol>
+<p>There is no word count or skill count target. Good additions improve decisions
+and artifact quality. Remove repeated scaffolding when it obstructs the task;
+keep a constraint when violating it could cause a concrete engineering error.</p></section><section id="ho01-guide" aria-label="Fresh skill exercise"><p class="source">Rendered from evals/evidence/ho01/outputs/00-review-guide.md</p><h1>Greenhouse vent controller — review guide</h1>
+<p>Revision: GH-DRAFT-01. Prepared: 2026-10-12. Status: review draft; no requirement, architecture, result, or design decision is approved by this packet.</p>
+<h2>Deliverables</h2>
+<ul>
+<li><a href="#ho01-requirements">Requirements</a>: source-grounded obligations, provisional derived requirements, acceptance gaps and allocations.</li>
+<li><a href="#ho01-architecture">Architecture</a>: boundary, functions, components, modes, interfaces, alternatives and timing dependencies.</li>
+<li><a href="#ho01-verification">Verification and validation plan</a>: planned activities, acceptance conditions, configuration and evidence records.</li>
+<li><a href="../evals/evidence/ho01/outputs/04-trace-and-decisions.md">Traceability and decisions</a>: bidirectional source coverage, dependencies, risks and decisions needed for a final design.</li>
+<li><a href="#ho01-checks">Artifact checks</a>: actual local document checks and their limited scope.</li>
+</ul>
+<p>These are textual proposals. No live model was changed, no controller was implemented, and no operational test, simulation, proof, reliability study or certification was executed. There are no supplied test results or supplier reliability data. Proposed future evidence locations in the plan do not denote existing results.</p>
+<h2>Input and provenance</h2>
+<p>Only <code>../request.md</code> and the three packet skills and their referenced contracts were used. Raw source IDs are retained below and throughout the deliverables. The unlabeled candidate-design paragraph and manager proposal are cited by locator, not given invented raw source IDs. Artifact IDs such as RQ-01, F-01 and D-01 are local draft identifiers.</p>
+<h3>Raw stakeholder input</h3>
+<p>Source locator: <code>../request.md</code>, paragraph beginning <code>N-01 Owner:</code>. The following wording is retained verbatim:</p>
+<blockquote>
+<p>N-01 Owner: Open the vent when a valid inside-temperature reading stays at or above 32 deg C for 30 s. A brief dip below 32 resets the interval. Close below 28 deg C after 60 s. N-02 Technician: A local manual stop overrides motion; resuming automatic mode requires an explicit action. N-03 Maintenance: If data is missing for 5 s, stop motion and show a fault; do not automatically resume motion after data returns. N-04 Owner: We want remote access, but the local stop must work during network failure.</p>
+</blockquote>
+<h3>Raw candidate and uncertainty input</h3>
+<p>Source locator: <code>../request.md</code>, paragraph beginning <code>Candidate design:</code>. The following wording is retained verbatim:</p>
+<blockquote>
+<p>Candidate design: temperature samples nominally every 1 s over a shared network, one MCU, one motor driver, end switches, dashboard. Unknown: sample jitter, motor travel time, stale-data detection, operator response, wind/rain constraints and safe position. A manager proposes a universal 50 ms stop deadline without a source. There are no test results or supplier reliability data.</p>
+</blockquote>
+<p>The candidate component list is a design input, not an approved requirement baseline. Nominal 1 s sampling is not a maximum interval or an end-to-end latency bound. The unsupported 50 ms proposal is not used as a deadline or acceptance limit.</p>
+<h2>Review disposition</h2>
+<p>The requirement register contains 10 source-grounded draft records and 2 provisional derived records. All 12 have planned verification links; this is planning coverage only. The plan contains 14 verification activities and 4 stakeholder-validation activities, all planned, with execution, review and acceptance absent. The decision register contains D-01 through D-12. It locates incomplete acceptance criteria instead of supplying unsupported limits.</p>
+<p>Immediate review priorities are D-01/D-02 (temperature qualification), D-03/D-04 (restart and local stop), D-05/D-06 (data loss and fault indication), and D-08/D-09 (movement and weather hazards). Remote scope and timing/reliability evidence also need resolution. The work can proceed as a draft; approval, firmware completion and physical acceptance require those decisions and measured evidence.</p>
+<p>Execution environment: inherited Windows/PowerShell workspace. Host identity beyond the supplied environment, actual model identity, and actual model settings were unavailable to this exercise and are recorded as <strong>unknown</strong>. No model identity was inferred from tool documentation. No network, model API, credential, publication or live application mutation was used.</p></section><section id="ho01-requirements" aria-label="Exercise requirements"><p class="source">Rendered from evals/evidence/ho01/outputs/01-requirements.md</p><h1>Requirements register</h1>
+<p>Baseline: GH-DRAFT-01. Source wording and locators are preserved in <a href="#ho01-guide">00-review-guide.md</a>. Every record is unapproved. “Shall” expresses proposed requirement wording, not approval or proof of feasibility.</p>
+<h2>Interpretation and measurement rules</h2>
+<ul>
+<li>System boundary: controller, temperature acquisition interface, local stop interface, motor driver, vent actuator/end switches, fault indication and dashboard interface. The shared network, operator and weather are interacting external entities. Exact sensor, vent and power arrangements await D-11.</li>
+<li><code>T</code> is an accepted inside-temperature reading in degrees Celsius. Whether a reading is valid, fresh and attributable to the inside sensor awaits D-01/D-05. A nominal 1 s stream does not establish uninterrupted physical temperature between samples.</li>
+<li>Opening uses <code>T &gt;= 32 deg C</code> and resets on every accepted <code>T &lt; 32 deg C</code>, including one brief dip. No smoothing or debounce may hide a valid dip under N-01.</li>
+<li>Closing uses the strict threshold <code>T &lt; 28 deg C</code> and 60 s from N-01. Whether the interval must be uninterrupted, and how a rise or an invalid sample affects it, await D-02. No opening-reset rule is silently extended to closing.</li>
+<li>Timer start, sensor-time versus reception-time semantics, maximum sample gap, quantization, accuracy and acceptance tolerance await D-01/D-02/D-05/D-10. Architecture suggestions are provisional until these decisions are resolved.</li>
+<li>“Stop motion” is a required outcome. Disabling the driver is a mechanism; it does not prove physical arrest. D-04 separates local demand-to-inhibit latency from inhibit-to-physical-stop time. D-05 resolves missing-data timing. Neither threshold provides a supported universal 50 ms bound.</li>
+</ul>
+<h2>Source-grounded draft requirements</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Proposed statement and conditions</th>
+<th>Source, rationale and relation</th>
+<th>Acceptance condition / unresolved part</th>
+<th>Accountable owner; proposed allocation; verification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RQ-01</td>
+<td>The controller shall issue an opening demand when a valid inside-temperature reading has satisfied <code>T &gt;= 32 deg C</code> for 30 s in enabled automatic mode, subject to stop/fault inhibition.</td>
+<td>N-01, request stakeholder paragraph; N-02/N-03 constrain permission to move. Preserves the high threshold and delay.</td>
+<td>Boundary stimuli at exactly 32 and just below it; no early demand; demand at expiry under an agreed timer/tolerance contract. Meaning of “stays,” timer origin and reaction tolerance: D-01/D-10. Actual vent opening completion: D-08/D-11.</td>
+<td>Owner with controls engineer; F-02/F-03 → C-02/C-03/C-04; VA-01, VA-13, VA-14.</td>
+</tr>
+<tr>
+<td>RQ-02</td>
+<td>The controller shall reset the opening qualification interval upon every valid inside-temperature reading below 32 deg C before that interval expires.</td>
+<td>N-01, request stakeholder paragraph; decomposition of RQ-01. A brief valid dip must not be filtered away.</td>
+<td>A valid dip immediately before expiry prevents that opening demand and a new 30 s interval is required. Equality at 32 does not reset. Missing/invalid samples and unseen dips: D-01/D-05.</td>
+<td>Owner with controls engineer; F-01/F-02 → C-02; VA-02, VA-11, VA-14.</td>
+</tr>
+<tr>
+<td>RQ-03</td>
+<td>The controller shall issue a closing demand below 28 deg C after the specified 60 s qualification in enabled automatic mode, subject to stop/fault inhibition.</td>
+<td>N-01, request stakeholder paragraph; N-02/N-03 constrain permission. Preserves the strict low threshold and duration.</td>
+<td><code>T = 28 deg C</code> does not qualify; qualified <code>T &lt; 28 deg C</code> produces no early closing demand and a demand at expiry. Continuity, reset policy, timer origin and tolerance: D-02/D-10; movement completion: D-08/D-11.</td>
+<td>Owner with controls engineer; F-02/F-03 → C-02/C-03/C-04; VA-03, VA-13, VA-14.</td>
+</tr>
+<tr>
+<td>RQ-04</td>
+<td>The controller shall make the local manual stop override every motion demand, including automatic and any remote demand.</td>
+<td>N-02, request stakeholder paragraph; N-04 establishes network-failure condition.</td>
+<td>Local stop asserted in each supported mode/direction prevents further commanded motion and stops current motion. Stop event, residual travel, physical stopping time and operating loads must be defined in D-04/D-09/D-11.</td>
+<td>Technician with hardware/controls engineers; F-03/F-04/F-05 → C-01/C-02/C-03/C-04; VA-04, VA-10, VA-13, VA-14.</td>
+</tr>
+<tr>
+<td>RQ-05</td>
+<td>After a local manual stop, the controller shall require an explicit operator action before automatic mode is resumed.</td>
+<td>N-02, request stakeholder paragraph. Stop release or data restoration alone must not re-enable automatic motion.</td>
+<td>Release the stop and exercise temperature thresholds; automatic mode remains disabled until the defined explicit action is accepted. Action, location, prerequisites and interaction with fault reset: D-03/D-04/D-07.</td>
+<td>Technician; F-03/F-05 → C-01/C-02/C-05; VA-05, VA-13.</td>
+</tr>
+<tr>
+<td>RQ-06</td>
+<td>If required temperature data has been missing for 5 s, the controller shall stop motion and inhibit motion while the condition persists.</td>
+<td>N-03, request stakeholder paragraph. Inhibition is the derived consequence of stopping with no usable feedback.</td>
+<td>Test both idle and moving cases around 5 s. At the defined expiry, stop is required; command-to-inhibit and physical stopping acceptance remain open. Last receipt/last valid sample origin, invalid/stale data treatment and scheduler allowance: D-05/D-10; physical stop: D-04/D-09.</td>
+<td>Maintenance with controls/hardware engineers; F-01/F-03/F-04 → C-02/C-03/C-04; VA-06, VA-11, VA-13, VA-14.</td>
+</tr>
+<tr>
+<td>RQ-07</td>
+<td>The controller shall indicate a missing-temperature-data fault when the 5 s missing-data condition occurs.</td>
+<td>N-03, request stakeholder paragraph; N-04 is relevant when the network also carries the dashboard.</td>
+<td>Observe an unambiguous fault at the selected indication point on expiry and during failed network conditions. Indicator location, persistence, visibility and indication latency: D-06/D-10. A remote dashboard alone is not established as available during network failure.</td>
+<td>Maintenance; F-06 → C-02/C-05 and proposed C-06; VA-07, VA-13, VA-14.</td>
+</tr>
+<tr>
+<td>RQ-08</td>
+<td>The controller shall not automatically resume motion after temperature data returns following a missing-data fault.</td>
+<td>N-03, request stakeholder paragraph. Return of telemetry is not authorization to move.</td>
+<td>Restore valid data while an opening/closing threshold qualifies; motion remains inhibited without the approved recovery action. Fault clearance versus automatic authorization and permissible human actions: D-03.</td>
+<td>Maintenance with technician; F-03/F-05 → C-02/C-01/C-05; VA-08, VA-13.</td>
+</tr>
+<tr>
+<td>RQ-09</td>
+<td>The system shall provide remote access within an owner-approved scope.</td>
+<td>N-04, request stakeholder paragraph; stakeholder intent requiring elaboration. The dashboard is a candidate mechanism, not a specified remote-control feature set.</td>
+<td>Scope, permissions, read versus command capability, authorization/security and availability acceptance are absent: D-07. This record cannot yet be baselined as measurable.</td>
+<td>Owner; F-07 → C-05/C-02/network; VA-09, SV-04.</td>
+</tr>
+<tr>
+<td>RQ-10</td>
+<td>The local manual stop shall remain effective during failure of the shared network.</td>
+<td>N-04, request stakeholder paragraph; N-02 defines stop behavior.</td>
+<td>With the temperature/dashboard network disconnected, stalled, congested or returning unusable data, local stop satisfies the approved RQ-04 acceptance. No network response is required on its actuation path. Full electrical/processor-fault independence is not claimed.</td>
+<td>Owner and technician with hardware engineer; F-04/F-05 → C-01/C-03/C-04; VA-10, VA-13, VA-14.</td>
+</tr>
+</tbody>
+</table>
+<h2>Provisional derived requirements</h2>
+<p>These requirements need engineering and stakeholder review. They do not introduce new stakeholder thresholds or standards obligations.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Proposed requirement</th>
+<th>Source/parent and rationale</th>
+<th>Acceptance gap and owner</th>
+<th>Proposed allocation and verification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DR-01</td>
+<td>The controller shall accept data for automatic qualification and data-availability monitoring only under an explicit validity/freshness contract, and shall prevent duplicate, out-of-order or stale data from extending freshness or creating false qualification.</td>
+<td>RQ-01/RQ-02/RQ-03/RQ-06/RQ-08; N-01/N-03; candidate shared-network samples. Needed to prevent replayed or old readings from masking loss. Treating all invalid data as missing is a proposed conservative interpretation, not verbatim source wording.</td>
+<td>D-01/D-05 must set identity, accuracy, age/gap limits, timestamp/sequence rules, clock assumptions and invalid-data policy. Controls engineer owns definition; owner/maintenance confirm semantics.</td>
+<td>F-01/F-02 → C-02/network/sensor interface; VA-11, VA-06, VA-14.</td>
+</tr>
+<tr>
+<td>DR-02</td>
+<td>The controller and driver interface shall issue mutually exclusive open/close commands and apply stop/fault inhibition ahead of directional motion commands.</td>
+<td>RQ-04/RQ-06/RQ-10; N-02/N-03/N-04; candidate one motor driver. Engineering decomposition to avoid a conflicting command defeating stop.</td>
+<td>D-08 must define cancellation/reversal/deadtime and end-switch behavior; D-04 must define inhibit semantics. Demonstrate no simultaneous direction enables and no effective direction drive during asserted inhibit. Hardware/controls engineer owns contract.</td>
+<td>F-03/F-04 → C-02/C-03; VA-12, VA-04, VA-13, VA-14.</td>
+</tr>
+</tbody>
+</table>
+<h2>Baseline review findings</h2>
+<p>No source obligation has been dropped. N-01 decomposes into three records without weakening the brief-dip opening reset; N-02 yields override and explicit resumption; N-03 yields stopping, fault indication and no automatic recovery; N-04 yields remote intent and network-independent local stop. RQ-09 remains non-measurable until scope is agreed. Timing tolerances, physical stop limits, sampling interpretation and weather envelope remain approval blockers. Candidate end switches and other proposed mechanisms are architecture choices, not retroactively attributed to the owner. There is no supported reliability target, regulatory obligation, hazard class or 50 ms deadline in this input.</p></section><section id="ho01-architecture" aria-label="Exercise architecture"><p class="source">Rendered from evals/evidence/ho01/outputs/02-architecture.md</p><h1>Architecture proposal</h1>
+<p>Configuration: GH-DRAFT-01 textual proposal. No modeling-tool project or deployed design was changed. Source IDs and requirement contracts are in <a href="#ho01-requirements">01-requirements.md</a>; unresolved decisions are in <a href="../evals/evidence/ho01/outputs/04-trace-and-decisions.md">04-trace-and-decisions.md</a>.</p>
+<h2>Boundary and proposed physical structure</h2>
+<p>The shared network carries nominally 1 s temperature samples and dashboard traffic. One MCU accepts eligible temperature readings, qualifies thresholds, arbitrates requests and manages mode/fault authorization. One motor driver commands the vent mechanism. End switches report direction-specific limits. The operator acts through a local stop and an explicit automatic-enable/recovery interface.</p>
+<p>The candidate lacks a specified local stop actuation path. The preferred review option adds a local maintained/latching inhibit path to the driver's motion-enable circuit and an MCU observation input. Its direct inhibit does not require network or MCU message processing. A local fault indicator is also proposed because a dashboard on the failed network may be unreachable. Both are additions for review, with electrical compatibility, power-loss behavior and fault detection unproved.</p>
+<pre><code class="language-mermaid">flowchart LR
+  S[Inside temperature source] --&gt;|I-01 samples via shared network| M[C-02 single MCU]
+  D[C-05 dashboard] &lt;--&gt;|I-05 remote interface via shared network| M
+  L[C-01 local stop and explicit action interface] --&gt;|I-02 stop status and action| M
+  L --&gt;|I-03 proposed direct latched inhibit| R[C-03 single motor driver]
+  M --&gt;|I-04 direction and enable| R
+  R --&gt;|I-07 motor power| V[C-04 vent motor and mechanism]
+  E[C-07 end switches] --&gt;|I-06 limits| M
+  M --&gt;|I-08 proposed local fault indication| A[C-06 local indicator]
+</code></pre>
+<p>All arrows are directional interface proposals. The diagram does not establish redundancy, independence from common power, electrical fail-safe behavior or sufficient motor stopping performance.</p>
+<h2>Functional decomposition and allocation</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Transformation, input and output</th>
+<th>Applicable modes</th>
+<th>Requirements and raw sources</th>
+<th>Proposed components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F-01 Qualify data availability</td>
+<td>Temperature packets/time/identity → accepted reading or invalid/unavailable status and missing-data expiry</td>
+<td>All; motion authorization only when enabled</td>
+<td>RQ-06/RQ-08/DR-01; N-01/N-03</td>
+<td>C-02, temperature interface/shared network</td>
+</tr>
+<tr>
+<td>F-02 Qualify thermal demand</td>
+<td>Eligible readings/time → high interval, reset event, low interval and opening/closing demand</td>
+<td>AUTO_ENABLED; restart timer policy provisional</td>
+<td>RQ-01/RQ-02/RQ-03/DR-01; N-01</td>
+<td>C-02</td>
+</tr>
+<tr>
+<td>F-03 Arbitrate permission and direction</td>
+<td>Qualified/manual/remote requests, stop, fault, limits → inhibit or one eligible directional command</td>
+<td>All</td>
+<td>RQ-01/RQ-03/RQ-04/RQ-05/RQ-06/RQ-08/DR-02; N-01/N-02/N-03</td>
+<td>C-02; C-03 final inhibit gate</td>
+</tr>
+<tr>
+<td>F-04 Control and halt motion</td>
+<td>Enable/direction/local inhibit → motor energization/removal and vent movement</td>
+<td>OPENING, CLOSING, IDLE under orthogonal authorization flags</td>
+<td>RQ-04/RQ-06/RQ-10/DR-02; N-02/N-03/N-04</td>
+<td>C-01/C-03/C-04; C-07 limits</td>
+</tr>
+<tr>
+<td>F-05 Manage explicit authorization</td>
+<td>Local stop/release, recovery action, current data/fault → latched inhibition and deliberate automatic-enable state</td>
+<td>All</td>
+<td>RQ-05/RQ-08/RQ-10; N-02/N-03/N-04</td>
+<td>C-01/C-02; C-05 only within D-07 scope</td>
+</tr>
+<tr>
+<td>F-06 Indicate fault/status</td>
+<td>Data-loss fault and mode → observable fault/status</td>
+<td>All</td>
+<td>RQ-07; N-03</td>
+<td>C-02/C-05; proposed C-06</td>
+</tr>
+<tr>
+<td>F-07 Provide remote access</td>
+<td>Remote request/status exchange → owner-approved information/control operation</td>
+<td>D-07 scope; subordinate to stop/fault</td>
+<td>RQ-09/RQ-10; N-04</td>
+<td>C-05/C-02/shared network</td>
+</tr>
+</tbody>
+</table>
+<h2>Component responsibilities and failure dependencies</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Responsibility and interfaces</th>
+<th>Resource constraints / failure behavior to resolve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C-01 Local stop and action interface, proposed</td>
+<td>Assert direct inhibit (I-03), report stop state and deliberate operator action (I-02).</td>
+<td>Maintained/latching mechanism, wiring faults, release/reset semantics and contact behavior: D-03/D-04. Must not require network. An explicit auto-enable interface must be supplied; remote reset is not assumed.</td>
+</tr>
+<tr>
+<td>C-02 One MCU, candidate</td>
+<td>F-01/F-02/F-03/F-05/F-06/F-07; I-01/I-02/I-04/I-05/I-06/I-08.</td>
+<td>Scheduler/clock accuracy, memory, CPU, resets, firmware, power and startup defaults unknown. Shared processor means thermal control and missing-data fault logic can fail together. Proposed output-default inhibit requires electrical validation.</td>
+</tr>
+<tr>
+<td>C-03 One motor driver, candidate</td>
+<td>Translate exclusive commands and inhibit into motor power, I-03/I-04/I-07.</td>
+<td>Disable polarity, priority, propagation delay, braking/coasting, load/current/thermal limits and default state unknown. A shorted/stuck driver can defeat a logic-disable path; no fault tolerance is claimed.</td>
+</tr>
+<tr>
+<td>C-04 Motor, vent and mechanical load</td>
+<td>Produce movement and physical halt, I-07.</td>
+<td>Travel time, inertia, gear behavior, holding capability, force, weather load and safe position unknown: D-08/D-09/D-11. Drive removal may permit coast or wind-driven movement.</td>
+</tr>
+<tr>
+<td>C-05 Dashboard, candidate</td>
+<td>Remote access and status, I-05.</td>
+<td>Network failure makes availability uncertain. Scope, security, reconnection/replay and remote movement privileges await D-07. Must not own local stop enforcement.</td>
+</tr>
+<tr>
+<td>C-06 Local fault indicator, proposed</td>
+<td>Show fault through I-08 when dashboard network fails.</td>
+<td>Type, power, visibility, latching and indication deadline await D-06. Common power can remove indication.</td>
+</tr>
+<tr>
+<td>C-07 End switches, candidate</td>
+<td>Signal opening/closing limits through I-06.</td>
+<td>Switch count/location, polarity, wiring diagnostics, bounce, contradictory limits and direct driver interruption unknown. They do not establish mid-travel position or stop distance.</td>
+</tr>
+</tbody>
+</table>
+<p>Dependencies to review: shared supply/ground, reset and clock; one MCU and common firmware/configuration; one driver; network used for both sensing and remote access; shared enclosure/environment; stop wiring and maintenance; operator availability. A direct stop path reduces network dependence but retains driver, power and mechanical common causes. No failure probability, availability or independence claim is supportable without D-12 evidence.</p>
+<h2>Mode and transition contract</h2>
+<p>Use orthogonal authorization flags and motion state rather than one mode that loses simultaneous stop/fault information. Suggested flags are <code>auto_authorized</code>, <code>local_stop_latched</code> and <code>data_fault_latched</code>; data eligibility and end limits are additional guards. Motion state is IDLE/OPENING/CLOSING. These are proposed logical names, not code.</p>
+<table>
+<thead>
+<tr>
+<th>Event / condition</th>
+<th>Proposed state/output response</th>
+<th>Basis and unresolved decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Startup/reset</td>
+<td>Driver commanded inhibited; <code>auto_authorized=false</code>; collect qualified data before any deliberate enable.</td>
+<td>Conservative proposal, D-03/D-11; N-02/N-03 do not specify power-cycle recovery.</td>
+</tr>
+<tr>
+<td>Local stop asserted in any state</td>
+<td>Direct local inhibit asserts; latch stop, clear auto authorization, cancel pending demands, request stop; preserve any fault latch.</td>
+<td>RQ-04/RQ-05/RQ-10; N-02/N-04; D-04 sets physical outcome.</td>
+</tr>
+<tr>
+<td>Local stop released</td>
+<td>Do not automatically clear authorization inhibition or restart.</td>
+<td>RQ-05; N-02. Whether physical latch release and explicit enable can be a single action: D-03/D-04.</td>
+</tr>
+<tr>
+<td>Missing-data expiry</td>
+<td>Set data fault latch; clear auto authorization; inhibit/stop; show fault. Stop has priority over demand qualification at the same processing instant.</td>
+<td>RQ-06/RQ-07/RQ-08/DR-02; N-03; event origin and latency D-05/D-10.</td>
+</tr>
+<tr>
+<td>Data returns</td>
+<td>Update current data eligibility; retain fault latch and disabled automatic authorization.</td>
+<td>RQ-08; N-03. No motion just because high/low readings return.</td>
+</tr>
+<tr>
+<td>Explicit recovery/enable action</td>
+<td>Proposed guard: no active local stop, qualified fresh data and resolved active fault. Acknowledge fault and enable only under D-03's approved action protocol. Reset thermal timers before new qualification, proposed.</td>
+<td>RQ-05/RQ-08; N-02/N-03; timer reset on recovery is a design choice, D-01/D-03.</td>
+</tr>
+<tr>
+<td>High/low qualification completes with permission</td>
+<td>Submit one directional demand through arbitration. Motion continuation/cancellation/reversal policy remains undefined.</td>
+<td>RQ-01/RQ-03/DR-02; N-01; D-08 must decide persistence of a qualified demand during travel.</td>
+</tr>
+<tr>
+<td>Direction-specific end limit</td>
+<td>Proposed: inhibit further drive in that direction. Contradictory limits or failed switch behavior must be specified before implementation.</td>
+<td>Candidate end switches; D-08/D-11; no added source obligation is asserted.</td>
+</tr>
+<tr>
+<td>Concurrent stop, data loss and remote/thermal demand</td>
+<td>Retain both inhibition reasons; no effective directional drive; clearing one reason leaves the other effective.</td>
+<td>RQ-04/RQ-05/RQ-06/RQ-08/RQ-10/DR-02; N-02/N-03/N-04.</td>
+</tr>
+</tbody>
+</table>
+<h2>Interface contracts</h2>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Source → target; exchanged item and units/format</th>
+<th>Timing and validity responsibility</th>
+<th>Error handling / missing agreement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I-01</td>
+<td>Inside source via shared network → C-02; temperature in deg C, source identity, proposed sequence/timestamp/quality fields</td>
+<td>Nominal 1 s is input fact. Maximum gap/jitter/latency and field schema unspecified. Sensor owns measurement; MCU owns acceptance/availability.</td>
+<td>D-01/D-05 set stale/invalid rules and clock relationship. Duplicate/reordered data must not renew freshness under DR-01. Lost network can make temperature unavailable.</td>
+</tr>
+<tr>
+<td>I-02</td>
+<td>C-01 → C-02; asserted stop state and explicit operator action, digital semantics TBD</td>
+<td>Local electrical path; no network dependency. MCU owns latches/guards; event debounce/detection latency TBD.</td>
+<td>D-03/D-04 set active polarity, failed wiring response and distinction between stop release, fault acknowledgment and enable. Debounce must not silently postpone stop.</td>
+</tr>
+<tr>
+<td>I-03</td>
+<td>C-01 → C-03; proposed hardwired maintained/latching motion inhibit</td>
+<td>Stop circuit and driver own final disable; polarity, edge reference and delay TBD.</td>
+<td>D-04/D-11 confirm direct inhibit overrides I-04. No supported claim for stuck-driver failure. Reset cannot bypass an active stop.</td>
+</tr>
+<tr>
+<td>I-04</td>
+<td>C-02 → C-03; OPEN/CLOSE/ENABLE or equivalent digital contract</td>
+<td>Exclusive commands; inhibit wins. MCU owns command consistency; driver owns interpretation and electrical response.</td>
+<td>D-04/D-08 define default inhibit, reversal sequence/deadtime and fault behavior. Interface delay budget unknown.</td>
+</tr>
+<tr>
+<td>I-05</td>
+<td>C-05 ↔ C-02 through shared network; status and approved remote operations</td>
+<td>Rates, delivery semantics, freshness, authentication and permissions TBD under D-07.</td>
+<td>Network failure cannot disable I-03. Reject stale/queued movement commands after reconnection under a proposed D-07 protocol. Local stop reset by remote command is unresolved, not permitted by this draft.</td>
+</tr>
+<tr>
+<td>I-06</td>
+<td>C-07 → C-02; direction-specific reached-limit digital indications</td>
+<td>Switch and MCU own electrical/read/debounce contract; latency TBD.</td>
+<td>D-08/D-11 address absent/stuck/contradictory switches; travel timeout value requires measured travel evidence.</td>
+</tr>
+<tr>
+<td>I-07</td>
+<td>C-03 → C-04; motor electrical power, polarity/current/voltage TBD</td>
+<td>Driver/mechanical owner supplies load, inertia, response and holding data.</td>
+<td>Disable may brake or coast; actual physical stop/holding behavior must be measured across D-09 envelope.</td>
+</tr>
+<tr>
+<td>I-08</td>
+<td>C-02 → proposed C-06, and status via I-05; missing-data fault/mode indication</td>
+<td>Indicator availability, timing, content and persistence await D-06/D-10.</td>
+<td>Local indicator avoids network transport dependence; supply loss remains common cause. Fault reset display behavior follows D-03.</td>
+</tr>
+</tbody>
+</table>
+<h2>Timing, resources and trade records</h2>
+<p>Proposed data-loss origin is controller monotonic receipt time of the last accepted fresh reading. Eligibility may also need sensor acquisition age; unsynchronized sensor time cannot be subtracted without an agreed clock mapping. At the 5 s expiry, a missing-data event must take precedence. Whether invalid packets count as missing and whether sensor acquisition time instead governs expiry remain D-05 decisions. A 1 s nominal period yields no proven worst-case sampling or freshness margin.</p>
+<table>
+<thead>
+<tr>
+<th>Path / budget</th>
+<th>Contributions requiring evidence</th>
+<th>Supported value / gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical threshold crossing → eligible reading</td>
+<td>Sensor accuracy/response + acquisition gap/jitter + network delay + validation/scheduling</td>
+<td>All maximums unknown. Under a sample-based D-01 contract, 30/60 s start from the defined eligible sample; these intervals do not establish physical crossing-to-motion latency.</td>
+</tr>
+<tr>
+<td>Eligible thermal interval → command → vent at limit</td>
+<td>30 s opening or 60 s closing qualification + scheduler + arbitration + driver response + travel</td>
+<td>Qualification durations from N-01. All other terms and reaction tolerance unknown.</td>
+</tr>
+<tr>
+<td>Local stop event → physical arrest</td>
+<td>Contact/input response + direct inhibit circuit/driver delay + mechanical deceleration/coast</td>
+<td>Sum unknown. Proposed I-03 excludes network and MCU scheduler from direct actuation; 50 ms is unsupported. Event origin and residual movement require D-04.</td>
+</tr>
+<tr>
+<td>Last eligible datum → missing-data physical stop</td>
+<td>Defined 5 s absence interval + expiry evaluation delay + arbitration/output delay + driver delay + mechanical stop</td>
+<td>5 s from N-03; remaining terms and deadline interpretation unresolved D-05/D-10. Cannot claim physical halt at exactly 5 s.</td>
+</tr>
+<tr>
+<td>Missing-data expiry → observable fault</td>
+<td>Detection + display update + display response; network transport if remote display</td>
+<td>Deadline unknown; local proposed indicator removes network transport term.</td>
+</tr>
+</tbody>
+</table>
+<p>No CPU, memory, electrical current, thermal or communication budget can be closed from the inputs. Owners must measure worst-case paths and allocate limits/margins once justified; no numerical margins are invented.</p>
+<table>
+<thead>
+<tr>
+<th>Decision record</th>
+<th>Alternatives and review recommendation</th>
+<th>Evidence, consequence and revisit trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AD-01 Local stop allocation</td>
+<td>(A) network/dashboard stop; (B) local MCU input commanding disable; (C) direct local maintained/latching driver inhibit plus MCU status. Recommend C for review.</td>
+<td>A conflicts with N-04. B removes network from the button but remains MCU/scheduling dependent. C best supports N-02/N-04 with the single-MCU candidate; adds wiring/latch integration, retains common driver/power/mechanics. No electrical tests exist. Revisit on D-04/D-11 or driver incompatibility.</td>
+</tr>
+<tr>
+<td>AD-02 Data validity and time</td>
+<td>Receipt-only presence; sensor age only; combined eligibility using identity/sequence and age with a controller monotonic timeout. Recommend combined eligibility for review.</td>
+<td>N-01/N-03 plus shared network motivate stale/replay handling. Additional metadata/clock contract may be needed. No age/gap bound selected. Revisit on D-01/D-05 and actual sensor protocol.</td>
+</tr>
+<tr>
+<td>AD-03 Fault display</td>
+<td>Dashboard only; local indication plus dashboard status. Recommend local indication plus dashboard.</td>
+<td>N-03 demands visible fault; N-04/shared network exposes dashboard availability risk. Adds proposed C-06 and supply/visibility questions. Revisit on D-06.</td>
+</tr>
+<tr>
+<td>AD-04 Recovery protocol</td>
+<td>Auto-restart on packet return; deliberate guarded recovery/automatic-enable action. Recommend deliberate guarded action.</td>
+<td>Auto-restart conflicts with N-03; deliberate auto resumption also supports N-02. Exact number/location of actions unapproved D-03/D-07. Revisit on operator validation.</td>
+</tr>
+</tbody>
+</table>
+<p>Architecture closure requires agreed interval/validity semantics, interface electrical data, motion policy, environment and measured timing. This proposal supports review, not a claim that the candidate design is already adequate.</p></section><section id="ho01-verification" aria-label="Exercise evidence plan"><p class="source">Rendered from evals/evidence/ho01/outputs/03-verification-plan.md</p><h1>Verification and stakeholder-validation plan</h1>
+<p>Plan baseline: GH-DRAFT-01. <strong>Every activity is planned. None has been executed, passed, failed, reviewed or accepted.</strong> No supplier reliability data or test evidence was supplied. Artifact consistency checks in <a href="#ho01-checks">05-artifact-checks.md</a> do not verify controller requirements.</p>
+<h2>Configuration and acceptance controls</h2>
+<p>Before an activity is executable, record its approved requirement/design revision; decision dispositions; hardware wiring/sensor/driver/motor/vent/end-switch/indicator identifiers and revisions; firmware, build and configuration hashes; network topology/settings; temperature packet schema; timer/clock assumptions; load/weather envelope; instrument identity/calibration/uncertainty; fixture and procedure version; operator roles; observation channels; and deviations. A software-only setup must be labeled with its model scope and must not be used to claim hardware stopping behavior.</p>
+<p>Observe both command/inhibit signals and physical vent movement where stopping or opening/closing is claimed. Timestamp sensor acquisition when available, receipt/acceptance, timer events, stop actuation, driver electrical response, physical motion and fault visibility. Use a defined common measurement time reference and uncertainty budget; do not assume unsynchronized clocks are comparable. Temperature boundary offsets and measurement tolerances must be selected from the resolved sensor contract, not arbitrary constants.</p>
+<p>For each activity below, “acceptance” is the intended criterion. A D-ID indicates missing approval/input. These cases remain planned and acceptance-blocked until the decision and numeric/electrical contract are resolved; they cannot produce an unconditional pass in their present form. Proposed future evidence names are templates, not existing artifacts.</p>
+<h2>Requirement verification activities</h2>
+<table>
+<thead>
+<tr>
+<th>ID; requirements and raw sources</th>
+<th>Method, preconditions and procedure / stimulus</th>
+<th>Expected observation and acceptance</th>
+<th>Environment, limitations, owner/reviewer; planned evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VA-01; RQ-01; N-01 with N-02/N-03 guards</td>
+<td>Test + timer-contract analysis. Start enabled, fresh eligible data, no inhibition, vent able to open. Inject exactly 32 deg C, values above, and just-below controls with agreed timestamps. Inspect immediately before/at/after 30 s.</td>
+<td>No early opening demand; demand at the agreed 30 s expiry; physical opening observable in hardware under the approved movement contract. Below-threshold controls do not qualify. D-01/D-08/D-10/D-11 block final timing/physical acceptance.</td>
+<td>Deterministic packet bench for timing logic, actual motor/vent for movement. Controls engineer executes; owner-designated reviewer. Proposed <code>future-evidence/VA-01-result.md</code> plus raw synchronized trace.</td>
+</tr>
+<tr>
+<td>VA-02; RQ-02; N-01</td>
+<td>Test. While high qualification is active, inject one valid sub-32 sample immediately before expiry and resume high samples. Repeat at several phase offsets and at equality 32. No filtering may suppress an accepted dip.</td>
+<td>Sub-32 resets elapsed opening qualification to its defined origin; no old-interval demand; renewed high stream must qualify for a full new 30 s. Equality 32 retains qualification. Undetected between-sample dips cannot be proven absent by this test; D-01/D-05/D-10.</td>
+<td>Packet bench and firmware trace; controls engineer; owner reviews interpretation. Proposed <code>future-evidence/VA-02-result.md</code>.</td>
+</tr>
+<tr>
+<td>VA-03; RQ-03; N-01</td>
+<td>Test + analysis. Enabled, valid data, vent able to close. Apply below-28, exactly-28 and above-28 readings; check 60 s boundaries. Apply interruption/rise/invalid cases according to D-02's selected rule.</td>
+<td>No qualification from equality 28; no early closing demand; demand after approved 60 s interval and hardware closing behavior. Interruption behavior matches D-02 rather than an assumed opening-reset rule. D-02/D-08/D-10/D-11.</td>
+<td>Packet bench plus hardware travel case; controls engineer; owner reviewer. Proposed <code>future-evidence/VA-03-result.md</code>.</td>
+</tr>
+<tr>
+<td>VA-04; RQ-04/DR-02; N-02/N-03/N-04</td>
+<td>Inspection + hardware test. Inspect direct inhibit wiring/priority. Actuate local stop during opening, closing, idle, threshold expiry and each enabled remote mode; hold conflicting demands active. Measure local event → inhibit → physical stop.</td>
+<td>Local stop dominates; no new effective drive while stop asserted; current movement halts within the justified D-04 limit and residual-travel constraint. Release does not erase latch authorization. No 50 ms criterion is used. D-04/D-07/D-09/D-11.</td>
+<td>Guarded actual driver/motor/vent fixture across approved load envelope; hardware/controls engineer; technician and owner reviewer. Proposed <code>future-evidence/VA-04-result.md</code>, wiring inspection and scope/motion traces.</td>
+</tr>
+<tr>
+<td>VA-05; RQ-05; N-02</td>
+<td>Test + demonstration. Enter local stop from enabled mode, release it, maintain qualifying hot/cold data, vary dashboard/network reconnection. Attempt the defined explicit action with and without required guards.</td>
+<td>Release and reconnection alone cannot enable automatic motion. Only the agreed deliberate action under valid guards permits new automatic qualification. D-03/D-04/D-07; startup behavior recorded separately.</td>
+<td>Controller/UI bench; technician executes usability demonstration; controls engineer reviews logic. Proposed <code>future-evidence/VA-05-result.md</code>.</td>
+</tr>
+<tr>
+<td>VA-06; RQ-06/DR-01; N-03/N-01</td>
+<td>Test + worst-case timing analysis. Start idle and moving, stop required data at known last eligible origin. Exercise just before/at/after 5 s, variable jitter, loss, invalid/replayed/reordered packets and MCU scheduling load.</td>
+<td>Defined absence expiry triggers inhibit/stop; no packet deemed ineligible renews freshness; motion remains inhibited during loss. Measure detection and physical stop separately. Deadline origin, permitted scheduling delay, invalid-data policy and physical halt criteria await D-04/D-05/D-09/D-10.</td>
+<td>Packet fault-injection bench and hardware halt case; controls engineer; maintenance/hardware reviewer. Proposed <code>future-evidence/VA-06-result.md</code> and latency analysis.</td>
+</tr>
+<tr>
+<td>VA-07; RQ-07; N-03</td>
+<td>Test + demonstration. Trigger 5 s missing-data fault with network present and disconnected; observe the selected display from the intended operator position and exercise persistence/reset.</td>
+<td>Unambiguous missing-data fault appears at the approved indication point by the approved deadline and has the agreed persistence. Dashboard availability must be checked rather than assumed. D-06/D-10.</td>
+<td>Actual indicator/dashboard, representative visibility conditions from D-06; maintenance executes, owner reviews visibility. Proposed <code>future-evidence/VA-07-result.md</code>.</td>
+</tr>
+<tr>
+<td>VA-08; RQ-08; N-03</td>
+<td>Test. After data-loss stop, restore eligible high data and then low data, including already qualifying-looking packets; attempt no action, stop release, acknowledgment alone and the approved enable protocol.</td>
+<td>Restoration alone never resumes movement. Any movement after recovery requires the defined deliberate permission; retained simultaneous stop/fault remains effective. D-03/D-05/D-07.</td>
+<td>Controller/UI bench; controls engineer; maintenance/technician reviewer. Proposed <code>future-evidence/VA-08-result.md</code>.</td>
+</tr>
+<tr>
+<td>VA-09; RQ-09; N-04</td>
+<td>Inspection + test/demonstration after remote scope is approved. Exercise each permitted read/control operation and rejected operation; failure, reconnection, stale commands and permissions.</td>
+<td>Approved remote features operate to D-07 criteria; operations outside scope and prohibited reset/bypass fail. No measurable remote criterion exists yet; activity definition is blocked on D-07.</td>
+<td>Actual dashboard/network/controller configuration; responsible software engineer; owner reviewer. Proposed <code>future-evidence/VA-09-result.md</code> and scope checklist.</td>
+</tr>
+<tr>
+<td>VA-10; RQ-10/RQ-04; N-04/N-02</td>
+<td>Inspection + hardware fault injection. Disconnect temperature/dashboard network, stall/congest it and supply unusable packets. Actuate the local stop before, during and after the 5 s data-fault transition while moving in each direction.</td>
+<td>Local stop satisfies RQ-04 without a network response; loss of network does not inhibit local stop actuation. Separate measurement of manual path and automatic data-loss path. D-04/D-05/D-09/D-11.</td>
+<td>Actual local stop/driver/vent fixture; hardware engineer; technician/owner reviewer. This checks network independence only, not all common failures. Proposed <code>future-evidence/VA-10-result.md</code>.</td>
+</tr>
+<tr>
+<td>VA-11; DR-01/RQ-02/RQ-06; N-01/N-03</td>
+<td>Schema inspection + tests. Apply wrong sensor identity, duplicate/older sequence, stale acquisition age, invalid quality, absent timestamp, unsynchronized clock, implausible/non-numeric values and bursts with nominal/variable spacing according to approved I-01 contract.</td>
+<td>Each case has a defined accept/reject outcome; invalid/stale data do not falsely complete thermal qualification or mask absence. Temperature acceptance range, age limit, clock mapping and invalid policy remain D-01/D-05 decisions.</td>
+<td>Sensor-interface packet harness; controls/sensor engineer; owner/maintenance reviewer. Proposed <code>future-evidence/VA-11-result.md</code> with case matrix.</td>
+</tr>
+<tr>
+<td>VA-12; DR-02; N-02/N-03/N-04</td>
+<td>Inspection + signal-level tests/analysis. Submit simultaneous open/close, a reversal, stop concurrent with direction, expiry concurrent with remote command, and end-limit changes. Capture all driver inputs/output states.</td>
+<td>Never assert effective open and close concurrently; inhibit wins against all direction requests; reversal/default outputs comply with D-04/D-08 electrical and deadtime contract. A trace proves only exercised sequences, not all schedules.</td>
+<td>Driver interface fixture and actual firmware; controls/hardware engineer; independent reviewer only if program later requires it. Proposed <code>future-evidence/VA-12-result.md</code>.</td>
+</tr>
+<tr>
+<td>VA-13; RQ-01/RQ-03/RQ-04/RQ-05/RQ-06/RQ-07/RQ-08/RQ-10/DR-02; N-01/N-02/N-03/N-04</td>
+<td>State-transition analysis + scenario tests. Cover startup, MCU reset, held stop, data loss, overlapping stop/fault, data return, release of only one inhibit, threshold expiry concurrent with inhibit, explicit recovery and network reconnection.</td>
+<td>All source guard conditions preserved; no implicit authorization on release/return/reconnection; overlapping latches retained; prioritized inhibition works. Startup, timer reset and recovery policies require D-01/D-03/D-04/D-05/D-08/D-11.</td>
+<td>Proposed state-table review first, then exact firmware/hardware revision. Controls engineer; technician/maintenance reviewers. Proposed <code>future-evidence/VA-13-result.md</code> and transition-coverage matrix.</td>
+</tr>
+<tr>
+<td>VA-14; RQ-01/RQ-02/RQ-03/RQ-04/RQ-06/RQ-07/RQ-10/DR-01/DR-02; N-01/N-02/N-03/N-04</td>
+<td>Analysis + targeted worst-case measurement. Close budgets from sensor acquisition through transport, scheduler, arbitration, driver, movement and display. Quantify uncertainty/clock drift; include overload/jitter and approved load/weather cases.</td>
+<td>All allocated path bounds and margins meet approved criteria and retain threshold/duration semantics. Nominal 1 s rate and unsupported 50 ms are insufficient. Missing component maxima, limits and measurement tolerances block closure: D-01/D-04/D-05/D-06/D-09/D-10/D-11.</td>
+<td>Versioned budget and actual instrumentation traces; hardware/controls engineer; owner reviewer. Proposed <code>future-evidence/VA-14-result.md</code> plus budget workbook or Markdown.</td>
+</tr>
+</tbody>
+</table>
+<h2>Stakeholder validation activities</h2>
+<p>These validate intended use and decision adequacy. They do not substitute for requirement verification.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Participants, scenario and question</th>
+<th>Intended acceptance / output</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SV-01; N-01, D-01/D-02</td>
+<td>Owner and controls engineer review sequences at 32/28, sampled versus continuous qualification, brief dips, gaps and timer origins.</td>
+<td>Owner confirms the operational interpretation and rationale for 30/60 s and threshold behavior; record an agreed source amendment if intent changes.</td>
+<td>Planned; no stakeholder decision supplied.</td>
+</tr>
+<tr>
+<td>SV-02; N-02/N-03, D-03/D-04/D-06</td>
+<td>Technician and maintenance rehearse local stop, visible data fault, release, acknowledgment, automatic enable and concurrent faults. Include delayed/absent human response.</td>
+<td>Confirm controls are understandable and cannot accidentally restart; agree location/action protocol and indication. Operator response is characterized, never assumed to meet a safety deadline.</td>
+<td>Planned.</td>
+</tr>
+<tr>
+<td>SV-03; N-01/N-03/N-04, D-08/D-09/D-11</td>
+<td>Owner, technician and mechanical/safety engineer assess mid-travel stop, wind/rain, unattended operation and power/network loss.</td>
+<td>Agree operating envelope, hazards, permissible residual motion, holding behavior and safe-position strategy. Explicitly reconcile any weather-driven repositioning with N-02/N-03 stop inhibition.</td>
+<td>Planned; no safe position inferred.</td>
+</tr>
+<tr>
+<td>SV-04; N-04, D-07/D-12</td>
+<td>Owner and remote operator review monitoring versus command capability, network outages, reconnection and maintenance availability.</td>
+<td>Agree remote scope, permissions, availability/reliability expectations and limits; amend requirements as needed.</td>
+<td>Planned.</td>
+</tr>
+</tbody>
+</table>
+<h2>Evidence lifecycle and reporting</h2>
+<p>Use an executed-result record only after actual execution. Each record must contain evidence ID; VA/SV ID; result pass/fail/inconclusive; observed values and uncertainty; actual existing raw-artifact paths; exact requirement/design/input revisions or hashes; tool/instrument and version; execution time; operator; deviations; unresolved failures; and scope (logic bench, simulation or physical hardware). Keep separate review records with reviewer, disposition and date, and separate acceptance records with authorized owner and disposition. A result may be executed but unreviewed or unaccepted.</p>
+<p>No independent-review, tool-qualification or certification requirement is present in the source. If one is introduced, establish its program basis and update the plan; do not infer compliance from a test name. Any later formal proof must identify encoded properties, assumptions, time bounds, fairness/vacuity checks and the mapping to implementation. No proof is proposed as already performed.</p>
+<p>Current coverage: <strong>12/12 requirement records have planned verification links; 0/12 are verified, reviewed or accepted.</strong> There are <strong>14 planned VA activities and 4 planned SV activities; 0 executed results</strong>. Failed/inconclusive result records: none, because there has been no execution. Stale evidence: none supplied to assess. Missing evidence and unresolved acceptance definitions remain gaps, not passes. Final claims must be reconciled to exact configuration and changes must invalidate or rejustify affected evidence.</p></section><section id="ho01-checks" aria-label="Exercise document checks"><p class="source">Rendered from evals/evidence/ho01/outputs/05-artifact-checks.md</p><h1>Artifact consistency checks</h1>
+<p>Checked baseline: GH-DRAFT-01. Check execution: <strong>2026-10-12T16:56:13Z</strong>, obtained from the inherited host clock. These are actual document checks using PowerShell string/regular-expression comparisons and <code>Get-FileHash</code>; they are not controller tests or verification results. No network or model API was called. Actual model identity/settings remain unknown.</p>
+<h2>Performed checks and results</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Actual scope and result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw-input preservation</td>
+<td>Both raw paragraphs beginning <code>N-01 Owner:</code> and <code>Candidate design:</code> were extracted from <code>request.md</code> and compared as exact substrings against the review guide. 2/2 preserved.</td>
+</tr>
+<tr>
+<td>Source-ID presence</td>
+<td>Checked N-01, N-02, N-03 and N-04 in each of the five core drafts. No missing raw source IDs. Unlabeled narrative inputs remain locators, not invented raw IDs.</td>
+</tr>
+<tr>
+<td>Definition counts and uniqueness</td>
+<td>All expected counts matched and all definitions were unique within their artifact ID prefix: RQ 10, DR 2, F 7, C 7, I 8, AD 4, VA 14, SV 4, D 12, RK 8.</td>
+</tr>
+<tr>
+<td>Reference resolution</td>
+<td>Extracted all artifact-ID references from the five core drafts and checked against definition sets. No undefined references.</td>
+</tr>
+<tr>
+<td>Requirement trace consistency</td>
+<td>For each of 12 requirements, compared planned VA-ID sets in the requirement and trace rows and checked that each linked VA row explicitly names that requirement. No missing rows, empty verification sets or mismatched links. This checks linkage only, not semantic sufficiency.</td>
+</tr>
+<tr>
+<td>Markdown table structure</td>
+<td>Checked field counts in each contiguous table in the five core drafts. No inconsistent row field counts.</td>
+</tr>
+<tr>
+<td>Relative Markdown links / final report table</td>
+<td>At 2026-10-12T16:57:27Z, checked all six saved Markdown artifacts: 15/15 relative links resolved to existing files, no table field-count errors, and all five recorded core hashes matched the files. This row was updated afterward to record that result.</td>
+</tr>
+<tr>
+<td>Input and draft configuration</td>
+<td>SHA-256 hashes were obtained from the actual input and five core artifact files; recorded below.</td>
+</tr>
+</tbody>
+</table>
+<p>The PowerShell host emitted an <code>InitializeDefaultDrives</code> warning, but the check command completed with exit code 0 and returned the expected comparison results and hashes. This warning did not prevent packet file reads or artifact creation.</p>
+<h2>Semantic review performed</h2>
+<p>The draft was reviewed against each retained source clause: opening equality and 30 s, brief-dip reset, strict closing threshold and 60 s, local override, explicit automatic resumption, 5 s data absence, fault display, inhibited data-return recovery, remote intent and network-failure local stop. The review kept sampled continuity, closing reset, timestamp origin, physical stop and remote scope unresolved where the input did not settle them. The manager's 50 ms proposal is explicitly unapproved. One MCU/driver and common dependencies are retained; no redundancy, reliability rate or safe position was invented.</p>
+<p>Proposed choices remain labeled: direct local latched inhibit, local fault indicator, guarded deliberate recovery, inhibited startup, data eligibility rules and timer-reset policy. Interface and physical behavior need engineering decisions and evidence. All VA/SV activities remain planned; the actual document checks do not count toward verified-requirement totals.</p>
+<h2>Configuration fingerprints</h2>
+<p>Input <code>../request.md</code> SHA-256: <code>434A60FACFAE617C47A0AF1A2DECDF213138A5E75569209CF40F79331EEEDC4D</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Core artifact</th>
+<th>SHA-256 at check execution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#ho01-guide">00-review-guide.md</a></td>
+<td><code>2582CE1CC57DCD4F394F4A597F6C4EBDB4F04CD85B4D953FB477288CFBF60F04</code></td>
+</tr>
+<tr>
+<td><a href="#ho01-requirements">01-requirements.md</a></td>
+<td><code>4595C08FD5FAC86688D250354A02048B8CFA2D7647ABDDF74076FAB213111371</code></td>
+</tr>
+<tr>
+<td><a href="#ho01-architecture">02-architecture.md</a></td>
+<td><code>40DC7735A64CC4ECD46259EB2AB4F7EBBFC27D2631C7D1B3443DE6ED242A9EDD</code></td>
+</tr>
+<tr>
+<td><a href="#ho01-verification">03-verification-plan.md</a></td>
+<td><code>2D376BF6344370870DC9F7CEDB3C93144D12B54F9E71BB3ABCAC6CE147E7684E</code></td>
+</tr>
+<tr>
+<td><a href="../evals/evidence/ho01/outputs/04-trace-and-decisions.md">04-trace-and-decisions.md</a></td>
+<td><code>A68053A41319BF1AEBF24F82670EE65F8A5CED24342C7421A66EBBC589F6C4DB</code></td>
+</tr>
+</tbody>
+</table>
+<p>This report is excluded from its own hash manifest. Later artifact edits require rerunning relevant checks and updating the fingerprints.</p>
+<h2>Remaining limits and blockers</h2>
+<p>The requested artifact draft is complete. There is no evidence that the physical design meets stopping, sensing, movement or environmental performance. D-01 through D-12 and absent supplier/hardware/test evidence block a final approved design and unconditional acceptance. Missing evidence is a gap, not a failed test or a pass. No source repository, worked examples, evaluation rubrics or other agents' outputs were read.</p></section></main></div></body></html>

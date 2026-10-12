@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "HO-01",
+      "skills": [
+        "mbse-requirements",
+        "mbse-architecture",
+        "mbse-verification-evidence"
+      ],
+      "request": "Develop a reviewable requirements, architecture, and verification draft for an outdoor greenhouse vent controller. Save Markdown artifacts and keep source IDs across them. Work independently on what the facts support; ask or record the decisions needed for a final design. Do not claim tests executed.\n\nN-01 Owner: Open the vent when a valid inside-temperature reading stays at or above 32 deg C for 30 s. A brief dip below 32 resets the interval. Close below 28 deg C after 60 s. N-02 Technician: A local manual stop overrides motion; resuming automatic mode requires an explicit action. N-03 Maintenance: If data is missing for 5 s, stop motion and show a fault; do not automatically resume motion after data returns. N-04 Owner: We want remote access, but the local stop must work during network failure.\n\nCandidate design: temperature samples nominally every 1 s over a shared network, one MCU, one motor driver, end switches, dashboard. Unknown: sample jitter, motor travel time, stale-data detection, operator response, wind/rain constraints and safe position. A manager proposes a universal 50 ms stop deadline without a source. There are no test results or supplier reliability data."
+    },
+    {
+      "id": "HO-02",
+      "skills": [
+        "mbse-medical-device",
+        "mbse-baseline-review"
+      ],
+      "request": "Review this proposed classification: clinician-programmed external large-volume IV pump in acute care, local flow feedback but no physiological diagnostic control loop. Team note: FDA Class III/PMA under 21 CFR 876.5820, EU IIb under Rule 11, IEC 62304 C because FDA Class III. We have no product-code/predicate assessment. Identify corrections and what still needs evidence, citing current primary sources when accessible. Produce a short review artifact."
+    },
+    {
+      "id": "HO-03",
+      "skills": [
+        "mbse-aerospace"
+      ],
+      "request": "Our verification tool processes test logs for Level A software. Its output could miss a software error, and we want credit for removing manual checking. A colleague says Criterion 3 means no effect and no qualification, while all Level A/B code generators are TQL-1. Assess the actual decision boundary and mappings using accessible primary sources; explain what facts are still needed rather than assigning a criterion solely by the tool name. Save the assessment."
+    },
+    {
+      "id": "HO-04",
+      "skills": [
+        "mbse-baseline-review",
+        "mbse-verification-evidence"
+      ],
+      "request": "Review a change: REQ-7 now requires alert within 200 ms, formerly 500 ms. Interface processing consumes up to 150 ms, detector 80 ms, actuator 30 ms. Team reused a passing old test report at 460 ms and calls the new baseline verified. A planned new report path has no file. Supply impact analysis, missing evidence, and concrete repair options without treating the trace links as proof."
+    },
+    {
+      "id": "HO-05",
+      "skills": [
+        "mbse-electronic-systems"
+      ],
+      "request": "A hardware team says 100% RTL line coverage proves all requirements and a bounded proof to depth 20 proves a request is eventually served for all executions. The formal environment assumes grant is always high, while deployed arbitration is shared. Ask for the minimum meaningful artifacts, review these claims, and propose an evidence plan. Do not manufacture licensed clause numbers."
+    },
+    {
+      "id": "HO-06",
+      "skills": [
+        "defense-founder-review"
+      ],
+      "request": "Review a defense logistics venture that reduces maintenance delay with a field-swappable sensor package. A prototype budget is modest and field access takes six months. The team claims no prime can do this, but provides no incumbent study. Compare build/buy/partner choices, choose a feasible first evidence milestone, and state what could invalidate the product thesis. Do not prescribe a 90-day operator demo regardless of access."
+    },
+    {
+      "id": "HO-07",
+      "skills": [
+        "mbse-conops",
+        "mbse-operational-scenarios"
+      ],
+      "request": "Draft operational scenarios for a service robot handing off a medication transport container to authorized staff. Medication selection and dosing are outside the boundary. Cover an unavailable recipient, connectivity loss, and recovery. Preserve authority and custody, distinguish operational decisions from design assumptions, and propose observable validation conditions. Save a coherent draft."
+    },
+    {
+      "id": "HO-08",
+      "skills": [],
+      "request": "Correct a typo in a restaurant opening-hours note: change \"Tusday\" to \"Tuesday\". Do not broaden the task. State the corrected text."
+    }
+  ]
+}

@@ -4,3 +4,4 @@
 *.json text eol=lf
 *.yaml text eol=lf
 *.yml text eol=lf
+evals/evidence/ho01/** -text
