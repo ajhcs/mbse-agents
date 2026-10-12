@@ -1,5 +1,7 @@
 # Hazard Analysis
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Methodology
 
 This hazard analysis follows IEC 61508 (Functional Safety of Electrical/Electronic/Programmable Electronic Safety-Related Systems) Parts 1-7 with FMEA/FMECA at the component level per IEC 60812. The scope covers the Quantum Processor Control System as defined in the system boundary (README.md), analyzed across all operating modes (MODE-001 through MODE-005).

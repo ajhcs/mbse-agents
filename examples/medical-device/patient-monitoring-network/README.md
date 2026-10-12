@@ -1,5 +1,7 @@
 # Patient Monitoring Network
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The Patient Monitoring Network is a multi-parameter bedside monitoring system with central station aggregation for acute care environments. Each bedside monitor acquires physiological signals including pulse oximetry (SpO2), electrocardiography (ECG, 3/5/12-lead), non-invasive blood pressure (NIBP), body temperature, and sidestream capnography (EtCO2). Bedside monitors transmit physiological data and alarm events over a dedicated medical-grade network to a central station that displays up to 32 patients simultaneously, manages alarm escalation, and interfaces with the hospital EMR and nurse call systems. The system implements IEC 60601-1-8 alarm management with configurable alarm limits, alarm delay, and alarm escalation to reduce alarm fatigue while preserving clinically significant notifications. Network risk management follows IEC 80001-1. The system is classified FDA Class II (510(k)) and EU MDR Class IIa.

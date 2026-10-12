@@ -1,5 +1,7 @@
 # Assurance Evidence
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Assurance Framework
 
 The Autonomous Emergency Braking system follows the ISO 26262 functional safety lifecycle with an ASIL D safety case. The safety lifecycle spans from concept phase (Part 3) through system development (Parts 4-5), hardware development (Part 5), software development (Part 6), integration and testing (Parts 8-9), and production/operation (Parts 10-12). A third-party functional safety assessment (FSA) is performed per ISO 26262-2 clause 6.4.6 by an independent assessor.

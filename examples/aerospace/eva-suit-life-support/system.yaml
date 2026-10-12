@@ -1,7 +1,7 @@
 title: EVA Suit Life Support System
 domain: aerospace
 tier: fleet
-status: complete
+status: illustrative
 standards:
   - NPR 7123.1
   - NPR 8705.2
@@ -13,3 +13,4 @@ summary: >
   Extravehicular activity portable life support system for ISS and
   Artemis missions. Pressure regulation, O2/CO2 management, thermal
   control. NASA-STD-5005 fracture control.
+evidence_status: planned

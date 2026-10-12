@@ -1,7 +1,7 @@
 title: Smart Infusion Pump System
 domain: medical-device
 tier: flagship
-status: complete
+status: illustrative
 standards:
   - IEC 62304
   - ISO 14971
@@ -9,9 +9,10 @@ standards:
   - IEC 60601-2-24
   - FDA QMSR
   - EU MDR 2017/745
-assurance_framework: FDA premarket (PMA Class III) + EU MDR (Class IIb, Notified Body)
-system_class: FDA Class III, EU MDR Class IIb, IEC 62304 Class C
+assurance_framework: FDA Class II (510(k) working assumption) + EU MDR (provisional Class IIb, Rule 12)
+system_class: FDA Class II, EU MDR provisional Class IIb, IEC 62304 Class C assumption
 summary: >
   Large-volume infusion pump with dose error reduction software (DERS).
   Drug library, wireless connectivity, EHR integration. IEC 62304
   Class C software with ISO 14971 risk management.
+evidence_status: planned

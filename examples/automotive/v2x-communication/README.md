@@ -1,5 +1,7 @@
 # V2X Communication Unit
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The V2X Communication Unit (VCU) is an on-board unit enabling vehicle-to-everything communication using C-V2X technology in both PC5 (direct short-range) and Uu (cellular network) modes. The unit receives and transmits Cooperative Awareness Messages (CAM), Decentralized Environmental Notification Messages (DENM), and Collective Perception Messages (CPM), providing the ADAS fusion ECU with cooperative perception data that extends sensor coverage beyond line-of-sight. The VCU manages V2X message authentication through an integrated Hardware Security Module (HSM) and IEEE 1609.2 / ETSI TS 103 097 public-key infrastructure. Because V2X data informs safety-relevant ADAS decisions, the safety-relevant message processing path is classified ASIL B while the communication protocol stack operates at QM.

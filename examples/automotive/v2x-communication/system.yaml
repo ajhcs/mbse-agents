@@ -1,7 +1,7 @@
 title: V2X Communication Unit
 domain: automotive
 tier: fleet
-status: complete
+status: illustrative
 standards:
   - ISO 21434
   - ISO 21448
@@ -13,3 +13,4 @@ system_class: QM (communication), ASIL B (safety-relevant messaging)
 summary: >
   C-V2X (PC5 + Uu) on-board unit for cooperative perception and
   platooning. ETSI ITS-G5 / SAE J3161 compliant.
+evidence_status: planned

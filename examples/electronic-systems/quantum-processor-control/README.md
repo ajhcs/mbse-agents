@@ -1,5 +1,7 @@
 # Quantum Processor Control System
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The Quantum Processor Control System (QPCS) provides cryogenic control electronics and a room-temperature orchestration stack for a 100+ qubit superconducting quantum processor. The system bridges two radically different thermal domains: room-temperature electronics at 300 K running experiment sequencing, calibration automation, and error correction decoding, and cryogenic electronics at 4 K and 20 mK stages handling RF pulse generation, qubit state readout, and flux bias control.

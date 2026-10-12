@@ -1,5 +1,7 @@
 # Architecture
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## System Context
 
 ```mermaid
@@ -81,7 +83,7 @@ graph TD
 | CMP-PMA-01    | Pump Mechanism Assembly               | Assembly | System        | Peristaltic pump, sensors, and anti-free-flow mechanism              |
 | CMP-PMA-01A   | Peristaltic Pump Drive                | Module   | CMP-PMA-01    | Stepper motor, cam assembly, tubing compression fingers              |
 | CMP-PMA-01B   | Flow Sensor                           | Module   | CMP-PMA-01    | Ultrasonic flow measurement for closed-loop rate control             |
-| CMP-PMA-01C   | Anti-Free-Flow Clamp                  | Module   | CMP-PMA-01    | Spring-loaded tubing clamp that engages on door open or power loss   |
+| CMP-PMA-01C   | Anti-Free-Flow Clamp                  | Module   | CMP-PMA-01    | Proposed spring-closed clamp with powered hold-open and door interlock; release to verify   |
 | CMP-PMA-01D   | Air-in-Line Detector                  | Module   | CMP-PMA-01    | Ultrasonic air bubble detector on tubing path                        |
 | CMP-PMA-01E   | Occlusion Pressure Sensor             | Module   | CMP-PMA-01    | Upstream and downstream pressure transducers for occlusion detection |
 | CMP-PMA-01F   | Door Latch Sensor                     | Module   | CMP-PMA-01    | Magnetic reed switch detecting cassette door open/closed state       |
@@ -228,12 +230,12 @@ The MCB software architecture partitions safety-critical infusion control and al
 
 ### Anti-Free-Flow Independence
 
-The anti-free-flow clamp (CMP-PMA-01C) is a passive spring-loaded mechanism that operates independently of all electronic components. The clamp is held open by the door latch mechanism during normal operation. When the door is opened or the power is lost, the clamp spring engages and occludes the tubing mechanically. This design provides inherent safety against free-flow that is independent of software, processor, or electrical power.
+The proposed anti-free-flow clamp (CMP-PMA-01C) is spring-closed with a powered hold-open actuator and a door interlock. Opening the door or removing hold-open power is intended to release the spring. The mechanical, power, and software dependencies require design and fault-injection evidence; independence and reliable closure are unverified. A door latch alone would not establish closure on power loss.
 
-**Independence argument:**
-- The anti-free-flow mechanism is entirely mechanical (spring + cam). No electrical signal is required to engage it.
-- The mechanism engages on door open, power loss, and manual cassette release — covering single-fault failure of the door sensor, processor, or power supply.
-- Verification includes mechanical endurance testing (100,000 cycles) and worst-case tubing compliance analysis.
+**Evidence needed for the proposed mechanism:**
+- Analyze powered hold-open, spring, door interlock, release paths, sticking, tubing variation, and shared dependencies.
+- Define processor, door sensor, and power fault cases and establish which are detected or tolerated; no universal single-fault coverage is asserted.
+- Plan endurance and worst-case tubing tests. The 100,000-cycle value is a teaching target needing lifecycle rationale, not an executed result.
 
 ### Network Isolation from Safety Functions
 
@@ -246,13 +248,13 @@ The Wireless Communication Module (CMP-WCM-01) communicates with the Main Contro
 
 ## Architecture Decisions
 
-### AD-01: Mechanical Anti-Free-Flow over Electronic Clamp
+### AD-01: Spring-Closed Clamp with Powered Hold-Open and Door Interlock
 
-**Decision:** Use a passive spring-loaded anti-free-flow clamp rather than an electronically actuated clamp.
+**Proposed decision:** A spring-closed anti-free-flow clamp with a powered hold-open actuator and mechanical door interlock. Door opening or loss of hold-open power is intended to release closure. Detailed design must prevent a stuck actuator or latch from masking the release.
 
-**Rationale:** Free-flow prevention is the highest-priority safety function. A mechanical clamp provides inherent safety that is independent of processor, software, and power — addressing the three most common electronic failure modes simultaneously. An electronic clamp would require its own power source, fail-safe logic, and independent monitoring, adding complexity without improving the safety argument.
+**Rationale:** The closing action can avoid a processor command dependency, but the complete mechanism still has mechanical and electrical failure paths. Independence, closing time, and tubing occlusion are claims requiring fault analysis and test evidence, not established properties.
 
-**Trade-off:** The mechanical clamp requires the door to be opened to load the tubing cassette, which adds steps to the IV set loading workflow. Accepted because the safety benefit outweighs the usability cost, and usability testing confirmed acceptable task completion times.
+**Trade-off:** Loading workflow, actuator energy, release faults, and maintenance need evaluation. No usability test or risk acceptance has been performed. Retain REQ-SAF-001 and CTL-006 as proposed control requirements pending design and evidence.
 
 ### AD-02: Single Processor with RTOS Partitioning over Dual Processor
 
@@ -268,7 +270,7 @@ The Wireless Communication Module (CMP-WCM-01) communicates with the Main Contro
 
 **Rationale:** The UART provides physical isolation between the network-facing WCM and the safety-critical MCB communication paths (SPI to PMA and UIM). A shared bus would create a potential interference path where WCM network traffic could delay safety-critical sensor data from the PMA or display updates to the UIM. The dedicated UART also simplifies the cybersecurity boundary analysis by providing a single, well-defined interface between the network domain and the safety domain.
 
-**Trade-off:** Additional UART peripheral and wiring. Accepted because the isolation benefit supports both the safety and cybersecurity arguments.
+**Trade-off:** Additional UART peripheral and wiring. Proposed because separate buses can reduce interference; shared processor, power, scheduling, and software paths still need evidence.
 
 ### AD-04: Closed-Loop Flow Control over Open-Loop Volumetric
 
@@ -282,6 +284,6 @@ The Wireless Communication Module (CMP-WCM-01) communicates with the Main Contro
 
 **Decision:** Limit SOUP usage to the RTOS, TCP/IP stack, and TLS library. All infusion control, DERS, and alarm logic is custom-developed software.
 
-**Rationale:** Custom development of safety-critical infusion control software enables full IEC 62304 Class C lifecycle evidence (detailed design, unit implementation, unit verification) without dependence on third-party source code access or anomaly response timelines. The RTOS is SOUP but is a well-established medical device RTOS with an existing safety qualification package. The TCP/IP and TLS SOUP components are isolated in the communication partition (P4) where their failure does not directly impact patient safety.
+**Rationale:** Custom development of safety-critical infusion control software enables full IEC 62304 Class C lifecycle evidence (detailed design, unit implementation, unit verification) without dependence on third-party source code access or anomaly response timelines. The RTOS supplier/version and any safety qualification package are not selected or verified in this teaching case. The TCP/IP and TLS SOUP components are isolated in the communication partition (P4) where their failure does not directly impact patient safety.
 
 **Trade-off:** Higher development cost for custom infusion control software. Accepted because the Class C evidence burden for SOUP in the safety-critical path would be comparable (SOUP anomaly management, functional requirements verification) and would leave the development team dependent on external SOUP vendor responsiveness for safety-relevant anomaly resolution.

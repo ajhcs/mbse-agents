@@ -1,5 +1,7 @@
 # Integrated Flight Management System
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The Integrated Flight Management System (FMS) provides flight planning, navigation, performance computation, and guidance for a Part 25 transport category aircraft. The system computes lateral and vertical flight profiles from an operator-entered flight plan, drives coupled autopilot guidance through the Automatic Flight Control System (AFCS), and presents navigation and performance data to the flight crew via the cockpit display system.

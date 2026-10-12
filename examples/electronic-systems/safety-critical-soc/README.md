@@ -1,5 +1,7 @@
 # Safety-Critical SoC
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The Safety-Critical SoC (SC-SoC) is an automotive-grade system-on-chip providing ADAS compute for Level 2+ through Level 4 autonomous driving functions. The SoC integrates lockstep ARM Cortex-R52 safety cores, a high-performance application processor cluster, neural network accelerator, and hardware safety mechanisms onto a single 7 nm die. The device targets ASIL D random hardware fault metrics (SPFM >= 99%, LFM >= 90%, PMHF < 10 FIT) per ISO 26262-11 and qualifies through the AEC-Q100 Grade 1 automotive stress test flow. The SoC receives sensor fusion inputs from camera, radar, and lidar interfaces, processes perception and planning algorithms, and outputs actuation commands to the ADAS ECU host over Automotive Ethernet and CAN-FD.

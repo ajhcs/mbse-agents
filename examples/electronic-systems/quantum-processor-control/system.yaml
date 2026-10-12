@@ -1,7 +1,7 @@
 title: Quantum Processor Control System
 domain: electronic-systems
 tier: flagship
-status: complete
+status: illustrative
 standards:
   - IEC 61508
   - IEEE 1076
@@ -13,3 +13,4 @@ summary: >
   stack for a 100+ qubit superconducting quantum processor. RF pulse
   generation, qubit readout, error correction feedback loop,
   calibration automation.
+evidence_status: planned

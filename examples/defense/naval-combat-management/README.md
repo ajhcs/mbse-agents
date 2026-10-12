@@ -1,5 +1,7 @@
 # Naval Combat Management System
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The Naval Combat Management System (CMS) is the central C2 system for a surface combatant warship, integrating sensors, weapons, and external data links into a unified tactical picture for engagement planning and execution. The CMS fuses track data from the ship's radar suite (air search, surface search, fire control), sonar, electronic warfare, and cooperative engagement capability (CEC) data links to produce a composite track picture. Operators use the CMS for threat evaluation and weapon assignment (TEWA), engagement planning, and weapon direction against air, surface, and subsurface threats. The system manages the sensor-to-weapon kill chain from initial detection through engagement assessment. The CMS interfaces with legacy MIL-STD-1553 weapons and sensors while supporting a GigE modernization path for new installations. This is an ACAT I program under Navy PEO Integrated Warfare Systems (IWS) acquisition oversight.

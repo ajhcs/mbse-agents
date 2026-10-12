@@ -1,5 +1,7 @@
 # Medical Device Examples
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 Reference systems demonstrating medical device systems engineering artifacts for Class II/III and SaMD programs. The flagship infusion pump example includes ISO 14971 risk management (hazardous situation to harm chain), FDA design control mapping, EU MDR technical documentation structure, and IEC 62304 evidence by safety class — all cross-referenced through a shared ID taxonomy.
 
 | System | Tier | Key Standards | Artifacts |

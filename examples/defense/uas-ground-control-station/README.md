@@ -1,5 +1,7 @@
 # UAS Ground Control Station
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The UAS Ground Control Station (GCS) is a multi-vehicle ground control station for Group 4/5 unmanned aircraft systems of the MQ-9 class. The GCS provides command and control (C2) link management, mission planning and execution, electro-optical/infrared/synthetic aperture radar (EO/IR/SAR) sensor payload control, and airspace integration through ADS-B and ACAS Xu interfaces. A single GCS station supports simultaneous control of up to four air vehicles across beyond-line-of-sight (BLOS) satellite and line-of-sight (LOS) data links.

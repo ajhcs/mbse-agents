@@ -1,3 +1,5 @@
+> Historical planning record, superseded by [the current skill design](../../design-spec.md). It is not an active instruction or validated source.
+
 # Examples Gallery Design Spec
 
 Reference architecture examples for each MBSE domain agent, providing real artifact structure that demonstrates what has been built and how domain-specific systems engineering artifacts connect.

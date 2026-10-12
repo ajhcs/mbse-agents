@@ -1,5 +1,7 @@
 # Hazard Analysis
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Methodology
 
 This hazard analysis follows MIL-STD-882E (Department of Defense Standard Practice: System Safety). The scope covers the UAS Ground Control Station as defined in the system boundary (README.md), analyzed across all operating modes (MODE-001 through MODE-005). The analysis applies the MIL-STD-882E hazard risk assessment process including hazard identification, initial risk assessment, hazard risk reduction, residual risk assessment, and risk acceptance.

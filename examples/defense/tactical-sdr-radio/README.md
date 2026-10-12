@@ -1,5 +1,7 @@
 # Tactical SDR Radio
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The Tactical Software-Defined Radio (SDR) is a multi-channel, multi-waveform radio platform for Joint Tactical Radio System (JTRS) waveform hosting in dismounted, vehicular, and airborne configurations. The radio conforms to the Software Communications Architecture (SCA) 4.1, providing a standardized waveform deployment environment that separates waveform application software from platform-specific hardware. The platform supports simultaneous operation of up to four waveform channels across HF, VHF, UHF, and L-band frequencies, with mobile ad-hoc networking (MANET) capability for infrastructure-free tactical communications. COMSEC and TRANSEC functions are provided by an embedded NSA Type 1 cryptographic module, with the crypto boundary separating red (plaintext) from black (ciphertext) domains. The FACE 3.1 transport and platform profiles govern software portability for the host platform services.

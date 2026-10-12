@@ -1,5 +1,7 @@
 # Architecture
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## System Context
 
 The EVA Suit Life Support System (PLSS) is a self-contained portable unit worn on the crewmember's back during extravehicular activity. It interfaces with the pressure suit garment on the crew side and with the vehicle airlock/umbilical system on the vehicle side. The EVA flight controller monitors PLSS telemetry in real time through the suit communication link relayed via the vehicle communication system.

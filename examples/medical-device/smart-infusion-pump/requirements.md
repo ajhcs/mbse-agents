@@ -1,5 +1,7 @@
 # Requirements
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 All requirements are atomic, testable shall-statements.
 
 ## Requirement Record Schema
@@ -26,7 +28,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B, CMP-PMA-01A, CMP-PMA-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-002
 | Field        | Value |
@@ -37,7 +39,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-001 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B, CMP-PMA-01A, CMP-PMA-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-003
 | Field        | Value |
@@ -48,7 +50,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-002 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B, CMP-PMA-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-004
 | Field        | Value |
@@ -59,7 +61,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-005
 | Field        | Value |
@@ -70,7 +72,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-004 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B, CMP-MCB-01D, CMP-UIM-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-006
 | Field        | Value |
@@ -81,7 +83,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B, CMP-MCB-01C, CMP-PMA-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-007
 | Field        | Value |
@@ -92,7 +94,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-008
 | Field        | Value |
@@ -103,7 +105,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-007 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-009
 | Field        | Value |
@@ -114,7 +116,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-007 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-010
 | Field        | Value |
@@ -125,7 +127,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-011
 | Field        | Value |
@@ -136,7 +138,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-010 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01C, CMP-WCM-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-012
 | Field        | Value |
@@ -147,7 +149,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01D, CMP-PMA-01E, CMP-UIM-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-013
 | Field        | Value |
@@ -158,7 +160,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01D, CMP-PMA-01D, CMP-UIM-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-014
 | Field        | Value |
@@ -169,7 +171,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01D, CMP-UIM-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-015
 | Field        | Value |
@@ -180,7 +182,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-003 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01D, CMP-PMA-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-016
 | Field        | Value |
@@ -191,7 +193,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-012 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01D, CMP-PMA-01E |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-017
 | Field        | Value |
@@ -202,7 +204,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01D, CMP-PMA-01F |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-018
 | Field        | Value |
@@ -213,7 +215,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-003 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B, CMP-MCB-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-019
 | Field        | Value |
@@ -224,7 +226,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01K |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-020
 | Field        | Value |
@@ -235,7 +237,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-UIM-01A, CMP-UIM-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-021
 | Field        | Value |
@@ -246,7 +248,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-UIM-01A, CMP-UIM-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-022
 | Field        | Value |
@@ -257,7 +259,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-007 |
 | **Verification** | Test, Inspection |
 | **Allocation**   | CMP-UIM-01C, CMP-MCB-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-FUN-023
 | Field        | Value |
@@ -268,20 +270,20 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01, CMP-MCB-01J |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ## Safety Requirements
 
 ### REQ-SAF-001
 | Field        | Value |
 |--------------|-------|
-| **Statement**    | The anti-free-flow clamp shall engage mechanically to occlude the IV tubing within 500 ms of door opening, independent of processor, software, or electrical power state. |
-| **Rationale**    | Free-flow is the highest-severity hazard; the primary control must be independent of electronics. |
+| **Statement**    | The proposed spring-closed anti-free-flow clamp shall occlude the IV tubing within 500 ms of door opening or loss of hold-open power, without requiring a processor/software command. Mechanical actuator/interlock fault coverage remains to be specified. |
+| **Rationale**    | Free-flow is the highest-severity hazard; the closing mechanism is intended to avoid a processor-command dependency; independence needs evidence. |
 | **Source**       | HZ-005; CTL-006; IEC 60601-2-24 Clause 201.12.4.104 |
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-PMA-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-SAF-002
 | Field        | Value |
@@ -292,7 +294,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01J, CMP-MCB-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-SAF-003
 | Field        | Value |
@@ -303,7 +305,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test, Analysis |
 | **Allocation**   | CMP-MCB-01H |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-SAF-004
 | Field        | Value |
@@ -314,7 +316,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B, CMP-MCB-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-SAF-005
 | Field        | Value |
@@ -325,7 +327,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test, Analysis |
 | **Allocation**   | CMP-MCB-01E |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-SAF-006
 | Field        | Value |
@@ -336,7 +338,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B, CMP-MCB-01D, CMP-PMA-01C, CMP-UIM-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-SAF-007
 | Field        | Value |
@@ -347,7 +349,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01D, CMP-UIM-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-SAF-008
 | Field        | Value |
@@ -358,7 +360,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01K |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-SAF-009
 | Field        | Value |
@@ -369,7 +371,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-007 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-SAF-010
 | Field        | Value |
@@ -380,7 +382,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-011 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01C, CMP-WCM-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ## Interface Requirements
 
@@ -393,7 +395,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-WCM-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-IFC-002
 | Field        | Value |
@@ -404,7 +406,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-WCM-01B, CMP-MCB-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-IFC-003
 | Field        | Value |
@@ -415,7 +417,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01G, CMP-WCM-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-IFC-004
 | Field        | Value |
@@ -426,7 +428,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-IFC-003 |
 | **Verification** | Test |
 | **Allocation**   | CMP-WCM-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-IFC-005
 | Field        | Value |
@@ -437,7 +439,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-WCM-01B, CMP-MCB-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-IFC-006
 | Field        | Value |
@@ -448,7 +450,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ## Performance Requirements
 
@@ -461,7 +463,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-002 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01B, CMP-PMA-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-PRF-002
 | Field        | Value |
@@ -472,7 +474,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-023 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01, CMP-UIM-01, CMP-WCM-01 |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-PRF-003
 | Field        | Value |
@@ -483,7 +485,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01K |
-| **Status**       | Baselined |
+| **Status**       | Proposed |
 
 ### REQ-PRF-004
 | Field        | Value |
@@ -494,4 +496,4 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-SAF-008 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MCB-01K, CMP-MCB-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed |

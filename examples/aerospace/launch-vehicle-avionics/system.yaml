@@ -1,7 +1,7 @@
 title: Launch Vehicle Avionics
 domain: aerospace
 tier: fleet
-status: complete
+status: illustrative
 standards:
   - EWR 127-1
   - DO-178C
@@ -13,3 +13,4 @@ summary: >
   Upper stage avionics for medium-lift launch vehicle. Flight
   termination system (FTS), guidance/navigation/control, telemetry.
   Range safety per EWR 127-1.
+evidence_status: planned

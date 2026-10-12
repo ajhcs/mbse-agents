@@ -1,7 +1,7 @@
 title: Integrated Flight Management System
 domain: aerospace
 tier: flagship
-status: complete
+status: illustrative
 standards:
   - ARP4754A
   - ARP4761A
@@ -17,3 +17,4 @@ summary: >
   computation functions. Dual FMC architecture with dissimilar backup.
   DAL A software (DO-178C), DAL A programmable hardware (DO-254),
   cybersecurity assessment (DO-326A).
+evidence_status: planned

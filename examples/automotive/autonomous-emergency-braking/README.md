@@ -1,5 +1,7 @@
 # Autonomous Emergency Braking System
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The Autonomous Emergency Braking (AEB) system provides automatic collision avoidance and mitigation for L2+ passenger vehicles by fusing data from a front-facing 8-megapixel camera and a 77 GHz long-range radar. The system continuously monitors the forward driving corridor, detects and classifies objects including vehicles, pedestrians, cyclists, and static obstacles, predicts collision trajectories, and autonomously applies braking force when the driver fails to respond to imminent collision warnings.

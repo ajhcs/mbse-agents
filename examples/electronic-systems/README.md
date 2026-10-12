@@ -1,5 +1,7 @@
 # Electronic Systems Examples
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 Reference systems demonstrating electronic systems engineering artifacts for safety-critical ASIC/FPGA/SoC and quantum computing hardware programs. The flagship quantum processor control example includes IEC 61508 SIL evidence mapping, FMEA/FMECA at component level, formal verification coverage metrics, and EDA tool qualification — all cross-referenced through a shared ID taxonomy.
 
 | System | Tier | Key Standards | Artifacts |

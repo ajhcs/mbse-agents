@@ -1,5 +1,7 @@
 # Assurance Evidence
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Assurance Framework
 
 The Integrated Flight Management System follows the FAA development assurance framework with Stage of Involvement (SOI) progression from SOI #1 (Planning) through SOI #4 (Final). The certification basis is 14 CFR 25.1309 with ARP4754A as the accepted means of compliance for system development assurance per AC 20-174.

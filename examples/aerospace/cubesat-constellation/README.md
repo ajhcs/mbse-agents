@@ -1,5 +1,7 @@
 # CubeSat Constellation
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The CubeSat Constellation is a 12-unit low Earth orbit (LEO) formation providing multispectral Earth observation with 24-hour global revisit. Each 6U spacecraft carries an optical payload and a software-defined radio supporting intersatellite links (ISL) and CCSDS-compliant ground communication. The constellation operates autonomously between ground contacts, performing on-board orbit maintenance, data routing through the ISL mesh, and payload scheduling coordinated by a ground-based mission operations center.

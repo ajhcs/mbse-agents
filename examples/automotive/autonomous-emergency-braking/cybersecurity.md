@@ -1,5 +1,7 @@
 # Cybersecurity Analysis
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Applicable Framework
 
 This cybersecurity analysis follows ISO/SAE 21434 (Road Vehicles -- Cybersecurity Engineering). The Threat Analysis and Risk Assessment (TARA) identifies cybersecurity-relevant assets within the AEB system boundary, characterizes attack paths, assesses attack feasibility using the attack potential approach (elapsed time, expertise, knowledge, window of opportunity, equipment), and allocates security requirements alongside safety requirements per ISO 26262.

@@ -1,5 +1,7 @@
 # Defense Examples
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 Reference systems demonstrating defense systems engineering artifacts for DoD acquisition programs. The flagship UAS GCS example includes DoDAF viewpoint products, MIL-STD-882E hazard analysis with risk acceptance authority chain, and DI-SESS deliverable mapping — all cross-referenced through a shared ID taxonomy.
 
 | System | Tier | Key Standards | Artifacts |

@@ -1,5 +1,7 @@
 # Assurance Evidence
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Assurance Framework
 
 The Quantum Processor Control System follows the IEC 61508 functional safety lifecycle for the safety-critical calibration and interlock subsystems (SIL 2), supplemented by formal verification of control sequences and EDA tool qualification for the cryogenic FPGA design. The assurance framework adapts IEC 61508 to the emerging quantum computing domain where no industry-specific safety standard exists.

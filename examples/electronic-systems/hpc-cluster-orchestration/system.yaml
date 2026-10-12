@@ -1,7 +1,7 @@
 title: HPC Cluster Orchestration System
 domain: electronic-systems
 tier: fleet
-status: complete
+status: illustrative
 standards:
   - IEC 61508
   - ALCOA+
@@ -11,3 +11,4 @@ summary: >
   Workload orchestration for a 500-node GPU compute cluster. Job
   scheduling, resource allocation, fault recovery, power management.
   Data integrity per ALCOA+ principles.
+evidence_status: planned

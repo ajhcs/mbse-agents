@@ -1,5 +1,7 @@
 # Aerospace Examples
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 Reference systems demonstrating aerospace systems engineering artifacts for civil aviation, space, and launch vehicle programs. The flagship FMS example includes a complete artifact set with ARP4761A hazard analysis, DO-178C/DO-254 certification evidence, and DO-326A cybersecurity — all cross-referenced through a shared ID taxonomy.
 
 | System | Tier | Key Standards | Artifacts |

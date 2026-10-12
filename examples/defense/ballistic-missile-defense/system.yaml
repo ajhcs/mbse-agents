@@ -1,7 +1,7 @@
 title: Ballistic Missile Defense Element
 domain: defense
 tier: fleet
-status: complete
+status: illustrative
 standards:
   - DoDAF 2.02
   - MIL-STD-882E
@@ -11,3 +11,4 @@ system_class: ACAT ID system-of-systems
 summary: >
   Engagement coordination element within layered BMDS architecture.
   Track management, threat assessment, weapon-target pairing.
+evidence_status: planned

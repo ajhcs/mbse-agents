@@ -1,5 +1,7 @@
 # Hazard Analysis
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Methodology
 
 This hazard analysis follows ISO 26262 Part 3 (Concept Phase) and Part 4 (Product Development at the System Level). The scope covers the Autonomous Emergency Braking system as defined in the system boundary (README.md), analyzed across all operating modes (MODE-001 through MODE-005).

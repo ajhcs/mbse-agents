@@ -1,7 +1,7 @@
 title: Steer-by-Wire System
 domain: automotive
 tier: fleet
-status: complete
+status: illustrative
 standards:
   - ISO 26262
   - ISO 21448
@@ -12,3 +12,4 @@ summary: >
   Full steer-by-wire with no mechanical fallback. Dual-redundant
   steering actuators, torque feedback, rack position control.
   Fail-operational architecture.
+evidence_status: planned

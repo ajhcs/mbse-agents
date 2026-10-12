@@ -1,5 +1,7 @@
 # Architecture
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## System Context
 
 The CubeSat Constellation operates as a distributed system of 12 spacecraft in LEO, coordinated by a ground-based mission operations center. Each spacecraft is an autonomous node that images, processes, stores, and relays data through the intersatellite link mesh. The ground segment provides orbit determination updates, imaging campaign commands, and constellation health monitoring.

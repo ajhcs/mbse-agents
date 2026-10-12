@@ -1,5 +1,7 @@
 # Steer-by-Wire System
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The Steer-by-Wire (SbW) system replaces the conventional mechanical steering column with an electrically actuated steering architecture providing no mechanical fallback between the steering wheel and the road wheels. The system reads driver torque and angle inputs from the steering wheel sensor unit, transmits steering commands electronically to dual-redundant rack actuators, and synthesizes road-feel torque feedback to the driver through a handwheel actuator. Because there is no physical coupling between the steering wheel and the rack, the system is classified fail-operational under ISO 26262: a single fault must not result in loss of steering, and the system must maintain directional control until the driver can safely stop the vehicle.

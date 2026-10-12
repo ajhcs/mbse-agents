@@ -1,5 +1,7 @@
 # Requirements
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 All requirements are atomic, testable shall-statements.
 
 ## Requirement Record Schema

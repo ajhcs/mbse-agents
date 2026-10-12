@@ -1,5 +1,7 @@
 # Cybersecurity Analysis
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Applicable Framework
 
 This cybersecurity analysis follows DO-326A (Airworthiness Security Process Specification) and DO-356A (Airworthiness Security Methods and Considerations). The Security Risk Assessment identifies security-relevant assets within the FMS system boundary, characterizes threat agents, maps attack paths through the system architecture, and allocates security requirements alongside safety requirements per ARP4754A.

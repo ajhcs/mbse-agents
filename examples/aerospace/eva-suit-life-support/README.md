@@ -1,5 +1,7 @@
 # EVA Suit Life Support System
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The EVA Suit Life Support System is a portable life support system (PLSS) providing atmospheric pressure, oxygen supply, carbon dioxide removal, thermal regulation, and humidity control for a single crewmember during extravehicular activity. The system supports both ISS-based EVA and Artemis lunar surface operations with a nominal 8-hour sortie duration and a 30-minute emergency reserve.

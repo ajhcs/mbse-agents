@@ -1,5 +1,7 @@
 # HPC Cluster Orchestration System
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 ## Overview
 
 The HPC Cluster Orchestration System (HCOS) manages workload scheduling, resource allocation, fault recovery, and power management for a 500-node GPU compute cluster serving pharmaceutical simulation, nuclear engineering analysis, and scientific research workloads. The system orchestrates heterogeneous compute resources (NVIDIA H100 GPUs, AMD EPYC CPUs, high-bandwidth NVMe-oF storage) through a hierarchical scheduler that dispatches jobs to node agents, enforces resource quotas, and maintains ALCOA+ data integrity for regulated batch processes. Safety-critical batch workloads (pharmaceutical manufacturing simulation, reactor physics calculations) are classified IEC 61508 SIL 1, reflecting the risk that corrupted computational results could propagate to real-world safety decisions. The system provides fault recovery through job checkpointing, automatic rescheduling on node failure, and immutable audit logging of all scheduling decisions.
