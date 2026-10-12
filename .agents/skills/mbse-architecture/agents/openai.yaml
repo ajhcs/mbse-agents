@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design a System Architecture"
+  short_description: "Develop or review functional and physical architectures, require"
+  default_prompt: "Use $mbse-architecture on the supplied artifacts and deliver a reviewable result with evidence and open decisions."

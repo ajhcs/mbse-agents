@@ -1,0 +1,4 @@
+interface:
+  display_name: "Electronic Systems Engineering"
+  short_description: "Electronic Systems Engineering analysis and evidence"
+  default_prompt: "Use $mbse-electronic-systems to develop or review the supplied baseline, connecting domain risks to architecture and evidence."

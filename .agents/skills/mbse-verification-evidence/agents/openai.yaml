@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Verification and Evidence"
+  short_description: "Plan or review requirements verification, stakeholder validation"
+  default_prompt: "Use $mbse-verification-evidence on the supplied artifacts and deliver a reviewable result with evidence and open decisions."

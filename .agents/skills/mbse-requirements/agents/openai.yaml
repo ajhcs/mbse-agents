@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineer Requirements"
+  short_description: "Elicit, draft, revise, or review engineering requirements and th"
+  default_prompt: "Use $mbse-requirements on the supplied artifacts and deliver a reviewable result with evidence and open decisions."

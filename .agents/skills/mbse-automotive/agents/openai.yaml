@@ -1,0 +1,4 @@
+interface:
+  display_name: "Automotive Systems Engineering"
+  short_description: "Automotive Systems Engineering analysis and evidence"
+  default_prompt: "Use $mbse-automotive to develop or review the supplied baseline, connecting domain risks to architecture and evidence."

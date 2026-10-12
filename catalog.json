@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "name": "mbse-system-concept",
+      "display_name": "Develop a System Concept",
+      "kind": "task",
+      "path": ".agents/skills/mbse-system-concept",
+      "short_description": "Develop or compare system concepts from a problem, desired outco",
+      "default_prompt": "Use $mbse-system-concept on the supplied artifacts and deliver a reviewable result with evidence and open decisions."
+    },
+    {
+      "name": "mbse-conops",
+      "display_name": "Develop a Concept of Operations",
+      "kind": "task",
+      "path": ".agents/skills/mbse-conops",
+      "short_description": "Develop or revise a concept of operations connecting stakeholder",
+      "default_prompt": "Use $mbse-conops on the supplied artifacts and deliver a reviewable result with evidence and open decisions."
+    },
+    {
+      "name": "mbse-operational-scenarios",
+      "display_name": "Develop Operational Scenarios",
+      "kind": "task",
+      "path": ".agents/skills/mbse-operational-scenarios",
+      "short_description": "Draft or revise operational scenarios with actor actions, system",
+      "default_prompt": "Use $mbse-operational-scenarios on the supplied artifacts and deliver a reviewable result with evidence and open decisions."
+    },
+    {
+      "name": "mbse-requirements",
+      "display_name": "Engineer Requirements",
+      "kind": "task",
+      "path": ".agents/skills/mbse-requirements",
+      "short_description": "Elicit, draft, revise, or review engineering requirements and th",
+      "default_prompt": "Use $mbse-requirements on the supplied artifacts and deliver a reviewable result with evidence and open decisions."
+    },
+    {
+      "name": "mbse-architecture",
+      "display_name": "Design a System Architecture",
+      "kind": "task",
+      "path": ".agents/skills/mbse-architecture",
+      "short_description": "Develop or review functional and physical architectures, require",
+      "default_prompt": "Use $mbse-architecture on the supplied artifacts and deliver a reviewable result with evidence and open decisions."
+    },
+    {
+      "name": "mbse-verification-evidence",
+      "display_name": "Plan Verification and Evidence",
+      "kind": "task",
+      "path": ".agents/skills/mbse-verification-evidence",
+      "short_description": "Plan or review requirements verification, stakeholder validation",
+      "default_prompt": "Use $mbse-verification-evidence on the supplied artifacts and deliver a reviewable result with evidence and open decisions."
+    },
+    {
+      "name": "mbse-baseline-review",
+      "display_name": "Review an MBSE Baseline",
+      "kind": "task",
+      "path": ".agents/skills/mbse-baseline-review",
+      "short_description": "Review an engineering baseline or change for consistency, missin",
+      "default_prompt": "Use $mbse-baseline-review on the supplied artifacts and deliver a reviewable result with evidence and open decisions."
+    },
+    {
+      "name": "mbse-aerospace",
+      "display_name": "Aerospace Systems Engineering",
+      "kind": "domain",
+      "path": ".agents/skills/mbse-aerospace",
+      "short_description": "Aerospace Systems Engineering analysis and evidence",
+      "default_prompt": "Use $mbse-aerospace to develop or review the supplied baseline, connecting domain risks to architecture and evidence."
+    },
+    {
+      "name": "mbse-defense",
+      "display_name": "Defense Systems Engineering",
+      "kind": "domain",
+      "path": ".agents/skills/mbse-defense",
+      "short_description": "Defense Systems Engineering analysis and evidence",
+      "default_prompt": "Use $mbse-defense to develop or review the supplied baseline, connecting domain risks to architecture and evidence."
+    },
+    {
+      "name": "mbse-automotive",
+      "display_name": "Automotive Systems Engineering",
+      "kind": "domain",
+      "path": ".agents/skills/mbse-automotive",
+      "short_description": "Automotive Systems Engineering analysis and evidence",
+      "default_prompt": "Use $mbse-automotive to develop or review the supplied baseline, connecting domain risks to architecture and evidence."
+    },
+    {
+      "name": "mbse-medical-device",
+      "display_name": "Medical Device Systems Engineering",
+      "kind": "domain",
+      "path": ".agents/skills/mbse-medical-device",
+      "short_description": "Medical Device Systems Engineering analysis and evidence",
+      "default_prompt": "Use $mbse-medical-device to develop or review the supplied baseline, connecting domain risks to architecture and evidence."
+    },
+    {
+      "name": "mbse-electronic-systems",
+      "display_name": "Electronic Systems Engineering",
+      "kind": "domain",
+      "path": ".agents/skills/mbse-electronic-systems",
+      "short_description": "Electronic Systems Engineering analysis and evidence",
+      "default_prompt": "Use $mbse-electronic-systems to develop or review the supplied baseline, connecting domain risks to architecture and evidence."
+    },
+    {
+      "name": "defense-founder-review",
+      "display_name": "Defense Founder Review",
+      "kind": "strategy",
+      "path": ".agents/skills/defense-founder-review",
+      "short_description": "Review a defense venture and prototype strategy",
+      "default_prompt": "Use $defense-founder-review to assess the proposed venture and develop its decisive prototype evidence."
+    }
+  ]
+}

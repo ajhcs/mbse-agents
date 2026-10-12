@@ -1,0 +1,4 @@
+interface:
+  display_name: "Develop a Concept of Operations"
+  short_description: "Develop or revise a concept of operations connecting stakeholder"
+  default_prompt: "Use $mbse-conops on the supplied artifacts and deliver a reviewable result with evidence and open decisions."

@@ -1,0 +1,24 @@
+name: New skill or agent request
+description: Request a new engineering workflow or domain specialization.
+title: "[New skill] "
+body:
+  - type: markdown
+    attributes:
+      value: "You do not need a finished prompt. Describe a real task and the domain knowledge or resources that would make it work."
+  - type: textarea
+    id: task
+    attributes:
+      label: Which task or domain needs help?
+      description: Include a realistic request, if you have one.
+    validations:
+      required: true
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Expected deliverable
+      description: Optional examples of artifacts or decisions the skill should support.
+  - type: textarea
+    id: substance
+    attributes:
+      label: Useful sources and boundaries
+      description: Optional standards editions, tools, practitioner questions, or tasks it should leave to another skill.

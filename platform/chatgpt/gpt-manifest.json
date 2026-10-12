@@ -1,28 +1,71 @@
 {
-  "agents": [
+  "schema_version": 2,
+  "format": "mbse-skills-adaptation-index",
+  "skills": [
     {
-      "name": "Aerospace Systems Engineer",
-      "description": "Principal aerospace SE specializing in ARP4754A/4761A development assurance, DO-178C/DO-254 certification evidence, airborne cybersecurity, and multi-tool MBSE crosswalks.",
-      "emoji": "✈️",
-      "source_file": "agents/aerospace-systems-engineer.md"
+      "name": "mbse-system-concept",
+      "description": "Develop or compare system concepts from a problem, desired outcomes, and feasibility constraints.",
+      "source_file": ".agents/skills/mbse-system-concept/SKILL.md"
     },
     {
-      "name": "Defense Systems Engineer",
-      "description": "Principal defense SE specializing in DoDAF/UAF architecture, MIL-STD-882E safety, technical baseline management, and MBSE crosswalks for acquisition programs.",
-      "emoji": "🛡️",
-      "source_file": "agents/defense-systems-engineer.md"
+      "name": "mbse-conops",
+      "description": "Develop or revise a concept of operations connecting stakeholders, system boundaries, operational use, and lifecycle support.",
+      "source_file": ".agents/skills/mbse-conops/SKILL.md"
     },
     {
-      "name": "Automotive Systems Engineer",
-      "description": "Principal automotive SE specializing in ISO 26262 ASIL allocation, AUTOSAR architecture, ISO 21434 cybersecurity, SOTIF, and multi-tool MBSE crosswalks.",
-      "emoji": "🏎️",
-      "source_file": "agents/automotive-systems-engineer.md"
+      "name": "mbse-operational-scenarios",
+      "description": "Draft or revise operational scenarios with actor actions, system responses, modes, exchanges, and exception recovery.",
+      "source_file": ".agents/skills/mbse-operational-scenarios/SKILL.md"
     },
     {
-      "name": "Medical Device Systems Engineer",
-      "description": "Principal medical device SE specializing in IEC 62304, ISO 14971, FDA design controls, EU MDR documentation, and multi-tool MBSE crosswalks.",
-      "emoji": "🏥",
-      "source_file": "agents/medical-device-systems-engineer.md"
+      "name": "mbse-requirements",
+      "description": "Elicit, draft, revise, or review engineering requirements and their sources, acceptance conditions, and traceability.",
+      "source_file": ".agents/skills/mbse-requirements/SKILL.md"
+    },
+    {
+      "name": "mbse-architecture",
+      "description": "Develop or review functional and physical architectures, requirement allocations, interface contracts, and design trades.",
+      "source_file": ".agents/skills/mbse-architecture/SKILL.md"
+    },
+    {
+      "name": "mbse-verification-evidence",
+      "description": "Plan or review requirements verification, stakeholder validation, traceability, and configuration-controlled evidence.",
+      "source_file": ".agents/skills/mbse-verification-evidence/SKILL.md"
+    },
+    {
+      "name": "mbse-baseline-review",
+      "description": "Review an engineering baseline or change for consistency, missing allocations, risk controls, verification gaps, and decision readiness.",
+      "source_file": ".agents/skills/mbse-baseline-review/SKILL.md"
+    },
+    {
+      "name": "mbse-aerospace",
+      "description": "Develop or review aerospace architectures, safety and development assurance, and certification evidence for civil aviation or space.",
+      "source_file": ".agents/skills/mbse-aerospace/SKILL.md"
+    },
+    {
+      "name": "mbse-defense",
+      "description": "Develop or review defense mission threads, DoDAF/UAF architectures, technical baselines, system safety, and acquisition evidence.",
+      "source_file": ".agents/skills/mbse-defense/SKILL.md"
+    },
+    {
+      "name": "mbse-automotive",
+      "description": "Develop or review automotive functional safety, SOTIF, cybersecurity, E/E architectures, and safety evidence.",
+      "source_file": ".agents/skills/mbse-automotive/SKILL.md"
+    },
+    {
+      "name": "mbse-medical-device",
+      "description": "Develop or review medical-device intended use, risk controls, software lifecycle, architecture, and regulatory evidence.",
+      "source_file": ".agents/skills/mbse-medical-device/SKILL.md"
+    },
+    {
+      "name": "mbse-electronic-systems",
+      "description": "Develop or review ASIC, FPGA, SoC, and control-electronics architectures, hardware verification, and assurance evidence.",
+      "source_file": ".agents/skills/mbse-electronic-systems/SKILL.md"
+    },
+    {
+      "name": "defense-founder-review",
+      "description": "Evaluate a defense or dual-use venture's capability gap, product wedge, system strategy, and prototype evidence.",
+      "source_file": ".agents/skills/defense-founder-review/SKILL.md"
     }
   ]
 }

@@ -1,34 +1,17 @@
-# ChatGPT Custom GPT Install Guide
+# ChatGPT use
 
-## Creating a Custom GPT per Agent
+For the desktop app's standalone skills, select/create skills through the host's
+supported interface or use its available skill installer on a canonical package
+folder. For broader web/mobile distribution, follow the current plugin packaging
+workflow; this repository does not claim a published plugin or universal ZIP import.
+See [official authoring and distribution](https://learn.chatgpt.com/docs/build-skills).
 
-1. Go to [chat.openai.com](https://chat.openai.com) and click **Explore GPTs** > **Create**.
+For a manual experiment, provide the selected `SKILL.md` and its referenced files
+as project/conversation context, state the engineering task, and request artifact
+outputs. This is manual context loading, not automatic skill discovery. Keep
+references alongside the entrypoint; uploading a migration notice is insufficient.
 
-2. Open the agent markdown file (e.g., `agents/aerospace-systems-engineer.md`).
-
-3. Use the frontmatter to fill in the GPT configuration:
-   - **Name**: Use the `name` field (e.g., "Aerospace Systems Engineer")
-   - **Description**: Use the `description` field
-   - **Profile Picture**: Use the `emoji` field as inspiration or upload a custom image
-
-4. Copy the entire markdown content (everything below the frontmatter `---` closing delimiter) and paste it into the **Instructions** field.
-
-5. Under **Conversation Starters**, add domain-relevant prompts, e.g.:
-   - "Review this requirements document against ARP4754A"
-   - "Generate DO-178C certification evidence for this module"
-
-6. Save and publish (privately or to your team).
-
-## Batch Setup
-
-Use `platform/chatgpt/gpt-manifest.json` as a reference for all four agents. It contains the name, description, emoji, and source file for each agent.
-
-## Defense Founder Review
-
-For the defense domain, create an additional GPT using `skills/defense-founder-review/SKILL.md` as Instructions. This provides a direct strategic review process for defense and dual-use concepts; use it as an operating system, not a persona.
-
-## Tips
-
-- Keep the full markdown body as Instructions; ChatGPT handles markdown natively.
-- Strip the YAML frontmatter before pasting (everything between the `---` delimiters).
-- For a quick strip: `sed '1{/^---$/!q;};1,/^---$/d' agents/aerospace-systems-engineer.md`
+`gpt-manifest.json` is a generated adaptation index covering all shipped skills.
+It is not an OpenAI plugin manifest and does not provision GPTs, tools, or access.
+Use [the catalog](../../docs/skills.md) to select relevant packages. Choose the
+available model in ChatGPT; installing instructions does not change it.

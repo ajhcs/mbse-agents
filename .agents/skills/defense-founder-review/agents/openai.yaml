@@ -1,0 +1,4 @@
+interface:
+  display_name: "Defense Founder Review"
+  short_description: "Review a defense venture and prototype strategy"
+  default_prompt: "Use $defense-founder-review to assess the proposed venture and develop its decisive prototype evidence."

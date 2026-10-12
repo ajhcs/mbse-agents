@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aerospace Systems Engineering"
+  short_description: "Aerospace Systems Engineering analysis and evidence"
+  default_prompt: "Use $mbse-aerospace to develop or review the supplied baseline, connecting domain risks to architecture and evidence."

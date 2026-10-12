@@ -1,0 +1,4 @@
+interface:
+  display_name: "Defense Systems Engineering"
+  short_description: "Defense Systems Engineering analysis and evidence"
+  default_prompt: "Use $mbse-defense to develop or review the supplied baseline, connecting domain risks to architecture and evidence."

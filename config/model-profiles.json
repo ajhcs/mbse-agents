@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-12",
+  "evaluation_status": "not_evaluated",
+  "profiles": {
+    "routine": {
+      "model": "gpt-6.1-sol",
+      "documentation": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+    },
+    "demanding": {
+      "model": "gpt-6-astra",
+      "documentation": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra"
+    }
+  },
+  "notes": "Informational profiles. Select settings in the host; no API calls or automatic model changes."
+}

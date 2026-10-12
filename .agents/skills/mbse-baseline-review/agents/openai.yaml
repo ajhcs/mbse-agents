@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review an MBSE Baseline"
+  short_description: "Review an engineering baseline or change for consistency, missin"
+  default_prompt: "Use $mbse-baseline-review on the supplied artifacts and deliver a reviewable result with evidence and open decisions."

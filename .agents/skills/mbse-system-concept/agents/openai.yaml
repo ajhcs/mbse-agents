@@ -1,0 +1,4 @@
+interface:
+  display_name: "Develop a System Concept"
+  short_description: "Develop or compare system concepts from a problem, desired outco"
+  default_prompt: "Use $mbse-system-concept on the supplied artifacts and deliver a reviewable result with evidence and open decisions."

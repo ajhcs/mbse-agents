@@ -1,0 +1,4 @@
+interface:
+  display_name: "Medical Device Systems Engineering"
+  short_description: "Medical Device Systems Engineering analysis and evidence"
+  default_prompt: "Use $mbse-medical-device to develop or review the supplied baseline, connecting domain risks to architecture and evidence."
