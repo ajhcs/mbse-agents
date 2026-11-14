@@ -348,7 +348,8 @@ run_clamp_checks.main()
         source = copied / "analysis/clamp_model.py"
         before = source.stat()
         py_compile.compile(str(source), doraise=True)
-        source.write_text(source.read_text().replace('last_service_ms >= 200', 'last_service_ms >= 300'))
+        source.write_bytes(source.read_bytes().replace(b'last_service_ms >= 200', b'last_service_ms >= 300'))
+        self.assertEqual(source.stat().st_size, before.st_size)
         os.utime(source, ns=(before.st_atime_ns, before.st_mtime_ns))
         output = copied / "evidence/analysis/clamp-results.json"
         preserved = output.read_bytes()

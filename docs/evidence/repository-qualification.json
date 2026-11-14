@@ -1364,7 +1364,7 @@
     "platform/support.md": "60cb6157ac2bfa1284f263e1ac2ce5f7a80cc65d0250e8b52424c5c6cacab118",
     "requirements-docs.txt": "6dcb4ab54585a61bfa61eb6be5d17b353a24e002fea3df966b69e6eb8c3df557",
     "scripts/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b",
-    "scripts/benchmark.py": "c7aab0816ba6d4f00fcfb90a6d476a0a04b76b69ba139c62307fb1318ceaf893",
+    "scripts/benchmark.py": "b31547cad9b8336ca7d8010508757e9b3fc24b36e1d127bd01f146176411873f",
     "scripts/catalog.py": "186014c8704b666a2dfe7fd65fe4b9fa9b6474c2af364a066e469ebdebe49b64",
     "scripts/check_gallery.py": "df1e7230212f99e4dfd32d1117e656be9a51b08a04dcc8e3a9af0e305e9899d6",
     "scripts/check_historical.py": "ce6762c4aee8031ad32d8c4b228bba356d69edf1bdfbee93dbb92871129906d9",
@@ -1375,10 +1375,10 @@
     "scripts/prepare_eval.py": "378fc41565dcc30ba2f01a1c2e5bc556034450eee2c43f4706459bef8c440092",
     "scripts/render_preview.py": "c1aae82e3ef832d7b0ac403ca813eb3f7ef798ae5d3a9fbf166b0aaf4e979954",
     "scripts/validate.py": "740d6a6b7125ff544b7e721f4f66a8e727e2a4fc87d3d6c53625ad1197a08af9",
-    "tests/test_benchmark.py": "dbde6791aea4e76a6c70c615f50d2031a675ce598cf2644b899c472dfc2aba00",
+    "tests/test_benchmark.py": "ffc8208aec0438f4dcc9c7a4950bbbc0b7f426b3178e797a94648eca3543363e",
     "tests/test_catalog.py": "5c27d858350094239f388521d0580e6e93bb0e11868e8c3b72804e24eb1c59a4",
     "tests/test_eval_packet.py": "6f519c595ea6945cfe8c952c2bb52ed2c5a7897f977a35a660ab19c2dbff7949",
-    "tests/test_gallery.py": "59cf6ad68984acdc4d42bd4bc2ef6f2d7db0dfa906512c29e63e3b364bf6399b",
+    "tests/test_gallery.py": "ae1f97b1ccae90b28e50c6344a7f02bc1f9c6a28ee06a54f1cd679d797fbafc2",
     "tests/test_historical.py": "fa6ecfc9c91f44fb3d1878dadaa0952593ed85e09f2ccd1929cb05002dda6829",
     "tests/test_install.py": "ebe866944594e7227c0c2079a431aac80f3c42f6ff1b4b7936464031acfe9a5b",
     "tests/test_package_plugin.py": "0de9b015721ca951f38c34a96f78069e44cc9d53c0371304c7e36067d9b5e4d1",
@@ -1409,7 +1409,7 @@
         "tests"
       ],
       "exit_code": 0,
-      "stderr": "...............................................................................................................................................\n----------------------------------------------------------------------\nRan 143 tests in 2.098s\n\nOK\n",
+      "stderr": "...............................................................................................................................................\n----------------------------------------------------------------------\nRan 143 tests in 1.865s\n\nOK\n",
       "stdout": ""
     },
     {
@@ -1445,7 +1445,7 @@
       "stdout": ""
     }
   ],
-  "completed_at": "2026-11-14T00:40:01.194227+00:00",
+  "completed_at": "2026-11-14T00:44:58.146191+00:00",
   "documentation_receipt_sha256": "38bd2824b3224f856c949b36b508c3cfc1eea979058113e0e651f5ad4b6502f0",
   "host_platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
   "inventory_excludes": [
@@ -1458,8 +1458,8 @@
   "python_version": "Python 3.12.3",
   "schema_version": 1,
   "scope": "Local candidate qualification; GitHub CI, merge and release publication are separate records.",
-  "started_at": "2026-11-14T00:39:56.560305+00:00",
-  "starting_commit": "a740bd970438e2b91592aeb9f25bb414d8942d9c",
+  "started_at": "2026-11-14T00:44:53.989716+00:00",
+  "starting_commit": "380527161e20578dc5d00c0f4d27d1dff4d1bd43",
   "status": "passed",
   "tests_passed": 143
 }

@@ -8,6 +8,7 @@ import subprocess
 import tempfile
 import uuid
 import math
+import os
 from datetime import datetime, timezone
 
 from catalog import ROOT, entries
@@ -131,12 +132,19 @@ def write_json(path, data):
 def write_new_json(path, data):
     """Create a result without replacing files or following dangling symlinks."""
     path = Path(path)
+    if path.exists() or path.is_symlink():
+        raise ValueError("Output exists; preserve the prior record and choose a new path")
+    payload = json.dumps(data, indent=2, ensure_ascii=False, allow_nan=False) + "\n"
     path.parent.mkdir(parents=True, exist_ok=True)
-    try:
-        with path.open("x", encoding="utf-8") as handle:
-            handle.write(json.dumps(data, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
-    except FileExistsError as error:
-        raise ValueError("Output exists; preserve the prior record and choose a new path") from error
+    # Windows exclusive open can follow a dangling symlink. A same-filesystem
+    # hard link publishes complete bytes and refuses any existing destination.
+    with tempfile.TemporaryDirectory(prefix=".mbse-result-", dir=path.parent) as temporary:
+        staged = Path(temporary) / "result.json"
+        staged.write_text(payload, encoding="utf-8", newline="\n")
+        try:
+            os.link(staged, path)
+        except FileExistsError as error:
+            raise ValueError("Output exists; preserve the prior record and choose a new path") from error
 
 
 def canonical_digest(value):

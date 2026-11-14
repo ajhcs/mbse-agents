@@ -1,6 +1,7 @@
 from pathlib import Path
 import copy
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -231,6 +232,24 @@ class JudgmentBenchmarkTests(unittest.TestCase):
             write_new_json(output, {"result": "synthetic"})
         self.assertFalse(target.exists())
         self.assertTrue(output.is_symlink())
+        original_link = os.link
+        for kind in ("symlink", "file"):
+            raced = self.folder / ("raced-" + kind + ".json")
+            def collision(source, destination):
+                if kind == "symlink":
+                    raced.symlink_to(target)
+                else:
+                    raced.write_bytes(b"concurrent owner\n")
+                return original_link(source, destination)
+            with self.subTest(kind=kind), patch("benchmark.os.link", side_effect=collision):
+                with self.assertRaisesRegex(ValueError, "Output exists"):
+                    write_new_json(raced, {"result": "synthetic"})
+            if kind == "symlink":
+                self.assertTrue(raced.is_symlink())
+                self.assertFalse(target.exists())
+            else:
+                self.assertEqual(raced.read_bytes(), b"concurrent owner\n")
+        self.assertEqual(list(self.folder.glob(".mbse-result-*")), [])
 
     def test_diagnostic_reports_measured_shortcuts_and_explicit_ties(self):
         bank = {"id": "fixture", "version": "test", "items": [
