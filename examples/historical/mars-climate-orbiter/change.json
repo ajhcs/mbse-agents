@@ -1,0 +1,21 @@
+{
+  "id": "HG-05-CH1",
+  "status": "synthetic_transfer_exercise",
+  "historical_provenance": false,
+  "title": "Add unit metadata while retaining a legacy input path",
+  "description": "A fictional supplier proposes adding a unit field to a new format while the consumer continues to accept old numeric-only files. The supplier reports that its own export tests pass.",
+  "affected_interface_ids": [
+    "HG-05-I1",
+    "HG-05-I2"
+  ],
+  "affected_claim_ids": [
+    "HG-05-C2",
+    "HG-05-C3"
+  ],
+  "decision_requested": "Approve, conditionally accept, or reject the interface change for a planned integration exercise; identify the minimum evidence and owner for each condition.",
+  "constraints": [
+    "The complete legacy data provenance is not supplied.",
+    "Do not infer units from numerical magnitude alone.",
+    "No flight acceptance decision is requested."
+  ]
+}

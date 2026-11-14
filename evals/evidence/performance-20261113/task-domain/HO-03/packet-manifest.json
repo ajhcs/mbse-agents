@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "kind": "artifact-performance-packet",
+  "status": "complete",
+  "case": "HO-03",
+  "case_version": "1.0",
+  "prepared_at": "2026-11-13T23:42:14.154772+00:00",
+  "skills": [
+    "mbse-aerospace"
+  ],
+  "arm": "task-domain",
+  "full_catalog_exposed": false,
+  "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+  "files": {
+    ".agents/skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+    ".agents/skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+    ".agents/skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+    ".agents/skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+    "request.md": "bbf54290b4c0463c009326f839515072d95f817574b86be208dadb99087272dd"
+  },
+  "exposure": "Public inputs; packet separation is not a secure held-out environment."
+}

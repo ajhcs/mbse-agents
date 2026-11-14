@@ -1,0 +1,22 @@
+{
+  "case": "HG-10",
+  "accessed_on_utc_date": "2026-11-13",
+  "access_method": "tools.web__run open/find via functions.exec",
+  "source_register_note": "Original sources.json access_status describes the supplied packet. This output records only retrieval performed in this participant run.",
+  "sources": [
+    {
+      "source_id": "HG-10-S1",
+      "url": "https://publications.parliament.uk/pa/cm200708/cmselect/cmtran/543/54304.htm",
+      "access": "Retrieved and inspected chapter 2 paragraphs 8-14 via web open; a targeted follow-up exposed the remainder of paragraphs 12-14.",
+      "limits": "Committee conclusions distinguished from quoted witness statements; linked underlying evidence was not retrieved; no raw HTML bytes downloaded or SHA256 claimed."
+    },
+    {
+      "source_id": "HG-10-S2",
+      "url": "https://publications.parliament.uk/pa/cm200708/cmselect/cmtran/543/54305.htm",
+      "access": "Retrieved and inspected chapter 3 paragraphs 15-19 via web open; targeted follow-up included paragraphs 18-19.",
+      "limits": "The committee did not assert certainty about prevention through earlier cooperation; linked underlying evidence not retrieved; no raw HTML bytes downloaded or SHA256 claimed."
+    }
+  ],
+  "raw_remote_byte_sha256": null,
+  "raw_remote_byte_sha256_reason": "Web tool returned extracted text/excerpts; original response bodies were not acquired as local files."
+}

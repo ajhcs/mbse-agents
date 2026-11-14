@@ -1,0 +1,12 @@
+flowchart LR
+  F["HG-03 fixture assembly"]
+  P["HG-03 primary optical measurement"]
+  X["HG-03 cross-check measurement"]
+  A["HG-03 acceptance review"]
+  C["HG-03 calibration record"]
+  V["HG-03 fixture assurance"]
+  F -->|HG-03-I1 reference dependence| P
+  C -->|HG-03-I3 assembly evidence| V
+  V -->|HG-03-C3 acceptance claim| A
+  X -->|HG-03-I2 conflicting evidence| A
+  P -->|HG-03-I4 production evidence| A

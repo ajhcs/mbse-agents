@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "collected_at": "2026-11-13T23:53:03.311737+00:00",
+  "scope": "Unchanged participant artifacts, input files and selected skills. Original full packet manifests retained. Publisher report bodies stay at original workspace locations.",
+  "packets": [
+    {
+      "case": "HO-09",
+      "arm": "none",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-09",
+      "files": {
+        "outputs/output.md": "7166ca13fff850fbd45dc9d9e9ee843760810863458e53bcd5df39d11830f559",
+        "outputs/run-record.json": "738b3a346df37f6ada374a87245bbeceaff24b864b30bdfc602acbb092eaf824",
+        "packet-manifest.json": "dbd2afbf469b484115c1b5a950b99d94199e24ab040ba8ae89cb847442032b50",
+        "request.md": "7d3e4ee5dc250e493e9c0a698ffcbedc96768134888d9f710dffd3230a030b74"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-12",
+      "arm": "none",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-12",
+      "files": {
+        "outputs/output.md": "f1731eef7062dde8d3c87202e2c1c60daf89465cf00c1676af76cf5c723ebd0d",
+        "outputs/run-record.json": "7672ff703e7133048c7d4599c9c82feca1ebdfb411c3f0252d5b20d7b95700d7",
+        "packet-manifest.json": "628f3b14defd5275f4fcc9a02b712945061346f254a7bf811c826a0a2f57de28",
+        "request.md": "4d41623daab9f5104a38281108821ea90cec84a789bec57afbff2fdb32fc0ca5"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-13",
+      "arm": "none",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13",
+      "files": {
+        "inputs/architecture.md": "9136f1bcf6fa10ec397de1be436642155ae2c6d2b52b94bc974d0d7db81f16b3",
+        "inputs/change-request.md": "3cf2933d401ebcd5634c873cf89ede317ab0d383c2af365e16fd3cbe6a0bcc9b",
+        "inputs/report-old.json": "43a1ac6d01f2fae64ca2fb3638f413feb5e18efac3fbeafdc0ccc743bfda37ca",
+        "inputs/requirements.md": "a8c703926d9b1e09656ae03eae355a9f07e8af19872674e2dfdcd4f1d5f6c74d",
+        "inputs/source.md": "09d4dba79fe2f1788044bb43cff5ece6f630c04d6abb54e325ea876ef7ac314f",
+        "inputs/verification.md": "b2114a7357c501016650ebefc549be6ec147b27030006f39b1040bc6bba2dcf6",
+        "outputs/architecture.md": "d5ca72c7c48a7d2b16713ee3a2f5841cfdca8ec09bf98bf9209434d9d32b7df9",
+        "outputs/change-request.md": "3cf2933d401ebcd5634c873cf89ede317ab0d383c2af365e16fd3cbe6a0bcc9b",
+        "outputs/output.md": "45f14ee3e83e961fc9bf13ee3e2dbdfb588702fc13d606570966a00efad9bac2",
+        "outputs/report-old.json": "43a1ac6d01f2fae64ca2fb3638f413feb5e18efac3fbeafdc0ccc743bfda37ca",
+        "outputs/requirements.md": "eafef128ba89a52d37d6e5939ea270842cc452baa310b842a28d175297511fbf",
+        "outputs/run-record.json": "49bbc030971531b5cccc5bfad168cbb10ffc71d698ad2862bf9c5a14e89d3737",
+        "outputs/source.md": "09d4dba79fe2f1788044bb43cff5ece6f630c04d6abb54e325ea876ef7ac314f",
+        "outputs/verification.md": "528f5062234f95b8586b9fc4aab889e59dd88984d0851d6adc27580ffe5b8c0f",
+        "packet-manifest.json": "7d1d4383043396f526fbe4f04ef8ca8df49a66372db0242d9a4698540a5ec631",
+        "request.md": "f09bca8e55ebea3831be489ab654afcfbabdbca22d62923753aa21c69724351d"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-15",
+      "arm": "none",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-15",
+      "files": {
+        "outputs/output.md": "f2b2168dcf9f6617c82a370edf248bcd191910129ff19624cb306fbd0b42a2d4",
+        "outputs/run-record.json": "f0b10ea0a6b868c3d36f6fe2e75d15f6ad889da2cb46ebb6fb421f3ca4dae48e",
+        "packet-manifest.json": "23600e7e899e61f83c7d1a8a8a7705de8e79c4bc8c1d13d58889a65d89c3249f",
+        "request.md": "950dc87c3d537d8632a074998108feff025acef761a7a02abd5e766a2e6185d3"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-20",
+      "arm": "none",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-20",
+      "files": {
+        "outputs/output.md": "bd0f2bed6bc5ef78824ea0ec3cc1b281dd3c72d0fb5bdd1f2ad96c3526fda02f",
+        "outputs/run-record.json": "6a5a0236f2dc8cb177a220614b2404919710e83f3e8138e937ca6c31bea564a0",
+        "packet-manifest.json": "5fa289a02c4f480519fee5f922bd9d5a3fbb317711f6790a94e66cb6beb5b4f0",
+        "request.md": "74df9785dd50235290ceb2f2828dbefd404c6e9d19833aa09dd4b07a16204979"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-02",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-02",
+      "files": {
+        ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+        ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+        ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+        ".agents/skills/mbse-medical-device/SKILL.md": "2a7766fee0555c2ec6b4ecd15d9ed7bf9112ab9cfe91c9c1ce1254e4bf9515a3",
+        ".agents/skills/mbse-medical-device/agents/openai.yaml": "01485cdaa45eb063faccc2373097f3535a106823cb0717a8ff303ba4ecd95ac8",
+        ".agents/skills/mbse-medical-device/references/domain-analysis.md": "4889235bd8d11421c5fb45112b3df01e67bb8261c8ebea88e82ed5898c9928d1",
+        ".agents/skills/mbse-medical-device/references/pump-classification.md": "5e84d2e321000bb97b7c0504726377dc0d26442206bb90230a8d9e13a689bd78",
+        "outputs/checksums.sha256": "cbac5c5f39d87d4d3a7eb746cb6d0c274bf6f294a7f580af43a639405164dbe2",
+        "outputs/output.md": "932cacdfe12e0bee458f7cc7a15d8b886dfd732bec08f57dac1e5bdfb3bfd4d5",
+        "outputs/run-record.json": "60839cdc63d826f5bc9e169ca6c1361c9bdbf556eaabbcfd8820198da26274ad",
+        "packet-manifest.json": "846e36776f6d1bd76a9fccc8dae84e043ea93ac8d5957c25d672e2f5c636729d",
+        "request.md": "9cce7597971e84ea8a63d34cac8388df8036f63fba14bea4401650f83cfdd32a"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-03",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-03",
+      "files": {
+        ".agents/skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+        ".agents/skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+        ".agents/skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+        ".agents/skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+        "outputs/checksums.sha256": "8fcd03a41f18b801998e2014413d73f3533ef4caea17ee684859857439b22225",
+        "outputs/output.md": "d84fc3318f21df410597758a2458de7c70e9c7bdc27a60b97581c1b2680c936f",
+        "outputs/run-record.json": "50392350f4c35a8a2018af30cb19808e7afd2f74907fbc03f2b582939ef1e70e",
+        "packet-manifest.json": "fedbeb70b03f2c92a6fe67c7627d78c8e29ba9617a1585f77e76562aa22fda7b",
+        "request.md": "bbf54290b4c0463c009326f839515072d95f817574b86be208dadb99087272dd"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-05",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-05",
+      "files": {
+        ".agents/skills/mbse-electronic-systems/SKILL.md": "560e2e0b77e65befbc98249794faaa480d2ad7b6b98150bd894676c9ec8fb886",
+        ".agents/skills/mbse-electronic-systems/agents/openai.yaml": "760c8961312c6804f771d417579597037c1f99539bd72819b51bf501a65f519d",
+        ".agents/skills/mbse-electronic-systems/references/domain-analysis.md": "0c94b4153cff7fbfd9c912102ba910dcfee54d8d7f7a84a53cc1f17eb0ff8bc5",
+        "outputs/checksums.sha256": "bd7eb61dc60826952c88b5c91b0f17bc28561da1439ab22cb6ac7296f0518ef6",
+        "outputs/output.md": "b959d184424ab2da8ea7c8e98039632c1dad7c9f7bf7a36542153c62309b1905",
+        "outputs/run-record.json": "53e822fcaa958c2838bfea880da82ac0c764894431603218435b3d0cbbf014a0",
+        "packet-manifest.json": "d2f9449f958f6501eb01ff6069ab5675e0ffaccae931023f5a1ec8cdbbf72536",
+        "request.md": "1dfdb08b17e19cead89dfd8f35cfae63c5f3e0bc4bc39e759554b06d1e0291c9"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-10",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-10",
+      "files": {
+        ".agents/skills/mbse-automotive/SKILL.md": "2aa17179547acd2fd90a2125b1ec3ed888f7aa4a5a97f99f35769ec053dd9a6b",
+        ".agents/skills/mbse-automotive/agents/openai.yaml": "92da28aebaac3dbcdde3c37e332822c4ca1481097679892fc9f5c90b136e0993",
+        ".agents/skills/mbse-automotive/references/domain-analysis.md": "8536d858e96cd439def34e87ed8904e80030d659a51d18bd95f0bc64dd11728d",
+        ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+        ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+        ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+        "outputs/checksums.sha256": "f6a4362b76391a6d7863686263575f4c70a464fd4ebcd192b9afdfa5d499ed6d",
+        "outputs/output.md": "2360c8a4895aefa3445d531d7284ff39c9488f66a4a81c52eede3643a1bcd789",
+        "outputs/run-record.json": "421c05ae32e9a9575aba0f8456fdfc7d82bf6f0cac52bb46120036c38607c216",
+        "packet-manifest.json": "a17f7555ef5f36be68f5130412dfdff4a1c7c4faa36f75d59af7e955579d227d",
+        "request.md": "73695cc6e819f3744e00a57604a4fdb92396b36385507a9b4f5dfcdc01cbb43f"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-11",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-11",
+      "files": {
+        ".agents/skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+        ".agents/skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+        ".agents/skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+        ".agents/skills/mbse-defense/SKILL.md": "a2164d5c5447f7eb9dc486498a6f3bd11235474388bfb0e409161e72686f2476",
+        ".agents/skills/mbse-defense/agents/openai.yaml": "bf73e7b261a4ff3a18204e930988ee3f43bd18666a13a34a3f3943744f52abf3",
+        ".agents/skills/mbse-defense/references/domain-analysis.md": "42792e844f854f773e7c3254fc1130afd7673b9235f6290e7064f8d222c2fdb0",
+        ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+        ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+        ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+        "outputs/checksums.sha256": "9a78e172ae0f4b2619e574a2115ddcfa637edb8086d28667588adc5d4d579347",
+        "outputs/output.md": "7e187dd509b37040d1f12192f5c73ebdcb8d257432be69e48415d85a11ec8313",
+        "outputs/run-record.json": "dbbd63d9d83441ce4c2b4b493acbaf80b05c2c97a2ffc412b79f63744e70f82c",
+        "packet-manifest.json": "d59efa12608cd012153527352e7db0f180b11d00294e465c14b209bff62ee0d0",
+        "request.md": "1704d38e57421d65e34181793667c08ed091f04769e950d582ef52c8ad5b8be9"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-14",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-14",
+      "files": {
+        ".agents/skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+        ".agents/skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+        ".agents/skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+        ".agents/skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+        ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+        ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+        ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+        ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+        ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+        ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+        ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+        ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+        "outputs/output.md": "cd1a83ed493028309410c863b563c6bdc878cbc69e97406902898cd1cd1c7f2e",
+        "outputs/run-record.json": "25d9206bf269442e1f9db6020b9a3e479843db4470e7a76e0b22b298b3868ce4",
+        "outputs/source-evidence/retrieval.json": "e65f90beef6ae4ccb30c9fb51ae714c8b29f2414c1432172b559c9092a67e4c1",
+        "packet-manifest.json": "a98b75b91a8fcc1cb0c71b75724e619ed2b42c9235fe896aef42816ef2024586",
+        "request.md": "bc7c4af93ea19f9f11d4d285aa00228def8271417b3166def823612c9f290c43"
+      },
+      "omitted_publisher_sources": [
+        {
+          "path": "outputs/source-evidence/MCO_report_2.pdf",
+          "sha256": "ed4c0c5a23e4e30df7279924ad0978cf00984fd4ebe58a1f7297ba157b0cdbc6",
+          "reason": "Inspected publisher source retained in original workspace packet; public URL and retrieval receipt retained, full report not redistributed."
+        }
+      ]
+    },
+    {
+      "case": "HO-15",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-15",
+      "files": {
+        ".agents/skills/mbse-architecture/SKILL.md": "4132528dc9a13b9f8b62f758a7cea0b80cf972decc3fa5760d5296117bc1141f",
+        ".agents/skills/mbse-architecture/agents/openai.yaml": "1ff9d54b0a20a27410315e3e842b586d114f4f7eb66b0623767dacf84ea9f196",
+        ".agents/skills/mbse-architecture/references/architecture-records.md": "929c203c94676c28aa590369b710181699117f97aebf52d433805c166c402f3f",
+        ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+        ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+        ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+        ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+        ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+        ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+        ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+        ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+        "outputs/output.md": "e8828e4d0ea034dbb7b86e1ed143526a009ef3343dfcb4e3bd83277758ea37cc",
+        "outputs/run-record.json": "f4db4d354f1bece7626761f20554f76a5e61de296e1279dec34956c082b4460e",
+        "packet-manifest.json": "80167409317f4daf058c640a0ea3cd3050174c2dc4454dd9723180595668f1f2",
+        "request.md": "950dc87c3d537d8632a074998108feff025acef761a7a02abd5e766a2e6185d3"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-16",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-16",
+      "files": {
+        ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+        ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+        ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+        ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+        ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+        ".agents/skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+        ".agents/skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+        ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+        "outputs/output.md": "945ec0540a647c193dce4f369bd02de24c2a00adc93240f195ce603058677fb9",
+        "outputs/run-record.json": "699812e064e881bdbed641df9d4255b77c641528560f64774e35f3ba60fb0230",
+        "packet-manifest.json": "5ccbb72a379931cedfeb75e52a62ebb9b20442b7c7c276332921270db829bd87",
+        "request.md": "c9a1194f01256e391fbaad931027a8522193ff0bfcfbcdbf25905d1ec930d657"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-17",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-17",
+      "files": {
+        ".agents/skills/mbse-medical-device/SKILL.md": "2a7766fee0555c2ec6b4ecd15d9ed7bf9112ab9cfe91c9c1ce1254e4bf9515a3",
+        ".agents/skills/mbse-medical-device/agents/openai.yaml": "01485cdaa45eb063faccc2373097f3535a106823cb0717a8ff303ba4ecd95ac8",
+        ".agents/skills/mbse-medical-device/references/domain-analysis.md": "4889235bd8d11421c5fb45112b3df01e67bb8261c8ebea88e82ed5898c9928d1",
+        ".agents/skills/mbse-medical-device/references/pump-classification.md": "5e84d2e321000bb97b7c0504726377dc0d26442206bb90230a8d9e13a689bd78",
+        ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+        ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+        ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+        ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+        ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+        ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+        ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+        ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+        "outputs/checksums.sha256": "ea05d011cba6c0877752c04ed4ac843c7b0bef65c1311e6c7873437ffa508a54",
+        "outputs/output.md": "cae692c5e4d004752857ff2f5e6a33d88b2fe4308c5b234d5ee0cc8c790de837",
+        "outputs/run-record.json": "891678b3ee1439eec46d62ed2c817c5810b4cd388eab9b5c40ace13daa551b27",
+        "packet-manifest.json": "2ca9e4b7a4764b0636b8c087f2c36a415b761137a410ccc6c2927b3e19eaf002",
+        "request.md": "1a5dfae662e4aa1ee463a7478b89f88fc150486c7d79f8213ed5a1533e77a215"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-18",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-18",
+      "files": {
+        ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+        ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+        ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+        ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+        ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+        ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+        ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+        ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+        "outputs/output.md": "da4f0b5ec49aad7614de332dc35093a716df503f14058710b9726a1237149855",
+        "outputs/run-record.json": "c49838827a0b1b35ebc5fe7c122781f4f32da7d96fe934139c9fe02eb937fc56",
+        "packet-manifest.json": "56d55d9793fde1bb30739e485897b2ab2b81b9a301080d9bec43d68c339c94c1",
+        "request.md": "f50a889d7e75ae6ed1fb64d3068877fe2b5b2cbf26302c22157495ec7d2aa000"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-19",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-19",
+      "files": {
+        ".agents/skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+        ".agents/skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+        ".agents/skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+        ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+        ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+        ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+        ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+        ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+        "outputs/output.md": "46f74d7fe9c92177cbcf15f9deeb9f635b9dc9ff96c5bd5a7eab6f47112c7cc7",
+        "outputs/run-record.json": "ce2b53823c870c3f85395f5e78a294f661444b11ff6b4c1a92d86dcbe1483979",
+        "packet-manifest.json": "c67da1e03397ea08fddf386d1eb8e1f8654e28fcbe68ac6c61f23d50ceed7393",
+        "request.md": "97057a83852bad16385f65100689cd92420b360426c9226c8f2e0b3fb5002d0f"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-20",
+      "arm": "task-domain",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-20",
+      "files": {
+        ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+        ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+        ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+        ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+        ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+        ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+        ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+        ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+        "outputs/output.md": "d84f8924fdc0ee4d6e9c3116d51c704fe1c35e6181b4a1cb3a38717ba0ba225c",
+        "outputs/run-record.json": "4f8a3837bc7cd7c7a444984cf0d405ba1e9a1f65040b963a2a3759078ee3341d",
+        "packet-manifest.json": "986cb93780b72d7739ecd1b32926b3321a7e89f87278c9d64a73e6cf7c4d5c24",
+        "request.md": "74df9785dd50235290ceb2f2828dbefd404c6e9d19833aa09dd4b07a16204979"
+      },
+      "omitted_publisher_sources": []
+    },
+    {
+      "case": "HO-08",
+      "arm": "catalog",
+      "original_packet": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/catalog/HO-08",
+      "files": {
+        ".agents/skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+        ".agents/skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+        ".agents/skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+        ".agents/skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+        ".agents/skills/mbse-architecture/SKILL.md": "4132528dc9a13b9f8b62f758a7cea0b80cf972decc3fa5760d5296117bc1141f",
+        ".agents/skills/mbse-architecture/agents/openai.yaml": "1ff9d54b0a20a27410315e3e842b586d114f4f7eb66b0623767dacf84ea9f196",
+        ".agents/skills/mbse-architecture/references/architecture-records.md": "929c203c94676c28aa590369b710181699117f97aebf52d433805c166c402f3f",
+        ".agents/skills/mbse-automotive/SKILL.md": "2aa17179547acd2fd90a2125b1ec3ed888f7aa4a5a97f99f35769ec053dd9a6b",
+        ".agents/skills/mbse-automotive/agents/openai.yaml": "92da28aebaac3dbcdde3c37e332822c4ca1481097679892fc9f5c90b136e0993",
+        ".agents/skills/mbse-automotive/references/domain-analysis.md": "8536d858e96cd439def34e87ed8904e80030d659a51d18bd95f0bc64dd11728d",
+        ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+        ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+        ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+        ".agents/skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+        ".agents/skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+        ".agents/skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+        ".agents/skills/mbse-defense/SKILL.md": "a2164d5c5447f7eb9dc486498a6f3bd11235474388bfb0e409161e72686f2476",
+        ".agents/skills/mbse-defense/agents/openai.yaml": "bf73e7b261a4ff3a18204e930988ee3f43bd18666a13a34a3f3943744f52abf3",
+        ".agents/skills/mbse-defense/references/domain-analysis.md": "42792e844f854f773e7c3254fc1130afd7673b9235f6290e7064f8d222c2fdb0",
+        ".agents/skills/mbse-electronic-systems/SKILL.md": "560e2e0b77e65befbc98249794faaa480d2ad7b6b98150bd894676c9ec8fb886",
+        ".agents/skills/mbse-electronic-systems/agents/openai.yaml": "760c8961312c6804f771d417579597037c1f99539bd72819b51bf501a65f519d",
+        ".agents/skills/mbse-electronic-systems/references/domain-analysis.md": "0c94b4153cff7fbfd9c912102ba910dcfee54d8d7f7a84a53cc1f17eb0ff8bc5",
+        ".agents/skills/mbse-medical-device/SKILL.md": "2a7766fee0555c2ec6b4ecd15d9ed7bf9112ab9cfe91c9c1ce1254e4bf9515a3",
+        ".agents/skills/mbse-medical-device/agents/openai.yaml": "01485cdaa45eb063faccc2373097f3535a106823cb0717a8ff303ba4ecd95ac8",
+        ".agents/skills/mbse-medical-device/references/domain-analysis.md": "4889235bd8d11421c5fb45112b3df01e67bb8261c8ebea88e82ed5898c9928d1",
+        ".agents/skills/mbse-medical-device/references/pump-classification.md": "5e84d2e321000bb97b7c0504726377dc0d26442206bb90230a8d9e13a689bd78",
+        ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+        ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+        ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+        ".agents/skills/mbse-requirements/SKILL.md": "efa83806def52943b9b5819b49bedaa192ebb24bf009f14c0157d16c322ae459",
+        ".agents/skills/mbse-requirements/agents/openai.yaml": "2740ef2c25c0169434f34651fb1522209a61d7d31f58e28c55c60e34d64c6b92",
+        ".agents/skills/mbse-requirements/references/requirement-contracts.md": "15bc8c37d01984b9ff0936fc92d3357e23190d9d22a3a9d87d131b51874df79f",
+        ".agents/skills/mbse-system-concept/SKILL.md": "a682ef0b2a662ced43e52a75c0adf3854c84005687741200db3efc2417f2efea",
+        ".agents/skills/mbse-system-concept/agents/openai.yaml": "694ba3ac7233e73452f57da1fb9b38570a1dfafd9d31d7da2795231add64d007",
+        ".agents/skills/mbse-system-concept/references/concept-decisions.md": "b4993f8378dbd2d90bbd13735ec8cc1b6836181fa0a7e4cce18432ae063cc4bb",
+        ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+        ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+        ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+        ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+        ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+        ".agents/skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+        ".agents/skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+        ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+        "outputs/output.md": "28053e36ea3227212fcb3912d79f4ab85b0fcfe1f22fca919e5b81e1997ebfad",
+        "outputs/run-record.json": "4227f277cf0def19202fdaf730a74c4d6f9bf9af4aede999f227e3f23b60537b",
+        "packet-manifest.json": "cc385619593ecaeba1dc9290436633234b3f80821baa0a47fa2584f2595b216e",
+        "request.md": "c13b3722984010d5837daed45297a02548ced0da191677bf3b094e13bf5b8794"
+      },
+      "omitted_publisher_sources": []
+    }
+  ]
+}

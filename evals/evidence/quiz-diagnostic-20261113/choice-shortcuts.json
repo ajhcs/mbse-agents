@@ -1,0 +1,636 @@
+{
+  "summary": {
+    "single_items": 55,
+    "longest_choice_correct": 54,
+    "by_split": {
+      "practice": {
+        "n": 21,
+        "correct": 21
+      },
+      "development": {
+        "n": 22,
+        "correct": 21
+      },
+      "evaluation-public": {
+        "n": 12,
+        "correct": 12
+      }
+    },
+    "single_key_frequencies": {
+      "B": 14,
+      "C": 13,
+      "D": 16,
+      "A": 12
+    },
+    "incorrect_heuristic_ids": [
+      "SEJ-013"
+    ]
+  },
+  "items": [
+    {
+      "id": "SEJ-001",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-002",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-003",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-005",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-006",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-007",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-009",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-010",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-011",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-012",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-013",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": false,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-014",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-015",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-016",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-018",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-019",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-020",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-021",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-022",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-023",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-024",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-025",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-026",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-028",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-029",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-030",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-031",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-032",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-033",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-034",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-035",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-036",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-037",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-038",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-039",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-040",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-041",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-042",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-043",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-044",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-045",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-046",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-047",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-048",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-049",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-050",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-051",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-052",
+      "longest": [
+        "A"
+      ],
+      "key": [
+        "A"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-053",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-054",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-055",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    },
+    {
+      "id": "SEJ-057",
+      "longest": [
+        "B"
+      ],
+      "key": [
+        "B"
+      ],
+      "correct": true,
+      "split": "practice"
+    },
+    {
+      "id": "SEJ-058",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-059",
+      "longest": [
+        "D"
+      ],
+      "key": [
+        "D"
+      ],
+      "correct": true,
+      "split": "development"
+    },
+    {
+      "id": "SEJ-060",
+      "longest": [
+        "C"
+      ],
+      "key": [
+        "C"
+      ],
+      "correct": true,
+      "split": "evaluation-public"
+    }
+  ]
+}

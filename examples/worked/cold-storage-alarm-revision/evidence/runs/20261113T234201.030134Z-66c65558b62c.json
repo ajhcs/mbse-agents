@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "scope": "instructional-revision-workflow",
+  "execution": {
+    "run_id": "20261113T234201.030134Z-66c65558b62c",
+    "started_at": "2026-11-13T23:42:01.030134+00:00",
+    "finished_at": "2026-11-13T23:42:01.126522+00:00",
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/repos/builderbob/mbse-agents/examples/worked/cold-storage-alarm-revision/compare_revisions.py",
+      "--record"
+    ],
+    "python_version": "3.12.3",
+    "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+    "loaded_sources": {
+      "compare_revisions.py": "5048c89b653011eae3f13f53d685b37079726bd77a9aece8c1817d4169fd6011",
+      "evidence_io.py": "544827d97f3410ed2e84f771eb791480f801eec0bef11d2099ed7b7c310d6bb0",
+      "repository:scripts/check_trace.py": "69abbd7cd0bf2a4359292dc8b85816ffc9a2468c2f3e2f9314aa1de416bb2da3"
+    }
+  },
+  "configuration": {
+    "architecture.md": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1",
+    "baseline.json": "0bce7d6e6904c0f62bab2e97f18637ac61d84c43c85576c29e7ee4e8da5aacc3",
+    "brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974",
+    "change-request.md": "aebd892704cce01a4de93042cbaf8e558e6b7541f626227e2784a21cc9309508",
+    "compare_revisions.py": "5048c89b653011eae3f13f53d685b37079726bd77a9aece8c1817d4169fd6011",
+    "evidence/results.json": "2211cfadff2afedf884f0b207bc9bb373bdd7bc47c39291544d252d060a7d8b4",
+    "evidence_io.py": "544827d97f3410ed2e84f771eb791480f801eec0bef11d2099ed7b7c310d6bb0",
+    "explore_states.py": "24aa132f170640016bb2556dff613d758aebc4e486045faf13a62bd9a9c4840b",
+    "failed/architecture.md": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1",
+    "failed/baseline.json": "0bce7d6e6904c0f62bab2e97f18637ac61d84c43c85576c29e7ee4e8da5aacc3",
+    "failed/brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974",
+    "failed/change-request.md": "aebd892704cce01a4de93042cbaf8e558e6b7541f626227e2784a21cc9309508",
+    "failed/evidence/results.json": "f1990c460a5ab7f55d464c409e9c0e1e5e9b75ed5533bcc5eaa8409f7a9fc86f",
+    "failed/evidence_io.py": "4c929f369f6718613dcc9f0347545da63681a204b5cc3ad5743c46f47a4cb6da",
+    "failed/explore_states.py": "e4a96bfeb5cb532ec58fb80511e3284caf5f28c3d1c29f763be2e97a07c656e8",
+    "failed/reference_model.py": "1787b1d2625996b3e5541c28ffdea8e81ccdacd9ed244605f2ac1a442b35586e",
+    "failed/requirements.md": "ab85c31b0b5727a5a564de4d1eb6e9a586629d51ddc55c484a4b37d010cb17d3",
+    "failed/run_checks.py": "cc4f7fbecc54974a7e544b8f379df577b4b9ca7b08ee9852b1daceb2b0704d5b",
+    "failed/verification.md": "e6753ce233153338e3be470c7d45059d332e327475844cce3b12cb5d5dc1cfb2",
+    "prior/architecture.md": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1",
+    "prior/baseline.json": "b38b42079f40e8c99b61a0c2c4f7cbfdbbda76a09b0ce31d2aebb118e5a6611d",
+    "prior/brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974",
+    "prior/evidence/results.json": "3d3d7a10c84aeeb4e4ae34be7e343f5472067e57a7013e8af7cf1c6c0ec1f404",
+    "prior/evidence_io.py": "4c929f369f6718613dcc9f0347545da63681a204b5cc3ad5743c46f47a4cb6da",
+    "prior/explore_states.py": "e4a96bfeb5cb532ec58fb80511e3284caf5f28c3d1c29f763be2e97a07c656e8",
+    "prior/reference_model.py": "1787b1d2625996b3e5541c28ffdea8e81ccdacd9ed244605f2ac1a442b35586e",
+    "prior/requirements.md": "bf196b5278fc248ce2934d61e31a03be197633e83260245d7894d980c95747dc",
+    "prior/run_checks.py": "ba1cc7850e0409b2b0369b28a0629c505544b517c3bd457f10637e0865393599",
+    "prior/verification.md": "6a30bc539df4fed08501bfdbfff34839dac979f96495ccbd269370bc4520db52",
+    "reference_model.py": "35e237cfc917467b399becf5f9c0e0b00c4724d35d62735d4b8ae8ca8fd3b9a7",
+    "repository:scripts/check_trace.py": "69abbd7cd0bf2a4359292dc8b85816ffc9a2468c2f3e2f9314aa1de416bb2da3",
+    "requirements.md": "ab85c31b0b5727a5a564de4d1eb6e9a586629d51ddc55c484a4b37d010cb17d3",
+    "run_checks.py": "3837cb0afa2ab7f2795ebfcf97b94bd2f041fc9dc803f6f36455a3df1b057307",
+    "verification.md": "e6753ce233153338e3be470c7d45059d332e327475844cce3b12cb5d5dc1cfb2"
+  },
+  "observations": [
+    {
+      "phase": "prior",
+      "integrity": "valid",
+      "executed_procedures": 8,
+      "passed_procedures": 8,
+      "failed_procedures": 0,
+      "requirements_with_passing_model_evidence": 4,
+      "first_sensor_fault_ms": 1000,
+      "state_exploration": {
+        "states": 66,
+        "transitions": 396,
+        "input_combinations_per_state": 6,
+        "counterexamples": 0,
+        "temperature_classes": [
+          "below 8",
+          "at/above 8",
+          "invalid"
+        ],
+        "fault_delay_ms": 1000,
+        "time_quantum_ms": 100,
+        "abstraction": "time translation; timers saturated after decision thresholds; per-transition event checks"
+      }
+    },
+    {
+      "phase": "changed_requirement_old_model",
+      "integrity": "valid",
+      "executed_procedures": 8,
+      "passed_procedures": 4,
+      "failed_procedures": 4,
+      "requirements_with_passing_model_evidence": 0,
+      "first_sensor_fault_ms": null,
+      "state_exploration": {
+        "states": 12,
+        "transitions": 71,
+        "counterexample": [
+          {
+            "input": "invalid",
+            "acknowledge": false
+          },
+          {
+            "input": "invalid",
+            "acknowledge": false
+          },
+          {
+            "input": "invalid",
+            "acknowledge": false
+          },
+          {
+            "input": "invalid",
+            "acknowledge": false
+          },
+          {
+            "input": "invalid",
+            "acknowledge": false
+          },
+          {
+            "input": "invalid",
+            "acknowledge": false
+          }
+        ],
+        "time_ms": 500,
+        "expected": {
+          "high": false,
+          "sensor_fault": true,
+          "local_alarm": true
+        },
+        "actual": {
+          "high": false,
+          "sensor_fault": false,
+          "local_alarm": false
+        },
+        "expected_events": [
+          {
+            "time_ms": 500,
+            "high": false,
+            "sensor_fault": true
+          }
+        ],
+        "actual_events": []
+      }
+    },
+    {
+      "phase": "repaired",
+      "integrity": "valid",
+      "executed_procedures": 8,
+      "passed_procedures": 8,
+      "failed_procedures": 0,
+      "requirements_with_passing_model_evidence": 4,
+      "first_sensor_fault_ms": 500,
+      "state_exploration": {
+        "states": 56,
+        "transitions": 336,
+        "input_combinations_per_state": 6,
+        "counterexamples": 0,
+        "temperature_classes": [
+          "below 8",
+          "at/above 8",
+          "invalid"
+        ],
+        "fault_delay_ms": 500,
+        "time_quantum_ms": 100,
+        "abstraction": "time translation; timers saturated after decision thresholds; per-transition event checks"
+      }
+    },
+    {
+      "phase": "reuse_prior_evidence_for_changed_baseline",
+      "integrity": "invalid",
+      "rejected_execution_records": [
+        "EVD-01"
+      ],
+      "requirements_with_passing_model_evidence": 0,
+      "executed_procedures": 0,
+      "reasons": [
+        "EVD-01: supplied baseline differs from its configured artifact",
+        "EVD-01: incomplete configuration coverage",
+        "EVD-01: stale or invalid configuration reference_model.py",
+        "EVD-01: stale or invalid configuration run_checks.py",
+        "EVD-01: stale or invalid configuration baseline.json",
+        "EVD-01: stale or invalid configuration verification.md",
+        "EVD-01: stale or invalid configuration requirements.md",
+        "EVD-01: stale or invalid configuration evidence_io.py",
+        "EVD-01: stale or invalid configuration explore_states.py"
+      ],
+      "stable_ids_preserved": true
+    }
+  ],
+  "acceptance": "not_assessed",
+  "physical_validation": "not_performed"
+}

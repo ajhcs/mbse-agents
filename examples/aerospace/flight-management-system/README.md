@@ -1,5 +1,7 @@
 # Integrated Flight Management System
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Overview
 
 The Integrated Flight Management System (FMS) provides flight planning, navigation, performance computation, and guidance for a Part 25 transport category aircraft. The system computes lateral and vertical flight profiles from an operator-entered flight plan, drives coupled autopilot guidance through the Automatic Flight Control System (AFCS), and presents navigation and performance data to the flight crew via the cockpit display system.
@@ -84,3 +86,9 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 | ARINC 429     | Legacy data bus standard for sensor and display interfaces                                        |
 | ARINC 664 P7  | AFDX networking standard for high-bandwidth inter-LRU and external interfaces                     |
 | 14 CFR 25.1309| Equipment, systems, and installations; primary airworthiness regulation for FMS                    |
+
+## Executed engineering study
+
+[Review the fault-model study](analysis/report.md) for complete static cuts, conditional parameter scenarios, proof obligations and retained counterexamples. [Source/applicability review](source-review.md) and [current review coverage](review-status.json) identify the remaining decisions. Original files are preserved in the historical JSON snapshot.
+
+[Draft next-control challenge procedures](analysis/control-challenges.md) specify stimuli, observations and evidence capture for the remaining control claims.

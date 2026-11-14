@@ -1,0 +1,5 @@
+id,producer,consumer,meaning,basis_fact_ids,status
+HG-10-I1,Facility delivery,Staff familiarisation,Training validity depends on representative spaces and equipment,HG-10-F1,new_retrospective_reconstruction
+HG-10-I2,Airline operations,Terminal operator,Exception handling crosses organizational authority,HG-10-F2,new_retrospective_reconstruction
+HG-10-I3,Front-line staff,Readiness authority,Operational concerns need owned disposition,HG-10-F1;HG-10-F2,new_retrospective_reconstruction
+HG-10-I4,Staff familiarisation,Readiness authority,Demonstrated staff performance supports the readiness claim,HG-10-F1,new_retrospective_reconstruction

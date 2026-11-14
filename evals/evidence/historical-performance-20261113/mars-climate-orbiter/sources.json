@@ -1,0 +1,16 @@
+{
+  "id": "HG-05",
+  "sources": [
+    {
+      "id": "HG-05-S1",
+      "title": "Mars Climate Orbiter Mishap Investigation Board Phase I Report",
+      "url": "https://discovery.larc.nasa.gov/pdf_files/MCO_report_2.pdf",
+      "publication_date": "1999-11-10",
+      "locator": "Executive summary pp. 6\u20138; sections 4\u20135, pp. 16\u201324",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ]
+}

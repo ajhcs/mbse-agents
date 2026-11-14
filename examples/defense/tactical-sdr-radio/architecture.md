@@ -1,5 +1,7 @@
 # Architecture
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## System Context
 
 ```mermaid
@@ -118,7 +120,7 @@ The crypto boundary is the highest-integrity partitioning boundary in the system
 - The crypto module hardware enforces unidirectional data flow: red data enters the encryption path and exits as black data, or black data enters the decryption path and exits as red data. No bypass path exists in hardware.
 - Tamper detection circuitry triggers automatic zeroization if physical penetration of the crypto boundary is detected.
 
-**Evidence**: NSA Type 1 evaluation provides formal evidence of red/black separation. Additional MIL-STD-882E safety analysis verifies that no single fault (hardware or software) can breach the crypto boundary.
+**Planned evidence**: No NSA evaluation or completed separation assessment is supplied. Record the actual authorization basis and evaluate the declared separation properties, shared dependencies and failure assumptions before crediting this boundary.
 
 ### RF Output Protection
 

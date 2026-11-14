@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-09",
+  "slug": "united-232",
+  "title": "United 232: functional redundancy is not physical independence",
+  "year": 1989,
+  "domain": "aviation",
+  "outcome": "failure_with_partial_recovery",
+  "focus": "Test redundant architecture against shared physical hazards and the operational capability remaining after damage.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-09-S1",
+      "title": "FAA Lessons Learned: United Airlines Flight 232, N1819U",
+      "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/N1819U",
+      "publication_date": "official retrospective; date not stated",
+      "locator": "Accident Overview; Airplane; Flight Crew",
+      "source_type": "official_retrospective",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "The FAA account was inspected. The original NTSB report URL was unavailable during curation; this case does not represent direct access to that report."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-09-F1",
+      "statement": "The FAA describes an uncontained tail-engine fan-disk failure whose debris damaged all three hydraulic systems.",
+      "source_ids": [
+        "HG-09-S1"
+      ],
+      "locator": "Accident Overview; Airplane"
+    },
+    {
+      "id": "HG-09-F2",
+      "statement": "The systems were functionally isolated but physically close in parts of the tail; the crew used wing-engine thrust to obtain limited control.",
+      "source_ids": [
+        "HG-09-S1"
+      ],
+      "locator": "Airplane; Flight Crew"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Engines, debris zones, hydraulic routing, flight controls, crew coordination, airport options, and emergency response define the damaged-aircraft system.",
+    "interfaces": [
+      "Engine debris → multiple channels: a single event can cross logical redundancy boundaries.",
+      "Remaining propulsion → crew control: residual authority may be difficult to use and insufficient for stable flight."
+    ],
+    "decision": {
+      "question": "How should a redundancy claim be challenged?",
+      "options": [
+        "Count independent functional channels.",
+        "Trace shared locations, supplies, controls, maintenance, and external hazards."
+      ],
+      "recommendation": "Pair functional decomposition with a physical dependency review and degraded-operation evidence.",
+      "uncertainty": "Physical separation is one design choice; effectiveness depends on the hazard envelope and achievable residual control."
+    },
+    "artifact": {
+      "id": "HG-09-A1",
+      "type": "Common-cause dependency review",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Three hydraulic channels",
+          "Map proximity and common exposure",
+          "Layout and credible debris-zone analysis"
+        ],
+        [
+          "Residual control",
+          "State achievable tasks after shared damage",
+          "Representative handling evidence"
+        ],
+        [
+          "Crew allocation",
+          "Assign navigation, control, communication, and cabin coordination",
+          "Observed workload and coordination evidence"
+        ]
+      ]
+    },
+    "questions": [
+      "Which diagram would reveal a weakness hidden by a logical block diagram?",
+      "What is the difference between having some control and meeting a landing requirement?",
+      "Write a qualified redundancy claim for a new design."
+    ],
+    "answer_signals": [
+      "Identifies shared hazard exposure instead of multiplying nominal reliabilities.",
+      "Defines residual capability in operational tasks.",
+      "Recognizes human adaptation without turning it into a guaranteed design control."
+    ],
+    "transfer_exercise": "Synthetic: three power channels share a service duct. Produce a common-cause review and compare relocation, shielding, and diverse backup.",
+    "limits": "No reliability probability, debris simulation, or claim that training alone would resolve the failure is made."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

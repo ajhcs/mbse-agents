@@ -1,0 +1,238 @@
+{
+  "schema_version": 2,
+  "packet": {
+    "packet_id": "0cdd0bb38d38408eaaae6930d3727148",
+    "inputs_sha256": "fc8bcce2f89ab416125db0a3bfa256d7906a624515d0f9610fc1d459519f85e2",
+    "bank_sha256": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+    "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393"
+  },
+  "run": {
+    "run_id": "quiz-v020-baseline-184c374b-9a4a-46c4-8205-77838396ea0c",
+    "producer": "Codex subagent /root/quiz_v020_baseline",
+    "model": null,
+    "host": "builderbob",
+    "settings": {
+      "reasoning_effort": null,
+      "temperature": null,
+      "top_p": null,
+      "seed": null
+    },
+    "started_at": "2026-11-14T00:02:38+00:00",
+    "completed_at": "2026-11-14T00:05:45.188818+00:00",
+    "source_access": "packet-only",
+    "tools": [
+      "functions.exec",
+      "clock__curr_time",
+      "exec_command"
+    ],
+    "tokens": null,
+    "latency_seconds": null,
+    "cost": null,
+    "exceptions": [
+      "Execution was instruction-restricted on a shared host, not technically isolated. Inherited instructions, host metadata, a memory summary, and a skill catalog were visible in context. No repository, memory files, skill files, keys, rubrics, other arms, prior outputs, or external research were accessed.",
+      "The exact served model identifier, reasoning effort, sampling settings, token usage, API latency, and cost were not exposed; corresponding fields are null. Answer confidence is left null rather than inventing a calibrated metric.",
+      "started_at is the first UTC clock observation for this run, not a model-service invocation timestamp. completed_at records final response-artifact preparation in UTC.",
+      "An initial python invocation failed because python was unavailable; subsequent work used python3. One metadata read assumed a questions key and raised KeyError; inspection established the actual items key.",
+      "The first combined file read was output-truncated. The response template, manifest, and remaining request text were reread with bounded output.",
+      "All three file digests in the packet manifest were verified and all input bytes were preserved. Upstream bank, key, and catalog hashes were retained as provenance only; their source files were intentionally not accessed. No aggregate input-digest algorithm was supplied, so inputs_sha256 was preserved and binding-checked rather than independently recomputed.",
+      "Checks cover JSON structure, answer completeness, selection membership and cardinality, packet binding, and input preservation only. No answer key, rubric, self-grading, paid API, or production action was used."
+    ]
+  },
+  "answers": [
+    {
+      "id": "SEJ-003",
+      "selection": [
+        "D"
+      ],
+      "reasoning": "The chosen system-of-interest excludes supplier infrastructure, so the rainfall service belongs outside that boundary with an explicit dependency crossing it. The authority still owes warning performance when the feed is delayed. The interface contract therefore needs data availability and delay expectations, detection of unusable inputs, and an assigned authority response when those expectations are missed. A supplier availability obligation alone would leave the warning service's degraded behavior unspecified. Accountability does not give the authority implementation control over the supplier. The facts do not establish an acceptable delay or the correct fallback; those need to be agreed for the warning service.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-004",
+      "selection": [
+        "A",
+        "D"
+      ],
+      "reasoning": "The supplied facts establish competing desired outcomes and reports of late changes, but do not establish what causes turnaround delay. Defining the turnaround, inspection, and change-control outcomes under relevant operating conditions makes the decision criteria explicit. Tracing when changes arrive, inspections occur, and decisions are made across roles supplies evidence for distinguishing their contributions. Maintenance ownership of signoff is not causal evidence, and a fastest observed turnaround is not an agreed or necessarily representative acceptance threshold. Automation remains a candidate intervention; these actions alone neither prove that it will help nor quantify the resulting tradeoffs.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-008",
+      "selection": [
+        "B",
+        "C",
+        "D"
+      ],
+      "reasoning": "Fifteen years of intended service makes replacement support and compatible spares part of sustaining the network, including a contingency if supplier support ends. Replacement modules also need an authorized, verified configuration before rejoining operation. Because removed modules contain configuration keys, retirement must address credential withdrawal and removal of relevant data, with disposal methods selected against applicable requirements and evidence that the outcomes are achieved. The stated facts do not prescribe physical destruction of every module. They also do not say that supplier support will end or identify a disposal policy, so these are lifecycle provisions to define rather than claims about events or rules already established.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-009",
+      "selection": [
+        "C"
+      ],
+      "reasoning": "Equal observed failure frequency does not determine equal mission availability. A fault that can be cleared in minutes and one requiring specialist access can cause very different periods without service, especially at unattended sites with limited access and daily missions. Compare the occurrence evidence with restoration time, access delays, and support effort before estimating mission completion, downtime, and lifecycle burden. The observed frequency also has uncertainty. Faster restoration is relevant but does not by itself settle purchase cost or other decision criteria. Initial conditional estimates can expose sensitivities while restoration evidence is gathered; the facts provide neither enough data for a numerical availability claim nor a justified final selection.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-013",
+      "selection": [
+        "A"
+      ],
+      "reasoning": "The expression can be factored as A AND (B OR C). A together with B is sufficient for the top event, and A together with C is sufficient. Removing either member of either pair leaves an assignment that need not produce the top event, so both pairs are minimal. A alone is insufficient, and B together with C without A is also insufficient. The repeated A is explicitly the same shared-supply event, not two independent copies. These are structural cut sets from the stated Boolean model; their probabilities cannot be computed from the expression alone without event probabilities and any relevant dependence information.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-014",
+      "selection": [
+        "A"
+      ],
+      "reasoning": "Lowering the threshold changed both detection and the load imposed on operators, and acknowledgment behavior then changed. A useful model must connect alarm arrivals to available attention, acknowledgment, and escalation, then connect that response process to unresolved incidents. That captures the possibility that additional detections can overwhelm the handling process rather than improve outcomes. Reusing the earlier acknowledgment distribution would ignore the reported behavioral change, while blaming particular operators or penalizing missed detections assumes a remedy prematurely. The observed sequence does not yet establish the size or sole cause of the increase in unresolved incidents; workload and incident-handling observations are needed to test the model.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-018",
+      "selection": [
+        "A"
+      ],
+      "reasoning": "The observation is twenty tested units, each exposed for one hour, with zero observed failures: twenty unit-hours under the test conditions. A finite zero-event sample does not imply that the underlying failure probability is zero. Any rate or mission-reliability estimate must state the exposure model, comparability of units and conditions, and an uncertainty treatment. For example, accumulating exposure for a rate estimate requires assumptions that do not automatically make it equivalent to a single unit surviving twenty consecutive hours. The test remains useful evidence, but it cannot supply a universal failure probability or justify an arbitrary reciprocal-exposure point estimate as a conservative bound.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-019",
+      "selection": [
+        "B"
+      ],
+      "reasoning": "The proof is conditional on continuous resource availability, whereas deployed operation explicitly includes outages and recovery. Review that mismatch and analyze what happens to accepted requests during interruption and restoration, including the conditions under which service can eventually resume. The existing result should remain available as evidence for the continuously available case. More requests do not address the assumption mismatch, and successful recovery tests do not make an outage disappear from the operational model. Bounded recovery may support a revised liveness argument, but the supplied facts do not establish that request persistence, scheduling, and recovery behavior actually satisfy it.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-023",
+      "selection": [
+        "D"
+      ],
+      "reasoning": "The parent specifies both a trigger and a system response: loss of either sensing function must cause emergency shutdown. The children specify diagnostics for the two triggers but require no shutdown following either diagnosis. Trace links in the allocation matrix show association, not that the children's combined obligations imply the parent. The decomposition must connect each applicable loss condition through detection and control responsibility to the required shutdown action. Diagnostic timing may also matter, but adding deadlines alone does not restore the missing response. The either-condition wording does not itself require a particular redundant hardware architecture.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-024",
+      "selection": [
+        "C"
+      ],
+      "reasoning": "The signed 40 kg contract is the stated obligation. The later 45 kg meeting note is an unapproved proposal, so its recency does not supersede the contract or demonstrate sponsor acceptance. Trades can show feasible options against 40 kg and separately show what an approved relaxation to 45 kg would change, identifying the approval necessary before adopting it. This preserves useful exploration without presenting a noncompliant option as satisfying the current baseline. The facts do not identify the change authority or demonstrate the endurance benefit, so neither approval nor a preferred design should be inferred.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-028",
+      "selection": [
+        "D"
+      ],
+      "reasoning": "The supplied incident facts show that an interface specification already required metric impulse data, yet the actual producer output used different units. The transferable need is therefore evidence that real producer-consumer exchanges conform to their quantity and unit meanings, exercised with representative operational data and assigned ownership for detecting and resolving mismatches. Labels, signatures, or a conversion component can help implementation but do not alone demonstrate that the exchanged data have the intended semantics. Static checks are also only as good as their encoded assumptions. The supplied historical summary supports this targeted lesson, not a claim that one test or uniform-unit rule addresses every integration and operational risk.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-029",
+      "selection": [
+        "D"
+      ],
+      "reasoning": "A nominal one-second update statement and a five-second usability assumption leave the actual freshness contract undefined. The parties need to agree what instant each timestamp denotes, how clocks can be compared, what update bounds are guaranteed, how age is calculated, and what happens when updates are missing, late, or otherwise invalid. Those definitions let both components decide whether a value is usable under the same conditions. An average interval cannot establish a maximum age, and a retry implementation cannot determine the application's acceptable staleness. The supplied facts do not justify the five-second limit; that limit must be tied to the controller's operational needs.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-033",
+      "selection": [
+        "A"
+      ],
+      "reasoning": "Demand may change within six months, while B commits the project to a year-long infrastructure change. A's single-site trial and rapid rollback can provide information before broader commitment and can limit the cost of reversing a mistaken choice. Compare that learning value with trial cost, the delay it introduces, exposure to demand changes, and the eventual migration costs for each policy. Preliminary satisfaction of hard constraints does not make reversibility the only criterion or prove that A should win. In particular, migration consequences belong in the present comparison rather than being deferred until after a trial.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-034",
+      "selection": [
+        "B"
+      ],
+      "reasoning": "Laboratory accuracy establishes only part of the capability needed by the logistics team. A viable option must deliver sensing in the field while permitting repair, lawful and practical access, continuing supply, and integration with maintenance records. Build and buy should be compared over that delivered capability and its lifecycle, with unresolved assumptions, evidence needs, and decision owners visible. Deferring these constraints until after selection can conceal an infeasible option, and a common cost contingency cannot substitute for resolving access or integration feasibility. The facts do not establish the applicable export restrictions, support performance, costs, or a preferred sourcing choice.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-038",
+      "selection": [
+        "B"
+      ],
+      "reasoning": "The model used 20 minutes because maintenance evidence was unavailable. Calling that value measured changes its evidence status without adding evidence. Correct the executive summary and other dependent statements to identify the input as an assumption, and trace which predictions, comparisons, or recommendations depend on it. The calculations can remain useful if their conditional nature and sensitivity to restoration time are clear. Relabeling outputs alone leaves the false input claim in place, while choosing a longer value neither creates a measurement nor guarantees conservatism for every decision. Actual restoration performance and whether the decision changes over plausible values remain unresolved.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-039",
+      "selection": [
+        "B"
+      ],
+      "reasoning": "An immediate turn at hazard onset gives the simulated crew a different information and timing situation from a crew that must recognize, assess, and decide before acting. Compare alternatives from the actual decision point using the information then available and explicit recognition-to-action timing assumptions. Otherwise a successful best-case trajectory can be mistaken for a feasible response under the actual conditions. The supplied distinction does not show that every delayed return is impossible or that one delayed attempt covers all alternatives. Conclusions remain conditional on the simulated timing, information, aircraft state, and other relevant starting conditions.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-043",
+      "selection": [
+        "B"
+      ],
+      "reasoning": "Previous successful missions show that the anomaly did not cause mission loss in those observed cases; they do not explain its mechanism or establish acceptable consequences under the present conditions. A review should examine the mechanism, supporting and conflicting evidence, how comparable the earlier cases are, and what remains unresolved. Organizational practices also matter when repeated success is being used to justify carrying forward a disposition. Neither unchanged frequency nor an owner's assertion of similarity closes the technical uncertainty. The supplied facts support requiring this evidence-based review, but do not establish the contemporary anomaly's actual risk or its final acceptability.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-044",
+      "selection": [
+        "C"
+      ],
+      "reasoning": "The supplied example involves a contractor failing to provide planned staff and operations continuing through contingency action. Preparing for that kind of dependency failure requires exercising plausible staffing shortfalls with people who can authorize the response and reserve resources that can actually perform it. Rehearsals can reveal activation delays, readiness gaps, and changes needed to sustain operations. Recruitment surveillance and reserve contracts are useful inputs but do not demonstrate deployable capability, and executive decision practice alone leaves reserve staff unprepared. The appropriate shortfall scale, activation thresholds, and resource levels still depend on the new event; the historical summary does not supply them.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-048",
+      "selection": [
+        "A"
+      ],
+      "reasoning": "Both reviewers identify relevant facts: unchanged materials may preserve some test relevance, while changed seal geometry may alter the exposure or failure mechanism covered by the old test. The report should retain both arguments, identify the applicability question that turns on geometry, and name the technical investigation or authorized decision needed to resolve it. Today's reporting deadline does not supply missing evidence. Automatically accepting the old test, discarding all its relevance, or reporting a majority vote would conceal the actual uncertainty. The supplied information cannot determine full applicability or the necessary retest scope.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-049",
+      "selection": [
+        "B"
+      ],
+      "reasoning": "The board's question concerns who may control motion in different operating states and during transitions, not which components exist. A state and authority view can show the permitted controller for enabling, stopping, and resuming motion, with guards and transitions covering startup, normal operation, manual stop, and recovery. Connection directions and function allocations do not by themselves specify when authority applies, and a nominal startup sequence omits much of the stated concern. The view must be populated from agreed behavior and reviewed for conflicts or gaps; drawing it alone does not prove that implementation enforces the authority rules.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-053",
+      "selection": [
+        "C"
+      ],
+      "reasoning": "Under the supplied RFC description, a TCP acknowledgment establishes responsibility for data at the receiving transport layer. It does not establish that the operator received, understood, or acted on the message. The system needs an application workflow with an observation and acknowledgment relevant to the particular operator action being claimed, correlated with the request and outcome. Retrying transport delivery, logging server delivery, or acknowledging display only moves evidence to another delivery stage without demonstrating completed action. Even an operator acknowledgment must have defined semantics; the facts do not specify what observation would prove completion of the actual task.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-054",
+      "selection": [
+        "D"
+      ],
+      "reasoning": "The supplied source describes a trade: caching can reduce acquisition effort or server load while delaying the visibility of updates and risking stale values. Rapidly changing control data makes the consequences of stale values central to the application's choice. Evaluate the update behavior, the age of values at use, and how staleness affects each relevant control decision before choosing acceptable lifetime limits. A mean update interval does not guarantee freshness for individual actions, and waiting for operator reports leaves those consequences unexamined. The historical trade neither mandates eliminating caching nor supplies an acceptable lifetime for this application.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-058",
+      "selection": [
+        "C"
+      ],
+      "reasoning": "Preserving all events no longer preserves the ordering guarantee on which the consumer bases physical-action authorization. Review the consumer's state transitions and authority rules under reordered arrivals, including delayed, duplicate, and recovery-related events, and identify which verification evidence depended on the old contract. Those cases need analysis; the scenario does not assert that duplicates will occur. Schema and count checks cannot establish that actions remain correctly sequenced. A fixed waiting buffer also needs justified ordering and delay bounds before it can be accepted. The facts identify the affected assumption but do not establish a particular repair or prove that the new service is safe to adopt.",
+      "confidence": null
+    },
+    {
+      "id": "SEJ-059",
+      "selection": [
+        "A"
+      ],
+      "reasoning": "The original wired choice depended on poor radio coverage at remote sites. The indoor deployment with existing radio infrastructure changes that assumption, while limited battery-replacement staffing introduces an important support constraint. Reopen the comparison using the new operating conditions and lifecycle costs, preserve the earlier rationale as a record of the earlier context, and assess coverage evidence together with power and maintenance needs. The original criteria or weights may no longer fit. Existing radio infrastructure does not prove sufficient indoor coverage or feasible battery support, so the facts justify reconsideration rather than an automatic switch to radio or automatic retention of wired sensing.",
+      "confidence": null
+    }
+  ]
+}

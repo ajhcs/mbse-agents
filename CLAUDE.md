@@ -1,19 +1,10 @@
 # MBSE Agents
 
-## Skill routing
+Follow the repository's [AGENTS.md](AGENTS.md). Reusable workflows and domain
+references live in `.agents/skills`; select those relevant to the user's goal.
+See [the catalog](docs/skills.md), [Claude Code setup](platform/claude-code/install.md),
+and [portable use](platform/generic/install.md).
 
-When the user's request matches an available skill, ALWAYS invoke it using the Skill
-tool as your FIRST action. Do NOT answer directly, do NOT use other tools first.
-The skill has specialized workflows that produce better results than ad-hoc answers.
-
-Key routing rules:
-- Product ideas, "is this worth building", brainstorming → invoke office-hours
-- Bugs, errors, "why is this broken", 500 errors → invoke investigate
-- Ship, deploy, push, create PR → invoke ship
-- QA, test the site, find bugs → invoke qa
-- Code review, check my diff → invoke review
-- Update docs after shipping → invoke document-release
-- Weekly retro → invoke retro
-- Design system, brand → invoke design-consultation
-- Visual audit, design polish → invoke design-review
-- Architecture review → invoke plan-eng-review
+Earlier prompt files and migration notices are archived outside discovery.
+Use [the migration guide](docs/migration.md) for older installations; do not load
+archived notices as current skills or agents.

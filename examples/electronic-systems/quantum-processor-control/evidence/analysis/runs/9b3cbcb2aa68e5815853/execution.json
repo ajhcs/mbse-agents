@@ -1,0 +1,9 @@
+{
+  "run_id": "9b3cbcb2aa68e5815853",
+  "executed_at": "2026-11-13T23:24:26.780076+00:00",
+  "python": "3.12.3",
+  "command": "python3 scripts/analyze_gallery.py",
+  "result_sha256": "813ba4bca54703f5f9f0f578230fa0961364199bec2feb24346e733605d941a5",
+  "scope": "exhaustive_static_boolean_and_conditional_probability",
+  "source_snapshot_status": "not_captured_in_initial_prototype_run"
+}

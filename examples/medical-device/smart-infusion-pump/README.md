@@ -1,12 +1,14 @@
 # Smart Infusion Pump System
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Overview
 
 The Smart Infusion Pump System is a large-volume infusion pump designed for intravenous fluid and medication delivery in acute care settings. The system delivers fluids at programmable rates from 0.1 to 999 mL/hr with dose error reduction software (DERS) that cross-checks programmed infusion parameters against a hospital-customizable drug library containing 2000+ drug entries. The DERS function intercepts dose orders that fall outside institution-defined concentration, dose, and rate limits, requiring clinician override acknowledgment before the pump will deliver outside soft limits and preventing delivery entirely for hard limit violations.
 
 The system connects to hospital networks via Wi-Fi (802.11ac) for electronic health record (EHR) integration, drug library updates, and alarm notification forwarding. The architecture comprises four subsystems: a Pump Mechanism Assembly (PMA) providing the physical fluid delivery mechanism, a Main Control Board (MCB) executing infusion control algorithms and DERS logic, a User Interface Module (UIM) providing touchscreen interaction and alarm annunciation, and a Wireless Communication Module (WCM) managing network connectivity and data exchange with hospital information systems.
 
-The pump is classified as FDA Class III requiring premarket approval (PMA) under 21 CFR 876.5820 and as EU MDR Class IIb under Rule 11 (active therapeutic devices delivering energy or substances). The embedded software is classified IEC 62304 Class C because software failure can contribute to hazardous situations resulting in serious injury or death through over-infusion, under-infusion, or undetected free-flow conditions. Risk management follows ISO 14971 across the full product lifecycle.
+For this teaching case, intended use is clinician-programmed IV fluid/medication delivery in acute care, without an integrated physiological diagnostic function automatically adjusting therapy. The U.S. working classification is Class II under 21 CFR 880.5725. A 510(k) pathway is a working assumption pending product-code/predicate and intended-use assessment, rather than an automatic entitlement. 21 CFR 876.5820 is for hemodialysis and does not support the former Class III/PMA claim. EU Class IIb under Annex VIII Rule 12 is provisional because the administration can be potentially hazardous; consider all applicable rules and exceptions. Embedded software Class C is a separate risk-based teaching assumption, requiring a documented IEC 62304 rationale. See [classification rationale](classification.md).
 
 ## System Boundary
 
@@ -32,7 +34,7 @@ The pump is classified as FDA Class III requiring premarket approval (PMA) under
 
 The pump operates in acute care clinical settings including intensive care units, general medical/surgical wards, emergency departments, operating rooms, and ambulatory infusion centers. Environmental conditions span 10C to 40C ambient temperature, 20% to 80% relative humidity (non-condensing), and atmospheric pressure from 57 kPa to 106 kPa (equivalent to sea level through 4000 m altitude). The pump is designed for continuous operation (24/7) on AC mains power with battery backup providing a minimum of 2 hours of infusion at 125 mL/hr.
 
-The pump interfaces with hospital Wi-Fi networks operating on 2.4 GHz and 5 GHz bands. Electromagnetic compatibility is demonstrated per IEC 60601-1-2 for the intended use environment, including immunity to electrostatic discharge, radiated RF fields, and conducted disturbances typical of clinical settings with multiple active medical devices.
+The pump interfaces with hospital Wi-Fi networks operating on 2.4 GHz and 5 GHz bands. Electromagnetic compatibility is to be demonstrated by the planned physical qualification per IEC 60601-1-2 for the intended use environment, including immunity to electrostatic discharge, radiated RF fields, and conducted disturbances typical of clinical settings with multiple active medical devices.
 
 ## Operating Modes
 
@@ -56,7 +58,7 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 
 4. **Cybersecurity integration with safety.** The Wi-Fi interface creates an attack surface that connects the pump to hospital networks. Per FDA premarket cybersecurity guidance, the threat model must address unauthorized drug library modification, infusion parameter manipulation, and denial-of-service attacks that could delay alarm notification. Security controls must be evaluated for their own potential to introduce safety risks (e.g., authentication lockout preventing emergency drug delivery).
 
-5. **Dual regulatory pathway alignment.** The system must simultaneously satisfy FDA PMA design control requirements (21 CFR 820.30 / QMSR) and EU MDR Annex II/III technical documentation requirements. The evidence package structure must serve both regulatory bodies without duplication, and the risk management file must satisfy both ISO 14971 (referenced by both pathways) and the specific expectations of FDA premarket reviewers regarding benefit-risk determination.
+5. **Dual regulatory pathway alignment.** The system must simultaneously satisfy current FDA QMSR design/development requirements (21 CFR 820.10(c) / ISO 13485:2016) and EU MDR Annex II/III technical documentation requirements. The evidence package structure must serve both regulatory bodies without duplication, and the risk management file must satisfy both ISO 14971 (referenced by both pathways) and the specific expectations of FDA premarket reviewers regarding benefit-risk determination.
 
 ## Stakeholders
 
@@ -67,7 +69,7 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 | Pharmacist                     | Configures drug library parameters; reviews override logs for safety improvement     |
 | Biomedical engineering         | Installs, maintains, calibrates, and services the pump; manages fleet configuration  |
 | Hospital IT / network admin    | Manages Wi-Fi infrastructure, EHR integration, and network security for pump fleet   |
-| FDA (CDRH)                     | Reviews PMA submission; conducts premarket inspections of the design history file     |
+| FDA (CDRH)                     | Reviews the applicable premarket submission and QMS records     |
 | EU Notified Body               | Assesses EU MDR conformity; audits technical documentation per Annex II/III          |
 | Quality/Regulatory affairs     | Maintains QMS, manages design controls, coordinates submissions and audits           |
 
@@ -80,8 +82,16 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 | IEC 60601-1         | General safety and essential performance for medical electrical equipment; Type BF applied part         |
 | IEC 60601-1-2       | Electromagnetic compatibility for intended use environment (acute care clinical setting)                |
 | IEC 60601-2-24      | Particular requirements for infusion pumps and controllers; flow accuracy, alarm conditions             |
-| FDA 21 CFR 820.30   | Design controls (design input, output, review, verification, validation, transfer); QMSR alignment    |
-| EU MDR 2017/745     | Essential requirements (Annex I GSPRs); technical documentation (Annex II/III); Class IIb Rule 11     |
+| FDA 21 CFR 820.10(c)   | Design controls (design input, output, review, verification, validation, transfer); QMSR alignment    |
+| EU MDR 2017/745     | Essential requirements (Annex I GSPRs); technical documentation (Annex II/III); Provisional Class IIb Rule 12     |
 | IEC 62443-4-1       | Secure development lifecycle (referenced by FDA premarket cybersecurity guidance)                       |
 | IEC 60601-1-8       | Alarm systems for medical electrical equipment; alarm priority and signal characteristics               |
 | IEC 62366-1         | Usability engineering; use-related risk analysis and usability validation                               |
+
+## Executed engineering study
+
+[Review the fault-model study](analysis/report.md) for complete static cuts, conditional parameter scenarios, proof obligations and retained counterexamples. [Source/applicability review](source-review.md) and [current review coverage](review-status.json) identify the remaining decisions. Original files are preserved in the historical JSON snapshot.
+
+[The temporal clamp study](analysis/clamp-study.md) executes fault injection, timing allocations and recovery; physical occlusion and delivery remain unmeasured.
+
+[Draft next-control challenge procedures](analysis/control-challenges.md) specify stimuli, observations and evidence capture for the remaining control claims.

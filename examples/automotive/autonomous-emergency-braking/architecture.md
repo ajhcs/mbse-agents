@@ -1,5 +1,7 @@
 # Architecture
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## System Context
 
 ```mermaid
@@ -182,7 +184,7 @@ graph LR
 
 ### AUTOSAR Adaptive Freedom from Interference (Perception ECU)
 
-The Perception ECU (CMP-PER-01) runs AUTOSAR Adaptive on a multi-core SoC. Safety-critical applications (sensor fusion, collision decision) and non-safety applications (event recording, OTA update) coexist on the same platform. Freedom from interference is achieved through:
+The Perception ECU (CMP-PER-01) runs AUTOSAR Adaptive on a multi-core SoC. Safety-critical applications (sensor fusion, collision decision) and non-safety applications (event recording, OTA update) coexist on the same platform. The proposed freedom-from-interference argument depends on the following mechanisms and their verification:
 
 **Partition assignments:**
 
@@ -199,7 +201,7 @@ The Perception ECU (CMP-PER-01) runs AUTOSAR Adaptive on a multi-core SoC. Safet
 - Inter-process communication via ara::com with SOME/IP serialization; no shared writable memory between process groups.
 - Hardware resource partitioning: NPU allocated exclusively to detection process groups during inference; DMA channels partitioned by process group.
 
-**Evidence:** Freedom-from-interference analysis per ISO 26262-6 Annex D covering memory protection, timing protection, and communication protection. Interference testing demonstrates non-impact of QM process faults on ASIL D safety function execution.
+**Planned evidence:** Define memory, timing and communication interference limits; inject representative non-safety process faults, saturation and restart cases while observing safety-function deadlines and outputs. The applicable ISO 26262 provisions and resulting claim require review; no interference campaign has run here.
 
 ### AUTOSAR Classic Safety Mechanisms (Braking Control ECU)
 
@@ -228,7 +230,7 @@ The Vehicle Gateway ECU (CMP-GWY-01) enforces domain separation:
 
 **Decision:** Use camera + radar fusion rather than a single-sensor (camera-only or radar-only) AEB design.
 
-**Rationale:** Camera provides classification capability (distinguish pedestrians from signposts) but is degraded in adverse weather. Radar provides reliable range/velocity in all weather but has poor lateral resolution and no classification. Fusion achieves SOTIF residual risk acceptable under ISO 21448 by compensating for individual sensor limitations. UN R152 test scenarios (stationary target, crossing pedestrian) require both range accuracy (radar) and classification (camera). ASIL decomposition: ASIL D for the fused path decomposes to ASIL B(D) for each independent sensor path, reducing per-sensor hardware requirements.
+**Rationale:** Camera and radar are proposed for complementary observations. Their performance depends on scene, range, weather, object geometry, processing and installation. The executed model preserves common-environment and fusion failures; it does not establish acceptable residual risk. Any ASIL decomposition needs justified independence and the adopted-standard analysis.
 
 **Trade-off:** Two sensors increase cost, wiring complexity, and calibration effort. Accepted because single-sensor designs cannot meet the SOTIF false-negative requirements for pedestrian detection in adverse conditions.
 
@@ -236,7 +238,7 @@ The Vehicle Gateway ECU (CMP-GWY-01) enforces domain separation:
 
 **Decision:** Run the Perception ECU on AUTOSAR Adaptive (Linux-based, POSIX, dynamic scheduling) and the Braking Control ECU on AUTOSAR Classic (static schedule, deterministic timing).
 
-**Rationale:** The perception workload (DNN inference on NPU, sensor fusion with variable-complexity tracking) requires a POSIX-capable runtime with dynamic memory management that AUTOSAR Classic cannot provide. The braking actuation requires deterministic cycle times (5-10 ms) with proven automotive safety mechanisms (WdgM, E2E, SafeOS) that AUTOSAR Classic provides out of the box. Mixing the two platforms exploits each platform's strengths.
+**Rationale:** A POSIX runtime is proposed for the variable perception workload, with a separate actuation platform for the proposed 5–10 ms cycles. Verify actual scheduling, memory, startup, communication and fault responses on selected versions. Framework availability does not establish configured safety mechanisms or their effectiveness.
 
 **Trade-off:** Cross-platform E2E protection requires careful design of the SOME/IP-to-CAN-FD translation in the gateway, including E2E counter and CRC recalculation. The freedom-from-interference argument across the Adaptive/Classic boundary requires dedicated analysis. Accepted because neither platform alone satisfies both the perception and actuation requirements.
 
@@ -260,6 +262,6 @@ The Vehicle Gateway ECU (CMP-GWY-01) enforces domain separation:
 
 **Decision:** Apply AUTOSAR E2E Protection Profile 7 (CRC-64 + 4-bit counter + data ID) to all safety-relevant CAN FD messages between the Gateway and Braking Control ECU.
 
-**Rationale:** Profile 7 provides the strongest E2E protection available in the AUTOSAR E2E library, with CRC-64 detection of data corruption and a rolling counter for detection of message loss, repetition, and reordering. The CAN FD payload supports the additional overhead. Profile 7 meets the diagnostic coverage requirements for ASIL D communication faults per ISO 26262-6 Annex D.
+**Rationale:** E2E Profile 7 is a candidate communication protection scheme. Confirm its actual encoding, counter behavior and interface compatibility from the selected AUTOSAR release; inject corruption, loss, reordering, stale messages and reset discontinuities. Diagnostic coverage and ASIL allocation require a defined fault model and resulting evidence, not a profile-name assertion.
 
 **Trade-off:** CRC-64 computation requires more CPU cycles than CRC-8 (Profile 1). Accepted because the Braking Control MCU has sufficient processing margin and the ASIL D classification demands the highest available E2E protection level.

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "artifact-performance-packet",
+  "status": "complete",
+  "case": "HO-17",
+  "case_version": "1.0",
+  "prepared_at": "2026-11-13T23:42:14.378575+00:00",
+  "skills": [
+    "mbse-systems-engineering",
+    "mbse-medical-device",
+    "mbse-operational-scenarios"
+  ],
+  "arm": "task-domain",
+  "full_catalog_exposed": false,
+  "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+  "files": {
+    ".agents/skills/mbse-medical-device/SKILL.md": "2a7766fee0555c2ec6b4ecd15d9ed7bf9112ab9cfe91c9c1ce1254e4bf9515a3",
+    ".agents/skills/mbse-medical-device/agents/openai.yaml": "01485cdaa45eb063faccc2373097f3535a106823cb0717a8ff303ba4ecd95ac8",
+    ".agents/skills/mbse-medical-device/references/domain-analysis.md": "4889235bd8d11421c5fb45112b3df01e67bb8261c8ebea88e82ed5898c9928d1",
+    ".agents/skills/mbse-medical-device/references/pump-classification.md": "5e84d2e321000bb97b7c0504726377dc0d26442206bb90230a8d9e13a689bd78",
+    ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+    ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+    ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+    ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+    ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "request.md": "1a5dfae662e4aa1ee463a7478b89f88fc150486c7d79f8213ed5a1533e77a215"
+  },
+  "exposure": "Public inputs; packet separation is not a secure held-out environment."
+}

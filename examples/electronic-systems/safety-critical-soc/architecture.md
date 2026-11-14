@@ -1,5 +1,7 @@
 # Architecture
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## System Context
 
 ```mermaid

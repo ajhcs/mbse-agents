@@ -1,0 +1,39 @@
+The three arms tie at **24/24 keyed selections and 94/96 reasoning-criterion points each**. All 72 original explanations were read against the frozen 0.2.0 scenarios and criteria. No critical reasoning error or material disagreement with the 24 selected keys was found. The same two criteria were partially satisfied in each arm. This sample shows no reasoning advantage for either skill arm; it does not establish causal benefit, equivalence or overall engineering competence.
+
+| Arm | Keyed selections | Criterion points | Criteria rated 2 | Criteria rated 1 | Critical errors |
+|---|---:|---:|---:|---:|---:|
+| none | 24/24 | 94/96 | 46 | 2 | 0 |
+| task | 24/24 | 94/96 | 46 | 2 | 0 |
+| task-domain | 24/24 | 94/96 | 46 | 2 | 0 |
+
+There are 48 criterion judgments per arm, with two criteria per question. The scale is 0 = missing or materially wrong, 1 = partial with a consequential gap, 2 = coherent and supported. The points are this named rater's judgments, not automatic explanation grading or a predeclared release threshold. Overall, 138 criteria received 2, six received 1, and none received 0: 282/288 points.
+
+**Located partials.** In all three `packet/answers.json` files, SEJ-029 at `/answers/11/reasoning` recognizes that nominal delivery timing does not guarantee freshness and calls for timestamps, bounds and invalid-data behavior. It leaves supplier reporting and consumer detection/use-response responsibilities as a joint definition task. This only partially satisfies criterion 2, “Assigns producer and consumer responsibilities for invalid data.” A concrete allocation can be given without inventing numeric age limits or a named person.
+
+SEJ-048 at `/answers/18/reasoning` correctly explains the disagreement between unchanged materials and changed seal geometry and preserves uncertainty. Each response asks to identify or name an investigation or authorized decision; none actually specifies the comparison, analysis or targeted evidence that would resolve applicability. This only partially satisfies criterion 2, “Provides a concrete resolution path while preserving uncertainty.” Comparing old test conditions/configuration with the revised geometry and relevant failure mechanism, then identifying the necessary targeted evidence and applicability decision, would close that gap without automatically demanding full requalification.
+
+These are limited omissions, not wrong choices or critical errors. The task-domain response locates the old-test-conditions/failure-mechanism question a little more explicitly, but still leaves the concrete resolution activity unnamed. The same threshold was applied to every arm. If a subsequent adjudicator accepts these process-level requests as complete, all three would become 96/96 together; the relative tie would remain.
+
+**Rater method.** The reviewer was `Codex independent reasoning reviewer /root/quiz_reasoning_independent`, with no production or authoring role in this task. The review is independent of the three producer identities, but is one model assessment rather than human expert adjudication. Arm identity, answers, keys and the coordinator's report of prior full-bank adjudication were visible. The rater read and finalized `none`, then `task`, then `task-domain`, saving each review and completion checkpoint before opening the next arm's reasoning. The comparison followed those completed assessments. No other reviewer output was consulted. Exact supplied criteria governed the ratings; neither correct letters nor verbosity earned credit by itself. The 24 selected keys were checked against the supplied facts; this review did not reproduce the separate 60-key adjudication. No external research or new standards/regulatory claim was needed.
+
+**Metadata and parser evidence.** The original files were preserved. Independent parsed-value comparison and amendment-hash checks establish that every corrected copy changes exactly `/run/model` from `null` to `"unknown"` and appends its documented exception note. Answer content, packet binding, run ID, original timestamps and all other fields are identical. All three original files fail the archived scorer with return code 1 and `Missing run provenance: model; use explicit 'unknown' when unavailable`. Their original submission did not pass parsing. All three corrected copies, with these reviews, pass the copied exact 0.2.0 scorer, and the aggregate report validates. That establishes binding and report integrity, not the validity of the rater's judgments.
+
+The full reviews, comments and scorer receipts are in [none](quiz-reasoning/none/review.json), [task](quiz-reasoning/task/review.json) and [task-domain](quiz-reasoning/task-domain/review.json). Source and packet copies are retained under `quiz-reasoning`; [input verification](quiz-reasoning/source/input-verification.json) records every input hash, and [preservation verification](quiz-reasoning/preservation-verification.json) confirms all 49 archive files and all 92 evidence-arm files still match their original bytes. Review-template bindings are unchanged. Original responses and production code were not edited.
+
+**Scope limits.** The coordination context describes the same unknown inherited model in all arms, but exact served model IDs and settings were unavailable, so their equality was not independently verified. All ran on the shared BuilderBob host with inherited instructions and global skill/host metadata. Packet use was instruction-restricted, not technically sandbox-isolated. There is one context per arm on 24 public development questions, no repeated runs, no independent human expert, no inter-rater reliability estimate, and no causal performance claim. The all-correct selection scores and near-maximum criterion totals show limited discrimination in this sample. They do not demonstrate general engineering ability, risk acceptance or release readiness. Unknown token, latency and cost metadata remain unknown.
+
+The frozen bank SHA-256 is `b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1`; the key is `ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393`; the scorer is `f693899802f6e16752559f5df2df4f959703e295cce94b7cafe8f787d94b9a3d`. All review criteria bind to `b9b7a828031e868b61dba5c0605d9c9ab08885bdc020b61794652dc13e80edcd`. The complete machine-readable method, per-dimension totals, provenance and validation results are in [the JSON summary](quiz-reasoning-review.json).
+
+| Arm | Artifact | SHA-256 |
+|---|---|---|
+| none | original answers | `1146be3e4f3c151ab3ef45c995bc4bd6c1eb0490df7295efd43e4c72e7efde00` |
+| none | corrected answers | `db2393caeef1f256706618417f1a56d773cc359096d888367703a374d26dbe9b` |
+| none | review | `70cf3dd251cc1a9e2bd8b4304af815fad9ced3f759be2bd1d580cda47084421c` |
+| task | original answers | `7462f9a107e699b16e792963b8f0ee9fc5471351ecdccacaa933f5e776c75c9a` |
+| task | corrected answers | `793ed0a90dc70d4d89648ec2b0b6812cf5a2c3c07426829f34fd6b1875e467c1` |
+| task | review | `8178a1375ac18b661d8ff524d8edcac1477f3eb0c0e0b4fd081bbf0e59b86b58` |
+| task-domain | original answers | `d101342fd05334143f6e596fa2e282b33e0127b77f763d54742a414dc3122311` |
+| task-domain | corrected answers | `1efc1704a1f6d9f4fcfa0a3d36cf4c4fbe3199cb9e021224bea9dc86e6c2d32d` |
+| task-domain | review | `326f6872f35e839902b08b6b7475942cd32db43ff8124d1dddff42db6793eae1` |
+
+The [artifact manifest](quiz-reasoning/artifact-sha256.json) hashes both summaries, reviews, score records and validation receipts. Review completed at `2026-11-14T00:19:47.143303+00:00`.

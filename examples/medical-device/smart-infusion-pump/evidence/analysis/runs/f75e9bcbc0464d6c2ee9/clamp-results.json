@@ -1,0 +1,3192 @@
+{
+  "schema_version": 1,
+  "scope": "sampled_logical_clamp_release_no_fluid_or_mechanical_plant",
+  "initial_condition": "Door closed; clamp held open; processor serviced at t=0; infusion-enabled design state.",
+  "tick_ms": 100,
+  "watchdog_ms": 200,
+  "closure_target_ms": 500,
+  "assumptions": [
+    "Closure delay is a chosen input, not measured or derived from mechanics.",
+    "Input changes occur on ticks; timing between ticks and jitter are unmodeled.",
+    "Closed means model state only; tubing occlusion and delivered dose are unmeasured.",
+    "Post-fault manual rearm is a new proposed policy, not an accepted product requirement."
+  ],
+  "configuration": {
+    "analysis/clamp_model.py": "0e1948d5282ec971d17d44d3eeea0fe941411bffdeda2e64a9e987c7a28781df",
+    "analysis/run_clamp_checks.py": "d290838e4f4376e89bce8635b63c878c270be156e80c4fe87bb8ad0f0d44887c",
+    "requirements.md": "bb5863242c85ab1835300dd182e9b1961e1b444bfee03e3c3bae0b73dee94904"
+  },
+  "results": [
+    {
+      "id": "CLAMP-door-0",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 0,
+      "trigger_ms": 100,
+      "first_closed_ms": 100,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-door-100",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 100,
+      "trigger_ms": 100,
+      "first_closed_ms": 200,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-door-200",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 200,
+      "trigger_ms": 100,
+      "first_closed_ms": 300,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-door-300",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 300,
+      "trigger_ms": 100,
+      "first_closed_ms": 400,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-door-400",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 400,
+      "trigger_ms": 100,
+      "first_closed_ms": 500,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-door-500",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 500,
+      "trigger_ms": 100,
+      "first_closed_ms": 600,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-door-600",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 600,
+      "trigger_ms": 100,
+      "first_closed_ms": 700,
+      "requirement_outcome": "fail",
+      "expected_requirement_outcome": "fail",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-door-700",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 700,
+      "trigger_ms": 100,
+      "first_closed_ms": 800,
+      "requirement_outcome": "fail",
+      "expected_requirement_outcome": "fail",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-power-0",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 0,
+      "trigger_ms": 100,
+      "first_closed_ms": 100,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-power-100",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 100,
+      "trigger_ms": 100,
+      "first_closed_ms": 200,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-power-200",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 200,
+      "trigger_ms": 100,
+      "first_closed_ms": 300,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-power-300",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 300,
+      "trigger_ms": 100,
+      "first_closed_ms": 400,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-power-400",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 400,
+      "trigger_ms": 100,
+      "first_closed_ms": 500,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-power-500",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 500,
+      "trigger_ms": 100,
+      "first_closed_ms": 600,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-power-600",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 600,
+      "trigger_ms": 100,
+      "first_closed_ms": 700,
+      "requirement_outcome": "fail",
+      "expected_requirement_outcome": "fail",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-power-700",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 700,
+      "trigger_ms": 100,
+      "first_closed_ms": 800,
+      "requirement_outcome": "fail",
+      "expected_requirement_outcome": "fail",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-watchdog-0",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 0,
+      "trigger_ms": 0,
+      "first_closed_ms": 200,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": true
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-watchdog-100",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 100,
+      "trigger_ms": 0,
+      "first_closed_ms": 300,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": true
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-watchdog-200",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 200,
+      "trigger_ms": 0,
+      "first_closed_ms": 400,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": true
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-watchdog-300",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 300,
+      "trigger_ms": 0,
+      "first_closed_ms": 500,
+      "requirement_outcome": "pass",
+      "expected_requirement_outcome": "pass",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": true
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-watchdog-400",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 400,
+      "trigger_ms": 0,
+      "first_closed_ms": 600,
+      "requirement_outcome": "fail",
+      "expected_requirement_outcome": "fail",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": true
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-watchdog-500",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 500,
+      "trigger_ms": 0,
+      "first_closed_ms": 700,
+      "requirement_outcome": "fail",
+      "expected_requirement_outcome": "fail",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": true
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-watchdog-600",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 600,
+      "trigger_ms": 0,
+      "first_closed_ms": 800,
+      "requirement_outcome": "fail",
+      "expected_requirement_outcome": "fail",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": true
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-watchdog-700",
+      "requirements": [
+        "REQ-SAF-001",
+        "REQ-SAF-002"
+      ],
+      "scope": "conditional_release_plus_assumed_closing_delay",
+      "assumed_closing_ms": 700,
+      "trigger_ms": 0,
+      "first_closed_ms": 900,
+      "requirement_outcome": "fail",
+      "expected_requirement_outcome": "fail",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": true
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 200,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 200,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-jammed",
+      "requirements": [
+        "REQ-SAF-001"
+      ],
+      "scope": "injected_uncovered_fault_counterexample",
+      "requirement_outcome": "fail",
+      "expected_requirement_outcome": "fail",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-interlock_failed",
+      "requirements": [
+        "REQ-SAF-001"
+      ],
+      "scope": "injected_uncovered_fault_counterexample",
+      "requirement_outcome": "fail",
+      "expected_requirement_outcome": "fail",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1100,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": false
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-recovery",
+      "requirements": [
+        "REQ-SAF-001"
+      ],
+      "scope": "proposed_no_automatic_rearm_policy",
+      "requirement_outcome": "not_assessed",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": true,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": null,
+          "latched": false,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": true,
+          "powered_drive_permitted": true
+        }
+      ]
+    },
+    {
+      "id": "CLAMP-rearm-door-open",
+      "requirements": [
+        "REQ-SAF-001"
+      ],
+      "scope": "proposed_rearm_interlock",
+      "requirement_outcome": "not_assessed",
+      "test_outcome": "pass",
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ]
+    }
+  ],
+  "test_count": 28,
+  "expected_requirement_failures": 10,
+  "physical_validation": "not_performed",
+  "acceptance": "not_assessed",
+  "run_id": "f75e9bcbc0464d6c2ee9"
+}

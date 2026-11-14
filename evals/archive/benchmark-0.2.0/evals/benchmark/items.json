@@ -1,0 +1,1415 @@
+{
+  "schema_version": 1,
+  "id": "systems-engineering-judgment",
+  "version": "0.2.0",
+  "status": "curated-proposed-keys-expert-adjudication-pending",
+  "dimensions": {
+    "framing": "Problem framing and system boundaries",
+    "lifecycle": "Lifecycle and system context",
+    "causal_reasoning": "Causal structure and shared dependencies",
+    "evidence": "Verification, validation and evidence judgment",
+    "requirements": "Needs, requirements and acceptance",
+    "interfaces": "Interfaces, semantics and integration",
+    "tradeoffs": "Alternatives and decision reasoning",
+    "uncertainty": "Uncertainty and informative investigation",
+    "people_organizations": "Human and organizational systems",
+    "communication": "Engineering explanation and audience",
+    "source_judgment": "Source interpretation and applicability",
+    "change_review": "Change, configuration and evidence reuse"
+  },
+  "sources": {
+    "HG-02": {
+      "project": "Space Shuttle Challenger",
+      "year": 1986,
+      "url": "https://www.nasa.gov/history/rogersrep/v1ch5.htm",
+      "locator": "Rogers Commission, Volume I, Chapter V, pp. 82–84",
+      "basis": "Official accident investigation; supplied facts concern decision communication, not a complete causal summary."
+    },
+    "HG-04": {
+      "project": "Ariane 501",
+      "year": 1996,
+      "url": "https://www.esa.int/Newsroom/Press_Releases/Ariane_501_-_Presentation_of_Inquiry_Board_report",
+      "locator": "ESA, 23 July 1996, causes and simulation/test discussion",
+      "basis": "Official inquiry summary; questions assess transfer of supplied failure/context facts."
+    },
+    "HG-05": {
+      "project": "Mars Climate Orbiter",
+      "year": 1999,
+      "url": "https://discovery.larc.nasa.gov/pdf_files/MCO_report_2.pdf",
+      "locator": "Phase I report, 10 November 1999, pp. 6–8 and 16–24",
+      "basis": "Official mishap report; not only a unit-conversion narrative."
+    },
+    "HG-06": {
+      "project": "Space Shuttle Columbia",
+      "year": 2003,
+      "url": "https://www.nasa.gov/wp-content/uploads/static/history/columbia/reports/CAIBreportv1.pdf",
+      "locator": "CAIB Volume I, sections 7.1–7.6",
+      "basis": "Official investigation distinguishes physical mechanisms and organizational causes."
+    },
+    "HG-08": {
+      "project": "US Airways Flight 1549",
+      "year": 2009,
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf",
+      "locator": "NTSB/AAR-10/03, section 1.16.3, printed pp. 49–50, and section 2.3.2, printed pp. 88–89",
+      "basis": "Official simulation discussion; conclusions remain conditional on simulated decision timing."
+    },
+    "HG-11": {
+      "project": "Boston I-90 tunnel ceiling",
+      "year": 2006,
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR0702.pdf",
+      "locator": "NTSB/HAR-07/02, probable cause, printed p. 107",
+      "basis": "Official finding on adhesive creep under sustained load."
+    },
+    "HG-15": {
+      "project": "TCP specification",
+      "year": 1981,
+      "url": "https://www.rfc-editor.org/rfc/rfc793.txt",
+      "locator": "RFC 793, section 2.6, pp. 9–10",
+      "basis": "Historical original specification, now superseded; not current conformance guidance."
+    },
+    "HG-16": {
+      "project": "Domain Name System",
+      "year": 1987,
+      "url": "https://www.rfc-editor.org/rfc/rfc1034.txt",
+      "locator": "RFC 1034, section 2.2",
+      "basis": "Original design goals and caching trade; does not establish present application limits."
+    },
+    "HG-17": {
+      "project": "World Wide Web proposal",
+      "year": 1989,
+      "url": "https://www.w3.org/History/1989/proposal.html",
+      "locator": "CERN Requirements",
+      "basis": "Original proposal, priorities specific to its local information-sharing problem."
+    },
+    "HG-18": {
+      "project": "Therac-25 accidents",
+      "year": 1985,
+      "url": "https://web.mit.edu/6.033/2004/wwwdocs/papers/Therac_3.html",
+      "locator": "Leveson and Turner, 1993 original investigation, Tyler accidents and race condition discussion",
+      "basis": "Researcher investigation with disclosed uncertainty in historical details; not a regulator approval."
+    },
+    "HG-20": {
+      "project": "London 2012 Games",
+      "year": 2012,
+      "url": "https://www.nao.org.uk/wp-content/uploads/2012/12/1213794fr.pdf",
+      "locator": "NAO post-Games review, Summary paragraphs 6–10, printed pp. 6–7",
+      "basis": "Official audit; delivery and preparedness findings do not establish every later legacy outcome."
+    },
+    "HG-21": {
+      "project": "San Bruno pipeline",
+      "year": 2010,
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/PAR1101.pdf",
+      "locator": "NTSB/PAR-11/01, section 1.7.2, printed pp. 25–28",
+      "basis": "Official trace of erroneous material records into GIS; provenance is not physical verification."
+    }
+  },
+  "items": [
+    {
+      "id": "SEJ-001",
+      "dimension": "framing",
+      "split": "practice",
+      "format": "single",
+      "title": "The queue that moved",
+      "scenario": "A hospital replaces paper requests with a portal. Request entry falls from six minutes to two, but patient transport still starts after forty minutes. Porters are shared across wards; dispatch prioritization is unchanged.",
+      "question": "Which next framing best serves the stated goal of reducing time to transport?",
+      "choices": {
+        "A": "Standardize ward request forms and repeat the entry-time study to reduce front-end variation propagated into the transport queue.",
+        "B": "Improve portal adoption across wards before analyzing dispatch, because incomplete uptake may conceal the benefit of faster request entry.",
+        "C": "Add porter capacity during peak periods; the unchanged pickup delay indicates transport staffing should receive the first investment.",
+        "D": "Map request-to-pickup work and shared dispatch constraints, then identify which delays actually govern the transport outcome."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-conops"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-002",
+      "dimension": "framing",
+      "split": "practice",
+      "format": "single",
+      "title": "Solution in the initial need",
+      "scenario": "A sponsor asks for a drone to inspect roof insulation. The underlying goal is to locate water ingress before winter; roof access is possible on some buildings and restricted on others. Budget and image interpretation capability are unresolved.",
+      "question": "What is the most useful first concept decision?",
+      "choices": {
+        "A": "Set roof-coverage targets from the drone flight envelope, then evaluate image-interpretation tools against the resulting rate.",
+        "B": "Compare inspection means against ingress-detection needs, access conditions and interpretation capability before committing to a drone configuration.",
+        "C": "Validate drone inspection on accessible buildings and use that performance estimate to plan procurement for the restricted sites.",
+        "D": "Select an adaptable drone, then use a pilot inspection to determine which findings and reporting outcomes matter most."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-system-concept"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-003",
+      "dimension": "framing",
+      "split": "development",
+      "format": "single",
+      "title": "Boundary versus ownership",
+      "scenario": "A municipal flood-warning project defines its system-of-interest as the authority's own warning service, excluding supplier infrastructure. A commercial rainfall feed is required, and the authority remains accountable for warnings when that feed is delayed.",
+      "question": "How should the supplier be represented?",
+      "choices": {
+        "A": "Allocate availability to the supplier contract and verify internal warning logic with timely inputs, assessing each organization separately.",
+        "B": "Include supplier infrastructure inside the implementation boundary and allocate its availability controls to the authority responsible for warnings.",
+        "C": "Model supplier delay as a fixed external parameter so internal design can proceed before delayed-feed response ownership is agreed.",
+        "D": "Keep the supplier external to the chosen boundary; specify its dependency contract and the authority's response to delayed data."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-architecture"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-004",
+      "dimension": "framing",
+      "split": "development",
+      "format": "multiple",
+      "title": "Conflicting outcomes",
+      "scenario": "Airport operations wants shorter gate turnaround; maintenance wants enough inspection time; crews report increasing last-minute changes. The team proposes automation of the inspection signoff. No causal study is available.",
+      "question": "Which proposed actions establish a defensible decision basis from the supplied facts, without first assuming a cause or a target?",
+      "choices": {
+        "A": "Define the competing turnaround, inspection and change-control outcomes, including the operating conditions in which each must be protected.",
+        "B": "Use maintenance ownership of signoff to assign it primary responsibility for delay, then measure the effect of automating its approval step.",
+        "C": "Adopt the fastest observed turnaround as the acceptance threshold for the new process, then investigate exceptions when that threshold is missed.",
+        "D": "Trace the timing of late changes, inspection work and decisions across roles to distinguish their contributions to the observed turnaround."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-conops"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-005",
+      "dimension": "framing",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "Extending a digital service",
+      "scenario": "A rural telehealth service reduces appointment travel for patients with broadband. Patients without reliable connectivity miss more appointments after the clinic reduces its physical schedule. The project charter names access to care as the outcome.",
+      "question": "Which revised system boundary best supports a design review?",
+      "choices": {
+        "A": "Review video uptime and completion rates, assigning physical-clinic access to another program with responsibility for those facilities.",
+        "B": "Review the complete appointment pathway, including connectivity support and physical alternatives, against the charter's access-to-care outcome.",
+        "C": "Define the service boundary around broadband users and report the remaining population separately to measure digital performance consistently.",
+        "D": "Model network availability for virtual appointments, keeping appointment scheduling outside the telecommunications review."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-system-concept",
+        "mbse-conops"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-006",
+      "dimension": "lifecycle",
+      "split": "practice",
+      "format": "single",
+      "title": "A cheaper pump cartridge",
+      "scenario": "Cartridge A costs less and meets the specified flow range. It needs a calibration fixture available only at the factory. Cartridge B costs more but can be exchanged and checked in the field. Remote sites can tolerate at most a day without service.",
+      "question": "What information most directly changes the purchase decision?",
+      "choices": {
+        "A": "Compare supplier calibration accreditation and reported accuracy uncertainty before deciding whether either cartridge offers sufficient measurement confidence.",
+        "B": "Compare purchase and factory-calibration costs across forecast volume, retaining the cheaper cartridge if its estimated lifecycle cost is lower.",
+        "C": "Compare supplier failure-rate estimates and select the longer-lived cartridge to minimize the expected frequency of restoration work.",
+        "D": "Estimate spare coverage, transport, repair turnaround and restoration at remote sites against the one-day service interruption limit."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-system-concept"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-007",
+      "dimension": "lifecycle",
+      "split": "practice",
+      "format": "single",
+      "title": "Testing after handover",
+      "scenario": "A tunnel monitoring pilot performs well with its developers present. The operating contractor receives alarms but has no agreed responsibility for overnight diagnosis, spares or configuration changes.",
+      "question": "Which next activity best addresses the acceptance gap?",
+      "choices": {
+        "A": "Exercise fault response and restoration with the contractor, using agreed responsibilities, spares and configuration-change arrangements.",
+        "B": "Complete administrator training and transfer the issue tracker, accepting handover after the contractor reproduces normal operating procedures.",
+        "C": "Implement automatic diagnosis before handover, assigning the contractor the unresolved exceptions once the target diagnostic success rate is reached.",
+        "D": "Extend the developer-attended trial to estimate support demand before assigning permanent contractor responsibilities."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-conops",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-008",
+      "dimension": "lifecycle",
+      "split": "development",
+      "format": "multiple",
+      "title": "End of service",
+      "scenario": "A sensor network stores configuration keys in modules expected to remain installed for fifteen years. The design review covers commissioning and operation but not replacement or retirement.",
+      "question": "Which actions are justified by the supplied lifecycle facts without adding an unprovided policy or disposal requirement?",
+      "choices": {
+        "A": "Adopt physical destruction of every retired module as the required disposal method, based on the stated presence of configuration keys.",
+        "B": "Define who will provide compatible replacements and spares if the supplier ends support during the planned fifteen-year service period.",
+        "C": "Define how replacement modules receive and verify the authorized configuration before they are returned to the operating sensor network.",
+        "D": "Define credential retirement and data-removal outcomes for removed modules, then select disposal methods against the applicable requirements and evidence."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-architecture"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-009",
+      "dimension": "lifecycle",
+      "split": "development",
+      "format": "single",
+      "title": "Reliability across a mission",
+      "scenario": "Two alternatives have the same measured failure frequency during operation. One restores within minutes after a fault; the other requires a specialist visit. Missions are daily and unattended sites have limited access.",
+      "question": "What conclusion follows?",
+      "choices": {
+        "A": "Compare failures over equal exposure and use the tighter uncertainty interval to choose between alternatives with similar observed reliability.",
+        "B": "Select the faster-restoring alternative and resolve purchase cost and specialist access during deployment planning.",
+        "C": "Compare restoration and access conditions alongside failure occurrence before estimating mission availability and lifecycle effort.",
+        "D": "Require field observations of both restoration processes before developing an availability estimate suitable for the purchase decision."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-system-concept"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-010",
+      "dimension": "lifecycle",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "Transition is part of the system",
+      "scenario": "A regional dispatch center will replace its radios in stages. New equipment meets each individual interface specification, but old and new sites must coordinate during the transition.",
+      "question": "Which acceptance scope is most appropriate?",
+      "choices": {
+        "A": "Test the most demanding legacy configuration and infer intermediate behavior from the separately qualified new-radio interfaces.",
+        "B": "Qualify the final configuration and bridge legacy sites with temporary instructions during rollout.",
+        "C": "Include planned mixed configurations, transition responsibilities and recovery paths alongside the final all-new operational configuration.",
+        "D": "Accept each specified interface and confirm mixed-operation behavior during rollout, when actual legacy configurations become available."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-operational-scenarios"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-011",
+      "dimension": "causal_reasoning",
+      "split": "practice",
+      "format": "single",
+      "title": "Two channels, one supply",
+      "scenario": "Two controllers execute different software and compare outputs. Both receive power from one converter, use the same clock and accept the same configuration file.",
+      "question": "Which statement is best supported?",
+      "choices": {
+        "A": "Monitor the common supply and credit software diversity for the remaining faults once supply-failure detection is established.",
+        "B": "Software diversity addresses some causes; analyze shared supply, clock and configuration failures before claiming channel independence.",
+        "C": "Measure disagreement across representative inputs and use comparator coverage to establish independence between the channels.",
+        "D": "Combine separate software defect probabilities, then account for common hardware through the measured coverage of the comparator."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-architecture",
+        "mbse-electronic-systems"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-012",
+      "dimension": "causal_reasoning",
+      "split": "practice",
+      "format": "single",
+      "title": "Correlated observations",
+      "scenario": "A maintenance dashboard shows that faults are more frequent when technician overtime is high. Overtime also rises during severe weather and service disruptions.",
+      "question": "Which investigation best discriminates explanations?",
+      "choices": {
+        "A": "Examine time ordering, weather exposure, fault-driven callouts and task workload to distinguish contributing, responding and common-cause explanations.",
+        "B": "Compare monthly overtime and faults across a longer observation period to reduce the influence of individual weather episodes.",
+        "C": "Limit overtime at the busiest sites and compare subsequent fault counts with the preceding quarter before investigating mechanisms.",
+        "D": "Compare technicians with different overtime at each site, holding assignment stable to separate workload effects from location."
+      },
+      "skills": [
+        "mbse-systems-engineering"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-013",
+      "dimension": "causal_reasoning",
+      "split": "development",
+      "format": "single",
+      "title": "A shared event in a tree",
+      "scenario": "A fault tree is (A AND B) OR (A AND C). Event A represents the same loss of a shared supply wherever it appears.",
+      "question": "Which minimal cut sets follow from that Boolean model?",
+      "choices": {
+        "A": "The minimal cut sets are {A,B} and {A,C}; either conjunction is sufficient, and both occurrences of A represent the same event.",
+        "B": "The minimal cut sets are {A1,B} and {A2,C}; repeated positions represent separate instances when evaluating the tree.",
+        "C": "The minimal cut sets are {A} and {B,C}; factoring the shared term separates its failure from the downstream conjunction.",
+        "D": "The minimal cut set is {A,B,C}; both branches appear beneath one top event and contribute to its combined condition."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-014",
+      "dimension": "causal_reasoning",
+      "split": "development",
+      "format": "single",
+      "title": "A warning that causes more work",
+      "scenario": "An alarm threshold is lowered. Detection rises, but operators receive many more alarms and begin delaying acknowledgment. Reported unresolved incidents also rise.",
+      "question": "Which next model is most useful?",
+      "choices": {
+        "A": "Model how alarm load changes attention, acknowledgment and escalation, then connect those responses to unresolved events.",
+        "B": "Identify operators and shifts with the longest acknowledgment delays, prioritizing refresher training before changing detector or escalation settings.",
+        "C": "Refit the detector threshold against incident labels, increasing the penalty for missed events to offset the rise in unresolved cases.",
+        "D": "Apply the earlier acknowledgment distribution to the new alarm rate to estimate the additional staffing required."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-conops"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-015",
+      "dimension": "causal_reasoning",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "Intermittent failure and a reset",
+      "scenario": "Restarting a controller restores operation after a fault. The same fault returns under high load. Logs show buffer saturation before the restart but do not identify why data accumulates.",
+      "question": "Which conclusion is justified?",
+      "choices": {
+        "A": "Investigate arrival, service and blocking mechanisms; buffer saturation is a causal lead, while reset recovery identifies a symptom.",
+        "B": "Reproduce reset recovery under increasing load and use repeated restoration to establish volatile-state corruption as the leading cause.",
+        "C": "Increase buffer capacity and close the investigation if the revised buffer prevents saturation throughout the high-load test.",
+        "D": "Compare peak utilization with published limits and replace the controller if it approaches capacity, postponing downstream service analysis."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-016",
+      "dimension": "evidence",
+      "split": "practice",
+      "format": "single",
+      "title": "A passing test on another revision",
+      "scenario": "A latency report shows 180 ms on revision A against a 250 ms requirement. Revision B changes scheduling priorities and shares a processor with another service. No new timing observation is supplied.",
+      "question": "What is the defensible disposition?",
+      "choices": {
+        "A": "Allocate the observed 70 ms margin to the new service and retest if predicted scheduling overhead exceeds that budget.",
+        "B": "Retain the report for unchanged algorithms and verify the added service separately, allocating scheduling effects to that component.",
+        "C": "Retain the revision-A result and reassess its applicability to B's scheduling and shared-resource conditions before claiming timing support.",
+        "D": "Record B as a timing failure pending a passing test, then replace the older report in the evidence index."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-017",
+      "dimension": "evidence",
+      "split": "practice",
+      "format": "multiple",
+      "title": "What the prototype established",
+      "scenario": "A tabletop robot delivers containers in a quiet lab. The intended ward has doors, interruptions and custody handovers. The test uses weighted dummy containers and a developer acting as the recipient.",
+      "question": "Which conclusions are supported by the supplied trial description, without assuming that untested conditions or users are equivalent?",
+      "choices": {
+        "A": "The trial establishes usability of the ward handover if the developer followed the same visible steps that clinical staff would perform.",
+        "B": "The recorded configuration produced the observed tabletop-route and dummy-load behavior under the trial's stated conditions and measurement limits.",
+        "C": "The trial provides observations that can inform hypotheses, operating scenarios and procedures for a subsequent study in the intended ward context.",
+        "D": "The trial supports acceptance of ward transport once the tested container mass is shown to match the mass used in clinical operation."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-018",
+      "dimension": "evidence",
+      "split": "development",
+      "format": "single",
+      "title": "Zero observed failures",
+      "scenario": "An engineer tests twenty identical units for one hour each and observes no failures. The report claims the system failure probability is zero.",
+      "question": "Which response is most appropriate?",
+      "choices": {
+        "A": "Report twenty unit-hours with zero events; any reliability estimate needs an explicit exposure model, assumptions and uncertainty.",
+        "B": "Use reciprocal accumulated exposure as a conservative failure-rate estimate and carry that single rate into reliability planning.",
+        "C": "Exclude zero-event observations from reliability comparison and use the test to plan a campaign long enough to observe failures.",
+        "D": "Pool the twenty unit-hours into a survival duration and compare it directly with the uninterrupted mission required of one unit."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-019",
+      "dimension": "evidence",
+      "split": "development",
+      "format": "single",
+      "title": "Coverage with an unrealistic assumption",
+      "scenario": "A formal check proves that every accepted request is eventually served under an assumption that the shared resource is continuously available. Deployed operation allows outages and bounded recovery.",
+      "question": "Which next step best strengthens the evidence?",
+      "choices": {
+        "A": "Add outage handling to the implementation while retaining the established liveness contract, then test the new recovery procedures.",
+        "B": "Review the availability assumption and analyze outage/recovery behavior, preserving the existing proof as conditional evidence.",
+        "C": "Repeat the check with more requests to establish that the result scales with demand.",
+        "D": "Retain the proof and verify resource availability separately, treating successful recovery tests as support for the original continuous-availability assumption."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-electronic-systems"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-020",
+      "dimension": "evidence",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "When an inspection is enough",
+      "scenario": "A requirement specifies that an installation label show the serial number and supply rating. A neighboring requirement specifies alarm onset within 100 ms after a condition becomes true.",
+      "question": "Which verification plan is proportionate?",
+      "choices": {
+        "A": "Demonstrate label content and alarm onset together, having the reviewer confirm both during normal operation.",
+        "B": "Inspect label and timing configuration values, accepting both requirements when those stored values match the approved specification.",
+        "C": "Inspect label content and compare the nominal controller processing period with 100 ms to establish the alarm deadline.",
+        "D": "Inspect controlled label content; test alarm timing with defined stimulus, start/end events and observation resolution."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-021",
+      "dimension": "requirements",
+      "split": "practice",
+      "format": "single",
+      "title": "The timing reference",
+      "scenario": "A need says an operator must be warned promptly when pressure becomes hazardous. The proposed requirement says the display refreshes every 100 ms. Sensor acquisition and hazard detection can take additional time.",
+      "question": "What is the most important repair?",
+      "choices": {
+        "A": "Measure typical pressure-to-display delay and use its average to interpret prompt warning under normal operating conditions.",
+        "B": "Define the justified warning deadline between hazard and operator indication, then allocate acquisition, detection and presentation contributions against that end-to-end condition.",
+        "C": "Replace the display criterion with the sensor's maximum acquisition delay, because sensing the hazard is the first indispensable stage of the warning function.",
+        "D": "Retain display refresh and add sensor and detector deadlines, with each supplier defining the reference events for its contribution."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-requirements"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-022",
+      "dimension": "requirements",
+      "split": "practice",
+      "format": "single",
+      "title": "A measurable but misplaced requirement",
+      "scenario": "A service robot requirement says its chassis shall be blue. A stakeholder need concerns staff finding the correct robot during a busy shift. No branding constraint or visibility study is supplied.",
+      "question": "How should the requirement be reviewed?",
+      "choices": {
+        "A": "Replace the color criterion with a visibility threshold drawn from the robot's display specification, then verify that threshold using a controlled lighting test.",
+        "B": "Defer appearance decisions until staff trials are complete, so the requirements baseline contains only functions whose relation to the stakeholder need is already demonstrated.",
+        "C": "Trace blue to an identification need or binding constraint, then assess that proposed choice against staff behavior in the intended operating context.",
+        "D": "Keep blue as an inspectable design requirement and evaluate user identification separately, since objective component criteria and operational validation serve different purposes."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-requirements"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-023",
+      "dimension": "requirements",
+      "split": "development",
+      "format": "single",
+      "title": "Decomposition loses a condition",
+      "scenario": "The parent requires emergency shutdown on loss of either pressure sensing or temperature sensing. Two children require a diagnostic on pressure loss and a diagnostic on temperature loss. The allocation matrix links both children to the parent.",
+      "question": "What remains missing?",
+      "choices": {
+        "A": "Add measurable deadlines to each diagnostic so the two children fully specify the parent response to either sensing loss.",
+        "B": "The children require an allocation to separate sensors, because the parent's either-condition wording implies that sensing and shutdown must have redundant hardware paths.",
+        "C": "Both loss conditions are covered, but a common diagnostic identifier is needed to consolidate the children under the parent.",
+        "D": "The decomposition retains the two diagnostic triggers but omits the required shutdown response; define how either diagnosis causes the specified system action."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-requirements",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-024",
+      "dimension": "requirements",
+      "split": "development",
+      "format": "single",
+      "title": "Resolving conflicting authorities",
+      "scenario": "A signed contract requires a maximum mass of 40 kg. A later meeting note proposes 45 kg to improve endurance but contains no approval. The team is preparing a design trade.",
+      "question": "Which treatment preserves the decision basis?",
+      "choices": {
+        "A": "Use the newer meeting value for preliminary trades while retaining 40 kg in the contract register, then reconcile the two at the next baseline review.",
+        "B": "Trade options across the 40–45 kg range and recommend the highest-scoring design, treating the meeting note as evidence that the sponsor accepts that range.",
+        "C": "Use 40 kg as the obligation and 45 kg as a proposed change, showing the design consequence and the approval needed to adopt it.",
+        "D": "Freeze the mass-dependent concept comparison until the change is approved, so exploratory results cannot influence a decision made against the still-binding contractual limit."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-requirements"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-025",
+      "dimension": "requirements",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "Hazard versus a design prescription",
+      "scenario": "A braking-system review identifies unintended deceleration as a hazardous behavior. An early proposal specifies a second processor as the safety requirement, without defining fault detection, authority or response timing.",
+      "question": "Which refinement best supports system design?",
+      "choices": {
+        "A": "Retain the second processor as the derived safety requirement, then ask the supplier to define diagnostics and timing within the available hardware resources.",
+        "B": "Define the required control behavior, authority and conditions, then assess the second processor against those obligations and the actual failure dependencies.",
+        "C": "Convert the processor proposal into a redundancy requirement, then verify physical separation before developing the detection, command-arbitration and recovery behavior of the architecture.",
+        "D": "Allocate sensing to one processor and monitoring to another, then derive response requirements from the chosen monitoring mechanism."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-automotive",
+        "mbse-requirements"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-026",
+      "dimension": "interfaces",
+      "split": "practice",
+      "format": "single",
+      "title": "Compatible fields, different meanings",
+      "scenario": "Two components exchange an integer named position. One defines millimeters from a home switch; the other expects encoder counts from the last reset. Both pass a JSON schema check.",
+      "question": "What should integration establish next?",
+      "choices": {
+        "A": "Add a fixed counts-to-millimeters conversion at the receiver, then validate its arithmetic before retaining each component's existing reset and reference-origin behavior.",
+        "B": "Agree the integer range and field name, then test encoding and decoding for preservation of the transmitted values.",
+        "C": "Agree units, reference origin, reset and validity semantics, then test representative conversions and boundary cases at the producer-consumer interface.",
+        "D": "Require the producer to publish its native encoder count, then let each consumer interpret the coordinate origin according to its local operating mode."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-architecture"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-027",
+      "dimension": "interfaces",
+      "split": "practice",
+      "format": "multiple",
+      "title": "A valid but stale command",
+      "scenario": "A remote command passes the system's cryptographic authenticity and signature checks when received after a ten-minute outage. During the outage a local operator stopped the system and changed mode. No freshness, duplicate-command or resume decision has yet been made.",
+      "question": "Which additional conditions must be resolved before this authenticated command is treated as currently executable?",
+      "choices": {
+        "A": "Establish that the command is fresh enough and applicable to the current mode before using its intent to authorize an action.",
+        "B": "Establish whether the same command was executed, acknowledged or superseded during the outage before permitting a repeated action.",
+        "C": "Treat the completed signature checks as sufficient authorization because they establish that an approved sender generated the command being received.",
+        "D": "Establish the sender's current authority and whether the local stop or another inhibit still prevents the requested action."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-operational-scenarios",
+        "mbse-architecture"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-028",
+      "dimension": "interfaces",
+      "split": "development",
+      "format": "single",
+      "title": "Mars Climate Orbiter: a contract existed",
+      "scenario": "The 1999 Mars Climate Orbiter investigation reports that a ground software interface specified metric impulse data, while a producer supplied English-unit data. The report also identifies verification and communication weaknesses.",
+      "question": "Which action best transfers this lesson to a new project?",
+      "choices": {
+        "A": "Require a common engineering unit in every software module, then use static type checks to demonstrate that integration and operational transition risks are addressed.",
+        "B": "Centralize quantity conversion in one integration component, then verify its calculations while retaining each producer's existing assumptions about units and message meaning.",
+        "C": "Add unit labels and approval signatures to the controlled interface specification, using that record as producer acceptance evidence.",
+        "D": "Verify actual producer-consumer exchanges against explicit unit semantics and representative operational data, with ownership for detecting and resolving discrepancies."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-aerospace",
+        "mbse-architecture"
+      ],
+      "source_ids": [
+        "HG-05"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-029",
+      "dimension": "interfaces",
+      "split": "development",
+      "format": "single",
+      "title": "Ownership at an interface",
+      "scenario": "A sensor supplier guarantees nominal one-second updates. The controller designer assumes the latest value is usable for five seconds. Neither defines timestamps, loss detection or clock alignment.",
+      "question": "Which clarification has the highest immediate value?",
+      "choices": {
+        "A": "Confirm the supplier's average update performance over representative workloads, then retain the controller's five-second limit if it exceeds the observed mean interval.",
+        "B": "Agree which team reports missing updates, then retain independent local clock references because freshness is checked separately within each organization's component.",
+        "C": "Choose the protocol and retry policy, then derive allowable data age from the resulting maximum retry duration.",
+        "D": "Define timestamps, age limits, guaranteed update bounds and invalid-data responses so both parties can establish when a measurement is usable."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-architecture"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-030",
+      "dimension": "interfaces",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "Ariane 501: reused software in a new envelope",
+      "scenario": "ESA's 1996 Ariane 501 inquiry describes failures in both inertial reference systems and a retained alignment function active after launch. The representative simulations did not expose the relevant behavior.",
+      "question": "What should a reuse review emphasize for a successor vehicle?",
+      "choices": {
+        "A": "Review the new interface messages and hardware connections, then treat retained internal functions as covered when their code and component configuration remain unchanged.",
+        "B": "Test changed code against the new trajectory, retaining previous qualification evidence for functions whose code remains unchanged.",
+        "C": "Reassess the reused functions and their assumptions against the successor's input envelope, active modes and representative integration scenarios.",
+        "D": "Compare component reliability histories across the predecessor fleet, then use the strongest demonstrated service record to justify reuse in the successor architecture."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-aerospace",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [
+        "HG-04"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-031",
+      "dimension": "tradeoffs",
+      "split": "practice",
+      "format": "single",
+      "title": "A constraint hidden by an average",
+      "scenario": "A concept matrix scores performance, cost and deployment time. Option A has the highest weighted total but misses a contractual launch date. Option B meets the date at lower performance. The contract has not been changed.",
+      "question": "Which recommendation is defensible?",
+      "choices": {
+        "A": "Compare options that meet the current date constraint, and separately present the trade and authority required to reconsider that constraint.",
+        "B": "Recommend B because it meets the launch date, then defer review of its other constraints until the implementation plan establishes its achievable performance.",
+        "C": "Raise the schedule weight until a compliant option ranks first, preserving a single score for the concept decision.",
+        "D": "Recommend the highest total score with an explicit schedule risk, allowing the board to balance the missed date against A's benefits within one ranking."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-system-concept"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-032",
+      "dimension": "tradeoffs",
+      "split": "practice",
+      "format": "single",
+      "title": "The apparently dominant option",
+      "scenario": "A supplier option has lower estimated cost and higher estimated throughput than an internal design. Its estimates come from a short demonstration with a simpler workload; the internal figures come from measured peak-load tests.",
+      "question": "What is the best next comparison?",
+      "choices": {
+        "A": "Select the supplier provisionally because both estimates are favorable, then use implementation integration testing to determine whether the demonstration advantage is achievable.",
+        "B": "Retain the internal design’s measured performance advantage until the supplier can provide equivalent field experience.",
+        "C": "Apply the same contingency percentage to both options' reported figures, then compare adjusted cost and throughput using the existing demonstration and test evidence.",
+        "D": "Compare equivalent workloads and uncertainty, then choose a representative investigation that can distinguish whether the apparent advantage survives realistic use."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-system-concept"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-033",
+      "dimension": "tradeoffs",
+      "split": "development",
+      "format": "single",
+      "title": "A reversible trial",
+      "scenario": "Two scheduling policies meet hard constraints in preliminary analysis. A can be trialed at one site with rapid rollback; B requires a year-long infrastructure change. Demand forecasts are uncertain and likely to change within six months.",
+      "question": "Which factor belongs in the decision?",
+      "choices": {
+        "A": "Include the cost and value of reversible learning: compare how each choice exposes the project to uncertain demand and later migration.",
+        "B": "Prefer the reversible trial and defer migration analysis until measured demand establishes whether another architecture is needed.",
+        "C": "Prefer B if its expected long-run performance is higher, then absorb forecast changes within its infrastructure commitment rather than reopening the architecture decision.",
+        "D": "Compare both options at the mean demand forecast and discount future operating costs, leaving trial reversibility outside the score to avoid double-counting uncertainty."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-system-concept"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-034",
+      "dimension": "tradeoffs",
+      "split": "development",
+      "format": "single",
+      "title": "Build, buy and the supporting system",
+      "scenario": "A defense logistics team can buy a sensor that meets laboratory accuracy requirements. Field repair, export/access constraints, supply continuity and integration with existing maintenance records remain unresolved.",
+      "question": "What should a build/buy comparison include?",
+      "choices": {
+        "A": "Compare laboratory performance and purchase cost, allocating support and integration constraints to the selected option’s implementation plan.",
+        "B": "Compare delivered field capability, including sensing, integration, support and supply constraints; keep uncertain assumptions and their decision owners explicit.",
+        "C": "Compare estimated lifecycle costs using a common contingency factor, then select the cheaper option if the supplier can document compliance with the sensor specification.",
+        "D": "Compare the sensor functions that the program directly controls, then evaluate external integration and supply constraints separately so vendor limitations do not bias architecture selection."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-defense",
+        "mbse-system-concept"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-035",
+      "dimension": "tradeoffs",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "Explaining a conditional recommendation",
+      "scenario": "Two architectures meet present requirements. A is cheaper at small volume; B becomes cheaper above an uncertain demand threshold. The review board must decide whether to fund a limited initial rollout.",
+      "question": "Which recommendation is most useful?",
+      "choices": {
+        "A": "Recommend postponing the architecture choice until the demand interval narrows, while funding both implementation paths enough to preserve flexibility during the initial rollout.",
+        "B": "Recommend the cheaper small-volume option for initial deployment, then defer migration analysis until demand measurements demonstrate that the crossover threshold has been exceeded.",
+        "C": "Recommend conditionally by demand range, with migration consequences, an initial rollout decision and observable conditions for reopening the choice.",
+        "D": "Choose the lowest expected cost at mean demand and carry forecast uncertainty into the risk register."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-system-concept"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-036",
+      "dimension": "uncertainty",
+      "split": "practice",
+      "format": "single",
+      "title": "The most useful next measurement",
+      "scenario": "A machine overheats intermittently. Competing explanations are insufficient cooling flow and a temperature sensor bias. A new sensor and a coolant-flow measurement are both feasible; only one short diagnostic session is available.",
+      "question": "What should determine the session design?",
+      "choices": {
+        "A": "Replace the cheaper sensor first; persistent overheating then supports inadequate cooling as the remaining explanation.",
+        "B": "Measure cooling flow at nominal conditions and compare it with design values, then treat any observed deficit as the cause of the intermittent temperature excursions.",
+        "C": "Choose paired observations and operating conditions that separate sensor bias from insufficient cooling, including an independent temperature reference where needed.",
+        "D": "Use the session to collect a longer high-resolution temperature trace, then infer the likely cooling mechanism from the shape and repeatability of the reported overheating."
+      },
+      "skills": [
+        "mbse-systems-engineering"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-037",
+      "dimension": "uncertainty",
+      "split": "practice",
+      "format": "single",
+      "title": "Missing a decisive fact",
+      "scenario": "A team asks whether an evacuation warning should trigger automatic door release. The building use, fire strategy, security constraints and failure modes of the release mechanism are unspecified.",
+      "question": "Which response advances the task appropriately?",
+      "choices": {
+        "A": "Identify the safety and authority constraints that could change release policy, analyze conditional options, and leave the final policy decision open.",
+        "B": "Make automatic release the default to support evacuation, and record security implications for later review.",
+        "C": "Propose manual release as the default because it preserves human authority, then measure whether the expected operator response meets the evacuation timing needs.",
+        "D": "Request the complete building design and fire documentation before comparing release options, so no preliminary recommendation relies on a provisional interpretation of intended use."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-conops"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-038",
+      "dimension": "uncertainty",
+      "split": "development",
+      "format": "single",
+      "title": "An estimate becomes a fact",
+      "scenario": "A preliminary model assumes a 20-minute restoration time because no maintenance data exists. Several slides later, the executive summary calls this the measured restoration time.",
+      "question": "What correction is needed?",
+      "choices": {
+        "A": "Relabel the calculated outcomes as predictions while retaining the 20-minute input in the executive summary, because modeling distinguishes them from field observations.",
+        "B": "Restore the value's assumption status and identify which conclusions depend on it, preserving useful calculations as explicitly conditional results.",
+        "C": "Exclude the model's results from the decision package until restoration data is obtained, because an assumed input cannot support any useful engineering comparison.",
+        "D": "Substitute a longer restoration allowance and retain the conclusion, using conservatism to cover the missing measurements."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-039",
+      "dimension": "uncertainty",
+      "split": "development",
+      "format": "single",
+      "title": "US Airways 1549: decision time in a simulation",
+      "scenario": "The NTSB's report on the 2009 US Airways 1549 accident distinguishes immediate-return simulator attempts from scenarios including crew decision time. An immediate turn toward an airport does not represent the same starting conditions as the actual crew's situation.",
+      "question": "What is the strongest transferable lesson?",
+      "choices": {
+        "A": "Compare each alternative’s best successful trajectory and use its performance margin to determine the preferred crew response.",
+        "B": "Compare alternatives using the information and recognition-to-action timing available at the actual decision point, stating what each simulation assumes.",
+        "C": "Compare aircraft capability from the instant of hazard onset, then treat recognition and diagnosis as separate training factors outside the alternative-feasibility assessment.",
+        "D": "Use the delayed simulator attempt as the representative case, then extrapolate its outcome to the range of feasible return decisions in the actual event."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-aerospace",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [
+        "HG-08"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-040",
+      "dimension": "uncertainty",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "A borderline result",
+      "scenario": "A dimension has an upper acceptance limit of 10.00 mm. A measurement reads 9.99 mm, with stated expanded uncertainty of 0.03 mm. The project has not defined an acceptance decision rule.",
+      "question": "What should the reviewer say?",
+      "choices": {
+        "A": "Reject using the upper uncertainty bound, applying conservatism to avoid accepting a dimension that might exceed its limit.",
+        "B": "Remeasure using a more precise instrument, then accept whichever measurement places its displayed value further below the specification limit for the same item.",
+        "C": "Accept the item using the measured value because the requirement specifies a limit on dimension, while instrument uncertainty belongs in the laboratory quality record.",
+        "D": "Report the result and uncertainty, then resolve or apply the agreed acceptance decision rule before assigning the item a disposition."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-041",
+      "dimension": "people_organizations",
+      "split": "practice",
+      "format": "single",
+      "title": "The handover with no receiver",
+      "scenario": "A warehouse system sends an exception to a shared mailbox. The software logs successful delivery. During a shift change neither team sees itself as responsible for the exception, and the shipment remains blocked.",
+      "question": "Which repair best addresses the system failure?",
+      "choices": {
+        "A": "Assign exceptions to the originating warehouse team and judge closure by its acknowledgment, leaving receiver handover to local practice.",
+        "B": "Agree who accepts each exception, how unresolved work transfers at shift change, and when it escalates; exercise the handover.",
+        "C": "Send exceptions to both shift supervisors and add a dashboard of unread messages, retaining the current shared responsibility arrangement.",
+        "D": "Introduce a maximum email response time and publish compliance by shift, using delivery logs to start the performance clock."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-conops",
+        "mbse-operational-scenarios"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-042",
+      "dimension": "people_organizations",
+      "split": "practice",
+      "format": "single",
+      "title": "Challenger: information and the launch decision",
+      "scenario": "The 1986 Rogers Commission describes communication and management problems in the Challenger launch decision, including information about the solid rocket motor joint that did not reach the decision process adequately.",
+      "question": "Which proposed improvement most directly addresses that class of problem?",
+      "choices": {
+        "A": "Expand readiness evidence packages and require every discipline to certify its section, keeping technical disagreement within that discipline until resolved.",
+        "B": "Give the component specialist authority to withhold readiness approval, while keeping the existing path for communicating evidence to program leadership.",
+        "C": "Make unresolved concerns, their disposition and escalation to decision authority visible across organizational boundaries before the readiness decision.",
+        "D": "Consolidate concerns into one confidence rating for each subsystem, letting senior management compare readiness without conflicting technical detail."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-aerospace",
+        "mbse-conops"
+      ],
+      "source_ids": [
+        "HG-02"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-043",
+      "dimension": "people_organizations",
+      "split": "development",
+      "format": "single",
+      "title": "Columbia: routine success and unresolved evidence",
+      "scenario": "The 2003 Columbia Accident Investigation Board analyzes both physical damage mechanisms and organizational practices. A contemporary team argues that a recurring anomaly is acceptable because previous missions succeeded.",
+      "question": "What should a review require?",
+      "choices": {
+        "A": "Estimate anomaly acceptability from the proportion of successful affected missions, then revisit the decision when another anomaly changes that rate.",
+        "B": "Explain the anomaly mechanism and evidence, including whether prior successes cover the present conditions and what remains unresolved.",
+        "C": "Ask the subsystem owner to confirm that the current event resembles previous cases, then carry forward the previously accepted disposition.",
+        "D": "Retain the disposition until anomaly frequency materially changes, while improving collection of flight performance data."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-aerospace",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [
+        "HG-06"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-044",
+      "dimension": "people_organizations",
+      "split": "development",
+      "format": "single",
+      "title": "London 2012: a supplier cannot deliver",
+      "scenario": "The National Audit Office's post-Games review describes extensive operational preparation for London 2012 and contingency action when the security contractor could not provide planned staffing.",
+      "question": "Which preparation best transfers to a new major event?",
+      "choices": {
+        "A": "Increase staffing surveillance before the event and track recruitment milestones, using early forecasts as the main control on delivery risk.",
+        "B": "Contract with reserve suppliers and verify their commercial commitments, activating the reserve contract when the primary provider reports a shortfall.",
+        "C": "Rehearse plausible shortfalls with the decision authorities and reserve resources, verifying readiness and changes needed to sustain operations.",
+        "D": "Define an escalation organization and rehearse executive decisions, leaving reserve staff preparation to the agency assigned responsibility during activation."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-conops",
+        "mbse-operational-scenarios"
+      ],
+      "source_ids": [
+        "HG-20"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-045",
+      "dimension": "people_organizations",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "Therac-25: timing of actual work",
+      "scenario": "Leveson and Turner's 1993 investigation describes Therac-25 accidents involving particular operator edit sequences and timing. A replacement interface test plan exercises each button individually but not realistic editing sequences.",
+      "question": "What should be added?",
+      "choices": {
+        "A": "Stress-test individual controls at the maximum input rate and use processor load measurements to establish margin during operator interaction.",
+        "B": "Test editing sequences, transitions and timing across plausible use and misuse, while independently observing and constraining hazardous output.",
+        "C": "Compare the new and existing interface specifications for each input, then validate controls whose visible functions have changed.",
+        "D": "Test prescribed task sequences with trained operators and confirm the displayed state after each completed setup."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-medical-device",
+        "mbse-operational-scenarios"
+      ],
+      "source_ids": [
+        "HG-18"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-046",
+      "dimension": "communication",
+      "split": "practice",
+      "format": "single",
+      "title": "A decision memo for the sponsor",
+      "scenario": "The design team finds that a proposed shared power supply meets nominal load but lacks evidence for the worst-case startup combination. The sponsor asks what must be decided before purchasing hardware.",
+      "question": "Which opening best answers that audience?",
+      "choices": {
+        "A": "The untested startup combination makes separate supplies the prudent purchase; the shared option can return after it demonstrates equivalent capacity.",
+        "B": "The nominal-load result supports purchasing the shared supply; we can close startup capacity during integration before authorizing operational use.",
+        "C": "Purchasing should wait for a full supply-qualification campaign, including the startup condition and every other environment the product may encounter.",
+        "D": "Nominal load passed. Before purchasing, confirm capacity for the startup combination or select a supply with demonstrated margin for it."
+      },
+      "skills": [
+        "mbse-systems-engineering"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-047",
+      "dimension": "communication",
+      "split": "practice",
+      "format": "single",
+      "title": "The WWW proposal in its context",
+      "scenario": "Tim Berners-Lee's 1989 proposal for CERN emphasizes heterogeneous systems, decentralized links and access to existing information. Security and accounting are secondary concerns in that local proposal.",
+      "question": "Which summary preserves the meaning when explaining it to a modern product team?",
+      "choices": {
+        "A": "The proposal’s architectural principles remain useful, but its prioritization reasoning should be excluded because it predates contemporary security expectations.",
+        "B": "The proposal suggests decentralized linking can support heterogeneous information; modern security decisions can follow once those original functions are demonstrated.",
+        "C": "The proposal is a conceptual precedent for information sharing; its stated local priorities supply a baseline that modern teams can adopt unchanged.",
+        "D": "The proposal addresses CERN’s information-sharing constraints; use its reasoning as a precedent while establishing security needs for the present context."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-system-concept"
+      ],
+      "source_ids": [
+        "HG-17"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-048",
+      "dimension": "communication",
+      "split": "development",
+      "format": "single",
+      "title": "Reporting disagreement",
+      "scenario": "Two reviewers disagree about whether an old environmental test covers a revised connector. One cites unchanged materials; the other cites a changed seal geometry. A report must be delivered today.",
+      "question": "Which report is most useful?",
+      "choices": {
+        "A": "Explain both evidence arguments, isolate whether seal geometry changes test applicability, and name the decision or investigation needed to resolve it.",
+        "B": "Keep the old test provisionally applicable because materials are unchanged, flagging geometry for confirmation in the next scheduled environmental campaign.",
+        "C": "Declare the old test inapplicable because geometry changed, remove its trace link, and recommend repeating the complete environmental qualification.",
+        "D": "Ask a third reviewer to resolve the disagreement by today, reporting the majority judgment with the original evidence attachments."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-049",
+      "dimension": "communication",
+      "split": "development",
+      "format": "single",
+      "title": "Choosing a useful view",
+      "scenario": "A review board cannot tell who controls motion during startup, normal operation, manual stop and recovery. It already has a component hierarchy with complete part names.",
+      "question": "Which additional view best answers the question?",
+      "choices": {
+        "A": "Add an interface view showing command and status connections, including each message direction and the component that sends it.",
+        "B": "Add a state and authority view linking transitions and guards to the components permitted to enable, stop or resume motion.",
+        "C": "Add a function-allocation view linking each motion-related function to its implementing component, including the organization responsible for each function.",
+        "D": "Add a nominal startup sequence showing operator commands and component responses, using its final operating state to represent motion authority."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-architecture",
+        "mbse-operational-scenarios"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-050",
+      "dimension": "communication",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "Explaining verification and validation",
+      "scenario": "A junior engineer asks why a product can pass every specified test and still fail its users. The team has measured compliance with its written requirements but has not observed the intended users in the operating context.",
+      "question": "Which explanation is most accurate?",
+      "choices": {
+        "A": "Verification checks specified requirements; validation examines intended use and stakeholder needs. An incomplete specification can be implemented correctly yet fail users.",
+        "B": "Passing requirements supports intended use when stakeholder approval is recorded; observation is mainly needed to discover improvements for the next release.",
+        "C": "Verification checks implementation details and validation repeats the tests at system level; the missing user observation should therefore repeat system requirements.",
+        "D": "The specification may omit intended-use needs: supplement its tests with interviews, treating stakeholder agreement as sufficient validation of the implemented product."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-051",
+      "dimension": "source_judgment",
+      "split": "practice",
+      "format": "single",
+      "title": "San Bruno: a digital record inherits an error",
+      "scenario": "The NTSB's 2011 San Bruno report traces an erroneous seamless-pipe description from an older accounting record into later records and the GIS. Physical investigation found welded pipe sections.",
+      "question": "What is the best lesson for a digital engineering baseline?",
+      "choices": {
+        "A": "Trace critical attributes to their originating evidence and its purpose, resolving discrepancies with appropriate records or inspection before relying on them.",
+        "B": "Compare imported attributes across independently maintained databases, accepting values that agree and directing physical inspections toward the remaining discrepancies.",
+        "C": "Reconcile older records to the latest controlled GIS baseline, retaining source discrepancies as historical notes until a scheduled inspection finds a conflict.",
+        "D": "Treat migrated critical attributes as unverified and resurvey them before use, setting aside the original records until the physical survey is complete."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [
+        "HG-21"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-052",
+      "dimension": "source_judgment",
+      "split": "practice",
+      "format": "single",
+      "title": "A catalog title is not a clause",
+      "scenario": "A standards publisher's public catalog confirms a standard's title and edition. A vendor blog claims a particular clause requires a tool qualification level. The adopted licensed text is unavailable.",
+      "question": "Which statement is supported now?",
+      "choices": {
+        "A": "The publisher confirms title and edition; the claimed clause obligation remains unverified pending applicable authoritative text or another authoritative basis.",
+        "B": "Record the cited qualification level as a conservative planning constraint, treating confirmation of the edition as adequate support for the obligation.",
+        "C": "Use the vendor’s clause summary as a provisional requirement because it names the confirmed edition, then verify wording before release.",
+        "D": "Confirm the standard’s adoption in the project first, then treat the clause as nonapplicable until its licensed wording becomes available."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-053",
+      "dimension": "source_judgment",
+      "split": "development",
+      "format": "single",
+      "title": "TCP: acknowledgment at the right layer",
+      "scenario": "RFC 793 (1981) explains that TCP acknowledgment means the receiving TCP has taken responsibility for data, not necessarily that it has been delivered to the end user. A system logs TCP acknowledgment as proof that a remote operator acted.",
+      "question": "What should the review conclude?",
+      "choices": {
+        "A": "Add retries until the connection receives an acknowledgment within its timeout, then use the bounded exchange to establish completed action.",
+        "B": "Supplement TCP receipt with an application-server delivery log, treating successful delivery to the operator console as evidence of action.",
+        "C": "The log establishes transport receipt at that layer; operator action requires a relevant observation and acknowledgment in the application workflow.",
+        "D": "Have the operator console acknowledge message display and use that event to close the action, retaining transport logs for diagnosis."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-architecture"
+      ],
+      "source_ids": [
+        "HG-15"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-054",
+      "dimension": "source_judgment",
+      "split": "development",
+      "format": "single",
+      "title": "DNS: a historical design trade",
+      "scenario": "RFC 1034 (1987) describes distributed maintenance and caching, including a trade among acquisition cost, update speed and cache accuracy. A team proposes a very long cache lifetime to reduce server load for rapidly changing control data.",
+      "question": "What transfers from the source?",
+      "choices": {
+        "A": "Remove caching from the control path and accept the extra server load, treating rapidly changing data as incompatible with local reuse.",
+        "B": "Choose a lifetime shorter than the mean update interval, then use that relationship to justify freshness independently of individual control actions.",
+        "C": "Set the lifetime from measured server-load savings and reduce it when operators report that stale values are affecting control decisions.",
+        "D": "Evaluate update behavior and stale-data consequences for this application; the source explains the trade but does not provide its acceptable limits."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-architecture"
+      ],
+      "source_ids": [
+        "HG-16"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-055",
+      "dimension": "source_judgment",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "A project success reported before its legacy",
+      "scenario": "An official post-event report describes successful delivery of a major event while stating that some longer-term legacy outcomes remain to be established. A proposal cites the report as proof that all promised long-term benefits were achieved.",
+      "question": "Which correction is justified?",
+      "choices": {
+        "A": "Limit achievement claims to the report’s outcomes and date, preserving its open legacy questions for assessment with subsequent evidence.",
+        "B": "Exclude the report from the benefits case until long-term outcomes are evaluated, so provisional claims do not enter the decision baseline.",
+        "C": "Describe the reported legacy outcomes as forecast benefits, while treating the successful event as confirmation that their main delivery risks are closed.",
+        "D": "Describe legacy benefits as substantially achieved, retaining the report’s open-outcome caveat in the supporting notes."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [
+        "HG-20"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-056",
+      "dimension": "change_review",
+      "split": "practice",
+      "format": "multiple",
+      "title": "An identifier survives a changed claim",
+      "scenario": "REQ-18 originally required an alert within 500 ms. A proposed revision changes it to 200 ms but keeps the ID. The trace matrix still links the same old 460 ms test result.",
+      "question": "Which actions are required for a sound change review?",
+      "choices": {
+        "A": "Create a new requirement ID for the 200 ms criterion and close the old requirement without reviewing dependencies on its continuing function.",
+        "B": "Retain the requirement’s continuing identity while recording its revision, changed criterion and the authority for adopting that change.",
+        "C": "Retain the old test as current satisfaction evidence because it remains linked, and plan the tighter timing check for a later update.",
+        "D": "Reassess the 460 ms result against the revised criterion, then identify affected timing allocations, implementation paths and verification procedures."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-baseline-review",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-057",
+      "dimension": "change_review",
+      "split": "practice",
+      "format": "single",
+      "title": "Boston I-90: the load duration matters",
+      "scenario": "The NTSB's investigation of the 2006 Boston I-90 tunnel ceiling collapse identifies inadequate creep resistance of the adhesive under sustained load. A new project has a short-duration proof-load result for an adhesive anchor.",
+      "question": "What should the qualification review examine?",
+      "choices": {
+        "A": "Compare operating load with the manufacturer’s nominal anchor capacity, assigning duration effects to the periodic visual-inspection program.",
+        "B": "Check sustained-load and environmental behavior for the specified adhesive and installation, establishing what the short proof test does and does not support.",
+        "C": "Repeat proof loading at a greater peak load and use the increased margin to cover uncertainty in long-term adhesive behavior.",
+        "D": "Review installation training and adhesive batch records, then retain the short proof result if both match the approved construction process."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-baseline-review",
+        "mbse-verification-evidence"
+      ],
+      "source_ids": [
+        "HG-11"
+      ],
+      "basis": "Source-grounded historical transfer; named source supports supplied facts, not the proposed answer."
+    },
+    {
+      "id": "SEJ-058",
+      "dimension": "change_review",
+      "split": "development",
+      "format": "single",
+      "title": "A supplier changes its service contract",
+      "scenario": "A cloud service previously guaranteed delivery of events in order. Its new version preserves all events but allows reordering. The consumer uses arrival order to authorize a sequence of physical actions.",
+      "question": "Which review scope is necessary?",
+      "choices": {
+        "A": "Revalidate message schemas and event counts, then keep existing action tests if every transmitted event reaches the consumer without field changes.",
+        "B": "Add a reorder buffer with a fixed waiting period, then retain the consumer logic and tests once normal ordering is restored.",
+        "C": "Review ordering assumptions in consumer state and authority logic, including recovery, delay and duplicates, and reassess the affected verification evidence.",
+        "D": "Requalify the consumer’s physical-action components, treating the cloud change as a supplier concern once the event delivery count is verified."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-architecture",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-059",
+      "dimension": "change_review",
+      "split": "development",
+      "format": "single",
+      "title": "A rejected alternative becomes relevant",
+      "scenario": "A system chose a wired sensor because radio coverage was poor at remote sites. The new deployment is indoors with existing radio infrastructure, but battery replacement staffing is limited.",
+      "question": "What should the concept review do?",
+      "choices": {
+        "A": "Reopen the alternatives against indoor coverage and limited battery support, retaining the old rationale while evaluating changed assumptions and lifecycle costs.",
+        "B": "Retain wired sensing for the first indoor release and reassess radio after measured maintenance costs justify reopening the earlier trade.",
+        "C": "Compare wired and radio using the original criteria and weights, updating coverage estimates to reflect the indoor infrastructure now available.",
+        "D": "Select radio provisionally because the original coverage concern is resolved, then assign battery staffing to the deployment support plan."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-system-concept",
+        "mbse-baseline-review"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    },
+    {
+      "id": "SEJ-060",
+      "dimension": "change_review",
+      "split": "evaluation-public",
+      "format": "single",
+      "title": "Contradictory views in one baseline",
+      "scenario": "A requirements file says local stop latches until explicit resume. A state diagram automatically resumes after data returns. The test plan checks only fault indication. All three artifacts carry the same release label.",
+      "question": "What is the most useful review finding?",
+      "choices": {
+        "A": "Mark the three artifacts inconsistent and defer all edits until system testing demonstrates which recovery behavior the implementation currently provides.",
+        "B": "Use the diagram to clarify the requirement’s recovery intent, then add a resume test and revise the text to preserve one implementation meaning.",
+        "C": "Use the released requirement as the controlling behavior, update the diagram to match, and retain the existing test because fault indication is covered.",
+        "D": "Record the stop/resume contradiction and missing recovery test, resolve intent against its authoritative source, and propagate the decision through affected IDs."
+      },
+      "skills": [
+        "mbse-systems-engineering",
+        "mbse-baseline-review",
+        "mbse-operational-scenarios"
+      ],
+      "source_ids": [],
+      "basis": "Authored engineering vignette; stated facts are exercise inputs, not observed project data."
+    }
+  ],
+  "previous_version": "0.1.0",
+  "revision_basis": "Independent review found option-length cues and ambiguous stems in0.1.0; option sets rewritten, input/key binding strengthened, no agent superiority inferred.",
+  "option_order_note": "Option labels were rebalanced within each split for version 0.2.0; labels are not stable across versions."
+}

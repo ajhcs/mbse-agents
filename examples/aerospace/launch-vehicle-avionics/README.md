@@ -1,5 +1,7 @@
 # Launch Vehicle Avionics
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Overview
 
 The Launch Vehicle Avionics system provides guidance, navigation, and control (GN&C), flight termination, telemetry, and vehicle management for the upper stage of a medium-lift expendable launch vehicle. The avionics architecture partitions safety-critical flight termination functions from mission-critical GN&C and telemetry through physically separate processing units with independent power paths.

@@ -1,0 +1,69 @@
+{
+  "case": "HO-12",
+  "participant": "performance_design",
+  "start_utc": "2026-11-13T23:42:52.164754+00:00",
+  "end_utc": "2026-11-13T23:56:20.964874+00:00",
+  "model_id": "unknown",
+  "settings": "unknown",
+  "tokens": "unknown",
+  "cost": "unknown",
+  "shared_context_limitation": "Six cases HO-01, HO-04, HO-07, HO-09, HO-12, HO-13 share one participant context. Outputs are not independent across cases.",
+  "skills_read": [
+    ".agents/skills/mbse-systems-engineering/SKILL.md"
+  ],
+  "skills_used": [
+    ".agents/skills/mbse-systems-engineering/SKILL.md"
+  ],
+  "references_read": [
+    ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md"
+  ],
+  "tools": [
+    "functions.exec",
+    "exec_command",
+    "bash",
+    "python3 pathlib/hashlib/json/datetime",
+    "cat (Markdown artifact creation)",
+    "python3 final hash/manifest and Markdown link check"
+  ],
+  "input_sha256": {
+    ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+    ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "packet-manifest.json": "f61779ce32e7fe6baafb8784ca599aeb546035f4f19c10981cac9398ee01ae66",
+    "request.md": "4d41623daab9f5104a38281108821ea90cec84a789bec57afbff2fdb32fc0ca5"
+  },
+  "output_sha256": {
+    "outputs/output.md": "c0cd4f6c88ed15aaafa97841713952947d8f188447e300190422215033e8e607"
+  },
+  "exceptions": [
+    "The python command is unavailable; python3 is used.",
+    "No service event data or authority/rule documents supplied; causes and targets remain unconfirmed.",
+    "Same systems-engineering skill content was previously read in HO-09; cases share context.",
+    "Output hash map excludes run-record.json to avoid self-referential hashing."
+  ],
+  "status": "completed",
+  "execution": "Director-facing diagnosis and conditional decision recommendation only; no case data, queue model or pilot execution.",
+  "artifact_integrity": {
+    "checked_utc": "2026-11-13T23:56:20.964872+00:00",
+    "all_inputs_match_initial_sha256": true,
+    "all_manifest_entries_match_sha256": true,
+    "all_output_sha256_match": true,
+    "local_markdown_links_resolve": true,
+    "scope": "Filesystem/byte integrity and artifact-link checks only; not controller, model quality or operational verification."
+  },
+  "shared_preparation": {
+    "workspace_mount_observed": "/workspace mounted from /dev/nvme1n1p1, ext4, rw,nosuid,nodev,relatime",
+    "preparation_tools": [
+      "findmnt",
+      "python (unavailable)",
+      "python3"
+    ],
+    "timing_note": "Case start is packet intake/hash initialization. All six requests were then read in one call and authored sequentially in shared context; intervals overlap and are not additive compute timings."
+  },
+  "access_limits_observed": [
+    "Used only assigned packet request, manifest, skill packages, references and HO-13 supplied inputs for task reasoning.",
+    "No source repository, memory, other arm, rubric/evaluation key, prior participant outputs, external sources, production systems or paid APIs accessed."
+  ]
+}

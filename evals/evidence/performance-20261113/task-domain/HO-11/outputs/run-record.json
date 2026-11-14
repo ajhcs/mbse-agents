@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "case_id": "HO-11",
+  "arm": "task-domain",
+  "status": "response artifact completed; engineering verification activities remain proposed",
+  "started_at_utc": "2026-11-13T23:42:41Z",
+  "ended_at_utc": "2026-11-13T23:51:49Z",
+  "time_observation": {
+    "start_source": "clock.curr_time output 2026-11-13 23:42:41 UTC",
+    "end_source": "datetime.now(timezone.utc) while serializing this record",
+    "scope": "Shared participant window: six requests/skills were read in batches and responses developed in the same context. No isolated per-case active duration is inferred."
+  },
+  "participant": {
+    "role": "independent exercise participant",
+    "model_id": null,
+    "model_settings": null,
+    "reasoning_effort": null,
+    "token_usage": null,
+    "cost": null,
+    "unknown_fields_reason": "Exact inherited runtime model/settings and token/cost accounting were not explicitly exposed. No inference made."
+  },
+  "context_limits": [
+    "Six cases (HO-02, HO-03, HO-05, HO-10, HO-11, HO-17) shared this participant context.",
+    "Packet separation is not a secure held-out environment.",
+    "No source repository, memory files, keys, rubrics, other arms, prior outputs or review criteria were intentionally inspected.",
+    "Inherited conversation instructions and context were present; fresh-session isolation is not claimed."
+  ],
+  "skills_read_and_used": [
+    {
+      "name": "mbse-defense",
+      "skill_path": ".agents/skills/mbse-defense/SKILL.md",
+      "use": "Mission thread across autonomous organizations and shared interfaces, without importing defense tasks"
+    },
+    {
+      "name": "mbse-conops",
+      "skill_path": ".agents/skills/mbse-conops/SKILL.md",
+      "use": "Operational roles, authority, normal/degraded/restoration concept and unresolved agreement"
+    },
+    {
+      "name": "mbse-operational-scenarios",
+      "skill_path": ".agents/skills/mbse-operational-scenarios/SKILL.md",
+      "use": "One explicit outage scenario with preconditions, branches, recovery and evidence"
+    }
+  ],
+  "references_read": [
+    ".agents/skills/mbse-conops/references/operational-framing.md",
+    ".agents/skills/mbse-defense/references/domain-analysis.md",
+    ".agents/skills/mbse-operational-scenarios/references/scenario-records.md"
+  ],
+  "references_not_applied": [],
+  "other_packet_files_read": [
+    "request.md",
+    "packet-manifest.json"
+  ],
+  "metadata_files_hashed_not_read_as_guidance": [
+    ".agents/skills/mbse-conops/agents/openai.yaml",
+    ".agents/skills/mbse-defense/agents/openai.yaml",
+    ".agents/skills/mbse-operational-scenarios/agents/openai.yaml"
+  ],
+  "tools_used": [
+    {
+      "name": "functions.exec / exec_command",
+      "actions": [
+        "List packet files",
+        "Read request, manifest, selected skill markdown and references",
+        "Calculate input SHA-256 and verify manifest",
+        "Read output summaries and calculate output SHA-256",
+        "Write and parse run record; write/verify checksum index"
+      ],
+      "executables": [
+        "find",
+        "sort",
+        "cat",
+        "python3"
+      ]
+    },
+    {
+      "name": "functions.exec / apply_patch",
+      "actions": [
+        "Create outputs/output.md"
+      ]
+    },
+    {
+      "name": "functions.exec / clock.curr_time",
+      "actions": [
+        "Observe UTC shared start and progress times"
+      ]
+    },
+    {
+      "name": "collaboration.send_message",
+      "actions": [
+        "Report artifact completion and evidence limits to parent agent; shared progress message across all six cases"
+      ]
+    }
+  ],
+  "source_access": [],
+  "source_search_limit": "No external source access performed for this case; answer uses supplied facts and explicit proposals.",
+  "input_sha256": {
+    ".agents/skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+    ".agents/skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+    ".agents/skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+    ".agents/skills/mbse-defense/SKILL.md": "a2164d5c5447f7eb9dc486498a6f3bd11235474388bfb0e409161e72686f2476",
+    ".agents/skills/mbse-defense/agents/openai.yaml": "bf73e7b261a4ff3a18204e930988ee3f43bd18666a13a34a3f3943744f52abf3",
+    ".agents/skills/mbse-defense/references/domain-analysis.md": "42792e844f854f773e7c3254fc1130afd7673b9235f6290e7064f8d222c2fdb0",
+    ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+    ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+    ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+    "request.md": "1704d38e57421d65e34181793667c08ed091f04769e950d582ef52c8ad5b8be9",
+    "packet-manifest.json": "d59efa12608cd012153527352e7db0f180b11d00294e465c14b209bff62ee0d0"
+  },
+  "manifest_verification": {
+    "verified_before_output_writes": true,
+    "verified_after_output_writes": true,
+    "mismatches": []
+  },
+  "output_sha256": {
+    "outputs/output.md": "7e187dd509b37040d1f12192f5c73ebdcb8d257432be69e48415d85a11ec8313"
+  },
+  "hash_scope": "Input hashes cover packet manifest and all manifest-listed input files. Output hash covers the response artifact. run-record.json is hashed in checksums.sha256; the checksum index has no self-hash.",
+  "checks_performed": [
+    "All manifest-listed file hashes match packet manifest",
+    "Response artifact exists and is nonempty",
+    "Run record serialized and parsed as JSON",
+    "SHA-256 checksum index generated and verified"
+  ],
+  "engineering_tests_executed": [],
+  "production_or_paid_api_actions": [],
+  "exceptions": [
+    "A combined skill-read tool response was truncated; relevant obscured sections were subsequently reread with targeted calls."
+  ],
+  "self_grading": "Not performed; no evaluation rubric or review criteria read."
+}

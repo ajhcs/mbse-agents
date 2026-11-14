@@ -1,0 +1,16 @@
+{
+  "case": "HG-03",
+  "accessed_on_utc_date": "2026-11-13",
+  "access_method": "tools.web__run open/find via functions.exec",
+  "source_register_note": "Original sources.json access_status describes the supplied packet. This output records only retrieval performed in this participant run.",
+  "sources": [
+    {
+      "source_id": "HG-03-S1",
+      "url": "https://ntrs.nasa.gov/api/citations/19910003124/downloads/19910003124.pdf",
+      "access": "Retrieved and inspected web-tool extracted executive-summary text, PDF pages 4-6.",
+      "limits": "Did not inspect all 116 PDF pages or historical raw optical data. OCR/extracted text used; no raw PDF bytes downloaded or SHA256 claimed."
+    }
+  ],
+  "raw_remote_byte_sha256": null,
+  "raw_remote_byte_sha256_reason": "Web tool returned extracted text/excerpts; original response bodies were not acquired as local files."
+}

@@ -1,0 +1,89 @@
+{
+  "status": "proposed_unexecuted",
+  "historical_provenance": false,
+  "purpose": "Concrete analytical fixtures for the four minimum planned cases; not flight data, a physical calibration, or a released schema.",
+  "oracle": {
+    "id": "SYNTH-Q01",
+    "basis": "By construction, a constant ideal force vector [2,0,0] newtons acts for 3 synthetic seconds. Its time integral is [6,0,0] newton-seconds.",
+    "independence": "The expected answer comes from the stated force-time construction, not the exporter label, output magnitude, or generated expected file. The navigation verification lead must separately review and control the derivation before execution.",
+    "limits": "This ideal analytical oracle can challenge software interpretation for this fixture. It does not establish the physical meaning or calibration of any real supplier or legacy data. A provenance-supported physical paired sample remains missing.",
+    "comparison": "Exact identifiers/version/unit semantics. The integer values in this illustrative fixture have an exact analytical expected value; the implementation-specific comparison rule must be agreed before execution. No physical measurement tolerance is supplied."
+  },
+  "samples": [
+    {
+      "case_id": "HG-05-A01",
+      "input": {
+        "schema_version": "new-v1",
+        "event_id": "SYNTH-Q01",
+        "quantity_kind": "impulse",
+        "unit": "N*s",
+        "frame": "SYNTH-XYZ",
+        "time_basis": "synthetic_elapsed_seconds",
+        "start_s": 0,
+        "duration_s": 3,
+        "components": [
+          6,
+          0,
+          0
+        ]
+      },
+      "expected": "Candidate acceptance only after complete-path output matches the independent analytical expectation and all other applicable checks."
+    },
+    {
+      "case_id": "HG-05-A02",
+      "input": {
+        "schema_version": "new-v1",
+        "event_id": "SYNTH-Q01",
+        "quantity_kind": "impulse",
+        "unit": "unsupported-unit",
+        "frame": "SYNTH-XYZ",
+        "time_basis": "synthetic_elapsed_seconds",
+        "start_s": 0,
+        "duration_s": 3,
+        "components": [
+          6,
+          0,
+          0
+        ]
+      },
+      "expected": "Reject and quarantine entire file; unchanged accepted state."
+    },
+    {
+      "case_id": "HG-05-A03",
+      "input": {
+        "schema_version": "new-v1",
+        "event_id": "SYNTH-Q01",
+        "quantity_kind": "impulse",
+        "frame": "SYNTH-XYZ",
+        "time_basis": "synthetic_elapsed_seconds",
+        "start_s": 0,
+        "duration_s": 3,
+        "components": [
+          6,
+          0,
+          0
+        ]
+      },
+      "expected": "Reject missing unit; no default or legacy fallback; unchanged accepted state."
+    },
+    {
+      "case_id": "HG-05-A04",
+      "input": {
+        "schema_version": "new-v1",
+        "event_id": "SYNTH-Q01",
+        "quantity_kind": "impulse",
+        "unit": "N*s",
+        "frame": "SYNTH-XYZ",
+        "time_basis": "synthetic_elapsed_seconds",
+        "start_s": 0,
+        "duration_s": 3,
+        "components": [
+          7,
+          0,
+          0
+        ]
+      },
+      "expected": "A schema/unit parser may accept the syntax; the independent acceptance comparison must identify 7 versus the expected 6 and withhold/quarantine the test transaction. It cannot prove universal runtime detection of mislabeled physical data."
+    }
+  ]
+}

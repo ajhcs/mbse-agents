@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "id": "HG-10",
+  "slug": "heathrow-terminal-5",
+  "title": "Heathrow Terminal 5: opening a service is an integration test",
+  "year": 2008,
+  "domain": "transport",
+  "outcome": "transition_failure",
+  "focus": "Operational readiness depends on people, logistics, software, facilities, and shared authority working together under representative conditions.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-10-S1",
+      "title": "House of Commons Transport Committee: The opening of Heathrow Terminal 5",
+      "url": "https://publications.parliament.uk/pa/cm200708/cmselect/cmtran/543/54304.htm",
+      "publication_date": "2008-11-03",
+      "locator": "Chapter 2, paragraphs 8–14",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Committee conclusions and witness accounts are distinguishable; trial participation alone does not establish trial representativeness."
+    },
+    {
+      "id": "HG-10-S2",
+      "title": "The opening of Heathrow Terminal 5: communication and lessons",
+      "url": "https://publications.parliament.uk/pa/cm200708/cmselect/cmtran/543/54305.htm",
+      "publication_date": "2008-11-03",
+      "locator": "Chapter 3, paragraphs 15–19",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "The committee explicitly avoided certainty that better cooperation would have prevented every problem."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-10-F1",
+      "statement": "The committee found that building delays compressed staff familiarisation and questioned whether training and trials prepared staff for opening conditions.",
+      "source_ids": [
+        "HG-10-S1"
+      ],
+      "locator": "Paragraphs 8–14"
+    },
+    {
+      "id": "HG-10-F2",
+      "statement": "It examined communication failures between operator and airline and the treatment of concerns raised by staff.",
+      "source_ids": [
+        "HG-10-S2"
+      ],
+      "locator": "Paragraphs 15–19"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Passenger journey, staff access, baggage flow, facilities, airline processes, terminal operator, and disruption recovery form the service boundary.",
+    "interfaces": [
+      "Facilities handover → staff training: incomplete spaces can invalidate planned familiarisation.",
+      "Airline → terminal operator: baggage and passenger exceptions require shared ownership and rapid coordination."
+    ],
+    "decision": {
+      "question": "What evidence supports opening when subsystem completion reports are favorable?",
+      "options": [
+        "Aggregate installation and training-attendance percentages.",
+        "Exercise end-to-end journeys and exceptions with representative staff, loads, and facilities."
+      ],
+      "recommendation": "Use an integrated readiness decision with explicit exception handling and a staged transition option.",
+      "uncertainty": "The historical report does not prove which exact staging plan would have prevented the disruption."
+    },
+    "artifact": {
+      "id": "HG-10-A1",
+      "type": "Operational readiness slice",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Staff arrival",
+          "Demonstrate access, orientation, and workstation readiness",
+          "Representative shift exercise"
+        ],
+        [
+          "Bag exception",
+          "Follow a delayed or misrouted bag across organizational boundaries",
+          "Timed exception recovery and accountable owner"
+        ],
+        [
+          "Opening disruption",
+          "Agree service reduction and recovery authority",
+          "Joint rehearsal and decision log"
+        ]
+      ]
+    },
+    "questions": [
+      "How can all component owners report green while the service remains unready?",
+      "What does attendance prove about training, and what does it not prove?",
+      "Write a readiness recommendation that makes a phased opening decision reviewable."
+    ],
+    "answer_signals": [
+      "Models handovers and exceptions, not only nominal flow.",
+      "Distinguishes activity completion from demonstrated performance.",
+      "Includes front-line knowledge and joint operational authority."
+    ],
+    "transfer_exercise": "Synthetic: a hospital moves into a new building while its scheduling software also changes. Select three cross-team acceptance scenarios.",
+    "limits": "The proposed readiness slice is new teaching material, not a recovered airport acceptance plan."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  },
+  "exercise_assets": [
+    {
+      "path": "review-task.md",
+      "label": "Connected review task",
+      "purpose": "A bounded review using multiple linked artifacts."
+    },
+    {
+      "path": "source-facts.csv",
+      "label": "Source fact register",
+      "purpose": "Attributed facts and exact report locators."
+    },
+    {
+      "path": "interfaces.csv",
+      "label": "Editable interface register",
+      "purpose": "New reconstruction with fact-level basis links."
+    },
+    {
+      "path": "claim-evidence.csv",
+      "label": "Claim and evidence register",
+      "purpose": "Supported observations separated from unexecuted checks."
+    },
+    {
+      "path": "change.json",
+      "label": "Synthetic change request",
+      "purpose": "A new transfer problem with affected teaching IDs."
+    },
+    {
+      "path": "relations.mmd",
+      "label": "Editable relation view",
+      "purpose": "Information dependencies with teaching IDs."
+    },
+    {
+      "path": "review-guide.md",
+      "label": "Public review guide",
+      "purpose": "Reasoning criteria and limitations for formative feedback."
+    }
+  ]
+}

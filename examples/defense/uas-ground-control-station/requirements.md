@@ -1,6 +1,8 @@
 # Requirements
 
-All requirements are atomic, testable shall-statements.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
+These proposed requirements retain their original IDs. Measurability, decomposition and source applicability are review obligations; versioning does not imply approval.
 
 ## Requirement Record Schema
 
@@ -9,7 +11,7 @@ All requirements are atomic, testable shall-statements.
 | ID            | Unique identifier (e.g., REQ-FUN-001)                                                            |
 | Statement     | Atomic shall-statement                                                                            |
 | Rationale     | Why this requirement exists                                                                       |
-| Source        | Hazard ID (HZ-), control ID (CTL-), regulatory clause, or stakeholder need                       |
+| Source        | Candidate basis requiring [source review](source-review.md); hazard ID (HZ-), control ID (CTL-), regulatory clause, or stakeholder need                       |
 | Parent        | Parent requirement ID (if derived)                                                                |
 | Verification  | Method: test, analysis, inspection, demonstration                                                 |
 | Allocation    | Target component ID(s) from architecture.md                                                       |
@@ -26,7 +28,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-002
 | Field        | Value |
@@ -37,7 +39,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-001 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-003
 | Field        | Value |
@@ -48,7 +50,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01A, CMP-MMC-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-004
 | Field        | Value |
@@ -59,7 +61,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-005
 | Field        | Value |
@@ -70,7 +72,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test, Demonstration |
 | **Allocation**   | CMP-MMC-01A, CMP-CLT-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-006
 | Field        | Value |
@@ -81,7 +83,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01F |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-007
 | Field        | Value |
@@ -92,7 +94,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-006 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01F, CMP-MMC-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-008
 | Field        | Value |
@@ -103,7 +105,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-009
 | Field        | Value |
@@ -114,7 +116,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-010
 | Field        | Value |
@@ -125,7 +127,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-011
 | Field        | Value |
@@ -136,7 +138,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-CLT-01D, CMP-CLT-01A, CMP-CLT-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-012
 | Field        | Value |
@@ -147,7 +149,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-CLT-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-013
 | Field        | Value |
@@ -158,7 +160,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test, Analysis |
 | **Allocation**   | CMP-CLT-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-014
 | Field        | Value |
@@ -169,7 +171,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test, Demonstration |
 | **Allocation**   | CMP-CLT-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-015
 | Field        | Value |
@@ -180,7 +182,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-CLT-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-016
 | Field        | Value |
@@ -191,7 +193,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-SCW-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-017
 | Field        | Value |
@@ -202,7 +204,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01A, CMP-MMC-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-018
 | Field        | Value |
@@ -213,7 +215,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-SCW-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-019
 | Field        | Value |
@@ -224,7 +226,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test, Analysis |
 | **Allocation**   | CMP-SCW-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-020
 | Field        | Value |
@@ -235,7 +237,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01, CMP-CLT-01, CMP-SCW-01 |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-FUN-021
 | Field        | Value |
@@ -246,7 +248,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01, CMP-CLT-01 |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ## Safety Requirements
 
@@ -259,7 +261,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01F |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-SAF-002
 | Field        | Value |
@@ -270,7 +272,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01F, CMP-CLT-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-SAF-003
 | Field        | Value |
@@ -281,7 +283,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test, Analysis |
 | **Allocation**   | CMP-MMC-01A, CMP-CLT-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-SAF-004
 | Field        | Value |
@@ -292,7 +294,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Analysis |
 | **Allocation**   | CMP-MMC-01F, CMP-CLT-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-SAF-005
 | Field        | Value |
@@ -303,7 +305,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01A, CMP-MMC-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-SAF-006
 | Field        | Value |
@@ -314,7 +316,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-SAF-001 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01F, CMP-CLT-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-SAF-007
 | Field        | Value |
@@ -325,7 +327,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-CLT-01D |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-SAF-008
 | Field        | Value |
@@ -336,7 +338,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test, Inspection |
 | **Allocation**   | CMP-MMC-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ## Interface Requirements
 
@@ -349,7 +351,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-CLT-01D, CMP-CLT-01A, CMP-CLT-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-IFC-002
 | Field        | Value |
@@ -360,7 +362,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-CLT-01D, CMP-CLT-01A, CMP-CLT-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-IFC-003
 | Field        | Value |
@@ -371,7 +373,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-CLT-01D, CMP-SCW-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-IFC-004
 | Field        | Value |
@@ -382,7 +384,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-009 |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-IFC-005
 | Field        | Value |
@@ -393,7 +395,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01, CMP-CLT-01, CMP-SCW-01 |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-IFC-006
 | Field        | Value |
@@ -404,7 +406,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-CLT-01B |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-IFC-007
 | Field        | Value |
@@ -415,7 +417,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-CLT-01A, CMP-CLT-01E, CMP-CLT-01F |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ## Performance Requirements
 
@@ -428,7 +430,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01, CMP-CLT-01, CMP-SCW-01 |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-PRF-002
 | Field        | Value |
@@ -439,7 +441,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01, CMP-CLT-01, CMP-SCW-01 |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-PRF-003
 | Field        | Value |
@@ -450,7 +452,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-004 |
 | **Verification** | Test, Analysis |
 | **Allocation**   | CMP-MMC-01A |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-PRF-004
 | Field        | Value |
@@ -461,7 +463,7 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | — |
 | **Verification** | Test |
 | **Allocation**   | CMP-MMC-01, CMP-CLT-01, CMP-SCW-01 |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |
 
 ### REQ-PRF-005
 | Field        | Value |
@@ -472,4 +474,4 @@ All requirements are atomic, testable shall-statements.
 | **Parent**       | REQ-FUN-019 |
 | **Verification** | Test |
 | **Allocation**   | CMP-SCW-01C |
-| **Status**       | Baselined |
+| **Status**       | Proposed; versioned teaching record |

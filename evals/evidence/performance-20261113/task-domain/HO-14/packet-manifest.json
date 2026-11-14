@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "artifact-performance-packet",
+  "status": "complete",
+  "case": "HO-14",
+  "case_version": "1.0",
+  "prepared_at": "2026-11-13T23:42:14.322514+00:00",
+  "skills": [
+    "mbse-systems-engineering",
+    "mbse-aerospace",
+    "mbse-baseline-review"
+  ],
+  "arm": "task-domain",
+  "full_catalog_exposed": false,
+  "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+  "files": {
+    ".agents/skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+    ".agents/skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+    ".agents/skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+    ".agents/skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+    ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+    ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "request.md": "bc7c4af93ea19f9f11d4d285aa00228def8271417b3166def823612c9f290c43"
+  },
+  "exposure": "Public inputs; packet separation is not a secure held-out environment."
+}

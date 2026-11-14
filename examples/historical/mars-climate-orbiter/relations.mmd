@@ -1,0 +1,10 @@
+flowchart LR
+  P["HG-05 ground-data producer"]
+  N["HG-05 navigation consumer"]
+  G["HG-05 development team"]
+  O["HG-05 operations team"]
+  D["HG-05 mission decision authority"]
+  P -->|HG-05-I1 impulse meaning| N
+  G -->|HG-05-I2 handover assumptions| O
+  N -->|HG-05-I3 unexplained residual| D
+  O -->|HG-05-CH1 legacy path review| D

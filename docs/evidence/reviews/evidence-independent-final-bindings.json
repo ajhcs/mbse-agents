@@ -1,0 +1,258 @@
+{
+  "source_drift_after_import": {
+    "reference_model.py": {
+      "returncode": 0,
+      "stdout": "Source changed after import: reference_model.py\n",
+      "stderr": "",
+      "selection_unchanged": true
+    },
+    "run_checks.py": {
+      "returncode": 0,
+      "stdout": "Source changed after import: run_checks.py\n",
+      "stderr": "",
+      "selection_unchanged": true
+    },
+    "explore_states.py": {
+      "returncode": 0,
+      "stdout": "Source changed after import: explore_states.py\n",
+      "stderr": "",
+      "selection_unchanged": true
+    },
+    "evidence_io.py": {
+      "returncode": 0,
+      "stdout": "Source changed after import: evidence_io.py\n",
+      "stderr": "",
+      "selection_unchanged": true
+    }
+  },
+  "stale_timestamp_size_bytecode": {
+    "reference_model.py": {
+      "returncode": 0,
+      "stdout": "Loaded code differs from source bytes: reference_model.py\n",
+      "stderr": "",
+      "same_size": true,
+      "same_mtime": true
+    },
+    "run_checks.py": {
+      "returncode": 0,
+      "stdout": "Loaded code differs from source bytes: run_checks.py\n",
+      "stderr": "",
+      "same_size": true,
+      "same_mtime": true
+    },
+    "explore_states.py": {
+      "returncode": 0,
+      "stdout": "Loaded code differs from source bytes: explore_states.py\n",
+      "stderr": "",
+      "same_size": true,
+      "same_mtime": true
+    },
+    "evidence_io.py": {
+      "returncode": 0,
+      "stdout": "Loaded code differs from source bytes: evidence_io.py\n",
+      "stderr": "",
+      "same_size": true,
+      "same_mtime": true
+    }
+  },
+  "wrong_origin_import_cache": {
+    "reference_model": {
+      "returncode": 0,
+      "stdout": "Loaded source origin differs from configuration: reference_model.py\n",
+      "stderr": ""
+    },
+    "explore_states": {
+      "returncode": 0,
+      "stdout": "Loaded source origin differs from configuration: explore_states.py\n",
+      "stderr": ""
+    },
+    "evidence_io": {
+      "returncode": 0,
+      "stdout": "Loaded source origin differs from configuration: evidence_io.py\n",
+      "stderr": ""
+    }
+  },
+  "history_preservation": {
+    "original_reference_archives": [
+      {
+        "name": "20261113T233041.723126Z-6773b720b186.json",
+        "byte_identical": true
+      },
+      {
+        "name": "legacy-c0d02c5c8c83b81340b9514967da8a5b18622dcc14d8f51f605cb5d453c101ee.json",
+        "byte_identical": true
+      },
+      {
+        "name": "20261113T233156.252399Z-b43b1a9df7e8.json",
+        "byte_identical": true
+      },
+      {
+        "name": "20261113T232648.095660Z-2eeaccbb87e5.json",
+        "byte_identical": true
+      },
+      {
+        "name": "20261113T232517.382966Z-68e458ccaab4.json",
+        "byte_identical": true
+      }
+    ],
+    "legacy_snapshot": [
+      {
+        "name": "history/legacy-v1/README.md",
+        "byte_identical": true
+      },
+      {
+        "name": "history/legacy-v1/baseline.json",
+        "byte_identical": true
+      },
+      {
+        "name": "history/legacy-v1/verification.md",
+        "byte_identical": true
+      },
+      {
+        "name": "history/legacy-v1/snapshot.json",
+        "byte_identical": true
+      },
+      {
+        "name": "history/legacy-v1/run_checks.py",
+        "byte_identical": true
+      },
+      {
+        "name": "history/legacy-v1/requirements.md",
+        "byte_identical": true
+      },
+      {
+        "name": "history/legacy-v1/architecture.md",
+        "byte_identical": true
+      },
+      {
+        "name": "history/legacy-v1/reference_model.py",
+        "byte_identical": true
+      },
+      {
+        "name": "history/legacy-v1/brief.md",
+        "byte_identical": true
+      },
+      {
+        "name": "history/legacy-v1/evidence/results.json",
+        "byte_identical": true
+      }
+    ],
+    "prior_failed_configurations_and_records": [
+      {
+        "name": "failed/architecture.md",
+        "hash_unchanged": true
+      },
+      {
+        "name": "failed/baseline.json",
+        "hash_unchanged": true
+      },
+      {
+        "name": "failed/brief.md",
+        "hash_unchanged": true
+      },
+      {
+        "name": "failed/change-request.md",
+        "hash_unchanged": true
+      },
+      {
+        "name": "failed/evidence/results.json",
+        "hash_unchanged": true
+      },
+      {
+        "name": "failed/evidence_io.py",
+        "hash_unchanged": true
+      },
+      {
+        "name": "failed/explore_states.py",
+        "hash_unchanged": true
+      },
+      {
+        "name": "failed/reference_model.py",
+        "hash_unchanged": true
+      },
+      {
+        "name": "failed/requirements.md",
+        "hash_unchanged": true
+      },
+      {
+        "name": "failed/run_checks.py",
+        "hash_unchanged": true
+      },
+      {
+        "name": "failed/verification.md",
+        "hash_unchanged": true
+      },
+      {
+        "name": "prior/architecture.md",
+        "hash_unchanged": true
+      },
+      {
+        "name": "prior/baseline.json",
+        "hash_unchanged": true
+      },
+      {
+        "name": "prior/brief.md",
+        "hash_unchanged": true
+      },
+      {
+        "name": "prior/evidence/results.json",
+        "hash_unchanged": true
+      },
+      {
+        "name": "prior/evidence_io.py",
+        "hash_unchanged": true
+      },
+      {
+        "name": "prior/explore_states.py",
+        "hash_unchanged": true
+      },
+      {
+        "name": "prior/reference_model.py",
+        "hash_unchanged": true
+      },
+      {
+        "name": "prior/requirements.md",
+        "hash_unchanged": true
+      },
+      {
+        "name": "prior/run_checks.py",
+        "hash_unchanged": true
+      },
+      {
+        "name": "prior/verification.md",
+        "hash_unchanged": true
+      }
+    ],
+    "prior_repaired_selected_record_archived_exactly": [
+      "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T233156.297847Z-b4f903ead2e5.json"
+    ],
+    "prior_workflow_receipt_body_preserved": true
+  },
+  "comparison_bindings": {
+    "drift:compare_revisions.py": {
+      "returncode": 0,
+      "stdout": "Comparison source changed after import: compare_revisions.py\n",
+      "stderr": ""
+    },
+    "drift:evidence_io.py": {
+      "returncode": 0,
+      "stdout": "Comparison source changed after import: evidence_io.py\n",
+      "stderr": ""
+    },
+    "drift:scripts/check_trace.py": {
+      "returncode": 0,
+      "stdout": "Comparison source changed after import: repository:scripts/check_trace.py\n",
+      "stderr": ""
+    },
+    "cache:compare_revisions.py": {
+      "returncode": 0,
+      "stdout": "Loaded code differs from source bytes: compare_revisions.py\n",
+      "stderr": ""
+    },
+    "cache:scripts/check_trace.py": {
+      "returncode": 0,
+      "stdout": "Loaded code differs from source bytes: scripts/check_trace.py\n",
+      "stderr": ""
+    }
+  }
+}

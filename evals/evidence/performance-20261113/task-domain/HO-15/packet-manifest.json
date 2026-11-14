@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "kind": "artifact-performance-packet",
+  "status": "complete",
+  "case": "HO-15",
+  "case_version": "1.0",
+  "prepared_at": "2026-11-13T23:42:14.340905+00:00",
+  "skills": [
+    "mbse-systems-engineering",
+    "mbse-architecture",
+    "mbse-baseline-review"
+  ],
+  "arm": "task-domain",
+  "full_catalog_exposed": false,
+  "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+  "files": {
+    ".agents/skills/mbse-architecture/SKILL.md": "4132528dc9a13b9f8b62f758a7cea0b80cf972decc3fa5760d5296117bc1141f",
+    ".agents/skills/mbse-architecture/agents/openai.yaml": "1ff9d54b0a20a27410315e3e842b586d114f4f7eb66b0623767dacf84ea9f196",
+    ".agents/skills/mbse-architecture/references/architecture-records.md": "929c203c94676c28aa590369b710181699117f97aebf52d433805c166c402f3f",
+    ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+    ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "request.md": "950dc87c3d537d8632a074998108feff025acef761a7a02abd5e766a2e6185d3"
+  },
+  "exposure": "Public inputs; packet separation is not a secure held-out environment."
+}

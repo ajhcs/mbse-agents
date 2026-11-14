@@ -1,8 +1,10 @@
 # Traceability
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Trace Strategy
 
-This traceability matrix establishes bidirectional linkage across all GCS system engineering artifacts. Forward traces demonstrate that every requirement is allocated, sourced, and verified. Reverse traces confirm that every component, hazard, and verification activity connects back to a requirement. Gaps are first-class entries with disposition, not omissions.
+This traceability matrix establishes bidirectional linkage across all GCS system engineering artifacts. Forward and reverse links identify proposed allocations, sources and verification activities. Executed evidence is separately scoped; links do not establish requirement satisfaction or complete coverage. Gaps are first-class entries with disposition, not omissions.
 
 **Traced entities:**
 - Requirements (REQ-) to architecture components (CMP-)
@@ -163,20 +165,20 @@ This traceability matrix establishes bidirectional linkage across all GCS system
 
 ### Hazards to Controls to Requirements
 
-| HZ ID   | CTL ID(s)       | REQ ID(s)                                                                        | Fully Mitigated? |
+| HZ ID   | CTL ID(s)       | REQ ID(s)                                                                        | Control verification status |
 |---------|-----------------|----------------------------------------------------------------------------------|------------------|
-| HZ-001  | CTL-001         | REQ-FUN-006, REQ-SAF-001, REQ-SAF-004, REQ-SAF-006                              | Yes              |
-| HZ-002  | CTL-001, CTL-002, CTL-004 | REQ-FUN-007, REQ-SAF-001, REQ-SAF-002, REQ-FUN-011                     | Yes              |
-| HZ-003  | CTL-003         | REQ-FUN-010                                                                      | Yes              |
-| HZ-004  | CTL-006         | REQ-FUN-013                                                                      | Yes              |
-| HZ-005  | CTL-005         | REQ-FUN-008, REQ-SAF-003                                                         | Yes              |
-| HZ-006  | CTL-007         | REQ-FUN-015, REQ-SAF-007                                                         | Yes              |
-| HZ-007  | CTL-008         | REQ-FUN-002, REQ-FUN-017, REQ-SAF-005                                            | Yes              |
-| HZ-008  | CTL-008         | REQ-FUN-002                                                                      | Yes              |
-| HZ-009  | CTL-009         | REQ-FUN-020, REQ-SAF-008                                                         | Yes              |
-| HZ-010  | CTL-010         | REQ-FUN-021                                                                      | Yes              |
-| HZ-011  | CTL-011         | REQ-FUN-014                                                                      | Yes              |
-| HZ-012  | CTL-012         | REQ-FUN-019                                                                      | Yes              |
+| HZ-001  | CTL-001         | REQ-FUN-006, REQ-SAF-001, REQ-SAF-004, REQ-SAF-006                              | Planned physical verification |
+| HZ-002  | CTL-001, CTL-002, CTL-004 | REQ-FUN-007, REQ-SAF-001, REQ-SAF-002, REQ-FUN-011                     | Planned physical verification |
+| HZ-003  | CTL-003         | REQ-FUN-010                                                                      | Planned physical verification |
+| HZ-004  | CTL-006         | REQ-FUN-013                                                                      | Planned physical verification |
+| HZ-005  | CTL-005         | REQ-FUN-008, REQ-SAF-003                                                         | Planned physical verification |
+| HZ-006  | CTL-007         | REQ-FUN-015, REQ-SAF-007                                                         | Planned physical verification |
+| HZ-007  | CTL-008         | REQ-FUN-002, REQ-FUN-017, REQ-SAF-005                                            | Planned physical verification |
+| HZ-008  | CTL-008         | REQ-FUN-002                                                                      | Planned physical verification |
+| HZ-009  | CTL-009         | REQ-FUN-020, REQ-SAF-008                                                         | Planned physical verification |
+| HZ-010  | CTL-010         | REQ-FUN-021                                                                      | Planned physical verification |
+| HZ-011  | CTL-011         | REQ-FUN-014                                                                      | Planned physical verification |
+| HZ-012  | CTL-012         | REQ-FUN-019                                                                      | Planned physical verification |
 
 ### Verification to Requirements
 
@@ -236,15 +238,18 @@ This traceability matrix establishes bidirectional linkage across all GCS system
 |---------|------------------------|---------------|----------------------------------------------------------------------------------------------|-------------|
 | GAP-001 | Orphan component       | CMP-MMC-01E   | FACE TSS Runtime has no direct requirements; transport services are infrastructure supporting all PCS applications but no explicit REQ- allocates to this component | Planned: derive REQ-FUN-022 for FACE TSS data transport performance at next requirements review |
 | GAP-002 | Orphan component       | CMP-SCW-01D   | SCW Operator Display Unit has no direct requirements; display hardware is presentation-only with requirements allocated to the display processor software (CMP-SCW-01A) | Accepted: hardware display is COTS with no safety-critical requirements; SCW-01A requirements cover display function |
-| GAP-003 | Incomplete verification | REQ-SAF-004   | Quantitative probability target (1e-6/FH) is verified by analysis only (VER-A-001); no test can directly demonstrate this probability. SSAR closure depends on FTA with validated failure rate data | Planned: obtain vendor failure rate data before CDR; SSAR closure contingent on data availability |
+| GAP-003 | Incomplete verification | REQ-SAF-004   | Quantitative probability target (1e-6/FH) is planned for analysis (VER-A-001); no test can directly demonstrate this probability. SSAR closure depends on FTA with validated failure rate data | Planned: obtain vendor failure rate data before CDR; SSAR closure contingent on data availability |
 
-## Coverage Summary
+## Record inventory and coverage boundary
 
-- **Requirements with architecture allocation**: 42/42 (100%)
-- **Safety requirements with hazard source**: 8/8 (100%)
-- **Requirements with verification activity**: 42/42 (100%)
-- **Verification activities with evidence artifact**: 46/46 (100%)
-- **Components with at least one requirement**: 17/19 (89.5%) -- GAP-001 (CMP-MMC-01E), GAP-002 (CMP-SCW-01D)
-- **Hazards with at least one control**: 12/12 (100%)
-- **Controls with at least one requirement**: 12/12 (100%)
-- **Gaps registered**: 3 (2 planned, 1 accepted)
+The current checker counts 41 REQ records, 19 CMP records, 13 FUN records, 19 IFC records, 12 HZ records, 12 CTL records, 48 VER records, 32 EVD records. It checks declared IDs, selected record links, evidence lifecycle/path consistency and reproducible model results.
+
+These counts are inventories, not percentages of engineering completeness. A planned procedure or proposed artifact is not verification evidence. Applicability, requirement coverage, procedure adequacy, independent review and physical performance remain open. The gap register retains specific missing allocations and review obligations.
+
+## Executed model activities
+
+| Activity | Selected claim | Evidence | Lifecycle | Closure boundary |
+| --- | --- | --- | --- | --- |
+| VER-MODEL-001 | HZ-001 Boolean paths, dependency assumptions and scenario arithmetic | EVD-MODEL-001 | Executed | Authored static model only; physical requirements remain open |
+
+[Executed model study](analysis/report.md). These additional activities do not change the original planned physical-procedure totals.

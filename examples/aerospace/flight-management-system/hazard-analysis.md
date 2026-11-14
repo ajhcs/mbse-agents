@@ -1,5 +1,7 @@
 # Hazard Analysis
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Methodology
 
 This hazard analysis follows ARP4761A (Guidelines and Methods for Conducting the Safety Assessment Process on Civil Airborne Systems and Equipment). The scope covers the Integrated Flight Management System as defined in the system boundary (README.md), analyzed across all operating modes (MODE-001 through MODE-005).
@@ -35,24 +37,24 @@ The analysis progresses through:
 
 | HZ ID   | Description                                                         | Cause(s)                                                       | Effect                                                                | MODE ID(s)       | Severity      | Likelihood | Initial Risk | CTL ID(s)           | Residual Risk | Owner / Acceptance Authority | REQ ID(s)                          |
 |---------|---------------------------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|------------------|---------------|------------|--------------|---------------------|---------------|------------------------------|------------------------------------|
-| HZ-001  | Undetected erroneous FMS guidance causing misleading flight path     | Common-mode software fault in both FMC channels producing identical erroneous guidance output | Aircraft deviates from intended path without crew awareness; potential CFIT or loss of separation | MODE-001         | Catastrophic  | Extremely Remote | High    | CTL-001, CTL-002    | Acceptable    | DER / FAA                    | REQ-SAF-001, REQ-SAF-002, REQ-SAF-003, REQ-SAF-010 |
-| HZ-002  | Erroneous FMS guidance detected and annunciated                      | Single-channel software or hardware fault producing erroneous guidance on one channel | Crew receives annunciation; transitions to MODE-002 or hand-flies. Increased workload but safe flight maintained | MODE-001, MODE-002 | Major         | Remote     | Medium       | CTL-002, CTL-004    | Acceptable    | DER / FAA                    | REQ-SAF-001, REQ-SAF-002          |
-| HZ-003  | Undetected erroneous navigation position (sensor fault)              | Faulty navigation sensor input accepted by FMS without detection/exclusion | Erroneous position drives guidance toward wrong path; potential terrain conflict or airspace violation | MODE-001         | Hazardous     | Remote     | High         | CTL-003             | Acceptable    | DER / FAA                    | REQ-FUN-008, REQ-FUN-009          |
-| HZ-004  | Total loss of FMS navigation function                                | Dual-channel FMC failure, or loss of all navigation sensor inputs | No computed navigation solution; crew must revert to raw sensor data and manual navigation | MODE-001         | Hazardous     | Extremely Remote | Medium | CTL-004             | Acceptable    | DER / FAA                    | REQ-SAF-004                        |
-| HZ-005  | Partition violation: DAL C function corrupts DAL A function           | ARINC 653 partition isolation failure allowing performance partition to overwrite navigation memory | Navigation or guidance data corruption; potential erroneous guidance output | MODE-001         | Catastrophic  | Extremely Improbable | Medium | CTL-005 | Acceptable    | DER / FAA                    | REQ-SAF-005, REQ-SAF-006          |
-| HZ-006  | Loss of FMS display capability                                       | DMC hardware failure, DMC software fault, or IFC-INT-002 bus failure | Flight crew loses FMS navigation display and CDU; reduced situation awareness | MODE-001, MODE-004 | Major         | Remote     | Medium       | CTL-006             | Acceptable    | DER / FAA                    | REQ-SAF-007                        |
-| HZ-007  | Total loss of FMS function (both channels and display)               | Dual FMC failure combined with DMC failure (common-cause: power, environment) | Complete loss of FMS navigation, guidance, and display; crew reverts to standby instruments | MODE-001         | Hazardous     | Extremely Remote | Medium | CTL-001, CTL-008    | Acceptable    | DER / FAA                    | REQ-SAF-008                        |
-| HZ-008  | FMC processor lockup undetected                                      | Software fault causing infinite loop or deadlock; hardware fault causing processor halt | Affected channel produces stale or no output; if undetected, other channel may inherit stale data | MODE-001         | Hazardous     | Remote     | High         | CTL-008             | Acceptable    | DER / FAA                    | REQ-SAF-009                        |
-| HZ-009  | Corrupted navigation database accepted as valid                      | Maintenance data load error; storage media corruption; deliberate tampering | FMS sequences to wrong waypoints; potential for CFIT or airspace violation | MODE-005, MODE-001 | Hazardous    | Remote     | High         | CTL-009             | Acceptable    | DER / FAA                    | REQ-FUN-022, REQ-SEC-001           |
-| HZ-010  | Malicious datalink message corrupts active flight plan               | Cyber attack via ACARS/FANS interface injecting malformed or falsified flight plan data | FMS modifies active plan based on attacker input; potential for erroneous lateral/vertical path | MODE-001         | Hazardous     | Remote     | High         | CTL-009, CTL-003    | Acceptable    | DER / FAA                    | REQ-SEC-003                        |
-| HZ-011  | Erroneous vertical guidance during approach causing altitude deviation | Software error in VNAV descent computation; wind model error; performance data fault | Aircraft deviates from approach path vertically; potential terrain conflict during approach phase | MODE-001         | Hazardous     | Remote     | High         | CTL-007             | Acceptable    | DER / FAA                    | REQ-FUN-016, REQ-FUN-017          |
-| HZ-012  | Misleading FMS display showing incorrect aircraft position            | DMC receives valid FMC data but renders incorrectly; display software fault | Crew makes operational decisions based on wrong position information; potential loss of separation | MODE-001, MODE-004 | Major         | Remote     | Medium       | CTL-006             | Acceptable    | DER / FAA                    | REQ-SAF-007                        |
+| HZ-001  | Undetected erroneous FMS guidance causing misleading flight path     | Common-mode software fault in both FMC channels producing identical erroneous guidance output | Aircraft deviates from intended path without crew awareness; potential CFIT or loss of separation | MODE-001         | Catastrophic  | Extremely Remote | High    | CTL-001, CTL-002    | Proposed control; validation pending     | DER / FAA                    | REQ-SAF-001, REQ-SAF-002, REQ-SAF-003, REQ-SAF-010 |
+| HZ-002  | Erroneous FMS guidance detected and annunciated                      | Single-channel software or hardware fault producing erroneous guidance on one channel | Crew receives annunciation; transitions to MODE-002 or hand-flies. Increased workload but safe flight maintained | MODE-001, MODE-002 | Major         | Remote     | Medium       | CTL-002, CTL-004    | Proposed control; validation pending     | DER / FAA                    | REQ-SAF-001, REQ-SAF-002          |
+| HZ-003  | Undetected erroneous navigation position (sensor fault)              | Faulty navigation sensor input accepted by FMS without detection/exclusion | Erroneous position drives guidance toward wrong path; potential terrain conflict or airspace violation | MODE-001         | Hazardous     | Remote     | High         | CTL-003             | Proposed control; validation pending     | DER / FAA                    | REQ-FUN-008, REQ-FUN-009          |
+| HZ-004  | Total loss of FMS navigation function                                | Dual-channel FMC failure, or loss of all navigation sensor inputs | No computed navigation solution; crew must revert to raw sensor data and manual navigation | MODE-001         | Hazardous     | Extremely Remote | Medium | CTL-004             | Proposed control; validation pending     | DER / FAA                    | REQ-SAF-004                        |
+| HZ-005  | Partition violation: DAL C function corrupts DAL A function           | ARINC 653 partition isolation failure allowing performance partition to overwrite navigation memory | Navigation or guidance data corruption; potential erroneous guidance output | MODE-001         | Catastrophic  | Extremely Improbable | Medium | CTL-005 | Proposed control; validation pending     | DER / FAA                    | REQ-SAF-005, REQ-SAF-006          |
+| HZ-006  | Loss of FMS display capability                                       | DMC hardware failure, DMC software fault, or IFC-INT-002 bus failure | Flight crew loses FMS navigation display and CDU; reduced situation awareness | MODE-001, MODE-004 | Major         | Remote     | Medium       | CTL-006             | Proposed control; validation pending     | DER / FAA                    | REQ-SAF-007                        |
+| HZ-007  | Total loss of FMS function (both channels and display)               | Dual FMC failure combined with DMC failure (common-cause: power, environment) | Complete loss of FMS navigation, guidance, and display; crew reverts to standby instruments | MODE-001         | Hazardous     | Extremely Remote | Medium | CTL-001, CTL-008    | Proposed control; validation pending     | DER / FAA                    | REQ-SAF-008                        |
+| HZ-008  | FMC processor lockup undetected                                      | Software fault causing infinite loop or deadlock; hardware fault causing processor halt | Affected channel produces stale or no output; if undetected, other channel may inherit stale data | MODE-001         | Hazardous     | Remote     | High         | CTL-008             | Proposed control; validation pending     | DER / FAA                    | REQ-SAF-009                        |
+| HZ-009  | Corrupted navigation database accepted as valid                      | Maintenance data load error; storage media corruption; deliberate tampering | FMS sequences to wrong waypoints; potential for CFIT or airspace violation | MODE-005, MODE-001 | Hazardous    | Remote     | High         | CTL-009             | Proposed control; validation pending     | DER / FAA                    | REQ-FUN-022, REQ-SEC-001           |
+| HZ-010  | Malicious datalink message corrupts active flight plan               | Cyber attack via ACARS/FANS interface injecting malformed or falsified flight plan data | FMS modifies active plan based on attacker input; potential for erroneous lateral/vertical path | MODE-001         | Hazardous     | Remote     | High         | CTL-009, CTL-003    | Proposed control; validation pending     | DER / FAA                    | REQ-SEC-003                        |
+| HZ-011  | Erroneous vertical guidance during approach causing altitude deviation | Software error in VNAV descent computation; wind model error; performance data fault | Aircraft deviates from approach path vertically; potential terrain conflict during approach phase | MODE-001         | Hazardous     | Remote     | High         | CTL-007             | Proposed control; validation pending     | DER / FAA                    | REQ-FUN-016, REQ-FUN-017          |
+| HZ-012  | Misleading FMS display showing incorrect aircraft position            | DMC receives valid FMC data but renders incorrectly; display software fault | Crew makes operational decisions based on wrong position information; potential loss of separation | MODE-001, MODE-004 | Major         | Remote     | Medium       | CTL-006             | Proposed control; validation pending     | DER / FAA                    | REQ-SAF-007                        |
 
 ## Risk Controls
 
 | CTL ID   | HZ ID(s)            | Description                                                                                   | Type                  | REQ ID(s)                           | VER ID(s)                          | Residual Risk Contribution               |
 |----------|----------------------|-----------------------------------------------------------------------------------------------|-----------------------|-------------------------------------|------------------------------------|------------------------------------------|
-| CTL-001  | HZ-001, HZ-007       | Dissimilar dual-channel FMC with independent software builds to defeat common-mode software faults | Reduction            | REQ-SAF-003, REQ-SAF-008, REQ-SAF-010 | VER-A-001, VER-A-006, VER-A-007 | Reduces common-mode software fault probability to below 10^-9/FH |
+| CTL-001  | HZ-001, HZ-007       | Dissimilar dual-channel FMC with independent software builds to defeat common-mode software faults | Reduction            | REQ-SAF-003, REQ-SAF-008, REQ-SAF-010 | VER-A-001, VER-A-006, VER-A-007 | Intended common-mode reduction; model counterexamples identify remaining paths; empirical rate and applicability unresolved |
 | CTL-002  | HZ-001, HZ-002       | Hardware cross-channel comparator with cycle-by-cycle output comparison and automatic failover   | Reduction            | REQ-SAF-001, REQ-SAF-002, REQ-IFC-005 | VER-T-002, VER-T-003           | Provides detection of divergent outputs within one computation cycle |
 | CTL-003  | HZ-003, HZ-010       | Navigation sensor fault detection and exclusion (FDE) algorithm with multi-sensor consistency checks | Reduction           | REQ-FUN-008, REQ-FUN-009, REQ-SEC-003 | VER-T-004, VER-A-002           | Detects and excludes faulty sensor inputs with P(detection) >= 0.999/FH |
 | CTL-004  | HZ-002, HZ-004       | Automatic transition to degraded modes (MODE-002, MODE-003) with crew annunciation               | Protective measure   | REQ-SAF-004, REQ-FUN-014            | VER-T-005                          | Ensures crew awareness and guidance inhibition on failure |
@@ -65,59 +67,45 @@ The analysis progresses through:
 
 ## Fault Analysis
 
-### Fault Tree: Undetected Erroneous FMS Guidance (HZ-001)
+### Fault Tree: HZ-001 — explicit dependency model
 
-This fault tree decomposes the Catastrophic failure condition of undetected erroneous FMS guidance to basic events with probability allocations. The top-level probability target is 1 x 10^-9 per flight hour per 14 CFR 25.1309.
+The comparator compares channels, not truth. Because this selected hazard path produces mutually consistent wrong outputs, BE6 is intentionally unused. External monitoring coverage and its independence must be established for the actual failure condition; TAWS is not assumed to cover all guidance errors.
 
 ```mermaid
-graph TD
-    TOP["HZ-001: Undetected Erroneous<br/>FMS Guidance<br/>Target: ≤ 1e-9/FH"]
-    TOP -->|AND| G1["Erroneous Guidance<br/>Output Produced"]
-    TOP -->|AND| G2["Error Not Detected<br/>by Any Monitor"]
-
-    G1 -->|OR| G1A["Common-Mode<br/>Software Fault<br/>(Both Channels)"]
-    G1 -->|OR| G1B["Common-Mode<br/>Input Error<br/>(Sensor/DB)"]
-    G1 -->|OR| G1C["Common-Mode<br/>Hardware Fault"]
-
-    G1A --> BE1["Specification Error<br/>in Navigation Req<br/>P ≤ 1e-5/FH"]
-    G1A --> BE2["Common Compiler/<br/>Tool Fault<br/>P ≤ 1e-5/FH<br/>(mitigated by<br/>dissimilar tools)"]
-
-    G1B --> BE3["All Nav Sensors<br/>Produce Consistent<br/>But Erroneous Data<br/>P ≤ 1e-6/FH"]
-    G1B --> BE4["Corrupted Nav<br/>Database Accepted<br/>P ≤ 1e-7/FH<br/>(mitigated by CTL-009)"]
-
-    G1C --> BE5["Common Power/<br/>Thermal Fault<br/>Affecting Both<br/>Channels<br/>P ≤ 1e-6/FH"]
-
-    G2 -->|AND| G2A["Cross-Channel<br/>Comparator Fails<br/>to Detect"]
-    G2 -->|AND| G2B["Crew Does Not<br/>Detect via<br/>Cross-Check"]
-    G2 -->|AND| G2C["TAWS/EGPWS<br/>Does Not Alert"]
-
-    G2A --> BE6["Comparator<br/>Hardware Fault<br/>P ≤ 1e-5/FH"]
-
-    G2B --> BE7["Crew Inattention<br/>During Cruise<br/>P ≤ 1e-2/FH"]
-
-    G2C --> BE8["TAWS Alert<br/>Suppressed or<br/>Unavailable<br/>P ≤ 1e-3/FH"]
-
-    style TOP fill:#ff6b6b,color:#000
-    style G1 fill:#ffa07a,color:#000
-    style G2 fill:#ffa07a,color:#000
+flowchart TD
+  BE1["BE1: Shared specification error produces consistent wrong guidance"]
+  BE2["BE2: Common tool error produces consistent wrong guidance"]
+  BE3["BE3: Consistent erroneous navigation sensor inputs"]
+  BE4["BE4: Corrupted navigation database accepted"]
+  BE5["BE5: Common power/thermal corruption produces erroneous guidance"]
+  BE6["BE6: Cross-channel comparator hardware misses disagreement"]
+  BE7["BE7: Crew cross-check does not detect the guidance error"]
+  BE8["BE8: Terrain warning does not detect this guidance error"]
+  BE9["BE9: Shared context/dependency defeats both external detection opportunities"]
+  G1["G1: OR"]
+  G1 --> BE1
+  G1 --> BE2
+  G1 --> BE3
+  G1 --> BE4
+  G1 --> BE5
+  G2["G2: OR"]
+  G2 --> G3
+  G2 --> BE9
+  G3["G3: AND"]
+  G3 --> BE7
+  G3 --> BE8
+  TOP["TOP: AND"]
+  TOP --> G1
+  TOP --> G2
 ```
 
-**Cut set analysis:**
-
-The top event requires BOTH an erroneous guidance output AND failure of all detection mechanisms. The dominant cut set is:
-
-- Specification error (BE1) AND Comparator fails (BE6) AND Crew inattention (BE7) AND TAWS unavailable (BE8)
-- P = 1e-5 x 1e-5 x 1e-2 x 1e-3 = 1e-15/FH (well below 1e-9 target)
-
-The dissimilar software architecture (CTL-001) makes common-mode software faults (G1A) the primary concern, while the cross-channel comparator (CTL-002) and independent monitors (TAWS, crew) provide defense in depth. The quantitative analysis confirms the architecture meets the 1e-9/FH probability target with significant margin.
-
-**Sensitivity:** The most sensitive parameter is the specification error rate (BE1). If the specification error rate increases to 1e-3/FH (e.g., due to inadequate requirements review), the dominant cut set probability rises to 1e-13/FH -- still within budget but with reduced margin. This drives the requirement for independent requirements review per DO-178C Table A-3 at Level A.
+The machine-readable [failure model](analysis/failure-model.json) is authoritative for this authored abstraction. [Executed results and interpretation](analysis/report.md) provide complete minimal cuts, scenario calculations, proof obligations and retained counterexamples. Event IDs from the earlier model retain their stated failure meaning; new shared-dependency events are explicit. Probabilities are synthetic per-demand inputs under the declared mutual-independence hypothesis after shared events are represented. No flight-hour rate, ASIL/SIL achievement, physical effectiveness or risk acceptance follows from these results.
 
 ## PSSA / SSA Progression
 
 ### PSSA (Preliminary System Safety Assessment)
 
-The PSSA was initiated at the system architecture definition phase and iterates as the architecture matures. Current PSSA outputs:
+The proposed PSSA work starts from the architecture and is revised with evidence. The following are illustrative allocation targets, not demonstrated results or automatically applicable regulatory limits:
 
 | Failure Condition (HZ ID) | Classification | Quantitative Target     | Allocated To                           | PSSA Method         |
 |---------------------------|----------------|-------------------------|----------------------------------------|---------------------|
@@ -153,7 +141,7 @@ The CMA addresses independence claims critical to the safety argument:
 |---------------------------------------------|-------------------------------------------|-----------------------------------------------------------|----------|
 | FMC Channel A independent of Channel B       | Shared power supply                       | Independent power regulators per channel; power supply monitoring | Analysis planned |
 | FMC Channel A independent of Channel B       | Shared requirements specification         | Independent requirements interpretation review; dissimilar algorithms | Review planned |
-| FMC Channel A independent of Channel B       | Shared development environment            | Different compilers, different host tools per channel      | Evidence collected |
+| FMC Channel A independent of Channel B       | Shared development environment            | Different compilers, different host tools per channel      | Evidence collection planned |
 | FMC Channel A independent of Channel B       | Shared thermal environment                | Thermal analysis; channel separation within LRU enclosure | Analysis planned |
 | Navigation partition independent of Perf partition | ARINC 653 RTOS failure                | RTOS qualified to DAL A; partition testing per ARINC 653 | Test planned |
 | FMC independent of DCU                       | Shared AFDX network fault                 | AFDX virtual link isolation; FMC can operate on last-known data | Analysis planned |

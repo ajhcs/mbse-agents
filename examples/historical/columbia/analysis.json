@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-06",
+  "slug": "columbia",
+  "title": "Columbia: keep anomalies visible across organizational boundaries",
+  "year": 2003,
+  "domain": "space",
+  "outcome": "failure",
+  "focus": "Successful previous operations do not resolve an unexplained hazard; information flow is part of system performance.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-06-S1",
+      "title": "Columbia Accident Investigation Board Report, Volume I",
+      "url": "https://www.nasa.gov/wp-content/uploads/static/history/columbia/reports/CAIBreportv1.pdf",
+      "publication_date": "2003-08",
+      "locator": "Chapter 6, especially section 6.3; Chapter 7, sections 7.1–7.6",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-06-F1",
+      "statement": "The board examined the physical damage from debris together with organizational conditions that shaped risk interpretation and decisions.",
+      "source_ids": [
+        "HG-06-S1"
+      ],
+      "locator": "Chapters 6–7"
+    },
+    {
+      "id": "HG-06-F2",
+      "statement": "It identified reliance on past success, communication barriers, inhibited dissent, and weak integration of safety information among organizational contributors.",
+      "source_ids": [
+        "HG-06-S1"
+      ],
+      "locator": "Chapter 7, introduction and sections 7.1–7.6"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Vehicle damage, imagery requests, analysis assumptions, mission management, technical authority, and possible response options define the in-flight assessment system.",
+    "interfaces": [
+      "Observation → analysis: uncertainty about damage must remain visible through analytical approximations.",
+      "Analysis → management: the decision need includes what is unknown and what additional information could change."
+    ],
+    "decision": {
+      "question": "How should repeated anomalies affect readiness and in-flight assessment?",
+      "options": [
+        "Use the history of successful missions to close the concern.",
+        "Reassess the hazard, identify missing observations, and track assumptions to their decision consequence."
+      ],
+      "recommendation": "Require a mechanism-based explanation before treating recurrence as acceptable.",
+      "uncertainty": "Better information does not guarantee a successful rescue or repair; feasibility needs separate evidence."
+    },
+    "artifact": {
+      "id": "HG-06-A1",
+      "type": "Anomaly-to-decision trace",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Observation",
+          "Separate measured facts from inferred damage",
+          "Image provenance, coverage, and resolution limits"
+        ],
+        [
+          "Analysis assumption",
+          "Connect each simplification to the affected conclusion",
+          "Sensitivity or bounding evidence"
+        ],
+        [
+          "Decision need",
+          "State which response could change with new information",
+          "Time window, feasibility assessment, and accountable authority"
+        ]
+      ]
+    },
+    "questions": [
+      "What makes a previous anomaly informative about the next flight?",
+      "How can a request for more data be translated into a concrete decision need?",
+      "Write a status update that preserves technical uncertainty across management levels."
+    ],
+    "answer_signals": [
+      "Avoids normalizing an unexplained event from favorable outcomes.",
+      "Separates obtaining information from proving a viable response.",
+      "Links communication structure to missing or distorted evidence."
+    ],
+    "transfer_exercise": "Synthetic: an autonomous vehicle reports recurring unexplained impact indications. Produce a one-page issue disposition with reopening criteria.",
+    "limits": "The gallery does not assert that a particular counterfactual intervention would have saved the crew."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

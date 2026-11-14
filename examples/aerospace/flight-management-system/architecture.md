@@ -1,5 +1,7 @@
 # Architecture
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## System Context
 
 ```mermaid
@@ -223,7 +225,7 @@ The FMC and DMC are separate LRUs with no shared processing or memory. The inter
 
 **Decision:** Use two dissimilar software channels with a hardware comparator rather than triple modular redundancy (TMR) with identical software.
 
-**Rationale:** The primary threat to a navigation/guidance computer is a systematic software design error that produces a misleading unannunciated output. TMR with identical software provides no protection against this failure mode. Dissimilar software defeats common-mode software faults at the cost of increased development effort (two software builds). The hardware comparator provides the detection mechanism. This approach is proven in prior Part 25 FMS programs and is well understood by certification authorities.
+**Rationale:** A systematic error can produce mutually consistent misleading guidance. Dissimilar implementations are proposed to reduce shared implementation faults, but shared requirements, navigation inputs, databases and environmental dependencies remain. Equality comparison detects disagreement; it cannot determine that agreeing outputs are correct. The executed HZ-001 study retains that counterexample. Establish external monitoring coverage against specific error classes and test shared inputs before crediting the architecture.
 
 **Trade-off:** Higher development cost and schedule, dual verification campaigns, complexity in managing two software baselines. Accepted because the alternative (identical redundancy) would require additional architectural mitigations that carry their own certification burden.
 

@@ -1,8 +1,10 @@
 # Traceability
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Trace Strategy
 
-This traceability matrix establishes bidirectional linkage across all QPCS system engineering artifacts. Forward traces demonstrate that every requirement is allocated, sourced, and verified. Reverse traces confirm that every component, hazard, and verification activity connects back to a requirement. Gaps are first-class entries with disposition, not omissions.
+This traceability matrix establishes bidirectional linkage across all QPCS system engineering artifacts. Forward and reverse links identify proposed allocations, sources and verification activities. Executed evidence is separately scoped; links do not establish requirement satisfaction or complete coverage. Gaps are first-class entries with disposition, not omissions.
 
 **Traced entities:**
 - Requirements (REQ-) to architecture components (CMP-)
@@ -184,18 +186,18 @@ This traceability matrix establishes bidirectional linkage across all QPCS syste
 
 ### Hazards to Controls to Requirements
 
-| HZ ID   | CTL ID(s)                 | REQ ID(s)                                                                | Fully Mitigated? |
+| HZ ID   | CTL ID(s)                 | REQ ID(s)                                                                | Control verification status |
 |---------|---------------------------|--------------------------------------------------------------------------|------------------|
-| HZ-001  | CTL-001, CTL-002          | REQ-FUN-003, REQ-FUN-007, REQ-SAF-001, REQ-SAF-002                      | Yes              |
-| HZ-002  | CTL-003, CTL-004          | REQ-FUN-013, REQ-SAF-003, REQ-SAF-004                                   | Yes              |
-| HZ-003  | CTL-005, CTL-002, CTL-003 | REQ-SAF-005, REQ-FUN-018, REQ-FUN-007, REQ-FUN-013                      | Yes              |
-| HZ-004  | CTL-006                   | REQ-FUN-021                                                              | Yes              |
-| HZ-005  | CTL-008, CTL-009          | REQ-SAF-006, REQ-SAF-007, REQ-SAF-008, REQ-SAF-009                      | Yes              |
-| HZ-006  | CTL-007                   | REQ-FUN-003, REQ-FUN-022                                                 | Yes              |
-| HZ-007  | CTL-001, CTL-002, CTL-003 | REQ-FUN-003, REQ-FUN-007, REQ-FUN-013                                    | Yes              |
-| HZ-008  | CTL-006, CTL-010          | REQ-FUN-021, REQ-FUN-022                                                 | Yes              |
-| HZ-009  | CTL-009, CTL-011          | REQ-SAF-008, REQ-SAF-010                                                 | Yes              |
-| HZ-010  | CTL-008, CTL-012          | REQ-SAF-006, REQ-SAF-009                                                 | Yes              |
+| HZ-001  | CTL-001, CTL-002          | REQ-FUN-003, REQ-FUN-007, REQ-SAF-001, REQ-SAF-002                      | Planned physical verification |
+| HZ-002  | CTL-003, CTL-004          | REQ-FUN-013, REQ-SAF-003, REQ-SAF-004                                   | Planned physical verification |
+| HZ-003  | CTL-005, CTL-002, CTL-003 | REQ-SAF-005, REQ-FUN-018, REQ-FUN-007, REQ-FUN-013                      | Planned physical verification |
+| HZ-004  | CTL-006                   | REQ-FUN-021                                                              | Planned physical verification |
+| HZ-005  | CTL-008, CTL-009          | REQ-SAF-006, REQ-SAF-007, REQ-SAF-008, REQ-SAF-009                      | Planned physical verification |
+| HZ-006  | CTL-007                   | REQ-FUN-003, REQ-FUN-022                                                 | Planned physical verification |
+| HZ-007  | CTL-001, CTL-002, CTL-003 | REQ-FUN-003, REQ-FUN-007, REQ-FUN-013                                    | Planned physical verification |
+| HZ-008  | CTL-006, CTL-010          | REQ-FUN-021, REQ-FUN-022                                                 | Planned physical verification |
+| HZ-009  | CTL-009, CTL-011          | REQ-SAF-008, REQ-SAF-010                                                 | Planned physical verification |
+| HZ-010  | CTL-008, CTL-012          | REQ-SAF-006, REQ-SAF-009                                                 | Planned physical verification |
 
 ### Verification to Requirements
 
@@ -263,13 +265,16 @@ This traceability matrix establishes bidirectional linkage across all QPCS syste
 | GAP-002 | Incomplete formal verification coverage | REQ-FUN-003 | The formal verifier (CMP-RTO-01E) checks timing, power, and frequency constraints, but the completeness of the verification model against all possible qubit damage modes is an open research question. The model may not capture all physically realizable failure modes | Planned: commission independent review of verification model completeness; accept residual risk of model incompleteness with hardware interlock as backup |
 | GAP-003 | Emerging standards gap  | REQ-SAF-007    | IEC 61508 PFDavg target for the safety interlock is based on the assumption that SIL 2 is appropriate for quantum processor protection. No industry-specific standard for quantum hardware safety exists. If a quantum computing safety standard emerges, the SIL assignment may need revision | Accepted: IEC 61508 is the best-available framework; monitor emerging standards through IEEE and IEC working groups |
 
-## Coverage Summary
+## Record inventory and coverage boundary
 
-- **Requirements with architecture allocation**: 40/40 (100%)
-- **Safety requirements with hazard source**: 10/10 (100%)
-- **Requirements with verification activity**: 40/40 (100%)
-- **Verification activities with evidence artifact**: 52/52 (100%)
-- **Components with at least one requirement**: 25/26 (96.2%) — GAP-001 (CMP-CRE-01C)
-- **Hazards with at least one control**: 10/10 (100%)
-- **Controls with at least one requirement**: 12/12 (100%)
-- **Gaps registered**: 3 (2 dispositioned as Planned, 1 as Accepted)
+The current checker counts 47 REQ records, 27 CMP records, 15 FUN records, 21 IFC records, 10 HZ records, 12 CTL records, 54 VER records, 31 EVD records. It checks declared IDs, selected record links, evidence lifecycle/path consistency and reproducible model results.
+
+These counts are inventories, not percentages of engineering completeness. A planned procedure or proposed artifact is not verification evidence. Applicability, requirement coverage, procedure adequacy, independent review and physical performance remain open. The gap register retains specific missing allocations and review obligations.
+
+## Executed model activities
+
+| Activity | Selected claim | Evidence | Lifecycle | Closure boundary |
+| --- | --- | --- | --- | --- |
+| VER-MODEL-001 | HZ-001 Boolean paths, dependency assumptions and scenario arithmetic | EVD-MODEL-001 | Executed | Authored static model only; physical requirements remain open |
+
+[Executed model study](analysis/report.md). These additional activities do not change the original planned physical-procedure totals.

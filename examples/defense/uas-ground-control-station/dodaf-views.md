@@ -1,5 +1,7 @@
 # DoDAF / UAF Architecture Views
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Viewpoint Selection Rationale
 
 The following DoDAF 2.02 viewpoints are selected based on the ACAT II milestone decision review requirements and the program's architecture governance needs. Operational views (OV) establish the mission context and stakeholder information exchanges. Systems views (SV) map the physical architecture to operational activities. Data and information views (DIV) define the logical data model for inter-subsystem communication. Each view maps to a specific DI-SESS CDRL and technical review gate.

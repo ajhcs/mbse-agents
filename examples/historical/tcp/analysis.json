@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-15",
+  "slug": "tcp",
+  "title": "TCP: define what an acknowledgment means",
+  "year": 1981,
+  "domain": "communications_computing",
+  "outcome": "design_baseline",
+  "focus": "A useful interface states both the service it provides and the stronger claims it does not establish.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-15-S1",
+      "title": "RFC 793, Transmission Control Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc793.txt",
+      "publication_date": "1981-09",
+      "locator": "Sections 1.4–1.5, 2.4, and 2.6; section 3.9",
+      "source_type": "original_specification",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Historical specification, subsequently superseded. This case studies the 1981 service boundary, not current TCP implementation requirements."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-15-F1",
+      "statement": "RFC 793 describes reliable ordered delivery using sequence numbers, acknowledgments, retransmission, and receive windows.",
+      "source_ids": [
+        "HG-15-S1"
+      ],
+      "locator": "Section 2.6, pp. 9–10"
+    },
+    {
+      "id": "HG-15-F2",
+      "statement": "It explicitly distinguishes receiving-TCP responsibility from delivery to the end user when describing acknowledgment semantics.",
+      "source_ids": [
+        "HG-15-S1"
+      ],
+      "locator": "Section 2.6, p. 10"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Application sender, transport endpoints, network, receiving application, and any durable business operation must be distinguished.",
+    "interfaces": [
+      "Transport → application: receipt by a transport endpoint is weaker than application processing or durable commit.",
+      "Application retry → remote operation: retry semantics require an application-level decision."
+    ],
+    "decision": {
+      "question": "Can a transport acknowledgment close a claim that a business operation completed?",
+      "options": [
+        "Treat receipt as completion.",
+        "Define an application result and recovery protocol with separate durability and duplicate-handling claims."
+      ],
+      "recommendation": "State the acceptance boundary in the vocabulary of the stakeholder’s operation.",
+      "uncertainty": "The historical protocol alone does not establish exactly-once processing, persistent storage, or operator acknowledgment."
+    },
+    "artifact": {
+      "id": "HG-15-A1",
+      "type": "Layered acknowledgment contract",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Transport receipt",
+          "Bytes accepted by the receiving transport",
+          "Protocol-level observation"
+        ],
+        [
+          "Application acceptance",
+          "Request parsed and accepted for a named operation",
+          "Application response with request identity"
+        ],
+        [
+          "Durable outcome",
+          "Committed or explicitly unresolved after interruption",
+          "Recovery query and duplicate-handling evidence"
+        ]
+      ]
+    },
+    "questions": [
+      "Which stronger claims are often smuggled into the word delivered?",
+      "What should a client do when an operation times out after possibly completing?",
+      "Explain acknowledgment semantics to a non-network stakeholder in two sentences."
+    ],
+    "answer_signals": [
+      "Separates receipt, processing, persistence, and business outcome.",
+      "Identifies ambiguity without promising exactly-once semantics.",
+      "Places evidence at the layer responsible for the claim."
+    ],
+    "transfer_exercise": "Synthetic: an industrial controller receives a command over a reliable connection. Define the acknowledgments needed before an operator can claim the physical action occurred.",
+    "limits": "No networking benchmark or current protocol compliance test was run. The artifact is an application-level teaching proposal."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

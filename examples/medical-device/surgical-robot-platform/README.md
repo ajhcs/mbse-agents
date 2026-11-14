@@ -1,5 +1,7 @@
 # Surgical Robot Platform
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Overview
 
 The Surgical Robot Platform is a multi-arm teleoperated surgical system for minimally invasive procedures including general surgery, gynecology, and urology. The system uses a master-slave architecture in which a surgeon seated at an ergonomic console manipulates hand controllers and foot pedals that map to articulated instrument arms and an endoscopic camera at the patient-side cart. Haptic feedback provides force sensing from tissue interaction back to the surgeon's hands. A stereoscopic vision system delivers 3D high-definition imagery with instrument overlay and anatomical annotation. The system is classified FDA Class II via the De Novo pathway (no substantially equivalent predicate device) and EU MDR Class IIb. Embedded software is IEC 62304 Class C.

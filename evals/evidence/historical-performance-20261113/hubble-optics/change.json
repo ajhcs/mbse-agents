@@ -1,0 +1,23 @@
+{
+  "id": "HG-03-CH1",
+  "status": "synthetic_transfer_exercise",
+  "historical_provenance": false,
+  "title": "Replace the fixture but retain a shared calibration chain",
+  "description": "A fictional laboratory proposes a replacement fixture. Its two analysis computers agree, but both use one generated geometry file. An auxiliary measurement disagrees and has been labeled unreliable without a documented cause.",
+  "affected_interface_ids": [
+    "HG-03-I1",
+    "HG-03-I2",
+    "HG-03-I3",
+    "HG-03-I4"
+  ],
+  "affected_claim_ids": [
+    "HG-03-C2",
+    "HG-03-C3"
+  ],
+  "decision_requested": "Decide whether to close acceptance of the replacement fixture and select the next discriminating check.",
+  "constraints": [
+    "No numerical uncertainty budget is supplied.",
+    "No result may be discarded solely because it disagrees with the preferred instrument.",
+    "This is a metrology review exercise, not an optical redesign."
+  ]
+}

@@ -1,5 +1,7 @@
 # Hazard Analysis
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Methodology
 
 This hazard analysis follows MIL-STD-882E (Department of Defense Standard Practice: System Safety). The scope covers the UAS Ground Control Station as defined in the system boundary (README.md), analyzed across all operating modes (MODE-001 through MODE-005). The analysis applies the MIL-STD-882E hazard risk assessment process including hazard identification, initial risk assessment, hazard risk reduction, residual risk assessment, and risk acceptance.
@@ -68,18 +70,18 @@ This hazard analysis follows MIL-STD-882E (Department of Defense Standard Practi
 
 | HZ ID   | Description                                                         | Cause(s)                                                          | Effect                                                                      | MODE ID(s)        | Severity | Probability | Initial Risk | CTL ID(s)            | Residual Risk | Owner / Acceptance Authority | REQ ID(s)                               |
 |---------|---------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------------------------|-------------------|----------|-------------|--------------|----------------------|---------------|------------------------------|-----------------------------------------|
-| HZ-001  | Undetected loss of all C2 links to air vehicle                      | C2 link monitoring failure; heartbeat timer fault; software fault in link status assessment | AV continues on last command without GCS awareness; AV may deviate into restricted airspace or populated area | MODE-001          | I        | D           | Medium       | CTL-001              | Low           | PM                           | REQ-FUN-006, REQ-SAF-001, REQ-SAF-004, REQ-SAF-006 |
-| HZ-002  | Detected C2 link loss with delayed lost link procedure execution     | Software fault in lost link sequencing; operator overload delays ATC notification | AV executing autonomous profile but ATC not notified; mid-air collision risk with manned traffic | MODE-001, MODE-003 | I        | D           | Medium       | CTL-001, CTL-002     | Low           | PM                           | REQ-FUN-007, REQ-SAF-001, REQ-SAF-002 |
-| HZ-003  | ACAS Xu advisory not presented or presented too late                 | Software fault in ACAS processing; C2 link latency exceeds deconfliction time window; display failure | UAS fails to execute avoidance maneuver; potential mid-air collision with cooperative or non-cooperative traffic | MODE-001          | I        | D           | Medium       | CTL-003              | Low           | PM                           | REQ-FUN-010                             |
-| HZ-004  | Flight-safety commands starved by sensor video bandwidth             | Bandwidth allocation algorithm failure; QoS misconfiguration; sensor stream consumes all available bandwidth | Flight commands delayed or dropped; AV does not receive timely altitude/heading changes | MODE-001          | II       | D           | Medium       | CTL-006              | Low           | PM                           | REQ-FUN-013                             |
-| HZ-005  | Inadvertent or unauthorized flight termination command               | Single-operator error; authentication bypass; software fault in termination logic | AV destroyed; potential ground casualties from unplanned impact location | MODE-001, MODE-005 | I        | D           | Medium       | CTL-005              | Low           | PM                           | REQ-FUN-008, REQ-SAF-003               |
-| HZ-006  | Flight command routed to wrong air vehicle                           | Vehicle ID mismatch in routing table; software fault in multi-vehicle routing logic | Unintended AV executes command meant for different vehicle; potential airspace violation or collision | MODE-001          | II       | D           | Medium       | CTL-007              | Low           | PM                           | REQ-FUN-015, REQ-SAF-007               |
-| HZ-007  | UAS exits approved geofence boundary                                | Geofence enforcement failure; operator overrides geofence; lost link profile does not respect geofence | AV enters restricted airspace or populated area; mid-air collision risk or ground impact risk | MODE-001, MODE-003 | I        | D           | Medium       | CTL-008              | Low           | PM                           | REQ-FUN-017, REQ-SAF-005               |
-| HZ-008  | Corrupted mission plan accepted and transmitted to air vehicle       | Software fault in plan validation; data corruption in mission planning database | AV executes plan with invalid waypoints; potential terrain collision or airspace violation | MODE-001          | II       | D           | Medium       | CTL-008              | Low           | PM                           | REQ-FUN-002                             |
-| HZ-009  | Loss of all GCS BIT detection allowing dispatch with latent faults   | BIT software fault; health monitoring covers insufficient fault modes | GCS operates with undetected faults that combine with active faults during mission; reduced safety margins | MODE-004, MODE-001 | III      | C           | Medium       | CTL-009              | Low           | PM                           | REQ-FUN-020                             |
-| HZ-010  | Corrupted or tampered software loaded onto GCS                       | Maintenance error; media corruption; supply chain compromise | GCS operates with compromised flight-critical software; erroneous commands possible | MODE-004, MODE-001 | II       | D           | Medium       | CTL-010              | Low           | PM                           | REQ-FUN-021                             |
-| HZ-011  | COMSEC failure exposes C2 link to interception or spoofing           | Cryptographic key compromise; COMSEC module failure; key management error | Adversary intercepts or injects commands on C2 link; AV executes adversary commands | MODE-001          | I        | E           | Low          | CTL-011              | Low           | Delegated by PM              | REQ-FUN-014                             |
-| HZ-012  | Erroneous target coordinates transmitted downstream from mensuration | Software fault in coordinate computation; DEM data error; AV position error exceeds budget | Incorrect target location provided to PED/engagement chain; potential fratricide or collateral damage | MODE-001          | I        | D           | Medium       | CTL-012              | Low           | PM                           | REQ-FUN-019                             |
+| HZ-001  | Undetected loss of all C2 links to air vehicle                      | C2 link monitoring failure; heartbeat timer fault; software fault in link status assessment | AV continues on last command without GCS awareness; AV may deviate into restricted airspace or populated area | MODE-001          | I        | D           | Medium       | CTL-001              | Unassessed | PM                           | REQ-FUN-006, REQ-SAF-001, REQ-SAF-004, REQ-SAF-006 |
+| HZ-002  | Detected C2 link loss with delayed lost link procedure execution     | Software fault in lost link sequencing; operator overload delays ATC notification | AV executing autonomous profile but ATC not notified; mid-air collision risk with manned traffic | MODE-001, MODE-003 | I        | D           | Medium       | CTL-001, CTL-002     | Unassessed | PM                           | REQ-FUN-007, REQ-SAF-001, REQ-SAF-002 |
+| HZ-003  | ACAS Xu advisory not presented or presented too late                 | Software fault in ACAS processing; C2 link latency exceeds deconfliction time window; display failure | UAS fails to execute avoidance maneuver; potential mid-air collision with cooperative or non-cooperative traffic | MODE-001          | I        | D           | Medium       | CTL-003              | Unassessed | PM                           | REQ-FUN-010                             |
+| HZ-004  | Flight-safety commands starved by sensor video bandwidth             | Bandwidth allocation algorithm failure; QoS misconfiguration; sensor stream consumes all available bandwidth | Flight commands delayed or dropped; AV does not receive timely altitude/heading changes | MODE-001          | II       | D           | Medium       | CTL-006              | Unassessed | PM                           | REQ-FUN-013                             |
+| HZ-005  | Inadvertent or unauthorized flight termination command               | Single-operator error; authentication bypass; software fault in termination logic | AV destroyed; potential ground casualties from unplanned impact location | MODE-001, MODE-005 | I        | D           | Medium       | CTL-005              | Unassessed | PM                           | REQ-FUN-008, REQ-SAF-003               |
+| HZ-006  | Flight command routed to wrong air vehicle                           | Vehicle ID mismatch in routing table; software fault in multi-vehicle routing logic | Unintended AV executes command meant for different vehicle; potential airspace violation or collision | MODE-001          | II       | D           | Medium       | CTL-007              | Unassessed | PM                           | REQ-FUN-015, REQ-SAF-007               |
+| HZ-007  | UAS exits approved geofence boundary                                | Geofence enforcement failure; operator overrides geofence; lost link profile does not respect geofence | AV enters restricted airspace or populated area; mid-air collision risk or ground impact risk | MODE-001, MODE-003 | I        | D           | Medium       | CTL-008              | Unassessed | PM                           | REQ-FUN-017, REQ-SAF-005               |
+| HZ-008  | Corrupted mission plan accepted and transmitted to air vehicle       | Software fault in plan validation; data corruption in mission planning database | AV executes plan with invalid waypoints; potential terrain collision or airspace violation | MODE-001          | II       | D           | Medium       | CTL-008              | Unassessed | PM                           | REQ-FUN-002                             |
+| HZ-009  | Loss of all GCS BIT detection allowing dispatch with latent faults   | BIT software fault; health monitoring covers insufficient fault modes | GCS operates with undetected faults that combine with active faults during mission; reduced safety margins | MODE-004, MODE-001 | III      | C           | Medium       | CTL-009              | Unassessed | PM                           | REQ-FUN-020                             |
+| HZ-010  | Corrupted or tampered software loaded onto GCS                       | Maintenance error; media corruption; supply chain compromise | GCS operates with compromised flight-critical software; erroneous commands possible | MODE-004, MODE-001 | II       | D           | Medium       | CTL-010              | Unassessed | PM                           | REQ-FUN-021                             |
+| HZ-011  | COMSEC failure exposes C2 link to interception or spoofing           | Cryptographic key compromise; COMSEC module failure; key management error | Adversary intercepts or injects commands on C2 link; AV executes adversary commands | MODE-001          | I        | E           | Low          | CTL-011              | Unassessed | Delegated by PM              | REQ-FUN-014                             |
+| HZ-012  | Erroneous target coordinates transmitted downstream from mensuration | Software fault in coordinate computation; DEM data error; AV position error exceeds budget | Incorrect target location provided to PED/engagement chain; potential fratricide or collateral damage | MODE-001          | I        | D           | Medium       | CTL-012              | Unassessed | PM                           | REQ-FUN-019                             |
 
 ## Risk Controls
 
@@ -100,48 +102,49 @@ This hazard analysis follows MIL-STD-882E (Department of Defense Standard Practi
 
 ## Fault Analysis
 
-### Fault Tree: Undetected C2 Link Loss Leading to Uncontrolled AV (HZ-001)
+### Fault Tree: HZ-001 — explicit dependency model
 
-This fault tree decomposes the Catastrophic failure condition of undetected C2 link loss to basic events. The top-level probability target is 1 x 10^-6 per flight hour per the MIL-STD-882E risk assessment.
+The top event is undetected communication loss at the ground station. It does not by itself establish uncontrolled aircraft behavior: onboard lost-link behavior is a separate unresolved interface. Shared monitoring dependency BE9 appears once even though it defeats two monitors.
 
 ```mermaid
-graph TD
-    TOP["HZ-001: Undetected C2 Link Loss<br/>Leading to Uncontrolled AV<br/>Target: ≤ 1e-6/FH"]
-    TOP -->|AND| G1["All C2 Links Actually Lost"]
-    TOP -->|AND| G2["Link Loss Not Detected<br/>by GCS"]
-
-    G1 -->|AND| G1A["LOS Link<br/>Path Failed"]
-    G1 -->|AND| G1B["BLOS Link<br/>Path Failed"]
-
-    G1A --> BE1["LOS RF<br/>Equipment Failure<br/>P ≤ 1e-3/FH"]
-    G1A --> BE2["LOS Antenna<br/>Pointing Error<br/>P ≤ 1e-4/FH"]
-
-    G1B --> BE3["SATCOM Terminal<br/>Failure<br/>P ≤ 1e-3/FH"]
-    G1B --> BE4["Satellite<br/>Transponder<br/>Failure<br/>P ≤ 1e-4/FH"]
-
-    G2 -->|AND| G2A["Heartbeat Timer<br/>Fails to Expire"]
-    G2 -->|AND| G2B["Link Health Monitor<br/>Reports Healthy<br/>Despite Loss"]
-    G2 -->|AND| G2C["Operator Does Not<br/>Detect via Telemetry<br/>Staleness"]
-
-    G2A --> BE5["Timer Software<br/>Fault<br/>P ≤ 1e-5/FH"]
-    G2B --> BE6["Link Status<br/>Assessment Fault<br/>P ≤ 1e-5/FH"]
-    G2C --> BE7["Operator<br/>Inattention<br/>P ≤ 1e-2/FH"]
-
-    style TOP fill:#ff6b6b,color:#000
-    style G1 fill:#ffa07a,color:#000
-    style G2 fill:#ffa07a,color:#000
+flowchart TD
+  BE1["BE1: LOS RF equipment unavailable"]
+  BE2["BE2: LOS antenna pointing path unavailable"]
+  BE3["BE3: SATCOM terminal unavailable"]
+  BE4["BE4: Satellite communication service unavailable"]
+  BE5["BE5: Heartbeat timeout detection fails"]
+  BE6["BE6: Link-health assessment incorrectly remains healthy"]
+  BE7["BE7: Operator does not identify stale telemetry"]
+  BE8["BE8: Shared power/infrastructure removes both communication paths"]
+  BE9["BE9: Shared stale-data/clock dependency defeats automated monitors"]
+  G1A["G1A: OR"]
+  G1A --> BE1
+  G1A --> BE2
+  G1B["G1B: OR"]
+  G1B --> BE3
+  G1B --> BE4
+  G1C["G1C: AND"]
+  G1C --> G1A
+  G1C --> G1B
+  G1["G1: OR"]
+  G1 --> G1C
+  G1 --> BE8
+  G2A["G2A: OR"]
+  G2A --> BE5
+  G2A --> BE9
+  G2B["G2B: OR"]
+  G2B --> BE6
+  G2B --> BE9
+  G2["G2: AND"]
+  G2 --> G2A
+  G2 --> G2B
+  G2 --> BE7
+  TOP["TOP: AND"]
+  TOP --> G1
+  TOP --> G2
 ```
 
-**Cut set analysis:**
-
-The top event requires BOTH actual link loss AND failure of all detection mechanisms. The dominant cut set is:
-
-- LOS failure (BE1) AND BLOS failure (BE3) AND Timer fault (BE5) AND Monitor fault (BE6) AND Operator inattention (BE7)
-- P = 1e-3 x 1e-3 x 1e-5 x 1e-5 x 1e-2 = 1e-18/FH (well below 1e-6 target)
-
-The dual-path C2 link architecture (CTL-001) combined with independent heartbeat monitoring and operator cross-check provides defense in depth. The quantitative analysis confirms the architecture meets the risk target with significant margin.
-
-**Sensitivity:** The most sensitive parameters are the link path failure rates (BE1, BE3). If both link paths experience correlated failure (e.g., common power supply), the effective probability increases. Common-mode analysis addresses shared power (mitigated by independent power regulators) and shared ground infrastructure (mitigated by separate LOS and SATCOM facilities).
+The machine-readable [failure model](analysis/failure-model.json) is authoritative for this authored abstraction. [Executed results and interpretation](analysis/report.md) provide complete minimal cuts, scenario calculations, proof obligations and retained counterexamples. Event IDs from the earlier model retain their stated failure meaning; new shared-dependency events are explicit. Probabilities are synthetic per-demand inputs under the declared mutual-independence hypothesis after shared events are represented. No flight-hour rate, ASIL/SIL achievement, physical effectiveness or risk acceptance follows from these results.
 
 ## MIL-STD-882E Risk Acceptance
 
@@ -149,28 +152,21 @@ The dual-path C2 link architecture (CTL-001) combined with independent heartbeat
 
 | HZ ID   | Initial Risk | Residual Risk | Acceptance Authority | Acceptance Status |
 |---------|-------------|---------------|----------------------|-------------------|
-| HZ-001  | Medium      | Low           | PM                   | Pending CDR       |
-| HZ-002  | Medium      | Low           | PM                   | Pending CDR       |
-| HZ-003  | Medium      | Low           | PM                   | Pending CDR       |
-| HZ-004  | Medium      | Low           | PM                   | Pending CDR       |
-| HZ-005  | Medium      | Low           | PM                   | Pending CDR       |
-| HZ-006  | Medium      | Low           | PM                   | Pending CDR       |
-| HZ-007  | Medium      | Low           | PM                   | Pending CDR       |
-| HZ-008  | Medium      | Low           | PM                   | Pending CDR       |
-| HZ-009  | Medium      | Low           | PM                   | Pending CDR       |
-| HZ-010  | Medium      | Low           | PM                   | Pending CDR       |
-| HZ-011  | Low         | Low           | Delegated by PM      | Pending CDR       |
-| HZ-012  | Medium      | Low           | PM                   | Pending CDR       |
+| HZ-001  | Medium      | Unassessed | PM                   | Pending CDR       |
+| HZ-002  | Medium      | Unassessed | PM                   | Pending CDR       |
+| HZ-003  | Medium      | Unassessed | PM                   | Pending CDR       |
+| HZ-004  | Medium      | Unassessed | PM                   | Pending CDR       |
+| HZ-005  | Medium      | Unassessed | PM                   | Pending CDR       |
+| HZ-006  | Medium      | Unassessed | PM                   | Pending CDR       |
+| HZ-007  | Medium      | Unassessed | PM                   | Pending CDR       |
+| HZ-008  | Medium      | Unassessed | PM                   | Pending CDR       |
+| HZ-009  | Medium      | Unassessed | PM                   | Pending CDR       |
+| HZ-010  | Medium      | Unassessed | PM                   | Pending CDR       |
+| HZ-011  | Low         | Unassessed | Delegated by PM      | Pending CDR       |
+| HZ-012  | Medium      | Unassessed | PM                   | Pending CDR       |
 
 All risk acceptance is pending CDR review, where the System Safety Assessment Report (SSAR) will be presented to the risk acceptance authority chain. Post-CDR acceptance feeds into the TRR evidence package and the Test & Evaluation Master Plan (TEMP).
 
-### Risk Acceptance Authority Chain
+### Risk Acceptance Authority Basis
 
-The MIL-STD-882E risk acceptance authority chain for this ACAT II program:
-
-1. **Program Manager (PM)**: Accepts Medium and Low risks with documented rationale.
-2. **Program Executive Officer (PEO)**: Accepts Serious risks; reviews PM risk acceptance decisions.
-3. **DASD(SE)**: Accepts High risks; reviews PEO risk acceptance for Serious risks at milestone reviews.
-4. **Component Acquisition Executive (CAE)**: Final authority for High risks not delegated by DASD(SE).
-
-All risk acceptance decisions are documented in the System Safety Assessment Report (SSAR) per DI-SESS-81785A and presented at the CDR and TRR technical review gates.
+The acceptance authority and delegation must be established from the program's applicable acquisition policy. The previous unverified DASD(SE)/CAE chain is preserved in history. Record the actual decision-maker, user concurrence where required, assessed residual risk, configuration and decision date before recording acceptance. No authority has accepted this teaching baseline. MIL-STD-882E risk management does not by itself supply a universal 1e-6/FH system target; any numerical allocation needs an explicit program basis.

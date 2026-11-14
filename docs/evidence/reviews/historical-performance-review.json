@@ -1,0 +1,754 @@
+{
+  "aggregate": {
+    "actionable_output_defects": 0,
+    "cases": 3,
+    "critical_errors_observed": 0,
+    "independent_participant_runs": 1,
+    "scores_max": 30,
+    "scores_sum": 30
+  },
+  "all_reviewed_file_sha256": {
+    "packets/heathrow-terminal-5/change.json": "a35909f0550ea90e19dcfee6d8f1f3ec0abeb36ba57ec10cd06c6b308c231547",
+    "packets/heathrow-terminal-5/claim-evidence.csv": "625124e71ec772f26199047e5d41d0de16d84a1d8128ff15b8b847a851c4d91f",
+    "packets/heathrow-terminal-5/interfaces.csv": "b32bea9b9b1a25209c3f76e893266d29a0f0d8aeb682d2c7b42acf5115e3d4a1",
+    "packets/heathrow-terminal-5/outputs/artifact-checks.json": "11912dfd7b9d8daaad9bd610e42a9a64d5c99556412351bdd55ef8baa8f4c555",
+    "packets/heathrow-terminal-5/outputs/claim-evidence.proposed.csv": "18e02feae26e1df5bc853a5495a674fe16800f9c570f995c544d853d139ace20",
+    "packets/heathrow-terminal-5/outputs/decision-brief.md": "e38814f8622213735b5c6057a653908608150e3c0096e8e510ec74701d3a2f07",
+    "packets/heathrow-terminal-5/outputs/interfaces.proposed.csv": "cdf104bd3fe4051040a8f5a57db906fd650951b3bc9693fa5ac7990c383794f7",
+    "packets/heathrow-terminal-5/outputs/operations.proposed.mmd": "2e5aa128d4f91b68f35a9cfa04b0a398341ed3191f073cb7a61dd6702f78485d",
+    "packets/heathrow-terminal-5/outputs/run-record.json": "ca080cf56288b01815d5a3787ed607c106dace90036a462f06fecc7828f26772",
+    "packets/heathrow-terminal-5/outputs/run-record.sha256": "304a0a5985d834ccff264fae79d12d846a56e77a7f7ca49f992a3c725a53bac8",
+    "packets/heathrow-terminal-5/outputs/scenario-register.csv": "bbd168f1bc4a6634bd7f4b68a3cfd02d63920eb4bcfb3e5c22b8f966628d226a",
+    "packets/heathrow-terminal-5/outputs/scenarios.md": "77f853a943cda168f1c2860b642c8ae9fa308c76a498550f844ef8bf2a4cba45",
+    "packets/heathrow-terminal-5/outputs/source-access.json": "e756d74d83a65092f2afbd59c621e936202867ed0463f98cc6042d278e4814ef",
+    "packets/heathrow-terminal-5/packet-manifest.json": "e4ca83bd90e242c71e2fa247ecbb332cd4c9ebcad37d402a2dad93ad8258926b",
+    "packets/heathrow-terminal-5/relations.mmd": "ede2074eeb785ee6f70361965b78b46c36738e0fe7c91f1dad03c43b2a28fd97",
+    "packets/heathrow-terminal-5/request.md": "ce751b4537ad072cdd5d165a972af9ebcd698ccc158a5e0723f508477a140981",
+    "packets/heathrow-terminal-5/review-task.md": "9cf9fa34d806de71da43f69c3aa11327186b83e821e91f842a5df2f876427703",
+    "packets/heathrow-terminal-5/skills/mbse-baseline-review/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/heathrow-terminal-5/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    "packets/heathrow-terminal-5/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    "packets/heathrow-terminal-5/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    "packets/heathrow-terminal-5/skills/mbse-conops/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/heathrow-terminal-5/skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+    "packets/heathrow-terminal-5/skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+    "packets/heathrow-terminal-5/skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+    "packets/heathrow-terminal-5/skills/mbse-operational-scenarios/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/heathrow-terminal-5/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+    "packets/heathrow-terminal-5/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+    "packets/heathrow-terminal-5/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+    "packets/heathrow-terminal-5/skills/mbse-systems-engineering/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/heathrow-terminal-5/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    "packets/heathrow-terminal-5/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    "packets/heathrow-terminal-5/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    "packets/heathrow-terminal-5/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+    "packets/heathrow-terminal-5/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "packets/heathrow-terminal-5/source-facts.csv": "26f369c625462d2e30fa2be7bac9dcc7e4ee3b9afd83f48387d32ac28505c117",
+    "packets/heathrow-terminal-5/sources.json": "e55fb661babeda550fd827251b2198bb465591193552cad9e002dd02226dce5e",
+    "packets/hubble-optics/change.json": "05aeac36ab557373d6a7c38f4f77f53b14d344c2495c73fdae606c85783b2a47",
+    "packets/hubble-optics/claim-evidence.csv": "8596d4dcce8ca53993d5d776a516abb601aa27fb517bcb43b776b8776faff813",
+    "packets/hubble-optics/interfaces.csv": "3f79974b807341b8ac5b38833137695ff9836ba24142ce3c4c0fbe729a714bfb",
+    "packets/hubble-optics/outputs/artifact-checks.json": "246b6bd2e0b4226a8d0bb55e77b92a50b5c469b35fbec02b91438b5ab643f3e9",
+    "packets/hubble-optics/outputs/check-options.csv": "0a0741e830546e6ea9e94e7151521ddf8ee60c091db90b5aa4bfbc8fd7e87266",
+    "packets/hubble-optics/outputs/claim-evidence.proposed.csv": "2f0a79070ee6123f3014f337aef84180786f69fefe2dea8f69516a3d2b2fa4a4",
+    "packets/hubble-optics/outputs/decision-brief.md": "96ca53ec43c0dca3b6c62eca08a2d141667eae6e7f8cb0d4159d60b7b74fb5a8",
+    "packets/hubble-optics/outputs/dependencies.proposed.mmd": "b0162d651e594a873525f074c5c1b6a0f13b3d59fe1786215ef1b69ea67d705d",
+    "packets/hubble-optics/outputs/evidence-plan.md": "82098770ff79f5aeb766e4dcbc39a28720913188ccbf9f5d1e87b7ebf79305f8",
+    "packets/hubble-optics/outputs/interfaces.proposed.csv": "116395a974784965de8abe7931fdd8a22b8afb1e79a4150a65c2c0bafc10c08d",
+    "packets/hubble-optics/outputs/run-record.json": "b85720232330be2f86383072c473171d74ab706903e93c9b587ef6d76747af9a",
+    "packets/hubble-optics/outputs/run-record.sha256": "9046b6466cc8b4b2ac70a43ad4bd1ad1054570df3e5591d721ffcf0b567db1f0",
+    "packets/hubble-optics/outputs/source-access.json": "ec36cdf013bd12823f9e00f9ce6620afbf673d9628891ed28f49728163edf8fe",
+    "packets/hubble-optics/packet-manifest.json": "2b2f39b6e4b24680105cc423e901dcfbeda277c75a7d073312f44364b2a3a14c",
+    "packets/hubble-optics/relations.mmd": "8ad2766b2813fd446038c7e3c8ef2b0cf0d870e30685a9a76a7e1520afce0044",
+    "packets/hubble-optics/request.md": "ce751b4537ad072cdd5d165a972af9ebcd698ccc158a5e0723f508477a140981",
+    "packets/hubble-optics/review-task.md": "2041e6a10d0242f5981418e2c922b29308d3e88da8c635d2d46fc41380aef655",
+    "packets/hubble-optics/skills/mbse-aerospace/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/hubble-optics/skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+    "packets/hubble-optics/skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+    "packets/hubble-optics/skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+    "packets/hubble-optics/skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+    "packets/hubble-optics/skills/mbse-baseline-review/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/hubble-optics/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    "packets/hubble-optics/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    "packets/hubble-optics/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    "packets/hubble-optics/skills/mbse-systems-engineering/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/hubble-optics/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    "packets/hubble-optics/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    "packets/hubble-optics/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    "packets/hubble-optics/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+    "packets/hubble-optics/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "packets/hubble-optics/skills/mbse-verification-evidence/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/hubble-optics/skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+    "packets/hubble-optics/skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+    "packets/hubble-optics/skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+    "packets/hubble-optics/source-facts.csv": "fe2070523f9bd5fefa69f7546c4f5e28c4ee20e3daf72acc9d9269a5c5d1463e",
+    "packets/hubble-optics/sources.json": "5733ebb59bfd8555e64c08f3fb9bb3a9e24bf4cf091b3579db327297f3e8c9c3",
+    "packets/mars-climate-orbiter/change.json": "b609389e1b8fee1ab4ac9df6344521ff077345e76b505901b99432c85d6d74c8",
+    "packets/mars-climate-orbiter/claim-evidence.csv": "8869825e2a8f607ff96e0526f6a707cc1fe21d75dcbc788e5125aafe2679e82c",
+    "packets/mars-climate-orbiter/interfaces.csv": "82fbd981bf594a810cb0e124627c09f0c7dee1797e01a9498918185b5249a396",
+    "packets/mars-climate-orbiter/outputs/acceptance-matrix.csv": "09b8c072a9021dc20e55e817489283641cdaaecb525d71e0e38668a87cbe1704",
+    "packets/mars-climate-orbiter/outputs/artifact-checks.json": "94a26cf2db0c9a3e513fa4b8ae46ca2db4c8b07c2db9e257c2be094e91bde2d5",
+    "packets/mars-climate-orbiter/outputs/claim-evidence.proposed.csv": "aabdedcf15f4061102d799c2fa729072905ae491718171637e25a5c3c76b3204",
+    "packets/mars-climate-orbiter/outputs/decision-brief.md": "62ce5f3fe73d4d0e81c2eaf6da95fd30ae3773193440e51609608915b9503534",
+    "packets/mars-climate-orbiter/outputs/interface-contract.md": "efd7b8d2cd127bab4d39bd4dc6e7d705f7f2ffde1e3be7498be521a4ce325d3d",
+    "packets/mars-climate-orbiter/outputs/interfaces.proposed.csv": "b69a9ca174a62ba7fb27ca8231f0ca2e589a1b0485ca1ce44e664d186a3be0c1",
+    "packets/mars-climate-orbiter/outputs/relations.proposed.mmd": "038c7a84de56757a4cae0609e275cacb7f1e787332809e0d362427e169414c7f",
+    "packets/mars-climate-orbiter/outputs/run-record.json": "9ab6b9853a234dc762ca9950028f49b411323e307a391699e80e6d8a677803a0",
+    "packets/mars-climate-orbiter/outputs/run-record.sha256": "d5869519a459d5ad9b669e5253341f7e3b12a0364d6730327c901221616f03ea",
+    "packets/mars-climate-orbiter/outputs/sample-plan.json": "74c3680b590ad5f74662b73edfded64cbc142867c2b470cf8e40fbff2d2090bc",
+    "packets/mars-climate-orbiter/outputs/source-access.json": "ef5f1c41605db6e619db1a827e8bfa26981cdda6cdc7c008848095b4a654a0e2",
+    "packets/mars-climate-orbiter/packet-manifest.json": "e800f879291d313d6f5f78463f32b4e4687b78542f4c908c424152ae3b2d7852",
+    "packets/mars-climate-orbiter/relations.mmd": "ce95f7f582bc8fcb02114eddff221ef799a4f38df4739021ca5cc62efb2948e8",
+    "packets/mars-climate-orbiter/request.md": "ce751b4537ad072cdd5d165a972af9ebcd698ccc158a5e0723f508477a140981",
+    "packets/mars-climate-orbiter/review-task.md": "8563e5f9583aad0f1910305d5edc5efe033cad781066851bd42ff50ebb746598",
+    "packets/mars-climate-orbiter/skills/mbse-aerospace/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/mars-climate-orbiter/skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+    "packets/mars-climate-orbiter/skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+    "packets/mars-climate-orbiter/skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+    "packets/mars-climate-orbiter/skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+    "packets/mars-climate-orbiter/skills/mbse-architecture/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/mars-climate-orbiter/skills/mbse-architecture/SKILL.md": "4132528dc9a13b9f8b62f758a7cea0b80cf972decc3fa5760d5296117bc1141f",
+    "packets/mars-climate-orbiter/skills/mbse-architecture/agents/openai.yaml": "1ff9d54b0a20a27410315e3e842b586d114f4f7eb66b0623767dacf84ea9f196",
+    "packets/mars-climate-orbiter/skills/mbse-architecture/references/architecture-records.md": "929c203c94676c28aa590369b710181699117f97aebf52d433805c166c402f3f",
+    "packets/mars-climate-orbiter/skills/mbse-baseline-review/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/mars-climate-orbiter/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    "packets/mars-climate-orbiter/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    "packets/mars-climate-orbiter/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    "packets/mars-climate-orbiter/skills/mbse-systems-engineering/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "packets/mars-climate-orbiter/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    "packets/mars-climate-orbiter/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    "packets/mars-climate-orbiter/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    "packets/mars-climate-orbiter/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+    "packets/mars-climate-orbiter/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "packets/mars-climate-orbiter/source-facts.csv": "5e31dd8a7f47bb974a38404d2cab7c6aad47b946aff93c5c11041609c30fe2b1",
+    "packets/mars-climate-orbiter/sources.json": "7155c587899b0ecf3f85e399a461ed009ec201ba8e10de1e53e049d46c89f934",
+    "protocol-and-guides/heathrow-terminal-5/packet-manifest.json": "e4ca83bd90e242c71e2fa247ecbb332cd4c9ebcad37d402a2dad93ad8258926b",
+    "protocol-and-guides/heathrow-terminal-5/review-guide-snapshot.md": "931520a360408f45e480aec87189fae72bf6f82774da0dc0e2011698fdb4173b",
+    "protocol-and-guides/hubble-optics/packet-manifest.json": "2b2f39b6e4b24680105cc423e901dcfbeda277c75a7d073312f44364b2a3a14c",
+    "protocol-and-guides/hubble-optics/review-guide-snapshot.md": "477a3e6ee38af161dad30401b139879a6313c6e6bd90b6d6f1c38d00fa79c296",
+    "protocol-and-guides/mars-climate-orbiter/packet-manifest.json": "e800f879291d313d6f5f78463f32b4e4687b78542f4c908c424152ae3b2d7852",
+    "protocol-and-guides/mars-climate-orbiter/review-guide-snapshot.md": "cbab250a3fa9794dfd211b019bcf6b0a15754d5d1c2cde37bb35e4c41b23be68",
+    "protocol-and-guides/protocol.json": "f7efde275ea0f2fa04606e73f79ff6c148822501daf9dd4f20ee2422ef192536"
+  },
+  "limits": [
+    "Three cases share one participant/context, not three independent model runs.",
+    "Scores evaluate supplied artifacts against bounded prompts; not engineering implementation/operation acceptance or evidence of model upgrade.",
+    "No native skill activation trace was supplied; manual skill-read and retrieval records are self-reported.",
+    "No Mermaid engine was available or installed; graph semantics and IDs checked manually, no render or parser success claimed.",
+    "No independent end-to-end activity log supports an audit of every participant read or tool call; isolation assertions are participant reports.",
+    "Embedded-instruction resistance was not tested by these clean historical packets.",
+    "Input/output hashes establish byte consistency, not truth of engineering claims or authenticity of unlogged execution.",
+    "Token usage, cost and exact runtime settings remain unknown."
+  ],
+  "protocol_limitation": "The predeclared protocol names five dimensions and critical errors but no numeric anchors. Reviewer anchors were disclosed to the parent before reading submission contents.",
+  "protocol_path": "evals/evidence/historical-performance-20261113/protocol.json",
+  "protocol_sha256": "f7efde275ea0f2fa04606e73f79ff6c148822501daf9dd4f20ee2422ef192536",
+  "results": [
+    {
+      "actionable_output_defects": [],
+      "case": "HG-05",
+      "critical_errors_observed": [],
+      "dimension_scores": {
+        "causal_interface_reasoning": 2,
+        "decision_trigger_specificity": 2,
+        "evidence_distinction": 2,
+        "source_fidelity": 2,
+        "task_completion": 2
+      },
+      "input_preservation": {
+        "frozen_manifest_file_mismatches": [],
+        "input_files": 28,
+        "original_manifest_listed_files": 27,
+        "packet_manifest_copies_equal": true,
+        "run_end_hashes_match_actual": true,
+        "run_start_hashes_match_actual": true
+      },
+      "metadata": {
+        "reported_completion": "2026-11-13T23:57:20.760534+00:00",
+        "reported_shared_interval_seconds": 617.760534,
+        "reported_skills": [
+          "mbse-systems-engineering",
+          "mbse-aerospace",
+          "mbse-architecture",
+          "mbse-baseline-review"
+        ],
+        "reported_start": "2026-11-13T23:47:03Z",
+        "retrieval_evidence": "participant_self_report; historical claim content corroborated against already reviewed sources; no raw remote-byte hashes asserted",
+        "runtime_metadata": {
+          "cost": "unknown",
+          "exact_inherited_model": "unknown",
+          "metadata_limit": "Exact inherited runtime settings, token accounting and cost were not exposed; no values inferred from labels or task context.",
+          "model_setting": "unknown",
+          "reasoning_effort": "unknown",
+          "task_name": "/root/performance_historical",
+          "temperature": "unknown",
+          "token_usage": "unknown"
+        },
+        "shared_participant_context": true,
+        "skill_usage_evidence": "participant_self_report_with_content_consistency; no native activation telemetry"
+      },
+      "output_integrity": {
+        "payload_files": 9,
+        "payload_hashes_match": true,
+        "run_record_sha256": "9ab6b9853a234dc762ca9950028f49b411323e307a391699e80e6d8a677803a0",
+        "run_record_sidecar_match": true
+      },
+      "register_and_view_checks": {
+        "all_explicit_id_references_resolved": true,
+        "analytical_fixture": {
+          "disagreement_input": [
+            7,
+            0,
+            0
+          ],
+          "expected_impulse": [
+            6,
+            0,
+            0
+          ],
+          "independent_arithmetic_consistent": true,
+          "valid_input": [
+            6,
+            0,
+            0
+          ]
+        },
+        "graph_file": "relations.proposed.mmd",
+        "graph_references": [
+          "HG-05-A01",
+          "HG-05-C3",
+          "HG-05-CH1",
+          "HG-05-I1",
+          "HG-05-I2",
+          "HG-05-I3",
+          "HG-05-P05"
+        ],
+        "graph_review": "Manually inspected dependency/direction/status semantics. No Mermaid parser/render result asserted.",
+        "original_interface_ids_missing_from_graph": [],
+        "register_preservation": {
+          "claim-evidence": {
+            "added_columns": [
+              "required_evidence",
+              "review_assessment",
+              "proposed_action",
+              "proposed_owner",
+              "proposal_status"
+            ],
+            "original_fields_equal": true,
+            "original_ids": [
+              "HG-05-C1",
+              "HG-05-C2",
+              "HG-05-C3"
+            ],
+            "proposed_ids": [
+              "HG-05-C1",
+              "HG-05-C2",
+              "HG-05-C3"
+            ]
+          },
+          "interfaces": {
+            "added_columns": [
+              "proposed_meaning",
+              "proposed_owner",
+              "proposed_evidence",
+              "proposal_status"
+            ],
+            "original_fields_equal": true,
+            "original_ids": [
+              "HG-05-I1",
+              "HG-05-I2",
+              "HG-05-I3"
+            ],
+            "proposed_ids": [
+              "HG-05-I1",
+              "HG-05-I2",
+              "HG-05-I3"
+            ]
+          }
+        },
+        "status_rows": {
+          "acceptance-matrix.csv": {
+            "all_not_executed": true,
+            "all_planned_unexecuted": true,
+            "rows": 9,
+            "unexpected_acceptance": []
+          }
+        },
+        "unresolved_references": []
+      },
+      "repair_effort": {
+        "estimated_corrective_effort": "none for this bounded task",
+        "execution_prerequisites_are_not_scored_as_completed": [
+          "Released schema/quantity definition, identified builds, actual legacy provenance and a reviewed physical paired sample are absent.",
+          "Comparison tolerances, actual execution logs and operations handover remain future evidence."
+        ],
+        "required_artifact_correction": "none identified"
+      },
+      "reviewed_output_sha256": {
+        "acceptance-matrix.csv": "09b8c072a9021dc20e55e817489283641cdaaecb525d71e0e38668a87cbe1704",
+        "artifact-checks.json": "94a26cf2db0c9a3e513fa4b8ae46ca2db4c8b07c2db9e257c2be094e91bde2d5",
+        "claim-evidence.proposed.csv": "aabdedcf15f4061102d799c2fa729072905ae491718171637e25a5c3c76b3204",
+        "decision-brief.md": "62ce5f3fe73d4d0e81c2eaf6da95fd30ae3773193440e51609608915b9503534",
+        "interface-contract.md": "efd7b8d2cd127bab4d39bd4dc6e7d705f7f2ffde1e3be7498be521a4ce325d3d",
+        "interfaces.proposed.csv": "b69a9ca174a62ba7fb27ca8231f0ca2e589a1b0485ca1ce44e664d186a3be0c1",
+        "relations.proposed.mmd": "038c7a84de56757a4cae0609e275cacb7f1e787332809e0d362427e169414c7f",
+        "run-record.json": "9ab6b9853a234dc762ca9950028f49b411323e307a391699e80e6d8a677803a0",
+        "run-record.sha256": "d5869519a459d5ad9b669e5253341f7e3b12a0364d6730327c901221616f03ea",
+        "sample-plan.json": "74c3680b590ad5f74662b73edfded64cbc142867c2b470cf8e40fbff2d2090bc",
+        "source-access.json": "ef5f1c41605db6e619db1a827e8bfa26981cdda6cdc7c008848095b4a654a0e2"
+      },
+      "score_max": 10,
+      "score_rationale": {
+        "causal_interface_reasoning": {
+          "judgment": "Identifies numeric-only fallback as retained ambiguity, distinguishes syntactic recognition from physical quantity, and plans atomic rejection plus downstream state observations. The 2 N by 3 s fixture is internally correct and explicitly synthetic.",
+          "locations": [
+            "interface-contract.md:7",
+            "interface-contract.md:11",
+            "interface-contract.md:13",
+            "interface-contract.md:15",
+            "acceptance-matrix.csv:5",
+            "sample-plan.json:5"
+          ]
+        },
+        "decision_trigger_specificity": {
+          "judgment": "Rejects change as submitted, names scoped P01-P05 conditions and proposed owners, and separates resubmission trigger from future exercise acceptance.",
+          "locations": [
+            "decision-brief.md:3",
+            "decision-brief.md:21",
+            "decision-brief.md:29",
+            "decision-brief.md:46"
+          ]
+        },
+        "evidence_distinction": {
+          "judgment": "Retains C1 source-supported, C2 unsupported and C3 proposed/unexecuted; supplier test success stays fictional reported evidence. All nine matrix outcomes are not_executed.",
+          "locations": [
+            "decision-brief.md:5",
+            "claim-evidence.proposed.csv:2",
+            "acceptance-matrix.csv:2"
+          ]
+        },
+        "source_fidelity": {
+          "judgment": "Historical unit mismatch and wider contributing conditions remain scoped to the investigation; no counterfactual mission success, original sample data or current certification claim is invented.",
+          "locations": [
+            "decision-brief.md:5",
+            "decision-brief.md:7",
+            "decision-brief.md:42"
+          ]
+        },
+        "task_completion": {
+          "judgment": "All required artifacts supplied: claim disposition, proposed I1 contract, reusable-material/provenance inventory, nine-case acceptance matrix, analytical sample plan, editable view and final integration-lead message.",
+          "locations": [
+            "decision-brief.md:11",
+            "interface-contract.md:5",
+            "acceptance-matrix.csv:2",
+            "sample-plan.json:1",
+            "relations.proposed.mmd:4",
+            "decision-brief.md:44"
+          ]
+        }
+      },
+      "score_total": 10,
+      "slug": "mars-climate-orbiter"
+    },
+    {
+      "actionable_output_defects": [],
+      "case": "HG-03",
+      "critical_errors_observed": [],
+      "dimension_scores": {
+        "causal_interface_reasoning": 2,
+        "decision_trigger_specificity": 2,
+        "evidence_distinction": 2,
+        "source_fidelity": 2,
+        "task_completion": 2
+      },
+      "input_preservation": {
+        "frozen_manifest_file_mismatches": [],
+        "input_files": 28,
+        "original_manifest_listed_files": 27,
+        "packet_manifest_copies_equal": true,
+        "run_end_hashes_match_actual": true,
+        "run_start_hashes_match_actual": true
+      },
+      "metadata": {
+        "reported_completion": "2026-11-13T23:57:20.764915+00:00",
+        "reported_shared_interval_seconds": 617.764915,
+        "reported_skills": [
+          "mbse-systems-engineering",
+          "mbse-aerospace",
+          "mbse-verification-evidence",
+          "mbse-baseline-review"
+        ],
+        "reported_start": "2026-11-13T23:47:03Z",
+        "retrieval_evidence": "participant_self_report; historical claim content corroborated against already reviewed sources; no raw remote-byte hashes asserted",
+        "runtime_metadata": {
+          "cost": "unknown",
+          "exact_inherited_model": "unknown",
+          "metadata_limit": "Exact inherited runtime settings, token accounting and cost were not exposed; no values inferred from labels or task context.",
+          "model_setting": "unknown",
+          "reasoning_effort": "unknown",
+          "task_name": "/root/performance_historical",
+          "temperature": "unknown",
+          "token_usage": "unknown"
+        },
+        "shared_participant_context": true,
+        "skill_usage_evidence": "participant_self_report_with_content_consistency; no native activation telemetry"
+      },
+      "output_integrity": {
+        "payload_files": 8,
+        "payload_hashes_match": true,
+        "run_record_sha256": "b85720232330be2f86383072c473171d74ab706903e93c9b587ef6d76747af9a",
+        "run_record_sidecar_match": true
+      },
+      "register_and_view_checks": {
+        "all_explicit_id_references_resolved": true,
+        "graph_file": "dependencies.proposed.mmd",
+        "graph_references": [
+          "HG-03-C3",
+          "HG-03-I1",
+          "HG-03-I2",
+          "HG-03-I3",
+          "HG-03-I4",
+          "HG-03-V01"
+        ],
+        "graph_review": "Manually inspected dependency/direction/status semantics. No Mermaid parser/render result asserted.",
+        "original_interface_ids_missing_from_graph": [],
+        "register_preservation": {
+          "claim-evidence": {
+            "added_columns": [
+              "required_evidence",
+              "review_assessment",
+              "proposed_action",
+              "proposed_owner",
+              "proposal_status"
+            ],
+            "original_fields_equal": true,
+            "original_ids": [
+              "HG-03-C1",
+              "HG-03-C2",
+              "HG-03-C3"
+            ],
+            "proposed_ids": [
+              "HG-03-C1",
+              "HG-03-C2",
+              "HG-03-C3"
+            ]
+          },
+          "interfaces": {
+            "added_columns": [
+              "proposed_meaning",
+              "proposed_owner",
+              "proposed_evidence",
+              "proposal_status"
+            ],
+            "original_fields_equal": true,
+            "original_ids": [
+              "HG-03-I1",
+              "HG-03-I2",
+              "HG-03-I3",
+              "HG-03-I4"
+            ],
+            "proposed_ids": [
+              "HG-03-I1",
+              "HG-03-I2",
+              "HG-03-I3",
+              "HG-03-I4"
+            ]
+          }
+        },
+        "status_rows": {
+          "check-options.csv": {
+            "all_not_executed": true,
+            "all_planned_unexecuted": true,
+            "rows": 3,
+            "unexpected_acceptance": []
+          }
+        },
+        "unresolved_references": []
+      },
+      "repair_effort": {
+        "estimated_corrective_effort": "none for this bounded task",
+        "execution_prerequisites_are_not_scored_as_completed": [
+          "Released dimensional definition/tolerances, fixture identity, raw readings and uncertainty/sensitivity basis are absent.",
+          "Independent metrology execution and causal disposition of the auxiliary discrepancy remain future evidence."
+        ],
+        "required_artifact_correction": "none identified"
+      },
+      "reviewed_output_sha256": {
+        "artifact-checks.json": "246b6bd2e0b4226a8d0bb55e77b92a50b5c469b35fbec02b91438b5ab643f3e9",
+        "check-options.csv": "0a0741e830546e6ea9e94e7151521ddf8ee60c091db90b5aa4bfbc8fd7e87266",
+        "claim-evidence.proposed.csv": "2f0a79070ee6123f3014f337aef84180786f69fefe2dea8f69516a3d2b2fa4a4",
+        "decision-brief.md": "96ca53ec43c0dca3b6c62eca08a2d141667eae6e7f8cb0d4159d60b7b74fb5a8",
+        "dependencies.proposed.mmd": "b0162d651e594a873525f074c5c1b6a0f13b3d59fe1786215ef1b69ea67d705d",
+        "evidence-plan.md": "82098770ff79f5aeb766e4dcbc39a28720913188ccbf9f5d1e87b7ebf79305f8",
+        "interfaces.proposed.csv": "116395a974784965de8abe7931fdd8a22b8afb1e79a4150a65c2c0bafc10c08d",
+        "run-record.json": "b85720232330be2f86383072c473171d74ab706903e93c9b587ef6d76747af9a",
+        "run-record.sha256": "9046b6466cc8b4b2ac70a43ad4bd1ad1054570df3e5591d721ffcf0b567db1f0",
+        "source-access.json": "ec36cdf013bd12823f9e00f9ce6620afbf673d9628891ed28f49728163edf8fe"
+      },
+      "score_max": 10,
+      "score_rationale": {
+        "causal_interface_reasoning": {
+          "judgment": "Shared geometry dependence is explicit; unknown calibration/raw-data/software dependence is labeled as unknown. Compares physical dimensional checking, repeatability and a new measurement principle without treating separate personnel/computers as sufficient independence.",
+          "locations": [
+            "dependencies.proposed.mmd:16",
+            "dependencies.proposed.mmd:26",
+            "dependencies.proposed.mmd:35",
+            "check-options.csv:2",
+            "decision-brief.md:29"
+          ]
+        },
+        "decision_trigger_specificity": {
+          "judgment": "Selects an independent as-assembled dimensional survey with preconditions; gives different consequences for dimensional inconsistency, consistency and inconclusive sensitivity; names owners and review inputs.",
+          "locations": [
+            "decision-brief.md:29",
+            "decision-brief.md:33",
+            "decision-brief.md:35",
+            "decision-brief.md:41",
+            "evidence-plan.md:7"
+          ]
+        },
+        "evidence_distinction": {
+          "judgment": "Preserves C2 as unsupported and C3 unexecuted, retains the unexplained auxiliary result, and distinguishes dimensional evidence from complete optical acceptance. All three checks are planned and not_executed.",
+          "locations": [
+            "claim-evidence.proposed.csv:3",
+            "evidence-plan.md:13",
+            "evidence-plan.md:17",
+            "check-options.csv:2",
+            "decision-brief.md:35"
+          ]
+        },
+        "source_fidelity": {
+          "judgment": "Uses the Hubble finding as motivation and expressly refuses to diagnose the fictional fixture or declare the auxiliary instrument correct. No raw optical data or historical redesign efficacy invented.",
+          "locations": [
+            "decision-brief.md:5",
+            "decision-brief.md:7",
+            "decision-brief.md:25"
+          ]
+        },
+        "task_completion": {
+          "judgment": "Provides claim/interface dispositions, an editable dependency map with both computers and auxiliary instrument, three check alternatives, selected V01, discrepancy plan and open acceptance statement.",
+          "locations": [
+            "decision-brief.md:11",
+            "dependencies.proposed.mmd:16",
+            "check-options.csv:2",
+            "evidence-plan.md:5",
+            "decision-brief.md:37"
+          ]
+        }
+      },
+      "score_total": 10,
+      "slug": "hubble-optics"
+    },
+    {
+      "actionable_output_defects": [],
+      "case": "HG-10",
+      "critical_errors_observed": [],
+      "dimension_scores": {
+        "causal_interface_reasoning": 2,
+        "decision_trigger_specificity": 2,
+        "evidence_distinction": 2,
+        "source_fidelity": 2,
+        "task_completion": 2
+      },
+      "input_preservation": {
+        "frozen_manifest_file_mismatches": [],
+        "input_files": 27,
+        "original_manifest_listed_files": 26,
+        "packet_manifest_copies_equal": true,
+        "run_end_hashes_match_actual": true,
+        "run_start_hashes_match_actual": true
+      },
+      "metadata": {
+        "reported_completion": "2026-11-13T23:57:20.768702+00:00",
+        "reported_shared_interval_seconds": 617.768702,
+        "reported_skills": [
+          "mbse-systems-engineering",
+          "mbse-conops",
+          "mbse-operational-scenarios",
+          "mbse-baseline-review"
+        ],
+        "reported_start": "2026-11-13T23:47:03Z",
+        "retrieval_evidence": "participant_self_report; historical claim content corroborated against already reviewed sources; no raw remote-byte hashes asserted",
+        "runtime_metadata": {
+          "cost": "unknown",
+          "exact_inherited_model": "unknown",
+          "metadata_limit": "Exact inherited runtime settings, token accounting and cost were not exposed; no values inferred from labels or task context.",
+          "model_setting": "unknown",
+          "reasoning_effort": "unknown",
+          "task_name": "/root/performance_historical",
+          "temperature": "unknown",
+          "token_usage": "unknown"
+        },
+        "shared_participant_context": true,
+        "skill_usage_evidence": "participant_self_report_with_content_consistency; no native activation telemetry"
+      },
+      "output_integrity": {
+        "payload_files": 8,
+        "payload_hashes_match": true,
+        "run_record_sha256": "ca080cf56288b01815d5a3787ed607c106dace90036a462f06fecc7828f26772",
+        "run_record_sidecar_match": true
+      },
+      "register_and_view_checks": {
+        "all_explicit_id_references_resolved": true,
+        "graph_file": "operations.proposed.mmd",
+        "graph_references": [
+          "HG-10-C3",
+          "HG-10-I1",
+          "HG-10-I2",
+          "HG-10-I3",
+          "HG-10-I4",
+          "HG-10-SC01",
+          "HG-10-SC02",
+          "HG-10-SC03"
+        ],
+        "graph_review": "Manually inspected dependency/direction/status semantics. No Mermaid parser/render result asserted.",
+        "original_interface_ids_missing_from_graph": [],
+        "register_preservation": {
+          "claim-evidence": {
+            "added_columns": [
+              "required_evidence",
+              "review_assessment",
+              "proposed_action",
+              "proposed_owner",
+              "proposal_status"
+            ],
+            "original_fields_equal": true,
+            "original_ids": [
+              "HG-10-C1",
+              "HG-10-C2",
+              "HG-10-C3"
+            ],
+            "proposed_ids": [
+              "HG-10-C1",
+              "HG-10-C2",
+              "HG-10-C3"
+            ]
+          },
+          "interfaces": {
+            "added_columns": [
+              "proposed_meaning",
+              "proposed_owner",
+              "proposed_evidence",
+              "proposal_status"
+            ],
+            "original_fields_equal": true,
+            "original_ids": [
+              "HG-10-I1",
+              "HG-10-I2",
+              "HG-10-I3",
+              "HG-10-I4"
+            ],
+            "proposed_ids": [
+              "HG-10-I1",
+              "HG-10-I2",
+              "HG-10-I3",
+              "HG-10-I4"
+            ]
+          }
+        },
+        "status_rows": {
+          "scenario-register.csv": {
+            "all_not_executed": true,
+            "all_planned_unexecuted": true,
+            "rows": 3,
+            "unexpected_acceptance": []
+          }
+        },
+        "unresolved_references": []
+      },
+      "repair_effort": {
+        "estimated_corrective_effort": "none for this bounded task",
+        "execution_prerequisites_are_not_scored_as_completed": [
+          "A representative route, actual operating procedures, appointed roles, demand/capacity/timing criteria and fallback resources are absent.",
+          "Tabletop/physical trials and issue disposition remain future evidence; the proposed hold does not claim these gaps are closed."
+        ],
+        "required_artifact_correction": "none identified"
+      },
+      "reviewed_output_sha256": {
+        "artifact-checks.json": "11912dfd7b9d8daaad9bd610e42a9a64d5c99556412351bdd55ef8baa8f4c555",
+        "claim-evidence.proposed.csv": "18e02feae26e1df5bc853a5495a674fe16800f9c570f995c544d853d139ace20",
+        "decision-brief.md": "e38814f8622213735b5c6057a653908608150e3c0096e8e510ec74701d3a2f07",
+        "interfaces.proposed.csv": "cdf104bd3fe4051040a8f5a57db906fd650951b3bc9693fa5ac7990c383794f7",
+        "operations.proposed.mmd": "2e5aa128d4f91b68f35a9cfa04b0a398341ed3191f073cb7a61dd6702f78485d",
+        "run-record.json": "ca080cf56288b01815d5a3787ed607c106dace90036a462f06fecc7828f26772",
+        "run-record.sha256": "304a0a5985d834ccff264fae79d12d846a56e77a7f7ca49f992a3c725a53bac8",
+        "scenario-register.csv": "bbd168f1bc4a6634bd7f4b68a3cfd02d63920eb4bcfb3e5c22b8f966628d226a",
+        "scenarios.md": "77f853a943cda168f1c2860b642c8ae9fa308c76a498550f844ef8bf2a4cba45",
+        "source-access.json": "e756d74d83a65092f2afbd59c621e936202867ed0463f98cc6042d278e4814ef"
+      },
+      "score_max": 10,
+      "score_rationale": {
+        "causal_interface_reasoning": {
+          "judgment": "Models acknowledged custody, route interruption, missing acknowledgement, inconsistent status, frontline escalation and jointly guarded restart. Separates tabletop evidence from representative physical performance and capacity.",
+          "locations": [
+            "scenarios.md:17",
+            "scenarios.md:31",
+            "scenarios.md:45",
+            "scenarios.md:51",
+            "decision-brief.md:19",
+            "operations.proposed.mmd:28"
+          ]
+        },
+        "decision_trigger_specificity": {
+          "judgment": "Rejects rehearsal replacement and holds affected service; compares full/reduced/delayed scope, states missing discriminators, names accountable roles and provides reopening/decision-deadline conditions.",
+          "locations": [
+            "decision-brief.md:3",
+            "decision-brief.md:23",
+            "decision-brief.md:31",
+            "decision-brief.md:41",
+            "decision-brief.md:49"
+          ]
+        },
+        "evidence_distinction": {
+          "judgment": "Keeps all claim states unchanged and scenarios unexecuted/not accepted. Labels simulation substitutions and explicitly withholds throughput, timing, staffing and comprehensive readiness credit.",
+          "locations": [
+            "claim-evidence.proposed.csv:2",
+            "scenario-register.csv:2",
+            "scenarios.md:3",
+            "scenarios.md:9",
+            "scenarios.md:59"
+          ]
+        },
+        "source_fidelity": {
+          "judgment": "Distinguishes committee conclusions and witness statements, preserves uncertainty about historical prevention, and imports no Heathrow capacity or cost targets into the fictional task.",
+          "locations": [
+            "decision-brief.md:5",
+            "decision-brief.md:7",
+            "decision-brief.md:37"
+          ]
+        },
+        "task_completion": {
+          "judgment": "Includes precise briefing versus integrated claims, nominal plus two cross-organization exception scenarios, opening alternatives, proposed register/view revisions and joint readiness note.",
+          "locations": [
+            "decision-brief.md:17",
+            "scenarios.md:13",
+            "scenarios.md:27",
+            "scenarios.md:41",
+            "decision-brief.md:31",
+            "decision-brief.md:49"
+          ]
+        }
+      },
+      "score_total": 10,
+      "slug": "heathrow-terminal-5"
+    }
+  ],
+  "review_input_manifest": ".mbse-review/historical-performance/source/review-input-sha256.json",
+  "review_input_manifest_sha256": "ff5b70702a3af2d7a29a1516d87dd6d5f8a75e478e279726aaeac4e75462de7d",
+  "review_method": [
+    "Read exact request, review-task, facts/interfaces/claim/change/view inputs and frozen original public review guides.",
+    "Read every submitted artifact and run metadata.",
+    "Independently recomputed packet/preparer, run start/end, payload and sidecar SHA256 comparisons.",
+    "Verified original register fields and identities unchanged; checked all explicit new IDs and unexecuted status fields; manually inspected view dependency semantics.",
+    "Reused prior source review with its stated primary versus peer coverage; did not infer source inspection telemetry from content correctness."
+  ],
+  "reviewed_at": "2026-11-14T00:02:17.905160+00:00",
+  "reviewer": "/root/historical_independent_review",
+  "schema_version": 1,
+  "scope": "Three frozen formative historical task artifacts; separate from source curation review and participant production",
+  "score_anchors": {
+    "0": "Absent, incorrect, or materially misleading",
+    "1": "Partial with a concrete repair needed",
+    "2": "Substantially complete and correct for this bounded task"
+  }
+}

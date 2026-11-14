@@ -1,52 +1,79 @@
-# OpenAI Codex CLI Install Guide
+# Codex installation and maintenance
 
-## Setup
+Run the commands from this checkout. Use Python 3.10 or newer: `python3` on
+Linux/macOS, or `py` on Windows. The installer needs only the standard library.
 
-1. Copy `platform/claude-code/AGENTS.md` into your project root:
-
-```bash
-cp platform/claude-code/AGENTS.md /path/to/your-project/AGENTS.md
+```sh
+python3 --version
+python3 scripts/install.py --list
+python3 scripts/install.py --diagnose --skill mbse-requirements
+python3 scripts/install.py --project /path/to/project --skill mbse-requirements --skill mbse-architecture --dry-run
+python3 scripts/install.py --project /path/to/project --skill mbse-requirements --skill mbse-architecture
 ```
 
-Codex reads `AGENTS.md` automatically when present in the project root.
+PowerShell accepts quoted paths:
 
-2. Copy the `agents/` directory into your project:
-
-```bash
-cp -r agents/ /path/to/your-project/agents/
+```powershell
+py scripts/install.py --project 'C:\Projects\pump-study' --skill mbse-medical-device --skill mbse-verification-evidence --dry-run
 ```
 
-## Direct Execution
+Canonical packages are `.agents/skills/<name>`. Launching Codex in this checkout
+uses those packages directly. The installer copies selected packages, references,
+and license into the target project's `.agents/skills/`. Use `--destination` for
+an explicit different skills directory. Existing project instructions, model
+settings, and credentials are preserved.
 
-Run `codex exec` from the project root and tell Codex which files to read:
+In the destination project, open a new Codex chat and select the skill with `$`:
 
-```bash
-# Run from the repository root so Codex can read the referenced files
-cd /path/to/your-project
+> Use $mbse-requirements on this brief. Show the source and acceptance condition
+> for each proposed requirement, and identify the decisions that need my input.
 
-# Ask Codex to read the agent file and apply it to your artifact
-codex exec \
-  "Read agents/aerospace-systems-engineer.md, then review docs/model.md for ARP4754A compliance."
+If discovery fails, run `--diagnose --project /path/to/project --skill NAME`,
+confirm the reported path and host project match, then start a new chat. A ready
+package report checks files; it does not prove native discovery or answer quality.
+See the [support matrix](../support.md) for the tested boundary.
 
-# Or point Codex at a different working directory explicitly
-codex exec -C /path/to/your-project \
-  "Read agents/defense-systems-engineer.md and docs/architecture.md, then map this architecture to DoDAF OV-1 and SV-1 views."
+## Inspect and update
+
+```sh
+python3 scripts/install.py --project /path/to/project --skill mbse-requirements --inspect
+python3 scripts/install.py --project /path/to/project --skill mbse-requirements --diff
+python3 scripts/install.py --project /path/to/project --skill mbse-requirements --update --dry-run
+python3 scripts/install.py --project /path/to/project --skill mbse-requirements --update
 ```
 
-## In Codex Sessions
+Inspection separates local changes since the managed install from changes in
+the incoming package. `--diff` displays current-to-incoming text differences;
+it never merges or writes. For an unmanaged package, the original local baseline
+is unknown. Review changes in a separate copy before deciding what to retain.
 
-Reference agents by path in your prompts:
+The installer refuses unmanaged or modified targets. It stages and checks every
+selected package before replacement. A failed commit rolls earlier replacements
+back; if rollback encounters new local changes or another I/O failure, the error
+identifies the preserved target and original backup for recovery. Abrupt process
+termination or power loss is not a transaction guarantee. Successful updates
+print their backup paths under the skills parent's `.mbse-backups/`.
 
+## Remove or restore a managed package
+
+```sh
+python3 scripts/install.py --project /path/to/project --skill mbse-requirements --uninstall --dry-run
+python3 scripts/install.py --project /path/to/project --skill mbse-requirements --uninstall
+python3 scripts/install.py --project /path/to/project --skill mbse-requirements --restore /path/to/project/.agents/.mbse-backups/mbse-requirements/BACKUP_ID --dry-run
 ```
-Read agents/automotive-systems-engineer.md and apply its expertise to review
-the ISO 26262 ASIL decomposition in docs/safety-analysis.md.
-```
 
-## With Defense Founder Review
+Removal moves an unchanged managed package into a backup. It does not delete it.
+Replace `BACKUP_ID` with the printed identifier; remove `--dry-run` to restore.
+Restore checks the backup, preserves its source copy, and backs up any unchanged
+current package. Modified current packages and modified backups are refused.
+For plugin-manager installations, use that host's lifecycle controls instead of
+this standalone-package installer.
 
-Reference the skill file alongside the defense agent in the prompt:
+## Build a native plugin
 
-```bash
-codex exec -C /path/to/your-project \
-  "Read agents/defense-systems-engineer.md and skills/defense-founder-review/SKILL.md, then review this acquisition program's SE artifacts."
-```
+Use the [plugin build guide](../plugin/install.md) for a portable plugin and
+local marketplace setup. Source compatibility manifests point at `.agents/skills/`;
+the built folder supplies the portable root `skills/` directory.
+
+Sources checked 2026-11-13: [Codex skills](https://developers.openai.com/codex/skills)
+and [OpenAI plugin packaging](https://developers.openai.com/plugins/build/plugins).

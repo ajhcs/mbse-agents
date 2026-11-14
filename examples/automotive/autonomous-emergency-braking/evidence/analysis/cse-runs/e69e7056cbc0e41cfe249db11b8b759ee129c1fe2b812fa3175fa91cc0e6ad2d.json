@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "scope": "independent_implementation_crosscheck_not_independent_engineering_review",
+  "model_sha256": "2ad026ef78f3e1d73456fcec50dc9c8e4806ddcbff39922d00eac2179df12944",
+  "input_sha256": "31159cb16687616f2dc0d992b203e9dd196c9407c5277cb2f39e45deea96a74d",
+  "helper_sources": {
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/skills/analyze-system-failures/scripts/failure_analysis.py": "b9d2667e219995f90f762ffca156ec6a245408bebbbe5ae47f45728a2dc9c57e",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/scripts/failure_analysis.py": "66f894de2a4f6eebf8e1797e97da081f4a60e6bc4ee590b33b35b57531f731b3",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/verifier/failure_analysis.py": "b9e31cf308478c963a4e5fe540c64e04d185d47004a1815d5aa4773c2cc24ae9",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/verifier/core.py": "2b2e4e5076e2ccdbe23b7aee55c6c136dea9171da0213ba19a05f95a6b638d2a",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/verifier/foundation.py": "13fa815dfdb71c2372ba5dca1e047ef74a216d45eb9b9c33aca6deda2b030cef"
+  },
+  "helper_entrypoint": "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/skills/analyze-system-failures/scripts/failure_analysis.py",
+  "helper_source_hash_scope": "observed_before_and_after_execution_not_loaded_module_binding",
+  "bytecode_cache_policy": "fresh_empty_prefix_with_writes_disabled",
+  "executed_at": "2026-11-13T23:56:55.273558+00:00",
+  "python": "3.12.3",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-X",
+    "pycache_prefix=/workspace/repos/builderbob/mbse-agents/examples/automotive/autonomous-emergency-braking/analysis/.cse-cache-p4yg1154",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/skills/analyze-system-failures/scripts/failure_analysis.py",
+    "/workspace/repos/builderbob/mbse-agents/examples/automotive/autonomous-emergency-braking/analysis/cse-failure-model.json",
+    "--required",
+    "fault_tree",
+    "--required",
+    "probability"
+  ],
+  "matched": true,
+  "cse_result": {
+    "acceptance": "not_evaluated",
+    "applicability_validation": "not_evaluated",
+    "artifact_sha256": "39930a8d515d0324839b295ae1b60086c5523bda9ec624bce1d4007e4fa2bc86",
+    "checks": {
+      "fault_tree": {
+        "claim_scope": "all_unique_event_boolean_assignments_no_probability_assumptions",
+        "completed_assignments": 256,
+        "cut_sets_complete": true,
+        "events": [
+          "BE1",
+          "BE2",
+          "BE3",
+          "BE4",
+          "BE5",
+          "BE6",
+          "BE7",
+          "BE8"
+        ],
+        "expected_assignments": 256,
+        "gates": [
+          "G1",
+          "G2",
+          "G3",
+          "TOP"
+        ],
+        "minimal_cut_sets": [
+          [
+            "BE7"
+          ],
+          [
+            "BE8"
+          ],
+          [
+            "BE1",
+            "BE4"
+          ],
+          [
+            "BE1",
+            "BE5"
+          ],
+          [
+            "BE1",
+            "BE6"
+          ],
+          [
+            "BE2",
+            "BE4"
+          ],
+          [
+            "BE2",
+            "BE5"
+          ],
+          [
+            "BE2",
+            "BE6"
+          ],
+          [
+            "BE3",
+            "BE4"
+          ],
+          [
+            "BE3",
+            "BE5"
+          ],
+          [
+            "BE3",
+            "BE6"
+          ]
+        ],
+        "record_basis_unknown": false,
+        "status": "pass",
+        "top_event": "TOP",
+        "unknown_event_basis": [],
+        "unused_events": [],
+        "unused_gates": []
+      },
+      "probability": {
+        "assumptions": {
+          "assumption": "mutually_independent",
+          "basis": "Synthetic demand scenarios; shared causes are reused event IDs.",
+          "mission": "One obstacle-detection demand within an explicitly selected operating condition; hardware unavailability must be estimated for this demand before using empirical data."
+        },
+        "claim_scope": "conditional_on_explicit_mutual_independence_and_mission",
+        "completed_assignments": 256,
+        "probability": "352001134189919821781/200000000000000000000000",
+        "status": "pass"
+      }
+    },
+    "claim_scope": "bounded_authored_coherent_boolean_failure_model",
+    "completed_checks": [
+      "fault_tree",
+      "probability"
+    ],
+    "expected_checks": [
+      "fault_tree",
+      "probability"
+    ],
+    "findings": [],
+    "input_path": "/workspace/repos/builderbob/mbse-agents/examples/automotive/autonomous-emergency-braking/analysis/cse-failure-model.json",
+    "input_sha256": "31159cb16687616f2dc0d992b203e9dd196c9407c5277cb2f39e45deea96a74d",
+    "limits": {
+      "assignments": 4096,
+      "cut_set_literals": 2048,
+      "events": 128,
+      "fmea_rows": 128,
+      "gate_depth": 64,
+      "gate_inputs": 32,
+      "gates": 128,
+      "minimal_cut_sets": 256,
+      "rational_bits": 4096,
+      "reachable_events": 12,
+      "text_characters": 2048
+    },
+    "model_id": "AEBDetection",
+    "revision": "gallery-hardening-1",
+    "scope_authority": "caller_supplied_local_scope_not_authenticated",
+    "scope_sha256": "41223e00ee538a5beb877f8e05a1cdd15a0349d2f3c7ad616bc1931e5729e656",
+    "status": "pass",
+    "version": "failure-analysis-1.0"
+  }
+}

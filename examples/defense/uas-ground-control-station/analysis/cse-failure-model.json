@@ -1,0 +1,119 @@
+{
+  "version": "failure-analysis-1.0",
+  "id": "GCSLinkLoss",
+  "revision": "gallery-hardening-1",
+  "basis": "Authored correction of the preserved gallery hazard model. Boolean event meanings and parameter scenarios are proposed teaching abstractions, not accepted field data.",
+  "events": {
+    "BE1": {
+      "description": "LOS RF equipment unavailable",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE2": {
+      "description": "LOS antenna pointing path unavailable",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE3": {
+      "description": "SATCOM terminal unavailable",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE4": {
+      "description": "Satellite communication service unavailable",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE5": {
+      "description": "Heartbeat timeout detection fails",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE6": {
+      "description": "Link-health assessment incorrectly remains healthy",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE7": {
+      "description": "Operator does not identify stale telemetry",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/100"
+    },
+    "BE8": {
+      "description": "Shared power/infrastructure removes both communication paths",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE9": {
+      "description": "Shared stale-data/clock dependency defeats automated monitors",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    }
+  },
+  "gates": {
+    "G1A": {
+      "operator": "or",
+      "inputs": [
+        "BE1",
+        "BE2"
+      ]
+    },
+    "G1B": {
+      "operator": "or",
+      "inputs": [
+        "BE3",
+        "BE4"
+      ]
+    },
+    "G1C": {
+      "operator": "and",
+      "inputs": [
+        "G1A",
+        "G1B"
+      ]
+    },
+    "G1": {
+      "operator": "or",
+      "inputs": [
+        "G1C",
+        "BE8"
+      ]
+    },
+    "G2A": {
+      "operator": "or",
+      "inputs": [
+        "BE5",
+        "BE9"
+      ]
+    },
+    "G2B": {
+      "operator": "or",
+      "inputs": [
+        "BE6",
+        "BE9"
+      ]
+    },
+    "G2": {
+      "operator": "and",
+      "inputs": [
+        "G2A",
+        "G2B",
+        "BE7"
+      ]
+    },
+    "TOP": {
+      "operator": "and",
+      "inputs": [
+        "G1",
+        "G2"
+      ]
+    }
+  },
+  "top_event": "TOP",
+  "probability": {
+    "assumption": "mutually_independent",
+    "basis": "Synthetic demand scenarios; shared causes are reused event IDs.",
+    "mission": "One ground-station supervision interval during a communication-loss demand; no flight-hour rate or air-vehicle trajectory is calculated."
+  },
+  "fmea": {}
+}

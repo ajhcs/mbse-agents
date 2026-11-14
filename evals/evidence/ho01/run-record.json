@@ -1,0 +1,29 @@
+{
+  "scope": "single independent skill-use smoke exercise",
+  "case": "HO-01",
+  "model": "unknown",
+  "settings": "unknown",
+  "controller_tests_executed": false,
+  "files": {
+    "outputs/00-review-guide.md": "2582ce1cc57dcd4f394f4a597f6c4ebdb4f04cd85b4d953fb477288cfbf60f04",
+    "outputs/01-requirements.md": "4595c08fd5fac86688d250354a02048b8cfa2d7647abddf74076fab213111371",
+    "outputs/02-architecture.md": "40dc7735a64cc4ecd46259eb2ab4f7ebbfc27d2631c7d1b3443de6ed242a9edd",
+    "outputs/03-verification-plan.md": "2d376bf6344370870dc9f7cedb3c93144d12b54f9e71bb3abcac6ce147e7684e",
+    "outputs/04-trace-and-decisions.md": "a68053a41319bf1aebf24f82670ee65f8a5ced24342c7421a66ebbc589f6c4db",
+    "outputs/05-artifact-checks.md": "90323650ea6c0f73822e7a27189131b854637e38b7162ce33686e3fad7142b25",
+    "request.md": "434a60facfae617c47a0af1a2decdf213138a5e75569209cf40f79331eeedc4d"
+  },
+  "selected_package_hashes": {
+    ".agents/skills/mbse-architecture/agents/openai.yaml": "9ce7be78803b32c90602cdd76b4d3af359bb8063d2253bf78893e7289350e9c9",
+    ".agents/skills/mbse-architecture/references/architecture-records.md": "18eb3c575c519d9e2f0c7f313667bcf99f56f0202436d8d51bc2f66cf3664e83",
+    ".agents/skills/mbse-architecture/SKILL.md": "976a264884b7fe6e53ccbf3b04c4ba7ffdff22968b6ea22243a3734f3b27c56f",
+    ".agents/skills/mbse-requirements/agents/openai.yaml": "354734674e4ab5ca971ad48c6b14be6d38139bb1e12f390a77c2c992be2e348b",
+    ".agents/skills/mbse-requirements/references/requirement-contracts.md": "73fee4ed81ba3839f59adaf8fc2a3f1da4c670e19af87620d9b42b953c55eca5",
+    ".agents/skills/mbse-requirements/SKILL.md": "2519a9500bc053d594d66abdb8351f0cee906ebd749125e782494ed52f192967",
+    ".agents/skills/mbse-verification-evidence/agents/openai.yaml": "1e8b2346499225ab95f04894f99dbc0aa99392a8fe32e78565d54876fa050ae9",
+    ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md": "50ad3b3454e132ecc7c19a3f18acb823b8a8ed5d0c354022d1ca121c2a7082ca",
+    ".agents/skills/mbse-verification-evidence/SKILL.md": "21d1f995e56f155152e4c83c7458648b902f8969873752ea7e69128f95cd7a92"
+  },
+  "external_model_api_calls": false,
+  "assessment": "independent-assessment.md"
+}

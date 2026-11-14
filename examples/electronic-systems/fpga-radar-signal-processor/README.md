@@ -1,5 +1,7 @@
 # FPGA Radar Signal Processor
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Overview
 
 The FPGA Radar Signal Processor (FRSP) is a real-time digital signal processing subsystem for an airborne phased array radar. The FRSP implements the complete signal processing chain from raw ADC samples through pulse compression, Doppler FFT, constant false alarm rate (CFAR) detection, and target report generation on a single Xilinx Versal ACAP device. The design operates across multiple clock domains (250 MHz ADC sampling clock, 400 MHz processing clock, 200 MHz MIL-STD-1553 bus clock) and processes 16 simultaneous receive channels at a pulse repetition frequency of up to 20 kHz. The FRSP is classified DO-254 DAL B with MIL-STD-882E safety analysis for unintended radar emissions and spurious radiation hazards.

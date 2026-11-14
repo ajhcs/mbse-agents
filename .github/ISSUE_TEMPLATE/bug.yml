@@ -1,0 +1,24 @@
+name: Bug or domain correction
+description: Help us fix a workflow, source claim, installation problem, or example.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for helping. A small example is enough to start. Please leave out confidential or sensitive project data."
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Tell us your task, the result, and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Example or reproduction
+      description: Optional prompt, file/section, command, or screenshot; include host/model/version when relevant.
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source or suggested correction
+      description: Optional edition, locator, link, or explanation. It is fine to report uncertainty.

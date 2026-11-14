@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "model": "AEBDetection",
+  "hazard": "HZ-001",
+  "scope": "exhaustive_static_boolean_and_conditional_probability",
+  "mission": "One obstacle-detection demand within an explicitly selected operating condition; hardware unavailability must be estimated for this demand before using empirical data.",
+  "basic_events": 8,
+  "completed_assignments": 256,
+  "hazard_assignments": 241,
+  "cut_sets_complete": true,
+  "minimal_cut_sets": [
+    [
+      "BE7"
+    ],
+    [
+      "BE8"
+    ],
+    [
+      "BE1",
+      "BE4"
+    ],
+    [
+      "BE1",
+      "BE5"
+    ],
+    [
+      "BE1",
+      "BE6"
+    ],
+    [
+      "BE2",
+      "BE4"
+    ],
+    [
+      "BE2",
+      "BE5"
+    ],
+    [
+      "BE2",
+      "BE6"
+    ],
+    [
+      "BE3",
+      "BE4"
+    ],
+    [
+      "BE3",
+      "BE5"
+    ],
+    [
+      "BE3",
+      "BE6"
+    ]
+  ],
+  "scenarios": [
+    {
+      "id": "nominal-synthetic",
+      "basis": "Illustrative demand mixture; not an ASIL-derived rate.",
+      "probability": "352001134189919821781/200000000000000000000000",
+      "decimal": 0.001760005670949599,
+      "unit": "per_declared_demand",
+      "overrides": {}
+    },
+    {
+      "id": "shared-environment-stress",
+      "basis": "Tenfold common environmental demand probability.",
+      "probability": "215063175460262324681/20000000000000000000000",
+      "decimal": 0.010753158773013116,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE8": "1/100"
+      }
+    },
+    {
+      "id": "fusion-improvement",
+      "basis": "Hypothetical elimination of the modeled fusion omission only.",
+      "probability": "33203433762368219/20000000000000000000",
+      "decimal": 0.001660171688118411,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE7": "0"
+      }
+    },
+    {
+      "id": "common-cause-control",
+      "basis": "Hypothetical reduction in shared environmental loss by operating restriction.",
+      "probability": "1721380721486494792781/2000000000000000000000000",
+      "decimal": 0.0008606903607432474,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE8": "1/10000"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "AEB-P1",
+      "description": "Camera-path failures are tolerated when radar and fusion remain usable",
+      "expectation": "holds",
+      "property_holds": true,
+      "matched_assignments": 8,
+      "counterexamples": 0,
+      "first_counterexample": null,
+      "result": "pass"
+    },
+    {
+      "id": "AEB-P2",
+      "description": "Radar-path failures are tolerated when camera and fusion remain usable",
+      "expectation": "holds",
+      "property_holds": true,
+      "matched_assignments": 8,
+      "counterexamples": 0,
+      "first_counterexample": null,
+      "result": "pass"
+    },
+    {
+      "id": "AEB-C1",
+      "description": "Two healthy sensors guarantee detection despite arbitrary fusion behavior",
+      "expectation": "counterexample",
+      "property_holds": false,
+      "matched_assignments": 2,
+      "counterexamples": 1,
+      "first_counterexample": {
+        "BE1": false,
+        "BE2": false,
+        "BE3": false,
+        "BE4": false,
+        "BE5": false,
+        "BE6": false,
+        "BE7": true,
+        "BE8": false
+      },
+      "result": "pass"
+    },
+    {
+      "id": "AEB-C2",
+      "description": "Perfect fusion resolves every common environmental sensor loss",
+      "expectation": "counterexample",
+      "property_holds": false,
+      "matched_assignments": 128,
+      "counterexamples": 113,
+      "first_counterexample": {
+        "BE1": false,
+        "BE2": false,
+        "BE3": false,
+        "BE4": false,
+        "BE5": false,
+        "BE6": false,
+        "BE7": false,
+        "BE8": true
+      },
+      "result": "pass"
+    }
+  ],
+  "probability_assumption": "mutually_independent_basic_events_with_shared_causes_explicitly_reused",
+  "parameter_status": "synthetic_scenario_inputs_not_measured_failure_rates",
+  "physical_validation": "not_performed",
+  "risk_acceptance": "not_assessed",
+  "result": "pass",
+  "configuration": {
+    "analysis/failure-model.json": "2ad026ef78f3e1d73456fcec50dc9c8e4806ddcbff39922d00eac2179df12944",
+    "scripts/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b",
+    "requirements.md": "ccace2743828e8d5c560ca3b9b68335383d2ca3d51f749fbfa6f6748ca84a529",
+    "architecture.md": "c29a3fce3291d5b39a58bfdda7d9ed49ac30fa5a8aad21f71026be8d87d6cac9",
+    "hazard-analysis.md": "fe80faf1a50aa6f3cb61b0cb1278c41d709d43f8d11b8667ea843199e28b6292"
+  },
+  "loaded_sources": {
+    "scripts/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b"
+  },
+  "run_id": "fbabfc076dd0bf2fda20"
+}

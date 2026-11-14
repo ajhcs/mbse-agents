@@ -1,0 +1,23 @@
+{
+  "id": "HG-10-CH1",
+  "status": "synthetic_transfer_exercise",
+  "historical_provenance": false,
+  "title": "Open a new service while a training area remains unavailable",
+  "description": "A fictional terminal program has a fixed public opening date. The complete baggage training area becomes available late, so the team proposes replacing the joint exception-handling rehearsal with separate departmental briefings.",
+  "affected_interface_ids": [
+    "HG-10-I1",
+    "HG-10-I2",
+    "HG-10-I3",
+    "HG-10-I4"
+  ],
+  "affected_claim_ids": [
+    "HG-10-C2",
+    "HG-10-C3"
+  ],
+  "decision_requested": "Recommend a readiness disposition, a feasible integrated trial, and an operational fallback with named decision roles.",
+  "constraints": [
+    "No passenger or baggage throughput target is supplied.",
+    "You may propose reduced initial scope but must state its service consequences.",
+    "Do not invent trial success or historical airport metrics."
+  ]
+}

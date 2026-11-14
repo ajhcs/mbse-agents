@@ -1,0 +1,240 @@
+{
+  "source_hashes": {
+    "evals/benchmark/items.json": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+    "evals/benchmark/keys.json": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+    "scripts/benchmark.py": "f693899802f6e16752559f5df2df4f959703e295cce94b7cafe8f787d94b9a3d"
+  },
+  "checks": [
+    {
+      "probe": "Fresh valid schema-2 answer, review and report succeed",
+      "expected": "accept",
+      "passed": true,
+      "result": {
+        "correct": 3,
+        "items": 3,
+        "review_status": "reviewer_reported"
+      }
+    },
+    {
+      "probe": "Prepared exposure inventory and key separation verify for all four arms",
+      "expected": "accept",
+      "passed": true,
+      "result": {
+        "none": [],
+        "task": [
+          "mbse-architecture",
+          "mbse-baseline-review",
+          "mbse-conops",
+          "mbse-systems-engineering"
+        ],
+        "task-domain": [
+          "mbse-architecture",
+          "mbse-baseline-review",
+          "mbse-conops",
+          "mbse-systems-engineering"
+        ],
+        "catalog": [
+          "mbse-aerospace",
+          "mbse-architecture",
+          "mbse-automotive",
+          "mbse-baseline-review",
+          "mbse-conops",
+          "mbse-defense",
+          "mbse-electronic-systems",
+          "mbse-medical-device",
+          "mbse-operational-scenarios",
+          "mbse-requirements",
+          "mbse-system-concept",
+          "mbse-systems-engineering",
+          "mbse-verification-evidence"
+        ]
+      }
+    },
+    {
+      "probe": "Input fingerprint precedes template and manifest without circular hash",
+      "expected": "accept",
+      "passed": true,
+      "result": {
+        "input_files": [
+          "questions.json",
+          "request.md"
+        ],
+        "template_separately_hashed": true,
+        "packet_binding": {
+          "packet_id": "e31d0d1d270a4fe1b8516cbe3fa9cf96",
+          "inputs_sha256": "447080b43151d70c4b645a2fa6260512fb29ca47385e516d9fba63606aac938a",
+          "bank_sha256": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+          "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393"
+        }
+      }
+    },
+    {
+      "probe": "Unchanged answers cannot acquire another arm",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Answers are not bound to this packet and its inputs"
+    },
+    {
+      "probe": "Multiple-selection partial answer and omitted item receive no credit",
+      "expected": "accept",
+      "passed": true,
+      "result": {
+        "items": 3,
+        "answered": 2,
+        "selection_correct": 1,
+        "selection_accuracy": 0.3333333333333333,
+        "uniform_choice_reference": 0.18888888888888888
+      }
+    },
+    {
+      "probe": "Review rejects changed answers_sha256",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Review does not identify these answer bytes"
+    },
+    {
+      "probe": "Review rejects changed packet_manifest_sha256",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Review is not bound to this packet and key revision"
+    },
+    {
+      "probe": "Review rejects changed key_sha256",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Review is not bound to this packet and key revision"
+    },
+    {
+      "probe": "Review rejects changed criteria_sha256",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Review criteria differ from the recorded rubric"
+    },
+    {
+      "probe": "Old positional ratings cannot inherit reversed criteria in a new bank",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Review criteria differ from the recorded rubric"
+    },
+    {
+      "probe": "Omitting request hash cannot hide changed request",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Manifest omits mandatory packet inputs"
+    },
+    {
+      "probe": "Catalog label cannot describe an empty skill packet",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Packet arm and declared skill exposure disagree"
+    },
+    {
+      "probe": "Unmanifested skill exposure is rejected",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Packet arm and actual skill exposure disagree"
+    },
+    {
+      "probe": "Unmanifested package reference is rejected",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Packet manifest and complete input inventory disagree"
+    },
+    {
+      "probe": "Missing declared package is rejected",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Packet input changed or missing: .agents/skills/mbse-conops/SKILL.md"
+    },
+    {
+      "probe": "Old answers reject a coherently rehashed changed request",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Answers are not bound to this packet and its inputs"
+    },
+    {
+      "probe": "Comparison rejects 700 percent accuracy",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Score aggregate disagrees with outcomes: selection_accuracy"
+    },
+    {
+      "probe": "Comparison rejects wrong dimension aggregate",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Score dimension aggregates disagree with outcomes"
+    },
+    {
+      "probe": "Comparison rejects an incorrect outcome credited as correct",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Score outcome disagrees with its selection and key"
+    },
+    {
+      "probe": "Comparison rejects stale embedded review criteria",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Score embeds a review for different inputs or criteria"
+    },
+    {
+      "probe": "Exclusive result creation refuses dangling symlink",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Output exists; preserve the prior record and choose a new path"
+    },
+    {
+      "probe": "Reject nonfinite/overflow numeric token NaN",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Nonfinite JSON number: NaN"
+    },
+    {
+      "probe": "Reject nonfinite/overflow numeric token Infinity",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Nonfinite JSON number: Infinity"
+    },
+    {
+      "probe": "Reject nonfinite/overflow numeric token -Infinity",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Nonfinite JSON number: -Infinity"
+    },
+    {
+      "probe": "Reject nonfinite/overflow numeric token 1e999",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Nonfinite JSON number: 1e999"
+    },
+    {
+      "probe": "Reject nonfinite/overflow numeric token -1e999",
+      "expected": "reject",
+      "passed": true,
+      "exception": "ValueError",
+      "message": "Nonfinite JSON number: -1e999"
+    }
+  ],
+  "passed": 26,
+  "total": 26
+}

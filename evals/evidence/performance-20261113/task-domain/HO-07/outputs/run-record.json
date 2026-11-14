@@ -1,0 +1,72 @@
+{
+  "case": "HO-07",
+  "participant": "performance_design",
+  "start_utc": "2026-11-13T23:42:52.163592+00:00",
+  "end_utc": "2026-11-13T23:56:20.964155+00:00",
+  "model_id": "unknown",
+  "settings": "unknown",
+  "tokens": "unknown",
+  "cost": "unknown",
+  "shared_context_limitation": "Six cases HO-01, HO-04, HO-07, HO-09, HO-12, HO-13 share one participant context. Outputs are not independent across cases.",
+  "skills_read": [
+    ".agents/skills/mbse-conops/SKILL.md",
+    ".agents/skills/mbse-operational-scenarios/SKILL.md"
+  ],
+  "skills_used": [
+    ".agents/skills/mbse-conops/SKILL.md",
+    ".agents/skills/mbse-operational-scenarios/SKILL.md"
+  ],
+  "references_read": [
+    ".agents/skills/mbse-conops/references/operational-framing.md",
+    ".agents/skills/mbse-operational-scenarios/references/scenario-records.md"
+  ],
+  "tools": [
+    "functions.exec",
+    "exec_command",
+    "bash",
+    "python3 pathlib/hashlib/json/datetime",
+    "cat (Markdown artifact creation)",
+    "python3 final hash/manifest and Markdown link check"
+  ],
+  "input_sha256": {
+    ".agents/skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+    ".agents/skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+    ".agents/skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+    ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+    ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+    ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+    "packet-manifest.json": "8097f6f2d9988508f959d732df2b15a77fff9815fbda0c2d61f2fd13c80836f5",
+    "request.md": "e59cb15b88afbef372ef32f62cebbc0703b28bbf998d8bc6e166e66bfcb911cc"
+  },
+  "output_sha256": {
+    "outputs/output.md": "2283125130122496a89530f9b1209566ffc01f2c469c1183f1f7296e0d181eca"
+  },
+  "exceptions": [
+    "The python command is unavailable; python3 is used.",
+    "Platform capabilities, authorization and custody policy, staffing and handling limits are unspecified and retained as decisions/assumptions.",
+    "Output hash map excludes run-record.json to avoid self-referential hashing."
+  ],
+  "status": "completed",
+  "execution": "Operational scenario authoring only; no robot, clinical workflow or human validation trial executed.",
+  "artifact_integrity": {
+    "checked_utc": "2026-11-13T23:56:20.964152+00:00",
+    "all_inputs_match_initial_sha256": true,
+    "all_manifest_entries_match_sha256": true,
+    "all_output_sha256_match": true,
+    "local_markdown_links_resolve": true,
+    "scope": "Filesystem/byte integrity and artifact-link checks only; not controller, model quality or operational verification."
+  },
+  "shared_preparation": {
+    "workspace_mount_observed": "/workspace mounted from /dev/nvme1n1p1, ext4, rw,nosuid,nodev,relatime",
+    "preparation_tools": [
+      "findmnt",
+      "python (unavailable)",
+      "python3"
+    ],
+    "timing_note": "Case start is packet intake/hash initialization. All six requests were then read in one call and authored sequentially in shared context; intervals overlap and are not additive compute timings."
+  },
+  "access_limits_observed": [
+    "Used only assigned packet request, manifest, skill packages, references and HO-13 supplied inputs for task reasoning.",
+    "No source repository, memory, other arm, rubric/evaluation key, prior participant outputs, external sources, production systems or paid APIs accessed."
+  ]
+}

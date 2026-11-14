@@ -1,7 +1,7 @@
 title: Naval Combat Management System
 domain: defense
 tier: fleet
-status: complete
+status: illustrative
 standards:
   - DoDAF 2.02
   - MIL-STD-882E
@@ -13,3 +13,8 @@ summary: >
   Surface combatant CMS integrating sensors, weapons, and C2. Track
   fusion, engagement planning, cooperative engagement capability.
   MIL-STD-1553/VME to GigE modernization path.
+evidence_status: planned
+
+review_status: structural_and_source_inventory
+physical_evidence_status: planned
+risk_acceptance: not_assessed

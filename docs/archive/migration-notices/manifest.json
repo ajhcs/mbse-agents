@@ -1,0 +1,37 @@
+{
+  "archived_on": "2026-11-13",
+  "source_head": "b54b0b673eb80ea22bd6c4987955192b22332923",
+  "scope": "Migration notices as present in the working tree; Git retains earlier source history.",
+  "files": [
+    {
+      "former_path": "agents/aerospace-systems-engineer.md",
+      "archive_path": "docs/archive/migration-notices/agents/aerospace-systems-engineer.md",
+      "sha256": "057f4ab4e724440475461a37b826cbd60daca8512ad28bf4dee8b6f9551f29fc"
+    },
+    {
+      "former_path": "agents/automotive-systems-engineer.md",
+      "archive_path": "docs/archive/migration-notices/agents/automotive-systems-engineer.md",
+      "sha256": "9df0b61b32771ca2f99f2aa8e63302ff4754dcb9e4fcf71817c929aebe5a46b1"
+    },
+    {
+      "former_path": "agents/defense-systems-engineer.md",
+      "archive_path": "docs/archive/migration-notices/agents/defense-systems-engineer.md",
+      "sha256": "79b1ebc8bc0888714980b42aaeb44a30515e51099322dd081791c48d43dcc490"
+    },
+    {
+      "former_path": "agents/electronic-systems-engineer.md",
+      "archive_path": "docs/archive/migration-notices/agents/electronic-systems-engineer.md",
+      "sha256": "46fb0232f410397ea8966ef185bd2f37fd8a1bceb68c56de533b99d241cbaca4"
+    },
+    {
+      "former_path": "agents/medical-device-systems-engineer.md",
+      "archive_path": "docs/archive/migration-notices/agents/medical-device-systems-engineer.md",
+      "sha256": "2a959bac0508e2f9cd5e6030119422165c8214f4510e6e7ab07201c38f1fbd16"
+    },
+    {
+      "former_path": "skills/defense-founder-review/SKILL.md",
+      "archive_path": "docs/archive/migration-notices/skills/defense-founder-review/SKILL.md",
+      "sha256": "1f457580efa417ca0ddcf724b74a57c2797b8fe885e4b8418d447ac8f0a23506"
+    }
+  ]
+}

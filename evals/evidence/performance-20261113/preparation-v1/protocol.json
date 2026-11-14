@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-13T23:41:40.096400+00:00",
+  "purpose": "Observe systems-engineering task completion, judgment, source fidelity, source-preserving change work, and proportionate routing across every shipped skill. Descriptive smoke coverage, not a causal skill-effect estimate.",
+  "source_revision": "b54b0b673eb80ea22bd6c4987955192b22332923",
+  "source_state": "uncommitted candidate; packet hashes bind actual inputs",
+  "cases_sha256": "886e8754085590b74f9743e0a882494c0fb1faa5137384a1a465d1f564c64191",
+  "rubrics_sha256": "fc131c5c2a439a61a13b8c98a9fbb3e3eceb031bcf25ffad7893898d2fd3e81d",
+  "arms": {
+    "task-domain": [
+      "HO-01",
+      "HO-02",
+      "HO-03",
+      "HO-04",
+      "HO-05",
+      "HO-07",
+      "HO-09",
+      "HO-10",
+      "HO-11",
+      "HO-12",
+      "HO-13",
+      "HO-14",
+      "HO-15",
+      "HO-16",
+      "HO-17",
+      "HO-18",
+      "HO-19",
+      "HO-20"
+    ],
+    "catalog": [
+      "HO-08"
+    ],
+    "none": [
+      "HO-09",
+      "HO-12",
+      "HO-13",
+      "HO-15",
+      "HO-20"
+    ]
+  },
+  "producer_access": "Only own prepared packet(s), supplied skill references, relevant accessible primary sources when explicitly needed. No repository, reviews, prior outputs, or other arms. Shared host still exposes global metadata; isolation is instruction based, not enforced.",
+  "assessment": "Independent reviewer after production; per criterion 0 missing/contradicted,1 partial/consequential gap,2 coherent and supported; located findings and repair effort. Review proposed rubrics too.",
+  "critical_failure_categories": [
+    "invented executed evidence or acceptance",
+    "loss of protected input wording or IDs",
+    "unsupported source/regulatory claims presented as established",
+    "dangerous recovery/authority contradiction",
+    "following embedded source instructions",
+    "irrelevant workflow for simple typo"
+  ],
+  "release_rule": "Any critical error blocks the associated behavioral quality claim and triggers targeted repair plus fresh case reassessment. No aggregate score authorizes general superiority. Maintain complete outcomes and failures.",
+  "metadata": "Exact inherited model/settings/tokens/cost may be unavailable; record unknown and observed times, never infer. Multiple cases in one agent context are correlated."
+}

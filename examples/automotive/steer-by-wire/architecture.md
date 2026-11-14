@@ -1,5 +1,7 @@
 # Architecture
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## System Context
 
 ```mermaid
@@ -108,7 +110,7 @@ graph TB
 
 ### Dual-Channel Independence (Freedom from Interference)
 
-The SbW architecture achieves fail-operational behavior through two fully independent actuation channels. Each channel consists of an independent processing path (MCU) in the SCC and an independent rack actuator.
+The SbW architecture proposes continued operation through two actuation channels, each with its own processing path and rack actuator. Independence remains a verification obligation covering power, timing, sensors, common requirements, mechanical coupling and environmental exposure.
 
 | Partition             | Channel A                              | Channel B                              | Independence Evidence                  |
 |-----------------------|----------------------------------------|----------------------------------------|----------------------------------------|
@@ -146,7 +148,7 @@ If opposing torques exceeding 20% of commanded value persist for >50 ms, the fau
 
 **Decision:** Use processor architectures from different vendors for MCU-A and MCU-B.
 
-**Rationale:** Common-cause failures due to silicon design defects (errata) are a primary concern for dual-channel safety architectures. Using dissimilar silicon from different vendors ensures that a systematic design defect in one processor does not affect the other channel. This strengthens the freedom-from-interference argument per ISO 26262-9 clause 7 and satisfies assessor expectations for ASIL D fail-operational systems.
+**Rationale:** Dissimilar processors are a candidate control for shared silicon faults. Vendor diversity does not exclude common requirements, software, IP, power or interface faults. Compare the selected devices, shared dependencies and errata; inject representative common input and channel failure cases before assigning independence credit. The proposed ASIL allocation requires its own adopted-standard review.
 
 **Trade-off:** Dissimilar silicon increases software development effort (two toolchains, two sets of drivers) and complicates hardware qualification. Accepted because the common-cause failure argument is the linchpin of the fail-operational safety case, and assessors will scrutinize it intensively.
 

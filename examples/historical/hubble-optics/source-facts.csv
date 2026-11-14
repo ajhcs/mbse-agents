@@ -1,0 +1,3 @@
+id,statement,source_ids,locator,status
+HG-03-F1,The board traced the primary-mirror figure error to an incorrectly assembled reflective null corrector used in manufacture and verification.,HG-03-S1,Executive summary,attributed_historical_finding
+HG-03-F2,"Other optical tests indicated an error, but their indications were discounted; the main corrector had not received an independent dimensional verification after assembly.",HG-03-S1,Executive summary; null-corrector investigation,attributed_historical_finding

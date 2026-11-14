@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "case": "UT-01",
+  "arm": "revised-guidance",
+  "created_at": "2026-11-14T00:01:20.539684+00:00",
+  "files": {
+    "request.md": "2acf74dbce6ad67186824c169f68b40982ffe062135b0e7942b1e54d12227c69",
+    "skills/mbse-verification-evidence/SKILL.md": "c9a7b3d95a9c01efd51e818184a773273a1f5583a28ade636eba6b32f17f6524",
+    "skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+    "skills/mbse-verification-evidence/references/evidence-contracts.md": "7fce7846b8dedbcd5ff0f331d99c3238ccde5de6326be1886f334d09fb646bcb"
+  },
+  "source_access": "packet-only; instruction restricted, not technically isolated",
+  "skill": "mbse-verification-evidence"
+}

@@ -1,0 +1,18 @@
+The integration lead should retain the spreadsheet unit labels as a documentation improvement and keep the lesson open pending implementation and operational evidence.
+
+**Source-reported facts.** NASA's Phase I report says the interface specification already required impulse in newton-seconds, while the ground software supplied pound-force-seconds. The receiving navigation software interpreted those values as metric. The report also identifies weaknesses in communication, transition from development to operations, and ground-software verification. I accessed the report's extracted text, including printed pages 6–7 and 16; I have not reviewed every page. [Mars Climate Orbiter Mishap Investigation Board, Phase I, 10 November 1999](https://discovery.larc.nasa.gov/pdf_files/MCO_report_2.pdf).
+
+**Causal interpretation.** A written unit requirement existed, but the implemented producer and consumer did not satisfy a shared physical meaning. Communication and lifecycle weaknesses helped that discrepancy survive. Adding another label cannot establish that the numbers obey the label, that transformations preserve meaning, or that an operational anomaly reaches someone able to resolve it. This is my interpretation of the transfer lesson, rather than an additional historical finding.
+
+**Proposed controls and distinguishing observations.** Assign the integration lead responsibility for the complete exchange, with named producer, consumer, and operations owners. Agree the following evidence before closing the action:
+
+| Claim | Proposed control | Observation needed |
+| --- | --- | --- |
+| Interface is documented | Controlled definition of quantity, units, frame/sign, timing, validity, format/version, error behavior, and both owners | Reviewed specification and matching spreadsheet definitions. This establishes agreement only. |
+| Producer and consumer implement that agreement | Check conversion at the actual producer–consumer boundary; use explicit units and reject missing or unsupported unit information | Known nonzero physical inputs traverse the production-representative export, transfer, import, and calculation chain. Intermediate values and final physical results match an independently calculated reference within agreed tolerances. Record exact software and data versions. |
+| A misleading value will be detected | Exercise missing units, wrong units, wrong scaling with a correct-looking label, stale data, and conversion applied twice | Tests distinguish valid conversion from each injected error and show the specified rejection or alarm. A type check alone cannot detect a number incorrectly labeled with an allowed unit. |
+| Operations can recognize and resolve a discrepancy | Independent result cross-check, mission-derived discrepancy thresholds, formal anomaly ownership, escalation, and development-to-operations handover | A rehearsal with the intended operators introduces a disagreement. Records show detection, acknowledgment, accountable investigation, disposition, and communication before the relevant decision deadline. |
+
+Use reference calculations that do not reuse the production conversion routine. Agree tolerances, deadlines, and the consequence of unresolved disagreement from this mission's needs; none are supplied here. Preserve failed and inconclusive results. Recheck applicability after interface or software changes.
+
+Closure requires the integration lead to review those results against the intended configuration and operations, with residual gaps explicitly assigned. No modern implementation, test result, or approval was supplied; these controls are proposals, and no test has been executed here.

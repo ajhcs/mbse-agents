@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-14T00:01:20.539724+00:00",
+  "purpose": "Fresh transfer check after a real ambiguity in HO13; original response remains unchanged.",
+  "request_sha256": "2acf74dbce6ad67186824c169f68b40982ffe062135b0e7942b1e54d12227c69",
+  "packets": [
+    {
+      "schema_version": 1,
+      "case": "UT-01",
+      "arm": "prior-guidance",
+      "created_at": "2026-11-14T00:01:20.539242+00:00",
+      "files": {
+        "request.md": "2acf74dbce6ad67186824c169f68b40982ffe062135b0e7942b1e54d12227c69",
+        "skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+        "skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+        "skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c"
+      },
+      "source_access": "packet-only; instruction restricted, not technically isolated",
+      "skill": "mbse-verification-evidence"
+    },
+    {
+      "schema_version": 1,
+      "case": "UT-01",
+      "arm": "revised-guidance",
+      "created_at": "2026-11-14T00:01:20.539684+00:00",
+      "files": {
+        "request.md": "2acf74dbce6ad67186824c169f68b40982ffe062135b0e7942b1e54d12227c69",
+        "skills/mbse-verification-evidence/SKILL.md": "c9a7b3d95a9c01efd51e818184a773273a1f5583a28ade636eba6b32f17f6524",
+        "skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+        "skills/mbse-verification-evidence/references/evidence-contracts.md": "7fce7846b8dedbcd5ff0f331d99c3238ccde5de6326be1886f334d09fb646bcb"
+      },
+      "source_access": "packet-only; instruction restricted, not technically isolated",
+      "skill": "mbse-verification-evidence"
+    }
+  ],
+  "criteria": [
+    "Decision-rule outcomes are internally consistent including bounds and overlap; any precedence is explicit.",
+    "Uncertainty arithmetic and the120ms equality boundary are correct; no universal rule or adoption is invented.",
+    "Original IDs/observations retained; supplied assumptions and synthetic fixture status clear.",
+    "Finite observations are not upgraded to all-envelope verification; operational caution is separated from established nonconformity and authorization."
+  ],
+  "review_scale": {
+    "0": "missing or materially incorrect",
+    "1": "partial with a concrete repair needed",
+    "2": "coherent and supported"
+  },
+  "comparison_limits": "One fresh participant per arm, shared global host metadata, unknown exact model/settings; descriptive reassessment, not causal effect or statistical gain."
+}

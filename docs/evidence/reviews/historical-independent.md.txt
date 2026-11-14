@@ -1,0 +1,108 @@
+# Historical gallery independent review
+
+Review date: 2026-11-13. Final disposition: **no open actionable findings in the reviewed historical gallery**. One minor source-metadata defect was identified, corrected by the author, and independently closed. No historical fact statement required correction.
+
+## Scope and independence
+
+Reviewed all 21 cases, all 42 historical fact statements, the 24 source-register entries, every retrospective analysis and proposed artifact, and all 27 files in the three connected Hubble, Mars Climate Orbiter and Heathrow bundles. The cases use ten domains and historical event/design-baseline years before 2015. Source entries are not a count of distinct underlying publications: Heathrow's two entries are chapters of one report, and Therac's two entries are parts of one article.
+
+I read AGENTS.md and verified writable Samsung-backed `/workspace` with unprivileged `bob-admin workspace-status`. I made no production-file changes, used no paid models or APIs, and did not open participant outputs. Review copies and checks stayed under `.mbse-review`.
+
+I independently opened and inspected the 12 source entries not covered by the existing [benchmark independent source review](benchmark-independent.md#source-checks): HG-01-S1, HG-03-S1, HG-07-S1/S2, HG-09-S1, HG-10-S1/S2, HG-12-S1, HG-13-S1, HG-14-S1, HG-18-S1 and HG-19-S1. That directly rechecked 18 fact statements and additional source metadata. I read the other 24 fact statements and checked them against the benchmark review's source findings and locators; I did not represent those 12 source pages as independently reopened by me. The [42-row fact review](historical-independent/fact-review.csv) records this distinction for each fact. The [direct access register](historical-independent/direct-source-checks.json) records the newly inspected URLs and scope.
+
+This is a bounded attribution/content review. It does not independently reproduce accident investigations, validate hypothetical interventions, certify model quality, or establish the completeness of the selected cases. Remote source bytes were not archived; URLs, locators and current access observations are retained.
+
+## Exact reviewed inputs
+
+The original 70-file snapshot is preserved under [source](historical-independent/source). Its [complete SHA-256 manifest](historical-independent/source/review-input-sha256.json) has SHA-256:
+
+`7d79bdd5f4bac39cc5de52f810655e43977efd506203cac9b583e22fc587b6d4`
+
+The [final reviewed manifest](historical-independent/reviewed-final-sha256.json), after the single correction below, has SHA-256:
+
+`d2554564846c5dd531b45f79f03b94b744a6f032f625363a4032f65f665dd540`
+
+Only these three files changed between those manifests. Their revised bytes are preserved under [source-revised](historical-independent/source-revised).
+
+| File | Original SHA-256 | Final SHA-256 |
+| --- | --- | --- |
+| `docs/sources-historical.md` | `b237e0218ca41dc2da527e3c5d218c5cb1c83948464c004d3565486254e2bca9` | `55451b2a230f696d1486545c2b2ecc7edce5a823bb664f0f85dd8089f15ccb94` |
+| `examples/historical/herald-free-enterprise/analysis.json` | `60a71491d44dc4dd91224cd92d5815461fb3ad35371241ee144cb61ed9a5364a` | `9ed77ddb977ca7c63b84bb3df05e4b44e75638b3c28290574e825914145d4c00` |
+| `examples/historical/herald-free-enterprise/README.md` | `30de79422aad8dc7f0e09b9b57b0cacee329e1384f23fa80a66a637a2f9407e1` | `5a8f155c490e776193b8a5d888602de9df7812e01923389ee3ddf2c1e12d43b6` |
+
+The three nine-file connected bundles remained byte-identical. Each aggregate below is the SHA-256 of its sorted, indented JSON path-to-file-SHA-256 manifest plus a final newline.
+
+| Bundle | Aggregate manifest SHA-256 |
+| --- | --- |
+| [Hubble](historical-independent/source/hubble-optics-sha256.json) | `023e34ea3f276622d4c7223081f2d5f55e265d79fc6193db8f48310952df89ab` |
+| [Mars Climate Orbiter](historical-independent/source/mars-climate-orbiter-sha256.json) | `dd2dc885dfc180fa31df9627863c610263895cbba844e14fe5e733c097c76239` |
+| [Heathrow](historical-independent/source/heathrow-terminal-5-sha256.json) | `4b85d2562557277217f514024ebb54fa9b75d1e0b66d9c4bc0bfafff5a383c48` |
+
+## F1 — [P3] Separate the Herald report date from its addendum — closed
+
+Original location: `examples/historical/herald-free-enterprise/analysis.json:24`, propagated to `docs/sources-historical.md:198` and the case README. `publication_date: 1987-09` took the date of a correction addendum as the date of the original report.
+
+The [cited scan](https://assets.publishing.service.gov.uk/media/54c1704ce5274a15b6000025/FormalInvestigation_HeraldofFreeEnterprise-MSA1894.pdf), front matter, states first publication in 1987 and third impression in 1988. September 1987 dates the addendum concerning paragraph 19.6. The court decision is dated 24 July 1987; [Hansard that day, column 678](https://api.parliament.uk/historic-hansard/commons/1987/jul/24/herald-of-free-enterprise), confirms the court delivered its report that day. The defect affects bibliographic precision, not HG-14-F1/F2 or their teaching implications.
+
+The author changed publication to `1987`, added the front-matter locator, and explicitly distinguished the 1988 impression and September 1987 addendum in the source limits. I independently read the revised bytes, confirmed that only the three expected files changed, and reran the local gallery and generated-freshness checks. **Closed.**
+
+## Newly inspected source findings
+
+| Source | Independently inspected content and conclusion |
+| --- | --- |
+| [HG-01-S1, Apollo 13 Mission Report](https://ntrs.nasa.gov/api/citations/19710003598/downloads/19710003598.pdf) | Summary, printed pp. 1-1 to 1-2, supports abandoning the lunar landing after oxygen loss, lunar-module power/life support, and command-module entry. The public copy's original distribution notice is acknowledged in the gallery limits rather than mistaken for a current operating procedure. |
+| [HG-03-S1, Hubble failure report](https://ntrs.nasa.gov/api/citations/19910003124/downloads/19910003124.pdf) | Executive summary, one-based PDF pages 4-5, supports the misassembled reflective null corrector, absent post-assembly dimensional check and discounted auxiliary optical indications. The exercise correctly leaves the new fixture's accuracy open; agreement between two computers is not promoted to an independent physical check. |
+| [HG-07-S1, JPL prelaunch announcement](https://www.jpl.nasa.gov/news/nasa-will-send-two-robotic-geologists-to-roam-on-mars/) | The 4 June 2003 landing-site and instrument-workflow paragraphs support balancing landing conditions/scientific interest and selecting close-examination targets with remote instruments. Launch dates and anticipated science remain plans. |
+| [HG-07-S2, NASA Opportunity history](https://science.nasa.gov/mission/mer-opportunity/) | In Depth, September 2014 paragraphs, supports the flash-memory reformat following resets, the mission extension and operation beyond the original 90-sol lifetime. Post-2014 details on the current page are not imported into the gallery case. |
+| [HG-09-S1, FAA United 232 account](https://www.faa.gov/lessons_learned/transport_airplane/accidents/N1819U) | Accident Overview, Airplane and Flight Crew support uncontained fan-disk debris damaging all hydraulic systems, physical proximity despite functional isolation, and limited thrust-based control. The gallery explicitly identifies the FAA account as a retrospective rather than claiming direct access to the unavailable NTSB report. |
+| [HG-10-S1, Heathrow training/trials](https://publications.parliament.uk/pa/cm200708/cmselect/cmtran/543/54304.htm) | Paragraphs 8-14 support the training/familiarisation problem, building-delay trade and inadequacy of opening preparation. Counts of volunteers and bags are witness/organization claims, not automatically proof of representative trials; the gallery avoids making that inference. |
+| [HG-10-S2, Heathrow communication](https://publications.parliament.uk/pa/cm200708/cmselect/cmtran/543/54305.htm) | Paragraphs 15-19 support examination of staff concerns and operator/airline integration. Paragraph 19 explicitly limits certainty that earlier coordination would have prevented the problems. The gallery preserves that limit. |
+| [HG-12-S1, blackout final report](https://www.energy.gov/sites/prod/files/oeprod/DocumentsandMedia/BlackoutFinal-Web.pdf) | Chapter 3, printed pp. 17-19, especially p. 18 Group 2 B-D, supports all four causal groups and failures to communicate/verify monitoring condition. Chapter 5 pp. 51-56 distinguishes running servers/processes from functioning alarms; the teaching synthesis stays within that mechanism. |
+| [HG-13-S1, CSB Texas City report](https://www.csb.gov/file.aspx?DocumentId=5596) | Executive summary §1.1 p. 17 supports the startup, overfilled tower, release and trailer exposure. §1.2.1 p. 19 and §1.6 p. 25 support misleading reliance on personal-injury performance. The gallery does not invent staffing, siting or protection settings. |
+| [HG-14-S1, Herald court report](https://assets.publishing.service.gov.uk/media/54c1704ce5274a15b6000025/FormalInvestigation_HeraldofFreeEnterprise-MSA1894.pdf) | Paragraphs 10.1 and 14.1-14.5 support the open doors and management/duty findings. Paragraphs 18.4-18.7 document earlier indication requests; §§28-30 cover indication failure, procedures and berth compatibility. The gallery does not turn these into a guaranteed prevention counterfactual. F1 corrected the front-matter dating. |
+| [HG-18-S1, Leveson/Turner Part I](https://web.mit.edu/6.033/2004/wwwdocs/papers/Therac_1.html) | Byline and reprint statement identify the July 1993 IEEE Computer article, while introductory paragraphs explain documentary sourcing, uncertain underlying records and inaccessible details. The gallery distinguishes this author investigation from an official commission and treats Parts I/III as one underlying publication. Part III's two fact claims were checked by the benchmark reviewer. |
+| [HG-19-S1, FDA initiative](https://www.fda.gov/medical-devices/infusion-pumps/infusion-pump-improvement-initiative) | Overview and three actions support infusion problems, the 2010 initiative and manufacturer/design/user-awareness scope. The life-cycle guidance description supports the broader life-cycle framing. The gallery makes no present legal requirement or device-specific clinical efficacy claim. |
+
+## All-case fact and synthesis review
+
+Both fact IDs in each row were read. `Direct` means my source inspection above. `Peer` means my statement review plus the independent benchmark source check, rather than a second remote inspection by me.
+
+| Case/facts | Mode | Judgment |
+| --- | --- | --- |
+| HG-01-F1/F2 | Direct | Supported mission/return distinction; no claim the new resource ledger was historical. |
+| HG-02-F1/F2 | Peer | Readiness information/escalation finding preserved; no invented political or single-person cause. |
+| HG-03-F1/F2 | Direct | Reference error and contrary test evidence supported; new independence/accuracy claims remain separate. |
+| HG-04-F1/F2 | Peer | Official summary scope respected; reused assumptions and common dependencies are a defensible synthesis. |
+| HG-05-F1/F2 | Peer | Unit semantics and multiple contributors preserved; no metadata-only cure or recreated orbit asserted. |
+| HG-06-F1/F2 | Peer | Organizational and physical findings connected without promising a successful rescue/repair. |
+| HG-07-F1/F2 | Direct | Prelaunch rationale separated from realized operation and maintenance history. |
+| HG-08-F1/F2 | Peer | Simulator locator corrected to §1.16.3; one delayed failure is not a general probability or inevitability claim. |
+| HG-09-F1/F2 | Direct | Logical redundancy distinguished from shared physical hazards and limited residual control. |
+| HG-10-F1/F2 | Direct | Committee findings distinguished from trial participation and counterfactual certainty. |
+| HG-11-F1/F2 | Peer | Sustained-load applicability and creep mechanism preserved; no invented lifetime prediction. |
+| HG-12-F1/F2 | Direct | Physical/organizational/monitoring causes connected without reducing the blackout to one software fault. |
+| HG-13-F1/F2 | Direct | Startup and process-safety measure limits supported; proposed controls are unexecuted. |
+| HG-14-F1/F2 | Direct | Door-state, duties and management facts supported; publication metadata correction closed. |
+| HG-15-F1/F2 | Peer | Transport receipt separated from application processing, durable outcomes and physical actions. |
+| HG-16-F1/F2 | Peer | Authority/caching trade supported; no universal freshness interval or current DNS security rule invented. |
+| HG-17-F1/F2 | Peer | Proposal intent and local exclusions retained; later adoption is not evidence available in 1989. |
+| HG-18-F1/F2 | Peer | Timing and hazard-notification findings preserved with author-investigation limits. |
+| HG-19-F1/F2 | Direct | Historical program intent separated from individual-product safety and measured clinical benefit. |
+| HG-20-F1/F2 | Peer | Successful staging, contingent staffing and unresolved future benefits remain distinct. |
+| HG-21-F1/F2 | Peer | Legacy data provenance distinguished from observed physical configuration and defect inference. |
+
+## Connected-bundle review
+
+All source-fact CSV rows match their canonical JSON facts and attribution. Every interface is explicitly `new_retrospective_reconstruction`; each change has `synthetic_transfer_exercise` plus `historical_provenance: false`. All three claim registers distinguish one narrow `source_supported` claim, one `unsupported_extension`, and one `proposed_unexecuted` claim. No claim status asserts an unprovided test execution. The relation views use existing teaching IDs and cover all 11 interface IDs across the bundles. They are expressly information-flow aids, not formal SysML or executed models.
+
+- **Hubble:** I1/I3 connect reference geometry and as-assembled evidence; I2 preserves conflicting evidence; I4 connects the production result to acceptance. C2 is a deliberate unsupported independence assertion, not an answer to accept. C3's replacement-fixture claim remains unverified. CH1 and the task ask for a discriminating check and an uncertainty-aware acceptance statement rather than a vote among instruments.
+- **Mars Climate Orbiter:** I1 semantic interpretation and I2 handover are explicitly affected by CH1; I3 retains operational discrepancy escalation. C2 prevents unit metadata being treated as sufficient proof of navigation, and C3 supplies an unexecuted rejection claim. The task requires valid, unknown, missing and contradictory-metadata cases with an oracle and no invented pass. The old numeric-only path makes the transfer task more than a renamed historical summary.
+- **Heathrow:** I1/I4 distinguish training facilities from demonstrated staff performance; I2/I3 connect organizational exception handling and frontline concerns. C2 prevents attendance/completion from closing readiness; C3 remains an unperformed rehearsal. CH1 and the task compare full, reduced and delayed opening using shared scenarios, roles, recovery authority and missing discriminating information.
+
+The short case-level alternatives usually contrast a weak inference with a stronger evidence practice. They are useful introductory decision prompts; they are not calibrated trade studies or evidence that a learner can choose among closely competing designs. The three connected exercises add more substantive alternatives and unresolved evidence. This is a scope limitation, not an actionable correctness finding or a request for generic extra checklists.
+
+## Local checks and their limits
+
+On the frozen snapshot, `python3 scripts/check_historical.py --check` passed, `python3 examples/historical/render_gallery.py --check` reported 24 generated files current, and all 15 `test_historical.py` tests passed. After F1, the two gallery/presentation checks passed again. [Check results](historical-independent/check-results.json) retain the commands' outcomes and scope. No full-repository suite was necessary for this read-only gallery review.
+
+The validator meaningfully checks ID uniqueness, references, local paths, canonical fact/CSV agreement, allowed provenance/status labels and generated consistency. I found no material present-content defect hidden by those checks. It cannot establish that remote source claims are true or that a legal-looking source-supported claim actually follows from its cited fact; its docstring and gallery documentation accurately limit its scope. No model-quality or engineering-acceptance claim follows from these passes.

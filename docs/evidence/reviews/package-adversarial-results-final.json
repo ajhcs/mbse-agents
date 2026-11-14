@@ -1,0 +1,26 @@
+{
+  "late_archive_collision": {
+    "refused": true,
+    "sentinel_preserved": true,
+    "folder_preserved": true,
+    "error_reports_preserved_paths": true
+  },
+  "late_archive_failure": {
+    "reported": true,
+    "local_work_preserved": true,
+    "folder_preserved": true,
+    "absent_archive": true,
+    "error_reports_preserved_folder": true
+  },
+  "late_symlink_collision": {
+    "refused": true,
+    "symlink_preserved": true,
+    "referent_preserved": true
+  },
+  "reviewed_sha256": {
+    "scripts/install.py": "d1a66141dff3855abe6412310987d1d79850e0495c700ae40b9259a321fa2321",
+    "scripts/package_plugin.py": "1d20ea84ba1c94c78f773e379905aa912ee740cccfd60e838e02064f2fc7eefd",
+    "tests/test_install.py": "ebe866944594e7227c0c2079a431aac80f3c42f6ff1b4b7936464031acfe9a5b",
+    "tests/test_package_plugin.py": "0de9b015721ca951f38c34a96f78069e44cc9d53c0371304c7e36067d9b5e4d1"
+  }
+}

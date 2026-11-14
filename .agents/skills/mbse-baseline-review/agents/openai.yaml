@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review an MBSE Baseline"
+  short_description: "Challenge a baseline and explain change impacts"
+  default_prompt: "Use $mbse-baseline-review to examine this baseline or change, explain consequential mismatches, and identify repairs and decisions supported by the evidence."

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-19",
+  "slug": "infusion-pump-initiative",
+  "title": "Infusion Pump Improvement Initiative: design across the product lifecycle",
+  "year": 2010,
+  "domain": "medical_devices",
+  "outcome": "improvement_program",
+  "focus": "A device is used, maintained, and understood within a care system; design review must span that lifecycle.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-19-S1",
+      "title": "FDA Infusion Pump Improvement Initiative",
+      "url": "https://www.fda.gov/medical-devices/infusion-pumps/infusion-pump-improvement-initiative",
+      "publication_date": "2010 initiative; current official summary",
+      "locator": "Initiative overview and three program goals",
+      "source_type": "official_initiative_summary",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "The page summarizes a historical program and links later guidance. It is not evidence that a particular pump was cleared, clinically effective, or corrected successfully."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-19-F1",
+      "statement": "The FDA describes pump problems that can cause over-infusion, under-infusion, or missed treatment.",
+      "source_ids": [
+        "HG-19-S1"
+      ],
+      "locator": "Overview"
+    },
+    {
+      "id": "HG-19-F2",
+      "statement": "The 2010 initiative combined stronger expectations for manufacturers, proactive design improvement, and increased user awareness across the lifecycle.",
+      "source_ids": [
+        "HG-19-S1"
+      ],
+      "locator": "Initiative goals"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Pump, drug library, programming, patient connection, clinicians, training, maintenance, incident reporting, and manufacturer response form the delivery system.",
+    "interfaces": [
+      "Design → clinical use: interface behavior and alarms interact with workflow and interruptions.",
+      "Service history → design revision: field signals need configuration, reproducibility, and consequence context."
+    ],
+    "decision": {
+      "question": "What should a design-improvement program evaluate beyond component reliability?",
+      "options": [
+        "Concentrate exclusively on pump mechanism accuracy.",
+        "Evaluate programming, delivery, alarms, maintenance, and field feedback as connected activities."
+      ],
+      "recommendation": "Trace each hazard to the lifecycle stages where it can be introduced, detected, or controlled.",
+      "uncertainty": "Program existence does not establish measured clinical benefit or the safety of an individual product."
+    },
+    "artifact": {
+      "id": "HG-19-A1",
+      "type": "Lifecycle hazard and feedback map",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Programming",
+          "Connect intended therapy entry to device configuration",
+          "Representative-use studies and input-error handling"
+        ],
+        [
+          "Delivery interruption",
+          "Specify detectable conditions and user response",
+          "Alarm performance and recovery scenarios"
+        ],
+        [
+          "Field signal",
+          "Retain configuration, context, and action history",
+          "Incident review with verified corrective closure"
+        ]
+      ]
+    },
+    "questions": [
+      "Why can technically accurate pumping still fail the clinical task?",
+      "Which information makes a field incident useful for design learning?",
+      "Explain what can and cannot be concluded from a regulator launching an improvement program."
+    ],
+    "answer_signals": [
+      "Includes workflow, maintenance, and feedback beyond hardware.",
+      "Keeps historical program goals separate from proven outcomes.",
+      "Defines evidence for a product-specific claim."
+    ],
+    "transfer_exercise": "Synthetic: create an evidence plan for an alert redesign using a nonclinical bench setting and representative users. Keep clinical efficacy as a separate question.",
+    "limits": "No claim about present legal requirements, device approval, treatment settings, or patient outcomes is made."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

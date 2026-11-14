@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "case_id": "HO-03",
+  "arm": "task-domain",
+  "status": "response artifact completed; engineering verification activities remain proposed",
+  "started_at_utc": "2026-11-13T23:42:41Z",
+  "ended_at_utc": "2026-11-13T23:51:49Z",
+  "time_observation": {
+    "start_source": "clock.curr_time output 2026-11-13 23:42:41 UTC",
+    "end_source": "datetime.now(timezone.utc) while serializing this record",
+    "scope": "Shared participant window: six requests/skills were read in batches and responses developed in the same context. No isolated per-case active duration is inferred."
+  },
+  "participant": {
+    "role": "independent exercise participant",
+    "model_id": null,
+    "model_settings": null,
+    "reasoning_effort": null,
+    "token_usage": null,
+    "cost": null,
+    "unknown_fields_reason": "Exact inherited runtime model/settings and token/cost accounting were not explicitly exposed. No inference made."
+  },
+  "context_limits": [
+    "Six cases (HO-02, HO-03, HO-05, HO-10, HO-11, HO-17) shared this participant context.",
+    "Packet separation is not a secure held-out environment.",
+    "No source repository, memory files, keys, rubrics, other arms, prior outputs or review criteria were intentionally inspected.",
+    "Inherited conversation instructions and context were present; fresh-session isolation is not claimed."
+  ],
+  "skills_read_and_used": [
+    {
+      "name": "mbse-aerospace",
+      "skill_path": ".agents/skills/mbse-aerospace/SKILL.md",
+      "use": "Tool-use and credit decision boundary; legacy correlation limits and qualification evidence"
+    }
+  ],
+  "references_read": [
+    ".agents/skills/mbse-aerospace/references/domain-analysis.md",
+    ".agents/skills/mbse-aerospace/references/software-tool-qualification.md"
+  ],
+  "references_not_applied": [],
+  "other_packet_files_read": [
+    "request.md",
+    "packet-manifest.json"
+  ],
+  "metadata_files_hashed_not_read_as_guidance": [
+    ".agents/skills/mbse-aerospace/agents/openai.yaml"
+  ],
+  "tools_used": [
+    {
+      "name": "functions.exec / exec_command",
+      "actions": [
+        "List packet files",
+        "Read request, manifest, selected skill markdown and references",
+        "Calculate input SHA-256 and verify manifest",
+        "Read output summaries and calculate output SHA-256",
+        "Write and parse run record; write/verify checksum index"
+      ],
+      "executables": [
+        "find",
+        "sort",
+        "cat",
+        "python3",
+        "python (failed: command not found)"
+      ]
+    },
+    {
+      "name": "functions.exec / apply_patch",
+      "actions": [
+        "Create outputs/output.md"
+      ]
+    },
+    {
+      "name": "functions.exec / clock.curr_time",
+      "actions": [
+        "Observe UTC shared start and progress times"
+      ]
+    },
+    {
+      "name": "functions.exec / web.run",
+      "actions": [
+        "Open public primary source pages/PDFs",
+        "Search for primary sources",
+        "Find relevant source passages",
+        "Request PDF screenshot"
+      ]
+    },
+    {
+      "name": "collaboration.send_message",
+      "actions": [
+        "Report artifact completion and evidence limits to parent agent; shared progress message across all six cases"
+      ]
+    }
+  ],
+  "source_access": [
+    {
+      "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-115D.pdf",
+      "publisher": "FAA",
+      "status": "public PDF relevant text read; screenshot request made",
+      "edition_or_currency": "AC 20-115D, 2017-07-21",
+      "locator": "Paragraph 10 and Table 2, printed pages 10-11",
+      "use": "Recognized qualification method and legacy-tool correlation mapping",
+      "limit": "Table context retained; licensed DO-178C/DO-330 not read",
+      "access_date_utc": "2026-11-13",
+      "access_tool": "web.run via functions.exec",
+      "source_bytes_sha256": null,
+      "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+    },
+    {
+      "url": "https://shemesh.larc.nasa.gov/fm/FMinCert/NASA-CR-2017-219371.pdf",
+      "publisher": "NASA, contractor report by Wagner, Cofer, Slind, Tinelli and Mebsout",
+      "status": "public PDF relevant text read",
+      "edition_or_currency": "NASA/CR-2017-219371, February 2017",
+      "locator": "Section 3.3.1, printed page 11, Tables 2-3",
+      "use": "Public primary research explanation of tool criteria and credit boundary",
+      "limit": "Research report, not normative standard or authority approval",
+      "access_date_utc": "2026-11-13",
+      "access_tool": "web.run via functions.exec",
+      "source_bytes_sha256": null,
+      "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+    }
+  ],
+  "source_search_limit": "Targeted primary-source searches sometimes returned incidental third-party snippets; no third-party source was relied on. Source access is public, and no credentials or paid APIs were used.",
+  "input_sha256": {
+    ".agents/skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+    ".agents/skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+    ".agents/skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+    ".agents/skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+    "request.md": "bbf54290b4c0463c009326f839515072d95f817574b86be208dadb99087272dd",
+    "packet-manifest.json": "fedbeb70b03f2c92a6fe67c7627d78c8e29ba9617a1585f77e76562aa22fda7b"
+  },
+  "manifest_verification": {
+    "verified_before_output_writes": true,
+    "verified_after_output_writes": true,
+    "mismatches": []
+  },
+  "output_sha256": {
+    "outputs/output.md": "d84fc3318f21df410597758a2458de7c70e9c7bdc27a60b97581c1b2680c936f"
+  },
+  "hash_scope": "Input hashes cover packet manifest and all manifest-listed input files. Output hash covers the response artifact. run-record.json is hashed in checksums.sha256; the checksum index has no self-hash.",
+  "checks_performed": [
+    "All manifest-listed file hashes match packet manifest",
+    "Response artifact exists and is nonempty",
+    "Run record serialized and parsed as JSON",
+    "SHA-256 checksum index generated and verified"
+  ],
+  "engineering_tests_executed": [],
+  "production_or_paid_api_actions": [],
+  "exceptions": [
+    "Initial shell reading attempt used python, which was unavailable (exit 127); retried successfully with python3.",
+    "Full licensed DO-178C and DO-330 texts were not available/read; public FAA and NASA scope explicitly retained."
+  ],
+  "self_grading": "Not performed; no evaluation rubric or review criteria read."
+}

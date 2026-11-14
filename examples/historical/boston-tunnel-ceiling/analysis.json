@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-11",
+  "slug": "boston-tunnel-ceiling",
+  "title": "Boston tunnel ceiling: match evidence to duration and use",
+  "year": 2006,
+  "domain": "public_infrastructure",
+  "outcome": "failure",
+  "focus": "A short acceptance test cannot close a long-duration load claim without a justified model of time-dependent behavior.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-11-S1",
+      "title": "NTSB Highway Accident Report HAR-07/02",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR0702.pdf",
+      "publication_date": "2007-07-10",
+      "locator": "Executive summary; Conclusions, Probable Cause, printed p. 107",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-11-F1",
+      "statement": "The NTSB attributed the ceiling collapse to epoxy anchor adhesive with inadequate creep resistance under sustained loading.",
+      "source_ids": [
+        "HG-11-S1"
+      ],
+      "locator": "Probable Cause, p. 107"
+    },
+    {
+      "id": "HG-11-F2",
+      "statement": "Its findings connected material selection and approval to insufficient consideration of long-term adhesive behavior.",
+      "source_ids": [
+        "HG-11-S1"
+      ],
+      "locator": "Executive summary; Conclusions"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Adhesive, anchors, concrete, sustained ceiling load, installation, supplier information, design approval, and inspection form the support system.",
+    "interfaces": [
+      "Material qualification → structural use: load duration and environment must match the claimed application.",
+      "Installation acceptance → service inspection: passing a local test does not remove degradation mechanisms."
+    ],
+    "decision": {
+      "question": "Can a satisfactory short pull test establish the service-life claim?",
+      "options": [
+        "Treat load exceedance during the test as sufficient margin.",
+        "Identify creep, aging, installation variability, and the evidence needed for the sustained load."
+      ],
+      "recommendation": "Require a duration-appropriate basis and a review of changes in product or use.",
+      "uncertainty": "A proposed accelerated test needs a justified relation to service behavior; it is not automatically conservative."
+    },
+    "artifact": {
+      "id": "HG-11-A1",
+      "type": "Evidence applicability check",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Load duration",
+          "Separate short proof load from sustained demand",
+          "Creep data and justified extrapolation"
+        ],
+        [
+          "Installed condition",
+          "Define preparation, cure, temperature, and variability",
+          "Installation records and representative testing"
+        ],
+        [
+          "In-service condition",
+          "Set detectable degradation and response criteria",
+          "Inspection capability and intervention plan"
+        ]
+      ]
+    },
+    "questions": [
+      "What hidden assumption connects a brief test to a long service life?",
+      "Which supplier or installation change should reopen qualification?",
+      "Explain why a passed test may be valid evidence for a narrower claim."
+    ],
+    "answer_signals": [
+      "Names the time-dependent failure mechanism.",
+      "Defines applicability rather than rejecting testing wholesale.",
+      "Connects procurement, installation, and maintenance evidence."
+    ],
+    "transfer_exercise": "Synthetic: an adhesive attachment passes a one-minute proof test but must support a constant load for years. Draft the unresolved claim and evidence plan.",
+    "limits": "No structural analysis or adhesive lifetime prediction was executed; this is not a construction acceptance basis."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

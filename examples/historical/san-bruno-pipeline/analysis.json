@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-21",
+  "slug": "san-bruno-pipeline",
+  "title": "San Bruno: preserve the provenance of configuration data",
+  "year": 2010,
+  "domain": "energy",
+  "outcome": "failure",
+  "focus": "Digitizing a record does not validate the physical configuration it describes.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-21-S1",
+      "title": "NTSB Pipeline Accident Report PAR-11/01",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/PAR1101.pdf",
+      "publication_date": "2011-08-30",
+      "locator": "Section 1.7.2, printed pp. 25–28; section 1.8",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-21-F1",
+      "statement": "The pipeline GIS described the rupture segment as seamless pipe using information traced through a survey sheet to an accounting voucher with an erroneous material description.",
+      "source_ids": [
+        "HG-21-S1"
+      ],
+      "locator": "Section 1.7.2, pp. 26–27"
+    },
+    {
+      "id": "HG-21-F2",
+      "statement": "Investigators found welded short pipe sections with defects and configuration details that were not reflected in the GIS.",
+      "source_ids": [
+        "HG-21-S1"
+      ],
+      "locator": "Section 1.7.2, p. 27; section 1.8"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Physical asset, construction records, accounting records, survey sheets, GIS, integrity analysis, inspections, and operating decisions form the configuration-evidence chain.",
+    "interfaces": [
+      "Legacy record → digital model: transformation must preserve origin and confidence instead of laundering uncertainty.",
+      "Model attribute → integrity decision: uncertain material identity changes which analyses are applicable."
+    ],
+    "decision": {
+      "question": "What should happen when an important configuration field has weak provenance?",
+      "options": [
+        "Treat a populated database field as authoritative.",
+        "Mark the uncertainty, bound its decision consequences, and seek suitable confirming evidence."
+      ],
+      "recommendation": "Differentiate administrative records, engineering records, and observations of the installed asset.",
+      "uncertainty": "A missing record does not by itself prove a defect; it limits the claims that can be supported."
+    },
+    "artifact": {
+      "id": "HG-21-A1",
+      "type": "Configuration provenance ledger",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Material identity",
+          "Retain source chain and conflicts",
+          "Engineering record or suitable physical confirmation"
+        ],
+        [
+          "Asset segmentation",
+          "Represent actual changes in construction",
+          "Inspection and as-built reconciliation"
+        ],
+        [
+          "Decision applicability",
+          "Flag analyses sensitive to uncertain fields",
+          "Conservative bounds and owned resolution plan"
+        ]
+      ]
+    },
+    "questions": [
+      "How can information become more convincing without becoming more accurate?",
+      "What should a digital twin display when material identity is unresolved?",
+      "Write an uncertainty statement that avoids both false assurance and unsupported failure claims."
+    ],
+    "answer_signals": [
+      "Tracks the origin of each decision-critical attribute.",
+      "Propagates uncertainty into analysis applicability.",
+      "Separates absence of evidence from evidence of defect."
+    ],
+    "transfer_exercise": "Synthetic: migrate a legacy asset registry into a digital model. Define three provenance classes and rules preventing unsupported promotion to verified.",
+    "limits": "No pipeline integrity calculation or operating recommendation is made. All new ledger IDs are instructional."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

@@ -1,5 +1,7 @@
 # Hazard Analysis
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Methodology
 
 This hazard analysis follows IEC 61508 (Functional Safety of Electrical/Electronic/Programmable Electronic Safety-Related Systems) Parts 1-7 with FMEA/FMECA at the component level per IEC 60812. The scope covers the Quantum Processor Control System as defined in the system boundary (README.md), analyzed across all operating modes (MODE-001 through MODE-005).
@@ -35,16 +37,16 @@ The analysis progresses through:
 
 | HZ ID   | Description                                                              | Cause(s)                                                          | Effect                                                                         | MODE ID(s)            | Severity    | Likelihood    | Initial Risk | CTL ID(s)            | Residual Risk | Owner / Acceptance Authority | REQ ID(s)                                    |
 |---------|--------------------------------------------------------------------------|-------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------|-------------|---------------|--------------|----------------------|---------------|------------------------------|----------------------------------------------|
-| HZ-001  | RF power overdrive damaging qubit Josephson junctions                    | Software commanding excessive pulse amplitude; AWG DAC fault producing full-scale output; RF amplifier oscillation | Permanent Josephson junction failure on affected qubits; partial or total chip loss | MODE-001, MODE-002    | Critical    | Occasional    | High         | CTL-001, CTL-002     | Acceptable    | Safety officer               | REQ-FUN-007, REQ-SAF-001, REQ-SAF-002       |
-| HZ-002  | Flux bias current overdrive damaging Josephson junctions                 | Software commanding excessive current; DAC fault producing full-scale output; calibration exploring outside safe range | Permanent junction damage on affected qubits; qubit frequency shift or open circuit | MODE-001, MODE-002    | Critical    | Occasional    | High         | CTL-003, CTL-004     | Acceptable    | Safety officer               | REQ-FUN-013, REQ-SAF-003, REQ-SAF-004       |
-| HZ-003  | Calibration sequence driving outputs into unsafe parameter region        | Calibration algorithm exploring beyond safe bounds; parameter database corruption providing wrong starting points | Transient or permanent qubit damage if hardware limits not triggered; wasted calibration time | MODE-002              | Critical    | Probable      | High         | CTL-005, CTL-002, CTL-003 | Acceptable | Safety officer               | REQ-SAF-005, REQ-FUN-018                     |
-| HZ-004  | Cryogenic thermal excursion during active qubit control                  | Cryocooler compressor failure; helium leak; excessive heat load from control electronics at 4 K | Qubit coherence loss; thermal shock to chip and cryogenic components; potential helium contamination | MODE-001, MODE-004    | Catastrophic| Remote        | High         | CTL-006              | Acceptable    | Safety officer / cryogenic engineer | REQ-FUN-021                                  |
-| HZ-005  | Safety interlock system failure leaving control outputs unprotected       | Safety PLC hardware fault; analog comparator drift; interlock wiring fault | Loss of safety barrier; subsequent control fault can cause HZ-001 or HZ-002 without detection | MODE-001, MODE-002, MODE-004 | Catastrophic | Improbable | High    | CTL-008, CTL-009     | Acceptable    | Safety officer               | REQ-SAF-006, REQ-SAF-007, REQ-SAF-008, REQ-SAF-009 |
-| HZ-006  | Timing synchronization loss causing simultaneous multi-qubit damage      | TDU reference oscillator failure; clock distribution network fault; trigger sequencer FPGA fault | Multiple qubits receive out-of-sync pulses; potential frequency collision causing multi-qubit damage | MODE-001, MODE-004    | Critical    | Remote        | Medium       | CTL-007              | Acceptable    | Safety officer               | REQ-FUN-003                                  |
-| HZ-007  | Formal verifier failure passing an unsafe sequence                       | Verifier software bug; model incomplete; timeout treated as pass | Sequence with power/frequency violations executes; potential for HZ-001 or HZ-002 | MODE-001              | Critical    | Improbable    | Medium       | CTL-001, CTL-002, CTL-003 | Acceptable | Safety officer               | REQ-FUN-003                                  |
-| HZ-008  | Cryogenic readout electronics failure causing persistent high-power readout | CRE FPGA firmware fault; ADC stuck at full-scale output driving readout resonator continuously | Excessive microwave power at mixing chamber stage from readout channel; localized heating | MODE-001, MODE-004    | Marginal    | Remote        | Low          | CTL-006, CTL-010     | Acceptable    | Control electronics engineer | REQ-FUN-022                                  |
-| HZ-009  | Unauthorized modification of safety interlock limits                     | Intentional or accidental modification of safety PLC parameters; calibration range override without proper authorization | Safety limits set too high, reducing protective margin; subsequent fault can cause damage | MODE-002, MODE-005    | Critical    | Improbable    | Medium       | CTL-009, CTL-011     | Acceptable    | Safety officer               | REQ-SAF-010                                  |
-| HZ-010  | Power supply fault causing simultaneous loss of safety and control       | Common power supply failure affecting both RTO and safety PLC; facility power loss without proper UPS switchover | Control outputs may drive to undefined state during power transient; safety system unavailable to protect | MODE-001, MODE-002    | Critical    | Remote        | Medium       | CTL-008, CTL-012     | Acceptable    | Safety officer / facility ops | REQ-SAF-009                                  |
+| HZ-001  | RF power overdrive damaging qubit Josephson junctions                    | Software commanding excessive pulse amplitude; AWG DAC fault producing full-scale output; RF amplifier oscillation | Permanent Josephson junction failure on affected qubits; partial or total chip loss | MODE-001, MODE-002    | Critical    | Occasional    | High         | CTL-001, CTL-002     | Proposed control; validation pending     | Safety officer               | REQ-FUN-007, REQ-SAF-001, REQ-SAF-002       |
+| HZ-002  | Flux bias current overdrive damaging Josephson junctions                 | Software commanding excessive current; DAC fault producing full-scale output; calibration exploring outside safe range | Permanent junction damage on affected qubits; qubit frequency shift or open circuit | MODE-001, MODE-002    | Critical    | Occasional    | High         | CTL-003, CTL-004     | Proposed control; validation pending     | Safety officer               | REQ-FUN-013, REQ-SAF-003, REQ-SAF-004       |
+| HZ-003  | Calibration sequence driving outputs into unsafe parameter region        | Calibration algorithm exploring beyond safe bounds; parameter database corruption providing wrong starting points | Transient or permanent qubit damage if hardware limits not triggered; wasted calibration time | MODE-002              | Critical    | Probable      | High         | CTL-005, CTL-002, CTL-003 | Proposed control; validation pending  | Safety officer               | REQ-SAF-005, REQ-FUN-018                     |
+| HZ-004  | Cryogenic thermal excursion during active qubit control                  | Cryocooler compressor failure; helium leak; excessive heat load from control electronics at 4 K | Qubit coherence loss; thermal shock to chip and cryogenic components; potential helium contamination | MODE-001, MODE-004    | Catastrophic| Remote        | High         | CTL-006              | Proposed control; validation pending     | Safety officer / cryogenic engineer | REQ-FUN-021                                  |
+| HZ-005  | Safety interlock system failure leaving control outputs unprotected       | Safety PLC hardware fault; analog comparator drift; interlock wiring fault | Loss of safety barrier; subsequent control fault can cause HZ-001 or HZ-002 without detection | MODE-001, MODE-002, MODE-004 | Catastrophic | Improbable | High    | CTL-008, CTL-009     | Proposed control; validation pending     | Safety officer               | REQ-SAF-006, REQ-SAF-007, REQ-SAF-008, REQ-SAF-009 |
+| HZ-006  | Timing synchronization loss causing simultaneous multi-qubit damage      | TDU reference oscillator failure; clock distribution network fault; trigger sequencer FPGA fault | Multiple qubits receive out-of-sync pulses; potential frequency collision causing multi-qubit damage | MODE-001, MODE-004    | Critical    | Remote        | Medium       | CTL-007              | Proposed control; validation pending     | Safety officer               | REQ-FUN-003                                  |
+| HZ-007  | Formal verifier failure passing an unsafe sequence                       | Verifier software bug; model incomplete; timeout treated as pass | Sequence with power/frequency violations executes; potential for HZ-001 or HZ-002 | MODE-001              | Critical    | Improbable    | Medium       | CTL-001, CTL-002, CTL-003 | Proposed control; validation pending  | Safety officer               | REQ-FUN-003                                  |
+| HZ-008  | Cryogenic readout electronics failure causing persistent high-power readout | CRE FPGA firmware fault; ADC stuck at full-scale output driving readout resonator continuously | Excessive microwave power at mixing chamber stage from readout channel; localized heating | MODE-001, MODE-004    | Marginal    | Remote        | Low          | CTL-006, CTL-010     | Proposed control; validation pending     | Control electronics engineer | REQ-FUN-022                                  |
+| HZ-009  | Unauthorized modification of safety interlock limits                     | Intentional or accidental modification of safety PLC parameters; calibration range override without proper authorization | Safety limits set too high, reducing protective margin; subsequent fault can cause damage | MODE-002, MODE-005    | Critical    | Improbable    | Medium       | CTL-009, CTL-011     | Proposed control; validation pending     | Safety officer               | REQ-SAF-010                                  |
+| HZ-010  | Power supply fault causing simultaneous loss of safety and control       | Common power supply failure affecting both RTO and safety PLC; facility power loss without proper UPS switchover | Control outputs may drive to undefined state during power transient; safety system unavailable to protect | MODE-001, MODE-002    | Critical    | Remote        | Medium       | CTL-008, CTL-012     | Proposed control; validation pending     | Safety officer / facility ops | REQ-SAF-009                                  |
 
 ## Risk Controls
 
@@ -96,58 +98,58 @@ The analysis progresses through:
 | CMP-SAF-01B (Analog Comparator) | Comparator threshold drift | Trip point above or below design value | Limiter may trip too early (nuisance) or too late (reduced protection margin) | HZ-005 | Critical | Periodic calibration check during MODE-005 | >90% | Schedule recalibration; margin analysis |
 | CMP-SAF-01B (Analog Comparator) | Comparator stuck not-tripped | No trip signal regardless of input | Analog backup protection lost; PLC and software limits still active | HZ-005 | Critical | BIT injects known over-limit signal during MODE-005 diagnostic | >95% | Replace comparator circuit |
 
-### Fault Tree: Qubit Damage from RF Power Overdrive (HZ-001)
+### Fault Tree: HZ-001 — explicit dependency model
+
+Passive attenuation remains in every cut set. The verifier can intercept software requests but does not prevent faults arising later in the DAC/amplifier. Shared protection causes bypass claimed independence. These tests do not simulate quantum dynamics, RF propagation, cryogenic thermal behavior, or establish a SIL.
 
 ```mermaid
-graph TD
-    TOP["HZ-001: Qubit Damage from<br/>RF Power Overdrive<br/>Target PFDavg ≤ 1e-2"]
-    TOP -->|AND| G1["Excessive RF Power<br/>Reaches Chip"]
-    TOP -->|AND| G2["All Protection Layers<br/>Fail to Prevent"]
-
-    G1 -->|OR| G1A["Software Commands<br/>Excessive Amplitude"]
-    G1 -->|OR| G1B["AWG DAC Hardware<br/>Fault (Full Scale)"]
-    G1 -->|OR| G1C["RF Amplifier<br/>Oscillation"]
-
-    G1A --> BE1["Calibration Bug<br/>or Sequence Error"]
-    G1B --> BE2["DAC IC Fault<br/>P ≈ 1e-6/hr"]
-    G1C --> BE3["Amplifier Instability<br/>P ≈ 1e-7/hr"]
-
-    G2 -->|AND| G2A["Formal Verifier<br/>Misses Violation<br/>(CTL-001)"]
-    G2 -->|AND| G2B["Hardware Power<br/>Limiter Fails<br/>(CTL-002)"]
-    G2 -->|AND| G2C["Analog Comparator<br/>Trip Fails<br/>(CTL-009)"]
-    G2 -->|AND| G2D["Passive Attenuation<br/>Insufficient<br/>(ASM-002)"]
-
-    G2A --> BE4["Verifier Bug<br/>P ≈ 1e-3"]
-    G2B --> BE5["Limiter Fault<br/>P ≈ 1e-4/demand"]
-    G2C --> BE6["Comparator Fault<br/>P ≈ 1e-3/demand"]
-    G2D --> BE7["Attenuation<br/>Out of Spec<br/>P ≈ 1e-6"]
-
-    style TOP fill:#ff6b6b,color:#000
-    style G1 fill:#ffa07a,color:#000
-    style G2 fill:#ffa07a,color:#000
+flowchart TD
+  BE1["BE1: Software sequence requests excessive RF"]
+  BE2["BE2: AWG DAC hardware produces excessive RF after precheck"]
+  BE3["BE3: RF amplifier oscillation creates excessive power after precheck"]
+  BE4["BE4: Sequence verifier misses an excessive software request"]
+  BE5["BE5: Hardware RF power limiter fails"]
+  BE6["BE6: Analog comparator fails to trip"]
+  BE7["BE7: Passive attenuation cannot bound the delivered RF energy"]
+  BE8["BE8: Shared sensing/power dependency defeats limiter and comparator"]
+  G1A["G1A: AND"]
+  G1A --> BE1
+  G1A --> BE4
+  G1["G1: OR"]
+  G1 --> G1A
+  G1 --> BE2
+  G1 --> BE3
+  G2["G2: OR"]
+  G2 --> BE5
+  G2 --> BE8
+  G3["G3: OR"]
+  G3 --> BE6
+  G3 --> BE8
+  TOP["TOP: AND"]
+  TOP --> G1
+  TOP --> G2
+  TOP --> G3
+  TOP --> BE7
 ```
 
-**Cut set analysis:**
+The machine-readable [failure model](analysis/failure-model.json) is authoritative for this authored abstraction. [Executed results and interpretation](analysis/report.md) provide complete minimal cuts, scenario calculations, proof obligations and retained counterexamples. Event IDs from the earlier model retain their stated failure meaning; new shared-dependency events are explicit. Probabilities are synthetic per-demand inputs under the declared mutual-independence hypothesis after shared events are represented. No flight-hour rate, ASIL/SIL achievement, physical effectiveness or risk acceptance follows from these results.
 
-The top event requires BOTH an excessive RF power condition AND simultaneous failure of all four protection layers. The dominant cut set is:
+### Proposed integrity allocation: decision still open
 
-- Software error (BE1) AND Verifier misses (BE4) AND Power limiter fails (BE5) AND Comparator fails (BE6)
-- P = (assumed demand) x 1e-3 x 1e-4 x 1e-3 = 1e-10 per demand (well below SIL 2 PFDavg target of 1e-2)
+The former PFD ranges were not a defensible SIL determination. Preserve SIL 2 as a proposed design target for the first three functions, and SIL 1 as a proposed target for thermal shutdown, pending an adopted framework, operating mode, risk criterion, exposure and required reduction. Equipment value and ordinal "High" labels alone cannot determine an integrity level.
 
-The defense-in-depth architecture (formal verification, hardware limiter, analog comparator, passive attenuation) provides multiple independent barriers. The hardware limiter (CTL-002) and analog comparator (CTL-009) together achieve a combined PFDavg well within the SIL 2 target.
-
-### SIL Determination
-
-| Safety Function | Hazardous Event | Consequence | Risk Without Protection | Required Risk Reduction | SIL Assignment |
-|----------------|----------------|-------------|------------------------|------------------------|----------------|
-| RF power limiting | HZ-001: RF overdrive | Chip damage (~$500K-$2M) | High (occasional software errors likely) | 10^-1 to 10^-2 PFDavg | SIL 2 |
-| Flux bias current limiting | HZ-002: Current overdrive | Junction damage (~$500K-$2M) | High (occasional software errors likely) | 10^-1 to 10^-2 PFDavg | SIL 2 |
-| Calibration parameter validation | HZ-003: Unsafe calibration | Chip damage (as above) | High (calibration explores parameter space) | 10^-1 to 10^-2 PFDavg | SIL 2 |
-| Thermal excursion shutdown | HZ-004: Thermal event | Chip + cryostat damage | Medium (cryostat has independent protection) | 10^-1 PFDavg | SIL 1 (advisory; cryostat has primary protection) |
+| Function | Hazard | Retained proposed target | Evidence needed before allocation |
+| --- | --- | --- | --- |
+| RF power limiting | HZ-001 | SIL 2 proposal | Damage threshold/envelope; demand definition; independent protection coverage; consequence and exposure model |
+| Flux bias current limiting | HZ-002 | SIL 2 proposal | Current-duration envelope; fault initiation/detection rates; actual protection dependencies |
+| Calibration parameter validation | HZ-003 | SIL 2 proposal | Validation scope, bypass paths, parameter provenance and downstream protection allocation |
+| Thermal excursion shutdown | HZ-004 | SIL 1 proposal | Cryostat protection boundary, thermal response, shared sensing and shutdown obligations |
 
 ## FMECA Summary
 
-### Detection Coverage Summary
+### Detection coverage hypotheses
+
+The percentages below are retained teaching assumptions, not measured diagnostic coverage. Their failure-mode population, weighting and physical detection evidence are absent. Recalculate coverage from an explicit injected-fault campaign and representative operating modes before assigning safety credit.
 
 | Subsystem | Number of Safety-Relevant Failure Modes | Average Detection Coverage | Minimum Detection Coverage | Notes |
 |-----------|----------------------------------------|---------------------------|---------------------------|-------|
@@ -159,4 +161,4 @@ The defense-in-depth architecture (formal verification, hardware limiter, analog
 
 ### Overall Safety Assessment
 
-The FMECA demonstrates that all Critical and Catastrophic failure modes have at least two independent detection/protection mechanisms. The hardware interlock (CMP-SAF-01) with analog comparator backup (CTL-009) provides the primary safety barrier, while formal verification (CTL-001) and software parameter validation (CTL-005) provide defense-in-depth. No single-point failure can lead to a Catastrophic hazardous event when all protection layers are operational. The residual risk of qubit damage is dominated by the common-cause failure scenario (HZ-005) where the safety interlock itself fails, which is mitigated by the independent analog comparator circuits and the passive cryogenic cable attenuation.
+The FMECA identifies candidate protections, but it does not establish universal detection or independence. The executed HZ-001 model shows that a sequence verifier does not prevent downstream DAC/amplifier faults and that shared protection dependencies remain. Passive attenuation is explicitly required in every derived cut. Establish the RF/current envelopes, common resources and protection response before concluding which risk contribution dominates. No residual risk has been accepted.

@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "title": "Historical systems engineering gallery",
+  "scope": "Historical events and design baselines before 2015; source publication may be later.",
+  "teaching_ids": true,
+  "cases": [
+    {
+      "id": "HG-01",
+      "slug": "apollo-13",
+      "title": "Apollo 13: reframe the mission after a loss",
+      "year": 1970,
+      "domain": "space",
+      "outcome": "recovery",
+      "focus": "Separate the original mission objective, the survival objective, and the resources that make a new operating concept feasible.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "apollo-13/README.md",
+      "analysis_path": "apollo-13/analysis.json",
+      "source_ids": [
+        "HG-01-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-02",
+      "slug": "challenger",
+      "title": "Challenger: make dissent reach the decision",
+      "year": 1986,
+      "domain": "space",
+      "outcome": "failure",
+      "focus": "Treat readiness as an evidence and communication process with identifiable decision authority.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "challenger/README.md",
+      "analysis_path": "challenger/analysis.json",
+      "source_ids": [
+        "HG-02-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-03",
+      "slug": "hubble-optics",
+      "title": "Hubble: verify the verifier",
+      "year": 1990,
+      "domain": "space",
+      "outcome": "failure_and_repair_opportunity",
+      "focus": "Independence concerns the assumptions and physical references behind a test, not just the number of test results.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "hubble-optics/README.md",
+      "analysis_path": "hubble-optics/analysis.json",
+      "source_ids": [
+        "HG-03-S1"
+      ],
+      "exercise_paths": [
+        "hubble-optics/review-task.md",
+        "hubble-optics/source-facts.csv",
+        "hubble-optics/interfaces.csv",
+        "hubble-optics/claim-evidence.csv",
+        "hubble-optics/change.json",
+        "hubble-optics/relations.mmd",
+        "hubble-optics/review-guide.md"
+      ]
+    },
+    {
+      "id": "HG-04",
+      "slug": "ariane-501",
+      "title": "Ariane 501: requalify reused assumptions",
+      "year": 1996,
+      "domain": "space",
+      "outcome": "failure",
+      "focus": "A reused component brings an operating envelope and inactive-looking functions that still require explicit disposition.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "ariane-501/README.md",
+      "analysis_path": "ariane-501/analysis.json",
+      "source_ids": [
+        "HG-04-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-05",
+      "slug": "mars-climate-orbiter",
+      "title": "Mars Climate Orbiter: own the meaning of an interface",
+      "year": 1999,
+      "domain": "space",
+      "outcome": "failure",
+      "focus": "An interface contract includes semantic meaning, producers, consumers, checks, and operational handover.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "mars-climate-orbiter/README.md",
+      "analysis_path": "mars-climate-orbiter/analysis.json",
+      "source_ids": [
+        "HG-05-S1"
+      ],
+      "exercise_paths": [
+        "mars-climate-orbiter/review-task.md",
+        "mars-climate-orbiter/source-facts.csv",
+        "mars-climate-orbiter/interfaces.csv",
+        "mars-climate-orbiter/claim-evidence.csv",
+        "mars-climate-orbiter/change.json",
+        "mars-climate-orbiter/relations.mmd",
+        "mars-climate-orbiter/review-guide.md"
+      ]
+    },
+    {
+      "id": "HG-06",
+      "slug": "columbia",
+      "title": "Columbia: keep anomalies visible across organizational boundaries",
+      "year": 2003,
+      "domain": "space",
+      "outcome": "failure",
+      "focus": "Successful previous operations do not resolve an unexplained hazard; information flow is part of system performance.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "columbia/README.md",
+      "analysis_path": "columbia/analysis.json",
+      "source_ids": [
+        "HG-06-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-07",
+      "slug": "mars-exploration-rovers",
+      "title": "Mars Exploration Rovers: connect scientific intent to operational choices",
+      "year": 2004,
+      "domain": "space",
+      "outcome": "success_with_lifecycle_adaptation",
+      "focus": "Turn a broad scientific question into a sequence of feasible observations, then manage the life of that capability.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "mars-exploration-rovers/README.md",
+      "analysis_path": "mars-exploration-rovers/analysis.json",
+      "source_ids": [
+        "HG-07-S1",
+        "HG-07-S2"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-08",
+      "slug": "us-airways-1549",
+      "title": "US Airways 1549: model the decision-maker’s time",
+      "year": 2009,
+      "domain": "aviation",
+      "outcome": "recovery",
+      "focus": "Validate scenarios against the time and information available to the operator, including recognition and decision delays.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "us-airways-1549/README.md",
+      "analysis_path": "us-airways-1549/analysis.json",
+      "source_ids": [
+        "HG-08-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-09",
+      "slug": "united-232",
+      "title": "United 232: functional redundancy is not physical independence",
+      "year": 1989,
+      "domain": "aviation",
+      "outcome": "failure_with_partial_recovery",
+      "focus": "Test redundant architecture against shared physical hazards and the operational capability remaining after damage.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "united-232/README.md",
+      "analysis_path": "united-232/analysis.json",
+      "source_ids": [
+        "HG-09-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-10",
+      "slug": "heathrow-terminal-5",
+      "title": "Heathrow Terminal 5: opening a service is an integration test",
+      "year": 2008,
+      "domain": "transport",
+      "outcome": "transition_failure",
+      "focus": "Operational readiness depends on people, logistics, software, facilities, and shared authority working together under representative conditions.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "heathrow-terminal-5/README.md",
+      "analysis_path": "heathrow-terminal-5/analysis.json",
+      "source_ids": [
+        "HG-10-S1",
+        "HG-10-S2"
+      ],
+      "exercise_paths": [
+        "heathrow-terminal-5/review-task.md",
+        "heathrow-terminal-5/source-facts.csv",
+        "heathrow-terminal-5/interfaces.csv",
+        "heathrow-terminal-5/claim-evidence.csv",
+        "heathrow-terminal-5/change.json",
+        "heathrow-terminal-5/relations.mmd",
+        "heathrow-terminal-5/review-guide.md"
+      ]
+    },
+    {
+      "id": "HG-11",
+      "slug": "boston-tunnel-ceiling",
+      "title": "Boston tunnel ceiling: match evidence to duration and use",
+      "year": 2006,
+      "domain": "public_infrastructure",
+      "outcome": "failure",
+      "focus": "A short acceptance test cannot close a long-duration load claim without a justified model of time-dependent behavior.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "boston-tunnel-ceiling/README.md",
+      "analysis_path": "boston-tunnel-ceiling/analysis.json",
+      "source_ids": [
+        "HG-11-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-12",
+      "slug": "northeast-blackout",
+      "title": "Northeast blackout: know whether the monitoring system is working",
+      "year": 2003,
+      "domain": "energy",
+      "outcome": "failure",
+      "focus": "Operators need evidence about both the physical system and the health of the tools used to observe it.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "northeast-blackout/README.md",
+      "analysis_path": "northeast-blackout/analysis.json",
+      "source_ids": [
+        "HG-12-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-13",
+      "slug": "texas-city-refinery",
+      "title": "Texas City refinery: measure the hazard you intend to control",
+      "year": 2005,
+      "domain": "industrial",
+      "outcome": "failure",
+      "focus": "Steady production and favorable injury statistics do not establish readiness for a hazardous startup.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "texas-city-refinery/README.md",
+      "analysis_path": "texas-city-refinery/analysis.json",
+      "source_ids": [
+        "HG-13-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-14",
+      "slug": "herald-free-enterprise",
+      "title": "Herald of Free Enterprise: close the loop between physical state and permission",
+      "year": 1987,
+      "domain": "maritime",
+      "outcome": "failure",
+      "focus": "A safety-critical departure condition needs observable state, accountable confirmation, and a response to unknown or failed indication.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "herald-free-enterprise/README.md",
+      "analysis_path": "herald-free-enterprise/analysis.json",
+      "source_ids": [
+        "HG-14-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-15",
+      "slug": "tcp",
+      "title": "TCP: define what an acknowledgment means",
+      "year": 1981,
+      "domain": "communications_computing",
+      "outcome": "design_baseline",
+      "focus": "A useful interface states both the service it provides and the stronger claims it does not establish.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "tcp/README.md",
+      "analysis_path": "tcp/analysis.json",
+      "source_ids": [
+        "HG-15-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-16",
+      "slug": "dns",
+      "title": "DNS: distribute authority and manage stale information",
+      "year": 1987,
+      "domain": "communications_computing",
+      "outcome": "design_baseline",
+      "focus": "Scalability changes who owns data, how long others may reuse it, and what temporary disagreement means.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "dns/README.md",
+      "analysis_path": "dns/analysis.json",
+      "source_ids": [
+        "HG-16-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-17",
+      "slug": "world-wide-web-proposal",
+      "title": "World Wide Web proposal: start with the organization’s information problem",
+      "year": 1989,
+      "domain": "communications_computing",
+      "outcome": "concept_baseline",
+      "focus": "A concept becomes credible when it explains the users, existing assets, adoption constraints, and deliberate scope boundaries.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "world-wide-web-proposal/README.md",
+      "analysis_path": "world-wide-web-proposal/analysis.json",
+      "source_ids": [
+        "HG-17-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-18",
+      "slug": "therac-25",
+      "title": "Therac-25: treat interaction timing and hazard communication as design concerns",
+      "year": 1987,
+      "domain": "medical_devices",
+      "outcome": "failure",
+      "focus": "A credible safety argument must account for temporal interactions, operator feedback, and what users are told when a defect is found.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "therac-25/README.md",
+      "analysis_path": "therac-25/analysis.json",
+      "source_ids": [
+        "HG-18-S1",
+        "HG-18-S2"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-19",
+      "slug": "infusion-pump-initiative",
+      "title": "Infusion Pump Improvement Initiative: design across the product lifecycle",
+      "year": 2010,
+      "domain": "medical_devices",
+      "outcome": "improvement_program",
+      "focus": "A device is used, maintained, and understood within a care system; design review must span that lifecycle.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "infusion-pump-initiative/README.md",
+      "analysis_path": "infusion-pump-initiative/analysis.json",
+      "source_ids": [
+        "HG-19-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-20",
+      "slug": "london-2012",
+      "title": "London 2012: separate event readiness from legacy value",
+      "year": 2012,
+      "domain": "public_services",
+      "outcome": "successful_delivery_with_open_legacy",
+      "focus": "A program can deliver its immediate service while long-term benefits remain separate claims with different owners and evidence.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "london-2012/README.md",
+      "analysis_path": "london-2012/analysis.json",
+      "source_ids": [
+        "HG-20-S1"
+      ],
+      "exercise_paths": []
+    },
+    {
+      "id": "HG-21",
+      "slug": "san-bruno-pipeline",
+      "title": "San Bruno: preserve the provenance of configuration data",
+      "year": 2010,
+      "domain": "energy",
+      "outcome": "failure",
+      "focus": "Digitizing a record does not validate the physical configuration it describes.",
+      "competencies": [
+        "problem_framing",
+        "boundaries_and_interfaces",
+        "tradeoffs_and_decisions",
+        "evidence_and_uncertainty",
+        "lifecycle_and_change",
+        "human_organization",
+        "communication"
+      ],
+      "path": "san-bruno-pipeline/README.md",
+      "analysis_path": "san-bruno-pipeline/analysis.json",
+      "source_ids": [
+        "HG-21-S1"
+      ],
+      "exercise_paths": []
+    }
+  ]
+}

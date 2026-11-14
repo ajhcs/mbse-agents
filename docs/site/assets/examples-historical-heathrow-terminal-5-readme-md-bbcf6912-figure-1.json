@@ -1,0 +1,41 @@
+{
+  "kind": "source-derived-logical-flow",
+  "nodes": {
+    "F": "HG-10 facility delivery",
+    "S": "HG-10 staff familiarisation",
+    "L": "HG-10 airline operations",
+    "T": "HG-10 terminal operator",
+    "P": "HG-10 front-line staff",
+    "R": "HG-10 readiness authority"
+  },
+  "edges": [
+    {
+      "from": "F",
+      "to": "S",
+      "label": "HG-10-I1 familiarisation"
+    },
+    {
+      "from": "L",
+      "to": "T",
+      "label": "HG-10-I2 exception handover"
+    },
+    {
+      "from": "P",
+      "to": "R",
+      "label": "HG-10-I3 unresolved concern"
+    },
+    {
+      "from": "T",
+      "to": "R",
+      "label": "HG-10-C3 joint exercise evidence"
+    },
+    {
+      "from": "S",
+      "to": "R",
+      "label": "HG-10-I4 performance evidence"
+    }
+  ],
+  "source": "examples/historical/heathrow-terminal-5/README.md",
+  "source_locator": "Mermaid block 1",
+  "source_sha256": "cfddce078ebe0725705c73e5eccd0cdbc62e1ab528613cf60cc48fa37beea116"
+}

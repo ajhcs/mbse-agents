@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "case": "UT-01",
+  "arm": "revised-guidance",
+  "exercise": "Fresh participant-context smoke exercise",
+  "source_access": "Packet-only, instruction-restricted access; not enforced isolation.",
+  "scope": "Review of supplied authored teaching fixtures only; no hardware or test execution, external APIs, production actions, or self-grading.",
+  "observed_utc_start": "2026-11-14T00:01:57Z",
+  "observed_utc_end": "2026-11-14T00:03:26Z",
+  "timestamp_basis": "clock__curr_time observations; end observed after engineering artifact creation and before final metadata serialization.",
+  "model": "unknown",
+  "settings": "unknown",
+  "tokens": "unknown",
+  "cost": "unknown",
+  "unknown_fields_reason": "Exact model, settings, token usage, and cost were not exposed to the participant.",
+  "skill_files_used": [
+    "skills/mbse-verification-evidence/SKILL.md",
+    "skills/mbse-verification-evidence/references/evidence-contracts.md"
+  ],
+  "other_input_files_read": [
+    "request.md",
+    "packet-manifest.json"
+  ],
+  "files_accessed_for_hash_only": [
+    "skills/mbse-verification-evidence/agents/openai.yaml"
+  ],
+  "tools_used": [
+    {
+      "name": "functions.exec",
+      "calls": 7,
+      "purpose": "Orchestrate exposed tools."
+    },
+    {
+      "name": "clock__curr_time",
+      "calls": 2,
+      "purpose": "Observe UTC start and end."
+    },
+    {
+      "name": "exec_command",
+      "calls": 6,
+      "purpose": "Packet file enumeration, packet reads and integrity hashes, artifact and metadata creation."
+    }
+  ],
+  "local_commands_used": [
+    {
+      "command": "rg --files -g '*' .",
+      "purpose": "Enumerate supplied packet files."
+    },
+    {
+      "command": "python",
+      "purpose": "Attempt packet reading; unavailable, no files changed."
+    },
+    {
+      "command": "python3",
+      "purpose": "Read supplied packet, calculate SHA-256, write output and run record; standard-library pathlib, hashlib, and json only."
+    }
+  ],
+  "inputs_sha256_before": {
+    "request.md": "2acf74dbce6ad67186824c169f68b40982ffe062135b0e7942b1e54d12227c69",
+    "skills/mbse-verification-evidence/SKILL.md": "c9a7b3d95a9c01efd51e818184a773273a1f5583a28ade636eba6b32f17f6524",
+    "skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+    "skills/mbse-verification-evidence/references/evidence-contracts.md": "7fce7846b8dedbcd5ff0f331d99c3238ccde5de6326be1886f334d09fb646bcb",
+    "packet-manifest.json": "380b55260aaa0e3a37a2a2f7149d1368561811db65b352b1444e5ca99561e8c0"
+  },
+  "inputs_sha256_after": {
+    "request.md": "2acf74dbce6ad67186824c169f68b40982ffe062135b0e7942b1e54d12227c69",
+    "skills/mbse-verification-evidence/SKILL.md": "c9a7b3d95a9c01efd51e818184a773273a1f5583a28ade636eba6b32f17f6524",
+    "skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+    "skills/mbse-verification-evidence/references/evidence-contracts.md": "7fce7846b8dedbcd5ff0f331d99c3238ccde5de6326be1886f334d09fb646bcb",
+    "packet-manifest.json": "380b55260aaa0e3a37a2a2f7149d1368561811db65b352b1444e5ca99561e8c0"
+  },
+  "input_bytes_preserved": true,
+  "outputs_sha256": {
+    "outputs/output.md": "637f3b14771225788101e6bd7bb5586e522ee30abe644331efa2b6e9713906c1"
+  },
+  "metadata_self_hash": "Not embedded to avoid a recursive hash; final run-record.json SHA-256 returned in the completion report.",
+  "exceptions": [
+    {
+      "event": "python command unavailable",
+      "details": "The first packet-read command exited 127: /bin/bash: line 1: python: command not found. Retried successfully with python3; no input or output bytes changed by the failed command."
+    }
+  ],
+  "hardware_execution": false,
+  "test_execution": false,
+  "external_api_calls": false,
+  "production_actions": false,
+  "self_grading": false,
+  "freeze_policy": "No further writes after this metadata serialization; inputs remain untouched."
+}

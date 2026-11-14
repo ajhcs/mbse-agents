@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-14T00:02:14.112264+00:00",
+  "purpose": "Fresh development-question run after independent repair/adjudication of the initial quiz bank.",
+  "bank_version": "0.2.0",
+  "split": "development",
+  "arms": [
+    "none",
+    "task",
+    "task-domain"
+  ],
+  "assessment": "Exact selections against independently reviewed authored keys, followed by independent explanation assessment; no automatic superiority inference.",
+  "acceptance": "Malformed or unbound responses are not scored; content/errors retained. Correct selections without sound reasoning do not establish competence. Any ceiling reported as limited discrimination.",
+  "isolation": "Fresh participant contexts; only own packet authorized. Shared host exposes global skill descriptions and general memory summary. Instruction restricted, not verified sandbox isolation.",
+  "metadata": "Exact runtime model/settings/token/cost unknown if not exposed; observed times andactualtools recorded.",
+  "source_hashes": {
+    "evals/benchmark/items.json": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+    "evals/benchmark/keys.json": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+    "scripts/benchmark.py": "f693899802f6e16752559f5df2df4f959703e295cce94b7cafe8f787d94b9a3d",
+    "catalog.json": "d22425e31f748d67266c41393c7e6d34cc14aba23d2ec21359ace165dfe0e32d"
+  }
+}

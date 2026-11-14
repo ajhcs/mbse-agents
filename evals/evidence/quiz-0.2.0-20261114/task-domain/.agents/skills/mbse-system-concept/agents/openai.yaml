@@ -1,0 +1,4 @@
+interface:
+  display_name: "Develop a System Concept"
+  short_description: "Explore feasible system concepts and alternatives"
+  default_prompt: "Use $mbse-system-concept to frame the problem in this brief, compare meaningful alternatives, and explain the preferred direction and its open feasibility questions."

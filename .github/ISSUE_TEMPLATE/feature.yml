@@ -1,0 +1,24 @@
+name: Feature or workflow idea
+description: Suggest a useful improvement to the skills, examples, or tooling.
+title: "[Idea] "
+body:
+  - type: markdown
+    attributes:
+      value: "Ideas are welcome even without a proposed implementation. Tell us the engineering outcome you want."
+  - type: textarea
+    id: need
+    attributes:
+      label: What would this help you do?
+      description: Describe the task or decision and what gets in the way today.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What would a useful result look like?
+      description: Optional workflow, example, artifact, or acceptance condition.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context or alternatives
+      description: Optional domain, tool, sources, or other approaches. Please omit sensitive data.

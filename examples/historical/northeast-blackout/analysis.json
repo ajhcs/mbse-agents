@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-12",
+  "slug": "northeast-blackout",
+  "title": "Northeast blackout: know whether the monitoring system is working",
+  "year": 2003,
+  "domain": "energy",
+  "outcome": "failure",
+  "focus": "Operators need evidence about both the physical system and the health of the tools used to observe it.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-12-S1",
+      "title": "Final Report on the August 14, 2003 Blackout in the United States and Canada",
+      "url": "https://www.energy.gov/sites/prod/files/oeprod/DocumentsandMedia/BlackoutFinal-Web.pdf",
+      "publication_date": "2004-04",
+      "locator": "Chapter 3, printed pp. 17–19; Chapter 5, monitoring failures, pp. 51–56",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-12-F1",
+      "statement": "The task force grouped causes into inadequate system understanding, situational awareness, vegetation management, and reliability-coordinator diagnostic support.",
+      "source_ids": [
+        "HG-12-S1"
+      ],
+      "locator": "Chapter 3, pp. 17–19"
+    },
+    {
+      "id": "HG-12-F2",
+      "statement": "It found weaknesses in awareness of monitoring-tool condition, communication between computer support and operators, and checking functionality after repairs.",
+      "source_ids": [
+        "HG-12-S1"
+      ],
+      "locator": "Chapter 3, p. 18; Chapter 5, pp. 51–56"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Grid assets, vegetation, state estimation, alarm processing, operators, support teams, and neighboring reliability organizations form the coordinated system.",
+    "interfaces": [
+      "Monitoring tool → operator: a quiet display may mean stability or loss of observation.",
+      "Control area → coordinator: missing or stale state can defeat analysis beyond one organization."
+    ],
+    "decision": {
+      "question": "What should an operational display communicate when its data path is unhealthy?",
+      "options": [
+        "Continue displaying the last known normal state.",
+        "Expose freshness and function status, trigger degraded monitoring, and coordinate restrictions."
+      ],
+      "recommendation": "Treat loss of observability as an operational condition with owned responses.",
+      "uncertainty": "A heartbeat alone does not establish end-to-end alarm or state-estimation correctness."
+    },
+    "artifact": {
+      "id": "HG-12-A1",
+      "type": "Monitoring assurance contract",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Data freshness",
+          "Expose age and failed updates",
+          "Known stimulus observed through the full chain"
+        ],
+        [
+          "Tool repair",
+          "Restore function only after a bounded end-to-end check",
+          "Recorded input, output, and operator acknowledgment"
+        ],
+        [
+          "Coordination",
+          "Notify affected neighbors of degraded visibility",
+          "Shared degraded-operation protocol"
+        ]
+      ]
+    },
+    "questions": [
+      "How can redundancy in servers fail to preserve situational awareness?",
+      "Who should know that the monitoring tools are degraded?",
+      "Draft a restoration message separating service availability from verified monitoring function."
+    ],
+    "answer_signals": [
+      "Separates telemetry absence from a healthy physical state.",
+      "Includes organizational boundaries and fallback capability.",
+      "Uses a functional check rather than a process-up indicator alone."
+    ],
+    "transfer_exercise": "Synthetic: a control dashboard keeps rendering cached values after an upstream outage. Define the operator-visible states and response owners.",
+    "limits": "No power-flow or blackout propagation model was executed. The report’s historical policy findings are not presented as current regulatory advice."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

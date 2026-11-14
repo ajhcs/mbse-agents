@@ -1,5 +1,7 @@
 # Hazard Analysis
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Methodology
 
 This hazard analysis follows ISO 26262 Part 3 (Concept Phase) and Part 4 (Product Development at the System Level). The scope covers the Autonomous Emergency Braking system as defined in the system boundary (README.md), analyzed across all operating modes (MODE-001 through MODE-005).
@@ -62,18 +64,18 @@ The analysis progresses through:
 
 | HZ ID   | Description                                                          | Cause(s)                                                                    | Effect                                                               | MODE ID(s)        | Severity | Likelihood | Initial Risk | CTL ID(s)              | Residual Risk | Owner / Acceptance Authority | REQ ID(s)                                        |
 |---------|----------------------------------------------------------------------|-----------------------------------------------------------------------------|----------------------------------------------------------------------|-------------------|----------|------------|--------------|------------------------|---------------|------------------------------|--------------------------------------------------|
-| HZ-001  | AEB fails to detect obstacle (vehicle); no braking                   | Sensor fusion failure; DNN misclassification; tracking loss                 | Rear-end collision at driving speed; serious injury or death         | MODE-001          | S3       | Remote     | High         | CTL-001, CTL-002       | Acceptable    | OEM / Type Approval          | REQ-FUN-005, REQ-SAF-001, REQ-SAF-002           |
-| HZ-002  | AEB fails to detect pedestrian; no braking                           | Camera DNN fails to classify pedestrian; radar returns below threshold      | Vehicle strikes pedestrian; serious injury or death                  | MODE-001          | S3       | Remote     | High         | CTL-001, CTL-002       | Acceptable    | OEM / Type Approval          | REQ-FUN-001, REQ-FUN-005, REQ-SAF-001           |
-| HZ-003  | AEB false activation (phantom braking)                               | DNN false positive; radar ghost return; sensor fusion misassociation        | Unexpected deceleration; following vehicle collision risk            | MODE-001          | S2       | Remote     | Medium       | CTL-003                | Acceptable    | OEM / Type Approval          | REQ-SAF-003, REQ-FUN-010                         |
-| HZ-004  | AEB applies insufficient braking force                               | TTC computation error; brake request under-commanded; ESC blending error    | Collision at reduced but insufficient speed; moderate to serious injury | MODE-002       | S3       | Remote     | High         | CTL-004                | Acceptable    | OEM / Type Approval          | REQ-FUN-012, REQ-FUN-014, REQ-SAF-004           |
-| HZ-005  | AEB applies excessive braking force causing instability              | Brake pressure overcommand; failure to account for road surface; ESC conflict | Vehicle skid or spin; potential multi-vehicle accident              | MODE-002          | S3       | Remote     | High         | CTL-004, CTL-005       | Acceptable    | OEM / Type Approval          | REQ-FUN-015, REQ-SAF-005                         |
-| HZ-006  | AEB braking intervention too late (excessive latency)                | Processing pipeline stall; communication timeout; DNN inference overrun     | Collision not avoided; reduced speed but impact still severe         | MODE-001, MODE-002| S3       | Remote     | High         | CTL-006                | Acceptable    | OEM / Type Approval          | REQ-PRF-001, REQ-PRF-002, REQ-SAF-006           |
-| HZ-007  | AEB stuck in braking after threat clears                             | Object tracking persistence error; brake release command lost               | Unnecessary prolonged braking; driver confusion; following vehicle risk | MODE-002, MODE-005 | S2    | Remote     | Medium       | CTL-007                | Acceptable    | OEM / Type Approval          | REQ-FUN-011, REQ-SAF-007                         |
-| HZ-008  | AEB fails to detect sensor fault; operates on degraded data          | Health monitoring gap; sensor provides plausible but incorrect data         | Incorrect braking decision based on faulty sensor data               | MODE-001          | S3       | Remote     | High         | CTL-008                | Acceptable    | OEM / Type Approval          | REQ-FUN-017, REQ-FUN-018, REQ-SAF-008           |
-| HZ-009  | Corrupted OTA update disables AEB                                    | Malicious or corrupted software package accepted by OTA agent               | AEB non-functional; driver unaware of missing ADAS protection       | MODE-001          | S3       | Remote     | High         | CTL-009                | Acceptable    | OEM / Type Approval          | REQ-FUN-022, REQ-SEC-001, REQ-SEC-002           |
-| HZ-010  | CAN bus injection causes unauthorized braking                        | Attacker injects brake command on CAN FD bus; gateway firewall bypassed     | Unexpected braking; following vehicle collision risk                 | MODE-001          | S3       | Remote     | High         | CTL-010                | Acceptable    | OEM / Type Approval          | REQ-SEC-003, REQ-SEC-004, REQ-SEC-005           |
-| HZ-011  | Perception failure in adverse weather (SOTIF)                        | Heavy rain attenuates camera; radar multipath; fusion confidence drops      | Missed detection or late detection; collision not avoided            | MODE-001, MODE-003| S3       | Occasional | High         | CTL-001, CTL-011       | Acceptable    | OEM / Type Approval          | REQ-SAF-001, REQ-SAF-009, REQ-SAF-010           |
-| HZ-012  | Both sensors provide consistent but incorrect data (common-cause)    | Tunnel exit glare saturates camera and radar sidelobe; environmental SOTIF  | Fusion output is confidently wrong; braking decision based on phantom or missed object | MODE-001 | S3 | Remote | High | CTL-002, CTL-011 | Acceptable | OEM / Type Approval | REQ-SAF-002, REQ-SAF-010 |
+| HZ-001  | AEB fails to detect obstacle (vehicle); no braking                   | Sensor fusion failure; DNN misclassification; tracking loss                 | Rear-end collision at driving speed; serious injury or death         | MODE-001          | S3       | Remote     | High         | CTL-001, CTL-002       | Proposed control; validation pending     | OEM / Type Approval          | REQ-FUN-005, REQ-SAF-001, REQ-SAF-002           |
+| HZ-002  | AEB fails to detect pedestrian; no braking                           | Camera DNN fails to classify pedestrian; radar returns below threshold      | Vehicle strikes pedestrian; serious injury or death                  | MODE-001          | S3       | Remote     | High         | CTL-001, CTL-002       | Proposed control; validation pending     | OEM / Type Approval          | REQ-FUN-001, REQ-FUN-005, REQ-SAF-001           |
+| HZ-003  | AEB false activation (phantom braking)                               | DNN false positive; radar ghost return; sensor fusion misassociation        | Unexpected deceleration; following vehicle collision risk            | MODE-001          | S2       | Remote     | Medium       | CTL-003                | Proposed control; validation pending     | OEM / Type Approval          | REQ-SAF-003, REQ-FUN-010                         |
+| HZ-004  | AEB applies insufficient braking force                               | TTC computation error; brake request under-commanded; ESC blending error    | Collision at reduced but insufficient speed; moderate to serious injury | MODE-002       | S3       | Remote     | High         | CTL-004                | Proposed control; validation pending     | OEM / Type Approval          | REQ-FUN-012, REQ-FUN-014, REQ-SAF-004           |
+| HZ-005  | AEB applies excessive braking force causing instability              | Brake pressure overcommand; failure to account for road surface; ESC conflict | Vehicle skid or spin; potential multi-vehicle accident              | MODE-002          | S3       | Remote     | High         | CTL-004, CTL-005       | Proposed control; validation pending     | OEM / Type Approval          | REQ-FUN-015, REQ-SAF-005                         |
+| HZ-006  | AEB braking intervention too late (excessive latency)                | Processing pipeline stall; communication timeout; DNN inference overrun     | Collision not avoided; reduced speed but impact still severe         | MODE-001, MODE-002| S3       | Remote     | High         | CTL-006                | Proposed control; validation pending     | OEM / Type Approval          | REQ-PRF-001, REQ-PRF-002, REQ-SAF-006           |
+| HZ-007  | AEB stuck in braking after threat clears                             | Object tracking persistence error; brake release command lost               | Unnecessary prolonged braking; driver confusion; following vehicle risk | MODE-002, MODE-005 | S2    | Remote     | Medium       | CTL-007                | Proposed control; validation pending     | OEM / Type Approval          | REQ-FUN-011, REQ-SAF-007                         |
+| HZ-008  | AEB fails to detect sensor fault; operates on degraded data          | Health monitoring gap; sensor provides plausible but incorrect data         | Incorrect braking decision based on faulty sensor data               | MODE-001          | S3       | Remote     | High         | CTL-008                | Proposed control; validation pending     | OEM / Type Approval          | REQ-FUN-017, REQ-FUN-018, REQ-SAF-008           |
+| HZ-009  | Corrupted OTA update disables AEB                                    | Malicious or corrupted software package accepted by OTA agent               | AEB non-functional; driver unaware of missing ADAS protection       | MODE-001          | S3       | Remote     | High         | CTL-009                | Proposed control; validation pending     | OEM / Type Approval          | REQ-FUN-022, REQ-SEC-001, REQ-SEC-002           |
+| HZ-010  | CAN bus injection causes unauthorized braking                        | Attacker injects brake command on CAN FD bus; gateway firewall bypassed     | Unexpected braking; following vehicle collision risk                 | MODE-001          | S3       | Remote     | High         | CTL-010                | Proposed control; validation pending     | OEM / Type Approval          | REQ-SEC-003, REQ-SEC-004, REQ-SEC-005           |
+| HZ-011  | Perception failure in adverse weather (SOTIF)                        | Heavy rain attenuates camera; radar multipath; fusion confidence drops      | Missed detection or late detection; collision not avoided            | MODE-001, MODE-003| S3       | Occasional | High         | CTL-001, CTL-011       | Proposed control; validation pending     | OEM / Type Approval          | REQ-SAF-001, REQ-SAF-009, REQ-SAF-010           |
+| HZ-012  | Both sensors provide consistent but incorrect data (common-cause)    | Tunnel exit glare saturates camera and radar sidelobe; environmental SOTIF  | Fusion output is confidently wrong; braking decision based on phantom or missed object | MODE-001 | S3 | Remote | High | CTL-002, CTL-011 | Proposed control; validation pending  | OEM / Type Approval | REQ-SAF-002, REQ-SAF-010 |
 
 ## Risk Controls
 
@@ -93,56 +95,42 @@ The analysis progresses through:
 
 ## Fault Analysis
 
-### Fault Tree: AEB Fails to Detect Obstacle (HZ-001)
+### Fault Tree: HZ-001 — explicit dependency model
 
-This fault tree decomposes the ASIL D safety goal (SG-001) of reliable obstacle detection. The target is ASIL D per the HARA.
+Misses in both sensor paths, a fusion omission, or a shared sensor-loss event can each defeat detection. Fusion is not an additional independent barrier after both inputs are unavailable. The model does not address false positives, collision dynamics, braking effectiveness, or the entire operating domain.
 
 ```mermaid
-graph TD
-    TOP["HZ-001: AEB Fails to<br/>Detect Obstacle<br/>ASIL D"]
-    TOP -->|AND| G1["Camera Path<br/>Fails to Detect"]
-    TOP -->|AND| G2["Radar Path<br/>Fails to Detect"]
-    TOP -->|AND| G3["Fusion Does Not<br/>Compensate"]
-
-    G1 -->|OR| G1A["DNN Misclassification"]
-    G1 -->|OR| G1B["Camera Hardware Fault"]
-    G1 -->|OR| G1C["Camera Blinded<br/>(Glare/Fog/Rain)"]
-
-    G2 -->|OR| G2A["Radar Return Below<br/>Detection Threshold"]
-    G2 -->|OR| G2B["Radar Hardware Fault"]
-    G2 -->|OR| G2C["Radar Multipath<br/>/ Clutter"]
-
-    G3 -->|OR| G3A["Fusion Algorithm<br/>Software Fault"]
-    G3 -->|OR| G3B["Both Sensors Fail<br/>Simultaneously<br/>(Common Cause)"]
-
-    G1A --> BE1["DNN False Negative<br/>P <= 1e-3 per demand<br/>(mitigated by training)"]
-    G1B --> BE2["Camera Module<br/>HW Failure<br/>P <= 1e-5/h"]
-    G1C --> BE3["Environmental<br/>Trigger (SOTIF)<br/>P <= 1e-2 per demand<br/>(in adverse weather)"]
-
-    G2A --> BE4["Low RCS Target<br/>(Pedestrian)<br/>P <= 5e-2 per demand"]
-    G2B --> BE5["Radar Module<br/>HW Failure<br/>P <= 1e-5/h"]
-    G2C --> BE6["Multipath in<br/>Urban Canyon<br/>P <= 1e-2 per demand"]
-
-    G3A --> BE7["Fusion SW Fault<br/>P <= 1e-7/h<br/>(ASIL D SW process)"]
-    G3B --> BE8["Common-Cause<br/>Environmental<br/>(Tunnel Exit)<br/>P <= 1e-3 per demand"]
-
-    style TOP fill:#ff6b6b,color:#000
-    style G1 fill:#ffa07a,color:#000
-    style G2 fill:#ffa07a,color:#000
-    style G3 fill:#ffa07a,color:#000
+flowchart TD
+  BE1["BE1: Camera algorithm misses obstacle"]
+  BE2["BE2: Camera hardware unavailable for demand"]
+  BE3["BE3: Camera-specific environmental degradation"]
+  BE4["BE4: Radar target return insufficient"]
+  BE5["BE5: Radar hardware unavailable for demand"]
+  BE6["BE6: Radar-specific multipath/clutter loss"]
+  BE7["BE7: Fusion suppresses otherwise usable obstacle detection"]
+  BE8["BE8: Shared environmental condition defeats both sensor paths"]
+  G1["G1: OR"]
+  G1 --> BE1
+  G1 --> BE2
+  G1 --> BE3
+  G2["G2: OR"]
+  G2 --> BE4
+  G2 --> BE5
+  G2 --> BE6
+  G3["G3: AND"]
+  G3 --> G1
+  G3 --> G2
+  TOP["TOP: OR"]
+  TOP --> G3
+  TOP --> BE7
+  TOP --> BE8
 ```
 
-**Cut set analysis:**
-
-The top event requires BOTH sensor paths AND fusion to fail simultaneously. The dominant cut sets are:
-- Common-cause environmental (BE8: tunnel exit) AND fusion SW fault (BE7): P = 1e-3 x 1e-7 = 1e-10/demand (acceptable)
-- Camera blinded (BE3) AND radar low-RCS (BE4) AND fusion fails to compensate (BE7): P = 1e-2 x 5e-2 x 1e-7 = 5e-11/demand (acceptable)
-
-The ASIL decomposition (camera ASIL B(D) + radar ASIL B(D), fusion ASIL D) ensures that single-sensor failures do not propagate to hazardous outcomes. The dominant residual risk is the SOTIF common-cause scenario (HZ-012), which is addressed by CTL-011 (SOTIF-aware degradation).
+The machine-readable [failure model](analysis/failure-model.json) is authoritative for this authored abstraction. [Executed results and interpretation](analysis/report.md) provide complete minimal cuts, scenario calculations, proof obligations and retained counterexamples. Event IDs from the earlier model retain their stated failure meaning; new shared-dependency events are explicit. Probabilities are synthetic per-demand inputs under the declared mutual-independence hypothesis after shared events are represented. No flight-hour rate, ASIL/SIL achievement, physical effectiveness or risk acceptance follows from these results.
 
 ### ASIL Decomposition Rationale
 
-The system-level ASIL D safety goal (SG-001) is decomposed per ISO 26262-9 clause 5:
+The proposed decomposition below is a design hypothesis. Its eligibility, independence and inherited obligations require the applicable licensed ISO 26262 edition and project evidence; the table does not establish an accepted ASIL decomposition:
 
 | Element          | Decomposed ASIL | Independence Argument                                                      |
 |------------------|-----------------|----------------------------------------------------------------------------|
@@ -151,19 +139,19 @@ The system-level ASIL D safety goal (SG-001) is decomposed per ISO 26262-9 claus
 | Sensor fusion layer   | ASIL D     | Receives both paths; cross-checks consistency; no ASIL decomposition       |
 | Braking actuation     | ASIL D     | Single braking path; no decomposition possible; hardware safety mechanisms required |
 
-**Independence evidence:**
-- Camera and radar share no common hardware (different sensor technologies, different mounting locations, different power regulators).
-- Detection algorithms run in separate process groups (PG-Detection-Cam, PG-Detection-Rad) with MMU-enforced isolation.
-- Common-cause analysis addresses shared power supply (separate regulators), shared thermal environment (different mounting locations), and shared specification errors (mitigated by independent detection algorithm development).
+**Independence evidence to establish:**
+- Inspect separate sensor hardware and the shared processor, power, clocks, mounting environment and specifications; different technologies alone do not establish independence.
+- Verify the proposed separate process groups (PG-Detection-Cam, PG-Detection-Rad), actual memory protection, scheduling and data interference.
+- Extend the executed common-cause model with the actual shared supply, thermal environment and specification dependencies; separate regulators and development teams require supporting evidence.
 
 ### SOTIF Analysis (ISO 21448)
 
 | TC ID    | Triggering Condition                     | Affected Sensor(s) | Detection Impact                               | Mitigation                                                  | Residual Acceptability |
 |----------|------------------------------------------|---------------------|-------------------------------------------------|-------------------------------------------------------------|------------------------|
-| TC-001   | Heavy rain (> 30 mm/h)                   | Camera (primary)    | Image degradation; DNN accuracy drops 15-20%   | Radar compensation in fusion; extended TTC threshold (CTL-011) | Acceptable with MODE-003 |
-| TC-002   | Dense fog (visibility < 100 m)           | Camera, Radar (both) | Camera unusable > 50 m; radar range reduced     | MODE-003 activation; reduced AEB operating speed (CTL-011)  | Acceptable with speed limit |
-| TC-003   | Direct sunlight glare into camera         | Camera (primary)    | Saturation of image region; missed detections   | ISP auto-exposure adaptation; radar provides primary detection (CTL-001) | Acceptable |
-| TC-004   | Tunnel exit into bright sunlight          | Camera and Radar    | Camera saturation; radar sidelobe from tunnel wall | SOTIF-aware confidence drop; MODE-003 for 2 seconds (CTL-011) | Acceptable with transition time |
-| TC-005   | Low-RCS target (pedestrian, cyclist)      | Radar (primarily)   | Radar return may be below detection threshold   | Camera provides primary classification; fusion requires one-sensor confirm (CTL-001) | Acceptable |
-| TC-006   | Overhanging infrastructure (bridge, sign) | Radar (primarily)   | Stationary overhead radar return                | Camera height classification; radar ground-plane filter (CTL-003) | Acceptable |
-| TC-007   | Night driving with no street lighting     | Camera (primary)    | Reduced detection range; pedestrian detection limited | Headlight illumination zone constraint; radar extended range (CTL-001) | Acceptable with range limit |
+| TC-001   | Heavy rain (> 30 mm/h)                   | Camera (primary)    | Image degradation; DNN accuracy drops 15-20%   | Radar compensation in fusion; extended TTC threshold (CTL-011) | Proposed control; validation pending with MODE-003  |
+| TC-002   | Dense fog (visibility < 100 m)           | Camera, Radar (both) | Camera unusable > 50 m; radar range reduced     | MODE-003 activation; reduced AEB operating speed (CTL-011)  | Proposed control; validation pending with speed limit  |
+| TC-003   | Direct sunlight glare into camera         | Camera (primary)    | Saturation of image region; missed detections   | ISP auto-exposure adaptation; radar provides primary detection (CTL-001) | Proposed control; validation pending  |
+| TC-004   | Tunnel exit into bright sunlight          | Camera and Radar    | Camera saturation; radar sidelobe from tunnel wall | SOTIF-aware confidence drop; MODE-003 for 2 seconds (CTL-011) | Proposed control; validation pending with transition time  |
+| TC-005   | Low-RCS target (pedestrian, cyclist)      | Radar (primarily)   | Radar return may be below detection threshold   | Camera provides primary classification; fusion requires one-sensor confirm (CTL-001) | Proposed control; validation pending  |
+| TC-006   | Overhanging infrastructure (bridge, sign) | Radar (primarily)   | Stationary overhead radar return                | Camera height classification; radar ground-plane filter (CTL-003) | Proposed control; validation pending  |
+| TC-007   | Night driving with no street lighting     | Camera (primary)    | Reduced detection range; pedestrian detection limited | Headlight illumination zone constraint; radar extended range (CTL-001) | Proposed control; validation pending with range limit  |

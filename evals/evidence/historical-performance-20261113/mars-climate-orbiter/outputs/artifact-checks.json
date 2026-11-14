@@ -1,0 +1,31 @@
+{
+  "scope": "File integrity and artifact structure only. Not model-quality scoring, independent engineering review, test execution or acceptance.",
+  "input_byte_hashes_unchanged": true,
+  "manifest_hash_mismatches": [],
+  "original_register_fields_preserved": {
+    "interfaces": {
+      "rows": 3,
+      "ids_order_wording_and_status_equal": true
+    },
+    "claim-evidence": {
+      "rows": 3,
+      "ids_order_wording_and_status_equal": true
+    }
+  },
+  "csv_structure_valid": {
+    "acceptance-matrix.csv": 9,
+    "claim-evidence.proposed.csv": 3,
+    "interfaces.proposed.csv": 3
+  },
+  "planned_activities_remain_unexecuted": {
+    "acceptance-matrix.csv": 9
+  },
+  "json_parse_readback": [
+    "artifact-checks.json",
+    "run-record.json",
+    "sample-plan.json",
+    "source-access.json"
+  ],
+  "mermaid_check": "Header and text-delimiter checks only. No Mermaid engine parse, render, or formal-model validation performed.",
+  "performed_at_utc": "2026-11-13T23:57:20.760444+00:00"
+}

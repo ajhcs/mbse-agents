@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "run_id": "56cc54305117c943a1bf",
+  "executed_at": "2026-11-13T23:56:55.705628+00:00",
+  "python": "3.12.3",
+  "command": [
+    "python3",
+    "-B",
+    "examples/medical-device/smart-infusion-pump/analysis/run_clamp_checks.py"
+  ],
+  "entrypoint": "/workspace/repos/builderbob/mbse-agents/examples/medical-device/smart-infusion-pump/analysis/run_clamp_checks.py",
+  "scope": "sampled_logical_clamp_release_no_fluid_or_mechanical_plant",
+  "loaded_sources": {
+    "analysis/clamp_model.py": "f255fbf244c1a7da9c293507a7b71be7a4e1d5ef059d1ab5c2066800f3c888ea",
+    "analysis/run_clamp_checks.py": "61d693f61ca41b6d8690f314d3437e698e6114bda06db4778d0e421d54c4cbfb"
+  },
+  "result_sha256": "27dc4acce6a7e49c394ba9c883f4c1b23b7318422997a0537790f5e508c482a2"
+}

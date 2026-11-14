@@ -1,5 +1,7 @@
 # Assurance Evidence
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Assurance Framework
 
 The Autonomous Emergency Braking system follows the ISO 26262 functional safety lifecycle with an ASIL D safety case. The safety lifecycle spans from concept phase (Part 3) through system development (Parts 4-5), hardware development (Part 5), software development (Part 6), integration and testing (Parts 8-9), and production/operation (Parts 10-12). A third-party functional safety assessment (FSA) is performed per ISO 26262-2 clause 6.4.6 by an independent assessor.
@@ -21,6 +23,7 @@ The evidence package supports review by the vehicle OEM safety organization, the
 | State     | Meaning                                                    |
 |-----------|------------------------------------------------------------|
 | Planned   | Artifact identified, not yet started                       |
+| Executed | Named procedure ran and recorded scoped observations; outcome and acceptance are separate |
 | Drafted   | Initial content exists, under development                  |
 | Reviewed  | Peer or independent review completed                       |
 | Approved  | Authority or designated reviewer accepted                  |
@@ -28,7 +31,7 @@ The evidence package supports review by the vehicle OEM safety organization, the
 
 ## Evidence Index
 
-| EVD ID   | Artifact Name                                           | Location                                                   | Demonstrates                                                         | Standard Clause                         | Review Milestone | Evidence Consumer              | Status   |
+| EVD ID   | Artifact Name                                           | Location                                                   | Intended evidence scope                                                         | Standard Clause                         | Review Milestone | Evidence Consumer              | Status   |
 |----------|---------------------------------------------------------|------------------------------------------------------------|----------------------------------------------------------------------|-----------------------------------------|------------------|--------------------------------|----------|
 | EVD-001  | Camera Detection Range and Classification Test Report   | evidence/test-reports/camera-detection-test.pdf             | Camera detection range (120 m vehicle, 60 m pedestrian) and DNN classification accuracy (99%/95%) | ISO 26262-4 clause 7; UN R152 Annex 3  | Gate 4          | OEM Safety, Type Approval      | Planned  |
 | EVD-002  | Radar Detection Range and Accuracy Test Report          | evidence/test-reports/radar-detection-test.pdf              | Radar detection range (200 m), accuracy (+/- 0.5 m, +/- 0.3 m/s), overhead filtering | ISO 26262-4 clause 7                   | Gate 4          | OEM Safety                     | Planned  |
@@ -54,12 +57,12 @@ The evidence package supports review by the vehicle OEM safety organization, the
 | EVD-022  | DNN Inference Timing and Thermal Analysis               | evidence/analysis/dnn-inference-timing.pdf                  | DNN WCET <= 30 ms; thermal derating analysis                          | ISO 26262-6 clause 7; ISO 26262-11     | Gate 3          | OEM Safety                     | Planned  |
 | EVD-023  | Environmental and Startup Test Report                   | evidence/test-reports/environmental-startup-test.pdf        | Operation -40C to +85C; startup within 5 seconds; power consumption   | ISO 26262-4 clause 7; ISO 16750        | Gate 4          | OEM Safety, Type Approval      | Planned  |
 | EVD-024  | UN R152 Type Approval Test Report                       | evidence/test-reports/un-r152-type-approval.pdf             | Speed reduction for stationary target, full stop for pedestrian crossing | UN R152 Annex 3                        | Gate 5          | Type Approval Authority        | Planned  |
-| EVD-025  | HARA Report                                             | evidence/safety/hara-report.pdf                             | Hazardous event identification and ASIL classification                 | ISO 26262-3 clause 7                   | Gate 1          | OEM Safety, FSA Assessor       | Drafted  |
-| EVD-026  | Safety Goals and Functional Safety Concept              | evidence/safety/fsc-report.pdf                              | Safety goals SG-001 through SG-005; functional safety concept          | ISO 26262-3 clauses 8-9               | Gate 1          | OEM Safety, FSA Assessor       | Drafted  |
-| EVD-027  | Technical Safety Requirements (TSR)                     | evidence/safety/tsr-report.pdf                              | System-level safety requirements derived from safety goals             | ISO 26262-4 clause 6                   | Gate 2          | OEM Safety, FSA Assessor       | Drafted  |
-| EVD-028  | Technical Safety Concept                                | evidence/safety/tsc-report.pdf                              | Architecture-level safety concept with allocation and safety mechanisms | ISO 26262-4 clause 7                  | Gate 2          | OEM Safety, FSA Assessor       | Drafted  |
-| EVD-029  | Cybersecurity TARA Report                               | evidence/security/tara-report.pdf                           | ISO 21434 threat analysis, asset identification, risk assessment       | ISO 21434 clauses 8-9                 | Gate 2          | Cybersecurity Assessor         | Drafted  |
-| EVD-030  | System Architecture Description                         | evidence/development/system-architecture.pdf                | Component hierarchy, interfaces, allocation, partitioning rationale    | ISO 26262-4 clause 7                   | Gate 2          | OEM Safety                     | Drafted  |
+| EVD-025  | HARA Report                                             | evidence/drafts/hara-report.md                             | Hazardous event identification and ASIL classification                 | ISO 26262-3 clause 7                   | Gate 1          | OEM Safety, FSA Assessor       | Drafted  |
+| EVD-026  | Safety Goals and Functional Safety Concept              | evidence/drafts/fsc-report.md                              | Safety goals SG-001 through SG-005; functional safety concept          | ISO 26262-3 clauses 8-9               | Gate 1          | OEM Safety, FSA Assessor       | Drafted  |
+| EVD-027  | Technical Safety Requirements (TSR)                     | evidence/drafts/tsr-report.md                              | System-level safety requirements derived from safety goals             | ISO 26262-4 clause 6                   | Gate 2          | OEM Safety, FSA Assessor       | Drafted  |
+| EVD-028  | Technical Safety Concept                                | evidence/drafts/tsc-report.md                              | Architecture-level safety concept with allocation and safety mechanisms | ISO 26262-4 clause 7                  | Gate 2          | OEM Safety, FSA Assessor       | Drafted  |
+| EVD-029  | Cybersecurity TARA Report                               | evidence/drafts/tara-report.md                           | ISO 21434 threat analysis, asset identification, risk assessment       | ISO 21434 clauses 8-9                 | Gate 2          | Cybersecurity Assessor         | Drafted  |
+| EVD-030  | System Architecture Description                         | evidence/drafts/system-architecture.md                | Component hierarchy, interfaces, allocation, partitioning rationale    | ISO 26262-4 clause 7                   | Gate 2          | OEM Safety                     | Drafted  |
 | EVD-031  | Software Architecture and Design Document               | evidence/development/sw-architecture.pdf                    | AUTOSAR Adaptive/Classic SW architecture, process groups, safety mechanisms | ISO 26262-6 clause 7                | Gate 3          | OEM Safety                     | Planned  |
 | EVD-032  | Hardware Design Document (Braking ECU)                  | evidence/development/hw-design-braking.pdf                  | Lockstep MCU, ECC, watchdog, valve driver safety design                | ISO 26262-5 clauses 6-7               | Gate 3          | OEM Safety, FSA Assessor       | Planned  |
 | EVD-033  | Common Cause Analysis (DFA)                             | evidence/safety/common-cause-analysis.pdf                   | Dependent failure analysis for ASIL decomposition; sensor independence evidence | ISO 26262-9 clause 7              | Gate 4          | FSA Assessor                   | Planned  |
@@ -68,6 +71,8 @@ The evidence package supports review by the vehicle OEM safety organization, the
 | EVD-036  | Confirmation Review Report (Verification Review)        | evidence/safety/confirmation-review-report.pdf              | Independent verification review per ISO 26262-2 clause 6.4.4          | ISO 26262-2 clause 6.4.4              | Gate 5          | FSA Assessor                   | Planned  |
 | EVD-037  | Functional Safety Assessment (FSA) Report               | evidence/safety/fsa-report.pdf                              | Third-party assessment findings and closure                            | ISO 26262-2 clause 6.4.6              | Gate 5          | OEM Safety, Type Approval      | Planned  |
 | EVD-038  | Functional Safety Audit Report                          | evidence/safety/fs-audit-report.pdf                         | Process audit confirming safety lifecycle compliance                    | ISO 26262-2 clause 6.4.5              | Gate 5          | OEM Safety                     | Planned  |
+| EVD-MODEL-001 | Exhaustive HZ-001 logic and conditional scenario results | evidence/analysis/model-results.json | Complete static Boolean cuts, declared-parameter arithmetic and retained counterexamples; no physical requirement closure | Authored model; source-review.md | Engineering model review | Systems engineer | Executed |
+
 
 ## ISO 26262 Work Product Mapping by Part
 
@@ -174,8 +179,8 @@ G1: AEB system is acceptably safe for public road deployment [ASIL D]
 
 | Review Area                      | Scope                                                    | Method                  | Evidence Required                    | Status  |
 |----------------------------------|----------------------------------------------------------|-------------------------|--------------------------------------|---------|
-| HARA completeness                | All operational situations considered; ASIL classification correct | Independent review     | EVD-025 reviewed by assessor        | Planned |
-| Safety concept correctness       | Safety goals correctly decomposed to TSR and TSC          | Independent review      | EVD-026, EVD-027, EVD-028           | Planned |
+| HARA completeness | All operational situations considered; ASIL classification correct | Independent review | EVD-025 reviewed by assessor | Drafted |
+| Safety concept correctness | Safety goals correctly decomposed to TSR and TSC | Independent review | EVD-026, EVD-027, EVD-028 | Drafted |
 | Architecture safety adequacy     | ASIL decomposition valid; freedom from interference demonstrated | Independent review    | EVD-033, EVD-034                     | Planned |
 | Hardware fault metric validity   | FMEDA assumptions valid; failure rates justified          | Independent review      | EVD-017                              | Planned |
 | Verification completeness        | All safety requirements verified; traceability complete   | Audit                   | traceability.md, EVD-001 to EVD-024 | Planned |
@@ -210,3 +215,7 @@ Process audit confirming that the development organization followed the safety m
 | Clause 5.5     | Driver override capability                           | Accelerator override test              | EVD-006  | Planned |
 | Clause 6.4     | Event data recording                                 | EDR verification                       | EVD-011  | Planned |
 | Annex 3        | Test scenario performance thresholds                 | UN R152 type approval test campaign    | EVD-024  | Planned |
+
+## Interpretation of the new execution records
+
+EVD-MODEL-001 records executed static analysis only. Its successful check outcome includes discovery of expected counterexamples; rejected claims remain false in those states. Lifecycle (drafted/executed), technical outcome, configuration identity, independent review and acceptance are separate facts. No original physical verification activity is marked complete by this addition. [The model study](analysis/report.md) identifies the supporting observations and remaining work.

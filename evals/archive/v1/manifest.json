@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "historical-original-bytes-preserved",
+  "files": {
+    "cases.json": "02b2237fe47dc2a5f5297f29de713f630cc86c0a9c263ef76220fcf9bd2c3436",
+    "rubrics.json": "e7aa4cf36a73a208d4fde56e4ca39276e752f522c3a6ba1a3ae18f895358443a"
+  },
+  "reason": "Preserve original case and rubric meanings before expanding the current performance bank and retiring founder review."
+}

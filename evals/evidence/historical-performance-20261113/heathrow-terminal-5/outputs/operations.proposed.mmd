@@ -1,0 +1,41 @@
+%% Retrospective synthetic proposal. Editable aid; not formal SysML or evidence.
+%% Original interface/claim IDs retained. New activities remain planned.
+flowchart LR
+  F["HG-10 facility delivery"]
+  S["HG-10 staff familiarisation"]
+  L["HG-10 airline operations"]
+  T["HG-10 terminal operator"]
+  P["HG-10 front-line staff"]
+  R["HG-10 readiness authority"]
+  F -->|HG-10-I1 representative spaces and equipment| S
+  L -->|HG-10-I2 acknowledged exception handover| T
+  T -->|HG-10-I2 status and recovery confirmation| L
+  P -->|HG-10-I3 concern with owner and disposition| R
+  T -->|HG-10-C3 joint exercise evidence; OPEN| R
+  S -->|HG-10-I4 observed performance; NOT SUPPLIED| R
+  B["Separate briefings and knowledge checks; proposed"]
+  B -->|receipt or scoped knowledge only| S
+  A["Stage A: joint tabletop; coordination only"]
+  B --> A
+  F -->|representative route available| E["Stage B: physical integrated trial; planned"]
+  A -->|findings and revised procedure| E
+  N["HG-10-SC01 nominal journey"]
+  X1["HG-10-SC02 blocked route"]
+  X2["HG-10-SC03 missing acknowledgement / status conflict"]
+  E --> N
+  E --> X1
+  E --> X2
+  H["Affected service hold; bag/passenger status owned"]
+  X1 -->|both duty managers restrict and reconcile| H
+  X2 -->|both duty managers restrict and reconcile| H
+  C["Joint restart: route ready, status reconciled, staff/service ready"]
+  H -->|both duty managers authorize after checks| C
+  C --> N
+  I["Trial record, coverage gaps, unresolved issues and owners"]
+  N --> I
+  H --> I
+  C --> I
+  I -->|future review; no acceptance implied| R
+  R -->|evidence and separability established| RED["Proposed reduced scope; limits communicated"]
+  R -->|affected service evidence unavailable at decision deadline| DEL["Delay affected service"]
+  R -->|full-scope evidence still absent| FULL["Full opening unsupported"]

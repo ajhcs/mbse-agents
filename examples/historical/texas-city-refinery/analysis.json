@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-13",
+  "slug": "texas-city-refinery",
+  "title": "Texas City refinery: measure the hazard you intend to control",
+  "year": 2005,
+  "domain": "industrial",
+  "outcome": "failure",
+  "focus": "Steady production and favorable injury statistics do not establish readiness for a hazardous startup.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-13-S1",
+      "title": "CSB BP Texas City Final Investigation Report",
+      "url": "https://www.csb.gov/file.aspx?DocumentId=5596",
+      "publication_date": "2007-03-20",
+      "locator": "Executive summary; section 1.6 findings; sections 9.3–9.4 on management and indicators",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-13-F1",
+      "statement": "The accident occurred during startup of the isomerization unit; a flooded distillation tower and atmospheric release exposed people near occupied trailers.",
+      "source_ids": [
+        "HG-13-S1"
+      ],
+      "locator": "Executive summary"
+    },
+    {
+      "id": "HG-13-F2",
+      "statement": "The CSB found that reliance on low personal-injury rates gave a misleading picture of process-safety performance.",
+      "source_ids": [
+        "HG-13-S1"
+      ],
+      "locator": "Executive summary; section 1.6; section 9.3"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Process equipment, startup state, instrumentation, staffing, temporary occupied buildings, maintenance, and management measures belong to the hazard boundary.",
+    "interfaces": [
+      "Operating mode → protection: startup changes inventories and actions relative to normal production.",
+      "Management metric → resource decision: a convenient metric may omit the accident mechanism of concern."
+    ],
+    "decision": {
+      "question": "Which evidence should support a startup readiness claim?",
+      "options": [
+        "Use recent production availability and personal-injury performance.",
+        "Check mode-specific protection, instrumentation, procedures, staffing, and occupied-area exposure."
+      ],
+      "recommendation": "Build measures around barriers to the major hazard and their observed condition.",
+      "uncertainty": "A barrier checklist still needs demonstrated functionality and authority to act on deficiencies."
+    },
+    "artifact": {
+      "id": "HG-13-A1",
+      "type": "Startup readiness and indicator slice",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Process state",
+          "Confirm mode-specific limits and instrument validity",
+          "Independent checks of inventory and protective functions"
+        ],
+        [
+          "People in exposure area",
+          "Review temporary occupancy against credible releases",
+          "Siting and evacuation basis"
+        ],
+        [
+          "Management measure",
+          "Track unresolved barrier impairments with consequence",
+          "Age, ownership, and verified closure of impairments"
+        ]
+      ]
+    },
+    "questions": [
+      "Why can a declining injury rate coexist with increasing major-accident risk?",
+      "What changes when a plant enters a transient operating mode?",
+      "Write a management brief that distinguishes output performance from protection health."
+    ],
+    "answer_signals": [
+      "Links each measure to a mechanism and a decision.",
+      "Includes temporary facilities and contractors in the system boundary.",
+      "Avoids substituting completed paperwork for demonstrated protection."
+    ],
+    "transfer_exercise": "Synthetic: a plant dashboard is green while three protective functions are bypassed. Redesign the decision-relevant portion of the dashboard.",
+    "limits": "The artifact is not a refinery operating procedure and does not establish safe staffing, siting distances, or protection settings."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

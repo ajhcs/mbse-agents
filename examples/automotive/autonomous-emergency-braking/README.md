@@ -1,5 +1,7 @@
 # Autonomous Emergency Braking System
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Overview
 
 The Autonomous Emergency Braking (AEB) system provides automatic collision avoidance and mitigation for L2+ passenger vehicles by fusing data from a front-facing 8-megapixel camera and a 77 GHz long-range radar. The system continuously monitors the forward driving corridor, detects and classifies objects including vehicles, pedestrians, cyclists, and static obstacles, predicts collision trajectories, and autonomously applies braking force when the driver fails to respond to imminent collision warnings.
@@ -50,11 +52,11 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 
 1. **SOTIF perception limitations.** The camera and radar sensors have complementary but individually limited detection capabilities. The camera is degraded by rain, fog, direct glare, and low light. The radar has poor lateral resolution, cannot distinguish between a pedestrian and a signpost, and suffers from multipath reflections in urban canyons. The sensor fusion algorithm must compensate for these limitations, but residual SOTIF scenarios (ISO 21448 triggering conditions) where both sensors fail simultaneously for the same object remain the primary safety concern.
 
-2. **ASIL D braking path integrity.** The brake actuation path from collision decision to hydraulic brake pressure application must meet ASIL D random hardware fault metrics. The Braking Control ECU requires hardware fault detection coverage exceeding 99% (single-point fault metric) and diagnostic test intervals short enough to detect latent faults before they combine with active faults. The AUTOSAR Classic safety mechanisms (program flow monitoring, memory protection, watchdog) must be configured to achieve the required diagnostic coverage.
+2. **Braking-path integrity allocation.** ASIL D is the proposed allocation. Define the braking ECU failure modes, diagnostic mechanisms, latent-fault intervals and shared dependencies before calculating hardware metrics. Single-point fault metrics and diagnostic coverage are distinct quantities; mechanism selection alone establishes neither.
 
 3. **AUTOSAR Adaptive and Classic coexistence.** The Perception ECU (Adaptive) and Braking Control ECU (Classic) have fundamentally different execution models, timing characteristics, and safety mechanisms. The end-to-end communication path from perception output to brake command must maintain ASIL D integrity across the Adaptive/Classic boundary, which requires careful E2E protection (AUTOSAR E2E Profile 7), timing monitoring, and freedom-from-interference arguments at the network interface.
 
-4. **Real-time decision latency budget.** The total system latency from object detection to brake pressure rise must not exceed 300 ms for the system to achieve the required stopping distances under UN R152. This budget spans camera exposure and ISP processing (~50 ms), neural network inference (~30 ms), sensor fusion and tracking (~20 ms), decision logic (~10 ms), CAN/Ethernet communication (~10 ms), and brake hydraulic response (~100 ms), leaving minimal margin for retries or extended processing.
+4. **Real-time decision latency budget.** The retained 300 ms limit is a proposed project target whose stopping-distance sufficiency needs scenario analysis. The illustrative allocations total 220 ms: camera/ISP 50, inference 30, fusion 20, decision 10, communication 10 and hydraulic response 100 ms. The remaining 80 ms is unallocated margin, not proven tolerance to overload or retries. Verify trigger definitions, worst-case paths and representative vehicle response against the actual applicable test conditions.
 
 5. **Cybersecurity of OTA and CAN interfaces.** The Perception ECU receives OTA software updates for the neural network model and fusion parameters. A compromised update could disable AEB or cause false activations. The CAN FD interface to the braking domain is susceptible to message injection attacks. The ISO 21434 TARA must demonstrate that security controls mitigate these threats without introducing unacceptable safety impact (e.g., security mechanisms that delay brake commands).
 
@@ -82,3 +84,9 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 | UN R152             | Type approval regulation for AEBS; test scenarios, stopping distance requirements                        |
 | ISO 11898           | CAN and CAN FD physical and data link layer; applies to in-vehicle communication                        |
 | IEEE 802.3 (100BASE-T1) | Automotive Ethernet physical layer for Perception ECU to Gateway communication                     |
+
+## Executed engineering study
+
+[Review the fault-model study](analysis/report.md) for complete static cuts, conditional parameter scenarios, proof obligations and retained counterexamples. [Source/applicability review](source-review.md) and [current review coverage](review-status.json) identify the remaining decisions. Original files are preserved in the historical JSON snapshot.
+
+[Draft next-control challenge procedures](analysis/control-challenges.md) specify stimuli, observations and evidence capture for the remaining control claims.

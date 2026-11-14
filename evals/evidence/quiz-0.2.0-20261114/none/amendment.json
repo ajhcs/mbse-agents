@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "kind": "response-metadata-amendment",
+  "created_at": "2026-11-14T00:09:52.762820+00:00",
+  "original": {
+    "path": "/workspace/worktrees/builderbob/mbse-quiz-v020-20261114/none/answers.json",
+    "sha256": "1146be3e4f3c151ab3ef45c995bc4bd6c1eb0490df7295efd43e4c72e7efde00"
+  },
+  "amended": {
+    "path": "/workspace/worktrees/builderbob/mbse-quiz-v020-20261114/none/answers-metadata-corrected.json",
+    "sha256": "db2393caeef1f256706618417f1a56d773cc359096d888367703a374d26dbe9b"
+  },
+  "run_id": "quiz-v020-baseline-184c374b-9a4a-46c4-8205-77838396ea0c",
+  "changes": [
+    {
+      "path": "/run/model",
+      "operation": "replace",
+      "before": null,
+      "after": "unknown"
+    },
+    {
+      "path": "/run/exceptions/-",
+      "operation": "append",
+      "value": "Metadata-only normalization after production: run.model changed from null to the explicit string unknown to correct the response-template/schema mismatch reported by the evaluation controller. No answers, packet binding, run ID, or original timestamps changed. Original answers.json SHA-256: 1146be3e4f3c151ab3ef45c995bc4bd6c1eb0490df7295efd43e4c72e7efde00."
+    }
+  ],
+  "reason": "Evaluation controller reported that the scorer requires the explicit string unknown for an unavailable model, while the generated response template initialized this field to null.",
+  "preserved": [
+    "original answers.json bytes",
+    "answers",
+    "schema_version",
+    "packet binding",
+    "run ID",
+    "original started_at",
+    "original completed_at",
+    "all other response fields"
+  ],
+  "checks": "Verified the expected original SHA-256, exactly the two documented metadata changes, corrected JSON readback, and unchanged original bytes. No answer key or scoring was accessed."
+}

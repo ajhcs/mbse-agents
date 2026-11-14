@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "case": "HO-13",
+  "arm": "none",
+  "observed_start_utc": "2026-11-13T23:44:20.075320+00:00",
+  "observed_end_utc": "2026-11-13T23:50:08.699799+00:00",
+  "time_scope": "First successful UTC capture at input inventory through final artifact consistency check and run-record preparation. One failed python command preceded the first captured timestamp; its separate UTC time was not captured. Cases were read and drafted in a shared batch, so these intervals overlap.",
+  "model": "unknown",
+  "model_settings": "unknown",
+  "tokens": "unknown",
+  "cost": "unknown",
+  "runtime_metadata_limit": "The runtime did not expose exact model identity, model settings, token usage or cost to this participant; none was inferred.",
+  "context_and_access": {
+    "shared_context_cases": [
+      "HO-09",
+      "HO-12",
+      "HO-13",
+      "HO-15",
+      "HO-20"
+    ],
+    "restriction": "Instruction-restricted packet access; no enforced host or filesystem isolation.",
+    "inherited_context": "The participant inherited host/project instructions and runtime-provided general memory summary and skill catalog in the conversation. No memory files, skill files, repository contents, grading rubrics, prior-run outputs or other arms were opened or used as task inputs.",
+    "task_input_roots": [
+      "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-09",
+      "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-12",
+      "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13",
+      "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-15",
+      "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-20"
+    ],
+    "external_sources_read": [],
+    "paid_api_calls": false,
+    "production_actions": false
+  },
+  "actual_tools": [
+    {
+      "tool": "functions.exec",
+      "purpose": "Orchestrate exec_command calls; packet reads were batched with Promise.allSettled."
+    },
+    {
+      "tool": "exec_command",
+      "calls_and_observations": [
+        "Shared inventory attempt using python: exit 127 because python command was unavailable; no input data was read by that failed attempt.",
+        "Shared inventory using python3 standard library pathlib/hashlib/json/datetime: listed packet files, observed UTC start times and computed initial input SHA256; exit 0.",
+        "One python3 packet read per case, five in a parallel batch: read only request, packet manifest and supplied inputs; each exited 0.",
+        "One shared python3 authoring call: created each outputs directory and authored deliverables, with byte copies of HO-13 source, change request and historical report; exit 0.",
+        "Shared python3 finalization call: reread supplied input hashes and current-run outputs, checked document invariants, computed output hashes and wrote run records. This record is produced by that call."
+      ]
+    }
+  ],
+  "input_sha256_at_start": {
+    "inputs/architecture.md": "9136f1bcf6fa10ec397de1be436642155ae2c6d2b52b94bc974d0d7db81f16b3",
+    "inputs/change-request.md": "3cf2933d401ebcd5634c873cf89ede317ab0d383c2af365e16fd3cbe6a0bcc9b",
+    "inputs/report-old.json": "43a1ac6d01f2fae64ca2fb3638f413feb5e18efac3fbeafdc0ccc743bfda37ca",
+    "inputs/requirements.md": "a8c703926d9b1e09656ae03eae355a9f07e8af19872674e2dfdcd4f1d5f6c74d",
+    "inputs/source.md": "09d4dba79fe2f1788044bb43cff5ece6f630c04d6abb54e325ea876ef7ac314f",
+    "inputs/verification.md": "b2114a7357c501016650ebefc549be6ec147b27030006f39b1040bc6bba2dcf6",
+    "packet-manifest.json": "7d1d4383043396f526fbe4f04ef8ca8df49a66372db0242d9a4698540a5ec631",
+    "request.md": "f09bca8e55ebea3831be489ab654afcfbabdbca22d62923753aa21c69724351d"
+  },
+  "input_sha256_at_end": {
+    "inputs/architecture.md": "9136f1bcf6fa10ec397de1be436642155ae2c6d2b52b94bc974d0d7db81f16b3",
+    "inputs/change-request.md": "3cf2933d401ebcd5634c873cf89ede317ab0d383c2af365e16fd3cbe6a0bcc9b",
+    "inputs/report-old.json": "43a1ac6d01f2fae64ca2fb3638f413feb5e18efac3fbeafdc0ccc743bfda37ca",
+    "inputs/requirements.md": "a8c703926d9b1e09656ae03eae355a9f07e8af19872674e2dfdcd4f1d5f6c74d",
+    "inputs/source.md": "09d4dba79fe2f1788044bb43cff5ece6f630c04d6abb54e325ea876ef7ac314f",
+    "inputs/verification.md": "b2114a7357c501016650ebefc549be6ec147b27030006f39b1040bc6bba2dcf6",
+    "packet-manifest.json": "7d1d4383043396f526fbe4f04ef8ca8df49a66372db0242d9a4698540a5ec631",
+    "request.md": "f09bca8e55ebea3831be489ab654afcfbabdbca22d62923753aa21c69724351d"
+  },
+  "output_sha256": {
+    "architecture.md": "d5ca72c7c48a7d2b16713ee3a2f5841cfdca8ec09bf98bf9209434d9d32b7df9",
+    "change-request.md": "3cf2933d401ebcd5634c873cf89ede317ab0d383c2af365e16fd3cbe6a0bcc9b",
+    "output.md": "45f14ee3e83e961fc9bf13ee3e2dbdfb588702fc13d606570966a00efad9bac2",
+    "report-old.json": "43a1ac6d01f2fae64ca2fb3638f413feb5e18efac3fbeafdc0ccc743bfda37ca",
+    "requirements.md": "eafef128ba89a52d37d6e5939ea270842cc452baa310b842a28d175297511fbf",
+    "source.md": "09d4dba79fe2f1788044bb43cff5ece6f630c04d6abb54e325ea876ef7ac314f",
+    "verification.md": "528f5062234f95b8586b9fc4aab889e59dd88984d0851d6adc27580ffe5b8c0f"
+  },
+  "hash_scope": "Output hashes cover deliverable artifacts. run-record.json is excluded from its own hash map to avoid self-reference; its hash is printed by the finalization tool call.",
+  "checks_actually_performed": {
+    "all_input_bytes_match_initial_sha256": true,
+    "packet_manifest_file_hashes_match": true,
+    "output_md_nonempty": true,
+    "source_change_request_historical_report_byte_identical": true,
+    "REQ_7_text_changed_only_500_to_200_ms": true,
+    "REQ_8_text_unchanged": true,
+    "all_supplied_engineering_ids_retained": true,
+    "revision_b_result_file_absent": true,
+    "historical_report_json_readable": true
+  },
+  "check_scope": "File and document consistency only; no controller, service, operational, network-loss or water-system tests were executed. These checks are not behavioral evidence or a performance grade.",
+  "exceptions": [
+    {
+      "event": "python executable unavailable",
+      "handling": "Used python3 after one failed inventory command."
+    },
+    {
+      "event": "Shared context and inherited runtime context",
+      "handling": "Disclosed above; access limits were instructions, not a technical isolation boundary."
+    }
+  ]
+}

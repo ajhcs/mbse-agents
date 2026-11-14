@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "scope": "native_codex_prompt_discovery_not_behavioral_activation",
+  "executed_at": "2026-11-13T23:32:25.461725+00:00",
+  "codex_version": "codex-cli 0.169.0",
+  "command": [
+    "codex",
+    "-C",
+    "/workspace/repos/builderbob/mbse-agents",
+    "debug",
+    "prompt-input",
+    "Explain how to investigate a proposed system change."
+  ],
+  "model_call": false,
+  "skills": [
+    {
+      "name": "mbse-systems-engineering",
+      "invocation_name": "mbse-agents:mbse-systems-engineering",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-systems-engineering/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48"
+    },
+    {
+      "name": "mbse-system-concept",
+      "invocation_name": "mbse-agents:mbse-system-concept",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-system-concept/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "a682ef0b2a662ced43e52a75c0adf3854c84005687741200db3efc2417f2efea"
+    },
+    {
+      "name": "mbse-conops",
+      "invocation_name": "mbse-agents:mbse-conops",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-conops/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81"
+    },
+    {
+      "name": "mbse-operational-scenarios",
+      "invocation_name": "mbse-agents:mbse-operational-scenarios",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-operational-scenarios/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a"
+    },
+    {
+      "name": "mbse-requirements",
+      "invocation_name": "mbse-agents:mbse-requirements",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-requirements/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "efa83806def52943b9b5819b49bedaa192ebb24bf009f14c0157d16c322ae459"
+    },
+    {
+      "name": "mbse-architecture",
+      "invocation_name": "mbse-agents:mbse-architecture",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-architecture/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "4132528dc9a13b9f8b62f758a7cea0b80cf972decc3fa5760d5296117bc1141f"
+    },
+    {
+      "name": "mbse-verification-evidence",
+      "invocation_name": "mbse-agents:mbse-verification-evidence",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-verification-evidence/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321"
+    },
+    {
+      "name": "mbse-baseline-review",
+      "invocation_name": "mbse-agents:mbse-baseline-review",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-baseline-review/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1"
+    },
+    {
+      "name": "mbse-aerospace",
+      "invocation_name": "mbse-agents:mbse-aerospace",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-aerospace/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790"
+    },
+    {
+      "name": "mbse-defense",
+      "invocation_name": "mbse-agents:mbse-defense",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-defense/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "a2164d5c5447f7eb9dc486498a6f3bd11235474388bfb0e409161e72686f2476"
+    },
+    {
+      "name": "mbse-automotive",
+      "invocation_name": "mbse-agents:mbse-automotive",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-automotive/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "2aa17179547acd2fd90a2125b1ec3ed888f7aa4a5a97f99f35769ec053dd9a6b"
+    },
+    {
+      "name": "mbse-medical-device",
+      "invocation_name": "mbse-agents:mbse-medical-device",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-medical-device/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "2a7766fee0555c2ec6b4ecd15d9ed7bf9112ab9cfe91c9c1ce1254e4bf9515a3"
+    },
+    {
+      "name": "mbse-electronic-systems",
+      "invocation_name": "mbse-agents:mbse-electronic-systems",
+      "canonical_path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-electronic-systems/SKILL.md",
+      "discovered": true,
+      "skill_sha256": "560e2e0b77e65befbc98249794faaa480d2ad7b6b98150bd894676c9ec8fb886"
+    }
+  ],
+  "all_canonical_paths_present": true,
+  "private_prompt_retained": false,
+  "method": "Resolve native skill-root aliases and match namespaced entrypoint paths; compare catalogue and entrypoint hashes."
+}

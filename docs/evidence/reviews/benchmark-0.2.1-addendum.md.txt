@@ -1,0 +1,36 @@
+# Independent 0.2.1 addendum — 2026-11-14
+
+**Disposition: accepted for the stated editorial and template scope.** Fourteen focused checks passed. No new agent-performance or benchmark-difficulty claim follows from this review. Earlier review reports and evidence were preserved unchanged.
+
+| File | Reviewed SHA-256 |
+| --- | --- |
+| `evals/benchmark/items.json` | `d7154602c9ea21aba5ae45cc2922723d818cbbe7c1bc11a0fd5d22a36d1c6571` |
+| `evals/benchmark/keys.json` | `5e665eaef48cc05f9e1febce7802fd26bddadbd3ab5edf3c2936f8195867b37e` |
+| `scripts/benchmark.py` | `c7aab0816ba6d4f00fcfb90a6d476a0a04b76b69ba139c62307fb1318ceaf893` |
+| `evals/benchmark/review/0.2.1/change-record.json` | `fe959e134fedf0e5baab604fa185fb4f94548d265a531e99c232a358531b2f66` |
+
+The [machine-readable receipt](v0.2.1-review-receipt.json) records every check, exact source hashes and metadata-amendment hashes. The [independent check script](check_v021.py) created only explicitly synthetic test artifacts under `.mbse-review` and compared production provenance without displaying participant reasoning.
+
+## Scope and editorial validity
+
+Parsed `items.json` differs from the reviewed 0.2.0 bank only at `/version`. All 60 question records, including wording, options, dimensions and splits, are identical. The byte diff also contains equivalent JSON Unicode escaping, which does not change parsed text.
+
+Parsed `keys.json` differs only at `/version` and the three intended locations:
+
+- SEJ-045 criterion 2 now distinguishes training or a matching display from evidence of controlled hazardous output. This matches the revised alternatives and preserves the requirement for independent output observations.
+- SEJ-046's rationale now addresses premature purchasing, an unsupported choice of separate supplies, and an unnecessarily broad qualification campaign. Those are the actual alternatives.
+- SEJ-048's rationale now addresses majority judgment, automatic evidence reuse and automatic rejection of old evidence. It preserves the need to examine changed seal geometry.
+
+Every keyed answer selection is unchanged. These edits close the three editorial observations from the preceding independent review without changing its selection-key judgments.
+
+The scorer source differs by exactly one substitution: the prepared response template initializes `run.model` to the explicit string `unknown` instead of `null`. Scoring and validation logic are unchanged.
+
+## Executed checks
+
+A fresh 0.2.1 packet for SEJ-045/046/048 retained its generated `unknown` model value. A synthetic response filled the other required run fields, using the actual local host and execution timestamps, and passed metadata validation and scoring. All selections remained empty: this was a parser/provenance test, not a model answer. Replacing the model with `null` still produced the expected missing-provenance rejection.
+
+All 49 files in the complete 0.2.0 archive match its manifest. Its bank, key and scorer match the exact hashes from the earlier independent review. The archived source successfully prepared a full-catalog synthetic packet and scored it against the archived bank. The current 0.2.1 scorer rejected that old packet because its bank/key revision differs.
+
+For each of the three production arms, a local process compared original and corrected JSON without emitting response selections or reasoning. The only differences are `/run/model` (`null` to `unknown`) and one appended exception note. All answers, packet bindings, run IDs, original timestamps and other fields are unchanged. Original and corrected file hashes match their amendment records. Each recorded selection score and review template binds the corrected answer bytes to the archived 0.2.0 key/bank, rather than 0.2.1.
+
+Those checks establish the documented amendment's scope and recorded bindings. They do not independently authenticate the producer, establish actual model identity, assess participant reasoning, or retroactively turn the 0.2.0 production into a 0.2.1 run. Exact model identity remains unknown where the host did not expose it.

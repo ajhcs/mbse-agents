@@ -1,0 +1,16 @@
+{
+  "case": "HG-05",
+  "accessed_on_utc_date": "2026-11-13",
+  "access_method": "tools.web__run open/find via functions.exec",
+  "source_register_note": "Original sources.json access_status describes the supplied packet. This output records only retrieval performed in this participant run.",
+  "sources": [
+    {
+      "source_id": "HG-05-S1",
+      "url": "https://discovery.larc.nasa.gov/pdf_files/MCO_report_2.pdf",
+      "access": "Retrieved and inspected web-tool extracted text from executive summary pp. 6-8 and relevant section 4/5 passages; find results included the ground-software unit definition and training/verification findings.",
+      "limits": "No complete historical interface, raw navigation data, or synthetic test implementation recovered; no raw PDF bytes downloaded or SHA256 claimed."
+    }
+  ],
+  "raw_remote_byte_sha256": null,
+  "raw_remote_byte_sha256_reason": "Web tool returned extracted text/excerpts; original response bodies were not acquired as local files."
+}

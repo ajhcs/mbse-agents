@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "id": "HG-05",
+  "slug": "mars-climate-orbiter",
+  "title": "Mars Climate Orbiter: own the meaning of an interface",
+  "year": 1999,
+  "domain": "space",
+  "outcome": "failure",
+  "focus": "An interface contract includes semantic meaning, producers, consumers, checks, and operational handover.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-05-S1",
+      "title": "Mars Climate Orbiter Mishap Investigation Board Phase I Report",
+      "url": "https://discovery.larc.nasa.gov/pdf_files/MCO_report_2.pdf",
+      "publication_date": "1999-11-10",
+      "locator": "Executive summary pp. 6–8; sections 4–5, pp. 16–24",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-05-F1",
+      "statement": "The board identified English-unit impulse data in a ground-software output where the interface specified metric units; navigation processing assumed the specified units.",
+      "source_ids": [
+        "HG-05-S1"
+      ],
+      "locator": "Executive summary; section 4"
+    },
+    {
+      "id": "HG-05-F2",
+      "statement": "Its contributing causes also included transition to operations, communication, staffing, training, and ground-software verification weaknesses.",
+      "source_ids": [
+        "HG-05-S1"
+      ],
+      "locator": "Executive summary; section 5"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Spacecraft events, ground data generation, navigation ingestion, trajectory review, and development-to-operations handover belong to one mission information flow.",
+    "interfaces": [
+      "Producer → consumer: numerical values require units, reference frame, sign convention, timing, and version.",
+      "Predicted trajectory → operations team: persistent residuals need owned investigation and escalation."
+    ],
+    "decision": {
+      "question": "What closes an interface verification claim?",
+      "options": [
+        "Each team reports its own software test success.",
+        "Both teams demonstrate shared semantics with an independently checked end-to-end sample."
+      ],
+      "recommendation": "Require a semantic contract and operational anomaly ownership together.",
+      "uncertainty": "A unit-tagged file alone does not verify the physical quantity, calibration, or trajectory model."
+    },
+    "artifact": {
+      "id": "HG-05-A1",
+      "type": "Interface acceptance contract",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Impulse field",
+          "Declare quantity, units, frame, sign, and event interval",
+          "Hand-checkable input/output sample agreed by both teams"
+        ],
+        [
+          "Consumer check",
+          "Reject invalid or unrecognized semantics",
+          "Negative tests and observed error handling"
+        ],
+        [
+          "Operational discrepancy",
+          "Assign residual investigation and escalation owner",
+          "Recorded threshold rationale and disposition history"
+        ]
+      ]
+    },
+    "questions": [
+      "Why is adding unit conversion code an incomplete corrective action?",
+      "Who owns acceptance when producer and consumer are different organizations?",
+      "State what a persistent unexplained residual means without declaring a cause prematurely."
+    ],
+    "answer_signals": [
+      "Separates schema conformance from physical meaning.",
+      "Includes end-to-end evidence and handover responsibility.",
+      "Keeps investigation open until discrepancies are explained."
+    ],
+    "transfer_exercise": "Synthetic: a supplier delivers actuator impulse data to a fleet model. Draft a sample contract including one rejection case.",
+    "limits": "No reconstructed orbit or numerical failure simulation is provided. The original report describes multiple contributing conditions."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  },
+  "exercise_assets": [
+    {
+      "path": "review-task.md",
+      "label": "Connected review task",
+      "purpose": "A bounded review using multiple linked artifacts."
+    },
+    {
+      "path": "source-facts.csv",
+      "label": "Source fact register",
+      "purpose": "Attributed facts and exact report locators."
+    },
+    {
+      "path": "interfaces.csv",
+      "label": "Editable interface register",
+      "purpose": "New reconstruction with fact-level basis links."
+    },
+    {
+      "path": "claim-evidence.csv",
+      "label": "Claim and evidence register",
+      "purpose": "Supported observations separated from unexecuted checks."
+    },
+    {
+      "path": "change.json",
+      "label": "Synthetic change request",
+      "purpose": "A new transfer problem with affected teaching IDs."
+    },
+    {
+      "path": "relations.mmd",
+      "label": "Editable relation view",
+      "purpose": "Information dependencies with teaching IDs."
+    },
+    {
+      "path": "review-guide.md",
+      "label": "Public review guide",
+      "purpose": "Reasoning criteria and limitations for formative feedback."
+    }
+  ]
+}

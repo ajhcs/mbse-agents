@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "case": "HG-10",
+  "slug": "heathrow-terminal-5",
+  "run_started_at_utc": "2026-11-13T23:47:03Z",
+  "start_basis": "First observed clock reading in this shared participant run; cases read in one context.",
+  "run_status": "completed_artifacts_only",
+  "input_sha256_at_start": {
+    "change.json": "a35909f0550ea90e19dcfee6d8f1f3ec0abeb36ba57ec10cd06c6b308c231547",
+    "claim-evidence.csv": "625124e71ec772f26199047e5d41d0de16d84a1d8128ff15b8b847a851c4d91f",
+    "interfaces.csv": "b32bea9b9b1a25209c3f76e893266d29a0f0d8aeb682d2c7b42acf5115e3d4a1",
+    "packet-manifest.json": "e4ca83bd90e242c71e2fa247ecbb332cd4c9ebcad37d402a2dad93ad8258926b",
+    "relations.mmd": "ede2074eeb785ee6f70361965b78b46c36738e0fe7c91f1dad03c43b2a28fd97",
+    "request.md": "ce751b4537ad072cdd5d165a972af9ebcd698ccc158a5e0723f508477a140981",
+    "review-task.md": "9cf9fa34d806de71da43f69c3aa11327186b83e821e91f842a5df2f876427703",
+    "skills/mbse-baseline-review/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    "skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    "skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    "skills/mbse-conops/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+    "skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+    "skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+    "skills/mbse-operational-scenarios/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+    "skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+    "skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+    "skills/mbse-systems-engineering/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    "skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    "skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    "skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+    "skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "source-facts.csv": "26f369c625462d2e30fa2be7bac9dcc7e4ee3b9afd83f48387d32ac28505c117",
+    "sources.json": "e55fb661babeda550fd827251b2198bb465591193552cad9e002dd02226dce5e"
+  },
+  "manifest_comparison": {
+    "mismatches": [],
+    "listed_files": 26,
+    "observed_input_files": 27
+  },
+  "run_completed_at_utc": "2026-11-13T23:57:20.768702+00:00",
+  "time_observation": "Start observed with clock__curr_time; completion observed with Python datetime in UTC during finalization. Cases were interleaved in one participant run, so the shared interval is not separate case execution time.",
+  "participant": {
+    "task_name": "/root/performance_historical",
+    "exact_inherited_model": "unknown",
+    "model_setting": "unknown",
+    "reasoning_effort": "unknown",
+    "temperature": "unknown",
+    "token_usage": "unknown",
+    "cost": "unknown",
+    "metadata_limit": "Exact inherited runtime settings, token accounting and cost were not exposed; no values inferred from labels or task context."
+  },
+  "shared_context": {
+    "case_slugs": [
+      "mars-climate-orbiter",
+      "hubble-optics",
+      "heathrow-terminal-5"
+    ],
+    "same_participant_and_context": true,
+    "limitation": "The three case results are connected work by one participant, not three independent runs. Supplied duplicate skills were read and content-deduplicated across cases. No other participant output, answer key, public guide, source repository or memory file was inspected.",
+    "reference_transfer": "Identity and evidence-state guidance read in the Mars skill copies was also applied to the other two cases; aerospace dependency guidance read there informed the Hubble review."
+  },
+  "authorized_input_scope": [
+    "/workspace/worktrees/builderbob/mbse-historical-performance-20261113/mars-climate-orbiter",
+    "/workspace/worktrees/builderbob/mbse-historical-performance-20261113/hubble-optics",
+    "/workspace/worktrees/builderbob/mbse-historical-performance-20261113/heathrow-terminal-5"
+  ],
+  "input_sha256_at_end": {
+    "relations.mmd": "ede2074eeb785ee6f70361965b78b46c36738e0fe7c91f1dad03c43b2a28fd97",
+    "packet-manifest.json": "e4ca83bd90e242c71e2fa247ecbb332cd4c9ebcad37d402a2dad93ad8258926b",
+    "sources.json": "e55fb661babeda550fd827251b2198bb465591193552cad9e002dd02226dce5e",
+    "interfaces.csv": "b32bea9b9b1a25209c3f76e893266d29a0f0d8aeb682d2c7b42acf5115e3d4a1",
+    "change.json": "a35909f0550ea90e19dcfee6d8f1f3ec0abeb36ba57ec10cd06c6b308c231547",
+    "source-facts.csv": "26f369c625462d2e30fa2be7bac9dcc7e4ee3b9afd83f48387d32ac28505c117",
+    "review-task.md": "9cf9fa34d806de71da43f69c3aa11327186b83e821e91f842a5df2f876427703",
+    "claim-evidence.csv": "625124e71ec772f26199047e5d41d0de16d84a1d8128ff15b8b847a851c4d91f",
+    "request.md": "ce751b4537ad072cdd5d165a972af9ebcd698ccc158a5e0723f508477a140981",
+    "skills/mbse-operational-scenarios/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+    "skills/mbse-conops/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+    "skills/mbse-baseline-review/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    "skills/mbse-systems-engineering/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    "skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+    "skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+    "skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+    "skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+    "skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    "skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    "skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    "skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    "skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253"
+  },
+  "inputs_unchanged": true,
+  "skills_used": [
+    {
+      "skill": "mbse-systems-engineering",
+      "path": "skills/mbse-systems-engineering/SKILL.md",
+      "application": "Separated observations from proposals; connected technical and organizational consequences and reconsideration conditions."
+    },
+    {
+      "skill": "mbse-conops",
+      "path": "skills/mbse-conops/SKILL.md",
+      "application": "Defined service restrictions, joint duty-manager responsibilities and fallback conditions in HG-10."
+    },
+    {
+      "skill": "mbse-operational-scenarios",
+      "path": "skills/mbse-operational-scenarios/SKILL.md",
+      "application": "Defined nominal and exception triggers, initial states, boundary exchanges, recovery guards and records in HG-10."
+    },
+    {
+      "skill": "mbse-baseline-review",
+      "path": "skills/mbse-baseline-review/SKILL.md",
+      "application": "Challenged the supplied acceptance assertions, retained unresolved claims, and preserved original identities and evidence status. No review guide or answer analysis was read."
+    }
+  ],
+  "skill_references_read_in_case": [
+    "skills/mbse-operational-scenarios/references/scenario-records.md"
+  ],
+  "skill_references_shared_from_other_case": [
+    "../mars-climate-orbiter/skills/mbse-systems-engineering/references/engineering-records.md"
+  ],
+  "tools_used": [
+    {
+      "tool": "functions.exec",
+      "use": "Orchestrated allowed tools; batched independent reads/retrievals and inspections."
+    },
+    {
+      "tool": "tools.clock__curr_time",
+      "use": "Observed shared start UTC and later checkpoint."
+    },
+    {
+      "tool": "tools.exec_command",
+      "use": "Bash commands in allowed workspace; rg file inventory; Python 3 standard-library reads, SHA256, CSV/JSON creation, structural checks and timestamps.",
+      "runtime_observed": {
+        "python": "3.12.3",
+        "python_executable": "/usr/bin/python3"
+      }
+    },
+    {
+      "tool": "tools.web__run",
+      "use": "Opened only primary URLs supplied in sources.json; find/open within those URLs. No search engine query or linked secondary source used."
+    },
+    {
+      "tool": "collaboration.send_message",
+      "use": "Sent the assigning parent a progress update; no other participant information requested or inspected."
+    }
+  ],
+  "sources_used": {
+    "local": "request.md, review-task.md, packet-manifest.json, source-facts.csv, interfaces.csv, claim-evidence.csv, change.json, relations.mmd, sources.json, and listed supplied skill content.",
+    "remote": [
+      {
+        "source_id": "HG-10-S1",
+        "url": "https://publications.parliament.uk/pa/cm200708/cmselect/cmtran/543/54304.htm",
+        "access": "Retrieved and inspected chapter 2 paragraphs 8-14 via web open; a targeted follow-up exposed the remainder of paragraphs 12-14.",
+        "limits": "Committee conclusions distinguished from quoted witness statements; linked underlying evidence was not retrieved; no raw HTML bytes downloaded or SHA256 claimed."
+      },
+      {
+        "source_id": "HG-10-S2",
+        "url": "https://publications.parliament.uk/pa/cm200708/cmselect/cmtran/543/54305.htm",
+        "access": "Retrieved and inspected chapter 3 paragraphs 15-19 via web open; targeted follow-up included paragraphs 18-19.",
+        "limits": "The committee did not assert certainty about prevention through earlier cooperation; linked underlying evidence not retrieved; no raw HTML bytes downloaded or SHA256 claimed."
+      }
+    ]
+  },
+  "actions_not_performed": [
+    "No engineering test or trial executed",
+    "No fixture, software ingress or airport service changed",
+    "No real approval or acceptance issued",
+    "No paid API, global installation or production action",
+    "No self-grade or benchmark score",
+    "No public review guide or case answer analysis sought"
+  ],
+  "exceptions": [
+    {
+      "event": "python command unavailable",
+      "observed": "Initial read command exited 127 with python: command not found.",
+      "handling": "Used available python3 successfully; no installation attempted."
+    },
+    {
+      "event": "omitted public guide and README link",
+      "observed": "review-task.md links to omitted review-guide.md and README.md; request.md explicitly directs use of sources.json and prohibits seeking the guide/answer analysis.",
+      "handling": "Used supplied source register and selected skills. Did not seek omitted material."
+    },
+    {
+      "event": "initial combined tool output truncated",
+      "observed": "The first combined primary-source/skill return exceeded displayed output budget.",
+      "handling": "Targeted follow-up opens exposed all Heathrow paragraphs relied upon; MCO find results exposed relevant verification passages. No claim of full-PDF inspection."
+    },
+    {
+      "event": "unknown runtime metadata and remote raw-byte hashes",
+      "handling": "Recorded unknown/null explicitly rather than inferred values."
+    },
+    {
+      "event": "role assignments and technical thresholds absent",
+      "handling": "Named proposed accountable roles; retained unavailable criteria and evidence as gaps. No fictitious owner appointment, tolerances, throughput or executed result."
+    }
+  ],
+  "artifact_checks": "artifact-checks.json",
+  "output_hash_policy": {
+    "algorithm": "SHA256",
+    "scope": "All finalized output payload files other than run-record.json and run-record.sha256.",
+    "record_hash": "run-record.sha256 binds the finalized run-record.json.",
+    "self_reference_exclusion": "A digest cannot include itself without a circular dependency; the digest sidecar is not self-hashed."
+  },
+  "output_sha256": {
+    "artifact-checks.json": "11912dfd7b9d8daaad9bd610e42a9a64d5c99556412351bdd55ef8baa8f4c555",
+    "claim-evidence.proposed.csv": "18e02feae26e1df5bc853a5495a674fe16800f9c570f995c544d853d139ace20",
+    "decision-brief.md": "e38814f8622213735b5c6057a653908608150e3c0096e8e510ec74701d3a2f07",
+    "interfaces.proposed.csv": "cdf104bd3fe4051040a8f5a57db906fd650951b3bc9693fa5ac7990c383794f7",
+    "operations.proposed.mmd": "2e5aa128d4f91b68f35a9cfa04b0a398341ed3191f073cb7a61dd6702f78485d",
+    "scenario-register.csv": "bbd168f1bc4a6634bd7f4b68a3cfd02d63920eb4bcfb3e5c22b8f966628d226a",
+    "scenarios.md": "77f853a943cda168f1c2860b642c8ae9fa308c76a498550f844ef8bf2a4cba45",
+    "source-access.json": "e756d74d83a65092f2afbd59c621e936202867ed0463f98cc6042d278e4814ef"
+  }
+}

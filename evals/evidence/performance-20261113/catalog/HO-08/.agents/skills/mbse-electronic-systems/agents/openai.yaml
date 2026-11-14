@@ -1,0 +1,4 @@
+interface:
+  display_name: "Electronic Systems Engineering"
+  short_description: "Reason about electronics, interfaces, and verification"
+  default_prompt: "Use $mbse-electronic-systems to explain this hardware-system problem, reconcile physical and software assumptions, and identify design choices and meaningful verification."

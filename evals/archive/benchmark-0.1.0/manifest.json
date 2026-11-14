@@ -1,0 +1,9 @@
+{
+  "reason": "Preserved initial authored bank and scoring code before independent review repairs. Surface-cue analysis invalidates selection accuracy as engineering-quality evidence.",
+  "files": {
+    "scripts/prepare_eval.py": "378fc41565dcc30ba2f01a1c2e5bc556034450eee2c43f4706459bef8c440092",
+    "scripts/benchmark.py": "8a36bfef27d8215c98d0949e3539718a7bdff7a23e760b84bba23baf03572798",
+    "evals/benchmark/keys.json": "e5d7e0194212ceddd4babff9f5fbe003e50fa0968667b3b04424f1b25c3545a7",
+    "evals/benchmark/items.json": "b18f9b5dcc2ba5badd0e954c8a8f5a3a2755a885726c509b589e27eec91c3558"
+  }
+}

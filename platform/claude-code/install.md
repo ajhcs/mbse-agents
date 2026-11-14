@@ -1,51 +1,29 @@
-# Claude Code Install Guide
+# Claude Code
 
-## Project-Level Setup (Recommended)
+Build a fresh plugin directory from this checkout:
 
-1. Copy the `agents/` directory into your project root:
-
-```bash
-cp -r agents/ /path/to/your-project/agents/
+```sh
+python3 scripts/package_plugin.py --output build/claude-local
+claude plugin validate ./build/claude-local
+claude --plugin-dir ./build/claude-local
 ```
 
-2. Reference agents in your project's `CLAUDE.md`:
+Use `py` instead of `python3` on Windows. The build includes
+`.claude-plugin/plugin.json`, `skills/`, references, and licenses. In the new
+Claude Code session, invoke a packaged skill by its plugin-qualified command:
 
-```markdown
-## Specialist Agents
-
-See `agents/` for MBSE domain agents. Use `subagent_type` display names:
-- "Aerospace Systems Engineer"
-- "Defense Systems Engineer"
-- "Automotive Systems Engineer"
-- "Medical Device Systems Engineer"
+```text
+/mbse-agents:mbse-requirements
 ```
 
-3. Copy `platform/claude-code/AGENTS.md` into your project root for auto-discovery.
+Supply the engineering brief and desired artifact with the request. Keep existing
+project instructions and host settings. For ongoing installation and updates,
+use Claude Code's marketplace/plugin controls after the local trial works.
 
-4. Optionally copy `skills/defense-founder-review/` into your project's `skills/` directory.
+The local package tests verify files and manifests. Claude Code is not installed
+on the validation host, so its validator and native skill activation have not been
+executed here. See the [support matrix](../support.md).
 
-## User-Level Setup
-
-Install agents globally so they're available in every project:
-
-```bash
-mkdir -p ~/.claude/agents/
-cp agents/*.md ~/.claude/agents/
-```
-
-## Usage
-
-Invoke agents via the `Agent` tool with display names (spaces, title case):
-
-```
-subagent_type="Aerospace Systems Engineer"
-subagent_type="Defense Systems Engineer"
-subagent_type="Automotive Systems Engineer"
-subagent_type="Medical Device Systems Engineer"
-```
-
-**Important:** Use display names, not hyphenated filenames. `"Aerospace Systems Engineer"` is correct; `"aerospace-systems-engineer"` will be blocked.
-
-## With Defense Founder Review Skill
-
-If the `defense-founder-review` skill is installed, use `/defense-founder-review` to run a direct strategic review of defense and dual-use concepts and SE outputs.
+Official sources checked 2026-11-13:
+[plugin layout and validation](https://code.claude.com/docs/en/plugins-reference)
+and [local loading and skill commands](https://code.claude.com/docs/en/plugins).

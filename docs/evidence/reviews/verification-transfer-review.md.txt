@@ -1,0 +1,75 @@
+# Independent verification-transfer review
+
+Both UT-01 outputs score **2, 2, 2, 2** against the predeclared criteria. No actionable output finding was identified. Both produce the same correct observation dispositions, keep adoption and acceptance open, and refuse to close the full operating-envelope requirement. This is a descriptive ceiling tie; no incremental benefit of the revised guidance was observed.
+
+The reviewer had no output authorship role. Each output was scored and recorded before comparison. Arm labels were visible; author self-evaluations were not used. The guidance diff was assessed after scoring both outputs.
+
+| Arm | Rule consistency | Arithmetic and adoption | Preservation and status | Coverage and authority |
+| --- | ---: | ---: | ---: | ---: |
+| [Prior guidance](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/outputs/output.md) | 2 | 2 | 2 | 2 |
+| [Revised guidance](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/outputs/output.md) | 2 | 2 | 2 | 2 |
+
+Scale: 0 = missing/materially incorrect; 1 = partial with a concrete repair; 2 = coherent and supported.
+
+## Observation and decision checks
+
+Both propose the same conditional rule for the supplied guaranteed symmetric bound: pass when x + U ≤ 120 ms; fail when x − U > 120 ms; otherwise inconclusive. These mutually exclusive categories are proposed record-level decisions, not an adopted project policy. Both distinguish this bound from a confidence interval and keep the supplier statuses as historical input.
+
+| ID | Supplied x / U (ms) | Compatible interval (ms) | Outcome in both responses |
+| --- | --- | --- | --- |
+| OBS-1 | 111 / 3 | [108, 114] | Pass |
+| OBS-2 | 121 / 4 | [117, 125] | Inconclusive |
+| OBS-3 | 130 / 2 | [128, 132] | Fail |
+| OBS-4 | 120 / 0 | [120, 120] | Pass |
+| OBS-5 | 116 / 4 | [112, 120] | Pass |
+| OBS-6 | 117 / 6 | [111, 123] | Inconclusive |
+
+The equality cases OBS-4 and OBS-5 meet the inclusive limit. OBS-2 and OBS-6 remain inconclusive despite opposite supplier statuses; OBS-3 is conditionally nonconforming for its represented observation. Neither output turns these fixture calculations into actual test execution or whole-envelope coverage. Withholding use is separately framed as an operational recommendation, with authorization still absent.
+
+## Located criterion assessments
+
+### prior-guidance
+
+- **Criterion 1: 2.** Defines a proposed, exhaustive, mutually exclusive partition: upper bound at or below 120; lower bound above 120; otherwise mixed interval. Evidence: [outputs/output.md:7-15](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/outputs/output.md:7).
+- **Criterion 2: 2.** All six intervals and dispositions are arithmetically correct, including exact equality and an upper bound equal to 120. U remains a supplied guaranteed-bound assumption; the rule is not adopted or universal. Evidence: [outputs/output.md:23-28](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/outputs/output.md:23).
+- **Criterion 3: 2.** Retains N-1 and OBS-1 through OBS-6, all x/U pairs and original supplier statuses; explicitly labels authored fixtures and no execution. Evidence: [outputs/output.md:3,19-30](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/outputs/output.md:3).
+- **Criterion 4: 2.** Keeps row outcomes separate from authorized acceptance and all-envelope closure. Withholding is an operational recommendation; indeterminate results are not declared violations. Evidence: [outputs/output.md:30-38](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/outputs/output.md:30).
+
+No actionable finding; no critical failure.
+
+### revised-guidance
+
+- **Criterion 1: 2.** The proposed pass, fail and inconclusive inequalities are mutually exclusive and exhaustive for the supplied nonnegative guaranteed error bounds. Evidence: [outputs/output.md:5-11](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/outputs/output.md:5).
+- **Criterion 2: 2.** All six derived intervals and row outcomes are correct; exact 120 ms and an upper bound of 120 pass. Bound meaning remains conditional and no rule adoption is invented. Evidence: [outputs/output.md:15-20](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/outputs/output.md:15).
+- **Criterion 3: 2.** N-1, every OBS ID, all input values and supplier statuses are retained. Derived intervals are explicitly not new readings; fixtures and no hardware execution are clear. Evidence: [outputs/output.md:1,13-22](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/outputs/output.md:1).
+- **Criterion 4: 2.** Does not close the whole envelope from finite observations. Separates conditional represented failure, unresolved intervals, operational withholding, rule adoption and authorized acceptance. Evidence: [outputs/output.md:24-28](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/outputs/output.md:24).
+
+No actionable finding; no critical failure.
+
+## Guidance-change assessment
+
+The addition is proportionate to HO-13’s outcome ambiguity. [SKILL.md, line 14](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/skills/mbse-verification-evidence/SKILL.md:14) adds the general consistency rule. [evidence-contracts.md, line 19](/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/skills/mbse-verification-evidence/references/evidence-contracts.md:19) adds uncertainty meaning, project-rule/adoption status, boundary checks, precedence and separation of operational rejection from measurement conclusions. Each file gains one paragraph and a blank line; no prior guidance is removed.
+
+The interval example is explicitly one possible rule. It does not impose a universal metrology obligation, chosen coverage probability, mandatory uncertainty representation, or acceptance authority. No task IDs or case-specific numerical answers are embedded in the guidance. No actionable guidance finding was identified.
+
+The old-guidance participant also handled this case correctly. The paired outputs therefore provide bounded confirmation that the revised guidance can accompany a coherent result, not evidence that it caused an improvement.
+
+## Provenance and preservation
+
+All protocol, packet-manifest and supplied run-record hashes match actual bytes. Both request hashes match the predeclared task. Independently recomputed intervals match every output row, and all IDs, x/U values and supplier statuses are preserved. Exact hashes for 21 reviewed files are in the [structured review](/workspace/repos/builderbob/mbse-agents/.mbse-review/verification-transfer-review.json).
+
+The original HO-13 artifact hash remains d68dc2eeda1d61145d68531f5da34140a7d45bf54c5a8da8b076506e81efe25e, and its criterion scores remain 2, 2, 2, 2, 1. The successful UT-01 outputs do not repair that frozen artifact or retrospectively improve its rating. Any separately authored correction receives no fresh participant-production credit.
+
+The prior run record says it inherited “parent conversation context.” The parent supplied trusted dispatch evidence that both agents used fork_turns="none". The prior producer clarified that its wording referred to generic ambient host/project instructions, the skill catalog and the provided memory summary, and stated that no HO-13 output, finding, tuning discussion or comparison result was received or consulted. The review preserves the raw record and this clarification separately. This supports an ambient-context interpretation; it does not establish secure isolation.
+
+## Limits
+
+- One single-case participant per arm; this is close transfer of the identified boundary-decision problem, not a broad verification benchmark.
+- Outputs were independently scored before comparison, but the reviewer could see arm labels and the documented tuning motivation; the review was not blinded.
+- Trusted dispatch requests no parent conversation history, but generic host/project instructions, skill catalog and memory-summary metadata were available. Access was instruction restricted, not technically isolated.
+- The prior run record contains an ambiguous parent-context phrase; raw bytes are preserved and the explicit provenance clarification is recorded separately.
+- Exact models, settings, tokens and costs are unknown. Recorded wall-clock intervals do not establish comparative inference efficiency.
+- Both outputs are at the coarse rubric ceiling. The observed tie does not establish general equivalence, tuning benefit, causal effect or statistical improvement.
+- Byte checks bind actual current artifacts to protocol/manifests/run records. They do not independently prove every past access or continuous immutability.
+- All timing inputs are authored fixtures. Correct interval classification is not physical evidence, all-envelope coverage, adoption, approval or operational acceptance.
+- The original HO-13 output and [2,2,2,2,1] rating remain unchanged. A separately authored correction or parent-proposed paragraph receives no fresh participant-production credit.

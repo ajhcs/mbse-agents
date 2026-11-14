@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "benchmark": "systems-engineering-judgment",
+  "version": "0.2.0",
+  "status": "proposed-independent-adjudication-required",
+  "keys": {
+    "SEJ-001": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "Entry improved but the outcome did not. The boundary must include dispatch and shared resource allocation; the facts do not yet establish which constraint dominates.",
+      "reasoning_criteria": [
+        "Distinguishes local activity speed from stakeholder outcome.",
+        "Identifies relevant external work without asserting an unmeasured bottleneck."
+      ]
+    },
+    "SEJ-002": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "The requested drone is a candidate means. Framing the outcome and access constraints permits a defensible comparison while preserving the sponsor's preference.",
+      "reasoning_criteria": [
+        "Separates desired outcome from proposed mechanism.",
+        "Advances useful work while naming decisions that could change the concept."
+      ]
+    },
+    "SEJ-003": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "The exercise explicitly fixes the system-of-interest boundary. Supplier implementation remains outside that selected boundary while the service dependency and degraded-response responsibility remain within the analysis. External ownership alone does not dictate every project's boundary.",
+      "reasoning_criteria": [
+        "Distinguishes authority, ownership and analytical relevance.",
+        "Connects supplier failure to an operational responsibility."
+      ]
+    },
+    "SEJ-004": {
+      "answer": [
+        "A",
+        "D"
+      ],
+      "rationale": "The decision needs explicit stakeholder outcomes and a causal account of actual work. A fastest observed case is not a justified universal threshold and role ownership does not establish cause.",
+      "reasoning_criteria": [
+        "Retains safety/inspection needs alongside turnaround.",
+        "Requests discriminating workflow evidence rather than assigning blame."
+      ]
+    },
+    "SEJ-005": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "The charter concerns access to care. Include the alternative pathways and enabling conditions that determine access, without assuming the service owns every provider.",
+      "reasoning_criteria": [
+        "Uses charter outcome to choose scope.",
+        "Distinguishes inclusion in analysis from control or ownership."
+      ]
+    },
+    "SEJ-006": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "Acquisition price and specified flow are insufficient when service restoration is constrained. The decisive uncertainty is the full repair/replacement pathway.",
+      "reasoning_criteria": [
+        "Connects maintainability/support to the mission constraint.",
+        "Identifies needed evidence without assuming the more expensive option wins."
+      ]
+    },
+    "SEJ-007": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "The evidence does not yet represent the intended operating organization. A handover exercise can expose responsibility and support gaps that more developer-attended runtime will not.",
+      "reasoning_criteria": [
+        "Distinguishes technical pilot behavior from intended-use readiness.",
+        "Includes responsibilities and restoration, not only initial training."
+      ]
+    },
+    "SEJ-008": {
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "rationale": "Replacement configuration, credential/data retirement and support continuity follow from the stated lifecycle. The facts do not establish that physical destruction of every module is the required disposal method; that method needs its own applicable basis.",
+      "reasoning_criteria": [
+        "Covers transition and end-of-life dependencies.",
+        "Avoids prescribing an unjustified disposal mechanism."
+      ]
+    },
+    "SEJ-009": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "Failure occurrence and restoration jointly affect downtime. A provisional availability comparison can be made with explicit assumptions, without treating it as established field performance.",
+      "reasoning_criteria": [
+        "Separates reliability and availability.",
+        "Supports proportionate analysis while retaining uncertain restoration inputs."
+      ]
+    },
+    "SEJ-010": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "A temporary transition configuration can still determine mission success. Scope should follow planned use and credible failure/recovery, not every historical configuration.",
+      "reasoning_criteria": [
+        "Recognizes transition as operational use.",
+        "Bounds testing to relevant configurations and responsibilities."
+      ]
+    },
+    "SEJ-011": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "Diversity can help for some causes without establishing statistical or functional independence. Shared dependencies and comparator coverage must be considered explicitly.",
+      "reasoning_criteria": [
+        "Avoids both unconditional independence and dismissal of useful diversity.",
+        "Names concrete shared causes and coverage limits."
+      ]
+    },
+    "SEJ-012": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "Overtime may contribute, respond to faults, or share external causes. Time ordering and operating conditions help distinguish those mechanisms.",
+      "reasoning_criteria": [
+        "Identifies reverse causation and common causes.",
+        "Proposes discriminating evidence rather than a correlation-only conclusion."
+      ]
+    },
+    "SEJ-013": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "Either A with B or A with C is sufficient; neither pair contains a sufficient proper subset. Repeated A is one event, not two independent events.",
+      "reasoning_criteria": [
+        "Derives sufficient and minimal sets from the supplied logic.",
+        "Preserves shared-event identity without adding probability assumptions."
+      ]
+    },
+    "SEJ-014": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "The intervention can change the workload and response behavior of the whole system. The feedback path must be modeled before treating operator delay as an independent constant.",
+      "reasoning_criteria": [
+        "Identifies intervention-induced feedback.",
+        "Connects technical detection to human response and outcome."
+      ]
+    },
+    "SEJ-015": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "Recovery after reset localizes a symptom but does not identify the initiating mechanism. Accumulation can result from load, service failure or backpressure.",
+      "reasoning_criteria": [
+        "Separates recovery evidence from root-cause proof.",
+        "Investigates the mechanism that produces saturation."
+      ]
+    },
+    "SEJ-016": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "The old run remains valid historical evidence but may not support the new configuration. No current failure is established; the support gap is the issue.",
+      "reasoning_criteria": [
+        "Separates missing support from demonstrated failure.",
+        "Identifies the changed timing dependency relevant to reuse."
+      ]
+    },
+    "SEJ-017": {
+      "answer": [
+        "B",
+        "C"
+      ],
+      "rationale": "The trial establishes what was observed in its conditions and can guide subsequent investigation. Context, users and operational handovers remain outside that evidence.",
+      "reasoning_criteria": [
+        "Names the scope of the actual observation.",
+        "Uses limited evidence constructively without transferring acceptance."
+      ]
+    },
+    "SEJ-018": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "Zero observed events is useful data, not proof of zero probability. Inference requires assumptions about exposure, independence, operating conditions and the quantity estimated.",
+      "reasoning_criteria": [
+        "Separates observation from inference.",
+        "Identifies relevant assumptions and uncertainty without inventing confidence."
+      ]
+    },
+    "SEJ-019": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "The proof can be correct but irrelevant to important deployed behavior. The environment contract and recovery properties determine how to extend or revise it.",
+      "reasoning_criteria": [
+        "Distinguishes proof correctness from applicability.",
+        "Proposes properties/assumptions that match intended operation."
+      ]
+    },
+    "SEJ-020": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "Method follows the claim. Label content can be inspected; timing needs defined events, observation resolution and relevant conditions.",
+      "reasoning_criteria": [
+        "Chooses methods based on what establishes each claim.",
+        "Identifies the timing reference and observation need."
+      ]
+    },
+    "SEJ-021": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "Display refresh is one contributor, not the stakeholder outcome. The end-to-end threshold needs a source and a defined start/end event before allocation.",
+      "reasoning_criteria": [
+        "Distinguishes component performance from end-to-end behavior.",
+        "Keeps an unagreed warning deadline provisional."
+      ]
+    },
+    "SEJ-022": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "Measurability does not establish necessity or adequacy. A color may be a justified design choice, but its basis and effect on identification need examination.",
+      "reasoning_criteria": [
+        "Assesses source and purpose as well as verifiability.",
+        "Avoids substituting an unsupported preferred design."
+      ]
+    },
+    "SEJ-023": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "The children retain the triggering conditions but omit the required response. Link presence does not show preservation of meaning.",
+      "reasoning_criteria": [
+        "Finds the omitted behavior rather than merely checking links.",
+        "Distinguishes repairing decomposition from selecting new hardware."
+      ]
+    },
+    "SEJ-024": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "Chronology does not supersede authority. Useful trade work can continue against the current obligation and the explicitly proposed alternative.",
+      "reasoning_criteria": [
+        "Separates approved obligation from later proposal.",
+        "Continues useful analysis without silently changing the baseline."
+      ]
+    },
+    "SEJ-025": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "The behavior and conditions need to be clear before the second processor can be assessed as a control. Binding implementation constraints can remain when their basis is known.",
+      "reasoning_criteria": [
+        "Distinguishes control intent from candidate mechanism.",
+        "Identifies authority, failure and timing contracts needed for assessment."
+      ]
+    },
+    "SEJ-026": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "Syntactic compatibility does not establish compatible meaning. Origin, units, reset and validity affect interpretation even when the same integer type is used.",
+      "reasoning_criteria": [
+        "Identifies multiple semantic dimensions beyond units.",
+        "Connects the contract to executable integration observations."
+      ]
+    },
+    "SEJ-027": {
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "rationale": "The premise establishes cryptographic authenticity. Current executability still depends on freshness, mode, command history and authority/inhibit state; authenticity alone does not settle those conditions.",
+      "reasoning_criteria": [
+        "Separates authenticity from present authority and applicability.",
+        "Addresses outage recovery and duplicate command semantics."
+      ]
+    },
+    "SEJ-028": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "A written contract can exist without being enforced in actual exchange. Unit-aware examples, boundary checks and integration ownership connect intent to produced data.",
+      "reasoning_criteria": [
+        "Uses the case as an integration/verification lesson, not a unit-conversion slogan.",
+        "Distinguishes source-reported causes from the proposed modern control."
+      ]
+    },
+    "SEJ-029": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "A nominal rate does not bound freshness. The consuming behavior depends on timestamps, age and guarantees across the interface.",
+      "reasoning_criteria": [
+        "Distinguishes nominal observations from guaranteed bounds.",
+        "Assigns producer and consumer responsibilities for invalid data."
+      ]
+    },
+    "SEJ-030": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "Prior success applies within its demonstrated assumptions. Reuse review must examine changed envelopes and functions that remain active, including unchanged code.",
+      "reasoning_criteria": [
+        "Explains why unchanged implementation can acquire a new hazard.",
+        "Retains useful reuse while requiring context-specific integration evidence."
+      ]
+    },
+    "SEJ-031": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "A weighted preference score does not waive a binding constraint. A proposed constraint change can be analyzed explicitly without being assumed accepted.",
+      "reasoning_criteria": [
+        "Separates feasibility from preference aggregation.",
+        "Preserves an explicit alternative decision about changing the constraint."
+      ]
+    },
+    "SEJ-032": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "The figures do not yet represent equivalent conditions. A proportionate comparison should expose the evidence asymmetry and target the uncertainty that matters.",
+      "reasoning_criteria": [
+        "Recognizes incomparable measurement contexts.",
+        "Designs a useful next investigation rather than substituting confidence with arbitrary scores."
+      ]
+    },
+    "SEJ-033": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "Reversibility can reduce the cost of learning under uncertainty. It is a decision factor, not a universal rule to select the smallest intervention.",
+      "reasoning_criteria": [
+        "Explains the consequence of uncertainty and timing.",
+        "Treats reversibility as one criterion with explicit assumptions."
+      ]
+    },
+    "SEJ-034": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "The decision concerns field capability, not a component alone. Unknown constraints should remain explicit rather than being hidden in a generic contingency.",
+      "reasoning_criteria": [
+        "Includes enabling/support functions and actual program constraints.",
+        "Does not infer a build or buy conclusion from incomplete data."
+      ]
+    },
+    "SEJ-035": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "A useful recommendation links the decision to its assumptions and reopening conditions. Limited rollout may allow learning if migration costs and constraints are explicit.",
+      "reasoning_criteria": [
+        "Communicates a decision with conditions and consequences.",
+        "Distinguishes forecast uncertainty from inability to make any decision."
+      ]
+    },
+    "SEJ-036": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "The aim is discriminating evidence, not data volume. Independent observations and chosen operating conditions can separate sensor error from physical overheating.",
+      "reasoning_criteria": [
+        "States the competing causal predictions.",
+        "Selects observations for discrimination within the available resources."
+      ]
+    },
+    "SEJ-037": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "The decision can change with intended use and safety constraints. Conditional analysis is useful while final authority and behavior remain unresolved.",
+      "reasoning_criteria": [
+        "Identifies missing facts that can reverse the decision.",
+        "Avoids both unsupported action and indiscriminate information requests."
+      ]
+    },
+    "SEJ-038": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "Assumptions can support conditional analysis, but their status and influence must survive propagation. Conservatism also needs a reasoned basis.",
+      "reasoning_criteria": [
+        "Preserves useful conditional analysis.",
+        "Corrects provenance and downstream interpretation rather than merely changing wording."
+      ]
+    },
+    "SEJ-039": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "Simulation outcomes are conditional on initial conditions and available information. Hindsight can silently provide an earlier decision than the system could make.",
+      "reasoning_criteria": [
+        "Identifies timing/information mismatch in counterfactual comparison.",
+        "Avoids generalizing a bounded scenario into universal feasibility or blame."
+      ]
+    },
+    "SEJ-040": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "The observation and uncertainty do not themselves specify a decision rule. Neither automatic acceptance nor automatic rejection is justified by the supplied facts.",
+      "reasoning_criteria": [
+        "Separates measurement result, uncertainty and acceptance rule.",
+        "States a specific missing decision without inventing a policy."
+      ]
+    },
+    "SEJ-041": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "Transport delivery did not establish accepted responsibility. The operational interface needs ownership and recovery behavior, not only a different notification mechanism.",
+      "reasoning_criteria": [
+        "Distinguishes information delivery from task acceptance.",
+        "Includes handover and escalation as system behavior."
+      ]
+    },
+    "SEJ-042": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "Technical evidence must reach the relevant authority with its uncertainty and disposition intact. More detail alone does not repair an organizational information path.",
+      "reasoning_criteria": [
+        "Connects technical concern to decision authority and communication.",
+        "Avoids reducing the event to individual blame or a generic more-data prescription."
+      ]
+    },
+    "SEJ-043": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "Operational history can inform an assessment but does not by itself explain the mechanism or establish present acceptability. The review needs applicability and unresolved concerns.",
+      "reasoning_criteria": [
+        "Uses historical success as evidence with limits.",
+        "Connects physical analysis to organizational treatment of anomalies."
+      ]
+    },
+    "SEJ-044": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "Contractual accountability does not create delivered capacity during an event. Prepared contingencies require feasible resources, decisions and interfaces under the actual scenario.",
+      "reasoning_criteria": [
+        "Distinguishes contractual remedy from operational recovery.",
+        "Includes resources and authority rather than paper contingency alone."
+      ]
+    },
+    "SEJ-045": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "Individual control tests can miss temporal interactions and hidden state. User workflows and independent output protections address different parts of the failure mechanism.",
+      "reasoning_criteria": [
+        "Identifies sequence/timing coverage missing from isolated-control tests.",
+        "Does not treat training or duplicated display as sufficient hazard control."
+      ]
+    },
+    "SEJ-046": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "The sponsor needs the established result, unresolved condition, consequence and decision. Neither jargon nor unsupported failure language communicates that accurately.",
+      "reasoning_criteria": [
+        "Explains the decision and missing evidence in concrete terms.",
+        "Distinguishes established nominal behavior from untested startup behavior."
+      ]
+    },
+    "SEJ-047": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "Historical priorities belong to their stakeholder context. The proposal remains useful for architectural reasoning without becoming a universal modern requirement.",
+      "reasoning_criteria": [
+        "Retains the original problem and context.",
+        "Separates historical explanation from contemporary design authority."
+      ]
+    },
+    "SEJ-048": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "The report can support a decision by locating the disagreement and the evidence that would resolve it. Seniority or averaging opinions does not establish applicability.",
+      "reasoning_criteria": [
+        "Explains the technical basis of disagreement.",
+        "Provides a concrete resolution path while preserving uncertainty."
+      ]
+    },
+    "SEJ-049": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "The missing meaning concerns behavior and authority across modes. A view should answer that question while retaining links to the existing structure.",
+      "reasoning_criteria": [
+        "Chooses representation based on the reviewer's question.",
+        "Preserves ownership and transition conditions, not merely boxes and arrows."
+      ]
+    },
+    "SEJ-050": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "The two questions differ even when evidence overlaps. The explanation should relate the distinction to the actual missing intended-use evidence.",
+      "reasoning_criteria": [
+        "Explains the distinction using the supplied situation.",
+        "Does not set verification and validation against each other or claim user acceptance."
+      ]
+    },
+    "SEJ-051": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "A consistent digital lineage may propagate an original error. Provenance is useful because it exposes the source and its purpose, not because it guarantees correctness.",
+      "reasoning_criteria": [
+        "Distinguishes traceability of an assertion from validation of the assertion.",
+        "Selects evidence appropriate to the physical attribute."
+      ]
+    },
+    "SEJ-052": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "Source precision limits claim precision. Lack of access neither disproves the clause nor grants an exemption from program obligations.",
+      "reasoning_criteria": [
+        "Matches each claim to the source that can support it.",
+        "Preserves uncertainty without turning it into permission or a false negative."
+      ]
+    },
+    "SEJ-053": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "The evidence concerns one layer of the system. User action requires a different observation and its own semantics, irrespective of transport age.",
+      "reasoning_criteria": [
+        "Preserves the scope of transport evidence.",
+        "Identifies the missing application/human observation without proposing an irrelevant protocol replacement."
+      ]
+    },
+    "SEJ-054": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "The source supplies a design trade, not a universal time limit. The current system's data meaning and consequences determine an acceptable freshness policy.",
+      "reasoning_criteria": [
+        "Distinguishes a reusable design principle from an adopted numeric requirement.",
+        "Includes stale-data consequences in the present application."
+      ]
+    },
+    "SEJ-055": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "Claims must retain the temporal and outcome scope of the source. Early delivery evidence does not establish later benefits.",
+      "reasoning_criteria": [
+        "Preserves both the established success and the stated limits.",
+        "Identifies the need for later evidence without rewriting the historical result."
+      ]
+    },
+    "SEJ-056": {
+      "answer": [
+        "B",
+        "D"
+      ],
+      "rationale": "Stable identity does not imply unchanged semantics. Revision-specific applicability must accompany links and downstream impact.",
+      "reasoning_criteria": [
+        "Separates identity from versioned meaning.",
+        "Propagates the changed criterion into allocations and evidence."
+      ]
+    },
+    "SEJ-057": {
+      "answer": [
+        "B"
+      ],
+      "rationale": "A short load test does not establish long-duration behavior of a time-dependent material. Application conditions determine evidence applicability.",
+      "reasoning_criteria": [
+        "Identifies duration-dependent behavior rather than only peak load.",
+        "Connects evidence to the actual configuration and environment."
+      ]
+    },
+    "SEJ-058": {
+      "answer": [
+        "C"
+      ],
+      "rationale": "The change affects meaning and potentially physical action despite preserving event count and schema. Follow the actual dependencies and acknowledge untracked ones.",
+      "reasoning_criteria": [
+        "Locates the semantic interface change and downstream behavior.",
+        "Scopes impact through dependencies without equating field compatibility with correctness."
+      ]
+    },
+    "SEJ-059": {
+      "answer": [
+        "A"
+      ],
+      "rationale": "A decision can be sound in one context and need reconsideration in another. Reopening preserves useful rationale while exposing changed assumptions and constraints.",
+      "reasoning_criteria": [
+        "Recognizes context-dependent applicability of rationale.",
+        "Examines new lifecycle constraints rather than reversing the choice mechanically."
+      ]
+    },
+    "SEJ-060": {
+      "answer": [
+        "D"
+      ],
+      "rationale": "Configuration labels do not reconcile meaning. The review must resolve the behavior against its source, then propagate the decision and test its consequences.",
+      "reasoning_criteria": [
+        "Finds a semantic disagreement and a verification gap.",
+        "Resolves authority before making the views consistent."
+      ]
+    }
+  }
+}

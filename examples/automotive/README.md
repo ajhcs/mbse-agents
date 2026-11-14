@@ -1,5 +1,7 @@
 # Automotive Examples
 
+> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+
 Reference systems demonstrating automotive systems engineering artifacts for ADAS and powertrain programs. The flagship AEB example includes a full ISO 26262 HARA with ASIL decomposition, ISO 21434 TARA, SOTIF triggering conditions, and AUTOSAR Classic/Adaptive architecture — all cross-referenced through a shared ID taxonomy.
 
 | System | Tier | Key Standards | Artifacts |

@@ -1,0 +1,145 @@
+# Independent domain-model review
+
+Reviewed working-tree state against `b54b0b673eb80ea22bd6c4987955192b22332923`, initially frozen at 2026-11-13 23:50 UTC. Scope: `scripts/analyze_gallery.py`, `scripts/check_gallery.py`, `tests/test_gallery.py`, the five flagship fault-model inputs/results/archives, the pump temporal model and traces, and the twenty source/review registers. Original source snapshots were compared with Git HEAD. This reviewer made no production edits; all adversarial changes are in `.mbse-review` copies.
+
+The verification-evidence skill informed the separation of model observations, requirement scope, review and acceptance. This is an independent implementation/model review. It is not physical validation or an audit of licensed standards. No external model service, paid API, package installation, or infrastructure change was used.
+
+## Final disposition
+
+**All five findings and the CSE archive-integrity follow-on are repaired and independently closed. No actionable finding remains within this review's declared scope.** Final checks ran at 2026-11-14 00:01 UTC against a stable 380-file hash inventory: **35 focused tests passed**, all three reproduction/check commands passed, all 39 malformed-metadata cases were rejected, and source/cache/origin/input-drift attacks failed closed. The original 96 run files and all five original CSE receipts remain byte-identical.
+
+The independent mathematical review reproduced every complete minimal cut set and all 20 exact scenario probabilities. All 414 requirement IDs and 99 original source snapshots are preserved. These results establish the stated authored-model and evidence-integrity scope; physical performance, actual failure probabilities, full requirement acceptance and licensed-standard applicability remain unverified.
+
+## Initial findings
+
+### MIR-01 — P2 — Recorded source/input hashes need not identify what executed
+
+Initial locations: `scripts/analyze_gallery.py:190-197` and `:297-300`; `examples/medical-device/smart-infusion-pump/analysis/run_clamp_checks.py:9` and `:61-62`.
+
+The collectors execute previously imported Python objects and then hash current disk files. Importing the clamp runner, changing its model's watchdog threshold from 200 to 300 ms, and invoking the real runner emits 28 passing tests bound to the edited 300 ms source while the trace releases at 200 ms. A fresh uncached replay rejects that record. The same import/edit sequence works for the static analysis engine: old calculations are archived under the edited arithmetic source hash.
+
+The stronger reproduction creates a normal timestamp/size-valid `.pyc`, changes the model from 200 to 300 ms without changing file size or timestamp, and executes with `python3 -B`. Collection exits 0; `--check` exits 0; `gallery.check` returns no errors. The archived source says 300 ms, while the execution observes 200 ms. Removing only the probe-created cache makes the replay fail. `-B` alone does not bind the loaded implementation to source.
+
+There is also an input read-to-hash gap. A deterministic concurrent-edit probe changes the FMS input's BE1 probability from `1/1000` to `1/2` after analysis but before configuration hashing. `run()` returns the old exact result `134173030809261370330999/1000000000000000000000000000000` bound to the new input hash. Fresh evaluation of that new input gives `110023198229038299670001/2000000000000000000000000000`.
+
+Correction: bind loaded modules to their actual source bytes and origin; capture and parse exact input bytes before execution; reject subsequent source/input drift; archive those captured bytes before promoting a current result. Cover stale cache, post-import edit, wrong-origin import, and input changes during collection. This is a defect in the supplied evidence collector, not a request for cryptographic authentication of an arbitrary producer.
+
+Reproduction: `python3 -B .mbse-review/models-independent-probes.py` and `python3 -B .mbse-review/models-input-drift-probe.py`. The latter preserves a single frozen initial fixture and refuses to overwrite it.
+
+### MIR-02 — P2 — Execution receipts can lose their provenance and still pass
+
+Initial locations: `scripts/check_gallery.py:169-180`, `:192-193`, and `:210-211`.
+
+In separate copied examples, reduce either current run's `execution.json` to its `result_sha256` alone. The checker accepts both the static and temporal archive with no errors, although run identity, execution time, Python version and command are gone. A third probe removes `helper_sources`, `command`, and `executed_at` from the CSE cross-check receipt; it is also accepted without errors. Correct result arithmetic does not establish the missing execution/configuration provenance promised by these records.
+
+Correction: validate required receipt schema, matching run identity and scope, parseable UTC time, nonempty runtime/command, complete source bindings, and result/input identity independently from result reproduction. Historical timestamps need not equal a fresh replay. Preserve earlier run bytes rather than editing old provenance into a new execution.
+
+Reproduction: the three `missing_*_execution_provenance` cases in `models-independent-probes.py`.
+
+### MIR-03 — P2 — Six teaching risk-region cells were replaced with control status
+
+Initial location: `examples/medical-device/smart-infusion-pump/hazard-analysis.md:35-38`.
+
+Six cells in the illustrative likelihood/severity matrix now say `Proposed control; validation pending`, while adjacent cells still say `Acceptable`, `ALARP`, or `Unacceptable` and the legend defines only those three categories. The original snapshot confirms that the six cells were risk-region labels. A control lifecycle state is not a result of combining likelihood and severity, so this edit corrupts the teaching matrix while leaving a misleading mixed vocabulary.
+
+Correction: restore consistent illustrative region labels, retaining the explicit statement that the matrix is unadopted and no device risk has been accepted. Keep control validation status in the hazard/control records.
+
+### MIR-04 — P2 — Evidence index conflates requirement failures with added proposal violations
+
+Initial location: `examples/medical-device/smart-infusion-pump/assurance-evidence.md:69`.
+
+EVD-MODEL-002 says the temporal study retains “ten retained requirement failures.” The executed record correctly distinguishes ten criterion violations: six failures of the modeled REQ-SAF-001 closure condition and four failures of a separate proposed 500 ms combined watchdog/closure criterion. The latter pass the separately modeled 200 ms release condition; the full REQ-SAF-002 safe-state interpretation remains unresolved. The assurance index therefore reintroduces the requirement/proposal conflation that the model and study text deliberately avoid.
+
+Correction: state ten criterion violations, including six requirement-scope failures and four added proposal violations. Preserve the negative results and the distinction between test-harness success and property/requirement success.
+
+### MIR-05 — P2 — Actuator power loss falsely suppresses processor service events
+
+Initial location: `examples/medical-device/smart-infusion-pump/analysis/clamp_model.py:25-27`; input meaning in `analysis/clamp-study.md:28-30`.
+
+The study defines `power` as the hold-open actuator supply, while `cpu_services` indicates processor watchdog service. Nevertheless, the model records service only when both inputs are true. With `power=False, cpu_services=True`, the trace asserts the watchdog at 200 ms even though actual processor-service events continue. This silently introduces a shared CPU/actuator supply dependency that the stated input contract does not contain.
+
+Correction: either model and document that shared supply explicitly, or honor the actual processor-service input independently of hold-open power. The author chose the latter, preserving the documented input meaning. Power loss already releases the clamp at 100 ms, so this defect affects causal trace interpretation rather than the existing closure-time totals. A regression must check sustained actuator power loss with continuing processor service.
+
+All five findings were sent directly to `gallery_simulations` and the parent. The author acknowledged and repaired them; the independent closure evidence follows. Initial findings are retained above as review history.
+
+## First repair verification
+
+The frozen first repair was independently exercised at 2026-11-13 23:57 UTC and 2026-11-14 00:00 UTC. All five original defects are corrected. The original import-drift, stale-model-cache and stripped-provenance probes now reject. Additional stale-cache probes cover the runner and static engine; a byte-identical model imported from another directory is rejected by origin. Editing the model input during analysis is rejected before changing the selected result. All 39 individual receipt-metadata mutations are rejected. Continuous processor service during hold-open supply loss no longer creates a watchdog timeout; closure remains at 400 ms for the 300 ms assumed delay.
+
+The risk matrix again uses its three illustrative categories under the unadopted-policy disclaimer. EVD-MODEL-002 now distinguishes ten criterion violations, six closure requirement-scope failures, and four proposed combined-response violations. All **34 focused tests** and the three production check commands pass. All 96 initial run archive files are byte-identical, and every prior CSE receipt is preserved under its original content hash.
+
+At that stage, one follow-on integrity gap remained in the newly added CSE history: replacing `evidence/analysis/cse-runs/<current-receipt-sha256>.json` with `{}` was accepted by the gallery checker. The selected CSE receipt needed an intact matching archive companion, just as the selected model result did. This continued MIR-02's receipt-integrity review; `models-cse-archive-result.json` and `models-independent-final-checks-20261114T000019715423Z.json` preserve the reproduction. It is now closed by the final repair below.
+
+The first-repair evidence is in `models-independent-probes-20261113T235748176878Z.json` and `models-independent-final-checks-20261114T000019715423Z.json`; each includes a complete reviewed-file hash inventory and records zero production drift during its checks. The reusable extended closure probes are `models-independent-final-checks.py`.
+
+## Final independent closure
+
+The final CSE companion check parses the selected receipt's captured bytes, derives the archive filename from their SHA-256, and requires identical archive bytes. The previously accepted corruption now produces `CSE receipt archive missing or differs from selected receipt`. The supplied regression also covers a missing companion and restoring the intact bytes.
+
+| Finding | Final independently observed behavior |
+| --- | --- |
+| MIR-01 | Post-import source edits, stale same-size/same-timestamp caches for model/runner/engine, wrong-origin model imports, and input changes during execution reject. Mutation probes leave the selected report unchanged. |
+| MIR-02 | Stripped or individually malformed metadata rejects; loaded-source and result identity must match; the selected CSE receipt must retain its exact archive companion. External CSE hashes are explicitly scoped as a before/after source inventory rather than local loaded-code binding. |
+| MIR-03 | All teaching matrix cells use consistent region labels; its unadopted status remains explicit. |
+| MIR-04 | The evidence index correctly reports ten criterion violations, consisting of six closure requirement-scope failures and four additional proposal violations. |
+| MIR-05 | With actuator supply absent and processor service continuing, no watchdog timeout occurs; the default assumed closing delay still gives first closure at 400 ms. |
+
+Final artifact: `models-independent-final-checks-20261114T000153641793Z.json`. It contains every actual command and output, the 39 metadata cases, retained fixtures, a **380-file SHA-256 inventory**, the old-archive comparisons, and zero production drift during the review. Its fixture directory is `models-final-fixtures-20261114T000153641793Z/`. The earlier failed probe artifacts and reports remain preserved.
+
+| Final implementation | SHA-256 |
+| --- | --- |
+| `scripts/analyze_gallery.py` | `262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b` |
+| `scripts/check_gallery.py` | `c441ef4fb3ff2546f83808d9b43361e0717e9bb4beb28358a6661602fb32e805` |
+| `tests/test_gallery.py` | `fbcd8ae2bc77bc1183818e200455b6be606875437c1c6f37dca875ee30a54f07` |
+| `analysis/clamp_model.py` | `f255fbf244c1a7da9c293507a7b71be7a4e1d5ef059d1ab5c2066800f3c888ea` |
+| `analysis/run_clamp_checks.py` | `61d693f61ca41b6d8690f314d3437e698e6114bda06db4778d0e421d54c4cbfb` |
+
+Final commands:
+
+```sh
+python3 -B .mbse-review/models-independent-final-checks.py
+python3 -B -m unittest discover -s tests -p test_gallery.py -v
+python3 -B scripts/analyze_gallery.py --check
+python3 -B examples/medical-device/smart-infusion-pump/analysis/run_clamp_checks.py --check
+python3 -B scripts/check_gallery.py
+```
+
+## Independent checks that passed
+
+The supplied focused suite ran **27 tests, no failures/errors/skips**. The production state was unchanged during these checks.
+
+Independent algebraic expansion and absorption of AND/OR sets reproduced every minimal cut set. Separately derived closed-form rational probabilities reproduced all four scenarios in each of the five models; no call to the engine's evaluator was used for these expected values.
+
+| Model | Exhaustive assignments | Minimal cuts | Independent baseline probability |
+| --- | ---: | ---: | --- |
+| FMSGuidance | 512 | 10 | `134173030809261370330999/1000000000000000000000000000000` |
+| AEBDetection | 256 | 11 | `352001134189919821781/200000000000000000000000` |
+| GCSLinkLoss | 512 | 10 | `10121977898580560958001/100000000000000000000000000000000` |
+| QuantumRFProtection | 256 | 6 | `201190769711029999/10000000000000000000000000000` |
+| PumpOverinfusion | 128 | 5 | `299999869021999/1000000000000000000000` |
+
+The repeated sensor event in the pump and repeated protection/monitor dependency in the GCS and quantum model are handled once as Boolean events. The intentionally unused FMS comparator and pump liveness-watchdog events do not change their selected top-event probabilities. The exact values are conditional on synthetic input choices and the declared independence abstraction; they establish no measured rate or risk acceptance.
+
+Independent temporal checks reproduced first closure at `100 + delay` ms for door/power changes observed at 100 ms, and `200 + delay` ms for lost processor service beginning from the t=0 service. In particular, door/power closing delays of 500 ms meet the 500 ms condition and 600 ms do not; watchdog closing delay 300 ms meets the added combined 500 ms criterion and 400 ms does not. Service received exactly at the 200 ms tick is processed before the model's timeout check and prevents that timeout. This is the observed sampled-model ordering, not a hardware race/tolerance claim.
+
+The current temporal record preserves ten negative criterion outcomes while reporting that their expected-observation tests passed. No flow, dose, occlusion mechanics, processor reset or alarm output is simulated. Watchdog result scope is release timing only; the complete safe-state requirement remains open. Jam recovery mechanics and inter-tick timing are outside the exercised scope.
+
+For all twenty examples, every current requirement source field matches its `review-status.json` candidate-source entry, no original requirement ID was removed, and every pre-hardening source snapshot matches the corresponding Git HEAD text. All source statuses remain candidate/applicability review, so this inventory is not a claim that cited clauses were verified. The fifteen examples without models remain marked `no_system_model_execution`.
+
+The narrowed causal interpretations retain useful corrections: equality comparison cannot identify equal wrong outputs; healthy sensor channels do not remove fusion as a failure path; ground-link loss does not itself prove uncontrolled aircraft behavior; a liveness watchdog does not detect running-but-wrong flow; and sequence prechecks do not stop downstream RF hardware faults. The models explicitly leave physical coverage, independence, and timing validation open.
+
+## Reproduction artifacts and exact reviewed hashes
+
+`models-independent-probes-20261113T235000206400Z.json` records the complete **325-file SHA-256 inventory**, actual command outputs, all independently computed scenario values, snapshot/requirement-source comparisons, and probe outcomes. `models-independent-fixtures-20261113T235000206400Z/` retains the copies used in the conclusive probes. The prior 23:49 run remains preserved; its isolated copies lacked a linked source-ledger document, which the 23:50 run corrected before confirming zero-error false accepts.
+
+`models-input-drift-result.json` and `models-input-drift-fixture/` retain the exact frozen-engine input-edit reproduction. No historical production result was rewritten.
+
+| Initial implementation | SHA-256 |
+| --- | --- |
+| `scripts/analyze_gallery.py` | `53d61453efd2ef3e8c3035a6e9464a6b9daac2296f9a681156cea00be16c2521` |
+| `scripts/check_gallery.py` | `5dc18b1b7d355c47ab62b667244d7a7288e99f409282292f8ebc7c5c885346eb` |
+| `tests/test_gallery.py` | `b70d194abef6bc1d3db190ba93d29e4f6d66a0cd3384d87723a5aa4af9c85cd3` |
+| `analysis/clamp_model.py` | `0e1948d5282ec971d17d44d3eeea0fe941411bffdeda2e64a9e987c7a28781df` |
+| `analysis/run_clamp_checks.py` | `dab61acb86ec358e8983e33d33194f91784d1a2725184c23d9cb3d286524bb2f` |
+
+Exact focused-test command: `python3 -B -m unittest discover -s tests -p test_gallery.py -v`.

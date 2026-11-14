@@ -1,5 +1,7 @@
 # Architecture
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## System Context
 
 ```mermaid
@@ -125,7 +127,7 @@ The weapon direction path is the highest-criticality failure domain. The Weapon 
 - A weapon firing command from CMP-WDS-01A must pass through CMP-WDS-01B, which verifies that: (a) the weapon is in READY state, (b) TAO authorization has been received, and (c) the fire control designation does not violate own-ship or friendly force keep-out zones.
 - If any safety check fails, CMP-WDS-01B blocks the firing command and reports a safety inhibit to the operator.
 
-**Evidence**: MIL-STD-882E safety assessment verifies that no single CMS failure can result in uncommanded weapon firing.
+**Planned evidence**: The no-single-failure safety claim requires a defined fault scope, complete assessment and authorized review; none is supplied here. The architecture description does not establish that property.
 
 ### Legacy/Modern Interface Isolation
 

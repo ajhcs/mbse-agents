@@ -1,0 +1,35 @@
+{
+  "kind": "source-derived-logical-flow",
+  "nodes": {
+    "P": "HG-05 ground-data producer",
+    "N": "HG-05 navigation consumer",
+    "G": "HG-05 development team",
+    "O": "HG-05 operations team",
+    "D": "HG-05 mission decision authority"
+  },
+  "edges": [
+    {
+      "from": "P",
+      "to": "N",
+      "label": "HG-05-I1 impulse meaning"
+    },
+    {
+      "from": "G",
+      "to": "O",
+      "label": "HG-05-I2 handover assumptions"
+    },
+    {
+      "from": "N",
+      "to": "D",
+      "label": "HG-05-I3 unexplained residual"
+    },
+    {
+      "from": "O",
+      "to": "D",
+      "label": "HG-05-CH1 legacy path review"
+    }
+  ],
+  "source": "examples/historical/mars-climate-orbiter/README.md",
+  "source_locator": "Mermaid block 1",
+  "source_sha256": "0eefa2649073d149a270e08addfedecd8c95925ee8c9adf6b79017262c250ed5"
+}

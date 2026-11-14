@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "EVD-A-7",
+  "configuration": "controller-revision-A",
+  "verification": "VER-7",
+  "requirement": "REQ-7",
+  "criterion_ms": 500,
+  "observed_ms": 460,
+  "recorded_result": "pass",
+  "status": "supplied-historical-fixture-record",
+  "scope": "authored assessment input, not a run executed by this repository"
+}

@@ -1,0 +1,554 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "reviewer": "performance_review_reasoning",
+  "participant_root": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114",
+  "reviews": [
+    {
+      "arm": "prior-guidance",
+      "case": "UT-01",
+      "assessed_at_utc": "2026-11-14T00:05:11.167653+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Decision-rule outcomes are internally consistent including bounds and overlap; any precedence is explicit.",
+          "score": 2,
+          "locations": [
+            "outputs/output.md:7-15"
+          ],
+          "reason": "Defines a proposed, exhaustive, mutually exclusive partition: upper bound at or below 120; lower bound above 120; otherwise mixed interval."
+        },
+        {
+          "index": 2,
+          "criterion": "Uncertainty arithmetic and the120ms equality boundary are correct; no universal rule or adoption is invented.",
+          "score": 2,
+          "locations": [
+            "outputs/output.md:23-28"
+          ],
+          "reason": "All six intervals and dispositions are arithmetically correct, including exact equality and an upper bound equal to 120. U remains a supplied guaranteed-bound assumption; the rule is not adopted or universal."
+        },
+        {
+          "index": 3,
+          "criterion": "Original IDs/observations retained; supplied assumptions and synthetic fixture status clear.",
+          "score": 2,
+          "locations": [
+            "outputs/output.md:3,19-30"
+          ],
+          "reason": "Retains N-1 and OBS-1 through OBS-6, all x/U pairs and original supplier statuses; explicitly labels authored fixtures and no execution."
+        },
+        {
+          "index": 4,
+          "criterion": "Finite observations are not upgraded to all-envelope verification; operational caution is separated from established nonconformity and authorization.",
+          "score": 2,
+          "locations": [
+            "outputs/output.md:30-38"
+          ],
+          "reason": "Keeps row outcomes separate from authorized acceptance and all-envelope closure. Withholding is an operational recommendation; indeterminate results are not declared violations."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false
+    },
+    {
+      "arm": "revised-guidance",
+      "case": "UT-01",
+      "assessed_at_utc": "2026-11-14T00:05:38.298891+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Decision-rule outcomes are internally consistent including bounds and overlap; any precedence is explicit.",
+          "score": 2,
+          "locations": [
+            "outputs/output.md:5-11"
+          ],
+          "reason": "The proposed pass, fail and inconclusive inequalities are mutually exclusive and exhaustive for the supplied nonnegative guaranteed error bounds."
+        },
+        {
+          "index": 2,
+          "criterion": "Uncertainty arithmetic and the120ms equality boundary are correct; no universal rule or adoption is invented.",
+          "score": 2,
+          "locations": [
+            "outputs/output.md:15-20"
+          ],
+          "reason": "All six derived intervals and row outcomes are correct; exact 120 ms and an upper bound of 120 pass. Bound meaning remains conditional and no rule adoption is invented."
+        },
+        {
+          "index": 3,
+          "criterion": "Original IDs/observations retained; supplied assumptions and synthetic fixture status clear.",
+          "score": 2,
+          "locations": [
+            "outputs/output.md:1,13-22"
+          ],
+          "reason": "N-1, every OBS ID, all input values and supplier statuses are retained. Derived intervals are explicitly not new readings; fixtures and no hardware execution are clear."
+        },
+        {
+          "index": 4,
+          "criterion": "Finite observations are not upgraded to all-envelope verification; operational caution is separated from established nonconformity and authorization.",
+          "score": 2,
+          "locations": [
+            "outputs/output.md:24-28"
+          ],
+          "reason": "Does not close the whole envelope from finite observations. Separates conditional represented failure, unresolved intervals, operational withholding, rule adoption and authorized acceptance."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false
+    }
+  ],
+  "comparison": {
+    "written_after_independent_assessments_at_utc": "2026-11-14T00:08:11.178320+00:00",
+    "result": "descriptive tie at rubric ceiling",
+    "prior_guidance_scores": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "revised_guidance_scores": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "interpretation": "Both responses independently meet all four criteria, produce identical six-record dispositions under a clearly proposed interval rule, and preserve rule-adoption/acceptance/coverage limits. No incremental benefit of the revised guidance is observed in this one case. The prior response shows the issue was not inevitable under the old guidance; it does not erase the original HO-13 finding."
+  },
+  "guidance_review": {
+    "assessment": "proportionate and scoped; no actionable finding",
+    "files_changed": [
+      {
+        "packet_path": "skills/mbse-verification-evidence/SKILL.md",
+        "prior_sha256": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+        "revised_sha256": "c9a7b3d95a9c01efd51e818184a773273a1f5583a28ade636eba6b32f17f6524",
+        "added_lines": 2,
+        "removed_lines": 0
+      },
+      {
+        "packet_path": "skills/mbse-verification-evidence/references/evidence-contracts.md",
+        "prior_sha256": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+        "revised_sha256": "7fce7846b8dedbcd5ff0f331d99c3238ccde5de6326be1886f334d09fb646bcb",
+        "added_lines": 2,
+        "removed_lines": 0
+      }
+    ],
+    "locations": [
+      "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/skills/mbse-verification-evidence/SKILL.md:14",
+      "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/skills/mbse-verification-evidence/references/evidence-contracts.md:19"
+    ],
+    "basis": "One main-skill paragraph names the exact general failure mechanism: conflicting point/interval outcomes. One reference paragraph distinguishes uncertainty representations, adopted versus proposed rules, boundary/overlap checks, explicit precedence, and operational rejection versus measurement evidence. The interval example is explicitly one possible rule, not a universal acceptance obligation. The additions contain no HO-13/UT-01 IDs, task-specific observations, numerical thresholds or invented standards obligation. Existing guidance remains intact.",
+    "normative_scope": "Requires internal consistency and transparent policy; does not mandate a universal metrology rule, a particular coverage probability, a particular uncertainty representation, or adoption authority."
+  },
+  "reviewed_file_hashes": [
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/outputs/output.md",
+      "sha256": "008a655f1243a4b254ba1f140820a43cee79327a7cb0469b5f3f45687efc5b23",
+      "size_bytes": 4010,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/packet-manifest.json",
+      "sha256": "46b5ec6a59d3f1827f5b41faae64db7d2ffe22f34ea71b66354f865a4f1193b7",
+      "size_bytes": 740,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/request.md",
+      "sha256": "2acf74dbce6ad67186824c169f68b40982ffe062135b0e7942b1e54d12227c69",
+      "size_bytes": 1671,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/run-record.json",
+      "sha256": "8d871ef04ef0541b608de1cb3ccd6c8634573bb813b5e90228258ab3f2670253",
+      "size_bytes": 4276,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/skills/mbse-verification-evidence/SKILL.md",
+      "sha256": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+      "size_bytes": 1885,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/skills/mbse-verification-evidence/agents/openai.yaml",
+      "sha256": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+      "size_bytes": 329,
+      "review_scope": "hash only"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/skills/mbse-verification-evidence/references/evidence-contracts.md",
+      "sha256": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+      "size_bytes": 2004,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/outputs/output.md",
+      "sha256": "637f3b14771225788101e6bd7bb5586e522ee30abe644331efa2b6e9713906c1",
+      "size_bytes": 3548,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/packet-manifest.json",
+      "sha256": "380b55260aaa0e3a37a2a2f7149d1368561811db65b352b1444e5ca99561e8c0",
+      "size_bytes": 742,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/request.md",
+      "sha256": "2acf74dbce6ad67186824c169f68b40982ffe062135b0e7942b1e54d12227c69",
+      "size_bytes": 1671,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/run-record.json",
+      "sha256": "1c0855c6163b725b58db0cea0394cb41462d4fb8856279046ca8190f3cf42521",
+      "size_bytes": 3999,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/skills/mbse-verification-evidence/SKILL.md",
+      "sha256": "c9a7b3d95a9c01efd51e818184a773273a1f5583a28ade636eba6b32f17f6524",
+      "size_bytes": 2160,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/skills/mbse-verification-evidence/agents/openai.yaml",
+      "sha256": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+      "size_bytes": 329,
+      "review_scope": "hash only"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/revised-guidance/skills/mbse-verification-evidence/references/evidence-contracts.md",
+      "sha256": "7fce7846b8dedbcd5ff0f331d99c3238ccde5de6326be1886f334d09fb646bcb",
+      "size_bytes": 2939,
+      "review_scope": "content and provenance review"
+    },
+    {
+      "path": "/workspace/repos/builderbob/mbse-agents/evals/evidence/verification-tuning-20261113/protocol.json",
+      "sha256": "7a95d65315f07cd5c68bd979d9d8355c1735888c44c12e64ed08d081501be01d",
+      "size_bytes": 2729,
+      "review_scope": "review basis or original-evidence preservation check"
+    },
+    {
+      "path": "/workspace/repos/builderbob/mbse-agents/evals/evidence/verification-tuning-20261113/change-record.json",
+      "sha256": "bf3048034bf9c90e9f9cca2c49da4b59328594b2acfb3408da033dd8354e3cbf",
+      "size_bytes": 1332,
+      "review_scope": "review basis or original-evidence preservation check"
+    },
+    {
+      "path": "/workspace/repos/builderbob/mbse-agents/evals/evidence/performance-20261113/task-domain/HO-13/outputs/verification.md",
+      "sha256": "d68dc2eeda1d61145d68531f5da34140a7d45bf54c5a8da8b076506e81efe25e",
+      "size_bytes": 9111,
+      "review_scope": "review basis or original-evidence preservation check"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/verification.md",
+      "sha256": "d68dc2eeda1d61145d68531f5da34140a7d45bf54c5a8da8b076506e81efe25e",
+      "size_bytes": 9111,
+      "review_scope": "review basis or original-evidence preservation check"
+    },
+    {
+      "path": "/workspace/repos/builderbob/mbse-agents/.mbse-review/performance-reasoning-review.json",
+      "sha256": "4b5b21f7f3765f8138d5e478058f25e29e17f06dbe910e0dd1a7ad301f5ab0b4",
+      "size_bytes": 82519,
+      "review_scope": "review basis or original-evidence preservation check"
+    },
+    {
+      "path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-verification-evidence/SKILL.md",
+      "sha256": "c9a7b3d95a9c01efd51e818184a773273a1f5583a28ade636eba6b32f17f6524",
+      "size_bytes": 2160,
+      "review_scope": "review basis or original-evidence preservation check"
+    },
+    {
+      "path": "/workspace/repos/builderbob/mbse-agents/.agents/skills/mbse-verification-evidence/references/evidence-contracts.md",
+      "sha256": "7fce7846b8dedbcd5ff0f331d99c3238ccde5de6326be1886f334d09fb646bcb",
+      "size_bytes": 2939,
+      "review_scope": "review basis or original-evidence preservation check"
+    }
+  ],
+  "limits": [
+    "One single-case participant per arm; this is close transfer of the identified boundary-decision problem, not a broad verification benchmark.",
+    "Outputs were independently scored before comparison, but the reviewer could see arm labels and the documented tuning motivation; the review was not blinded.",
+    "Trusted dispatch requests no parent conversation history, but generic host/project instructions, skill catalog and memory-summary metadata were available. Access was instruction restricted, not technically isolated.",
+    "The prior run record contains an ambiguous parent-context phrase; raw bytes are preserved and the explicit provenance clarification is recorded separately.",
+    "Exact models, settings, tokens and costs are unknown. Recorded wall-clock intervals do not establish comparative inference efficiency.",
+    "Both outputs are at the coarse rubric ceiling. The observed tie does not establish general equivalence, tuning benefit, causal effect or statistical improvement.",
+    "Byte checks bind actual current artifacts to protocol/manifests/run records. They do not independently prove every past access or continuous immutability.",
+    "All timing inputs are authored fixtures. Correct interval classification is not physical evidence, all-envelope coverage, adoption, approval or operational acceptance.",
+    "The original HO-13 output and [2,2,2,2,1] rating remain unchanged. A separately authored correction or parent-proposed paragraph receives no fresh participant-production credit."
+  ],
+  "all_output_scores_recorded_at_utc": "2026-11-14T00:05:38.298902+00:00",
+  "context_provenance": {
+    "raw_record_phrase": {
+      "path": "/workspace/worktrees/builderbob/mbse-verification-transfer-20261114/prior-guidance/run-record.json",
+      "field": "context_limit",
+      "text": "This delegated participant inherited parent conversation context; fresh refers to no prior engineering answer or evaluation key being consulted, not a technically clean context boundary."
+    },
+    "clarifications": [
+      {
+        "source": "root collaboration message",
+        "evidence_type": "trusted dispatch statement, not independently reconstructed tool log",
+        "statement": "Both participants were dispatched with collaboration.spawn_agent fork_turns=none, requesting no parent conversation history; generic host/project/catalog/memory context may remain."
+      },
+      {
+        "source": "verification_transfer_prior collaboration message",
+        "evidence_type": "producer provenance clarification; not a quality self-assessment",
+        "statement": "The raw phrase referred to generic host/project instructions, skill catalog and provided memory summary. The participant stated it did not receive or consult prior HO-13 output, findings, tuning discussion or comparison results. No frozen files were edited."
+      }
+    ],
+    "interpretation": "The clarification and trusted dispatch statement support interpreting the phrase as ambient context, not evidence of actual parent-chat inheritance. Preserve the raw record unchanged. No clean-room or technically enforced isolation claim is made.",
+    "recorded_at_utc": "2026-11-14T00:08:11.178320+00:00"
+  },
+  "integrity_checks": [
+    {
+      "arm": "prior-guidance",
+      "protocol_packet_equals_manifest": true,
+      "request_hash_matches_protocol": true,
+      "hash_checks": [
+        {
+          "claim_source": "protocol",
+          "file_count": 4,
+          "mismatches": []
+        },
+        {
+          "claim_source": "packet_manifest",
+          "file_count": 4,
+          "mismatches": []
+        },
+        {
+          "claim_source": "input_files",
+          "file_count": 5,
+          "mismatches": []
+        },
+        {
+          "claim_source": "output_files",
+          "file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "review_time_utc": "2026-11-14T00:08:11.177097+00:00"
+    },
+    {
+      "arm": "revised-guidance",
+      "protocol_packet_equals_manifest": true,
+      "request_hash_matches_protocol": true,
+      "hash_checks": [
+        {
+          "claim_source": "protocol",
+          "file_count": 4,
+          "mismatches": []
+        },
+        {
+          "claim_source": "packet_manifest",
+          "file_count": 4,
+          "mismatches": []
+        },
+        {
+          "claim_source": "inputs_sha256_before",
+          "file_count": 5,
+          "mismatches": []
+        },
+        {
+          "claim_source": "inputs_sha256_after",
+          "file_count": 5,
+          "mismatches": []
+        },
+        {
+          "claim_source": "outputs_sha256",
+          "file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "review_time_utc": "2026-11-14T00:08:11.177623+00:00"
+    }
+  ],
+  "observation_checks": [
+    {
+      "arm": "prior-guidance",
+      "rows": [
+        {
+          "id": "OBS-1",
+          "observed_ms": 111,
+          "U_ms": 3,
+          "supplier_status": "pass",
+          "interval_ms": [
+            108,
+            114
+          ],
+          "proposed_rule_outcome": "pass",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        },
+        {
+          "id": "OBS-2",
+          "observed_ms": 121,
+          "U_ms": 4,
+          "supplier_status": "fail",
+          "interval_ms": [
+            117,
+            125
+          ],
+          "proposed_rule_outcome": "inconclusive",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        },
+        {
+          "id": "OBS-3",
+          "observed_ms": 130,
+          "U_ms": 2,
+          "supplier_status": "fail",
+          "interval_ms": [
+            128,
+            132
+          ],
+          "proposed_rule_outcome": "fail",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        },
+        {
+          "id": "OBS-4",
+          "observed_ms": 120,
+          "U_ms": 0,
+          "supplier_status": "pass",
+          "interval_ms": [
+            120,
+            120
+          ],
+          "proposed_rule_outcome": "pass",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        },
+        {
+          "id": "OBS-5",
+          "observed_ms": 116,
+          "U_ms": 4,
+          "supplier_status": "pass",
+          "interval_ms": [
+            112,
+            120
+          ],
+          "proposed_rule_outcome": "pass",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        },
+        {
+          "id": "OBS-6",
+          "observed_ms": 117,
+          "U_ms": 6,
+          "supplier_status": "pass",
+          "interval_ms": [
+            111,
+            123
+          ],
+          "proposed_rule_outcome": "inconclusive",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        }
+      ]
+    },
+    {
+      "arm": "revised-guidance",
+      "rows": [
+        {
+          "id": "OBS-1",
+          "observed_ms": 111,
+          "U_ms": 3,
+          "supplier_status": "pass",
+          "interval_ms": [
+            108,
+            114
+          ],
+          "proposed_rule_outcome": "pass",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        },
+        {
+          "id": "OBS-2",
+          "observed_ms": 121,
+          "U_ms": 4,
+          "supplier_status": "fail",
+          "interval_ms": [
+            117,
+            125
+          ],
+          "proposed_rule_outcome": "inconclusive",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        },
+        {
+          "id": "OBS-3",
+          "observed_ms": 130,
+          "U_ms": 2,
+          "supplier_status": "fail",
+          "interval_ms": [
+            128,
+            132
+          ],
+          "proposed_rule_outcome": "fail",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        },
+        {
+          "id": "OBS-4",
+          "observed_ms": 120,
+          "U_ms": 0,
+          "supplier_status": "pass",
+          "interval_ms": [
+            120,
+            120
+          ],
+          "proposed_rule_outcome": "pass",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        },
+        {
+          "id": "OBS-5",
+          "observed_ms": 116,
+          "U_ms": 4,
+          "supplier_status": "pass",
+          "interval_ms": [
+            112,
+            120
+          ],
+          "proposed_rule_outcome": "pass",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        },
+        {
+          "id": "OBS-6",
+          "observed_ms": 117,
+          "U_ms": 6,
+          "supplier_status": "pass",
+          "interval_ms": [
+            111,
+            123
+          ],
+          "proposed_rule_outcome": "inconclusive",
+          "input_values_and_status_preserved": true,
+          "arithmetic_correct": true
+        }
+      ]
+    }
+  ],
+  "original_finding_preserved": {
+    "sha256": "d68dc2eeda1d61145d68531f5da34140a7d45bf54c5a8da8b076506e81efe25e",
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "original_output_unchanged": true,
+    "rating_unchanged": true
+  },
+  "completed_at_utc": "2026-11-14T00:08:11.178320+00:00",
+  "summary": {
+    "outputs_reviewed": 2,
+    "actionable_output_findings": 0,
+    "critical_failures": 0,
+    "guidance_findings": 0,
+    "comparison": "ceiling tie; no observed incremental benefit"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": 2,
+  "scope": "illustrative-reference-model",
+  "execution": {
+    "run_id": "20261113T232648.095660Z-2eeaccbb87e5",
+    "started_at": "2026-11-13T23:26:48.095660+00:00",
+    "finished_at": "2026-11-13T23:26:48.097961+00:00",
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/repos/builderbob/mbse-agents/examples/worked/cold-storage-alarm/run_checks.py"
+    ],
+    "python_version": "3.12.3",
+    "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39"
+  },
+  "tool": "Python 3.12.3",
+  "configuration": {
+    "reference_model.py": "1787b1d2625996b3e5541c28ffdea8e81ccdacd9ed244605f2ac1a442b35586e",
+    "run_checks.py": "ba1cc7850e0409b2b0369b28a0629c505544b517c3bd457f10637e0865393599",
+    "baseline.json": "b38b42079f40e8c99b61a0c2c4f7cbfdbbda76a09b0ce31d2aebb118e5a6611d",
+    "verification.md": "6a30bc539df4fed08501bfdbfff34839dac979f96495ccbd269370bc4520db52",
+    "requirements.md": "bf196b5278fc248ce2934d61e31a03be197633e83260245d7894d980c95747dc",
+    "architecture.md": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1",
+    "brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974",
+    "evidence_io.py": "4c929f369f6718613dcc9f0347545da63681a204b5cc3ad5743c46f47a4cb6da",
+    "explore_states.py": "e4a96bfeb5cb532ec58fb80511e3284caf5f28c3d1c29f763be2e97a07c656e8"
+  },
+  "results": [
+    {
+      "verification": "VER-01",
+      "result": "pass",
+      "observed": {
+        "first_high_ms": 2000,
+        "asserted_before_2s": false
+      }
+    },
+    {
+      "verification": "VER-02",
+      "result": "pass",
+      "observed": {
+        "high_assertions": 0,
+        "below_threshold_ms": 1900
+      }
+    },
+    {
+      "verification": "VER-03",
+      "result": "pass",
+      "observed": {
+        "first_sensor_fault_ms": 1000
+      }
+    },
+    {
+      "verification": "VER-04",
+      "result": "pass",
+      "observed": {
+        "high_after_unsafe_ack": true,
+        "high_after_recovery_only": true,
+        "high_after_valid_ack": false
+      }
+    },
+    {
+      "verification": "VER-05",
+      "result": "pass",
+      "observed": {
+        "events": [
+          {
+            "time_ms": 2000,
+            "high": true,
+            "sensor_fault": false
+          },
+          {
+            "time_ms": 2300,
+            "high": false,
+            "sensor_fault": false
+          }
+        ],
+        "expected_event_count": 2
+      }
+    },
+    {
+      "verification": "VER-06",
+      "result": "pass",
+      "observed": {
+        "invalid_nan_fault": true,
+        "recovered": {
+          "high": false,
+          "sensor_fault": false,
+          "local_alarm": false
+        },
+        "events": [
+          {
+            "time_ms": 1000,
+            "high": false,
+            "sensor_fault": true
+          },
+          {
+            "time_ms": 1100,
+            "high": false,
+            "sensor_fault": false
+          }
+        ]
+      }
+    },
+    {
+      "verification": "VER-07",
+      "result": "pass",
+      "observed": {
+        "states": 66,
+        "transitions": 396,
+        "input_combinations_per_state": 6,
+        "counterexamples": 0,
+        "temperature_classes": [
+          "below 8",
+          "at/above 8",
+          "invalid"
+        ],
+        "fault_delay_ms": 1000,
+        "time_quantum_ms": 100,
+        "abstraction": "time translation; timers saturated after decision thresholds; per-transition event checks"
+      }
+    },
+    {
+      "verification": "VER-08",
+      "result": "pass",
+      "observed": {
+        "checked_cases": 17,
+        "invalid_temperature_classes": 8,
+        "failures": []
+      }
+    }
+  ],
+  "claim_support": "sampled-reference-model-only",
+  "acceptance": "not_accepted_for_hardware",
+  "review": "pending"
+}

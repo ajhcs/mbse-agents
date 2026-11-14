@@ -1,0 +1,43 @@
+%% Retrospective synthetic proposal; editable information-flow aid, not SysML.
+%% Solid = supplied/reconstructed dependency or reported result, not proof.
+%% Dotted = unknown lineage or proposed check; the edge label says which.
+flowchart LR
+  F["HG-03 fixture assembly"]
+  P["HG-03 primary optical measurement"]
+  X["HG-03 cross-check measurement / auxiliary instrument"]
+  A["HG-03 acceptance review"]
+  C["HG-03 calibration record"]
+  V["HG-03 fixture assurance"]
+  F -->|HG-03-I1 reference dependence| P
+  C -->|HG-03-I3 assembly evidence| V
+  V -->|HG-03-C3 acceptance claim; OPEN| A
+  X -->|HG-03-I2 conflicting evidence; RETAIN| A
+  P -->|HG-03-I4 production evidence| A
+  R["Retained physical / calibration chain; exact artifacts unknown"]
+  R -.->|mapping to actual assembly unknown| F
+  R -.->|record-to-reference correspondence unknown| C
+  DEF["Released definition; revision and source data not supplied"]
+  GEN["Geometry generator; version and input provenance unknown"]
+  GEO["One generated geometry file; common input in CH1"]
+  CA["Analysis computer A"]
+  CB["Analysis computer B"]
+  GEN --> GEO
+  DEF -.->|source correspondence to recover| GEN
+  GEO --> CA
+  GEO --> CB
+  P -.->|raw-data path not supplied| CA
+  P -.->|raw-data path not supplied| CB
+  SW["Algorithms, configurations and raw datasets; sharing unknown"]
+  SW -.->|recover lineage| CA
+  SW -.->|recover lineage| CB
+  CA -->|reported agreement; C2 unsupported| A
+  CB -->|reported agreement; C2 unsupported| A
+  XR["Auxiliary physical reference / calibration / data; provenance unknown"]
+  XR -.->|independence not yet established| X
+  R -.->|possible shared dependence; investigate| XR
+  DIM["HG-03-V01 proposed independent dimensional survey"]
+  IR["Separately justified reference and uncertainty basis; not supplied"]
+  F -.->|planned as-assembled measurement| DIM
+  DEF -.->|planned dimensional comparison| DIM
+  IR -.->|planned metrology chain| DIM
+  DIM -.->|future scoped evidence; no result| V

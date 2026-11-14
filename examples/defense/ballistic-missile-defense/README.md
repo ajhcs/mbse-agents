@@ -1,5 +1,7 @@
 # Ballistic Missile Defense Element
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Overview
 
 The Ballistic Missile Defense Element (BMDE) is an engagement coordination component within the layered Ballistic Missile Defense System (BMDS) architecture. The BMDE performs track management, threat assessment, weapon-target pairing, and engagement coordination across distributed sensors and interceptor batteries. It receives track data from forward-deployed sensors (space-based IR, land-based radar, sea-based radar), fuses tracks into a composite threat picture, assigns interceptors to threats based on defended asset priority and probability of kill (Pk), and issues fire control commands to interceptor launch systems. The BMDE is an ACAT ID system-of-systems with Missile Defense Agency (MDA) acquisition oversight, operating within a joint/combined force structure.

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-20",
+  "slug": "london-2012",
+  "title": "London 2012: separate event readiness from legacy value",
+  "year": 2012,
+  "domain": "public_services",
+  "outcome": "successful_delivery_with_open_legacy",
+  "focus": "A program can deliver its immediate service while long-term benefits remain separate claims with different owners and evidence.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-20-S1",
+      "title": "National Audit Office, The London 2012 Olympic Games and Paralympic Games: post-Games review, HC 794",
+      "url": "https://www.nao.org.uk/wp-content/uploads/2012/12/1213794fr.pdf",
+      "publication_date": "2012-12-05",
+      "locator": "Summary paragraphs 5–10; Parts One, Two, and Four",
+      "source_type": "original_program_audit",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "A post-Games audit of delivery, then-current forecasts, and legacy arrangements. Future costs and benefits are not converted into realized outcomes."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-20-F1",
+      "statement": "The NAO described successful staging, intensive scenario testing, and changed governance as planning transitioned to operations.",
+      "source_ids": [
+        "HG-20-S1"
+      ],
+      "locator": "Summary paragraphs 5–6"
+    },
+    {
+      "id": "HG-20-F2",
+      "statement": "It reported effective contingency action for security staffing shortfalls while stating that the effectiveness of new legacy arrangements remained to be seen.",
+      "source_ids": [
+        "HG-20-S1"
+      ],
+      "locator": "Summary paragraphs 8–10"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Venues, transport, volunteers, security, delivery organizations, government decision bodies, and future venue operators span different lifecycle phases.",
+    "interfaces": [
+      "Planning governance → operational command: decision speed and authority change at the event boundary.",
+      "Event delivery → legacy operation: assets, funding, obligations, and benefit measurement need a new owner."
+    ],
+    "decision": {
+      "question": "What should a post-event success statement include?",
+      "options": [
+        "Collapse delivery, cost forecasts, and future benefits into one success rating.",
+        "Report achieved service, residual liabilities, forecasts, and long-term benefits as separate claims."
+      ],
+      "recommendation": "Keep a benefits register alive after the delivery organization winds down.",
+      "uncertainty": "Effective contingency may impose costs or dependencies elsewhere; successful staging does not settle every value-for-money question."
+    },
+    "artifact": {
+      "id": "HG-20-A1",
+      "type": "Delivery-to-legacy handover",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Event readiness",
+          "Demonstrate integrated scenarios and response authority",
+          "Observed exercises and issue closure"
+        ],
+        [
+          "Contingency activation",
+          "Name trigger, resource provider, and decision rights",
+          "Availability and practical mobilization evidence"
+        ],
+        [
+          "Legacy benefit",
+          "Transfer owner, baseline, measure, and review date",
+          "Post-event operating data and counterfactual assumptions"
+        ]
+      ]
+    },
+    "questions": [
+      "Which measures expire when the event ends?",
+      "What makes a contingency operationally credible?",
+      "Write a success statement that is positive without claiming unrealized benefits."
+    ],
+    "answer_signals": [
+      "Separates immediate outputs, operating outcomes, and later benefits.",
+      "Connects governance and resource readiness to contingencies.",
+      "Retains accountability after organizational transition."
+    ],
+    "transfer_exercise": "Synthetic: a city completes an emergency-response facility before a major event. Draft separate opening and five-year benefit acceptance statements.",
+    "limits": "The case uses the 2012 audit’s knowledge state; it does not assert the eventual outcome of every legacy commitment."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

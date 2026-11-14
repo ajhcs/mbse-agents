@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "producer": "quiz_domain_skills",
+  "run_id": "quiz-domain-skills-20261113T233524Z",
+  "packet_files_read": [
+    "request.md",
+    "questions.json",
+    "response-template.json",
+    "packet-manifest.json"
+  ],
+  "skill_entrypoint_descriptions_inspected": [
+    ".agents/skills/mbse-aerospace/SKILL.md",
+    ".agents/skills/mbse-architecture/SKILL.md",
+    ".agents/skills/mbse-baseline-review/SKILL.md",
+    ".agents/skills/mbse-conops/SKILL.md",
+    ".agents/skills/mbse-defense/SKILL.md",
+    ".agents/skills/mbse-electronic-systems/SKILL.md",
+    ".agents/skills/mbse-operational-scenarios/SKILL.md",
+    ".agents/skills/mbse-requirements/SKILL.md",
+    ".agents/skills/mbse-system-concept/SKILL.md",
+    ".agents/skills/mbse-systems-engineering/SKILL.md",
+    ".agents/skills/mbse-verification-evidence/SKILL.md"
+  ],
+  "skill_files_read_in_full": [
+    ".agents/skills/mbse-aerospace/SKILL.md",
+    ".agents/skills/mbse-architecture/SKILL.md",
+    ".agents/skills/mbse-baseline-review/SKILL.md",
+    ".agents/skills/mbse-conops/SKILL.md",
+    ".agents/skills/mbse-defense/SKILL.md",
+    ".agents/skills/mbse-electronic-systems/SKILL.md",
+    ".agents/skills/mbse-operational-scenarios/SKILL.md",
+    ".agents/skills/mbse-requirements/SKILL.md",
+    ".agents/skills/mbse-system-concept/SKILL.md",
+    ".agents/skills/mbse-systems-engineering/SKILL.md",
+    ".agents/skills/mbse-verification-evidence/SKILL.md",
+    ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md",
+    ".agents/skills/mbse-architecture/references/architecture-records.md",
+    ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md",
+    ".agents/skills/mbse-requirements/references/requirement-contracts.md",
+    ".agents/skills/mbse-system-concept/references/concept-decisions.md",
+    ".agents/skills/mbse-aerospace/references/domain-analysis.md",
+    ".agents/skills/mbse-defense/references/domain-analysis.md",
+    ".agents/skills/mbse-electronic-systems/references/domain-analysis.md"
+  ],
+  "selection_basis": "Cross-cutting engineering judgment plus requirements, architecture, operations, concept and evidence tasks; aerospace history, defense acquisition and electronic-control interfaces warranted the three supplied domain guides.",
+  "integrity_check": {
+    "manifest_files_hashed": 39,
+    "mismatches": [],
+    "note": "Hashing also read bytes of remaining manifest-listed files without using their contents as guidance."
+  },
+  "started_at_note": "First captured UTC timestamp; initial packet discovery preceded that observation. Total run latency is unavailable and left null.",
+  "confidence_note": "No calibrated confidence scale was supplied; confidence fields remain null.",
+  "external_sources_used": [],
+  "created_at": "2026-11-13T23:37:41.951985+00:00"
+}

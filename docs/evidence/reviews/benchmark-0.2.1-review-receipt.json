@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "scope": "Independent editorial/template/provenance review; no new agent-performance result.",
+  "reviewed_at": "2026-11-14T00:14:05.605714+00:00",
+  "source_hashes": {
+    "evals/benchmark/items.json": "d7154602c9ea21aba5ae45cc2922723d818cbbe7c1bc11a0fd5d22a36d1c6571",
+    "evals/benchmark/keys.json": "5e665eaef48cc05f9e1febce7802fd26bddadbd3ab5edf3c2936f8195867b37e",
+    "scripts/benchmark.py": "c7aab0816ba6d4f00fcfb90a6d476a0a04b76b69ba139c62307fb1318ceaf893"
+  },
+  "change_record_sha256": "fe959e134fedf0e5baab604fa185fb4f94548d265a531e99c232a358531b2f66",
+  "bank_changed_paths": [
+    "/version"
+  ],
+  "key_changed_paths": [
+    "/keys/SEJ-045/reasoning_criteria/1",
+    "/keys/SEJ-046/rationale",
+    "/keys/SEJ-048/rationale",
+    "/version"
+  ],
+  "checks": {
+    "change_record_hashes_match": true,
+    "all_49_archive_files_match_manifest": true,
+    "bank_semantics_change_only_version": true,
+    "exact_three_key_edits_plus_version": true,
+    "all_60_answer_selections_unchanged": true,
+    "scorer_change_only_template_model_default": true,
+    "new_template_model_is_unknown": true,
+    "default_model_passes_with_recorded_other_run_fields": true,
+    "null_model_still_rejects": true,
+    "complete_archive_prepares_and_scores_synthetic_packet": true,
+    "current_scorer_refuses_archived_packet_revision": true,
+    "metadata_amendment_valid_none": true,
+    "metadata_amendment_valid_task": true,
+    "metadata_amendment_valid_task-domain": true
+  },
+  "metadata_amendments": {
+    "none": {
+      "original_sha256": "1146be3e4f3c151ab3ef45c995bc4bd6c1eb0490df7295efd43e4c72e7efde00",
+      "amended_sha256": "db2393caeef1f256706618417f1a56d773cc359096d888367703a374d26dbe9b",
+      "hashes_match_amendment": true,
+      "changed_paths": [
+        "/run/exceptions",
+        "/run/model"
+      ],
+      "only_model_and_one_appended_exception_changed": true,
+      "all_answer_content_unchanged": true,
+      "packet_binding_unchanged": true,
+      "run_identity_and_times_unchanged": true,
+      "score_bound_to_corrected_bytes_and_archived_version": true,
+      "review_template_bound_to_corrected_bytes_and_archived_key": true
+    },
+    "task": {
+      "original_sha256": "7462f9a107e699b16e792963b8f0ee9fc5471351ecdccacaa933f5e776c75c9a",
+      "amended_sha256": "793ed0a90dc70d4d89648ec2b0b6812cf5a2c3c07426829f34fd6b1875e467c1",
+      "hashes_match_amendment": true,
+      "changed_paths": [
+        "/run/exceptions",
+        "/run/model"
+      ],
+      "only_model_and_one_appended_exception_changed": true,
+      "all_answer_content_unchanged": true,
+      "packet_binding_unchanged": true,
+      "run_identity_and_times_unchanged": true,
+      "score_bound_to_corrected_bytes_and_archived_version": true,
+      "review_template_bound_to_corrected_bytes_and_archived_key": true
+    },
+    "task-domain": {
+      "original_sha256": "d101342fd05334143f6e596fa2e282b33e0127b77f763d54742a414dc3122311",
+      "amended_sha256": "1efc1704a1f6d9f4fcfa0a3d36cf4c4fbe3199cb9e021224bea9dc86e6c2d32d",
+      "hashes_match_amendment": true,
+      "changed_paths": [
+        "/run/exceptions",
+        "/run/model"
+      ],
+      "only_model_and_one_appended_exception_changed": true,
+      "all_answer_content_unchanged": true,
+      "packet_binding_unchanged": true,
+      "run_identity_and_times_unchanged": true,
+      "score_bound_to_corrected_bytes_and_archived_version": true,
+      "review_template_bound_to_corrected_bytes_and_archived_key": true
+    }
+  },
+  "participant_reasoning_access": "Compared for equality only inside local process; no participant reasoning was displayed or used for key review.",
+  "passed": true
+}

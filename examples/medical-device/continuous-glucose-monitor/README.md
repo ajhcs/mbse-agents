@@ -1,5 +1,7 @@
 # Continuous Glucose Monitor
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Overview
 
 The Continuous Glucose Monitor (CGM) is a wearable system that measures interstitial glucose levels every 1-5 minutes via a subcutaneous electrochemical sensor and transmits readings to a companion mobile application over Bluetooth Low Energy (BLE). The mobile display app renders real-time glucose values, trend arrows, and configurable high/low alerts. A cloud analytics platform aggregates historical data, generates trend reports, and provides optional insulin dosing guidance classified as Software as a Medical Device (SaMD) per IMDRF N41. The system comprises three distinct software items: sensor firmware (IEC 62304 Class B), mobile display application (IEC 62304 Class A), and cloud analytics SaMD (IEC 62304 Class B for dosing guidance, Class A for reporting). The system is classified FDA Class II via 510(k) and EU MDR Class IIb. Sensor wear duration is 14 days.

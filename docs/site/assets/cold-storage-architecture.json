@@ -1,0 +1,35 @@
+{
+  "kind": "source-derived-logical-flow",
+  "nodes": {
+    "S": "COMP-01 Sensor adapter",
+    "E": "COMP-02 Evaluator",
+    "U": "ACTOR-01 Technician",
+    "A": "COMP-03 Annunciator",
+    "L": "COMP-04 Event recorder"
+  },
+  "edges": [
+    {
+      "from": "S",
+      "to": "E",
+      "label": "IFC-01 time and temperature"
+    },
+    {
+      "from": "U",
+      "to": "E",
+      "label": "IFC-02 acknowledgement"
+    },
+    {
+      "from": "E",
+      "to": "A",
+      "label": "IFC-03 high OR fault"
+    },
+    {
+      "from": "E",
+      "to": "L",
+      "label": "IFC-04 transition record"
+    }
+  ],
+  "source": "examples/worked/cold-storage-alarm/architecture.md",
+  "source_locator": "Mermaid block 1",
+  "source_sha256": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1"
+}

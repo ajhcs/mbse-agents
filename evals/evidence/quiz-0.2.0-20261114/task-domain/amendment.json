@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "artifact_kind": "postproduction-metadata-normalization-amendment",
+  "created_at": "2026-11-14T00:10:08.717008+00:00",
+  "producer": "Codex sub-agent /root/quiz_v020_domain",
+  "packet": {
+    "packet_id": "9a2ebf161a904592b42612e312a2bb22",
+    "inputs_sha256": "eaf9f21ddf1638dfc0230585554ad188a8f2d7cad804c3be7079fb88e5d72596",
+    "bank_sha256": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+    "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393"
+  },
+  "run_id": "task-domain-20261114T000250Z",
+  "source_file": "answers.json",
+  "source_sha256": "d101342fd05334143f6e596fa2e282b33e0127b77f763d54742a414dc3122311",
+  "corrected_file": "answers-metadata-corrected.json",
+  "corrected_sha256": "1efc1704a1f6d9f4fcfa0a3d36cf4c4fbe3199cb9e021224bea9dc86e6c2d32d",
+  "transform": [
+    {
+      "op": "replace",
+      "path": "/run/model",
+      "old_value": null,
+      "value": "unknown"
+    },
+    {
+      "op": "add",
+      "path": "/run/exceptions/-",
+      "value": "Postproduction metadata-only normalization requested by the evaluation controller: run.model changed from null to the explicit string 'unknown' for format compatibility. The exact model remains unavailable. Answers, packet binding, run ID and original timestamps are unchanged. Original frozen answers.json SHA-256: d101342fd05334143f6e596fa2e282b33e0127b77f763d54742a414dc3122311."
+    }
+  ],
+  "unchanged_original_files_sha256": {
+    "answers.json": "d101342fd05334143f6e596fa2e282b33e0127b77f763d54742a414dc3122311",
+    "usage.json": "050424f06f2d9c34faa6865c7b2b4d5e585fcb49a3ffbe86497973fc7335c73c",
+    "integrity.json": "b189c93d01ffed4602ff57a5bb8c11fba08d2d6e4a8643b2687f956936c6ab39"
+  },
+  "verification": {
+    "only_documented_json_changes": true,
+    "answers_unchanged": true,
+    "packet_binding_unchanged": true,
+    "run_id_unchanged": true,
+    "original_timestamps_unchanged": true,
+    "all_original_file_bytes_unchanged": true,
+    "self_graded": false,
+    "answer_keys_or_scores_accessed": false
+  },
+  "tools_used_for_amendment": [
+    "functions.exec",
+    "exec_command"
+  ],
+  "scope": "Metadata normalization only. Original usage.json and integrity.json remain unchanged and describe the original production run; this amendment records the separate normalization."
+}

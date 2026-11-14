@@ -1,5 +1,7 @@
 # Architecture
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## System Context
 
 The Launch Vehicle Avionics system is the upper stage avionics suite for a medium-lift expendable launch vehicle. It interfaces with the range safety ground system for flight termination, the engine controller for thrust vector control, the ground launch control system for pre-launch checkout, and the tracking network for telemetry. The architecture enforces strict physical and logical separation between the safety-critical FTS and the mission-critical GN&C/telemetry functions.

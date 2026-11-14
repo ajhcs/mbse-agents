@@ -1,5 +1,7 @@
 # UAS Ground Control Station
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Overview
 
 The UAS Ground Control Station (GCS) is a multi-vehicle ground control station for Group 4/5 unmanned aircraft systems of the MQ-9 class. The GCS provides command and control (C2) link management, mission planning and execution, electro-optical/infrared/synthetic aperture radar (EO/IR/SAR) sensor payload control, and airspace integration through ADS-B and ACAS Xu interfaces. A single GCS station supports simultaneous control of up to four air vehicles across beyond-line-of-sight (BLOS) satellite and line-of-sight (LOS) data links.
@@ -81,3 +83,9 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 | MIL-STD-810H    | Environmental engineering considerations and laboratory tests                                        |
 | DO-178C         | Software assurance for airborne-equivalent safety-critical GCS functions (applied by analogy)         |
 | STANAG 4586     | NATO standard for UAS control system interoperability                                                |
+
+## Executed engineering study
+
+[Review the fault-model study](analysis/report.md) for complete static cuts, conditional parameter scenarios, proof obligations and retained counterexamples. [Source/applicability review](source-review.md) and [current review coverage](review-status.json) identify the remaining decisions. Original files are preserved in the historical JSON snapshot.
+
+[Draft next-control challenge procedures](analysis/control-challenges.md) specify stimuli, observations and evidence capture for the remaining control claims.

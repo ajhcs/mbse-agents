@@ -1,5 +1,7 @@
 # EV Battery Management System
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Overview
 
 The EV Battery Management System (BMS) manages a 800V lithium-ion battery pack consisting of 192 series-connected cells organized in 16 modules of 12 cells each. The BMS monitors individual cell voltages and temperatures, estimates state-of-charge (SoC) and state-of-health (SoH), controls high-voltage contactors for pack connect/disconnect, and manages the thermal regulation loop to maintain cells within safe operating limits. The system provides the vehicle controller with pack-level data for energy management, regenerative braking coordination, and charging control. Thermal runaway detection and propagation prevention is the primary safety function, requiring sub-second isolation of a faulting module from the pack.

@@ -1,5 +1,7 @@
 # Cybersecurity Analysis
 
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
+
 ## Applicable Framework
 
 This cybersecurity analysis follows DO-326A (Airworthiness Security Process Specification) and DO-356A (Airworthiness Security Methods and Considerations). The Security Risk Assessment identifies security-relevant assets within the FMS system boundary, characterizes threat agents, maps attack paths through the system architecture, and allocates security requirements alongside safety requirements per ARP4754A.
