@@ -1,0 +1,172 @@
+{
+  "id": "AEBDetection",
+  "system": "Autonomous Emergency Braking System",
+  "hazard": "HZ-001",
+  "mission": "One obstacle-detection demand within an explicitly selected operating condition; hardware unavailability must be estimated for this demand before using empirical data.",
+  "events": {
+    "BE1": {
+      "description": "Camera algorithm misses obstacle",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE2": {
+      "description": "Camera hardware unavailable for demand",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE3": {
+      "description": "Camera-specific environmental degradation",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/100"
+    },
+    "BE4": {
+      "description": "Radar target return insufficient",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/20"
+    },
+    "BE5": {
+      "description": "Radar hardware unavailable for demand",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE6": {
+      "description": "Radar-specific multipath/clutter loss",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/100"
+    },
+    "BE7": {
+      "description": "Fusion suppresses otherwise usable obstacle detection",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE8": {
+      "description": "Shared environmental condition defeats both sensor paths",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    }
+  },
+  "gates": {
+    "G1": {
+      "operator": "or",
+      "inputs": [
+        "BE1",
+        "BE2",
+        "BE3"
+      ]
+    },
+    "G2": {
+      "operator": "or",
+      "inputs": [
+        "BE4",
+        "BE5",
+        "BE6"
+      ]
+    },
+    "G3": {
+      "operator": "and",
+      "inputs": [
+        "G1",
+        "G2"
+      ]
+    },
+    "TOP": {
+      "operator": "or",
+      "inputs": [
+        "G3",
+        "BE7",
+        "BE8"
+      ]
+    }
+  },
+  "top_event": "TOP",
+  "scenarios": [
+    {
+      "id": "nominal-synthetic",
+      "basis": "Illustrative demand mixture; not an ASIL-derived rate.",
+      "overrides": {}
+    },
+    {
+      "id": "shared-environment-stress",
+      "basis": "Tenfold common environmental demand probability.",
+      "overrides": {
+        "BE8": "1/100"
+      }
+    },
+    {
+      "id": "fusion-improvement",
+      "basis": "Hypothetical elimination of the modeled fusion omission only.",
+      "overrides": {
+        "BE7": "0"
+      }
+    },
+    {
+      "id": "common-cause-control",
+      "basis": "Hypothetical reduction in shared environmental loss by operating restriction.",
+      "overrides": {
+        "BE8": "1/10000"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "AEB-P1",
+      "description": "Camera-path failures are tolerated when radar and fusion remain usable",
+      "when": {
+        "BE4": false,
+        "BE5": false,
+        "BE6": false,
+        "BE7": false,
+        "BE8": false
+      },
+      "expected_top": false,
+      "expectation": "holds"
+    },
+    {
+      "id": "AEB-P2",
+      "description": "Radar-path failures are tolerated when camera and fusion remain usable",
+      "when": {
+        "BE1": false,
+        "BE2": false,
+        "BE3": false,
+        "BE7": false,
+        "BE8": false
+      },
+      "expected_top": false,
+      "expectation": "holds"
+    },
+    {
+      "id": "AEB-C1",
+      "description": "Two healthy sensors guarantee detection despite arbitrary fusion behavior",
+      "when": {
+        "BE1": false,
+        "BE2": false,
+        "BE3": false,
+        "BE4": false,
+        "BE5": false,
+        "BE6": false,
+        "BE8": false
+      },
+      "expected_top": false,
+      "expectation": "counterexample"
+    },
+    {
+      "id": "AEB-C2",
+      "description": "Perfect fusion resolves every common environmental sensor loss",
+      "when": {
+        "BE7": false
+      },
+      "expected_top": false,
+      "expectation": "counterexample"
+    }
+  ],
+  "interpretation": "Misses in both sensor paths, a fusion omission, or a shared sensor-loss event can each defeat detection. Fusion is not an additional independent barrier after both inputs are unavailable. The model does not address false positives, collision dynamics, braking effectiveness, or the entire operating domain.",
+  "schema_version": 1,
+  "scope": "authored-static-fault-model",
+  "basis": "Authored correction of the preserved gallery hazard model. Boolean event meanings and parameter scenarios are proposed teaching abstractions, not accepted field data.",
+  "source_links": [
+    "../hazard-analysis.md",
+    "../architecture.md",
+    "../requirements.md"
+  ],
+  "probability_assumption": "mutually_independent_basic_events_with_shared_causes_explicitly_reused"
+}

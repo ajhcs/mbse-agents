@@ -1,6 +1,6 @@
 # UAS Ground Control Station
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Overview
 
@@ -83,3 +83,9 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 | MIL-STD-810H    | Environmental engineering considerations and laboratory tests                                        |
 | DO-178C         | Software assurance for airborne-equivalent safety-critical GCS functions (applied by analogy)         |
 | STANAG 4586     | NATO standard for UAS control system interoperability                                                |
+
+## Executed engineering study
+
+[Review the fault-model study](analysis/report.md) for complete static cuts, conditional parameter scenarios, proof obligations and retained counterexamples. [Source/applicability review](source-review.md) and [current review coverage](review-status.json) identify the remaining decisions. Original files are preserved in the historical JSON snapshot.
+
+[Draft next-control challenge procedures](analysis/control-challenges.md) specify stimuli, observations and evidence capture for the remaining control claims.

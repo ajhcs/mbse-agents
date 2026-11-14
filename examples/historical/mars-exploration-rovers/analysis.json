@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "HG-07",
+  "slug": "mars-exploration-rovers",
+  "title": "Mars Exploration Rovers: connect scientific intent to operational choices",
+  "year": 2004,
+  "domain": "space",
+  "outcome": "success_with_lifecycle_adaptation",
+  "focus": "Turn a broad scientific question into a sequence of feasible observations, then manage the life of that capability.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-07-S1",
+      "title": "NASA Will Send Two Robotic Geologists to Roam on Mars",
+      "url": "https://www.jpl.nasa.gov/news/nasa-will-send-two-robotic-geologists-to-roam-on-mars/",
+      "publication_date": "2003-06-04",
+      "locator": "Paragraphs on landing-site selection and instrument workflow",
+      "source_type": "original_project_record",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "This is a prelaunch statement: schedules and expected outcomes are plans, not flight evidence."
+    },
+    {
+      "id": "HG-07-S2",
+      "title": "Opportunity mission history",
+      "url": "https://science.nasa.gov/mission/mer-opportunity/",
+      "publication_date": "current official retrospective; historical events through 2014 used",
+      "locator": "In Depth, 2004 mission and September 2014 extension entries",
+      "source_type": "official_retrospective",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Later history is used only to distinguish realized operation from the 2003 plans; post-2014 events are outside this case."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-07-F1",
+      "statement": "The prelaunch concept balanced safe landing conditions with scientific value, using remote instruments to select targets for close-up examination.",
+      "source_ids": [
+        "HG-07-S1"
+      ],
+      "locator": "Landing-site and instrument-workflow paragraphs"
+    },
+    {
+      "id": "HG-07-F2",
+      "statement": "Opportunity operated beyond its primary 90-sol mission; NASA records a 2014 mission extension and flash-memory reformat responding to operational resets.",
+      "source_ids": [
+        "HG-07-S2"
+      ],
+      "locator": "In Depth, 2004 and September 2014 entries"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Science team, target selection, terrain, mobility, instruments, solar energy, communications, and software maintenance form an observation-producing system.",
+    "interfaces": [
+      "Science question → target selection: a measurement must discriminate among scientific explanations.",
+      "Target priority → daily plan: traverse cost, power, hazards, and data return constrain achievable science."
+    ],
+    "decision": {
+      "question": "How should a team compare a scientifically attractive target with a safer accessible one?",
+      "options": [
+        "Rank targets only by expected scientific interest.",
+        "Compare information value with access cost, risk, energy, and remaining opportunities."
+      ],
+      "recommendation": "Make the rejected option and its opportunity cost visible in the plan.",
+      "uncertainty": "Long life alone does not establish scientific effectiveness; compare returned observations with the scientific question."
+    },
+    "artifact": {
+      "id": "HG-07-A1",
+      "type": "Observation-to-operation trade",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Remote survey",
+          "Select targets using discriminating features",
+          "Images, spectral clues, and alternative explanations"
+        ],
+        [
+          "Close examination",
+          "Budget traverse, contact, power, and downlink together",
+          "Terrain and instrument feasibility checks"
+        ],
+        [
+          "Extended operations",
+          "Reassess goals when capability changes",
+          "Observed resets, updated constraints, and recoverability evidence"
+        ]
+      ]
+    },
+    "questions": [
+      "Which scientific need is met by having both remote and contact instruments?",
+      "How could a technically successful traverse be a poor mission decision?",
+      "Write an extension recommendation with a condition that would reverse it."
+    ],
+    "answer_signals": [
+      "Traces instruments to information needs rather than listing hardware.",
+      "Treats resources and opportunities as coupled.",
+      "Distinguishes design life, actual survival, and delivered mission value."
+    ],
+    "transfer_exercise": "Synthetic: a survey robot has one day of battery remaining and three uncertain targets. Present a decision table without inventing probabilities.",
+    "limits": "The proposed trade is new. No rover science ranking, traverse model, or flight software experiment was executed here."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

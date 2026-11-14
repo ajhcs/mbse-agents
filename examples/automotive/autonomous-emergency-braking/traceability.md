@@ -1,10 +1,10 @@
 # Traceability
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Trace Strategy
 
-This traceability matrix establishes bidirectional linkage across all AEB system engineering artifacts. Forward traces demonstrate that every requirement is allocated, sourced, and verified. Reverse traces confirm that every component, hazard, and verification activity connects back to a requirement. Gaps are first-class entries with disposition, not omissions.
+This traceability matrix establishes bidirectional linkage across all AEB system engineering artifacts. Forward and reverse links identify proposed allocations, sources and verification activities. Executed evidence is separately scoped; links do not establish requirement satisfaction or complete coverage. Gaps are first-class entries with disposition, not omissions.
 
 **Traced entities:**
 - Requirements (REQ-) to architecture components (CMP-)
@@ -194,20 +194,20 @@ This traceability matrix establishes bidirectional linkage across all AEB system
 
 ### Hazards to Controls to Requirements
 
-| HZ ID   | CTL ID(s)                | REQ ID(s)                                                                       | Fully Mitigated? |
+| HZ ID   | CTL ID(s)                | REQ ID(s)                                                                       | Control verification status |
 |---------|--------------------------|---------------------------------------------------------------------------------|------------------|
-| HZ-001  | CTL-001, CTL-002         | REQ-FUN-005, REQ-SAF-001, REQ-SAF-002                                          | Yes              |
-| HZ-002  | CTL-001, CTL-002         | REQ-FUN-001, REQ-FUN-005, REQ-SAF-001                                          | Yes              |
-| HZ-003  | CTL-003                  | REQ-SAF-003, REQ-FUN-010                                                       | Yes              |
-| HZ-004  | CTL-004                  | REQ-FUN-012, REQ-FUN-014, REQ-SAF-004                                          | Yes              |
-| HZ-005  | CTL-004, CTL-005         | REQ-FUN-015, REQ-SAF-005                                                       | Yes              |
-| HZ-006  | CTL-006                  | REQ-PRF-001, REQ-PRF-002, REQ-SAF-006                                          | Yes              |
-| HZ-007  | CTL-007                  | REQ-FUN-011, REQ-SAF-007                                                       | Yes              |
-| HZ-008  | CTL-008                  | REQ-FUN-017, REQ-FUN-018, REQ-SAF-008                                          | Yes              |
-| HZ-009  | CTL-009                  | REQ-FUN-022, REQ-SEC-001, REQ-SEC-002                                          | Yes              |
-| HZ-010  | CTL-010                  | REQ-SEC-003, REQ-SEC-004, REQ-SEC-005                                          | Yes              |
-| HZ-011  | CTL-001, CTL-011         | REQ-SAF-001, REQ-SAF-009, REQ-SAF-010                                          | Yes              |
-| HZ-012  | CTL-002, CTL-011         | REQ-SAF-002, REQ-SAF-010                                                       | Yes              |
+| HZ-001  | CTL-001, CTL-002         | REQ-FUN-005, REQ-SAF-001, REQ-SAF-002                                          | Planned physical verification |
+| HZ-002  | CTL-001, CTL-002         | REQ-FUN-001, REQ-FUN-005, REQ-SAF-001                                          | Planned physical verification |
+| HZ-003  | CTL-003                  | REQ-SAF-003, REQ-FUN-010                                                       | Planned physical verification |
+| HZ-004  | CTL-004                  | REQ-FUN-012, REQ-FUN-014, REQ-SAF-004                                          | Planned physical verification |
+| HZ-005  | CTL-004, CTL-005         | REQ-FUN-015, REQ-SAF-005                                                       | Planned physical verification |
+| HZ-006  | CTL-006                  | REQ-PRF-001, REQ-PRF-002, REQ-SAF-006                                          | Planned physical verification |
+| HZ-007  | CTL-007                  | REQ-FUN-011, REQ-SAF-007                                                       | Planned physical verification |
+| HZ-008  | CTL-008                  | REQ-FUN-017, REQ-FUN-018, REQ-SAF-008                                          | Planned physical verification |
+| HZ-009  | CTL-009                  | REQ-FUN-022, REQ-SEC-001, REQ-SEC-002                                          | Planned physical verification |
+| HZ-010  | CTL-010                  | REQ-SEC-003, REQ-SEC-004, REQ-SEC-005                                          | Planned physical verification |
+| HZ-011  | CTL-001, CTL-011         | REQ-SAF-001, REQ-SAF-009, REQ-SAF-010                                          | Planned physical verification |
+| HZ-012  | CTL-002, CTL-011         | REQ-SAF-002, REQ-SAF-010                                                       | Planned physical verification |
 
 ### Verification to Requirements
 
@@ -279,14 +279,16 @@ This traceability matrix establishes bidirectional linkage across all AEB system
 | GAP-003 | Orphan component   | CMP-GWY-01B  | Ethernet Switch Module has no direct requirements; switch configuration is an implementation detail of IFC-INT-003 and IFC-INT-006 | Accepted: switch configuration is a design artifact, not a separate requirement |
 | GAP-004 | Incomplete verification | REQ-SAF-001 | Undetected collision probability (1e-8/h) verified by analysis only (VER-A-002); requires validated field data for sensor detection rates and fusion performance that is not yet available | Planned: complete field data collection before FSA; analysis contingent on data availability |
 
-## Coverage Summary
+## Record inventory and coverage boundary
 
-- **Requirements with architecture allocation**: 49/49 (100%)
-- **Safety requirements with hazard source**: 10/10 (100%)
-- **Security requirements with threat source**: 7/7 (100%)
-- **Requirements with verification activity**: 49/49 (100%)
-- **Verification activities with evidence artifact**: 58/58 (100%)
-- **Components with at least one requirement**: 22/25 (88.0%) -- GAP-001 (CMP-BRK-01F), GAP-002 (CMP-GWY-01A), GAP-003 (CMP-GWY-01B)
-- **Hazards with at least one control**: 12/12 (100%)
-- **Controls with at least one requirement**: 11/11 (100%)
-- **Gaps registered**: 4 (3 Planned, 1 Accepted)
+The current checker counts 49 REQ records, 26 CMP records, 13 FUN records, 16 IFC records, 12 HZ records, 11 CTL records, 57 VER records, 39 EVD records. It checks declared IDs, selected record links, evidence lifecycle/path consistency and reproducible model results.
+
+These counts are inventories, not percentages of engineering completeness. A planned procedure or proposed artifact is not verification evidence. Applicability, requirement coverage, procedure adequacy, independent review and physical performance remain open. The gap register retains specific missing allocations and review obligations.
+
+## Executed model activities
+
+| Activity | Selected claim | Evidence | Lifecycle | Closure boundary |
+| --- | --- | --- | --- | --- |
+| VER-MODEL-001 | HZ-001 Boolean paths, dependency assumptions and scenario arithmetic | EVD-MODEL-001 | Executed | Authored static model only; physical requirements remain open |
+
+[Executed model study](analysis/report.md). These additional activities do not change the original planned physical-procedure totals.

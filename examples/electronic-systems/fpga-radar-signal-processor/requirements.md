@@ -1,8 +1,8 @@
 # Requirements
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
-All requirements are atomic, testable shall-statements.
+These proposed requirements retain their original IDs. Measurability, decomposition and source applicability are review obligations; versioning does not imply approval.
 
 ## Requirement Record Schema
 
@@ -11,7 +11,7 @@ All requirements are atomic, testable shall-statements.
 | ID            | Unique identifier (e.g., REQ-FUN-001)                                                            |
 | Statement     | Atomic shall-statement                                                                            |
 | Rationale     | Why this requirement exists                                                                       |
-| Source        | Hazard ID (HZ-), control ID (CTL-), regulatory clause, or stakeholder need                       |
+| Source        | Candidate basis requiring [source review](source-review.md); hazard ID (HZ-), control ID (CTL-), regulatory clause, or stakeholder need                       |
 | Parent        | Parent requirement ID (if derived)                                                                |
 | Verification  | Method: test, analysis, inspection, demonstration, formal verification                            |
 | Allocation    | Target component ID(s) from architecture.md                                                       |

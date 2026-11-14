@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-04",
+  "slug": "ariane-501",
+  "title": "Ariane 501: requalify reused assumptions",
+  "year": 1996,
+  "domain": "space",
+  "outcome": "failure",
+  "focus": "A reused component brings an operating envelope and inactive-looking functions that still require explicit disposition.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-04-S1",
+      "title": "Ariane 501 — Presentation of Inquiry Board report",
+      "url": "https://www.esa.int/Newsroom/Press_Releases/Ariane_501_-_Presentation_of_Inquiry_Board_report",
+      "publication_date": "1996-07-23",
+      "locator": "Inquiry findings paragraphs on inertial systems, alignment function, and testing",
+      "source_type": "contemporaneous_official_inquiry_summary",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "ESA’s contemporaneous summary was inspected; the full inquiry report is not the evidence used here. Numeric conversion details are deliberately not reconstructed."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-04-F1",
+      "statement": "ESA reported simultaneous failure of both inertial reference systems and loss of guidance information during the initial flight.",
+      "source_ids": [
+        "HG-04-S1"
+      ],
+      "locator": "Inquiry findings on flight sequence"
+    },
+    {
+      "id": "HG-04-F2",
+      "statement": "An alignment function needed before launch remained active afterward; testing did not sufficiently represent the complete flight-control system and its operating context.",
+      "source_ids": [
+        "HG-04-S1"
+      ],
+      "locator": "Inquiry findings on alignment function and simulations"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Inherited inertial software, flight trajectory, redundancy, diagnostics, guidance consumers, and integrated qualification form the reuse boundary.",
+    "interfaces": [
+      "New mission envelope → reused software: inherited validity assumptions need comparison with new trajectories.",
+      "Inertial system → guidance: failure indications must not become plausible control inputs."
+    ],
+    "decision": {
+      "question": "What is the acceptance basis for a component already used successfully elsewhere?",
+      "options": [
+        "Accept previous flight history as sufficient.",
+        "Compare old and new envelopes, remove or justify unused functions, and qualify integrated behavior."
+      ],
+      "recommendation": "Make every inherited assumption either demonstrated, changed, or explicitly unresolved.",
+      "uncertainty": "A software-only test cannot establish complete vehicle behavior; this gallery does not reproduce the original flight dynamics."
+    },
+    "artifact": {
+      "id": "HG-04-A1",
+      "type": "Reuse assumption ledger",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Operating envelope",
+          "List new inputs and modes outside prior experience",
+          "Representative trajectory and boundary tests"
+        ],
+        [
+          "Retained function",
+          "Justify post-transition execution or disable it",
+          "Mode-transition verification"
+        ],
+        [
+          "Redundant channels",
+          "Identify common software and input dependencies",
+          "Common-cause analysis and fault-response evidence"
+        ]
+      ]
+    },
+    "questions": [
+      "Why can two redundant units fail together?",
+      "Which evidence from the earlier system transfers, and which must be renewed?",
+      "Explain a reuse qualification gap without describing all legacy software as unsafe."
+    ],
+    "answer_signals": [
+      "Tests assumptions rather than relying on the component name or reputation.",
+      "Connects common inputs and code to correlated failure.",
+      "Defines a bounded acceptance claim and unresolved integration evidence."
+    ],
+    "transfer_exercise": "Synthetic: reuse a navigation service on a faster vehicle. Create three assumption-delta entries before choosing tests.",
+    "limits": "The artifact is a teaching synthesis of an official summary, not the original inquiry’s complete causal analysis."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-17",
+  "slug": "world-wide-web-proposal",
+  "title": "World Wide Web proposal: start with the organization’s information problem",
+  "year": 1989,
+  "domain": "communications_computing",
+  "outcome": "concept_baseline",
+  "focus": "A concept becomes credible when it explains the users, existing assets, adoption constraints, and deliberate scope boundaries.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-17-S1",
+      "title": "Tim Berners-Lee, Information Management: A Proposal",
+      "url": "https://www.w3.org/History/1989/proposal.html",
+      "publication_date": "1989-03; recirculated 1990-05",
+      "locator": "Losing Information at CERN; CERN Requirements; Non requirements; A Practical Project",
+      "source_type": "original_project_proposal",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Author-hosted HTML transcription of the original proposal. It is evidence of intent, not proof that every proposed feature was implemented or widely adopted."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-17-F1",
+      "statement": "The proposal addresses information loss and relationships across a changing organization, then calls for heterogeneous access, decentralization, and links to existing data.",
+      "source_ids": [
+        "HG-17-S1"
+      ],
+      "locator": "Losing Information at CERN; CERN Requirements"
+    },
+    {
+      "id": "HG-17-F2",
+      "statement": "It treats sophisticated authorization and accounting as outside the proposed local scope while discussing use of existing protection for protected data.",
+      "source_ids": [
+        "HG-17-S1"
+      ],
+      "locator": "Non requirements"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Researchers, institutional memory, existing databases, diverse computers, links, and local adoption form the proposed information system.",
+    "interfaces": [
+      "Existing repository → new access layer: adoption depends on useful information being available early.",
+      "Local collaboration → broader deployment: a changed trust environment can invalidate deliberate scope exclusions."
+    ],
+    "decision": {
+      "question": "How should a team assess a promising early concept?",
+      "options": [
+        "Score it by the eventual market’s feature list.",
+        "Evaluate problem fit, adoption path, alternatives, and the assumptions that must hold in its initial context."
+      ],
+      "recommendation": "Keep the initial scope coherent while recording conditions that trigger redesign.",
+      "uncertainty": "The later success of the Web does not prove each early design choice was inevitable or universally appropriate."
+    },
+    "artifact": {
+      "id": "HG-17-A1",
+      "type": "Concept and scope decision note",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Stakeholder problem",
+          "Preserve relationships across people, projects, and repositories",
+          "Observed retrieval and handover difficulties"
+        ],
+        [
+          "Adoption path",
+          "Expose useful existing material before requiring migration",
+          "Pilot access to representative repositories"
+        ],
+        [
+          "Boundary change",
+          "Reopen protection and governance when access expands",
+          "New users, threats, obligations, and ownership"
+        ]
+      ]
+    },
+    "questions": [
+      "Why is access to existing information an architectural requirement rather than only a convenience?",
+      "When is a non-requirement responsible scoping, and when does it become a dangerous inherited assumption?",
+      "Pitch a small pilot without using eventual success as evidence available in 1989."
+    ],
+    "answer_signals": [
+      "Frames the problem in organizational work rather than a technology label.",
+      "Recognizes adoption and compatibility as system constraints.",
+      "Keeps historical context distinct from present-day security needs."
+    ],
+    "transfer_exercise": "Synthetic: propose a shared engineering knowledge service for three teams using incompatible repositories. Include one deliberate exclusion and its reopening trigger.",
+    "limits": "This is analysis of the original proposal, not a claim about all subsequent Web standards or a current security recommendation."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

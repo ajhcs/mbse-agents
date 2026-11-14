@@ -1,0 +1,300 @@
+# Independent benchmark review
+
+Reviewed on 2026-11-13 by `/root/benchmark_independent_review`.
+
+Update, 2026-11-14: the version 0.2.0 repair passed the independent second pass recorded at the end of this report. All 60 revised keys were reviewed; 25 focused tests and 26 independent probes passed. The original findings below remain attached to version 0.1.0 and its exact hashes.
+
+The original 0.1.0 bank is useful instructional material, but its selection score is unsuitable as evidence of engineering reasoning. A rule that chooses the longest option answers 54 of 55 single-choice items correctly, including all 12 public-evaluation questions. Two multiple-selection keys also penalize reasonable interpretations of their stems. The scoring tools need stronger input/review binding and structural validation.
+
+This report concerns the exact inputs preserved under [benchmark-independent/source](benchmark-independent/source). The reviewer did not open participant outputs. All 60 question/key pairs were reviewed before the parent later communicated aggregate completion news. No participant performance informed these key judgments. Production files, questions and keys were not edited by this reviewer. All generated fixtures, logs and probes are under `.mbse-review`; no paid APIs or external messages were used.
+
+## Identity and executed checks
+
+| Input | SHA-256 |
+| --- | --- |
+| `evals/benchmark/items.json` | `b18f9b5dcc2ba5badd0e954c8a8f5a3a2755a885726c509b589e27eec91c3558` |
+| `evals/benchmark/keys.json` | `e5d7e0194212ceddd4babff9f5fbe003e50fa0968667b3b04424f1b25c3545a7` |
+| `evals/cases.json` | `886e8754085590b74f9743e0a882494c0fb1faa5137384a1a465d1f564c64191` |
+| `evals/rubrics.json` | `fc131c5c2a439a61a13b8c98a9fbb3e3eceb031bcf25ffad7893898d2fd3e81d` |
+| `scripts/benchmark.py` | `7491d8c48ffa6d628abc36cbda06fb1fb30cbbba55c7805cb56cabda6f5008fc` |
+
+The [complete review manifest](benchmark-independent/source/review-input-sha256.json) includes documentation, tests, packet preparation and fixtures. The host's `bob-admin workspace-status` confirmed writable Samsung-backed `/workspace`.
+
+The 17 existing benchmark/packet tests passed. Their temporary directory calls were redirected into `.mbse-review/benchmark-independent/tmp`; production test files were unchanged. See [focused-tests.txt](benchmark-independent/focused-tests.txt). Adversarial probes imported the preserved scorer and generated explicitly synthetic answers; these are software tests, not agent results. See [probes.py](benchmark-independent/probes.py) and [adversarial-probe-results.json](benchmark-independent/adversarial-probe-results.json).
+
+## Defects
+
+### F1 — P1: answer length gives away almost every single-choice key
+
+Across 55 single-choice items, `max(choices, key=lambda option: len(choices[option]))` matches 54 keys. The one exception is SEJ-013. Counts by split are 21/21 practice, 21/22 development and 12/12 evaluation-public. Applying the same one-option rule to every question gives 54/60 overall with no knowledge of the scenario. Exact item-level results are in [choice-shortcuts.json](benchmark-independent/choice-shortcuts.json).
+
+The correct option routinely contains the complete, qualified engineering procedure while alternatives are short absolutes, irrelevant activities or plainly unsupported claims. Examples include SEJ-046's long evidence/decision explanation versus a definition, jargon and an unsupported unsafe declaration; SEJ-049's state/authority view versus supplier names, alphabetical functions and an enclosure rendering. Balanced answer-letter frequencies do not repair this content cue.
+
+Revise the bank as a new version. Give each option a plausible engineering action of comparable detail, with a concrete supplied fact making one preferable. Do not merely pad distractors to equal length. Recheck the validity and uniqueness of the key after every rewrite. Selection accuracy from the original bank remains a diagnostic of these particular questions, not evidence of an improvement in reasoning.
+
+### F2 — P2: answers are not bound to the packet actually answered
+
+The response template at original `scripts/benchmark.py:160-166` includes no packet identity or digest. `score()` validates the supplied packet and the answer IDs separately (`206-234`), then takes `arm` from whichever packet was passed (`250-253`). The same unchanged synthetic answer file and same review were accepted against both `none` and `task-domain` packets. Each result claimed its supplied arm.
+
+This permits accidental cross-arm or cross-version misattribution without any edits to the answer file. Bind responses to the exact input packet through an immutable packet identifier plus hashes, or a manifest digest recorded in the response. Validate it before scoring. Existing unbound outputs need an explicit legacy status; do not backfill an execution binding as if the producer supplied it.
+
+### F3 — P2: an unchanged review can be applied to a different rubric
+
+Original `scripts/benchmark.py:262-281` binds a review only to answer bytes and the number of criteria. Ratings are positional arrays. In the probe, a new versioned bank/key reversed SEJ-001's two reasoning criteria. The original answer file and review `[2,0]` were accepted against the new packet, silently assigning each rating to the other criterion. See `score-new-rubric.json` under the probe artifacts.
+
+Bind reviews to the exact key/criteria revision and packet, preferably using stable criterion identities as well as a digest. Reordering or changing a criterion must require a new assessment or an explicit adjudicated migration. Answer-byte integrity alone is insufficient for review applicability.
+
+### F4 — P2: packet verification accepts structurally incomplete or contradictory manifests
+
+Original `verify_packet()` (`183-203`) iterates whatever `files` entries remain but does not require the request/template hashes or reconcile arm, skill inventory and installed packages. Two probes were accepted: remove `request.md` from the manifest and materially change the request; relabel a no-skill packet `catalog` while retaining `skills: []` and no skill directory.
+
+Require the complete mandatory input inventory, distinct selected questions, valid packet identities, and internally consistent arm/package metadata. Compare actual selected input files against that inventory. A local mutable manifest is not an authenticity or isolation boundary; these are consistency checks to catch malformed records, not a claim that a malicious controller cannot forge a packet.
+
+### F5 — P2: the comparison report trusts impossible summary values
+
+Original `report()` (`289-304`) checks top-level schema/kind, matching bank/key/question identities and distinct run IDs, then copies `selection_accuracy` without checking it against outcomes. A one-item score with a single correct outcome was changed only to a new run ID and `selection_accuracy: 7.0`; `report()` accepted it and displayed the two accuracies as `1.0` and `7.0`.
+
+Validate full score structure and recompute or cross-check counts, per-dimension aggregates and derived accuracy before reporting. Retain the input score identities/digests in the report. This can detect inconsistency, although external provenance still requires the bound source artifacts.
+
+### F6 — P2: two multiple-selection keys confuse consideration with adoption
+
+SEJ-008 (`items.json:257`, `keys.json:78`) asks which *issues belong in the lifecycle review*. Option A is “Whether every module should be physically destroyed on replacement.” Reviewing whether destruction is necessary is reasonable for retired credential-bearing hardware; a reviewer can conclude it is unnecessary. The rationale rejects prescribing destruction, which is not what A says. The key B/C/D is therefore not uniquely justified as written.
+
+SEJ-027 (`items.json:658`, `keys.json:271`) asks which interface conditions *matter before executing* a delayed command. Option C asks whether the signature was valid when sent. The scenario grants a valid signature, so this may be redundant, but it does not make signature validity irrelevant. The key A/B/D needs a stem such as “which additional conditions remain unresolved,” or a distractor that explicitly claims signature validity is sufficient for execution. The current all-or-nothing scoring can penalize defensible A/B/C/D answers.
+
+These are wording/key-adjudication defects, not demands that every possible interpretation receive full credit. Preserve the original versions and adjudicate any affected old responses against their original wording.
+
+### F7 — P2: HO-04's timing rubric omits its composition assumption
+
+The HO-04 request gives interface processing “up to 150 ms,” detector 80 ms and actuator 30 ms. Its first rubric requires recognizing that 260 ms exceeds 200 ms. The request does not state that stages are serial/nonoverlapping or that their maxima can coincide. The sum is a conservative bound under a serial model; a bound exceeding the target is a support/allocation gap, not an observation of implementation failure.
+
+Reward an explicit conditional composition argument or supply the intended serial/nonoverlap assumption. HO-13's architecture fixture already supplies that assumption and its rubric separately distinguishes missing evidence from demonstrated failure. Carry that precision into HO-04.
+
+### F8 — P3: the Flight 1549 simulation locator points partly to the wrong section
+
+The HG-08 source map and HO-16 request cite NTSB/AAR-10/03 §§1.16.1 and 2.3.2. The immediate-return versus delayed-return simulation setup is §1.16.3, printed pp49–50; §2.3.2, pp88–89, supplies the interpretation. §1.16.1 is the airplane performance study. The fact and key are supported, but the first locator should be corrected in a versioned source update. [NTSB report](https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf).
+
+### F9 — P3: score-output preservation does not refuse dangling symlinks
+
+Original CLI `score --output` checks `.exists()` (`359-363`), unlike packet preparation's additional `.is_symlink()` check. A dangling output symlink passes that guard, then `write_json()` creates the symlink target. The local synthetic probe confirmed this behavior. Refuse symlinks as existing outputs and use an exclusive write if concurrent creation must be protected. This is a small consistency repair; no production file was affected.
+
+## Complete original-key review
+
+“Accept” means the proposed selection is the most defensible of the supplied options, not that the question discriminates skilled from unskilled reasoning. The global surface-cue defect applies to the bank independently of these substantive judgments.
+
+| Item | Key | Disposition and independent reasoning |
+| --- | --- | --- |
+| SEJ-001 | B | Accept: request entry speed does not identify the dispatch/pickup constraint. |
+| SEJ-002 | C | Accept: distinguish the inspection outcome from a preferred drone mechanism. |
+| SEJ-003 | D | Best available; clarify boundary: external ownership does not itself require exclusion from the system of interest. Explicit dependencies and owned responses are sound. |
+| SEJ-004 | A,D | Accept: preserve competing outcomes and investigate cross-role causes before selecting signoff automation. |
+| SEJ-005 | C | Accept: access-to-care scope includes affected patients and feasible non-digital pathways. |
+| SEJ-006 | C | Accept: restoration and spare logistics determine whether the one-day service constraint is feasible. |
+| SEJ-007 | B | Accept: developer-supported operation does not establish contractor handover capability. |
+| SEJ-008 | B,C,D | Ambiguous: considering disposal alternatives is not imposing destruction; F6. |
+| SEJ-009 | B | Accept: equal failure occurrence need not imply equal availability or support effort. |
+| SEJ-010 | C | Accept: planned transition configurations are intended operational configurations. |
+| SEJ-011 | D | Accept: software diversity helps some mechanisms without proving independence of shared power, clock and configuration. |
+| SEJ-012 | B | Accept: time order, common conditions and fault-driven callouts discriminate causation. |
+| SEJ-013 | D | Accept: Boolean minimal sets are {A,B} and {A,C}; repeated A remains one event. |
+| SEJ-014 | A | Accept: changing alarm sensitivity changes workload and response feedback. |
+| SEJ-015 | C | Accept: a reset removes a symptom; saturation still needs arrival/service/blocking analysis. |
+| SEJ-016 | D | Accept: preserve old evidence while reviewing timing-relevant revision changes. |
+| SEJ-017 | B,C | Accept: bounded observation and study planning transfer; ward acceptance and clinical usability do not. |
+| SEJ-018 | B | Accept: zero events are data, not proof of zero failure probability. |
+| SEJ-019 | A | Accept: proof validity and environmental applicability are different claims. |
+| SEJ-020 | A | Accept: inspection establishes label content; timing needs defined stimulus and observation. |
+| SEJ-021 | A | Accept: an end-to-end warning deadline needs sourced events and allocation. |
+| SEJ-022 | D | Accept: measurability does not establish that blue fulfills identification needs. |
+| SEJ-023 | D | Accept: child diagnostics omit the required shutdown response despite trace links. |
+| SEJ-024 | B | Accept: a later unapproved proposal does not supersede the contract. |
+| SEJ-025 | D | Accept: define control behavior before assessing the second-processor architecture. |
+| SEJ-026 | D | Accept: units, origin, reset and validity carry semantics beyond JSON type agreement. |
+| SEJ-027 | A,B,D | Ambiguous: a given valid signature is not an irrelevant condition; F6. |
+| SEJ-028 | D | Accept: an existing specification must be connected to actual producer/consumer data and ownership. |
+| SEJ-029 | A | Accept: nominal update frequency is not a bounded age/validity guarantee. |
+| SEJ-030 | B | Accept: reuse evidence depends on the new envelope and active-function context. |
+| SEJ-031 | C | Accept: a weighted preference score cannot waive a binding launch constraint. |
+| SEJ-032 | B | Accept: normalize workload and evidence uncertainty before declaring dominance. |
+| SEJ-033 | B | Accept: reversible learning has decision value but does not automatically select the smaller change. |
+| SEJ-034 | B | Accept: field capability includes support, integration and supply constraints. |
+| SEJ-035 | A | Accept: a conditional rollout decision needs explicit volume assumptions and migration consequences. |
+| SEJ-036 | B | Accept: choose observations that separate sensor bias from physical overheating. |
+| SEJ-037 | B | Accept: missing safety/authority constraints can reverse the answer, while conditional work can continue. |
+| SEJ-038 | D | Accept: restore assumption status and downstream consequences instead of silently presenting a measurement. |
+| SEJ-039 | A | Accept: counterfactual outcomes depend on recognition and decision time; supplied NTSB fact checked. |
+| SEJ-040 | C | Accept: uncertainty crossing a limit does not itself prescribe an acceptance decision rule. |
+| SEJ-041 | A | Accept: delivery to a mailbox does not assign or accept operational responsibility. |
+| SEJ-042 | A | Accept: disposition/escalation connects technical concern to responsible decision authority. |
+| SEJ-043 | A | Accept: prior success informs but does not by itself establish anomaly acceptability. |
+| SEJ-044 | C | Accept: contract remedies do not supply missing operational staff; exercise resources and authority. |
+| SEJ-045 | C | Accept: state/timing sequences and independent output checks address interactions missed by isolated controls. |
+| SEJ-046 | D | Accept: separates nominal evidence from purchase-relevant startup uncertainty. |
+| SEJ-047 | C | Accept: CERN's historical priorities are contextual, not universal current requirements. |
+| SEJ-048 | A | Accept: report each evidence basis and the mechanism/question that could resolve disagreement. |
+| SEJ-049 | D | Accept: the review asks about state and authority, which a parts hierarchy cannot answer. |
+| SEJ-050 | D | Accept: correct implementation of an inadequate specification can fail intended use. |
+| SEJ-051 | D | Accept: a lineage can faithfully propagate an incorrect physical attribute. |
+| SEJ-052 | A | Accept: catalog confirmation cannot establish unseen normative clause text. |
+| SEJ-053 | C | Accept: transport acknowledgment does not establish operator action. |
+| SEJ-054 | B | Accept: the caching trade transfers; the application's acceptable stale-data consequences remain local. |
+| SEJ-055 | C | Accept: source claims retain temporal and outcome scope. |
+| SEJ-056 | B,D | Accept: stable requirement identity does not preserve applicability of old evidence after semantic change. |
+| SEJ-057 | B | Accept: brief proof loading cannot establish sustained-load creep behavior. |
+| SEJ-058 | D | Accept: delivery ordering affects state/authority even when every event and field is preserved. |
+| SEJ-059 | D | Accept: retain the old rationale and reopen its context-dependent premise. |
+| SEJ-060 | C | Accept: resolve behavioral contradiction against authority, then propagate the decision and verification. |
+
+## Source checks
+
+All checks below used the cited primary source itself, not a secondary retelling. They establish the bounded supplied facts, not the completeness of an accident explanation or efficacy of proposed modern controls.
+
+| Source and affected question/case | Result and locator |
+| --- | --- |
+| [NASA MCO Phase I report, 10 Nov 1999](https://discovery.larc.nasa.gov/pdf_files/MCO_report_2.pdf), SEJ-028/HO-14 | Supported. Printed pp6–8 identify the unit mismatch despite interface documentation and contributing transition, communication and verification problems; pp16–24 expand them. |
+| [ESA Ariane 501 inquiry presentation, 23 Jul 1996](https://www.esa.int/Newsroom/Press_Releases/Ariane_501_-_Presentation_of_Inquiry_Board_report), SEJ-030 | Supported. The official summary identifies both inertial reference systems, the alignment function remaining active, and unrepresentative simulations/tests. The page now redirects within ESA. |
+| [NTSB/AAR-10/03, adopted 4 May 2010](https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf), SEJ-039/HO-16 | Supported, locator correction F8. §1.16.3 pp49–50 distinguishes immediate and delayed return; §2.3.2 pp88–89 discusses decision realism. The exercise appropriately avoids universal feasibility or blame claims. |
+| [Rogers Commission Volume I Chapter V, 1986](https://www.nasa.gov/history/rogersrep/v1ch5.htm), SEJ-042 | Supported. Printed pp82–84 describe decision-makers lacking relevant concerns and failures in communication/escalation. |
+| [CAIB Volume I, Aug 2003](https://www.nasa.gov/wp-content/uploads/static/history/columbia/reports/CAIBreportv1.pdf), SEJ-043 | Supported at the supplied level. Chapter 7 §§7.1–7.6, printed pp178–194, examines organizational causes alongside the physical account. |
+| [NAO post-Games review, 5 Dec 2012](https://www.nao.org.uk/wp-content/uploads/2012/12/1213794fr.pdf), SEJ-044/055 | Supported. Summary ¶¶6–10 pp6–7 covers operational preparation, staffing contingency and unresolved legacy arrangements; §2.7 explicitly says long-term venue success remains unknown. |
+| [Leveson and Turner, IEEE Computer 26(7), Jul 1993, authorized reprint part III](https://web.mit.edu/6.033/2004/wwwdocs/papers/Therac_3.html), SEJ-045/HO-17 | Supported. The opening Tyler discussion identifies an editing sequence completed within magnet-setting time and shared state/race conditions. The author investigation is correctly distinguished from regulatory approval. |
+| [Berners-Lee CERN proposal, Mar 1989](https://www.w3.org/History/1989/proposal.html), SEJ-047/HO-19 | Supported. “CERN Requirements” and “Non requirements” explain heterogeneity/decentralization and the local priority for sharing. The site identifies its historical HTML transcription and unchanged text. |
+| [NTSB/PAR-11/01, adopted 30 Aug 2011](https://www.ntsb.gov/investigations/AccidentReports/Reports/PAR1101.pdf), SEJ-051/HO-18 | Supported. §1.7.2, printed pp25–28, traces the incorrect material description through a 1956 accounting record, 1977 survey and 1998 GIS, then contrasts physical findings. |
+| [RFC 793, Sep 1981](https://www.rfc-editor.org/rfc/rfc793.txt), SEJ-053/HO-15 | Supported. §2.6 pp9–10 distinguishes receiving TCP responsibility from delivery to its user. The bank correctly labels the specification historical/superseded. |
+| [RFC 1034, Nov 1987](https://www.rfc-editor.org/rfc/rfc1034.txt), SEJ-054 | Supported. §2.2 describes distributed maintenance, caching and the acquisition/update/accuracy trade. No present-day numerical acceptance policy is inferred. |
+| [NTSB/HAR-07/02, adopted 10 Jul 2007](https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR0702.pdf), SEJ-057 | Supported. Probable cause printed p107 identifies poor creep resistance and long-term loading; the bounded lesson is appropriate. |
+| [21 CFR 880.5725](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-880/subpart-F/section-880.5725) and [876.5820](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-876/subpart-F/section-876.5820), HO-02 | The cited infusion-pump provision states Class II; the other provision concerns hemodialysis. Actual product pathway remains device-specific as the rubric requires. |
+| [MDCG 2021-24 Rev.1, Apr 2026](https://health.ec.europa.eu/system/files/2021-10/mdcg_2021-24_en_0.pdf), HO-02 | Rule 12 table printed p48 lists infusion pumps under the potentially hazardous IIb examples; p47 discusses software and implementing rule 3.3. This guidance states it is not legally binding. No unseen IEC 62304 clause was independently certified. |
+| [FAA AC 20-115D, 21 Jul 2017](https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-115D.pdf), HO-03 | §10/Table 2 printed p11 supports the stated TQL mappings in its legacy-tool correlation context. The rubric correctly requires actual tool use/credit and preserves source scope. No licensed DO-178C/DO-330 text was asserted as retrieved. |
+
+## Coverage, packet separation and pedagogical improvements
+
+The bank covers twelve useful systems-engineering dimensions, with 24 practice, 24 development and 12 public-evaluation items. It emphasizes causal dependencies, semantic interfaces, evidence applicability, lifecycle/human support and decision authority. That is substantive engineering content. It contains little quantitative derivation beyond a Boolean cut-set item; alternatives usually differ in generic good practice rather than close, competing mechanisms. This limits discrimination even after length cues are removed. Add a small number of tractable allocation, uncertainty, resource, sequencing and sensitivity problems when the intended workload justifies them. This is an improvement suggestion, not a correctness defect in the present keys.
+
+The selected packets omit `keys.json`, `rubrics.json` and previous output files; the 17 tests confirm this for their exercised paths. Copied skill references may legitimately teach relevant concepts. Packet separation is not protection against a participant with access to the public repository, its known keys or another run. The documentation explicitly says so and appropriately calls for fresh variants after exposure. It does not overstate the reserved public split as secret or leak-proof.
+
+HO-13 is the strongest concrete performance fixture: immutable source wording, protected operator note, retained IDs, conflicting recovery behavior, a changed timing criterion and an explicitly historical synthetic observation. The old observation is not presented as a repository-executed controller test. The requirement change does not establish implementation compliance. A reviewer should also notice that the historical observation and current timing allocation are not automatically measurements of the same setup; the fixture says detailed historical setup/uncertainty are unavailable.
+
+The performance rubrics generally reward located consequences and preserve uncertainty. HO-08 supplies a useful negative activation task. HO-09–12 cover concept, intended-function limitations, organizational authority and concise problem framing. HO-14–19 separate source facts from transfer claims. HO-20 is a benign, clearly bounded instruction-in-evidence test. Aside from F7, no categorical rubric-key error was established. More rubric examples showing partial versus complete reasoning could improve reviewer consistency; this would need independent adjudication rather than author self-certification.
+
+The documents correctly reserve agent-quality claims for actual independent performance evidence and state that passing maintenance tests does not demonstrate model quality. Preserve that distinction through the repair. A revised bank needs its own version, input hashes, independent key review and fresh participant evidence. Original run records must remain attached to their original bank/key/scorer revision.
+
+## Repair follow-up
+
+The parent has assigned implementation repair to `judgment_benchmark` and has archived the original benchmark separately. An independent second pass will be appended here after the revised candidate is ready. The findings above remain the historical review of the original hashes regardless of later changes.
+
+## Independent second pass — 2026-11-14
+
+**Disposition: the frozen version 0.2.0 candidate is suitable for fresh, explicitly bounded diagnostic use. No unresolved blocking defect was found in the reviewed questions, keys or tested scorer behavior. This is content and software review, not proof of benchmark difficulty, psychometric validity, model improvement or engineering competence.** No participant outputs were opened during either pass.
+
+### Exact final candidate
+
+| Input | SHA-256 |
+| --- | --- |
+| `evals/benchmark/items.json` | `b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1` |
+| `evals/benchmark/keys.json` | `ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393` |
+| `scripts/benchmark.py` | `f693899802f6e16752559f5df2df4f959703e295cce94b7cafe8f787d94b9a3d` |
+| `evals/cases.json` | `d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf` |
+| `evals/rubrics.json` | `2c97061ab012169a995f9d06df6c2b1934c128299a8d17c07281d103ea5f325a` |
+
+The [final source snapshot and manifest](benchmark-independent/v0.2.0-final-source/review-input-sha256.json) preserve all reviewed files. Initial candidate `items.json` hash `c0e4718be1ff37cb5449a3996e8e573f11f7a4d42470851220c4fc1bf241016e` changed only in its top-level source metadata; equality of all 60 question records was checked before adopting the final hash. A further scorer-only repair rejected exponent-overflow numbers such as `1e999`, which Python otherwise parses as infinity despite rejecting literal `NaN`/`Infinity`.
+
+### Retest evidence and finding disposition
+
+The final benchmark/packet suite passed **25/25 tests**, with scratch directories redirected into `.mbse-review`: [v0.2.0-final-focused-tests.txt](benchmark-independent/v0.2.0-final-focused-tests.txt). The separate reviewer-authored script passed **26/26 checks**: [probes_v020.py](benchmark-independent/probes_v020.py), [results with exact input hashes](benchmark-independent/v0.2.0-adversarial-probe-results.json). Its generated answers and reviews are synthetic software fixtures, not participant evidence.
+
+| Finding | Second-pass disposition |
+| --- | --- |
+| F1, length cue | Repaired in the measured sense. Independently recalculated longest-character selection now scores 17/55, versus 54/55; all 60 revised option sets were also read for substance. Difficulty remains unmeasured. |
+| F2, answer/packet mismatch | Closed for tested behavior. Unchanged answer bytes reject a different arm/packet and a coherently rehashed changed request. A valid schema-2 answer scores successfully. |
+| F3, review/rubric mismatch | Closed for tested behavior. Answer, packet-manifest, key and criteria bindings are each checked. An actual versioned criterion-order reversal rejects the old criteria digest. |
+| F4, incomplete/exposure manifest | Closed for tested inventory consistency. Missing mandatory hash, missing package, unexpected package, unmanifested package reference and false catalog label all reject. All four prepared arms verify correctly. |
+| F5, impossible report aggregates | Closed for tested behavior. Incorrect 700% accuracy, wrong dimension counts, wrong credited selection and stale embedded review criteria reject. A valid scored record produces a report. |
+| F6, ambiguous multiple-choice stems | Closed. SEJ-008 now distinguishes a required destruction method from justified lifecycle actions; SEJ-027 explicitly grants authenticity and asks for remaining execution conditions. |
+| F7, HO-04 path composition | Closed. The rubric now requires the serial worst-case condition, checks ordering/overlap and start/end references, and does not treat an unestablished sum as observed failure. |
+| F8, Flight 1549 locator | Closed. HG-08 now cites §1.16.3, pp49–50, and §2.3.2, pp88–89. The supplied historical facts and substantive lesson are unchanged. |
+| F9, dangling result symlink | Closed. Exclusive result-file creation refuses the symlink and does not create its target. |
+| Additional overflow probe | Closed. Nested numeric `NaN`, `Infinity`, `-Infinity`, `1e999` and `-1e999` reject; JSON writers and canonical hashing also disallow nonfinite values. |
+
+The binding is not circular. Preparation hashes the request, questions and selected package files first, then puts that fingerprint, a unique packet ID and bank/key hashes into the response template. The final manifest separately hashes the template. Verification reconstructs the problem-input fingerprint and validates the template's binding and hash; a review additionally binds the final manifest and selected criteria. This catches the tested stale/mismatched records. It does not authenticate the producer, reviewer or controller, and a writable local packet is not a security boundary. The documentation now also explicitly distinguishes a no-skill packet from isolation of global or parent-directory skills in the host.
+
+A mixed synthetic three-item response also confirmed the scoring arithmetic: one correct single answer, one incomplete multiple-selection answer and one omitted answer yields 3 items, 2 answered and 1 correct. Its uniform-choice reference equals `(1/4 + 1/15 + 1/4) / 3`. Correct selection and explanation review remain separate.
+
+### Revised-choice quality and every key
+
+All 60 revised keys have a uniquely defensible best selection among their choices. Several distractors now represent plausible but incomplete engineering work: SEJ-022 D separates inspectability from validation but never establishes the blue requirement's basis; SEJ-041 A assigns an originating team but leaves shift handover unresolved; SEJ-049 A/C supply useful structural or functional views without the required mode/guard authority; SEJ-059 C updates coverage while retaining the original decision criteria despite the new battery-support constraint. Those distinctions require reading the scenario. The choices remain largely recognition exercises; successful discrimination between levels of engineering reasoning must be established through fresh responses and independent performance review.
+
+The following table records the final selection and the decisive comparison, rather than treating lower length correlation as validation of the key.
+
+| Item | Final key | Independent disposition and decisive comparison |
+| --- | --- | --- |
+| SEJ-001 | D | Accept: map the actual request-to-pickup process before assigning delay to staffing or front-end adoption. |
+| SEJ-002 | B | Accept: compare inspection means against the need before deriving needs from a selected drone. |
+| SEJ-003 | D | Accept: the revised scenario fixes the external boundary; explicit dependency and response ownership respect that choice. |
+| SEJ-004 | A,D | Accept: neither signoff ownership nor the fastest turnaround establishes cause or a universal target. |
+| SEJ-005 | B | Accept: the charter concerns access across the population, not only the existing digital channel. |
+| SEJ-006 | D | Accept: the one-day interruption limit requires a complete restoration pathway, not cost or failure frequency alone. |
+| SEJ-007 | A | Accept: contractor fault response/support must be exercised; normal training or more developer attendance leaves the gap. |
+| SEJ-008 | B,C,D | Accept: support, replacement configuration and retirement outcomes follow; mandatory destruction does not. |
+| SEJ-009 | C | Accept: restoration and access affect availability; neither failure confidence alone nor premature preference resolves it. |
+| SEJ-010 | C | Accept: the intended transition configurations need acceptance scope before rollout. |
+| SEJ-011 | B | Accept: supply monitoring or comparator coverage cannot establish independence of all shared causes. |
+| SEJ-012 | A | Accept: time ordering and common conditions distinguish reverse causation and weather effects. |
+| SEJ-013 | A | Accept: {A,B} and {A,C} are sufficient and minimal; A is one shared event. |
+| SEJ-014 | A | Accept: changed alarm load can alter attention and response, defeating a fixed prior acknowledgment distribution. |
+| SEJ-015 | A | Accept: saturation and reset do not establish volatile-state corruption or eliminate upstream/downstream causes. |
+| SEJ-016 | C | Accept: old measured margin cannot automatically be allocated to new shared-resource scheduling. |
+| SEJ-017 | B,C | Accept: trial observations and future-study hypotheses transfer; actual ward users/conditions have not been tested. |
+| SEJ-018 | A | Accept: exposure and zero events are reportable; reciprocal exposure is not a justified universal conservative failure rate. |
+| SEJ-019 | B | Accept: recovery tests do not establish the original continuous-availability assumption. |
+| SEJ-020 | D | Accept: content inspection and timed observation address their respective claims; configured periods alone do not. |
+| SEJ-021 | B | Accept: component deadlines need a common justified end-to-end condition and event references. |
+| SEJ-022 | C | Accept: blue needs an identification or binding-constraint basis despite being inspectable. |
+| SEJ-023 | D | Accept: diagnostic timing or allocation cannot substitute for the missing shutdown response. |
+| SEJ-024 | C | Accept: current obligation and proposed change must retain different authority status. |
+| SEJ-025 | B | Accept: control behavior and dependencies must establish what the second processor must achieve. |
+| SEJ-026 | C | Accept: a conversion alone does not reconcile origin, reset or validity semantics. |
+| SEJ-027 | A,B,D | Accept: the revised premise grants authenticity; freshness, history and current authority/inhibits remain unresolved. |
+| SEJ-028 | D | Accept: actual exchanged data and discrepancy ownership address the implementation gap left by written unit labels. |
+| SEJ-029 | D | Accept: average updates or protocol selection cannot establish bounded age and invalid-data behavior. |
+| SEJ-030 | C | Accept: unchanged code can violate changed context and envelope assumptions. |
+| SEJ-031 | A | Accept: changing a weighted score cannot waive the unchanged contractual launch constraint. |
+| SEJ-032 | D | Accept: workload/evidence asymmetry must be examined before declaring supplier dominance or requiring full field history. |
+| SEJ-033 | A | Accept: reversible learning and migration consequences belong together in the uncertain-demand comparison. |
+| SEJ-034 | B | Accept: support/integration/supply affect field capability and cannot be deferred out of the selection. |
+| SEJ-035 | C | Accept: a conditional rollout choice must account for migration before the demand crossover occurs. |
+| SEJ-036 | C | Accept: independent paired observations discriminate sensor bias from real overheating better than a longer same-sensor trace. |
+| SEJ-037 | A | Accept: missing safety and authority facts preclude a final release default but permit useful conditional analysis. |
+| SEJ-038 | B | Accept: restore assumption provenance and its influence; neither arbitrary conservatism nor discarding all results is justified. |
+| SEJ-039 | B | Accept: compare alternatives using realistic information and recognition-to-action timing, without extrapolating one delayed trial. |
+| SEJ-040 | D | Accept: an uncertainty interval does not itself choose acceptance or rejection without the project decision rule. |
+| SEJ-041 | B | Accept: clear acceptance, transfer and escalation responsibilities address the actual shift gap. |
+| SEJ-042 | C | Accept: visibility and disposition across boundaries address the stated information-path problem. |
+| SEJ-043 | B | Accept: comparable prior outcomes need a mechanism and applicability argument, not only recurrence counts. |
+| SEJ-044 | C | Accept: exercised feasible reserves and authority provide operational recovery beyond contracts and forecasts. |
+| SEJ-045 | B | Accept: sequence, timing, state and independent output checks address interactions missed by single controls and prescribed nominal steps. |
+| SEJ-046 | D | Accept: state the actual purchase-relevant support gap without approving from nominal evidence or selecting a new architecture prematurely. |
+| SEJ-047 | D | Accept: contextual historical reasoning transfers without importing its priorities unchanged. |
+| SEJ-048 | A | Accept: isolate the seal mechanism and resolving evidence rather than vote or assume either applicability conclusion. |
+| SEJ-049 | B | Accept: state, guards and authority across modes directly answer the board's question. |
+| SEJ-050 | A | Accept: implementation verification does not establish adequacy of incomplete intended-use requirements. |
+| SEJ-051 | A | Accept: agreeing digital copies may share the original error; inspect appropriate source evidence and discrepancies. |
+| SEJ-052 | A | Accept: edition confirmation does not establish unseen clause content or an exemption. |
+| SEJ-053 | C | Accept: receipt or display is not operator action; relevant workflow evidence is required. |
+| SEJ-054 | D | Accept: application update/staleness consequences determine limits, not mean update intervals or server savings alone. |
+| SEJ-055 | A | Accept: preserve reported delivery success and unresolved later benefits at their original temporal scope. |
+| SEJ-056 | B,D | Accept: retain revision-specific identity and reassess evidence/dependencies; unchanged links do not preserve satisfaction. |
+| SEJ-057 | B | Accept: duration-dependent adhesive behavior cannot be covered by higher peak proof load alone. |
+| SEJ-058 | C | Accept: ordering changes affect consumer authority/recovery even when every event arrives. |
+| SEJ-059 | A | Accept: new context and battery support warrant revisiting assumptions and lifecycle costs, not merely the old coverage score. |
+| SEJ-060 | D | Accept: resolve authoritative intent and add missing recovery coverage before making the views agree. |
+
+Independent character/word counts, using lexicographically first labels for ties, are in [v0.2.0-independent-shortcut-counts.json](benchmark-independent/v0.2.0-independent-shortcut-counts.json). Across all 55 single-choice items, longest characters gives 17 correct, shortest characters 6, longest words 7 and shortest words 10. Public-evaluation longest characters gives 5/12, versus the original 12/12. These measurements remove the observed near-perfect shortcut; low or near-chance shortcut accuracy does not prove that questions require deep reasoning.
+
+Three rationales retain nonblocking references to earlier distractors: SEJ-046 mentions jargon, SEJ-045 duplicated displays, and SEJ-048 seniority/averaging. Their engineering conclusions remain correct and the key is unaffected. They can be aligned editorially in a later reviewed revision; the author kept the final candidate frozen for this assessment.
+
+### Historical preservation and remaining limits
+
+The archived version 0.1.0 bank and key are byte-identical to the first-pass snapshot. Every entry in `evals/archive/benchmark-0.1.0/manifest.json` matches its archived file. Its scorer hash is `8a36bfef27d8215c98d0949e3539718a7bdff7a23e760b84bba23baf03572798`, while the earlier reviewer snapshot is `7491d8c48ffa6d628abc36cbda06fb1fb30cbbba55c7805cb56cabda6f5008fc`: the sole diff is the added `source_dirty` helper and two preparation-manifest metadata fields. Scoring behavior is unchanged between those two old snapshots. This distinction is recorded rather than claiming the script snapshots are identical.
+
+Participant output preservation was not rechecked by reading outputs; that remains the controller's provenance responsibility. The public split remains exposed, each evaluation dimension still has one item, and no measured difficulty or inter-reviewer reliability is established by this review. A new valid behavioral result needs a fresh recorded run on these exact revised inputs and an independently bound assessment, with host skill exposure recorded. The report and probes support the repair only within those stated limits.

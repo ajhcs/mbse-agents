@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "case": "UT-01",
+  "arm": "prior-guidance",
+  "observed_start_utc": "2026-11-14T00:01:50Z",
+  "observed_end_utc": "2026-11-14T00:03:22.251877+00:00",
+  "time_basis": "Start observed with date -u; end observed with Python datetime.now(timezone.utc) immediately before run-record serialization and final file freezing.",
+  "exercise": "Fresh-participant-context smoke exercise with instruction-restricted access, not enforced isolation.",
+  "access_scope": "Only files in this supplied packet were inspected; no repository, memory, other arms, prior outputs, criteria/keys, or outside skill sources were consulted.",
+  "context_limit": "This delegated participant inherited parent conversation context; fresh refers to no prior engineering answer or evaluation key being consulted, not a technically clean context boundary.",
+  "skill_files_used": [
+    "skills/mbse-verification-evidence/SKILL.md",
+    "skills/mbse-verification-evidence/references/evidence-contracts.md"
+  ],
+  "tools_used": [
+    {
+      "name": "functions.exec",
+      "purpose": "Tool-call orchestration"
+    },
+    {
+      "name": "tools.exec_command",
+      "purpose": "Packet discovery and reading, UTC observation, SHA-256 calculation, local artifact writing and freezing"
+    }
+  ],
+  "local_commands_used": [
+    "date",
+    "rg",
+    "cat",
+    "python3"
+  ],
+  "input_files": {
+    "request.md": {
+      "sha256": "2acf74dbce6ad67186824c169f68b40982ffe062135b0e7942b1e54d12227c69",
+      "manifest_sha256": "2acf74dbce6ad67186824c169f68b40982ffe062135b0e7942b1e54d12227c69",
+      "matches_manifest": true,
+      "content_use": "read_as_task_or_guidance"
+    },
+    "skills/mbse-verification-evidence/SKILL.md": {
+      "sha256": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+      "manifest_sha256": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+      "matches_manifest": true,
+      "content_use": "read_as_task_or_guidance"
+    },
+    "skills/mbse-verification-evidence/agents/openai.yaml": {
+      "sha256": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+      "manifest_sha256": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+      "matches_manifest": true,
+      "content_use": "hash_only"
+    },
+    "skills/mbse-verification-evidence/references/evidence-contracts.md": {
+      "sha256": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+      "manifest_sha256": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+      "matches_manifest": true,
+      "content_use": "read_as_task_or_guidance"
+    },
+    "packet-manifest.json": {
+      "sha256": "46b5ec6a59d3f1827f5b41faae64db7d2ffe22f34ea71b66354f865a4f1193b7",
+      "content_use": "read_for_packet_inventory_and_input_digests"
+    }
+  },
+  "output_files": {
+    "outputs/output.md": {
+      "sha256": "008a655f1243a4b254ba1f140820a43cee79327a7cb0469b5f3f45687efc5b23",
+      "encoding": "UTF-8"
+    }
+  },
+  "run_record_hash": null,
+  "run_record_hash_note": "The run record excludes its own digest to avoid a self-referential hash; its digest is reported in the completion tool output.",
+  "input_preservation": "All supplied files retain the manifest SHA-256 digests; no input was written or chmodded.",
+  "verification_scope": "Input-byte preservation and output artifact creation only; no self-grading or engineering test execution.",
+  "execution": {
+    "hardware_available": false,
+    "hardware_tests_executed": false,
+    "external_api_calls": false,
+    "production_actions": false,
+    "subagents_spawned_by_participant": false
+  },
+  "model": {
+    "identifier": null,
+    "status": "Exact model identifier not exposed to this participant."
+  },
+  "settings": {
+    "reasoning_effort": null,
+    "temperature": null,
+    "other": null,
+    "status": "Unknown; not exposed."
+  },
+  "tokens": {
+    "input": null,
+    "output": null,
+    "total": null,
+    "status": "Unknown; no complete usage accounting exposed."
+  },
+  "cost": {
+    "amount": null,
+    "currency": null,
+    "status": "Unknown; not exposed."
+  },
+  "exceptions": [],
+  "finalization": "outputs/output.md and run-record.json are finalized and chmod 0444 in the same command; no further edits are planned."
+}

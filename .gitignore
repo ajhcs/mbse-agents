@@ -3,3 +3,8 @@ __pycache__/
 .venv/
 evals/runs/
 .mbse-test-*/
+build/
+.venv-docs/
+.mbse-doc-checks/
+.mbse-review/
+.cache/

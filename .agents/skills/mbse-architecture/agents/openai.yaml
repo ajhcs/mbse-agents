@@ -1,4 +1,4 @@
 interface:
   display_name: "Design a System Architecture"
-  short_description: "Develop or review functional and physical architectures, require"
-  default_prompt: "Use $mbse-architecture on the supplied artifacts and deliver a reviewable result with evidence and open decisions."
+  short_description: "Reason about functions, structure, and interfaces"
+  default_prompt: "Use $mbse-architecture to connect this system’s behavior to alternative structures, explain the tradeoffs, and develop allocations and interface contracts."

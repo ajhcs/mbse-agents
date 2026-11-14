@@ -7,7 +7,7 @@ it does not implement the sensor or sound/light actuator.
 ```mermaid
 flowchart LR
   S[COMP-01 Sensor adapter] -->|IFC-01 time and temperature| E[COMP-02 Evaluator]
-  U[Technician] -->|IFC-02 acknowledgement| E
+  U[ACTOR-01 Technician] -->|IFC-02 acknowledgement| E
   E -->|IFC-03 high OR fault| A[COMP-03 Annunciator]
   E -->|IFC-04 transition record| L[COMP-04 Event recorder]
 ```
@@ -22,7 +22,7 @@ flowchart LR
 IFC-01: `(time_ms, temperature_c)` on contiguous 100 ms ticks. None, NaN, infinity,
 booleans, and nonnumeric values are invalid temperatures. The model rejects gaps,
 duplicate/out-of-order ticks, noninteger times, and nonboolean acknowledgement.
-IFC-02: acknowledgement at current tick. IFC-03: separate high/fault and their OR
+IFC-02: ACTOR-01 technician acknowledgement at current tick. IFC-03: separate high/fault and their OR
 as local alarm. IFC-04: ordered `time_ms`, `high`, `sensor_fault` records in volatile memory.
 
 AD-01: high latches, fault automatically clears on valid recovery to distinguish

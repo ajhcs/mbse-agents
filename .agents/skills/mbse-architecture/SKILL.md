@@ -1,11 +1,13 @@
 ---
 name: mbse-architecture
-description: "Develop or review functional and physical architectures, requirement allocations, interface contracts, and design trades."
+description: "Reason about system behavior and structure, explain architectural choices, and develop or review functions, allocations, interfaces, and design trades."
 ---
 
 # Design a System Architecture
 
 Connect the required behavior to a workable system structure. Use the actual boundary, operating modes, requirements, and constraints. Decompose functions before treating a component list as a complete architecture. Consider alternative allocations or mechanisms when they affect performance, risk, maintainability, or feasibility.
+
+Explain how interactions produce the desired behavior and where delays, feedback, contention, or mismatched assumptions could defeat it. Reason at both system and element levels: a locally adequate component can still participate in an inadequate system. Include people, operational procedures, and external organizations when they carry essential functions.
 
 Define interfaces with direction, exchanged item, semantics, units, timing, validity, error handling, and responsibility as relevant. Make resource budgets and dependencies visible. Evaluate shared power, clocks, processors, data, suppliers, and human roles before claiming redundancy or isolation.
 

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "case": "HO-15",
+  "arm": "none",
+  "observed_start_utc": "2026-11-13T23:44:20.075727+00:00",
+  "observed_end_utc": "2026-11-13T23:50:08.699989+00:00",
+  "time_scope": "First successful UTC capture at input inventory through final artifact consistency check and run-record preparation. One failed python command preceded the first captured timestamp; its separate UTC time was not captured. Cases were read and drafted in a shared batch, so these intervals overlap.",
+  "model": "unknown",
+  "model_settings": "unknown",
+  "tokens": "unknown",
+  "cost": "unknown",
+  "runtime_metadata_limit": "The runtime did not expose exact model identity, model settings, token usage or cost to this participant; none was inferred.",
+  "context_and_access": {
+    "shared_context_cases": [
+      "HO-09",
+      "HO-12",
+      "HO-13",
+      "HO-15",
+      "HO-20"
+    ],
+    "restriction": "Instruction-restricted packet access; no enforced host or filesystem isolation.",
+    "inherited_context": "The participant inherited host/project instructions and runtime-provided general memory summary and skill catalog in the conversation. No memory files, skill files, repository contents, grading rubrics, prior-run outputs or other arms were opened or used as task inputs.",
+    "task_input_roots": [
+      "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-09",
+      "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-12",
+      "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13",
+      "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-15",
+      "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-20"
+    ],
+    "external_sources_read": [],
+    "paid_api_calls": false,
+    "production_actions": false
+  },
+  "actual_tools": [
+    {
+      "tool": "functions.exec",
+      "purpose": "Orchestrate exec_command calls; packet reads were batched with Promise.allSettled."
+    },
+    {
+      "tool": "exec_command",
+      "calls_and_observations": [
+        "Shared inventory attempt using python: exit 127 because python command was unavailable; no input data was read by that failed attempt.",
+        "Shared inventory using python3 standard library pathlib/hashlib/json/datetime: listed packet files, observed UTC start times and computed initial input SHA256; exit 0.",
+        "One python3 packet read per case, five in a parallel batch: read only request, packet manifest and supplied inputs; each exited 0.",
+        "One shared python3 authoring call: created each outputs directory and authored deliverables, with byte copies of HO-13 source, change request and historical report; exit 0.",
+        "Shared python3 finalization call: reread supplied input hashes and current-run outputs, checked document invariants, computed output hashes and wrote run records. This record is produced by that call."
+      ]
+    }
+  ],
+  "input_sha256_at_start": {
+    "packet-manifest.json": "23600e7e899e61f83c7d1a8a8a7705de8e79c4bc8c1d13d58889a65d89c3249f",
+    "request.md": "950dc87c3d537d8632a074998108feff025acef761a7a02abd5e766a2e6185d3"
+  },
+  "input_sha256_at_end": {
+    "packet-manifest.json": "23600e7e899e61f83c7d1a8a8a7705de8e79c4bc8c1d13d58889a65d89c3249f",
+    "request.md": "950dc87c3d537d8632a074998108feff025acef761a7a02abd5e766a2e6185d3"
+  },
+  "output_sha256": {
+    "output.md": "f2b2168dcf9f6617c82a370edf248bcd191910129ff19624cb306fbd0b42a2d4"
+  },
+  "hash_scope": "Output hashes cover deliverable artifacts. run-record.json is excluded from its own hash map to avoid self-reference; its hash is printed by the finalization tool call.",
+  "checks_actually_performed": {
+    "all_input_bytes_match_initial_sha256": true,
+    "packet_manifest_file_hashes_match": true,
+    "output_md_nonempty": true
+  },
+  "check_scope": "File and document consistency only; no controller, service, operational, network-loss or water-system tests were executed. These checks are not behavioral evidence or a performance grade.",
+  "exceptions": [
+    {
+      "event": "python executable unavailable",
+      "handling": "Used python3 after one failed inventory command."
+    },
+    {
+      "event": "Shared context and inherited runtime context",
+      "handling": "Disclosed above; access limits were instructions, not a technical isolation boundary."
+    }
+  ]
+}

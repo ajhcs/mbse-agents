@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "bank_version": "0.1.0",
+  "status": "diagnostic_invalid_for_comparative_quality_claim",
+  "results": [
+    {
+      "arm": "none",
+      "answered": 24,
+      "items": 24,
+      "selection_correct": 24,
+      "answers_sha256": "e2630cfa46f6bfabcd3219b3cf3bc6ac1f287cd16c8bbe1fbd6ee65aca419052",
+      "score_sha256": "74e0bb3e02bc0cbfd289cc0ac8ef8b4e4a99c2b1ce786a8ccf5eb95abf6405a9"
+    },
+    {
+      "arm": "task",
+      "answered": 24,
+      "items": 24,
+      "selection_correct": 24,
+      "answers_sha256": "e4711927d0d1595a3e3278089eb831c9b7e6defb6c7f7ff386b392f84a41ebac",
+      "score_sha256": "f60266468b425ad26eb00c477fa80b7eef2c8dea76d34d81a7c841fb7e9e9965"
+    },
+    {
+      "arm": "task-domain",
+      "answered": 24,
+      "items": 24,
+      "selection_correct": 24,
+      "answers_sha256": "119513449a5f04a6d4c3954da620a15b666bffe314d35e5435ceffa53caca468",
+      "score_sha256": "200c3b1f717896c77370ec0f3789bbb5766cf24696ef719c070ff055ed643a26"
+    }
+  ],
+  "surface_shortcut": {
+    "single_choice_items": 55,
+    "longest_option_correct": 54
+  },
+  "limitations": [
+    "All arms reached selection ceiling.",
+    "Choices strongly expose correct answer by length.",
+    "Two multi-select questions have independently identified ambiguity.",
+    "Reasoning was not independently assessed for these retired-bank runs.",
+    "Global host skill metadata remained visible; packet-only access was instruction-restricted.",
+    "Exact model identity/settings and cost unavailable."
+  ],
+  "conclusion": "No skill improvement or systems-engineering quality claim follows. Preserve all runs and repair benchmark before further assessment."
+}

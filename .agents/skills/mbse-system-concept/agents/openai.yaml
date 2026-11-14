@@ -1,4 +1,4 @@
 interface:
   display_name: "Develop a System Concept"
-  short_description: "Develop or compare system concepts from a problem, desired outco"
-  default_prompt: "Use $mbse-system-concept on the supplied artifacts and deliver a reviewable result with evidence and open decisions."
+  short_description: "Explore feasible system concepts and alternatives"
+  default_prompt: "Use $mbse-system-concept to frame the problem in this brief, compare meaningful alternatives, and explain the preferred direction and its open feasibility questions."

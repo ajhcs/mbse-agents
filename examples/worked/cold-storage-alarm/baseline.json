@@ -1,22 +1,26 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "scope": "illustrative-reference-model",
   "sources": [
     {
       "id": "NEED-01",
-      "artifact": "brief.md"
+      "artifact": "brief.md",
+      "locator": "| NEED-01 |"
     },
     {
       "id": "NEED-02",
-      "artifact": "brief.md"
+      "artifact": "brief.md",
+      "locator": "| NEED-02 |"
     },
     {
       "id": "NEED-03",
-      "artifact": "brief.md"
+      "artifact": "brief.md",
+      "locator": "| NEED-03 |"
     },
     {
       "id": "NEED-04",
-      "artifact": "brief.md"
+      "artifact": "brief.md",
+      "locator": "| NEED-04 |"
     }
   ],
   "requirements": [
@@ -103,6 +107,11 @@
       "to": "COMP-02"
     },
     {
+      "id": "IFC-02",
+      "from": "ACTOR-01",
+      "to": "COMP-02"
+    },
+    {
       "id": "IFC-03",
       "from": "COMP-02",
       "to": "COMP-03"
@@ -156,6 +165,23 @@
         "REQ-04"
       ],
       "evidence": "EVD-01"
+    },
+    {
+      "id": "VER-07",
+      "requirements": [
+        "REQ-01",
+        "REQ-02",
+        "REQ-03",
+        "REQ-04"
+      ],
+      "evidence": "EVD-01"
+    },
+    {
+      "id": "VER-08",
+      "requirements": [
+        "REQ-02"
+      ],
+      "evidence": "EVD-01"
     }
   ],
   "evidence": [
@@ -173,6 +199,16 @@
     "verification.md",
     "requirements.md",
     "architecture.md",
-    "brief.md"
-  ]
+    "brief.md",
+    "evidence_io.py",
+    "explore_states.py"
+  ],
+  "actors": [
+    {
+      "id": "ACTOR-01",
+      "name": "Technician",
+      "authority": "Acknowledge a recovered high warning"
+    }
+  ],
+  "baseline_artifact": "baseline.json"
 }

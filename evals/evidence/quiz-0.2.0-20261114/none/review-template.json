@@ -1,0 +1,203 @@
+{
+  "schema_version": 2,
+  "answers_sha256": "db2393caeef1f256706618417f1a56d773cc359096d888367703a374d26dbe9b",
+  "packet_manifest_sha256": "cc63a5645d623a87a9707e65e43ee876c6cf3da5bad26ac9baeecac1ea9a59ca",
+  "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+  "criteria_sha256": "b9b7a828031e868b61dba5c0605d9c9ab08885bdc020b61794652dc13e80edcd",
+  "reviewer": null,
+  "independent_of_production": null,
+  "items": {
+    "SEJ-003": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-004": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-008": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-009": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-013": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-014": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-018": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-019": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-023": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-024": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-028": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-029": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-033": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-034": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-038": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-039": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-043": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-044": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-048": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-049": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-053": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-054": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-058": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    },
+    "SEJ-059": {
+      "criteria": [
+        null,
+        null
+      ],
+      "comment": "",
+      "critical_errors": []
+    }
+  }
+}

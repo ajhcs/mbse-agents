@@ -1,11 +1,13 @@
 ---
 name: mbse-electronic-systems
-description: "Develop or review ASIC, FPGA, SoC, and control-electronics architectures, hardware verification, and assurance evidence."
+description: "Understand and reason through ASIC, FPGA, SoC, and control-electronics problems, connecting physical behavior, HW/SW interfaces, implementation choices, verification, and assurance."
 ---
 
 # Electronic Systems Engineering
 
 Connect hardware requirements and physical constraints to design choices, HW/SW interfaces, implementation verification, and evidence. Adapt assurance to the application rather than treating all electronics as avionics.
+
+Explain behavior across abstraction boundaries: an algorithm, RTL simulation, board implementation, and deployed system can rely on different timing and environment assumptions. Reconcile digital, analog, thermal, power, software, manufacturing, and maintenance considerations where they affect the decision. Use a system-level consequence to distinguish a meaningful issue from a merely unusual implementation.
 
 Start from the user's engineering decision, system boundary, operating context, and existing artifacts. Identify the governing program basis, jurisdiction, standards editions, and tool versions when they affect the answer. Distinguish obligations, guidance, and proposed practice; verify exact claims before relying on them. If a source is unavailable, mark the uncertainty and continue work that does not depend on it.
 

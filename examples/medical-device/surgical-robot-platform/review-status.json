@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "system": "surgical-robot-platform",
+  "status": "current_proposed_teaching_baseline",
+  "scope": [
+    "declared_record_identity_and_table_links",
+    "requirement_source_claim_inventory",
+    "artifact_existence_by_lifecycle",
+    "bounded_local_markdown_paths"
+  ],
+  "source_reviews": [
+    {
+      "requirement": "REQ-FUN-001",
+      "candidate_basis": "Stakeholder need (surgeon); IEC 80601-2-77 Clause 201.12",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-002",
+      "candidate_basis": "Stakeholder need (surgeon); IEC 80601-2-77",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-003",
+      "candidate_basis": "IEC 80601-2-77; stakeholder need (surgeon)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-004",
+      "candidate_basis": "Stakeholder need (surgeon); IEC 80601-2-77",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-005",
+      "candidate_basis": "Stakeholder need (biomedical engineering); IEC 80601-2-77",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-001",
+      "candidate_basis": "IEC 80601-2-77 Clause 201.12.4; ISO 14971",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-002",
+      "candidate_basis": "IEC 80601-2-77; ISO 14971",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-003",
+      "candidate_basis": "IEC 80601-2-77 Clause 201.12.4; ISO 14971",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-004",
+      "candidate_basis": "IEC 80601-2-77; ISO 14971",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-005",
+      "candidate_basis": "IEC 60601-1 Clause 9.2; IEC 80601-2-77",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-001",
+      "candidate_basis": "IEC 80601-2-77; architecture decision AD-01",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-002",
+      "candidate_basis": "IEC 80601-2-77; ISO 14971",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    }
+  ],
+  "open_references": [],
+  "model_evidence": "no_system_model_execution",
+  "independent_engineering_review": "not_performed",
+  "licensed_standard_clause_audit": "not_performed",
+  "physical_validation": "not_performed",
+  "risk_acceptance": "not_assessed",
+  "historical_snapshot": "history/pre-hardening.json"
+}

@@ -1,0 +1,622 @@
+{
+  "schema_version": 2,
+  "kind": "se-judgment-score",
+  "benchmark": "systems-engineering-judgment",
+  "packet": {
+    "packet_id": "0cdd0bb38d38408eaaae6930d3727148",
+    "inputs_sha256": "fc8bcce2f89ab416125db0a3bfa256d7906a624515d0f9610fc1d459519f85e2",
+    "bank_sha256": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+    "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393"
+  },
+  "version": "0.2.0",
+  "bank_sha256": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+  "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+  "packet_manifest_sha256": "cc63a5645d623a87a9707e65e43ee876c6cf3da5bad26ac9baeecac1ea9a59ca",
+  "answers_sha256": "db2393caeef1f256706618417f1a56d773cc359096d888367703a374d26dbe9b",
+  "arm": "none",
+  "run": {
+    "run_id": "quiz-v020-baseline-184c374b-9a4a-46c4-8205-77838396ea0c",
+    "producer": "Codex subagent /root/quiz_v020_baseline",
+    "model": "unknown",
+    "host": "builderbob",
+    "settings": {
+      "reasoning_effort": null,
+      "temperature": null,
+      "top_p": null,
+      "seed": null
+    },
+    "started_at": "2026-11-14T00:02:38+00:00",
+    "completed_at": "2026-11-14T00:05:45.188818+00:00",
+    "source_access": "packet-only",
+    "tools": [
+      "functions.exec",
+      "clock__curr_time",
+      "exec_command"
+    ],
+    "tokens": null,
+    "latency_seconds": null,
+    "cost": null,
+    "exceptions": [
+      "Execution was instruction-restricted on a shared host, not technically isolated. Inherited instructions, host metadata, a memory summary, and a skill catalog were visible in context. No repository, memory files, skill files, keys, rubrics, other arms, prior outputs, or external research were accessed.",
+      "The exact served model identifier, reasoning effort, sampling settings, token usage, API latency, and cost were not exposed; corresponding fields are null. Answer confidence is left null rather than inventing a calibrated metric.",
+      "started_at is the first UTC clock observation for this run, not a model-service invocation timestamp. completed_at records final response-artifact preparation in UTC.",
+      "An initial python invocation failed because python was unavailable; subsequent work used python3. One metadata read assumed a questions key and raised KeyError; inspection established the actual items key.",
+      "The first combined file read was output-truncated. The response template, manifest, and remaining request text were reread with bounded output.",
+      "All three file digests in the packet manifest were verified and all input bytes were preserved. Upstream bank, key, and catalog hashes were retained as provenance only; their source files were intentionally not accessed. No aggregate input-digest algorithm was supplied, so inputs_sha256 was preserved and binding-checked rather than independently recomputed.",
+      "Checks cover JSON structure, answer completeness, selection membership and cardinality, packet binding, and input preservation only. No answer key, rubric, self-grading, paid API, or production action was used.",
+      "Metadata-only normalization after production: run.model changed from null to the explicit string unknown to correct the response-template/schema mismatch reported by the evaluation controller. No answers, packet binding, run ID, or original timestamps changed. Original answers.json SHA-256: 1146be3e4f3c151ab3ef45c995bc4bd6c1eb0490df7295efd43e4c72e7efde00."
+    ]
+  },
+  "items": 24,
+  "answered": 24,
+  "selection_correct": 24,
+  "by_dimension": {
+    "framing": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "lifecycle": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "causal_reasoning": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "evidence": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "requirements": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "interfaces": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "tradeoffs": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "uncertainty": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "people_organizations": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "communication": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "source_judgment": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "change_review": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    }
+  },
+  "selection_accuracy": 1.0,
+  "macro_dimension_accuracy": 1.0,
+  "uniform_choice_reference": 0.23472222222222225,
+  "uniform_choice_definition": "Uniform random selection among single options, or among all nonempty subsets for multiple-choice items; a mathematical reference, not measured guessing behavior.",
+  "outcomes": [
+    {
+      "id": "SEJ-003",
+      "dimension": "framing",
+      "split": "development",
+      "selection": [
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-004",
+      "dimension": "framing",
+      "split": "development",
+      "selection": [
+        "A",
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-008",
+      "dimension": "lifecycle",
+      "split": "development",
+      "selection": [
+        "B",
+        "C",
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-009",
+      "dimension": "lifecycle",
+      "split": "development",
+      "selection": [
+        "C"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-013",
+      "dimension": "causal_reasoning",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-014",
+      "dimension": "causal_reasoning",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-018",
+      "dimension": "evidence",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-019",
+      "dimension": "evidence",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-023",
+      "dimension": "requirements",
+      "split": "development",
+      "selection": [
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-024",
+      "dimension": "requirements",
+      "split": "development",
+      "selection": [
+        "C"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-028",
+      "dimension": "interfaces",
+      "split": "development",
+      "selection": [
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-029",
+      "dimension": "interfaces",
+      "split": "development",
+      "selection": [
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-033",
+      "dimension": "tradeoffs",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-034",
+      "dimension": "tradeoffs",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-038",
+      "dimension": "uncertainty",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-039",
+      "dimension": "uncertainty",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-043",
+      "dimension": "people_organizations",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-044",
+      "dimension": "people_organizations",
+      "split": "development",
+      "selection": [
+        "C"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-048",
+      "dimension": "communication",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-049",
+      "dimension": "communication",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-053",
+      "dimension": "source_judgment",
+      "split": "development",
+      "selection": [
+        "C"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-054",
+      "dimension": "source_judgment",
+      "split": "development",
+      "selection": [
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-058",
+      "dimension": "change_review",
+      "split": "development",
+      "selection": [
+        "C"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-059",
+      "dimension": "change_review",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    }
+  ],
+  "reasoning_review": {
+    "status": "reviewer_reported",
+    "sha256": "70cf3dd251cc1a9e2bd8b4304af815fad9ced3f759be2bd1d580cda47084421c",
+    "review": {
+      "schema_version": 2,
+      "answers_sha256": "db2393caeef1f256706618417f1a56d773cc359096d888367703a374d26dbe9b",
+      "packet_manifest_sha256": "cc63a5645d623a87a9707e65e43ee876c6cf3da5bad26ac9baeecac1ea9a59ca",
+      "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+      "criteria_sha256": "b9b7a828031e868b61dba5c0605d9c9ab08885bdc020b61794652dc13e80edcd",
+      "reviewer": "Codex independent reasoning reviewer /root/quiz_reasoning_independent",
+      "independent_of_production": true,
+      "items": {
+        "SEJ-003": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/0/reasoning: Separates the fixed service boundary from supplier control and assigns the authority a response when the feed is delayed; acceptable delay and fallback remain explicitly unresolved.",
+          "critical_errors": []
+        },
+        "SEJ-004": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/1/reasoning: Retains inspection and change-control outcomes with turnaround, then requests cross-role timing evidence; rejects ownership as cause and fastest observed performance as a target.",
+          "critical_errors": []
+        },
+        "SEJ-008": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/2/reasoning: Covers replacement support, verified configuration, credential retirement and data removal; explicitly refuses to infer mandatory destruction or an existing disposal policy.",
+          "critical_errors": []
+        },
+        "SEJ-009": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/3/reasoning: Connects restoration/access delays to downtime despite equal observed failure frequency, and permits conditional estimates without asserting field availability or a winning option.",
+          "critical_errors": []
+        },
+        "SEJ-013": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/4/reasoning: Factors A AND (B OR C), checks pair sufficiency and proper-subset insufficiency, and preserves one shared A without inventing probabilities.",
+          "critical_errors": []
+        },
+        "SEJ-014": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/5/reasoning: Links threshold change to alarm workload, attention, acknowledgment/escalation and unresolved incidents; treats causal magnitude as unestablished rather than blaming operators.",
+          "critical_errors": []
+        },
+        "SEJ-018": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/6/reasoning: Reports twenty unit-hours and zero observed events separately from population inference; names exposure/condition assumptions and uncertainty without fabricating a confidence bound.",
+          "critical_errors": []
+        },
+        "SEJ-019": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/7/reasoning: Preserves the proof for its continuously available case, then identifies accepted-request persistence, scheduling and recovery conditions needed for an applicable liveness argument.",
+          "critical_errors": []
+        },
+        "SEJ-023": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/8/reasoning: Finds the missing shutdown response despite trace links and retained diagnostic triggers; correctly rejects deadlines or redundant hardware as substitutes for repairing that behavior.",
+          "critical_errors": []
+        },
+        "SEJ-024": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/9/reasoning: Keeps 40 kg binding and 45 kg proposed while allowing labeled conditional trades; neither recency nor claimed endurance benefit is treated as approval.",
+          "critical_errors": []
+        },
+        "SEJ-028": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/10/reasoning: Separates the supplied specified-versus-produced unit mismatch from the proposed exchange tests and ownership; avoids claiming that labels or uniform units establish integration correctness.",
+          "critical_errors": []
+        },
+        "SEJ-029": {
+          "criteria": [
+            2,
+            1
+          ],
+          "comment": "packet/answers.json#/answers/11/reasoning: Distinguishes nominal update rate from guaranteed freshness and names timestamp/clock/age issues. It asks both parties to agree invalid-data behavior but does not allocate supplier reporting versus consumer detection/use-response responsibilities.",
+          "critical_errors": []
+        },
+        "SEJ-033": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/12/reasoning: Uses the six-month forecast versus year-long commitment to explain learning value; includes trial, delay and migration costs and avoids automatically selecting the reversible option.",
+          "critical_errors": []
+        },
+        "SEJ-034": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/13/reasoning: Compares delivered field capability across repair, access, supply and record integration, with owners and unknowns explicit; laboratory accuracy does not determine build/buy.",
+          "critical_errors": []
+        },
+        "SEJ-038": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/14/reasoning: Restores the 20-minute value's assumption status across dependent predictions and recommendations, retaining conditional calculations and sensitivity rather than disguising provenance.",
+          "critical_errors": []
+        },
+        "SEJ-039": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/15/reasoning: Identifies the information and recognition-to-action timing advantage in immediate-turn simulations; refuses to universalize a delayed attempt or infer actual crew blame.",
+          "critical_errors": []
+        },
+        "SEJ-043": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/16/reasoning: Limits prior success to observed conditions, calls for mechanism and conflicting evidence, and identifies repeated success being used organizationally to carry forward an unresolved disposition.",
+          "critical_errors": []
+        },
+        "SEJ-044": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/17/reasoning: Separates contracts and surveillance from deployable contingency capacity; rehearses authorized decisions with reserve resources and checks activation/readiness gaps.",
+          "critical_errors": []
+        },
+        "SEJ-048": {
+          "criteria": [
+            2,
+            1
+          ],
+          "comment": "packet/answers.json#/answers/18/reasoning: Explains unchanged materials versus changed seal geometry and retains uncertainty. It calls for a technical investigation or decision but does not specify the geometry/mechanism comparison or targeted evidence that would resolve test applicability.",
+          "critical_errors": []
+        },
+        "SEJ-049": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/19/reasoning: Chooses a state/authority view for motion permissions across all named modes, including guards and transitions; also distinguishes the view from proof of implementation enforcement.",
+          "critical_errors": []
+        },
+        "SEJ-053": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/20/reasoning: Keeps TCP acknowledgment at transport scope and requests action-correlated application/human evidence; explicitly distinguishes delivery, display and even semantically undefined acknowledgment from task completion.",
+          "critical_errors": []
+        },
+        "SEJ-054": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/21/reasoning: Transfers the caching trade without adopting a numeric lifetime; evaluates value age and stale-data consequences for actual control decisions, rejecting the mean interval as a guarantee.",
+          "critical_errors": []
+        },
+        "SEJ-058": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/22/reasoning: Traces loss of the ordering guarantee into consumer state/authority and old verification evidence; bounds buffer assumptions and treats duplicates as review cases rather than supplied observed faults.",
+          "critical_errors": []
+        },
+        "SEJ-059": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/23/reasoning: Reopens the context-dependent coverage rationale while preserving it and evaluating battery staffing/lifecycle needs; existing infrastructure is not assumed to prove suitable coverage or force a radio choice.",
+          "critical_errors": []
+        }
+      }
+    },
+    "interpretation": "Named review of the submitted explanation; rubric/key validity still requires expert adjudication."
+  },
+  "interpretation": "Selection accuracy against a proposed curated key; not a measure of explanation quality or overall engineering competence.",
+  "release_acceptance": "not_assessed"
+}

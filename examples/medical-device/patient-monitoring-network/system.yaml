@@ -15,3 +15,7 @@ summary: >
   SpO2, ECG, NIBP, temperature, capnography. IEC 60601-1-8 alarm
   management.
 evidence_status: planned
+
+review_status: structural_and_source_inventory
+physical_evidence_status: planned
+risk_acceptance: not_assessed

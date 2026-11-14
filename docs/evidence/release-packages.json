@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-14T00:14:32.088834+00:00",
+  "version": "2.0.0-alpha.1",
+  "archives": [
+    {
+      "target": "portable",
+      "path": "build/release/mbse-agents-2.0.0-alpha.1.zip",
+      "sha256": "ca55f88f1407f7b74911780af1357334bb8930066007433eda9ec446da6f3924",
+      "bytes": 60782,
+      "files": 60,
+      "canonical_skills": 13,
+      "canonical_bytes_match": true,
+      "licenses_match": true,
+      "native_activation": "not_exercised"
+    },
+    {
+      "target": "databricks",
+      "path": "build/release/mbse-agents-2.0.0-alpha.1-databricks.zip",
+      "sha256": "c3d65bc4a364930e3fe41047f1cdd6c23754cb72a861fa036139a46ea2aef3b9",
+      "bytes": 86439,
+      "files": 59,
+      "canonical_skills": 13,
+      "canonical_bytes_match": true,
+      "licenses_match": true,
+      "native_activation": "not_exercised"
+    }
+  ],
+  "source_hashes": {
+    "scripts/package_plugin.py": "1d20ea84ba1c94c78f773e379905aa912ee740cccfd60e838e02064f2fc7eefd",
+    "scripts/install.py": "d1a66141dff3855abe6412310987d1d79850e0495c700ae40b9259a321fa2321",
+    "config/plugin.json": "99fe3b5c9266de5778a1fa0b1ad455a6bd1d0e8970be6c9ced8eeb7a68291819",
+    "catalog.json": "d22425e31f748d67266c41393c7e6d34cc14aba23d2ec21359ace165dfe0e32d"
+  }
+}

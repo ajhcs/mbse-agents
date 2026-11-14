@@ -14,3 +14,9 @@ or label the output as a proposal.
 The installer supports `--destination /explicit/skills/directory` for hosts that
 read this skill format. Check that host's current documentation for discovery
 and invocation. The original named-agent formats are no longer maintained.
+
+Use `python3 scripts/install.py --diagnose --skill NAME` to inspect a package
+before copying it (`py` on Windows). See the [support matrix](../support.md) for
+maintained host paths and test boundaries. A [selected context export](../databricks/install.md)
+can also supply one Markdown document plus the original referenced files for
+manual context loading; native discovery is a separate host capability.

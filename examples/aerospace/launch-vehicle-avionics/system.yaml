@@ -14,3 +14,7 @@ summary: >
   termination system (FTS), guidance/navigation/control, telemetry.
   Range safety per EWR 127-1.
 evidence_status: planned
+
+review_status: structural_and_source_inventory
+physical_evidence_status: planned
+risk_acceptance: not_assessed

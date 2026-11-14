@@ -1,6 +1,6 @@
 # Assurance Evidence
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Assurance Framework
 
@@ -22,6 +22,7 @@ The evidence package supports review by the safety officer (internal), independe
 | State     | Meaning                                                    |
 |-----------|------------------------------------------------------------|
 | Planned   | Artifact identified, not yet started                       |
+| Executed | Named procedure ran and recorded scoped observations; outcome and acceptance are separate |
 | Drafted   | Initial content exists, under development                  |
 | Reviewed  | Peer or independent review completed                       |
 | Approved  | Authority or designated reviewer accepted                  |
@@ -29,7 +30,7 @@ The evidence package supports review by the safety officer (internal), independe
 
 ## Evidence Index
 
-| EVD ID   | Artifact Name                                          | Location                                                | Demonstrates                                                   | Standard Clause                  | Review Milestone | Evidence Consumer              | Status   |
+| EVD ID   | Artifact Name                                          | Location                                                | Intended evidence scope                                                   | Standard Clause                  | Review Milestone | Evidence Consumer              | Status   |
 |----------|--------------------------------------------------------|---------------------------------------------------------|----------------------------------------------------------------|----------------------------------|------------------|--------------------------------|----------|
 | EVD-001  | RF Power Limiter Test Report                           | evidence/test-reports/rf-power-limiter-test.pdf          | Hardware limiter trips at -20 dBm; response time <10 us; trip detection and operator acknowledgment | IEC 61508 Part 2 Section 7.4  | Phase 3          | Safety officer, IFS assessor   | Planned  |
 | EVD-002  | Formal Verifier Validation Test Report                 | evidence/test-reports/formal-verifier-validation.pdf     | Sequence verification catches timing, power, and frequency violations | IEC 61508 Part 3 Section 7.4  | Phase 3          | Control electronics review board | Planned |
@@ -50,17 +51,19 @@ The evidence package supports review by the safety officer (internal), independe
 | EVD-017  | Gate Fidelity Benchmark Report                         | evidence/test-reports/gate-fidelity-benchmark.pdf        | Single-qubit and two-qubit gate fidelity; control electronics error contribution | System specification           | Phase 3          | Control electronics review board | Planned |
 | EVD-018  | CRE Thermal Budget Analysis and Test Report            | evidence/analysis/cre-thermal-budget.pdf                 | 4K FPGA power dissipation within 10 mW budget; thermal impact on cryostat | System specification; cryostat thermal model | Phase 2 | Cryogenic engineer, review board | Planned |
 | EVD-019  | PFDavg Calculation Report                              | evidence/analysis/pfdavg-calculation.pdf                 | Safety interlock PFDavg <= 1e-2 per IEC 61508; fault tree for SIF | IEC 61508 Part 6 Section 7    | Phase 3          | Safety officer, IFS assessor   | Planned  |
-| EVD-020  | Hazard & Risk Analysis Report                          | evidence/safety/hazard-risk-analysis.pdf                 | All hazards identified, risk controls defined, SIL determination justified | IEC 61508 Part 1 Section 7.4  | Phase 1          | Safety officer, IFS assessor   | Drafted  |
-| EVD-021  | Safety Requirements Specification                      | evidence/safety/safety-requirements-spec.pdf             | SIL 2 safety requirements derived from hazard analysis; allocated to components | IEC 61508 Part 1 Section 7.10 | Phase 1          | Safety officer                 | Drafted  |
-| EVD-022  | System Architecture Description                        | evidence/design/architecture-description.pdf             | Component hierarchy, allocation, interfaces, partitioning, independence arguments | IEC 61508 Part 2 Section 7.2  | Phase 2          | Review board                   | Drafted  |
-| EVD-023  | FMEA/FMECA Report                                      | evidence/safety/fmea-fmeca-report.pdf                    | Component-level failure modes, detection coverage, criticality analysis | IEC 60812; IEC 61508 Part 2   | Phase 2          | Safety officer, IFS assessor   | Drafted  |
-| EVD-024  | Safety Function Design Specification                   | evidence/design/safety-function-design.pdf               | Safety PLC logic, analog comparator design, interlock architecture, safe states | IEC 61508 Part 2 Section 7.4  | Phase 2          | Safety officer, IFS assessor   | Drafted  |
-| EVD-025  | Functional Safety Management Plan                      | evidence/plans/fs-management-plan.pdf                    | Functional safety lifecycle planning, organization, competence, review schedule | IEC 61508 Part 1 Section 6    | Phase 1          | IFS assessor                   | Drafted  |
-| EVD-026  | Verification and Validation Plan                       | evidence/plans/v-and-v-plan.pdf                          | Test strategy, formal verification strategy, inspection plan, acceptance criteria | IEC 61508 Part 2 Section 7.7  | Phase 1          | Safety officer, review board   | Drafted  |
-| EVD-027  | Configuration Management Plan                          | evidence/plans/cm-plan.pdf                               | Identification, baseline control, change management for safety-related items | IEC 61508 Part 1 Section 6.2  | Phase 1          | Review board                   | Drafted  |
+| EVD-020  | Hazard & Risk Analysis Report                          | evidence/drafts/hazard-risk-analysis.md                 | All hazards identified, risk controls defined, SIL determination justified | IEC 61508 Part 1 Section 7.4  | Phase 1          | Safety officer, IFS assessor   | Drafted  |
+| EVD-021  | Safety Requirements Specification                      | evidence/drafts/safety-requirements-spec.md             | SIL 2 safety requirements derived from hazard analysis; allocated to components | IEC 61508 Part 1 Section 7.10 | Phase 1          | Safety officer                 | Drafted  |
+| EVD-022  | System Architecture Description                        | evidence/drafts/architecture-description.md             | Component hierarchy, allocation, interfaces, partitioning, independence arguments | IEC 61508 Part 2 Section 7.2  | Phase 2          | Review board                   | Drafted  |
+| EVD-023  | FMEA/FMECA Report                                      | evidence/drafts/fmea-fmeca-report.md                    | Component-level failure modes, detection coverage, criticality analysis | IEC 60812; IEC 61508 Part 2   | Phase 2          | Safety officer, IFS assessor   | Drafted  |
+| EVD-024  | Safety Function Design Specification                   | evidence/drafts/safety-function-design.md               | Safety PLC logic, analog comparator design, interlock architecture, safe states | IEC 61508 Part 2 Section 7.4  | Phase 2          | Safety officer, IFS assessor   | Drafted  |
+| EVD-025  | Functional Safety Management Plan                      | evidence/drafts/fs-management-plan.md                    | Functional safety lifecycle planning, organization, competence, review schedule | IEC 61508 Part 1 Section 6    | Phase 1          | IFS assessor                   | Drafted  |
+| EVD-026  | Verification and Validation Plan                       | evidence/drafts/v-and-v-plan.md                          | Test strategy, formal verification strategy, inspection plan, acceptance criteria | IEC 61508 Part 2 Section 7.7  | Phase 1          | Safety officer, review board   | Drafted  |
+| EVD-027  | Configuration Management Plan                          | evidence/drafts/cm-plan.md                               | Identification, baseline control, change management for safety-related items | IEC 61508 Part 1 Section 6.2  | Phase 1          | Review board                   | Drafted  |
 | EVD-028  | CRE FPGA Design Verification Report                    | evidence/test-reports/cre-fpga-verification.pdf          | FPGA functional verification, coverage metrics, timing closure, formal property verification | IEEE 1076; IEEE 1800          | Phase 3          | Control electronics review board | Planned |
 | EVD-029  | Independent Functional Safety Assessment Report        | evidence/safety/ifs-assessment-report.pdf                | Independent assessment per IEC 61508 Part 1 Table 5 for SIL 2 | IEC 61508 Part 1 Section 8.2  | Phase 3          | IFS assessor (external)        | Planned  |
 | EVD-030  | Safety Case Report                                     | evidence/safety/safety-case-report.pdf                   | Structured argument that all safety requirements are met; residual risk acceptable | IEC 61508 Part 1 Section 7.1  | Phase 3          | Safety officer, IFS assessor   | Planned  |
+| EVD-MODEL-001 | Exhaustive HZ-001 logic and conditional scenario results | evidence/analysis/model-results.json | Complete static Boolean cuts, declared-parameter arithmetic and retained counterexamples; no physical requirement closure | Authored model; source-review.md | Engineering model review | Systems engineer | Executed |
+
 
 ## IEC 61508 SIL Evidence Mapping
 
@@ -106,16 +109,16 @@ This section maps IEC 61508 lifecycle activities to evidence artifacts for the S
 
 | Technique                          | Recommendation for SIL 2 | Applied? | Evidence                              | EVD ID(s)     |
 |------------------------------------|---------------------------|----------|---------------------------------------|---------------|
-| Fault detection and diagnosis      | Highly Recommended        | Yes      | Safety PLC Diagnostic Test Report     | EVD-005       |
-| Redundancy (diverse)               | Recommended               | Yes      | Analog Comparator Independence Evidence| EVD-006      |
-| Formal methods (safety-related SW) | Recommended               | Yes      | Formal Verification Coverage Report   | EVD-003       |
-| Static analysis                    | Highly Recommended        | Yes      | CRE FPGA Design Verification Report  | EVD-028       |
-| FMEA/FMECA                         | Highly Recommended        | Yes      | FMEA/FMECA Report                     | EVD-023       |
+| Fault detection and diagnosis      | Highly Recommended        | Planned  | Safety PLC Diagnostic Test Report     | EVD-005       |
+| Redundancy (diverse)               | Recommended               | Planned  | Analog Comparator Independence Evidence| EVD-006      |
+| Formal methods (safety-related SW) | Recommended               | Planned  | Formal Verification Coverage Report   | EVD-003       |
+| Static analysis                    | Highly Recommended        | Planned  | CRE FPGA Design Verification Report  | EVD-028       |
+| FMEA/FMECA                         | Highly Recommended        | Planned  | FMEA/FMECA Report                     | EVD-023       |
 | Safety manual                      | Required                  | Planned  | Operation & Maintenance Manual         | (not indexed) |
 
 ## Formal Verification Coverage Metrics
 
-The QPCS uses formal verification at two levels: control sequence verification (CMP-RTO-01E) and FPGA design verification (CMP-CRE-01A).
+The QPCS proposes formal verification at two levels: control sequence verification (CMP-RTO-01E) and FPGA design verification (CMP-CRE-01A). The following counts and coverage values are proposed scope, not executed measurements; no sequence model, RTL, property inventory or commercial EDA results are supplied.
 
 ### Sequence Formal Verifier (CMP-RTO-01E)
 
@@ -127,20 +130,20 @@ The QPCS uses formal verification at two levels: control sequence verification (
 | Flux bias current limits          | 100                 | Per-qubit current setpoint within safe range for all time steps | SMT solver (Z3) | EVD-003  |
 | Pulse overlap violations          | 100                 | No overlapping pulses on the same channel | SAT solver           | EVD-003  |
 
-**Verification completeness argument:** The verifier checks all 5 categories of constraint for every gate sequence before execution. The set of properties was derived systematically from the hazard analysis (HZ-001 through HZ-007) and maps to CTL-001. The verifier model was independently reviewed for completeness (GAP-002 in traceability.md notes the residual risk of model incompleteness).
+**Completeness obligation:** Enumerate the proposed properties, map them to HZ-001 through HZ-007 and CTL-001, specify the sequence and physics abstraction, and retain solver outcomes plus counterexamples. No independent completeness review has occurred. GAP-002 remains open; the executed Boolean study only checks the stated protection logic.
 
 ### CRE FPGA Design Verification (CMP-CRE-01A)
 
 | Verification Method                | Coverage Target     | Metric                                  | Tool                     | EVD ID   |
 |------------------------------------|--------------------|-----------------------------------------|--------------------------|----------|
 | RTL simulation (UVM testbench)     | 100% code coverage | Statement, branch, condition, toggle    | Siemens Questa           | EVD-028  |
-| Formal property verification       | 42 properties      | All safety-relevant state machine properties proven | Cadence JasperGold | EVD-028  |
+| Formal property verification       | 42 properties      | Proposed properties require IDs, scope and proof/counterexample results | Cadence JasperGold | EVD-028  |
 | Equivalence checking (RTL vs. gate)| 100%               | Combinational and sequential equivalence | Synopsys Formality       | EVD-028  |
 | Timing closure                     | 100%               | All paths meet setup and hold constraints at 4K operating temperature | Cadence Innovus | EVD-028 |
 
 ## EDA Tool Qualification Argument
 
-The QPCS uses commercial EDA tools for FPGA design (CRE at 4K) and for safety PLC programming. IEC 61508 Part 3 Section 7.4.4 requires confidence in tools used in the safety lifecycle.
+The following are candidate tools, not installed or executed capabilities of this example. Tool versions, intended use, adopted IEC 61508 provisions and qualification evidence must be established for the selected design.
 
 | Tool                               | Vendor             | Use                                     | Qualification Approach          | EVD ID   | Status   |
 |------------------------------------|--------------------|----------------------------------------|--------------------------------|----------|----------|
@@ -148,10 +151,10 @@ The QPCS uses commercial EDA tools for FPGA design (CRE at 4K) and for safety PL
 | JasperGold                         | Cadence            | Formal property verification for CRE FPGA | Tool output cross-checked against simulation results; proven properties independently reviewed | EVD-028 | Planned |
 | Formality                          | Synopsys           | Equivalence checking (RTL to gate-level) for CRE FPGA | Tool output checked by sampling gate-level simulation against RTL simulation | EVD-028 | Planned |
 | Innovus                            | Cadence            | Place-and-route and timing closure for CRE FPGA | Static timing analysis output verified by timing simulation at corners | EVD-028 | Planned |
-| Safety PLC Programming Environment | PLC vendor          | Safety PLC application programming (IEC 61131-3) | Pre-certified tool per IEC 61508 Part 3; vendor provides T/TUV certification | EVD-024 | Planned |
+| Safety PLC Programming Environment | PLC vendor | Safety PLC application programming (IEC 61131-3) | Selected tool and vendor certificate, scope and version remain to be obtained | EVD-024 | Drafted |
 | Z3 SMT Solver                      | Microsoft Research | Formal verification of gate sequences in CMP-RTO-01E | Open-source tool with extensive community validation; verification results cross-checked against brute-force simulation for small circuits | EVD-003 | Planned |
 
-**Tool qualification rationale:** For SIL 2, IEC 61508 Part 3 Table B.3 permits tool validation approaches ranging from increased confidence from use to formal tool certification. The QPCS approach uses independent verification of tool outputs (simulation results checked against formal properties, and vice versa) to achieve the required tool confidence without requiring full tool certification, which is impractical for commercial EDA tools not specifically designed for IEC 61508 environments.
+**Tool confidence plan:** Define which errors each tool can introduce or fail to detect, then identify independent checks, representative validation cases and required product evidence under the adopted standard. Agreement between two tools is limited by shared models and assumptions. Community use or a vendor certificate alone does not establish suitability for this project.
 
 ## HW/SW Interface Evidence
 
@@ -167,4 +170,8 @@ The HW/SW interface is critical for the QPCS because the safety function spans b
 | TDU FPGA → Clock distribution HW   | CMP-TDU-01B        | CMP-TDU-01C        | Clock frequency, jitter, skew                  | Oscilloscope measurement with calibrated probes | EVD-014          |
 | RPG FPGA → AWG DAC hardware        | CMP-RPG-01A        | CMP-RPG-01D        | Sample rate, resolution, waveform integrity    | Spectrum analyzer and oscilloscope measurement | EVD-008          |
 
-**Interface evidence completeness:** Every interface where a safety function crosses a HW/SW boundary has a defined verification approach with both hardware-in-loop testing and independent measurement instrumentation. The most critical interface (safety interlock to RPG/FBC limiters) uses hardwired discrete signals with no software in the path, eliminating HW/SW interface complexity for the primary safety barrier.
+**Interface evidence obligation:** The table proposes tests across identified HW/SW boundaries. Confirm it covers the selected implementation; capture independent RF/current observations, timing, reset behavior and shared faults. Hardwired interlock signals still depend on electrical defaults, sensing and actuation, so their interface behavior requires measurement.
+
+## Interpretation of the new execution records
+
+EVD-MODEL-001 records executed static analysis only. Its successful check outcome includes discovery of expected counterexamples; rejected claims remain false in those states. Lifecycle (drafted/executed), technical outcome, configuration identity, independent review and acceptance are separate facts. No original physical verification activity is marked complete by this addition. [The model study](analysis/report.md) identifies the supporting observations and remaining work.

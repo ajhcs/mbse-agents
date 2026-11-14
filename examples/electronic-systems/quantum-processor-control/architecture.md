@@ -1,6 +1,6 @@
 # Architecture
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## System Context
 
@@ -106,7 +106,7 @@ graph TD
 | CMP-TDU-01B   | Clock Distribution Network             | Hardware | CMP-TDU-01    | Fanout buffers and matched-length cabling for phase-coherent distribution |
 | CMP-TDU-01C   | Trigger Sequencer FPGA                 | Hardware | CMP-TDU-01    | FPGA generating programmable trigger patterns with <50 ps jitter  |
 | CMP-SAF-01    | Safety Interlock Module                | Subsystem| System        | Independent hardware safety system enforcing RF and flux limits   |
-| CMP-SAF-01A   | Safety PLC                             | Hardware | CMP-SAF-01    | IEC 61508 SIL 2 rated programmable logic controller               |
+| CMP-SAF-01A   | Safety PLC                             | Hardware | CMP-SAF-01    | Candidate safety controller; SIL suitability requires selected-product evidence               |
 | CMP-SAF-01B   | Analog Comparator Trip Circuits        | Hardware | CMP-SAF-01    | Hardware-level analog comparators for RF power and flux current monitoring |
 
 ### Physical Architecture Diagram
@@ -204,14 +204,14 @@ graph TB
 The physical separation between room-temperature electronics (300 K) and cryogenic electronics (4 K) provides natural failure containment. The cryogenic boundary enforces:
 
 - **Thermal isolation.** A failure in room-temperature electronics (e.g., RPG power supply fault) cannot directly raise the 4 K stage temperature. The cryostat thermal mass and cryocooler provide independent thermal regulation. However, sustained RF power through the cryogenic wiring can deposit heat at the mixing chamber stage.
-- **Signal isolation.** The cryogenic coaxial cables include calibrated attenuators at each temperature stage. These attenuators limit the maximum power deliverable to the 20 mK stage regardless of room-temperature electronics behavior. This provides a passive safety barrier independent of the active interlock system.
+- **Signal isolation.** The cryogenic coaxial cables include calibrated attenuators at each temperature stage. Credit the attenuators only within verified input power, frequency, temperature, assembly and damage limits. The executed model retains insufficient attenuation as BE7; passive construction does not make its protective effect unconditional.
 - **Access isolation.** The CRE firmware cannot be updated without a cryostat warmup cycle, making firmware tampering during operation impractical.
 
 ### Safety Interlock Independence
 
-The Safety Interlock Module (CMP-SAF-01) is architecturally independent of the control path:
+The Safety Interlock Module (CMP-SAF-01) has the following proposed separation features; independence requires verification against the shared dependencies in the model:
 
-- **Separate hardware.** The safety PLC (CMP-SAF-01A) is a dedicated IEC 61508 SIL 2 rated controller with no shared processing, memory, or power supply with the RTO or any other control subsystem.
+- **Separate hardware.** The proposed safety controller (CMP-SAF-01A) has separate processing and memory. Verify the selected product, power, reference, sensing, firmware and communications dependencies; a controller rating alone does not qualify the application.
 - **Hardwired trip circuits.** The analog comparator trip circuits (CMP-SAF-01B) operate on analog signals tapped directly from the RPG output and FBC output stages. These circuits function even if the safety PLC itself fails, providing a defense-in-depth layer.
 - **Independent sensing.** The safety system uses its own analog sense points for RF power and flux current measurement, independent of the measurements used by the control software for calibration.
 
@@ -233,9 +233,9 @@ The RTO server hosts multiple software components with different criticality lev
 
 **Decision:** Implement RF power and flux bias current limits as independent hardware interlocks (CMP-SAF-01) rather than relying solely on software enforcement in the orchestration or calibration software.
 
-**Rationale:** The primary safety hazard is qubit array damage from out-of-range control signals. Software-only limits can be defeated by software bugs, misconfiguration, or race conditions during calibration. A hardware interlock with analog comparator trip circuits provides a defense layer that operates independently of all software, meeting the IEC 61508 SIL 2 architectural constraint for a safety function that relies on independence from the control function.
+**Rationale:** Out-of-range control signals can bypass software-only limits through software errors or faults downstream of command validation. Separate hardware comparison is a candidate protective layer. Independence must be established against the actual shared resources and failure set; the Boolean study explicitly retains a shared protection event. No IEC 61508 architectural compliance follows from this choice alone.
 
-**Trade-off:** Additional hardware cost and complexity. The hardware interlock introduces a small insertion loss in the RF signal path (<0.5 dB) and adds a potential failure mode (spurious trip). Accepted because hardware independence is the standard approach for SIL 2 safety functions in process control systems.
+**Trade-off:** Additional hardware, spurious-trip behavior and RF insertion loss require evaluation. The retained <0.5 dB insertion-loss value is a design target pending measurement. Acceptance depends on protection effectiveness, interference, fault recovery and the actual integrity allocation.
 
 ### AD-02: 4 K FPGA for Readout over Room-Temperature Digitization
 
@@ -249,7 +249,7 @@ The RTO server hosts multiple software components with different criticality lev
 
 **Decision:** Use a centralized Timing Distribution Unit (CMP-TDU-01) with a single reference oscillator and distributed clock/trigger network rather than allowing each subsystem to use independent clock sources synchronized via PTP or similar protocols.
 
-**Rationale:** Two-qubit gates require sub-nanosecond relative timing between RF pulse channels. Network-based synchronization protocols (IEEE 1588 PTP) achieve microsecond-level accuracy at best, three orders of magnitude too coarse. A centralized reference oscillator with matched-length clock distribution achieves <100 ps channel-to-channel skew, meeting the timing requirements for high-fidelity gate operations.
+**Rationale:** The design proposes <100 ps channel-to-channel skew. A centralized reference is one candidate architecture; no protocol-wide accuracy bound is assumed for alternatives. Compare measured skew, jitter, drift and fault behavior across the actual clock distribution options, operating temperatures and loads before selecting the design.
 
 **Trade-off:** Single point of failure for timing. If the TDU reference oscillator fails, all qubit control is lost. Mitigated by oscillator redundancy monitoring (FUN-MON-01) and the fact that a timing failure causes gate fidelity degradation (detectable) rather than equipment damage (the safety interlock is independent of timing).
 

@@ -1,6 +1,6 @@
 # Assurance Evidence
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Assurance Framework
 
@@ -23,6 +23,7 @@ The evidence package supports concurrent review by the Program Manager (PM), Pro
 | State     | Meaning                                                    |
 |-----------|------------------------------------------------------------|
 | Planned   | Artifact identified, not yet started                       |
+| Executed | Named procedure ran and recorded scoped observations; outcome and acceptance are separate |
 | Drafted   | Initial content exists, under development                  |
 | Reviewed  | Peer or independent review completed                       |
 | Approved  | Authority or designated reviewer accepted                  |
@@ -30,7 +31,7 @@ The evidence package supports concurrent review by the Program Manager (PM), Pro
 
 ## Evidence Index
 
-| EVD ID   | Artifact Name                                         | Location                                               | Demonstrates                                                  | Standard Clause                | Review Milestone | Evidence Consumer          | Status   |
+| EVD ID   | Artifact Name                                         | Location                                               | Intended evidence scope                                                  | Standard Clause                | Review Milestone | Evidence Consumer          | Status   |
 |----------|-------------------------------------------------------|--------------------------------------------------------|---------------------------------------------------------------|-------------------------------|------------------|----------------------------|----------|
 | EVD-001  | C2 Link Loss Detection Test Report                    | evidence/test-reports/c2-link-loss-detection.pdf        | Link loss detection timing, heartbeat timeout, auto lost link initiation | MIL-STD-882E Section 4.4    | CDR              | PM, DT&E                   | Planned  |
 | EVD-002  | Lost Link Procedure Execution Test Report             | evidence/test-reports/lost-link-procedure.pdf            | Lost link sequencing, ATC notification timing, AV profile activation | MIL-STD-882E Section 4.4    | CDR              | PM, DT&E                   | Planned  |
@@ -52,17 +53,19 @@ The evidence package supports concurrent review by the Program Manager (PM), Pro
 | EVD-018  | Interface Verification Test Report                    | evidence/test-reports/interface-verification.pdf           | Command rate, telemetry latency, video forwarding, LAN QoS, SATCOM DSCP, LOS bus | ICD verification    | CDR              | PM, DT&E                   | Planned  |
 | EVD-019  | Environmental and Endurance Test Report               | evidence/test-reports/environmental-endurance.pdf          | Power-up at temperature extremes, 24-hour endurance, power consumption | MIL-STD-810H; MIL-STD-461G | TRR            | PM, DT&E                   | Planned  |
 | EVD-020  | WCET and Timing Margin Analysis Report                | evidence/analysis/wcet-timing-analysis.pdf                 | Flight command WCET, timing margin confirmation               | System architecture          | CDR              | PM, DT&E                   | Planned  |
-| EVD-021  | System Requirements Specification (SRS)               | evidence/development/srs.pdf                               | Baselined system requirements                                 | DI-IPSC-81431A              | SRR              | PM, PEO                    | Drafted  |
-| EVD-022  | System Safety Assessment Report (SSAR) - Initial      | evidence/safety/ssar-initial.pdf                           | Hazard identification, initial risk assessment                | DI-SESS-81785A              | SRR              | PM, PEO                    | Drafted  |
-| EVD-023  | Architecture Description Document                     | evidence/development/architecture-description.pdf          | System architecture, FACE conformance, allocation             | DI-SESS-81785A; FACE 3.1    | PDR              | PM, PEO, MOSA assessment   | Drafted  |
-| EVD-024  | Interface Control Document (ICD)                      | evidence/development/icd.pdf                               | External and internal interface specifications                | DI-IPSC-81436A              | PDR              | PM, DT&E                   | Drafted  |
-| EVD-025  | Preliminary Hazard Analysis (PHA)                     | evidence/safety/pha.pdf                                    | Preliminary hazard identification and risk assessment         | MIL-STD-882E Section 4.3    | PDR              | PM, PEO                    | Drafted  |
-| EVD-026  | Test and Evaluation Master Plan (TEMP)                | evidence/test-plans/temp.pdf                               | T&E strategy, DT&E/OT&E test events, evaluation criteria     | DoDI 5000.89                | CDR              | PM, DT&E, OT&E            | Drafted  |
-| EVD-027  | Verification Test Plan (VTP)                          | evidence/test-plans/vtp.pdf                                | Verification strategy, test methods, acceptance criteria      | DI-IPSC-81438A              | CDR              | PM, DT&E                   | Drafted  |
+| EVD-021  | System Requirements Specification (SRS)               | evidence/drafts/srs.md                               | Baselined system requirements                                 | DI-IPSC-81431A              | SRR              | PM, PEO                    | Drafted  |
+| EVD-022  | System Safety Assessment Report (SSAR) - Initial      | evidence/drafts/ssar-initial.md                           | Hazard identification, initial risk assessment                | DI-SESS-81785A              | SRR              | PM, PEO                    | Drafted  |
+| EVD-023  | Architecture Description Document                     | evidence/drafts/architecture-description.md          | System architecture, FACE conformance, allocation             | DI-SESS-81785A; FACE 3.1    | PDR              | PM, PEO, MOSA assessment   | Drafted  |
+| EVD-024  | Interface Control Document (ICD)                      | evidence/drafts/icd.md                               | External and internal interface specifications                | DI-IPSC-81436A              | PDR              | PM, DT&E                   | Drafted  |
+| EVD-025  | Preliminary Hazard Analysis (PHA)                     | evidence/drafts/pha.md                                    | Preliminary hazard identification and risk assessment         | MIL-STD-882E Section 4.3    | PDR              | PM, PEO                    | Drafted  |
+| EVD-026  | Test and Evaluation Master Plan (TEMP)                | evidence/drafts/temp.md                               | T&E strategy, DT&E/OT&E test events, evaluation criteria     | DoDI 5000.89                | CDR              | PM, DT&E, OT&E            | Drafted  |
+| EVD-027  | Verification Test Plan (VTP)                          | evidence/drafts/vtp.md                                | Verification strategy, test methods, acceptance criteria      | DI-IPSC-81438A              | CDR              | PM, DT&E                   | Drafted  |
 | EVD-028  | FACE Conformance Test Report                          | evidence/test-reports/face-conformance.pdf                  | FACE 3.1 segment boundary compliance, API conformance         | FACE 3.1 CTS                | CDR              | PM, MOSA assessment        | Planned  |
 | EVD-029  | System Safety Assessment Report (SSAR) - Final        | evidence/safety/ssar-final.pdf                             | Risk acceptance, residual risk, control verification          | DI-SESS-81785A              | SVR              | PM, PEO, DASD(SE)          | Planned  |
 | EVD-030  | Configuration Index                                   | evidence/cm/configuration-index.pdf                        | Complete list of controlled artifacts with version IDs        | DI-CMAN-81248C              | SVR              | PM, CM authority           | Planned  |
-| EVD-031  | DoDAF Architecture Products                           | evidence/architecture/dodaf-products.pdf                    | OV-1, OV-5b, SV-1, SV-4, DIV-2 views                        | DoDAF 2.02                   | PDR, CDR         | PM, PEO, DAB               | Drafted  |
+| EVD-031  | DoDAF Architecture Products                           | evidence/drafts/dodaf-products.md                    | OV-1, OV-5b, SV-1, SV-4, DIV-2 views                        | DoDAF 2.02                   | PDR, CDR         | PM, PEO, DAB               | Drafted  |
+| EVD-MODEL-001 | Exhaustive HZ-001 logic and conditional scenario results | evidence/analysis/model-results.json | Complete static Boolean cuts, declared-parameter arithmetic and retained counterexamples; no physical requirement closure | Authored model; source-review.md | Engineering model review | Systems engineer | Executed |
+
 
 ## DI-SESS CDRL Mapping
 
@@ -150,3 +153,7 @@ Risk acceptance follows the authority chain defined in hazard-analysis.md:
 | High       | PEO recommendation; DAB review; DASD(SE) risk decision                    | DASD(SE) / CAE       | EVD-029               |
 
 All 12 hazards in the hazard log have residual risk of Low. Formal risk acceptance is pending CDR, where the SSAR (EVD-029) will document the risk acceptance decisions for each hazard with verified control evidence.
+
+## Interpretation of the new execution records
+
+EVD-MODEL-001 records executed static analysis only. Its successful check outcome includes discovery of expected counterexamples; rejected claims remain false in those states. Lifecycle (drafted/executed), technical outcome, configuration identity, independent review and acceptance are separate facts. No original physical verification activity is marked complete by this addition. [The model study](analysis/report.md) identifies the supporting observations and remaining work.

@@ -1,0 +1,41 @@
+{
+  "kind": "source-derived-logical-flow",
+  "nodes": {
+    "F": "HG-03 fixture assembly",
+    "P": "HG-03 primary optical measurement",
+    "X": "HG-03 cross-check measurement",
+    "A": "HG-03 acceptance review",
+    "C": "HG-03 calibration record",
+    "V": "HG-03 fixture assurance"
+  },
+  "edges": [
+    {
+      "from": "F",
+      "to": "P",
+      "label": "HG-03-I1 reference dependence"
+    },
+    {
+      "from": "C",
+      "to": "V",
+      "label": "HG-03-I3 assembly evidence"
+    },
+    {
+      "from": "V",
+      "to": "A",
+      "label": "HG-03-C3 acceptance claim"
+    },
+    {
+      "from": "X",
+      "to": "A",
+      "label": "HG-03-I2 conflicting evidence"
+    },
+    {
+      "from": "P",
+      "to": "A",
+      "label": "HG-03-I4 production evidence"
+    }
+  ],
+  "source": "examples/historical/hubble-optics/README.md",
+  "source_locator": "Mermaid block 1",
+  "source_sha256": "3a5d924ddebf8691be2be885f0f8be53c3d84fd8466782bdffdb413c292d4995"
+}

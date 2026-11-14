@@ -1,6 +1,6 @@
 # Hazard Analysis
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Methodology
 
@@ -32,10 +32,10 @@ This matrix is an unadopted project illustration, not the ISO 14971 matrix or an
 | | Negligible (S1) | Minor (S2) | Serious (S3) | Critical (S4) | Catastrophic (S5) |
 |---|---|---|---|---|---|
 | **Frequent (P5)**     | ALARP | Unacceptable | Unacceptable | Unacceptable | Unacceptable |
-| **Probable (P4)**     | Acceptable | ALARP | Unacceptable | Unacceptable | Unacceptable |
-| **Occasional (P3)**   | Acceptable | Acceptable | ALARP | Unacceptable | Unacceptable |
-| **Remote (P2)**       | Acceptable | Acceptable | Acceptable | ALARP | Unacceptable |
-| **Improbable (P1)**   | Acceptable | Acceptable | Acceptable | Acceptable | ALARP |
+| **Probable (P4)**     | Acceptable  | ALARP | Unacceptable | Unacceptable | Unacceptable |
+| **Occasional (P3)**   | Acceptable  | Acceptable | ALARP | Unacceptable | Unacceptable |
+| **Remote (P2)**       | Acceptable  | Acceptable | Acceptable  | ALARP | Unacceptable |
+| **Improbable (P1)**   | Acceptable  | Acceptable | Acceptable  | Acceptable | ALARP |
 
 - **Acceptable**: Teaching matrix label for a proposed low-risk region; no device risk has been accepted.
 - **ALARP**: Risk must be reduced As Low As Reasonably Practicable; residual risk may be acceptable after risk-benefit analysis.
@@ -99,48 +99,41 @@ This matrix is an unadopted project illustration, not the ISO 14971 matrix or an
 | CMP-PMA-01D (Air Detector) | Detector fails to detect air | Air embolism | Catastrophic | Power-up self-test of detector; periodic auto-calibration | CTL-004, CTL-011 | Severity catastrophic; detection moderate; occurrence very low |
 | CMP-PMA-01E (Pressure Sensor) | Sensor reads normal when occlusion exists | Occlusion not detected; under-infusion | Serious | Flow sensor deviation alarm as backup detection | CTL-001, CTL-005 | Severity moderate; detection high; occurrence low |
 
-### Fault Tree: Uncontrolled Over-Infusion (HZ-001)
+### Fault Tree: HZ-001 — explicit dependency model
+
+The same sensor under-reading event is reused in initiation and monitoring; multiplying it twice would understate the probability. A watchdog observes processor liveness, so BE6 is intentionally unused for running-but-wrong output. Clamp free-flow protection, actual flow dynamics, clinical risk, and physical independence require separate tests.
 
 ```mermaid
-graph TD
-    TOP["HZ-001: Over-Infusion<br/>Rate > 125% of Programmed<br/>for > 10 seconds"]
-    TOP -->|AND| G1["Excessive Flow<br/>Actually Delivered"]
-    TOP -->|AND| G2["Over-Delivery<br/>Not Detected"]
-
-    G1 -->|OR| G1A["Software Commands<br/>Excessive Motor Speed"]
-    G1 -->|OR| G1B["Motor Driver Fault<br/>Causes Runaway"]
-    G1 -->|OR| G1C["Control Loop<br/>Instability"]
-
-    G1A --> BE1["Infusion Control<br/>Software Fault<br/>(CMP-MCB-01B)"]
-    G1B --> BE2["Motor Driver IC<br/>Short-Circuit Fault<br/>(CMP-MCB-01H)"]
-    G1C --> BE3["Flow Sensor<br/>Under-Reads<br/>(CMP-PMA-01B)"]
-
-    G2 -->|AND| G2A["Flow Sensor<br/>Does Not Detect<br/>Deviation"]
-    G2 -->|AND| G2B["Hardware Rate<br/>Limiter Fails"]
-    G2 -->|AND| G2C["Watchdog Does<br/>Not Trip"]
-
-    G2A --> BE4["Flow Sensor<br/>Failed or<br/>Miscalibrated"]
-    G2B --> BE5["Current Limiter<br/>Circuit Fault<br/>(CMP-MCB-01H)"]
-    G2C --> BE6["Watchdog Timer<br/>IC Fault<br/>(CMP-MCB-01J)"]
-
-    style TOP fill:#ff6b6b,color:#000
-    style G1 fill:#ffa07a,color:#000
-    style G2 fill:#ffa07a,color:#000
+flowchart TD
+  BE1["BE1: Running infusion-control software commands excessive delivery"]
+  BE2["BE2: Motor driver runaway fault"]
+  BE3["BE3: Shared flow-sensor under-reading drives control and defeats deviation sensing"]
+  BE4["BE4: Independent deviation-monitor failure"]
+  BE5["BE5: Hardware rate limiter fails to inhibit excessive drive"]
+  BE6["BE6: Processor watchdog hardware fails"]
+  BE7["BE7: Shared motor-drive/limiter dependency defeats both functions"]
+  G1["G1: OR"]
+  G1 --> BE1
+  G1 --> BE2
+  G1 --> BE3
+  G1 --> BE7
+  G2["G2: OR"]
+  G2 --> BE3
+  G2 --> BE4
+  G3["G3: OR"]
+  G3 --> BE5
+  G3 --> BE7
+  TOP["TOP: AND"]
+  TOP --> G1
+  TOP --> G2
+  TOP --> G3
 ```
 
-**Cut set analysis:**
-
-The top event requires BOTH excessive flow delivery AND failure of all detection mechanisms. The dominant cut set is:
-
-- Software fault (BE1) AND Flow sensor failed (BE4) AND Hardware limiter fault (BE5) AND Watchdog fault (BE6)
-
-The proposed hardware limiter (CTL-002), flow sensor, software, and watchdog are candidate controls. Their shared resources, fault coverage, failure rates, and dependencies have not been established; no combined probability or acceptability conclusion is supported.
-
-The proposed spring-closed clamp (CTL-006) is an additional candidate barrier to gravity-driven free-flow. Its powered hold-open actuator, door interlock, release/occlusion behavior, and common dependencies need analysis and testing before independence is claimed.
+The machine-readable [failure model](analysis/failure-model.json) is authoritative for this authored abstraction. [Executed results and interpretation](analysis/report.md) provide complete minimal cuts, scenario calculations, proof obligations and retained counterexamples. Event IDs from the earlier model retain their stated failure meaning; new shared-dependency events are explicit. Probabilities are synthetic per-demand inputs under the declared mutual-independence hypothesis after shared events are represented. No flight-hour rate, ASIL/SIL achievement, physical effectiveness or risk acceptance follows from these results.
 
 ## Risk-Benefit Analysis
 
-For hazardous situations where residual risk falls in the ALARP region after all practicable risk controls are applied, the following risk-benefit analysis demonstrates that the medical benefits of the device outweigh the residual risks.
+This draft identifies candidate benefits and the comparative evidence needed to evaluate them. No residual-risk or benefit conclusion is established. The executed models test selected control logic; they do not estimate clinical benefit or harm.
 
 **Intended medical benefits:**
 - Accurate, controlled intravenous fluid and medication delivery replacing manual gravity infusion
@@ -153,12 +146,12 @@ For hazardous situations where residual risk falls in the ALARP region after all
 
 | HZ ID | Residual Risk Level | Benefit Justification |
 |-------|--------------------|-----------------------|
-| HZ-001 | Unassessed (control proposal) | Closed-loop control with hardware rate limiting reduces over-infusion risk below that of gravity infusion |
-| HZ-002 | Unassessed (control proposal) | DERS hard limit on bolus eliminates the most dangerous bolus errors |
+| HZ-001 | Unassessed (control proposal) | Hypothesis: closed-loop control and rate limiting reduce over-infusion; compare measured delivery, failure coverage and use conditions against the selected alternative |
+| HZ-002 | Unassessed (control proposal) | Hypothesis: DERS hard limits reject covered bolus-entry errors; test library validity, bypass paths and uncovered error types |
 | HZ-003 | Unassessed (control proposal) | DERS with validated drug library provides protection not available with non-DERS pumps |
 | HZ-004 | Unassessed (control proposal) | Air-in-line detection with automatic pause provides protection not available with gravity infusion |
 | HZ-005 | Unassessed (control proposal) | Proposed spring-closed clamp aims to prevent free-flow; effectiveness and failure dependencies unverified |
-| HZ-008 | Unassessed (control proposal) | Network connectivity benefits (EHR integration, alarm forwarding) outweigh residual cybersecurity risk with defense-in-depth controls |
+| HZ-008 | Unassessed (control proposal) | Compare demonstrated EHR/alarm benefits with assessed cyber-induced harms; effectiveness and acceptability remain open |
 
 **Assessment status:** Individual residual risks remain unassessed; planned controls and suggested benefits do not establish their effectiveness or risk-benefit acceptability.
 

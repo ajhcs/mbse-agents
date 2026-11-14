@@ -1,0 +1,27 @@
+{
+  "id": "HG-10",
+  "sources": [
+    {
+      "id": "HG-10-S1",
+      "title": "House of Commons Transport Committee: The opening of Heathrow Terminal 5",
+      "url": "https://publications.parliament.uk/pa/cm200708/cmselect/cmtran/543/54304.htm",
+      "publication_date": "2008-11-03",
+      "locator": "Chapter 2, paragraphs 8\u201314",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Committee conclusions and witness accounts are distinguishable; trial participation alone does not establish trial representativeness."
+    },
+    {
+      "id": "HG-10-S2",
+      "title": "The opening of Heathrow Terminal 5: communication and lessons",
+      "url": "https://publications.parliament.uk/pa/cm200708/cmselect/cmtran/543/54305.htm",
+      "publication_date": "2008-11-03",
+      "locator": "Chapter 3, paragraphs 15\u201319",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "The committee explicitly avoided certainty that better cooperation would have prevented every problem."
+    }
+  ]
+}

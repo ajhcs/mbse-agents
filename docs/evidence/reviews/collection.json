@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "scope": "Unchanged independent review reports and final observation records; disposable probe fixtures remain in the original local review folder. Paths and reviewed hashes refer to the repository tree and recorded local run.",
+  "files": {
+    "evidence-independent.md": "78518b9cd7ec9e483173704f5968d45a0b13678459c29d06ff6b915d67c01f4c",
+    "evidence-independent-final-results.json": "aafe3338526986adfe9023e4f5b5e1bfac72b1d6657790aff0d5c2e21f75f9a2",
+    "evidence-independent-final-bindings.json": "590300d5acffea40e48dcbeabd1c7ec649b177adfe9af83fb3633a9ca4748486",
+    "package-independent.md": "6454dba882072db05958e420848c012c98bbc04b570d984e54da98e65dd8b730",
+    "package-adversarial-results-final.json": "79e91b461aa71569be1fe5c52e44bfe2a9df09838bce093f5107f6b9d76d1567",
+    "installer-adversarial-results.json": "1c67157b5f8ad5cb7cbdb232ca4459226be595edf0ad5e436e21d866dc2b3ebd",
+    "package-layout-results.json": "21c8cec2f78f0f090683492bf0c7eadb06ac98960216d88fcea67f458ebd7449"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-02",
+  "slug": "challenger",
+  "title": "Challenger: make dissent reach the decision",
+  "year": 1986,
+  "domain": "space",
+  "outcome": "failure",
+  "focus": "Treat readiness as an evidence and communication process with identifiable decision authority.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-02-S1",
+      "title": "Rogers Commission Report, Volume I, Chapter V",
+      "url": "https://www.nasa.gov/history/rogersrep/v1ch5.htm",
+      "publication_date": "1986-06-06",
+      "locator": "Chapter V, The Contributing Cause of the Accident, pp. 82–84",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-02-F1",
+      "statement": "The commission found that launch decision-makers lacked important information about O-ring problems, the initial contractor recommendation, and continuing engineering objections.",
+      "source_ids": [
+        "HG-02-S1"
+      ],
+      "locator": "Chapter V, pp. 82–83"
+    },
+    {
+      "id": "HG-02-F2",
+      "statement": "The formal readiness structure allowed concerns to bypass key managers despite review procedures having been followed.",
+      "source_ids": [
+        "HG-02-S1"
+      ],
+      "locator": "Chapter V, pp. 82–84"
+    }
+  ],
+  "retrospective": {
+    "boundary": "The readiness system includes contractors, engineering judgment, launch management, environmental conditions, and escalation paths.",
+    "interfaces": [
+      "Engineering → launch authority: uncertainty and disagreement must survive management summarization.",
+      "Previous flight evidence → current decision: past operation is bounded by the conditions actually observed."
+    ],
+    "decision": {
+      "question": "What should a readiness board receive when specialists and management disagree?",
+      "options": [
+        "A single consolidated recommendation.",
+        "A recommendation plus unresolved dissent, its evidence, and the authority accepting the risk."
+      ],
+      "recommendation": "Preserve the technical issue and its disposition as an explicit decision input.",
+      "uncertainty": "A new escalation form alone cannot establish that concerns will be heard or resolved."
+    },
+    "artifact": {
+      "id": "HG-02-A1",
+      "type": "Dissent disposition record",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Concern",
+          "State mechanism, affected function, and disputed condition",
+          "Underlying observations and missing-condition evidence"
+        ],
+        [
+          "Disagreement",
+          "Retain competing interpretations and named technical roles",
+          "Direct review with decision authority"
+        ],
+        [
+          "Disposition",
+          "Record decision, rationale, owner, and reopening trigger",
+          "Acknowledgment that dissent reached the deciding level"
+        ]
+      ]
+    },
+    "questions": [
+      "What information would be lost in a red/amber/green readiness roll-up?",
+      "When does previous success provide relevant evidence, and when does it fail to?",
+      "Rewrite a vague concern into a decision request without overstating certainty."
+    ],
+    "answer_signals": [
+      "Separates the absence of observed failure from demonstrated operating margin.",
+      "Retains dissent without treating every disagreement as equally supported.",
+      "Names who decides and what evidence would change the decision."
+    ],
+    "transfer_exercise": "Synthetic: a launch-independent field deployment faces an environmental condition outside tested experience. Write the unresolved-issue paragraph for its readiness review.",
+    "limits": "This case does not infer outside political intervention or reduce the accident to one individual decision."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

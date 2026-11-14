@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "scope": "independent_implementation_crosscheck_not_independent_engineering_review",
+  "model_sha256": "2e397fa9cf4652cea822a3235735d32e9b5ee0f5e5fc12a1ef69fab05ca88e1e",
+  "input_sha256": "8ed09239e16905519b9d72118a7273babd7651105961df54fb96d9f1677c4196",
+  "helper_sources": {
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/skills/analyze-system-failures/scripts/failure_analysis.py": "b9d2667e219995f90f762ffca156ec6a245408bebbbe5ae47f45728a2dc9c57e",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/scripts/failure_analysis.py": "66f894de2a4f6eebf8e1797e97da081f4a60e6bc4ee590b33b35b57531f731b3",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/verifier/failure_analysis.py": "b9e31cf308478c963a4e5fe540c64e04d185d47004a1815d5aa4773c2cc24ae9",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/verifier/core.py": "2b2e4e5076e2ccdbe23b7aee55c6c136dea9171da0213ba19a05f95a6b638d2a",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/verifier/foundation.py": "13fa815dfdb71c2372ba5dca1e047ef74a216d45eb9b9c33aca6deda2b030cef"
+  },
+  "executed_at": "2026-11-13T23:40:47.986524+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/skills/analyze-system-failures/scripts/failure_analysis.py",
+    "/workspace/repos/builderbob/mbse-agents/examples/electronic-systems/quantum-processor-control/analysis/cse-failure-model.json",
+    "--required",
+    "fault_tree",
+    "--required",
+    "probability"
+  ],
+  "matched": true,
+  "cse_result": {
+    "acceptance": "not_evaluated",
+    "applicability_validation": "not_evaluated",
+    "artifact_sha256": "51cb85355d92f4aeeecebb7af2b3b4e136923dbd0a3e025a8822992c9a9acd79",
+    "checks": {
+      "fault_tree": {
+        "claim_scope": "all_unique_event_boolean_assignments_no_probability_assumptions",
+        "completed_assignments": 256,
+        "cut_sets_complete": true,
+        "events": [
+          "BE1",
+          "BE2",
+          "BE3",
+          "BE4",
+          "BE5",
+          "BE6",
+          "BE7",
+          "BE8"
+        ],
+        "expected_assignments": 256,
+        "gates": [
+          "G1",
+          "G1A",
+          "G2",
+          "G3",
+          "TOP"
+        ],
+        "minimal_cut_sets": [
+          [
+            "BE2",
+            "BE7",
+            "BE8"
+          ],
+          [
+            "BE3",
+            "BE7",
+            "BE8"
+          ],
+          [
+            "BE1",
+            "BE4",
+            "BE7",
+            "BE8"
+          ],
+          [
+            "BE2",
+            "BE5",
+            "BE6",
+            "BE7"
+          ],
+          [
+            "BE3",
+            "BE5",
+            "BE6",
+            "BE7"
+          ],
+          [
+            "BE1",
+            "BE4",
+            "BE5",
+            "BE6",
+            "BE7"
+          ]
+        ],
+        "record_basis_unknown": false,
+        "status": "pass",
+        "top_event": "TOP",
+        "unknown_event_basis": [],
+        "unused_events": [],
+        "unused_gates": []
+      },
+      "probability": {
+        "assumptions": {
+          "assumption": "mutually_independent",
+          "basis": "Synthetic demand scenarios; shared causes are reused event IDs.",
+          "mission": "One excessive-RF challenge at the defined protection boundary; probabilities are per challenge, not a demonstrated PFDavg or rate."
+        },
+        "claim_scope": "conditional_on_explicit_mutual_independence_and_mission",
+        "completed_assignments": 256,
+        "probability": "201190769711029999/10000000000000000000000000000",
+        "status": "pass"
+      }
+    },
+    "claim_scope": "bounded_authored_coherent_boolean_failure_model",
+    "completed_checks": [
+      "fault_tree",
+      "probability"
+    ],
+    "expected_checks": [
+      "fault_tree",
+      "probability"
+    ],
+    "findings": [],
+    "input_path": "/workspace/repos/builderbob/mbse-agents/examples/electronic-systems/quantum-processor-control/analysis/cse-failure-model.json",
+    "input_sha256": "8ed09239e16905519b9d72118a7273babd7651105961df54fb96d9f1677c4196",
+    "limits": {
+      "assignments": 4096,
+      "cut_set_literals": 2048,
+      "events": 128,
+      "fmea_rows": 128,
+      "gate_depth": 64,
+      "gate_inputs": 32,
+      "gates": 128,
+      "minimal_cut_sets": 256,
+      "rational_bits": 4096,
+      "reachable_events": 12,
+      "text_characters": 2048
+    },
+    "model_id": "QuantumRFProtection",
+    "revision": "gallery-hardening-1",
+    "scope_authority": "caller_supplied_local_scope_not_authenticated",
+    "scope_sha256": "41223e00ee538a5beb877f8e05a1cdd15a0349d2f3c7ad616bc1931e5729e656",
+    "status": "pass",
+    "version": "failure-analysis-1.0"
+  }
+}

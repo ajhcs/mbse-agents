@@ -1,0 +1,1806 @@
+{
+  "schema_version": 1,
+  "review_id": "performance-domain-review-20261113",
+  "reviewer_role": "performance_review_domains; independent of the two artifact-producing agents",
+  "review_scope": "HO-01, HO-02, HO-03, HO-04, HO-05, HO-07, HO-10, HO-11, HO-17; task-domain arm only",
+  "reviewed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+  "repository_root": "/workspace/repos/builderbob/mbse-agents",
+  "packet_root": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain",
+  "assessment_scale": {
+    "0": "missing or contradicted",
+    "1": "partial or consequential gap",
+    "2": "coherent and supported within the requested task and supplied facts"
+  },
+  "protocol_snapshot_hashes": {
+    "evals/evidence/performance-20261113/protocol.json": "4143a8b70db27d89778946ac02b8315255963b331ff7b63273812d7bd9104f69",
+    "evals/evidence/performance-20261113/cases-snapshot.json": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+    "evals/evidence/performance-20261113/rubrics-snapshot.json": "2c97061ab012169a995f9d06df6c2b1934c128299a8d17c07281d103ea5f325a"
+  },
+  "protocol_snapshot_bindings_match": true,
+  "reviewer_method": {
+    "authoring_role": false,
+    "participant_outputs_modified": false,
+    "content_review": "Read frozen case/rubric/protocol snapshots and every response artifact; inspected source IDs, cross-artifact semantics, evidence status, and run-record claims.",
+    "integrity_review": "Rehashed all 80 manifest/input entries and all 27 output files; checked every manifest, run-record input/output map, and six checksum indexes against actual bytes. Three design-producer run records changed during batch finalization; final metadata was read and rebound after the parent freeze notice, retaining initial hashes in metadata_amendment_history. All engineering Markdown and input hashes stayed unchanged. Requests equal frozen case text plus one final newline.",
+    "source_review": "Independent primary-source checks for medical classification, tool qualification, formal-result modes and ISO scope; historical transfer uses the supplied fact where no new historical assertion is made.",
+    "review_skill": "Current mbse-baseline-review guidance used as review method, not as an authoritative answer key.",
+    "hash_scope_limit": "Input skill/reference files are bound by hashes; this assessment did not semantically re-review every shipped skill. Actual participant tool access and reads remain self-reported."
+  },
+  "result": {
+    "cases_reviewed": 9,
+    "criterion_count": 36,
+    "critical_findings": 0,
+    "consequential_findings": 0,
+    "minor_findings": 0,
+    "mandatory_artifact_repairs": 0,
+    "summary": "All nine outputs coherently complete their bounded draft/review task under the adjudicated rubric. No located correction requiring an output repair was identified. This is descriptive artifact evidence, not a superiority, implementation-verification or operational-acceptance claim.",
+    "aggregation_policy": "No aggregate performance or leadership score reported."
+  },
+  "shared_limits": [
+    "Only one output per case was reviewed. Multiple cases share each participant context and are correlated.",
+    "The cases and rubrics are public, the producer environment is instruction-separated rather than a securely held-out sandbox, and effective inherited exposure is not independently reconstructed.",
+    "Exact producer model/settings/tokens/cost remain unknown. Detailed tool/source/skill access metadata is participant self-report unless corroborated here by actual artifacts or independent source retrieval.",
+    "No separate retained transcript authenticated individual skill reads; no native host skill discovery or causal skill contribution is established.",
+    "The rubric is coarse and the nine cases are finite. Full criterion ratings indicate adequate responses to these requests, not exhaustive absence of errors or broad systems-engineering ability.",
+    "Generated verification plans and source citations do not count as executed system tests, product approval, regulatory acceptance or demonstrated real-world performance.",
+    "No paid API, production configuration or participant artifact was changed by this review.",
+    "Review began after early per-case completion but before design-batch metadata finalization. Three run-record hashes changed; final metadata was reviewed after group freeze. Initial hashes are retained, but initial full run-record bytes were not copied by this reviewer."
+  ],
+  "primary_sources": [
+    {
+      "id": "SRC-01",
+      "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-880/subpart-F/section-880.5725",
+      "title": "21 CFR 880.5725",
+      "edition": "Title 21 current through 2026-11-12",
+      "locator": "(a)-(b)",
+      "checked": "Infusion-pump identification and Class II starting point",
+      "limit": "Generic regulation does not settle product code or submission route.",
+      "accessed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+      "original_source_bytes_sha256": null,
+      "access_method": "web.run extracted primary-source text; original source bytes not retained"
+    },
+    {
+      "id": "SRC-02",
+      "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-876/subpart-F/section-876.5820",
+      "title": "21 CFR 876.5820",
+      "edition": "Title 21 current through 2026-11-12",
+      "locator": "(a)",
+      "checked": "The cited device category is hemodialysis system and accessories",
+      "limit": "No general pump classification is inferred from it.",
+      "accessed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+      "original_source_bytes_sha256": null,
+      "access_method": "web.run extracted primary-source text; original source bytes not retained"
+    },
+    {
+      "id": "SRC-03",
+      "url": "https://www.fda.gov/media/78369/download",
+      "title": "FDA Infusion Pumps Total Product Life Cycle",
+      "edition": "2014-12-02 plus software-documentation cover notice referencing 2023 guidance",
+      "locator": "Cover notice; section 3, printed page 5",
+      "checked": "Class III-system/PMA exception and generally Enhanced Documentation Level are accurately scoped",
+      "limit": "Guidance and software documentation level do not independently determine device/software class.",
+      "accessed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+      "original_source_bytes_sha256": null,
+      "access_method": "web.run extracted primary-source text; original source bytes not retained"
+    },
+    {
+      "id": "SRC-04",
+      "url": "https://health.ec.europa.eu/system/files/2021-10/mdcg_2021-24_en_0.pdf",
+      "title": "MDCG 2021-24 Rev.1",
+      "edition": "April 2026",
+      "locator": "Printed pp. 46-48 and 59",
+      "checked": "Rule 11/12, software-driving rule 3.3 and diagnostic-control Rule 22 support the stated distinctions",
+      "limit": "Nonbinding guidance. Producer did not access consolidated MDR legal text; reviewer did not treat original-2017 search extracts as a current consolidated legal basis.",
+      "accessed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+      "original_source_bytes_sha256": null,
+      "access_method": "web.run extracted primary-source text; original source bytes not retained"
+    },
+    {
+      "id": "SRC-05",
+      "url": "https://webstore.iec.ch/en/publication/22794",
+      "title": "IEC 62304 consolidated publication",
+      "edition": "IEC 62304:2006+AMD1:2015 CSV, edition 1.1",
+      "locator": "Publisher title, abstract and product details",
+      "checked": "Edition identity and software-lifecycle scope",
+      "limit": "Full classification clauses were not accessible/read; conditional Class C reasoning is not verified as a completed normative classification.",
+      "accessed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+      "original_source_bytes_sha256": null,
+      "access_method": "web.run extracted primary-source text; original source bytes not retained"
+    },
+    {
+      "id": "SRC-06",
+      "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-115D.pdf",
+      "title": "FAA AC 20-115D",
+      "edition": "2017-07-21",
+      "locator": "Paragraph 10, Table 2, printed pp. 10-11",
+      "checked": "Recognized tool-qualification method, mappings and legacy-tool correlation context",
+      "limit": "Acceptable means, not a regulation or final determination for the proposed tool use.",
+      "accessed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+      "original_source_bytes_sha256": null,
+      "access_method": "web.run extracted primary-source text; original source bytes not retained"
+    },
+    {
+      "id": "SRC-07",
+      "url": "https://shemesh.larc.nasa.gov/fm/FMinCert/NASA-CR-2017-219371.pdf",
+      "title": "NASA/CR-2017-219371 Formal Methods Tool Qualification",
+      "edition": "February 2017",
+      "locator": "Section 3.3.1, printed page 11, Tables 2-3",
+      "checked": "Tool criteria and distinction between automating an activity and claiming additional process credit",
+      "limit": "Primary contractor research explanation, not the full licensed standards or an authority approval.",
+      "accessed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+      "original_source_bytes_sha256": null,
+      "access_method": "web.run extracted primary-source text; original source bytes not retained"
+    },
+    {
+      "id": "SRC-08",
+      "url": "https://yosyshq.readthedocs.io/projects/sby/en/latest/reference.html",
+      "title": "YosysHQ SBY reference",
+      "edition": "Latest public documentation accessed during this review",
+      "locator": "Options section, mode table",
+      "checked": "Bounded safety, unbounded safety, liveness and reachability modes are distinguished",
+      "limit": "Illustration of result semantics; no inference that the team used SBY or any particular engine.",
+      "accessed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+      "original_source_bytes_sha256": null,
+      "access_method": "web.run extracted primary-source text; original source bytes not retained"
+    },
+    {
+      "id": "SRC-09",
+      "url": "https://www.iso.org/standard/77490.html",
+      "title": "ISO 21448 public publisher scope",
+      "edition": "ISO 21448:2022, edition 1",
+      "locator": "Abstract",
+      "checked": "Functional/performance insufficiency, foreseeable misuse and exclusion of ISO 26262 faults",
+      "limit": "Public scope only; full licensed standard not read.",
+      "accessed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+      "original_source_bytes_sha256": null,
+      "access_method": "web.run extracted primary-source text; original source bytes not retained"
+    },
+    {
+      "id": "SRC-10",
+      "url": "https://www.iso.org/standard/68383.html",
+      "title": "ISO 26262-1 public publisher scope",
+      "edition": "ISO 26262-1:2018, edition 2",
+      "locator": "Abstract",
+      "checked": "Malfunctioning behavior of safety-related E/E systems",
+      "limit": "Public scope only; full licensed standard not read; page identifies a draft replacement, not a completed supersession.",
+      "accessed_at_utc": "2026-11-13T23:55:17.567563+00:00",
+      "original_source_bytes_sha256": null,
+      "access_method": "web.run extracted primary-source text; original source bytes not retained"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "HO-01",
+      "case_version": "1.0",
+      "packet_directory": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-01",
+      "packet_manifest": {
+        "schema_version": 1,
+        "kind": "artifact-performance-packet",
+        "status": "complete",
+        "case": "HO-01",
+        "case_version": "1.0",
+        "prepared_at": "2026-11-13T23:42:14.116999+00:00",
+        "skills": [
+          "mbse-requirements",
+          "mbse-architecture",
+          "mbse-verification-evidence"
+        ],
+        "arm": "task-domain",
+        "full_catalog_exposed": false,
+        "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+        "files": {
+          ".agents/skills/mbse-architecture/SKILL.md": "4132528dc9a13b9f8b62f758a7cea0b80cf972decc3fa5760d5296117bc1141f",
+          ".agents/skills/mbse-architecture/agents/openai.yaml": "1ff9d54b0a20a27410315e3e842b586d114f4f7eb66b0623767dacf84ea9f196",
+          ".agents/skills/mbse-architecture/references/architecture-records.md": "929c203c94676c28aa590369b710181699117f97aebf52d433805c166c402f3f",
+          ".agents/skills/mbse-requirements/SKILL.md": "efa83806def52943b9b5819b49bedaa192ebb24bf009f14c0157d16c322ae459",
+          ".agents/skills/mbse-requirements/agents/openai.yaml": "2740ef2c25c0169434f34651fb1522209a61d7d31f58e28c55c60e34d64c6b92",
+          ".agents/skills/mbse-requirements/references/requirement-contracts.md": "15bc8c37d01984b9ff0936fc92d3357e23190d9d22a3a9d87d131b51874df79f",
+          ".agents/skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+          ".agents/skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+          ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+          "request.md": "434a60facfae617c47a0af1a2decdf213138a5e75569209cf40f79331eeedc4d"
+        },
+        "exposure": "Public inputs; packet separation is not a secure held-out environment."
+      },
+      "input_files_sha256": {
+        ".agents/skills/mbse-architecture/SKILL.md": "4132528dc9a13b9f8b62f758a7cea0b80cf972decc3fa5760d5296117bc1141f",
+        ".agents/skills/mbse-architecture/agents/openai.yaml": "1ff9d54b0a20a27410315e3e842b586d114f4f7eb66b0623767dacf84ea9f196",
+        ".agents/skills/mbse-architecture/references/architecture-records.md": "929c203c94676c28aa590369b710181699117f97aebf52d433805c166c402f3f",
+        ".agents/skills/mbse-requirements/SKILL.md": "efa83806def52943b9b5819b49bedaa192ebb24bf009f14c0157d16c322ae459",
+        ".agents/skills/mbse-requirements/agents/openai.yaml": "2740ef2c25c0169434f34651fb1522209a61d7d31f58e28c55c60e34d64c6b92",
+        ".agents/skills/mbse-requirements/references/requirement-contracts.md": "15bc8c37d01984b9ff0936fc92d3357e23190d9d22a3a9d87d131b51874df79f",
+        ".agents/skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+        ".agents/skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+        ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+        "request.md": "434a60facfae617c47a0af1a2decdf213138a5e75569209cf40f79331eeedc4d",
+        "packet-manifest.json": "d8715abb662ad3c47747393cbc539371c923c74330055d510426f8912f730b53"
+      },
+      "output_files_sha256": {
+        "outputs/architecture.md": "ade43f1e55af2cad1dd17fcd329eef37460531aab3c707ba9673051f6a383edb",
+        "outputs/output.md": "1ee5d3bbfcf215082f364d1fa32701b9dcd96dafdbbf3fcb0a8016db676d272d",
+        "outputs/requirements.md": "8164ff9a8c87c2da748cc8e68a866cc4650235c9996d2726ba10986bd14a6633",
+        "outputs/run-record.json": "2be64b53a268ea30642e24c3ef596e5782c941dd300780cde4f5b53a8f9e6061",
+        "outputs/verification.md": "55bbbc630be9ea165e76fc9544431bec2230a444e8bf8b54e2a2d0d4bd88ce74"
+      },
+      "content_reviewed_paths": [
+        "request.md",
+        "outputs/architecture.md",
+        "outputs/output.md",
+        "outputs/requirements.md",
+        "outputs/verification.md",
+        "outputs/run-record.json"
+      ],
+      "hash_verification_mismatches": [],
+      "request_matches_snapshot_plus_final_newline": true,
+      "producer_reported_skills": [
+        ".agents/skills/mbse-requirements/SKILL.md",
+        ".agents/skills/mbse-architecture/SKILL.md",
+        ".agents/skills/mbse-verification-evidence/SKILL.md"
+      ],
+      "producer_reported_references": [
+        ".agents/skills/mbse-requirements/references/requirement-contracts.md",
+        ".agents/skills/mbse-architecture/references/architecture-records.md",
+        ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md"
+      ],
+      "producer_reported_source_access": [],
+      "producer_context_limits": [
+        "Six cases HO-01, HO-04, HO-07, HO-09, HO-12, HO-13 share one participant context. Outputs are not independent across cases."
+      ],
+      "output_word_counts": {
+        "outputs/architecture.md": 1102,
+        "outputs/output.md": 79,
+        "outputs/requirements.md": 1208,
+        "outputs/verification.md": 777
+      },
+      "criterion_ratings": [
+        {
+          "criterion_index": 1,
+          "criterion": "Preserves N-01 through N-04 in requirements and links allocations",
+          "rating": 2,
+          "reason": "All four source needs are reproduced without changing their wording and traced through R-01\u2013R-12 to functions, components, and planned verification.",
+          "locators": [
+            {
+              "path": "outputs/requirements.md",
+              "line_start": 7,
+              "line_end": 33
+            }
+          ]
+        },
+        {
+          "criterion_index": 2,
+          "criterion": "Defines timer/sample freshness and explicit stop/resume semantics",
+          "rating": 2,
+          "reason": "Independent inhibit causes, explicit eligible resume, timer reset, stale-data behavior and proposed startup rules are coherent. Sample continuity and freshness reference choices remain explicit decisions.",
+          "locators": [
+            {
+              "path": "outputs/architecture.md",
+              "line_start": 23,
+              "line_end": 36
+            }
+          ]
+        },
+        {
+          "criterion_index": 3,
+          "criterion": "Keeps manager 50 ms proposal and weather/safe-state decisions unconfirmed",
+          "rating": 2,
+          "reason": "The 50 ms value remains unsupported; physical stopping, weather, safe position, timing tolerances, and reliability are left open with owners and evidence needs.",
+          "locators": [
+            {
+              "path": "outputs/requirements.md",
+              "line_start": 39,
+              "line_end": 45
+            }
+          ]
+        },
+        {
+          "criterion_index": 4,
+          "criterion": "Provides usable interface/verification conditions and no executed-evidence claims",
+          "rating": 2,
+          "reason": "Actual requirements, architecture and verification files exist. Interfaces and boundary/recovery observations are actionable; all eight verification activities are explicitly planned, with zero executed/verified/accepted claims.",
+          "locators": [
+            {
+              "path": "outputs/verification.md",
+              "line_start": 3,
+              "line_end": 18
+            }
+          ]
+        }
+      ],
+      "task_completion": "Requested three Markdown engineering drafts plus a summary exist and link coherently. A substantial response is proportionate to the multi-artifact task.",
+      "source_fidelity": "N-01 through N-04 wording and IDs preserved. Source obligations, candidate components, derived proposals and open decisions are distinguished.",
+      "reviewer_primary_sources": [],
+      "rubric_adjudication": "Accept with interpretation: a reviewable draft may propose timer/freshness semantics and identify decisions; it should not invent missing thresholds merely to satisfy 'defines'.",
+      "findings": [],
+      "critical_failure": false,
+      "limits": [
+        "The proposed sample-continuity/freshness policy, response deadlines, stopping physics, remote scope and recovery authority are not accepted design facts.",
+        "The direct local stop path is a design proposal, not demonstrated independence from MCU, power or mechanical failures."
+      ],
+      "repair_effort": "None identified for the requested draft. Completing D-01\u2013D-07 is subsequent design work.",
+      "skill_use_assessment": {
+        "status": "participant_reported_content_consistent_not_independently_authenticated",
+        "basis": "Run record lists reads/use; output content is consistent with those workflows. No separate per-read tool transcript was supplied. Reading packet skills is not evidence of native host discovery or causal skill benefit."
+      },
+      "metadata_amendment_reviewed": true
+    },
+    {
+      "case_id": "HO-02",
+      "case_version": "1.0",
+      "packet_directory": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-02",
+      "packet_manifest": {
+        "schema_version": 1,
+        "kind": "artifact-performance-packet",
+        "status": "complete",
+        "case": "HO-02",
+        "case_version": "1.0",
+        "prepared_at": "2026-11-13T23:42:14.136282+00:00",
+        "skills": [
+          "mbse-medical-device",
+          "mbse-baseline-review"
+        ],
+        "arm": "task-domain",
+        "full_catalog_exposed": false,
+        "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+        "files": {
+          ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+          ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+          ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+          ".agents/skills/mbse-medical-device/SKILL.md": "2a7766fee0555c2ec6b4ecd15d9ed7bf9112ab9cfe91c9c1ce1254e4bf9515a3",
+          ".agents/skills/mbse-medical-device/agents/openai.yaml": "01485cdaa45eb063faccc2373097f3535a106823cb0717a8ff303ba4ecd95ac8",
+          ".agents/skills/mbse-medical-device/references/domain-analysis.md": "4889235bd8d11421c5fb45112b3df01e67bb8261c8ebea88e82ed5898c9928d1",
+          ".agents/skills/mbse-medical-device/references/pump-classification.md": "5e84d2e321000bb97b7c0504726377dc0d26442206bb90230a8d9e13a689bd78",
+          "request.md": "9cce7597971e84ea8a63d34cac8388df8036f63fba14bea4401650f83cfdd32a"
+        },
+        "exposure": "Public inputs; packet separation is not a secure held-out environment."
+      },
+      "input_files_sha256": {
+        ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+        ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+        ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+        ".agents/skills/mbse-medical-device/SKILL.md": "2a7766fee0555c2ec6b4ecd15d9ed7bf9112ab9cfe91c9c1ce1254e4bf9515a3",
+        ".agents/skills/mbse-medical-device/agents/openai.yaml": "01485cdaa45eb063faccc2373097f3535a106823cb0717a8ff303ba4ecd95ac8",
+        ".agents/skills/mbse-medical-device/references/domain-analysis.md": "4889235bd8d11421c5fb45112b3df01e67bb8261c8ebea88e82ed5898c9928d1",
+        ".agents/skills/mbse-medical-device/references/pump-classification.md": "5e84d2e321000bb97b7c0504726377dc0d26442206bb90230a8d9e13a689bd78",
+        "request.md": "9cce7597971e84ea8a63d34cac8388df8036f63fba14bea4401650f83cfdd32a",
+        "packet-manifest.json": "846e36776f6d1bd76a9fccc8dae84e043ea93ac8d5957c25d672e2f5c636729d"
+      },
+      "output_files_sha256": {
+        "outputs/checksums.sha256": "cbac5c5f39d87d4d3a7eb746cb6d0c274bf6f294a7f580af43a639405164dbe2",
+        "outputs/output.md": "932cacdfe12e0bee458f7cc7a15d8b886dfd732bec08f57dac1e5bdfb3bfd4d5",
+        "outputs/run-record.json": "60839cdc63d826f5bc9e169ca6c1361c9bdbf556eaabbcfd8820198da26274ad"
+      },
+      "content_reviewed_paths": [
+        "request.md",
+        "outputs/output.md",
+        "outputs/run-record.json"
+      ],
+      "hash_verification_mismatches": [],
+      "request_matches_snapshot_plus_final_newline": true,
+      "producer_reported_skills": [
+        {
+          "name": "mbse-medical-device",
+          "skill_path": ".agents/skills/mbse-medical-device/SKILL.md",
+          "use": "Separate intended use, product class, software class and documentation level; pump-specific boundary review"
+        },
+        {
+          "name": "mbse-baseline-review",
+          "skill_path": ".agents/skills/mbse-baseline-review/SKILL.md",
+          "use": "Findings with consequences, evidence needs, owners and source limits"
+        }
+      ],
+      "producer_reported_references": [
+        ".agents/skills/mbse-baseline-review/references/review-records.md",
+        ".agents/skills/mbse-medical-device/references/domain-analysis.md",
+        ".agents/skills/mbse-medical-device/references/pump-classification.md"
+      ],
+      "producer_reported_source_access": [
+        {
+          "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-880/subpart-F/section-880.5725",
+          "publisher": "Office of the Federal Register / eCFR",
+          "status": "public relevant text read",
+          "edition_or_currency": "Title 21 displayed current through 2026-11-12",
+          "locator": "880.5725(a)-(b)",
+          "use": "Infusion-pump identification and Class II",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-876/subpart-F/section-876.5820",
+          "publisher": "Office of the Federal Register / eCFR",
+          "status": "public relevant text read",
+          "edition_or_currency": "Title 21 displayed current through 2026-11-12",
+          "locator": "876.5820(a)",
+          "use": "Hemodialysis identification",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://www.fda.gov/media/78369/download",
+          "publisher": "FDA",
+          "status": "public PDF relevant text read",
+          "edition_or_currency": "2014-12-02 guidance with current software documentation cover notice",
+          "locator": "Cover notice; section 3, printed page 5",
+          "use": "Pumps in Class III systems and distinct software Documentation Level",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://health.ec.europa.eu/system/files/2021-10/mdcg_2021-24_en_0.pdf",
+          "publisher": "European Commission hosting MDCG",
+          "status": "public PDF relevant text read",
+          "edition_or_currency": "MDCG 2021-24 Rev.1, April 2026",
+          "locator": "Printed pages 47-48 and 59",
+          "use": "Rule 11/12, implementing rule 3.3 and Rule 22 guidance",
+          "limit": "Nonbinding guidance; not read as a substitute for current consolidated legal text",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://webstore.iec.ch/en/publication/22794",
+          "publisher": "IEC",
+          "status": "public catalog page read",
+          "edition_or_currency": "IEC 62304:2006+AMD1:2015 CSV, edition 1.1",
+          "locator": "Title, abstract and product details",
+          "use": "Edition identity and software lifecycle scope",
+          "limit": "Full licensed classification clauses not read",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://eur-lex.europa.eu/eli/reg/2017/745/2025-01-10/eng",
+          "publisher": "EUR-Lex",
+          "status": "redirect to homepage; target text unavailable",
+          "use": "Attempt only; not relied upon",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0745-20260719",
+          "publisher": "EUR-Lex",
+          "status": "redirect to homepage; target text unavailable",
+          "use": "Attempt only; not relied upon",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02017R0745-20260719",
+          "publisher": "EUR-Lex",
+          "status": "redirect to homepage; target text unavailable",
+          "use": "Attempt only; not relied upon",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1791612677114&uri=CELEX%3A02017R0745-20260719",
+          "publisher": "EUR-Lex",
+          "status": "JavaScript verification challenge; target text unavailable",
+          "use": "Attempt only; not relied upon",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng",
+          "publisher": "EUR-Lex",
+          "status": "redirect to homepage; target text unavailable",
+          "use": "Attempt only; not relied upon",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        }
+      ],
+      "producer_context_limits": [
+        "Six cases (HO-02, HO-03, HO-05, HO-10, HO-11, HO-17) shared this participant context.",
+        "Packet separation is not a secure held-out environment.",
+        "No source repository, memory files, keys, rubrics, other arms, prior outputs or review criteria were intentionally inspected.",
+        "Inherited conversation instructions and context were present; fresh-session isolation is not claimed."
+      ],
+      "output_word_counts": {
+        "outputs/output.md": 549
+      },
+      "criterion_ratings": [
+        {
+          "criterion_index": 1,
+          "criterion": "Corrects general pump to 880.5725 Class II and unrelated hemodialysis basis",
+          "rating": 2,
+          "reason": "Correctly identifies 876.5820 as hemodialysis and uses 880.5725 Class II as a provisional starting point for the described external pump, without finalizing its submission route.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 5,
+              "line_end": 5
+            }
+          ]
+        },
+        {
+          "criterion_index": 2,
+          "criterion": "Assesses intended use/product code/pathway uncertainty",
+          "rating": 2,
+          "reason": "Requests intended-use/system-boundary, product-code, predicate and substantial-equivalence evidence; distinguishes the Class III-system exception and diagnostic control from local flow feedback.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 5,
+              "line_end": 11
+            }
+          ]
+        },
+        {
+          "criterion_index": 3,
+          "criterion": "Separates software class and EU Rule 12 vs software Rule 11",
+          "rating": 2,
+          "reason": "Separates product class, software safety class and FDA documentation level; uses Rule 12 rather than Rule 11 as the pump rationale and retains Rule 3.3 and Rule 22 boundaries.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 6,
+              "line_end": 13
+            }
+          ]
+        },
+        {
+          "criterion_index": 4,
+          "criterion": "Cites primary sources with access limits",
+          "rating": 2,
+          "reason": "Current primary eCFR, FDA and MDCG content supports the principal corrections. The artifact accurately discloses inaccessible consolidated MDR text and unavailable licensed IEC clauses.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 5,
+              "line_end": 13
+            }
+          ]
+        }
+      ],
+      "task_completion": "A short classification review with correction, consequence, proposed owner and missing evidence is supplied.",
+      "source_fidelity": "Live primary-source checks corroborate the FDA/MDCG statements and edition/locator information. IEC publisher metadata confirms edition identity only; the output does not claim to have read its full classification method.",
+      "reviewer_primary_sources": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-05"
+      ],
+      "rubric_adjudication": "Qualify criterion 1: 880.5725/Class II is the justified starting point for this specified device, not a universal class/pathway for every pump. Rule 12 is conditional on hazardous administration; Rule 3.3 and Rule 22 matter to this boundary.",
+      "findings": [],
+      "critical_failure": false,
+      "limits": [
+        "No final product-code, 510(k)/PMA, EU classification or software class is established.",
+        "Producer did not read the consolidated MDR legal text; nonbinding MDCG guidance is explicitly limited.",
+        "The Class C discussion is conditional and still requires the adopted licensed IEC classification method and product risk analysis."
+      ],
+      "repair_effort": "None identified in the bounded review. Final classification needs the explicitly listed product evidence and adopted legal/standard texts.",
+      "skill_use_assessment": {
+        "status": "participant_reported_content_consistent_not_independently_authenticated",
+        "basis": "Run record lists reads/use; output content is consistent with those workflows. No separate per-read tool transcript was supplied. Reading packet skills is not evidence of native host discovery or causal skill benefit."
+      }
+    },
+    {
+      "case_id": "HO-03",
+      "case_version": "1.0",
+      "packet_directory": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-03",
+      "packet_manifest": {
+        "schema_version": 1,
+        "kind": "artifact-performance-packet",
+        "status": "complete",
+        "case": "HO-03",
+        "case_version": "1.0",
+        "prepared_at": "2026-11-13T23:42:14.154772+00:00",
+        "skills": [
+          "mbse-aerospace"
+        ],
+        "arm": "task-domain",
+        "full_catalog_exposed": false,
+        "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+        "files": {
+          ".agents/skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+          ".agents/skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+          ".agents/skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+          ".agents/skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+          "request.md": "bbf54290b4c0463c009326f839515072d95f817574b86be208dadb99087272dd"
+        },
+        "exposure": "Public inputs; packet separation is not a secure held-out environment."
+      },
+      "input_files_sha256": {
+        ".agents/skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+        ".agents/skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+        ".agents/skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+        ".agents/skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+        "request.md": "bbf54290b4c0463c009326f839515072d95f817574b86be208dadb99087272dd",
+        "packet-manifest.json": "fedbeb70b03f2c92a6fe67c7627d78c8e29ba9617a1585f77e76562aa22fda7b"
+      },
+      "output_files_sha256": {
+        "outputs/checksums.sha256": "8fcd03a41f18b801998e2014413d73f3533ef4caea17ee684859857439b22225",
+        "outputs/output.md": "d84fc3318f21df410597758a2458de7c70e9c7bdc27a60b97581c1b2680c936f",
+        "outputs/run-record.json": "50392350f4c35a8a2018af30cb19808e7afd2f74907fbc03f2b582939ef1e70e"
+      },
+      "content_reviewed_paths": [
+        "request.md",
+        "outputs/output.md",
+        "outputs/run-record.json"
+      ],
+      "hash_verification_mismatches": [],
+      "request_matches_snapshot_plus_final_newline": true,
+      "producer_reported_skills": [
+        {
+          "name": "mbse-aerospace",
+          "skill_path": ".agents/skills/mbse-aerospace/SKILL.md",
+          "use": "Tool-use and credit decision boundary; legacy correlation limits and qualification evidence"
+        }
+      ],
+      "producer_reported_references": [
+        ".agents/skills/mbse-aerospace/references/domain-analysis.md",
+        ".agents/skills/mbse-aerospace/references/software-tool-qualification.md"
+      ],
+      "producer_reported_source_access": [
+        {
+          "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-115D.pdf",
+          "publisher": "FAA",
+          "status": "public PDF relevant text read; screenshot request made",
+          "edition_or_currency": "AC 20-115D, 2017-07-21",
+          "locator": "Paragraph 10 and Table 2, printed pages 10-11",
+          "use": "Recognized qualification method and legacy-tool correlation mapping",
+          "limit": "Table context retained; licensed DO-178C/DO-330 not read",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://shemesh.larc.nasa.gov/fm/FMinCert/NASA-CR-2017-219371.pdf",
+          "publisher": "NASA, contractor report by Wagner, Cofer, Slind, Tinelli and Mebsout",
+          "status": "public PDF relevant text read",
+          "edition_or_currency": "NASA/CR-2017-219371, February 2017",
+          "locator": "Section 3.3.1, printed page 11, Tables 2-3",
+          "use": "Public primary research explanation of tool criteria and credit boundary",
+          "limit": "Research report, not normative standard or authority approval",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        }
+      ],
+      "producer_context_limits": [
+        "Six cases (HO-02, HO-03, HO-05, HO-10, HO-11, HO-17) shared this participant context.",
+        "Packet separation is not a secure held-out environment.",
+        "No source repository, memory files, keys, rubrics, other arms, prior outputs or review criteria were intentionally inspected.",
+        "Inherited conversation instructions and context were present; fresh-session isolation is not claimed."
+      ],
+      "output_word_counts": {
+        "outputs/output.md": 735
+      },
+      "criterion_ratings": [
+        {
+          "criterion_index": 1,
+          "criterion": "Criterion 3 can require TQL-5 rather than automatic exemption",
+          "rating": 2,
+          "reason": "Correctly rejects Criterion 3 as an automatic exemption and distinguishes replacing the same log-checking activity from claiming credit to remove other processes.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 1,
+              "line_end": 11
+            }
+          ]
+        },
+        {
+          "criterion_index": 2,
+          "criterion": "Criterion 1 A/B/C/D map to TQL1/2/3/4",
+          "rating": 2,
+          "reason": "Criterion 1 maps A/B/C/D to TQL-1/2/3/4, including the Level B correction; tool name alone is not used to assign qualification.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 15,
+              "line_end": 22
+            }
+          ]
+        },
+        {
+          "criterion_index": 3,
+          "criterion": "Criterion 2 A/B TQL4 and C/D TQL5 distinguished",
+          "rating": 2,
+          "reason": "Criterion 2 maps A/B to TQL-4 and C/D to TQL-5; Criterion 3 remains TQL-5 where qualification is required.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 15,
+              "line_end": 22
+            }
+          ]
+        },
+        {
+          "criterion_index": 4,
+          "criterion": "Qualification depends on use, credit and independent verification; public FAA table scoped",
+          "rating": 2,
+          "reason": "Intended use, additional process credit, remaining output verification, exact configuration and program basis govern the decision. The public FAA Table 2 is correctly scoped as legacy-tool correlation, supported by NASA's public research explanation.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 3,
+              "line_end": 33
+            }
+          ]
+        }
+      ],
+      "task_completion": "Saves a clear boundary assessment, complete mapping table and minimum evidence package; appropriately leaves the final criterion open.",
+      "source_fidelity": "Reviewer verified AC 20-115D paragraph 10 and Table 2 and NASA/CR-2017-219371 section 3.3.1, printed page 11. Sources are not represented as an authority decision or full licensed standard review.",
+      "reviewer_primary_sources": [
+        "SRC-06",
+        "SRC-07"
+      ],
+      "rubric_adjudication": "Accept with qualification: mappings apply after establishing qualification need and intended-use criterion. Do not reward blanket qualification by tool name, or punish justified retention of criterion uncertainty.",
+      "findings": [],
+      "critical_failure": false,
+      "limits": [
+        "No authorization to eliminate current manual checking or completed tool qualification is claimed.",
+        "Actual credited objectives, residual checks and operational use must be known before selecting Level A TQL-4 versus TQL-5."
+      ],
+      "repair_effort": "None identified. The requested credit ledger and program decision remain subsequent work.",
+      "skill_use_assessment": {
+        "status": "participant_reported_content_consistent_not_independently_authenticated",
+        "basis": "Run record lists reads/use; output content is consistent with those workflows. No separate per-read tool transcript was supplied. Reading packet skills is not evidence of native host discovery or causal skill benefit."
+      }
+    },
+    {
+      "case_id": "HO-04",
+      "case_version": "1.0",
+      "packet_directory": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-04",
+      "packet_manifest": {
+        "schema_version": 1,
+        "kind": "artifact-performance-packet",
+        "status": "complete",
+        "case": "HO-04",
+        "case_version": "1.0",
+        "prepared_at": "2026-11-13T23:42:14.173351+00:00",
+        "skills": [
+          "mbse-baseline-review",
+          "mbse-verification-evidence"
+        ],
+        "arm": "task-domain",
+        "full_catalog_exposed": false,
+        "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+        "files": {
+          ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+          ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+          ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+          ".agents/skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+          ".agents/skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+          ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+          "request.md": "14de9e46a47923cca518bfc64a245c0dca9ffaee0aaec2e7a35b177101b97a37"
+        },
+        "exposure": "Public inputs; packet separation is not a secure held-out environment."
+      },
+      "input_files_sha256": {
+        ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+        ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+        ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+        ".agents/skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+        ".agents/skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+        ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+        "request.md": "14de9e46a47923cca518bfc64a245c0dca9ffaee0aaec2e7a35b177101b97a37",
+        "packet-manifest.json": "e799967321740a7605ca6ff4a700cbbb1464f3b8efdd12166ab754262613b1cd"
+      },
+      "output_files_sha256": {
+        "outputs/output.md": "1b308861787c41fdbb99251643adcec4a7c0ba2504e9f6b595abe45a663208db",
+        "outputs/run-record.json": "25aeddf69b68d1f5b2da63f4072762ca86e34013022879758420f9d0bb2b7da9"
+      },
+      "content_reviewed_paths": [
+        "request.md",
+        "outputs/output.md",
+        "outputs/run-record.json"
+      ],
+      "hash_verification_mismatches": [],
+      "request_matches_snapshot_plus_final_newline": true,
+      "producer_reported_skills": [
+        ".agents/skills/mbse-baseline-review/SKILL.md",
+        ".agents/skills/mbse-verification-evidence/SKILL.md"
+      ],
+      "producer_reported_references": [
+        ".agents/skills/mbse-baseline-review/references/review-records.md",
+        ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md"
+      ],
+      "producer_reported_source_access": [],
+      "producer_context_limits": [
+        "Six cases HO-01, HO-04, HO-07, HO-09, HO-12, HO-13 share one participant context. Outputs are not independent across cases."
+      ],
+      "output_word_counts": {
+        "outputs/output.md": 1280
+      },
+      "criterion_ratings": [
+        {
+          "criterion_index": 1,
+          "criterion": "Recognizes that150+80+30=260ms exceeds200ms if the bounds lie serially on the relevant worst-case path; checks ordering/overlap and start/end definitions rather than asserting an unestablished path. Old460ms observation cannot verify revised200ms timing.",
+          "rating": 2,
+          "reason": "Computes 260 ms and 60 ms deficit only for the assumed serial path, notes co-occurrence/endpoint uncertainty, and correctly refuses to count the old 460 ms observation as verification of 200 ms.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 7,
+              "line_end": 13
+            }
+          ]
+        },
+        {
+          "criterion_index": 2,
+          "criterion": "Locates affected requirement/interface/verification and proposes repairs",
+          "rating": 2,
+          "reason": "Locates REQ-7, allocations, interfaces, procedure, configuration and end-event impacts; repair options include reduced latency, genuine parallelism, design change and authorized requirement reconsideration.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 17,
+              "line_end": 24
+            }
+          ]
+        },
+        {
+          "criterion_index": 3,
+          "criterion": "Treats absent report as planned and evidence stale",
+          "rating": 2,
+          "reason": "Old evidence remains historical and conditionally reusable only for unchanged scope; the absent new report is explicitly planned with no outcome.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 28,
+              "line_end": 32
+            }
+          ]
+        },
+        {
+          "criterion_index": 4,
+          "criterion": "Separates structurally valid trace from semantic adequacy",
+          "rating": 2,
+          "reason": "Separates trace navigation from semantic sufficiency and calls for actual current-configuration evidence, raw logs, timing uncertainty and a justified worst-case argument.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 34,
+              "line_end": 51
+            }
+          ]
+        }
+      ],
+      "task_completion": "The review delivers impact analysis, missing evidence and concrete conditional repairs without pretending that unseen reports/files were inspected.",
+      "source_fidelity": "Preserves REQ-7 and all supplied timing values. Does not invent stage order, missing overhead, test logs or a proven implementation failure.",
+      "reviewer_primary_sources": [],
+      "rubric_adjudication": "Accept the frozen conditional wording. An upper-bound sum above the requirement does not by itself prove physical infeasibility or an observed implementation failure.",
+      "findings": [],
+      "critical_failure": false,
+      "limits": [
+        "The 260 ms calculation is conditional allocation analysis, not proof that all maxima coincide or that an actual run took 260 ms.",
+        "The original and planned reports were not supplied as actual input files."
+      ],
+      "repair_effort": "None identified. The output already requests the endpoint/path evidence needed to resolve the actual design.",
+      "skill_use_assessment": {
+        "status": "participant_reported_content_consistent_not_independently_authenticated",
+        "basis": "Run record lists reads/use; output content is consistent with those workflows. No separate per-read tool transcript was supplied. Reading packet skills is not evidence of native host discovery or causal skill benefit."
+      },
+      "metadata_amendment_reviewed": true
+    },
+    {
+      "case_id": "HO-05",
+      "case_version": "1.0",
+      "packet_directory": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-05",
+      "packet_manifest": {
+        "schema_version": 1,
+        "kind": "artifact-performance-packet",
+        "status": "complete",
+        "case": "HO-05",
+        "case_version": "1.0",
+        "prepared_at": "2026-11-13T23:42:14.192396+00:00",
+        "skills": [
+          "mbse-electronic-systems"
+        ],
+        "arm": "task-domain",
+        "full_catalog_exposed": false,
+        "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+        "files": {
+          ".agents/skills/mbse-electronic-systems/SKILL.md": "560e2e0b77e65befbc98249794faaa480d2ad7b6b98150bd894676c9ec8fb886",
+          ".agents/skills/mbse-electronic-systems/agents/openai.yaml": "760c8961312c6804f771d417579597037c1f99539bd72819b51bf501a65f519d",
+          ".agents/skills/mbse-electronic-systems/references/domain-analysis.md": "0c94b4153cff7fbfd9c912102ba910dcfee54d8d7f7a84a53cc1f17eb0ff8bc5",
+          "request.md": "1dfdb08b17e19cead89dfd8f35cfae63c5f3e0bc4bc39e759554b06d1e0291c9"
+        },
+        "exposure": "Public inputs; packet separation is not a secure held-out environment."
+      },
+      "input_files_sha256": {
+        ".agents/skills/mbse-electronic-systems/SKILL.md": "560e2e0b77e65befbc98249794faaa480d2ad7b6b98150bd894676c9ec8fb886",
+        ".agents/skills/mbse-electronic-systems/agents/openai.yaml": "760c8961312c6804f771d417579597037c1f99539bd72819b51bf501a65f519d",
+        ".agents/skills/mbse-electronic-systems/references/domain-analysis.md": "0c94b4153cff7fbfd9c912102ba910dcfee54d8d7f7a84a53cc1f17eb0ff8bc5",
+        "request.md": "1dfdb08b17e19cead89dfd8f35cfae63c5f3e0bc4bc39e759554b06d1e0291c9",
+        "packet-manifest.json": "d2f9449f958f6501eb01ff6069ab5675e0ffaccae931023f5a1ec8cdbbf72536"
+      },
+      "output_files_sha256": {
+        "outputs/checksums.sha256": "bd7eb61dc60826952c88b5c91b0f17bc28561da1439ab22cb6ac7296f0518ef6",
+        "outputs/output.md": "b959d184424ab2da8ea7c8e98039632c1dad7c9f7bf7a36542153c62309b1905",
+        "outputs/run-record.json": "53e822fcaa958c2838bfea880da82ac0c764894431603218435b3d0cbbf014a0"
+      },
+      "content_reviewed_paths": [
+        "request.md",
+        "outputs/output.md",
+        "outputs/run-record.json"
+      ],
+      "hash_verification_mismatches": [],
+      "request_matches_snapshot_plus_final_newline": true,
+      "producer_reported_skills": [
+        {
+          "name": "mbse-electronic-systems",
+          "skill_path": ".agents/skills/mbse-electronic-systems/SKILL.md",
+          "use": "Requirements versus structural coverage, formal assumptions/bounds/vacuity, physical implementation limits"
+        }
+      ],
+      "producer_reported_references": [
+        ".agents/skills/mbse-electronic-systems/references/domain-analysis.md"
+      ],
+      "producer_reported_source_access": [
+        {
+          "url": "https://yosyshq.readthedocs.io/projects/sby/en/latest/reference.html",
+          "publisher": "YosysHQ",
+          "status": "public tool-author documentation read",
+          "edition_or_currency": "Latest web documentation accessed 2026-11-13; no fixed release claimed",
+          "locator": "Options section",
+          "use": "Distinction between bounded safety, unbounded safety, liveness and cover modes",
+          "limit": "No claim that the exercise team uses this tool",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://www.cs.cmu.edu/~modelcheck/onr/pubs/threshold03.pdf",
+          "publisher": "CMU research authors",
+          "status": "PDF text extraction unreadable; screenshot requested but not relied upon",
+          "locator": "First page attempted",
+          "use": "Attempt only; not relied upon",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        }
+      ],
+      "producer_context_limits": [
+        "Six cases (HO-02, HO-03, HO-05, HO-10, HO-11, HO-17) shared this participant context.",
+        "Packet separation is not a secure held-out environment.",
+        "No source repository, memory files, keys, rubrics, other arms, prior outputs or review criteria were intentionally inspected.",
+        "Inherited conversation instructions and context were present; fresh-session isolation is not claimed."
+      ],
+      "output_word_counts": {
+        "outputs/output.md": 889
+      },
+      "criterion_ratings": [
+        {
+          "criterion_index": 1,
+          "criterion": "Separates structural/functional/requirements coverage",
+          "rating": 2,
+          "reason": "Separates line execution from functional/property and requirement evidence; requests the actual coverage denominator, exclusions, checkers and versioned results.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 1,
+              "line_end": 17
+            }
+          ]
+        },
+        {
+          "criterion_index": 2,
+          "criterion": "Detects bounded-vs-unbounded and overconstraint/vacuity problem",
+          "rating": 2,
+          "reason": "Identifies bounded-versus-unbounded reasoning and the grant-high environment's overconstraint. Correctly treats vacuity as something to test, and preserves the possibility of a genuine induction/completeness result.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 6,
+              "line_end": 25
+            }
+          ]
+        },
+        {
+          "criterion_index": 3,
+          "criterion": "Names proof assumptions/configuration and hardware-target scope",
+          "rating": 2,
+          "reason": "Requests exact properties, assumptions, tool modes/configuration and proof artifacts; relates the logic result to arbiter contracts, implementation, clock/reset, timing and target observations.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 13,
+              "line_end": 29
+            }
+          ]
+        },
+        {
+          "criterion_index": 4,
+          "criterion": "No fabricated normative obligations",
+          "rating": 2,
+          "reason": "Uses public tool-author documentation only as an example of result modes, discloses the unavailable paper and invents no standard clause, assurance class or executed run.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 9,
+              "line_end": 31
+            }
+          ]
+        }
+      ],
+      "task_completion": "Provides a focused minimum artifact request and a concrete evidence plan for the request/service thread.",
+      "source_fidelity": "Preserves the depth-20 and grant-always-high facts without claiming actual reports were inspected or that a particular formal tool was used.",
+      "reviewer_primary_sources": [
+        "SRC-08"
+      ],
+      "rubric_adjudication": "Clarify 'vacuity problem': grant always high establishes a mismatch/overconstraint risk, not necessarily vacuity of every possible property. A valid unbounded proof can also have an internal depth; inspect result semantics.",
+      "findings": [],
+      "critical_failure": false,
+      "limits": [
+        "Actual property semantics, initialization, model abstraction and deployed environment are unknown.",
+        "Unconditional eventual service may be impossible if the real environment can deny service forever; this is a conditional logical observation, not an asserted product finding."
+      ],
+      "repair_effort": "None identified. Actual evidence assessment awaits the requested files.",
+      "skill_use_assessment": {
+        "status": "participant_reported_content_consistent_not_independently_authenticated",
+        "basis": "Run record lists reads/use; output content is consistent with those workflows. No separate per-read tool transcript was supplied. Reading packet skills is not evidence of native host discovery or causal skill benefit."
+      }
+    },
+    {
+      "case_id": "HO-07",
+      "case_version": "1.0",
+      "packet_directory": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-07",
+      "packet_manifest": {
+        "schema_version": 1,
+        "kind": "artifact-performance-packet",
+        "status": "complete",
+        "case": "HO-07",
+        "case_version": "1.0",
+        "prepared_at": "2026-11-13T23:42:14.211523+00:00",
+        "skills": [
+          "mbse-conops",
+          "mbse-operational-scenarios"
+        ],
+        "arm": "task-domain",
+        "full_catalog_exposed": false,
+        "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+        "files": {
+          ".agents/skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+          ".agents/skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+          ".agents/skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+          ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+          ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+          ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+          "request.md": "e59cb15b88afbef372ef32f62cebbc0703b28bbf998d8bc6e166e66bfcb911cc"
+        },
+        "exposure": "Public inputs; packet separation is not a secure held-out environment."
+      },
+      "input_files_sha256": {
+        ".agents/skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+        ".agents/skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+        ".agents/skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+        ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+        ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+        ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+        "request.md": "e59cb15b88afbef372ef32f62cebbc0703b28bbf998d8bc6e166e66bfcb911cc",
+        "packet-manifest.json": "8097f6f2d9988508f959d732df2b15a77fff9815fbda0c2d61f2fd13c80836f5"
+      },
+      "output_files_sha256": {
+        "outputs/output.md": "2283125130122496a89530f9b1209566ffc01f2c469c1183f1f7296e0d181eca",
+        "outputs/run-record.json": "5733e58f583a7bd2bf50bbbcfd48bb7103089fdb6e7d4fbc4807ba012cd499bb"
+      },
+      "content_reviewed_paths": [
+        "request.md",
+        "outputs/output.md",
+        "outputs/run-record.json"
+      ],
+      "hash_verification_mismatches": [],
+      "request_matches_snapshot_plus_final_newline": true,
+      "producer_reported_skills": [
+        ".agents/skills/mbse-conops/SKILL.md",
+        ".agents/skills/mbse-operational-scenarios/SKILL.md"
+      ],
+      "producer_reported_references": [
+        ".agents/skills/mbse-conops/references/operational-framing.md",
+        ".agents/skills/mbse-operational-scenarios/references/scenario-records.md"
+      ],
+      "producer_reported_source_access": [],
+      "producer_context_limits": [
+        "Six cases HO-01, HO-04, HO-07, HO-09, HO-12, HO-13 share one participant context. Outputs are not independent across cases."
+      ],
+      "output_word_counts": {
+        "outputs/output.md": 2154
+      },
+      "criterion_ratings": [
+        {
+          "criterion_index": 1,
+          "criterion": "Custody, authority, actor response and final state explicit",
+          "rating": 2,
+          "reason": "Names proposed responsibilities and distinguishes possession from accountability; normal, unavailable-recipient and authorized-return final states preserve custody.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 13,
+              "line_end": 49
+            }
+          ]
+        },
+        {
+          "criterion_index": 2,
+          "criterion": "Exception recovery resolves stale commands/authorization without unconfirmed authority",
+          "rating": 2,
+          "reason": "Covers outages at different handoff stages, uncertain possession, stale/duplicate commands and explicit recovery; reconnection alone cannot authorize another transfer.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 53,
+              "line_end": 74
+            }
+          ]
+        },
+        {
+          "criterion_index": 3,
+          "criterion": "Observations suitable for intended-use validation",
+          "rating": 2,
+          "reason": "Five validation cases require observable possession, authority, records, staff responses and restoration behavior. Missing timing/staffing/platform capabilities remain decisions rather than invented performance.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 78,
+              "line_end": 96
+            }
+          ]
+        },
+        {
+          "criterion_index": 4,
+          "criterion": "No automatic expansion into drug choice or dosing",
+          "rating": 2,
+          "reason": "Medication choice, dosing, administration and suitability decisions remain outside the transport boundary; clinical handling concerns are referred to the responsible service.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 3,
+              "line_end": 20
+            }
+          ]
+        }
+      ],
+      "task_completion": "A coherent operational draft covers all requested exception and recovery paths. Its detail is useful for a multi-actor custody scenario; no fixed length was requested.",
+      "source_fidelity": "Clearly separates supplied facts from proposed roles, custody policy and unverified platform capabilities.",
+      "reviewer_primary_sources": [],
+      "rubric_adjudication": "Accept. A visibly unresolved, accountable hold is a legitimate final state; the rubric should not force a fabricated successful delivery or authorization.",
+      "findings": [],
+      "critical_failure": false,
+      "limits": [
+        "Custody-transfer policy, offline authority, no-response contingency, handling limits and platform capabilities require agreement/verification.",
+        "No robot trial, clinical validation, legal compliance or safe operational acceptance is established."
+      ],
+      "repair_effort": "None identified for the draft. Operational agreements and platform capability work remain open.",
+      "skill_use_assessment": {
+        "status": "participant_reported_content_consistent_not_independently_authenticated",
+        "basis": "Run record lists reads/use; output content is consistent with those workflows. No separate per-read tool transcript was supplied. Reading packet skills is not evidence of native host discovery or causal skill benefit."
+      },
+      "metadata_amendment_reviewed": true
+    },
+    {
+      "case_id": "HO-10",
+      "case_version": "1.0",
+      "packet_directory": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-10",
+      "packet_manifest": {
+        "schema_version": 1,
+        "kind": "artifact-performance-packet",
+        "status": "complete",
+        "case": "HO-10",
+        "case_version": "1.0",
+        "prepared_at": "2026-11-13T23:42:14.248007+00:00",
+        "skills": [
+          "mbse-automotive",
+          "mbse-baseline-review"
+        ],
+        "arm": "task-domain",
+        "full_catalog_exposed": false,
+        "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+        "files": {
+          ".agents/skills/mbse-automotive/SKILL.md": "2aa17179547acd2fd90a2125b1ec3ed888f7aa4a5a97f99f35769ec053dd9a6b",
+          ".agents/skills/mbse-automotive/agents/openai.yaml": "92da28aebaac3dbcdde3c37e332822c4ca1481097679892fc9f5c90b136e0993",
+          ".agents/skills/mbse-automotive/references/domain-analysis.md": "8536d858e96cd439def34e87ed8904e80030d659a51d18bd95f0bc64dd11728d",
+          ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+          ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+          ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+          "request.md": "73695cc6e819f3744e00a57604a4fdb92396b36385507a9b4f5dfcdc01cbb43f"
+        },
+        "exposure": "Public inputs; packet separation is not a secure held-out environment."
+      },
+      "input_files_sha256": {
+        ".agents/skills/mbse-automotive/SKILL.md": "2aa17179547acd2fd90a2125b1ec3ed888f7aa4a5a97f99f35769ec053dd9a6b",
+        ".agents/skills/mbse-automotive/agents/openai.yaml": "92da28aebaac3dbcdde3c37e332822c4ca1481097679892fc9f5c90b136e0993",
+        ".agents/skills/mbse-automotive/references/domain-analysis.md": "8536d858e96cd439def34e87ed8904e80030d659a51d18bd95f0bc64dd11728d",
+        ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+        ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+        ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+        "request.md": "73695cc6e819f3744e00a57604a4fdb92396b36385507a9b4f5dfcdc01cbb43f",
+        "packet-manifest.json": "a17f7555ef5f36be68f5130412dfdff4a1c7c4faa36f75d59af7e955579d227d"
+      },
+      "output_files_sha256": {
+        "outputs/checksums.sha256": "f6a4362b76391a6d7863686263575f4c70a464fd4ebcd192b9afdfa5d499ed6d",
+        "outputs/output.md": "2360c8a4895aefa3445d531d7284ff39c9488f66a4a81c52eede3643a1bcd789",
+        "outputs/run-record.json": "421c05ae32e9a9575aba0f8456fdfc7d82bf6f0cac52bb46120036c38607c216"
+      },
+      "content_reviewed_paths": [
+        "request.md",
+        "outputs/output.md",
+        "outputs/run-record.json"
+      ],
+      "hash_verification_mismatches": [],
+      "request_matches_snapshot_plus_final_newline": true,
+      "producer_reported_skills": [
+        {
+          "name": "mbse-automotive",
+          "skill_path": ".agents/skills/mbse-automotive/SKILL.md",
+          "use": "SOTIF versus malfunction, environment, common dependencies and driver/system responsibilities"
+        },
+        {
+          "name": "mbse-baseline-review",
+          "skill_path": ".agents/skills/mbse-baseline-review/SKILL.md",
+          "use": "Challenge asserted causes and mitigation with scoped evidence"
+        }
+      ],
+      "producer_reported_references": [
+        ".agents/skills/mbse-automotive/references/domain-analysis.md",
+        ".agents/skills/mbse-baseline-review/references/review-records.md"
+      ],
+      "producer_reported_source_access": [
+        {
+          "url": "https://www.iso.org/standard/77490.html",
+          "publisher": "ISO",
+          "status": "public publisher abstract read",
+          "edition_or_currency": "ISO 21448:2022, edition 1",
+          "locator": "Abstract/scope",
+          "use": "Intended-function insufficiency scope and distinction from faults covered by ISO 26262",
+          "limit": "Full licensed text not read; no clause compliance asserted",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        },
+        {
+          "url": "https://www.iso.org/standard/68383.html",
+          "publisher": "ISO",
+          "status": "public publisher abstract read",
+          "edition_or_currency": "ISO 26262-1:2018, edition 2; page also identifies a draft replacement",
+          "locator": "Abstract/scope",
+          "use": "Malfunctioning safety-related E/E scope",
+          "limit": "Full licensed text not read; no clause compliance asserted",
+          "access_date_utc": "2026-11-13",
+          "access_tool": "web.run via functions.exec",
+          "source_bytes_sha256": null,
+          "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+        }
+      ],
+      "producer_context_limits": [
+        "Six cases (HO-02, HO-03, HO-05, HO-10, HO-11, HO-17) shared this participant context.",
+        "Packet separation is not a secure held-out environment.",
+        "No source repository, memory files, keys, rubrics, other arms, prior outputs or review criteria were intentionally inspected.",
+        "Inherited conversation instructions and context were present; fresh-session isolation is not claimed."
+      ],
+      "output_word_counts": {
+        "outputs/output.md": 901
+      },
+      "criterion_ratings": [
+        {
+          "criterion_index": 1,
+          "criterion": "Distinguishes insufficient intended perception performance from an established random hardware malfunction.",
+          "rating": 2,
+          "reason": "Distinguishes perception insufficiency, triggering environment, systematic/calibration issues and possible random/undetected hardware malfunction; healthy diagnostics do not decide the cause.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 1,
+              "line_end": 10
+            }
+          ]
+        },
+        {
+          "criterion_index": 2,
+          "criterion": "Identifies shared environmental/power/visibility dependencies without asserting every second camera is useless.",
+          "rating": 2,
+          "reason": "Identifies shared optics, windscreen, power and further dependencies without claiming a second camera can never help. Requires joint-failure and mitigation-comparison evidence.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 7,
+              "line_end": 18
+            }
+          ]
+        },
+        {
+          "criterion_index": 3,
+          "criterion": "Daylight demonstration is scoped; scenario coverage and relevant low-light conditions, response and operating envelope are proposed.",
+          "rating": 2,
+          "reason": "Scopes the daylight result and proposes relevant low-light, boundary, response, false-positive and dependency observations tied to an actual operating envelope.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 8,
+              "line_end": 19
+            }
+          ]
+        },
+        {
+          "criterion_index": 4,
+          "criterion": "Uses automotive safety reasoning and preserves unresolved authority, evidence and classification choices.",
+          "rating": 2,
+          "reason": "Preserves driver/system responsibility and decision authority; declines unsupported ASIL, decomposition or risk acceptance. Public ISO scope claims are accurately bounded.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 14,
+              "line_end": 23
+            }
+          ]
+        }
+      ],
+      "task_completion": "Delivers an actionable reasoning review and next evidence package with conditional mitigation options.",
+      "source_fidelity": "ISO 21448:2022 and ISO 26262-1:2018 public scopes corroborate the narrow standards distinction; the output reports no licensed clause access or actual incident-log inspection.",
+      "reviewer_primary_sources": [
+        "SRC-09",
+        "SRC-10"
+      ],
+      "rubric_adjudication": "Accept. Shared dependencies undermine an untested sufficiency/independence claim; they do not establish that every dual-camera design is useless.",
+      "findings": [],
+      "critical_failure": false,
+      "limits": [
+        "The cause of the reported miss is not established.",
+        "Vehicle response, usable envelope, diagnostic scope, driver role and risk thresholds remain program decisions."
+      ],
+      "repair_effort": "None identified. The proposed discriminating observations are needed before mitigation acceptance.",
+      "skill_use_assessment": {
+        "status": "participant_reported_content_consistent_not_independently_authenticated",
+        "basis": "Run record lists reads/use; output content is consistent with those workflows. No separate per-read tool transcript was supplied. Reading packet skills is not evidence of native host discovery or causal skill benefit."
+      }
+    },
+    {
+      "case_id": "HO-11",
+      "case_version": "1.0",
+      "packet_directory": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-11",
+      "packet_manifest": {
+        "schema_version": 1,
+        "kind": "artifact-performance-packet",
+        "status": "complete",
+        "case": "HO-11",
+        "case_version": "1.0",
+        "prepared_at": "2026-11-13T23:42:14.265999+00:00",
+        "skills": [
+          "mbse-defense",
+          "mbse-conops",
+          "mbse-operational-scenarios"
+        ],
+        "arm": "task-domain",
+        "full_catalog_exposed": false,
+        "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+        "files": {
+          ".agents/skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+          ".agents/skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+          ".agents/skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+          ".agents/skills/mbse-defense/SKILL.md": "a2164d5c5447f7eb9dc486498a6f3bd11235474388bfb0e409161e72686f2476",
+          ".agents/skills/mbse-defense/agents/openai.yaml": "bf73e7b261a4ff3a18204e930988ee3f43bd18666a13a34a3f3943744f52abf3",
+          ".agents/skills/mbse-defense/references/domain-analysis.md": "42792e844f854f773e7c3254fc1130afd7673b9235f6290e7064f8d222c2fdb0",
+          ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+          ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+          ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+          "request.md": "1704d38e57421d65e34181793667c08ed091f04769e950d582ef52c8ad5b8be9"
+        },
+        "exposure": "Public inputs; packet separation is not a secure held-out environment."
+      },
+      "input_files_sha256": {
+        ".agents/skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+        ".agents/skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+        ".agents/skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+        ".agents/skills/mbse-defense/SKILL.md": "a2164d5c5447f7eb9dc486498a6f3bd11235474388bfb0e409161e72686f2476",
+        ".agents/skills/mbse-defense/agents/openai.yaml": "bf73e7b261a4ff3a18204e930988ee3f43bd18666a13a34a3f3943744f52abf3",
+        ".agents/skills/mbse-defense/references/domain-analysis.md": "42792e844f854f773e7c3254fc1130afd7673b9235f6290e7064f8d222c2fdb0",
+        ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+        ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+        ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+        "request.md": "1704d38e57421d65e34181793667c08ed091f04769e950d582ef52c8ad5b8be9",
+        "packet-manifest.json": "d59efa12608cd012153527352e7db0f180b11d00294e465c14b209bff62ee0d0"
+      },
+      "output_files_sha256": {
+        "outputs/checksums.sha256": "9a78e172ae0f4b2619e574a2115ddcfa637edb8086d28667588adc5d4d579347",
+        "outputs/output.md": "7e187dd509b37040d1f12192f5c73ebdcb8d257432be69e48415d85a11ec8313",
+        "outputs/run-record.json": "dbbd63d9d83441ce4c2b4b493acbaf80b05c2c97a2ffc412b79f63744e70f82c"
+      },
+      "content_reviewed_paths": [
+        "request.md",
+        "outputs/output.md",
+        "outputs/run-record.json"
+      ],
+      "hash_verification_mismatches": [],
+      "request_matches_snapshot_plus_final_newline": true,
+      "producer_reported_skills": [
+        {
+          "name": "mbse-defense",
+          "skill_path": ".agents/skills/mbse-defense/SKILL.md",
+          "use": "Mission thread across autonomous organizations and shared interfaces, without importing defense tasks"
+        },
+        {
+          "name": "mbse-conops",
+          "skill_path": ".agents/skills/mbse-conops/SKILL.md",
+          "use": "Operational roles, authority, normal/degraded/restoration concept and unresolved agreement"
+        },
+        {
+          "name": "mbse-operational-scenarios",
+          "skill_path": ".agents/skills/mbse-operational-scenarios/SKILL.md",
+          "use": "One explicit outage scenario with preconditions, branches, recovery and evidence"
+        }
+      ],
+      "producer_reported_references": [
+        ".agents/skills/mbse-conops/references/operational-framing.md",
+        ".agents/skills/mbse-defense/references/domain-analysis.md",
+        ".agents/skills/mbse-operational-scenarios/references/scenario-records.md"
+      ],
+      "producer_reported_source_access": [],
+      "producer_context_limits": [
+        "Six cases (HO-02, HO-03, HO-05, HO-10, HO-11, HO-17) shared this participant context.",
+        "Packet separation is not a secure held-out environment.",
+        "No source repository, memory files, keys, rubrics, other arms, prior outputs or review criteria were intentionally inspected.",
+        "Inherited conversation instructions and context were present; fresh-session isolation is not claimed."
+      ],
+      "output_word_counts": {
+        "outputs/output.md": 1234
+      },
+      "criterion_ratings": [
+        {
+          "criterion_index": 1,
+          "criterion": "Defines mission outcome, boundaries, external actors and organizational responsibilities without treating every team as centrally owned.",
+          "rating": 2,
+          "reason": "Defines the delivery mission, center priority authority and autonomous team resource commitments; preserves original stock codes and units and excludes unrelated defense tasks.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 1,
+              "line_end": 16
+            }
+          ]
+        },
+        {
+          "criterion_index": 2,
+          "criterion": "Scenario includes loss detection, local authority limits, custody/stock handling, capacity, notification and restoration.",
+          "rating": 2,
+          "reason": "The six-hour outage scenario covers loss detection, local authority, stock/capacity/route changes, messages, delivery evidence and restoration reconciliation.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 20,
+              "line_end": 30
+            }
+          ]
+        },
+        {
+          "criterion_index": 3,
+          "criterion": "Distinguishes proposed agreements from accepted authority and preserves unresolved conflicts.",
+          "rating": 2,
+          "reason": "Separates proposed agreements from accepted authority, treats six hours as outage duration rather than automatic priority validity, and preserves unresolved restoration disputes without inventing a joint arbiter.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 16,
+              "line_end": 28
+            }
+          ]
+        },
+        {
+          "criterion_index": 4,
+          "criterion": "Provides observable exercise conditions linked to mission success rather than only communications uptime.",
+          "rating": 2,
+          "reason": "Exercise evidence includes actual authority/delegation records, starting conditions, actions, delivered versus unmet quantities, reconciliation and workload. It avoids equating communications uptime with mission success.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 30,
+              "line_end": 34
+            }
+          ]
+        }
+      ],
+      "task_completion": "Provides an operating concept and one coherent degraded scenario, with explicit staleness and restoration-dispute treatment.",
+      "source_fidelity": "Added scenario events are explicitly synthetic injects. No real agreement, dispatch, external policy or military acquisition basis is claimed.",
+      "reviewer_primary_sources": [],
+      "rubric_adjudication": "Accept. A justified unresolved hold is proper where agreement is absent; the scenario need not invent emergency powers to appear complete.",
+      "findings": [],
+      "critical_failure": false,
+      "limits": [
+        "No delegation, validity rule or dispute agreement exists in the supplied facts; the concept cannot itself authorize dispatch.",
+        "A successful tabletop would not demonstrate real flood-delivery performance."
+      ],
+      "repair_effort": "None identified. Participants must agree the open operating rules before exercising them as accepted authority.",
+      "skill_use_assessment": {
+        "status": "participant_reported_content_consistent_not_independently_authenticated",
+        "basis": "Run record lists reads/use; output content is consistent with those workflows. No separate per-read tool transcript was supplied. Reading packet skills is not evidence of native host discovery or causal skill benefit."
+      }
+    },
+    {
+      "case_id": "HO-17",
+      "case_version": "1.0",
+      "packet_directory": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-17",
+      "packet_manifest": {
+        "schema_version": 1,
+        "kind": "artifact-performance-packet",
+        "status": "complete",
+        "case": "HO-17",
+        "case_version": "1.0",
+        "prepared_at": "2026-11-13T23:42:14.378575+00:00",
+        "skills": [
+          "mbse-systems-engineering",
+          "mbse-medical-device",
+          "mbse-operational-scenarios"
+        ],
+        "arm": "task-domain",
+        "full_catalog_exposed": false,
+        "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+        "files": {
+          ".agents/skills/mbse-medical-device/SKILL.md": "2a7766fee0555c2ec6b4ecd15d9ed7bf9112ab9cfe91c9c1ce1254e4bf9515a3",
+          ".agents/skills/mbse-medical-device/agents/openai.yaml": "01485cdaa45eb063faccc2373097f3535a106823cb0717a8ff303ba4ecd95ac8",
+          ".agents/skills/mbse-medical-device/references/domain-analysis.md": "4889235bd8d11421c5fb45112b3df01e67bb8261c8ebea88e82ed5898c9928d1",
+          ".agents/skills/mbse-medical-device/references/pump-classification.md": "5e84d2e321000bb97b7c0504726377dc0d26442206bb90230a8d9e13a689bd78",
+          ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+          ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+          ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+          ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+          ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+          ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+          ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+          ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+          "request.md": "1a5dfae662e4aa1ee463a7478b89f88fc150486c7d79f8213ed5a1533e77a215"
+        },
+        "exposure": "Public inputs; packet separation is not a secure held-out environment."
+      },
+      "input_files_sha256": {
+        ".agents/skills/mbse-medical-device/SKILL.md": "2a7766fee0555c2ec6b4ecd15d9ed7bf9112ab9cfe91c9c1ce1254e4bf9515a3",
+        ".agents/skills/mbse-medical-device/agents/openai.yaml": "01485cdaa45eb063faccc2373097f3535a106823cb0717a8ff303ba4ecd95ac8",
+        ".agents/skills/mbse-medical-device/references/domain-analysis.md": "4889235bd8d11421c5fb45112b3df01e67bb8261c8ebea88e82ed5898c9928d1",
+        ".agents/skills/mbse-medical-device/references/pump-classification.md": "5e84d2e321000bb97b7c0504726377dc0d26442206bb90230a8d9e13a689bd78",
+        ".agents/skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+        ".agents/skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+        ".agents/skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+        ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+        ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+        ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+        ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+        ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+        "request.md": "1a5dfae662e4aa1ee463a7478b89f88fc150486c7d79f8213ed5a1533e77a215",
+        "packet-manifest.json": "2ca9e4b7a4764b0636b8c087f2c36a415b761137a410ccc6c2927b3e19eaf002"
+      },
+      "output_files_sha256": {
+        "outputs/checksums.sha256": "ea05d011cba6c0877752c04ed4ac843c7b0bef65c1311e6c7873437ffa508a54",
+        "outputs/output.md": "cae692c5e4d004752857ff2f5e6a33d88b2fe4308c5b234d5ee0cc8c790de837",
+        "outputs/run-record.json": "891678b3ee1439eec46d62ed2c817c5810b4cd388eab9b5c40ace13daa551b27"
+      },
+      "content_reviewed_paths": [
+        "request.md",
+        "outputs/output.md",
+        "outputs/run-record.json"
+      ],
+      "hash_verification_mismatches": [],
+      "request_matches_snapshot_plus_final_newline": true,
+      "producer_reported_skills": [
+        {
+          "name": "mbse-systems-engineering",
+          "skill_path": ".agents/skills/mbse-systems-engineering/SKILL.md",
+          "use": "Historical fact versus proposed explanation; sequence/state reasoning and bounded evidence"
+        },
+        {
+          "name": "mbse-medical-device",
+          "skill_path": ".agents/skills/mbse-medical-device/SKILL.md",
+          "use": "Preserve no-patient-use boundary and distinguish output evidence from clinical claims"
+        },
+        {
+          "name": "mbse-operational-scenarios",
+          "skill_path": ".agents/skills/mbse-operational-scenarios/SKILL.md",
+          "use": "Finite sequence families spanning state changes, interruptions and recovery"
+        }
+      ],
+      "producer_reported_references": [
+        ".agents/skills/mbse-medical-device/references/domain-analysis.md",
+        ".agents/skills/mbse-medical-device/references/pump-classification.md",
+        ".agents/skills/mbse-operational-scenarios/references/scenario-records.md",
+        ".agents/skills/mbse-systems-engineering/references/connected-work.md",
+        ".agents/skills/mbse-systems-engineering/references/engineering-records.md",
+        ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md"
+      ],
+      "producer_reported_source_access": [],
+      "producer_context_limits": [
+        "Six cases (HO-02, HO-03, HO-05, HO-10, HO-11, HO-17) shared this participant context.",
+        "Packet separation is not a secure held-out environment.",
+        "No source repository, memory files, keys, rubrics, other arms, prior outputs or review criteria were intentionally inspected.",
+        "Inherited conversation instructions and context were present; fresh-session isolation is not claimed."
+      ],
+      "output_word_counts": {
+        "outputs/output.md": 1161
+      },
+      "criterion_ratings": [
+        {
+          "criterion_index": 1,
+          "criterion": "Finds temporal/state interaction gap despite individual control coverage.",
+          "rating": 2,
+          "reason": "Finds temporal/history/state interaction gaps in single-control coverage and separates the supplied historical fact from prototype behavior.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 1,
+              "line_end": 7
+            }
+          ]
+        },
+        {
+          "criterion_index": 2,
+          "criterion": "Proposes concrete normal, edit/cancel, rapid-transition, interruption/recovery and hazardous-output observations tied to plausible mechanisms.",
+          "rating": 2,
+          "reason": "Twelve finite test families cover normal history comparisons, edit/cancel, boundary ordering, rapid transitions, interruption and recovery; independent physical observations distinguish hidden state, stale commands and unintended output.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 9,
+              "line_end": 28
+            }
+          ]
+        },
+        {
+          "criterion_index": 3,
+          "criterion": "Does not claim exhaustive behavior coverage or transfer accident rates to the new prototype.",
+          "rating": 2,
+          "reason": "Finite configurations/offsets and observation limits are explicit; residual histories, schedules, faults and measurement biases remain. No exhaustive coverage, accident-rate transfer or executed result is claimed.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 24,
+              "line_end": 32
+            }
+          ]
+        },
+        {
+          "criterion_index": 4,
+          "criterion": "Preserves teaching scope and gives actionable engineering reasoning.",
+          "rating": 2,
+          "reason": "Preserves the teaching/no-patient-use scope, marks invented state labels as test abstractions and supplies actionable laboratory reasoning without assigning medical classification.",
+          "locators": [
+            {
+              "path": "outputs/output.md",
+              "line_start": 3,
+              "line_end": 7
+            }
+          ]
+        }
+      ],
+      "task_completion": "A concrete finite test-design proposal and independent observation contract are supplied. Missing instrument specifics are handled by explicit mapping and acceptance decisions.",
+      "source_fidelity": "Uses only the supplied Therac-25 fact and plainly states that the historical paper was not retrieved. Proposed states, invariants and sequences are not presented as device facts.",
+      "reviewer_primary_sources": [],
+      "rubric_adjudication": "Accept as mechanism-oriented examples, not a mandatory canonical test list. Alternative finite suites may satisfy the task if they discriminate temporal/state defects.",
+      "findings": [],
+      "critical_failure": false,
+      "limits": [
+        "The twelve families still need mapping to real controls, configuration values, tolerances and a published finite execution schedule.",
+        "No prototype, firmware, logs or instruments were available; no general safety or clinical conclusion follows."
+      ],
+      "repair_effort": "None identified in the proposed test design. Instantiation and execution remain subsequent laboratory work.",
+      "skill_use_assessment": {
+        "status": "participant_reported_content_consistent_not_independently_authenticated",
+        "basis": "Run record lists reads/use; output content is consistent with those workflows. No separate per-read tool transcript was supplied. Reading packet skills is not evidence of native host discovery or causal skill benefit."
+      }
+    }
+  ],
+  "metadata_amendment_history": [
+    {
+      "case_id": "HO-01",
+      "path": "outputs/run-record.json",
+      "initial_reviewed_sha256": "8f35097060ec6944176518529eb4a98bb90bc995f30982c0fb1dc6f25438787e",
+      "final_reviewed_sha256": "2be64b53a268ea30642e24c3ef596e5782c941dd300780cde4f5b53a8f9e6061",
+      "initial_binding_time_utc": "2026-11-13T23:55:17.567563+00:00",
+      "final_metadata_review_time_utc": "2026-11-14T00:00:28.042693+00:00",
+      "author_and_reason": "Parent attributes these records to the design producer finalizing the six-case batch after early per-case completion. Parent declared the group frozen and authorized no further mutations.",
+      "observed_final_metadata": "Final batch end_utc, artifact_integrity checks, shared_preparation/access-limit fields and the final integrity-check tool entry are present; engineering Markdown and input bindings are unchanged.",
+      "byte_history_limit": "Earlier run-record hashes are retained. Earlier full run-record bytes were not copied by this reviewer, so an exact independent field-by-field diff is not claimed.",
+      "final_record_end_utc": "2026-11-13T23:56:20.963305+00:00",
+      "collected_parent_receipt": "evals/evidence/performance-20261113/collection-02.json",
+      "parent_collection_matches_final": true,
+      "rating_impact": "None; changes concern run metadata. Final record remains participant-reported, not independent proof of access history.",
+      "producer_clarification": {
+        "source": "Read-only collaboration message from performance_design received after final metadata review.",
+        "reported_changes": [
+          "Added artifact_integrity with static integrity and Markdown-link checks.",
+          "Appended python3 final hash/manifest and Markdown link check to tools.",
+          "Added shared_preparation with workspace observation and timing explanation.",
+          "Added access_limits_observed.",
+          "Replaced end_utc with final metadata-pass completion; prior per-case authoring-end values were not retained separately."
+        ],
+        "reported_unchanged": "Input/output hash maps, skills, exceptions, execution descriptions, status and Markdown.",
+        "independent_evidence": "Current inputs and engineering Markdown were rehashed unchanged. Exact initial-to-final metadata diff is not independently reconstructable from retained full bytes."
+      }
+    },
+    {
+      "case_id": "HO-04",
+      "path": "outputs/run-record.json",
+      "initial_reviewed_sha256": "05a5a9d7b1ee142a122ddd9d66e2fbd891786fb10a89eb92548ee660f08ed38c",
+      "final_reviewed_sha256": "25aeddf69b68d1f5b2da63f4072762ca86e34013022879758420f9d0bb2b7da9",
+      "initial_binding_time_utc": "2026-11-13T23:55:17.567563+00:00",
+      "final_metadata_review_time_utc": "2026-11-14T00:00:28.042693+00:00",
+      "author_and_reason": "Parent attributes these records to the design producer finalizing the six-case batch after early per-case completion. Parent declared the group frozen and authorized no further mutations.",
+      "observed_final_metadata": "Final batch end_utc, artifact_integrity checks, shared_preparation/access-limit fields and the final integrity-check tool entry are present; engineering Markdown and input bindings are unchanged.",
+      "byte_history_limit": "Earlier run-record hashes are retained. Earlier full run-record bytes were not copied by this reviewer, so an exact independent field-by-field diff is not claimed.",
+      "final_record_end_utc": "2026-11-13T23:56:20.963758+00:00",
+      "collected_parent_receipt": "evals/evidence/performance-20261113/collection-02.json",
+      "parent_collection_matches_final": true,
+      "rating_impact": "None; changes concern run metadata. Final record remains participant-reported, not independent proof of access history.",
+      "producer_clarification": {
+        "source": "Read-only collaboration message from performance_design received after final metadata review.",
+        "reported_changes": [
+          "Added artifact_integrity with static integrity and Markdown-link checks.",
+          "Appended python3 final hash/manifest and Markdown link check to tools.",
+          "Added shared_preparation with workspace observation and timing explanation.",
+          "Added access_limits_observed.",
+          "Replaced end_utc with final metadata-pass completion; prior per-case authoring-end values were not retained separately."
+        ],
+        "reported_unchanged": "Input/output hash maps, skills, exceptions, execution descriptions, status and Markdown.",
+        "independent_evidence": "Current inputs and engineering Markdown were rehashed unchanged. Exact initial-to-final metadata diff is not independently reconstructable from retained full bytes."
+      }
+    },
+    {
+      "case_id": "HO-07",
+      "path": "outputs/run-record.json",
+      "initial_reviewed_sha256": "e67845822f9ed09266bce7b9810a898bc3a6d5aaca10b8b1ada19b18d58d7315",
+      "final_reviewed_sha256": "5733e58f583a7bd2bf50bbbcfd48bb7103089fdb6e7d4fbc4807ba012cd499bb",
+      "initial_binding_time_utc": "2026-11-13T23:55:17.567563+00:00",
+      "final_metadata_review_time_utc": "2026-11-14T00:00:28.042693+00:00",
+      "author_and_reason": "Parent attributes these records to the design producer finalizing the six-case batch after early per-case completion. Parent declared the group frozen and authorized no further mutations.",
+      "observed_final_metadata": "Final batch end_utc, artifact_integrity checks, shared_preparation/access-limit fields and the final integrity-check tool entry are present; engineering Markdown and input bindings are unchanged.",
+      "byte_history_limit": "Earlier run-record hashes are retained. Earlier full run-record bytes were not copied by this reviewer, so an exact independent field-by-field diff is not claimed.",
+      "final_record_end_utc": "2026-11-13T23:56:20.964155+00:00",
+      "collected_parent_receipt": "evals/evidence/performance-20261113/collection-02.json",
+      "parent_collection_matches_final": true,
+      "rating_impact": "None; changes concern run metadata. Final record remains participant-reported, not independent proof of access history.",
+      "producer_clarification": {
+        "source": "Read-only collaboration message from performance_design received after final metadata review.",
+        "reported_changes": [
+          "Added artifact_integrity with static integrity and Markdown-link checks.",
+          "Appended python3 final hash/manifest and Markdown link check to tools.",
+          "Added shared_preparation with workspace observation and timing explanation.",
+          "Added access_limits_observed.",
+          "Replaced end_utc with final metadata-pass completion; prior per-case authoring-end values were not retained separately."
+        ],
+        "reported_unchanged": "Input/output hash maps, skills, exceptions, execution descriptions, status and Markdown.",
+        "independent_evidence": "Current inputs and engineering Markdown were rehashed unchanged. Exact initial-to-final metadata diff is not independently reconstructable from retained full bytes."
+      }
+    }
+  ],
+  "final_metadata_reviewed_at_utc": "2026-11-14T00:00:28.042693+00:00",
+  "parent_collection_binding": {
+    "path": "evals/evidence/performance-20261113/collection-02.json",
+    "sha256": "9208973f6481cc0e7f8052f7ecaa0590c85d148590a4115949fde0e58ae940ca",
+    "scope": "Corroborates final metadata hashes for HO-01, HO-04 and HO-07 only; not used as answer evidence."
+  },
+  "process_observations": [
+    {
+      "id": "OBS-META-01",
+      "type": "run-metadata preservation limit; no engineering criterion penalty",
+      "cases": [
+        "HO-01",
+        "HO-04",
+        "HO-07"
+      ],
+      "observation": "Early authoring completion preceded final metadata freeze. Producer reports replacing earlier end_utc values, so final records retain the shared intake-to-finalization window rather than separate artifact-authoring completion times.",
+      "consequence": "Do not infer isolated case latency or exact authoring duration from these final end timestamps.",
+      "future_repair": "For future runs, freeze each record only once or retain separate authoring-completed and batch-finalized timestamps plus immutable revision bytes. No participant artifact was altered by this reviewer."
+    }
+  ]
+}

@@ -17,4 +17,6 @@ summary: >
   computation functions. Dual FMC architecture with dissimilar backup.
   DAL A software (DO-178C), DAL A programmable hardware (DO-254),
   cybersecurity assessment (DO-326A).
-evidence_status: planned
+evidence_status: partial_model_execution
+physical_evidence_status: planned
+risk_acceptance: not_assessed

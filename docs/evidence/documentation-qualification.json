@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "status": "passed_with_stated_limits",
+  "qualified_at_utc": "2026-11-14T00:33:50Z",
+  "scope": "Local static documentation build, browser navigation and print modes, and source-derived figure fidelity",
+  "reviewer": "Codex documentation subagent; this is implementation verification, not an independent engineering acceptance",
+  "source_snapshot_sha256": "1872d585f20f2e23491adbe46bcadef805adb6545d974c56b024478209894520",
+  "source_file_count": 510,
+  "counts": {
+    "benchmark_items": 60,
+    "documents": 505,
+    "historical_cases": 21,
+    "skills": 13
+  },
+  "manifest": {
+    "path": "docs/site/build-manifest.json",
+    "sha256": "93343b319c78f1f2d1e6f432e0fad3a8c7091cb5182c22e414701c20cecd57e4"
+  },
+  "generated_outputs": {
+    "docs/preview.html": "57a32001361cfc5e8b99026bb5401229820bf5f8895cd906bd7f76e03b022f53",
+    "docs/site/assets/cold-storage-architecture.json": "88ec5c6a6e87c364e9e02ea5138860125c5f362bfbdb55f82d437b1882fa39f2",
+    "docs/site/assets/cold-storage-architecture.svg": "5249907652e769e7f08f6514c2423624ee0d39d978b43dc739bafee9a3706729",
+    "docs/site/assets/examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.json": "663e9708501d6d04b5e9177224c1fc598f36956b751c98d81e0eea895773e1ee",
+    "docs/site/assets/examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.svg": "b301f8b88194bcb9249e7bbb0ea647f41418a02273ef2a8f01b85f7354bc0758",
+    "docs/site/assets/examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.json": "943c13260eadad063cccfdae91448b359191771dbc1cb1b244d88f41039783e0",
+    "docs/site/assets/examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.svg": "a012d6af197108edb6c7bfcc3bb17956397a64b58d4df185db6b5b6dcb891fe8",
+    "docs/site/assets/examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.json": "3976f0bc7f50b15292ce48aeecef79ceb9e80cc80cb7b1f63d184a1670bd9007",
+    "docs/site/assets/examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.svg": "22cd479eb82f026989af33c437f602e7a6de1b1b1421ad0f47d6c09509946c22",
+    "docs/site/index.html": "cf3240c62c6ab1c18ae73392ace6dce7627fcdf709f4d8955fc80abda90a09ac",
+    "docs/site/build-manifest.json": "93343b319c78f1f2d1e6f432e0fad3a8c7091cb5182c22e414701c20cecd57e4"
+  },
+  "toolchain": {
+    "python": "3.12.3",
+    "markdown": "3.9",
+    "chromium": "153.0.8010.12",
+    "chromium_sandbox_enabled": true
+  },
+  "checks": [
+    {
+      "command": ".venv-docs/bin/python scripts/render_preview.py",
+      "result": "passed; generated 11 files"
+    },
+    {
+      "command": ".venv-docs/bin/python scripts/render_preview.py --check",
+      "result": "passed; current source and output bytes"
+    },
+    {
+      "command": ".venv-docs/bin/python scripts/validate.py",
+      "result": "passed; catalog, links, models, historical records, benchmark structure and plugin manifests"
+    },
+    {
+      "command": ".venv-docs/bin/python -m unittest discover -s tests",
+      "result": "passed; 143 tests, including all 14 documentation tests with the optional dependency installed"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed; preserved source whitespace is encoded in HTML without changing decoded text"
+    }
+  ],
+  "browser": {
+    "result": "passed",
+    "check_count": 57,
+    "checks": [
+      "Only selected document appears initially",
+      "Public entry opens overview",
+      "All in-packet links resolve to rendered IDs",
+      "Navigation selects one document: Overview",
+      "Navigation selects one document: Plugin installation",
+      "Navigation selects one document: Selected skills",
+      "Navigation selects one document: First result",
+      "Navigation selects one document: Task workflows",
+      "Navigation selects one document: Skill catalog",
+      "Navigation selects one document: Historical gallery",
+      "Navigation selects one document: Teaching examples",
+      "Navigation selects one document: Engineering judgment benchmark",
+      "Navigation selects one document: Evaluation and evidence",
+      "Navigation selects one document: Source basis",
+      "Navigation selects one document: Model selection",
+      "Navigation selects one document: Distribution",
+      "Navigation selects one document: Support and contributions",
+      "Navigation selects one document: Release qualification",
+      "Navigation selects one document: Observed task evidence",
+      "Navigation selects one document: Review history",
+      "Canonical skill entrypoints match current catalog",
+      "Archived skill inputs and explicit reviewer snapshots stay outside reading bundle",
+      "Actual revised-baseline response remains available",
+      "Deep heading link opens its containing historical document",
+      "Worked architecture includes five source participants",
+      "Worked architecture includes all four source interfaces",
+      "Technician source ID appears in figure",
+      "Editable SVG and source graph are portable downloads",
+      "Browser download preserves generated bytes: cold-storage-architecture.svg",
+      "Browser download preserves generated bytes: cold-storage-architecture.json",
+      "Ordinary printing includes selected document only",
+      "Whole-packet print is explicit",
+      "Whole-packet mode exposes every document for print",
+      "After printing restores selected-document mode",
+      "Review packet opens dated review history",
+      "No browser script errors",
+      "Reading bundle makes no remote requests",
+      "Figure node count matches source: cold-storage-architecture.svg",
+      "Figure relation count matches source: cold-storage-architecture.svg",
+      "Figure labels fit canvas: cold-storage-architecture.svg",
+      "Node labels fit their own boxes: cold-storage-architecture.svg ",
+      "Figure node labels preserve source text: cold-storage-architecture.svg",
+      "Figure node count matches source: examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.svg",
+      "Figure relation count matches source: examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.svg",
+      "Figure labels fit canvas: examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.svg",
+      "Node labels fit their own boxes: examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.svg ",
+      "Figure node labels preserve source text: examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.svg",
+      "Figure node count matches source: examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.svg",
+      "Figure relation count matches source: examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.svg",
+      "Figure labels fit canvas: examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.svg",
+      "Node labels fit their own boxes: examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.svg ",
+      "Figure node labels preserve source text: examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.svg",
+      "Figure node count matches source: examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.svg",
+      "Figure relation count matches source: examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.svg",
+      "Figure labels fit canvas: examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.svg",
+      "Node labels fit their own boxes: examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.svg ",
+      "Figure node labels preserve source text: examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.svg"
+    ],
+    "script_errors": [],
+    "remote_requests": [],
+    "runner": {
+      "path": ".mbse-doc-checks/check-pages.cjs",
+      "sha256": "720dd793893edc71fadfa3d5758b47b9f023619afa9e31fbd522319f5d9b599a"
+    },
+    "report": {
+      "path": ".mbse-doc-checks/final-20261114-r4/browser-report.json",
+      "sha256": "79971ff2af7eda535f99a6d67c0855298b7151040c8bba390fda8f18eda7bab6"
+    },
+    "screenshot_method": "Native Chromium CDP Page.captureScreenshot with fromSurface:false after fonts and two animation frames",
+    "earlier_attempts": [
+      "Initial browser temporary path exceeded Unix socket limit; retried under authorized shorter workspace cache path.",
+      "Standard Playwright screenshot timed out; native CDP capture with fromSurface:false succeeded."
+    ],
+    "captures": [
+      {
+        "path": ".mbse-doc-checks/final-20261114-r4/public-overview.png",
+        "sha256": "e8d7265ec8e83691a7277e551047a372dd60cc92dc05ff1bebef55973f9a362d"
+      },
+      {
+        "path": ".mbse-doc-checks/final-20261114-r4/release-qualification.png",
+        "sha256": "57835e1b37d906f9da9893c8216f72eb2140d921cec239d313a8feb76db0df77"
+      },
+      {
+        "path": ".mbse-doc-checks/final-20261114-r4/observed-evidence.png",
+        "sha256": "043085c01aec6074a7a7ab3eaea7339adb9589ba8e35b9a6fdee8502d97865a3"
+      },
+      {
+        "path": ".mbse-doc-checks/final-20261114-r4/historical-hubble.png",
+        "sha256": "bae80055c15f7713158ecf7f3cb1ee2b24da0a3d9bfc770773ed04fab6971ac6"
+      },
+      {
+        "path": ".mbse-doc-checks/final-20261114-r4/worked-architecture.png",
+        "sha256": "50f92adc7694f2d191b24808af573101127d8c332e1f9b202d1f1b6315169210"
+      },
+      {
+        "path": ".mbse-doc-checks/final-20261114-r4/cold-storage-architecture.png",
+        "sha256": "8548e34abef04c7ad47b4daebcd553ca21174cac8d92806aa31481079c7ee987"
+      },
+      {
+        "path": ".mbse-doc-checks/final-20261114-r4/examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.png",
+        "sha256": "8acceb6358ab83851ee565ee45790fdbc37729b0b9af451cc0f64f5d74079fb4"
+      },
+      {
+        "path": ".mbse-doc-checks/final-20261114-r4/examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.png",
+        "sha256": "7533d2802462681160ad886944a1bfb6228e3eb896275b1c0a19ff54c45c53b7"
+      },
+      {
+        "path": ".mbse-doc-checks/final-20261114-r4/examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.png",
+        "sha256": "6e6defe1aef39c673520e17ea7acec756bbc3ebfc70344978670ea3e39c01cfa"
+      }
+    ],
+    "local_artifact_note": "Browser runner, reports and PNG captures are preserved in the ignored local .mbse-doc-checks directory; this receipt records their hashes but does not publish them."
+  },
+  "figures": [
+    {
+      "graph": "docs/site/assets/cold-storage-architecture.json",
+      "svg": "docs/site/assets/cold-storage-architecture.svg",
+      "source": "examples/worked/cold-storage-alarm/architecture.md",
+      "source_sha256": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1",
+      "participants": 5,
+      "directed_relations": 4,
+      "visually_reviewed_capture": ".mbse-doc-checks/final-20261114-r4/cold-storage-architecture.png",
+      "capture_sha256": "8548e34abef04c7ad47b4daebcd553ca21174cac8d92806aa31481079c7ee987"
+    },
+    {
+      "graph": "docs/site/assets/examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.json",
+      "svg": "docs/site/assets/examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.svg",
+      "source": "examples/historical/heathrow-terminal-5/README.md",
+      "source_sha256": "cfddce078ebe0725705c73e5eccd0cdbc62e1ab528613cf60cc48fa37beea116",
+      "participants": 6,
+      "directed_relations": 5,
+      "visually_reviewed_capture": ".mbse-doc-checks/final-20261114-r4/examples-historical-heathrow-terminal-5-readme-md-bbcf6912-figure-1.png",
+      "capture_sha256": "8acceb6358ab83851ee565ee45790fdbc37729b0b9af451cc0f64f5d74079fb4"
+    },
+    {
+      "graph": "docs/site/assets/examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.json",
+      "svg": "docs/site/assets/examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.svg",
+      "source": "examples/historical/hubble-optics/README.md",
+      "source_sha256": "3a5d924ddebf8691be2be885f0f8be53c3d84fd8466782bdffdb413c292d4995",
+      "participants": 6,
+      "directed_relations": 5,
+      "visually_reviewed_capture": ".mbse-doc-checks/final-20261114-r4/examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.png",
+      "capture_sha256": "7533d2802462681160ad886944a1bfb6228e3eb896275b1c0a19ff54c45c53b7"
+    },
+    {
+      "graph": "docs/site/assets/examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.json",
+      "svg": "docs/site/assets/examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.svg",
+      "source": "examples/historical/mars-climate-orbiter/README.md",
+      "source_sha256": "0eefa2649073d149a270e08addfedecd8c95925ee8c9adf6b79017262c250ed5",
+      "participants": 5,
+      "directed_relations": 4,
+      "visually_reviewed_capture": ".mbse-doc-checks/final-20261114-r4/examples-historical-mars-climate-orbiter-readme-md-c718c8a2-figure-1.png",
+      "capture_sha256": "6e6defe1aef39c673520e17ea7acec756bbc3ebfc70344978670ea3e39c01cfa"
+    }
+  ],
+  "visual_findings": [
+    {
+      "id": "DOC-FIG-01",
+      "observed": "Cold-storage branch labels were initially adjacent to the wrong outgoing route.",
+      "repair": "Labels moved to their own outer branch, with separate inlet/outlet endpoints.",
+      "initial_capture": ".mbse-doc-checks/architecture-2.png",
+      "corrected_capture": ".mbse-doc-checks/architecture-corrected.png",
+      "status": "repaired_and_visually_inspected"
+    },
+    {
+      "id": "DOC-FIG-02",
+      "observed": "Hubble direct relations G to A and X to A crossed the unrelated primary-measurement node, falsely suggesting mediation.",
+      "repair": "Skipped-layer relations now leave/enter top or bottom node boundaries and route outside intermediate nodes; a geometry regression test rejects unrelated node intersections.",
+      "initial_evidence": "Observed in the first source-derived Hubble screenshot during this review; finding retained here.",
+      "corrected_capture": ".mbse-doc-checks/examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.png",
+      "status": "repaired_and_visually_inspected"
+    },
+    {
+      "id": "DOC-FIG-03",
+      "observed": "The expanded six-node Hubble graph exposed a skipped-layer path crossing another node in its source column.",
+      "repair": "Skipped-layer relations now use clear side corridors and an outer rail; regression geometry covers all three current historical graphs.",
+      "initial_capture": ".mbse-doc-checks/final-20261114/examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.png",
+      "status": "repaired_and_visually_inspected"
+    },
+    {
+      "id": "DOC-FIG-04",
+      "observed": "Long Hubble and Mars Climate Orbiter node labels extended beyond their boxes.",
+      "repair": "Source text wraps into complete lines inside measured node boxes; browser checks compare displayed words with the source and reject box overflow.",
+      "initial_capture": ".mbse-doc-checks/final-20261114/examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.png",
+      "status": "repaired_and_visually_inspected"
+    },
+    {
+      "id": "DOC-FIG-05",
+      "observed": "The first side-corridor repair overlapped two converging paths and crossed relation labels.",
+      "repair": "Incoming and outgoing ports follow participant vertical order, with wider gaps and narrow side corridors that clear labels.",
+      "initial_capture": ".mbse-doc-checks/final-20261114-r2/examples-historical-hubble-optics-readme-md-6f74b37e-figure-1.png",
+      "status": "repaired_and_visually_inspected"
+    }
+  ],
+  "qualification_cycle_control": "This receipt and repository-qualification.json are explicitly excluded from documentation source closure; linked references point to repository source. The exclusion and unchanged outputs after receipt edits are regression-tested.",
+  "limits": [
+    "Chromium local-file behavior was exercised; this is not a cross-browser or hosted-deployment check.",
+    "Print qualification checks selected-document and whole-packet visibility plus restoration after printing; every printed page was not separately inspected.",
+    "Editable SVG and source JSON downloads preserve generated bytes. No native editor edit-save-reopen check was performed.",
+    "The figures are bounded source-derived logical flows, not formal SysML, simulations or engineering acceptance evidence.",
+    "No public deployment was performed by this documentation task."
+  ]
+}

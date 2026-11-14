@@ -15,4 +15,6 @@ summary: >
   Large-volume infusion pump with dose error reduction software (DERS).
   Drug library, wireless connectivity, EHR integration. IEC 62304
   Class C software with ISO 14971 risk management.
-evidence_status: planned
+evidence_status: partial_model_execution
+physical_evidence_status: planned
+risk_acceptance: not_assessed

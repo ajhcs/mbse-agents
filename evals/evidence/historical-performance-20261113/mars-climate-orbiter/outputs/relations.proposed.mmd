@@ -1,0 +1,38 @@
+%% Retrospective synthetic proposal; not SysML or executed evidence.
+%% Original nodes and interface IDs retained; additional gates are proposals.
+%% P-to-N is the abstract logical boundary, not an authorized bypass of ingress gates.
+flowchart LR
+  P["HG-05 ground-data producer"]
+  N["HG-05 navigation consumer"]
+  G["HG-05 development team"]
+  O["HG-05 operations team"]
+  D["HG-05 mission decision authority"]
+  P -->|HG-05-I1 impulse meaning| N
+  G -->|HG-05-I2 handover assumptions| O
+  N -->|HG-05-I3 unexplained residual| D
+  O -->|HG-05-CH1 legacy path review| D
+  subgraph Proposed_ingress["Proposed HG-05-I1 ingress detail"]
+    V["Exact schema and unit registry"]
+    L["Legacy bytes plus recovered hash-bound provenance"]
+    A["Controlled legacy adapter"]
+    S["Staging and whole-file validation"]
+    Q["Quarantine; accepted state unchanged"]
+    C["Canonical impulse; atomic commit"]
+    V --> S
+    L -->|eligible only after provenance review| A
+    A --> S
+    S -->|unknown or contradictory| Q
+    S -->|all applicable checks satisfied| C
+  end
+  P -->|new-v1 bytes| S
+  C --> N
+  R["Independent quantity and reviewed paired sample"]
+  E["Planned HG-05-A01 to A09; no outcomes"]
+  R -->|oracle| E
+  S -->|planned observations| E
+  N -->|planned interpreted output and state| E
+  Q -->|planned rejection record| E
+  E -->|HG-05-C3 remains open| O
+  IL["Proposed integration lead; exercise decision only"]
+  O -->|HG-05-P05 handover| IL
+  E -->|future evidence review| IL

@@ -1,6 +1,6 @@
 # Aerospace analysis and review
 
-This reference preserves useful analysis topics from the former aerospace prompt. It is engineering guidance; normative details depend on the adopted edition and certification basis. Do not infer that a public source validates every clause of a licensed standard.
+This is engineering guidance; normative details depend on the adopted edition and certification basis. Do not infer that a public source validates every clause of a licensed standard.
 
 ## Development assurance and safety
 
@@ -18,18 +18,7 @@ DO-178C software evidence and DO-254 hardware evidence have different objectives
 
 DO-331 is the model-based supplement to DO-178C/DO-278A, not a general DO-254 supplement. Assess how a model is used: specification, design, code generation, or verification. Track model standards, transformation configuration, model/code relationships, and relevant coverage. A drawing used only for communication does not automatically establish the same obligations as production code generation. [FAA AC 20-115D](https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-115D.pdf), paragraphs 6 and 10, provides the official recognition context.
 
-Tool qualification is decided by tool use, potential impact, credit claimed, and checks on outputs. DO-178C section 12.2 supplies the decision framework; DO-330 supplies qualification objectives and lifecycle data. Criterion 3 can fail to detect an error in its intended use; it does **not** mean an output with no effect or automatic exemption.
-
-FAA AC 20-115D, paragraph 10 and Table 2 (printed page 11), publishes the following correlation in its legacy-tool context:
-
-| Software level | Criterion 1 | Criterion 2 | Criterion 3 |
-| --- | --- | --- | --- |
-| A | TQL-1 | TQL-4 | TQL-5 |
-| B | TQL-2 | TQL-4 | TQL-5 |
-| C | TQL-3 | TQL-5 | TQL-5 |
-| D | TQL-4 | TQL-5 | TQL-5 |
-
-Apply the licensed DO-178C Table 12-1 and actual qualification decision for a new use. A requirements repository, code generator, coverage analyzer, or equivalence checker is not assigned a criterion merely by its name. Explain which process is reduced or eliminated, how outputs are checked, and what faults could escape. Do not claim that this skill or a general language model is qualified.
+Tool qualification is decided by actual use, potential impact, credit claimed, and checks on outputs. For a software tool-credit decision, use [software tool qualification](software-tool-qualification.md), including the limits of the public FAA correlation. Do not claim that this skill or a general language model is qualified.
 
 ## Security and space
 

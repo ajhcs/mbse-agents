@@ -1,0 +1,182 @@
+{
+  "case": "HO-16",
+  "started_at_utc": "2026-11-13T23:43:05.844892+00:00",
+  "input_files": [
+    {
+      "path": ".agents/skills/mbse-systems-engineering/SKILL.md",
+      "sha256": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+      "size_bytes": 4447
+    },
+    {
+      "path": ".agents/skills/mbse-systems-engineering/agents/openai.yaml",
+      "sha256": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+      "size_bytes": 319
+    },
+    {
+      "path": ".agents/skills/mbse-systems-engineering/references/connected-work.md",
+      "sha256": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+      "size_bytes": 2340
+    },
+    {
+      "path": ".agents/skills/mbse-systems-engineering/references/engineering-records.md",
+      "sha256": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+      "size_bytes": 7018
+    },
+    {
+      "path": ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md",
+      "sha256": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+      "size_bytes": 2864
+    },
+    {
+      "path": ".agents/skills/mbse-verification-evidence/SKILL.md",
+      "sha256": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+      "size_bytes": 1885
+    },
+    {
+      "path": ".agents/skills/mbse-verification-evidence/agents/openai.yaml",
+      "sha256": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+      "size_bytes": 329
+    },
+    {
+      "path": ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md",
+      "sha256": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+      "size_bytes": 2004
+    },
+    {
+      "path": "packet-manifest.json",
+      "sha256": "5ccbb72a379931cedfeb75e52a62ebb9b20442b7c7c276332921270db829bd87",
+      "size_bytes": 1725
+    },
+    {
+      "path": "request.md",
+      "sha256": "c9a1194f01256e391fbaad931027a8522193ff0bfcfbcdbf25905d1ec930d657",
+      "size_bytes": 597
+    }
+  ],
+  "schema_version": 1,
+  "kind": "artifact-performance-participant-run",
+  "arm": "task-domain",
+  "case_version": "1.0.1",
+  "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-16",
+  "output_written_at_utc": "2026-11-13T23:46:35.811026+00:00",
+  "record_finalized_at_utc": "2026-11-13T23:49:10.012004+00:00",
+  "timing_basis": "UTC wall-clock timestamps observed from Python datetime.now(timezone.utc). Packet start is the request/manifest read, not model inference start. Case work was interleaved in one participant context.",
+  "elapsed_packet_read_to_record_seconds": 364.167112,
+  "model": {
+    "exact_id": null,
+    "settings": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "total_tokens": null,
+    "cost": null,
+    "currency": null,
+    "reason": "Exact model identity, invocation settings, token accounting, and cost were not exposed; none inferred."
+  },
+  "participant_context": {
+    "group": "performance_transfer-20261113T234256Z",
+    "shared_across_cases": [
+      {
+        "case": "HO-14",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-14"
+      },
+      {
+        "case": "HO-15",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-15"
+      },
+      {
+        "case": "HO-16",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-16"
+      },
+      {
+        "case": "HO-18",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-18"
+      },
+      {
+        "case": "HO-19",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-19"
+      },
+      {
+        "case": "HO-20",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-20"
+      },
+      {
+        "case": "HO-08",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/catalog/HO-08"
+      }
+    ],
+    "disclosure": "These seven cases share one participant conversation and model context. All seven requests/manifests were read before any response was written. Relevant skill text and the HO-14 source were also visible in shared context. Responses are separately authored artifacts, not independent model replications.",
+    "isolation_limits": "Inherited environment instructions and available-skill/memory summary metadata were present. No source-repository files, memory files, evaluation keys/rubrics, other-arm packet files, or prior participant outputs were accessed. Only assigned packet paths and the HO-14 permitted primary source were consulted for task content.",
+    "other_participant_outputs_accessed": false,
+    "subagents_spawned": false
+  },
+  "skill_selection": [
+    {
+      "name": "mbse-verification-evidence",
+      "selected": true,
+      "used": true,
+      "use": "Define comparable measured intervals, configuration and conditions, uncertainty, outcome reporting, and inference limits."
+    }
+  ],
+  "skill_read_events": [
+    {
+      "path": ".agents/skills/mbse-verification-evidence/SKILL.md",
+      "observed_read_at_utc": "2026-11-13T23:43:26.158453+00:00",
+      "sha256": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+      "content_exposed_to_participant": true
+    },
+    {
+      "path": ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md",
+      "observed_read_at_utc": "2026-11-13T23:43:51.485516+00:00",
+      "sha256": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+      "content_exposed_to_participant": true,
+      "use": "Used observation/configuration/uncertainty/acceptance separation; did not impose a complete trace-package template."
+    }
+  ],
+  "available_skills_not_selected": [
+    "mbse-systems-engineering"
+  ],
+  "skill_scope_note": "File inventory and byte hashing cover all supplied packages, but only paths in skill_read_events were exposed as skill text for this case. Other cases share the participant context.",
+  "tools": [
+    {
+      "name": "functions.exec",
+      "use": "Orchestrate local packet reads, output writes, and integrity recording."
+    },
+    {
+      "name": "exec_command",
+      "runtime": "bash with python3 standard library",
+      "use": "Read request/manifest and selected skill text; write output.md and run-record.json; compute SHA-256; observe UTC wall-clock times."
+    }
+  ],
+  "local_checks": {
+    "packet_input_hashes_rechecked_at_utc": "2026-11-13T23:49:10.012004+00:00",
+    "packet_inputs_unchanged": true,
+    "changed_inputs": [],
+    "manifest_skill_and_request_hashes_match": true,
+    "manifest_hash_mismatches": [],
+    "scope": "Artifact integrity only; no engineering test, application execution, inspection, approval, or performance scoring was performed."
+  },
+  "exceptions": [
+    {
+      "type": "tool_availability",
+      "scope": "shared initial inventory",
+      "detail": "The first shell inventory attempt used python, which was not found. It was retried successfully with python3. No input changes occurred in that attempt; its exact start timestamp was not recorded."
+    },
+    {
+      "type": "context_limit",
+      "detail": "Shared participant context is disclosed and cannot support independent-replication or secure holdout claims."
+    }
+  ],
+  "self_grade": null,
+  "output_hashes_exclude": "run-record.json itself, to avoid a recursive self-hash.",
+  "external_sources": [],
+  "external_source_note": "No external source retrieved for this case. Historical source statements, where present, were used only as facts supplied in request.md and labeled accordingly.",
+  "output_files": [
+    {
+      "path": "outputs/output.md",
+      "sha256": "945ec0540a647c193dce4f369bd02de24c2a00adc93240f195ce603058677fb9",
+      "size_bytes": 3096
+    }
+  ]
+}

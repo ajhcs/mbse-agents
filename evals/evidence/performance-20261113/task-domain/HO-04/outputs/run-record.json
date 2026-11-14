@@ -1,0 +1,72 @@
+{
+  "case": "HO-04",
+  "participant": "performance_design",
+  "start_utc": "2026-11-13T23:42:52.163029+00:00",
+  "end_utc": "2026-11-13T23:56:20.963758+00:00",
+  "model_id": "unknown",
+  "settings": "unknown",
+  "tokens": "unknown",
+  "cost": "unknown",
+  "shared_context_limitation": "Six cases HO-01, HO-04, HO-07, HO-09, HO-12, HO-13 share one participant context. Outputs are not independent across cases.",
+  "skills_read": [
+    ".agents/skills/mbse-baseline-review/SKILL.md",
+    ".agents/skills/mbse-verification-evidence/SKILL.md"
+  ],
+  "skills_used": [
+    ".agents/skills/mbse-baseline-review/SKILL.md",
+    ".agents/skills/mbse-verification-evidence/SKILL.md"
+  ],
+  "references_read": [
+    ".agents/skills/mbse-baseline-review/references/review-records.md",
+    ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md"
+  ],
+  "tools": [
+    "functions.exec",
+    "exec_command",
+    "bash",
+    "python3 pathlib/hashlib/json/datetime",
+    "cat (Markdown artifact creation)",
+    "python3 final hash/manifest and Markdown link check"
+  ],
+  "input_sha256": {
+    ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    ".agents/skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+    ".agents/skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+    ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+    "packet-manifest.json": "e799967321740a7605ca6ff4a700cbbb1464f3b8efdd12166ab754262613b1cd",
+    "request.md": "14de9e46a47923cca518bfc64a245c0dca9ffaee0aaec2e7a35b177101b97a37"
+  },
+  "output_sha256": {
+    "outputs/output.md": "1b308861787c41fdbb99251643adcec4a7c0ba2504e9f6b595abe45a663208db"
+  },
+  "exceptions": [
+    "The python command is unavailable; python3 is used.",
+    "Old report and new report path identity were not supplied; file absence is taken from request, not independently discovered.",
+    "Output hash map excludes run-record.json to avoid self-referential hashing."
+  ],
+  "status": "completed",
+  "execution": "Desk arithmetic and evidence review of packet description; no controller execution, report logs or performance measurement.",
+  "artifact_integrity": {
+    "checked_utc": "2026-11-13T23:56:20.963753+00:00",
+    "all_inputs_match_initial_sha256": true,
+    "all_manifest_entries_match_sha256": true,
+    "all_output_sha256_match": true,
+    "local_markdown_links_resolve": true,
+    "scope": "Filesystem/byte integrity and artifact-link checks only; not controller, model quality or operational verification."
+  },
+  "shared_preparation": {
+    "workspace_mount_observed": "/workspace mounted from /dev/nvme1n1p1, ext4, rw,nosuid,nodev,relatime",
+    "preparation_tools": [
+      "findmnt",
+      "python (unavailable)",
+      "python3"
+    ],
+    "timing_note": "Case start is packet intake/hash initialization. All six requests were then read in one call and authored sequentially in shared context; intervals overlap and are not additive compute timings."
+  },
+  "access_limits_observed": [
+    "Used only assigned packet request, manifest, skill packages, references and HO-13 supplied inputs for task reasoning.",
+    "No source repository, memory, other arm, rubric/evaluation key, prior participant outputs, external sources, production systems or paid APIs accessed."
+  ]
+}

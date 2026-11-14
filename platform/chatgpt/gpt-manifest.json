@@ -3,69 +3,69 @@
   "format": "mbse-skills-adaptation-index",
   "skills": [
     {
+      "name": "mbse-systems-engineering",
+      "description": "Reason through system behavior, cross-discipline tradeoffs, and lifecycle decisions: understand the problem, question assumptions, synthesize evidence, and explain engineering recommendations.",
+      "source_file": ".agents/skills/mbse-systems-engineering/SKILL.md"
+    },
+    {
       "name": "mbse-system-concept",
-      "description": "Develop or compare system concepts from a problem, desired outcomes, and feasibility constraints.",
+      "description": "Frame an engineering problem, develop or explain system concepts, and compare ways to achieve stakeholder outcomes within feasibility constraints.",
       "source_file": ".agents/skills/mbse-system-concept/SKILL.md"
     },
     {
       "name": "mbse-conops",
-      "description": "Develop or revise a concept of operations connecting stakeholders, system boundaries, operational use, and lifecycle support.",
+      "description": "Understand, explain, develop, or revise how a system will operate across stakeholders, boundaries, operating conditions, and lifecycle support.",
       "source_file": ".agents/skills/mbse-conops/SKILL.md"
     },
     {
       "name": "mbse-operational-scenarios",
-      "description": "Draft or revise operational scenarios with actor actions, system responses, modes, exchanges, and exception recovery.",
+      "description": "Explore or explain operational scenarios, then develop actor actions, system responses, modes, exchanges, exceptions, and recovery when a scenario artifact is needed.",
       "source_file": ".agents/skills/mbse-operational-scenarios/SKILL.md"
     },
     {
       "name": "mbse-requirements",
-      "description": "Elicit, draft, revise, or review engineering requirements and their sources, acceptance conditions, and traceability.",
+      "description": "Interpret stakeholder needs, question and reconcile engineering requirements, and develop or review their sources, acceptance conditions, and traceability.",
       "source_file": ".agents/skills/mbse-requirements/SKILL.md"
     },
     {
       "name": "mbse-architecture",
-      "description": "Develop or review functional and physical architectures, requirement allocations, interface contracts, and design trades.",
+      "description": "Reason about system behavior and structure, explain architectural choices, and develop or review functions, allocations, interfaces, and design trades.",
       "source_file": ".agents/skills/mbse-architecture/SKILL.md"
     },
     {
       "name": "mbse-verification-evidence",
-      "description": "Plan or review requirements verification, stakeholder validation, traceability, and configuration-controlled evidence.",
+      "description": "Reason about what evidence can establish an engineering claim; plan or assess requirements verification, stakeholder validation, and configuration-controlled results.",
       "source_file": ".agents/skills/mbse-verification-evidence/SKILL.md"
     },
     {
       "name": "mbse-baseline-review",
-      "description": "Review an engineering baseline or change for consistency, missing allocations, risk controls, verification gaps, and decision readiness.",
+      "description": "Challenge and explain an engineering baseline or change, examining system reasoning, consistency, allocations, risk controls, evidence, and decision readiness.",
       "source_file": ".agents/skills/mbse-baseline-review/SKILL.md"
     },
     {
       "name": "mbse-aerospace",
-      "description": "Develop or review aerospace architectures, safety and development assurance, and certification evidence for civil aviation or space.",
+      "description": "Understand and reason through aircraft or space system questions, connecting mission behavior, architecture, safety, development assurance, and program evidence.",
       "source_file": ".agents/skills/mbse-aerospace/SKILL.md"
     },
     {
       "name": "mbse-defense",
-      "description": "Develop or review defense mission threads, DoDAF/UAF architectures, technical baselines, system safety, and acquisition evidence.",
+      "description": "Understand and reason through defense system and acquisition questions, connecting mission threads, organizations, architecture, safety, sustainment, and decision evidence.",
       "source_file": ".agents/skills/mbse-defense/SKILL.md"
     },
     {
       "name": "mbse-automotive",
-      "description": "Develop or review automotive functional safety, SOTIF, cybersecurity, E/E architectures, and safety evidence.",
+      "description": "Understand and reason through vehicle-system behavior, connecting driver and operating context, E/E architecture, functional safety, SOTIF, cybersecurity, and lifecycle evidence.",
       "source_file": ".agents/skills/mbse-automotive/SKILL.md"
     },
     {
       "name": "mbse-medical-device",
-      "description": "Develop or review medical-device intended use, risk controls, software lifecycle, architecture, and regulatory evidence.",
+      "description": "Understand and reason through medical-device system questions, connecting intended use, clinical workflow, patient/user risk, architecture, software lifecycle, and regulatory evidence.",
       "source_file": ".agents/skills/mbse-medical-device/SKILL.md"
     },
     {
       "name": "mbse-electronic-systems",
-      "description": "Develop or review ASIC, FPGA, SoC, and control-electronics architectures, hardware verification, and assurance evidence.",
+      "description": "Understand and reason through ASIC, FPGA, SoC, and control-electronics problems, connecting physical behavior, HW/SW interfaces, implementation choices, verification, and assurance.",
       "source_file": ".agents/skills/mbse-electronic-systems/SKILL.md"
-    },
-    {
-      "name": "defense-founder-review",
-      "description": "Evaluate a defense or dual-use venture's capability gap, product wedge, system strategy, and prototype evidence.",
-      "source_file": ".agents/skills/defense-founder-review/SKILL.md"
     }
   ]
 }

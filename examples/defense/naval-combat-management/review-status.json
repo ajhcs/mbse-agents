@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "system": "naval-combat-management",
+  "status": "current_proposed_teaching_baseline",
+  "scope": [
+    "declared_record_identity_and_table_links",
+    "requirement_source_claim_inventory",
+    "artifact_existence_by_lifecycle",
+    "bounded_local_markdown_paths"
+  ],
+  "source_reviews": [
+    {
+      "requirement": "REQ-FUN-001",
+      "candidate_basis": "Stakeholder need (TAO); combat system performance specification",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-002",
+      "candidate_basis": "Stakeholder need (CIC watch team); combat system operational architecture",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-003",
+      "candidate_basis": "Stakeholder need (TAO); combat system doctrine",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-004",
+      "candidate_basis": "Stakeholder need (CIC watch team); CEC operational requirements",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-005",
+      "candidate_basis": "Stakeholder need (TAO); combat system doctrine",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-006",
+      "candidate_basis": "Stakeholder need (CIC watch team)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-001",
+      "candidate_basis": "MIL-STD-882E; Navy weapons safety policy",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-002",
+      "candidate_basis": "MIL-STD-882E; Navy ROE policy",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-003",
+      "candidate_basis": "MIL-STD-882E; Navy weapons safety",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-004",
+      "candidate_basis": "MIL-STD-882E; Navy combat system recording requirements",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-001",
+      "candidate_basis": "MIL-STD-1553B; combat system modernization plan",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-002",
+      "candidate_basis": "Combat system performance specification; weapon system ICDs",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-PRF-001",
+      "candidate_basis": "Combat system performance specification",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    }
+  ],
+  "open_references": [],
+  "model_evidence": "no_system_model_execution",
+  "independent_engineering_review": "not_performed",
+  "licensed_standard_clause_audit": "not_performed",
+  "physical_validation": "not_performed",
+  "risk_acceptance": "not_assessed",
+  "historical_snapshot": "history/pre-hardening.json"
+}

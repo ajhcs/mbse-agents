@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-14T00:10:37.824862+00:00",
+  "results": [
+    {
+      "arm": "none",
+      "items": 24,
+      "answered": 24,
+      "selection_correct": 24,
+      "selection_accuracy": 1.0
+    },
+    {
+      "arm": "task",
+      "items": 24,
+      "answered": 24,
+      "selection_correct": 24,
+      "selection_accuracy": 1.0
+    },
+    {
+      "arm": "task-domain",
+      "items": 24,
+      "answered": 24,
+      "selection_correct": 24,
+      "selection_accuracy": 1.0
+    }
+  ],
+  "status": "reasoning_assessment_pending",
+  "metadata_amendment": "All three original responses truthfully used model:null; the scorer requires the string unknown. Producers made metadata-only copies with unchanged answers/binding/timestamps, preserving originals and amendment hashes.",
+  "interpretation": "Descriptive selection results; no causal improvement or overall competence inference."
+}

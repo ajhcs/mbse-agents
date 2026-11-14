@@ -1,8 +1,8 @@
 # Requirements
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
-All requirements are atomic, testable shall-statements.
+These proposed requirements retain their original IDs. Measurability, decomposition and source applicability are review obligations; versioning does not imply approval.
 
 ## Requirement Record Schema
 
@@ -11,7 +11,7 @@ All requirements are atomic, testable shall-statements.
 | ID            | Unique identifier (e.g., REQ-FUN-001)                                                            |
 | Statement     | Atomic shall-statement                                                                            |
 | Rationale     | Why this requirement exists                                                                       |
-| Source        | Hazard ID (HZ-), control ID (CTL-), regulatory clause, or stakeholder need                       |
+| Source        | Candidate basis requiring [source review](source-review.md); hazard ID (HZ-), control ID (CTL-), regulatory clause, or stakeholder need                       |
 | Parent        | Parent requirement ID (if derived)                                                                |
 | Verification  | Method: test, analysis, inspection, demonstration                                                 |
 | Allocation    | Target component ID(s) from architecture.md                                                       |
@@ -299,7 +299,7 @@ All requirements are atomic, testable shall-statements.
 ### REQ-SAF-003
 | Field        | Value |
 |--------------|-------|
-| **Statement**    | The pump shall limit the maximum deliverable flow rate to 999 mL/hr under all software and hardware fault conditions, enforced by an independent hardware current limiter on the pump motor driver that prevents motor speed from exceeding the rate corresponding to 999 mL/hr. |
+| **Statement**    | The pump shall limit the maximum deliverable flow rate to 999 mL/hr for software-commanded excessive motor speed within the specified drive envelope, enforced by a candidate hardware current limiter on the pump motor driver that prevents motor speed from exceeding the rate corresponding to 999 mL/hr. |
 | **Rationale**    | Hardware rate limiting provides defense in depth against software faults that could command excessive pump speed. |
 | **Source**       | HZ-001; CTL-002; IEC 60601-2-24 |
 | **Parent**       | — |

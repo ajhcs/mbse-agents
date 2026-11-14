@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-14T00:11:41.408143+00:00",
+  "version": "0.2.1",
+  "changes": [
+    "Align SEJ045 criterion with revised display/training distractor.",
+    "Align SEJ046/048 explanations with revised alternatives.",
+    "Default unavailable model identifier to the scorer-supported unknown string; all three0.2.0participants truthfully used template null and required preserved metadata-only amendments."
+  ],
+  "unchanged": "Question wording/options, answer selections, dimensions and splits unchanged from0.2.0.0.2.0run scoring/reviews retain their exact archived bank/key/scorer.",
+  "source_hashes": {
+    "evals/benchmark/items.json": "d7154602c9ea21aba5ae45cc2922723d818cbbe7c1bc11a0fd5d22a36d1c6571",
+    "evals/benchmark/keys.json": "5e665eaef48cc05f9e1febce7802fd26bddadbd3ab5edf3c2936f8195867b37e",
+    "scripts/benchmark.py": "c7aab0816ba6d4f00fcfb90a6d476a0a04b76b69ba139c62307fb1318ceaf893"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "HG-03",
+  "sources": [
+    {
+      "id": "HG-03-S1",
+      "title": "The Hubble Space Telescope Optical Systems Failure Report, NASA-TM-103443",
+      "url": "https://ntrs.nasa.gov/api/citations/19910003124/downloads/19910003124.pdf",
+      "publication_date": "1990-11",
+      "locator": "Executive summary; null-corrector investigation",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ]
+}

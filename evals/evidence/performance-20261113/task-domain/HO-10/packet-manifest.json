@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "kind": "artifact-performance-packet",
+  "status": "complete",
+  "case": "HO-10",
+  "case_version": "1.0",
+  "prepared_at": "2026-11-13T23:42:14.248007+00:00",
+  "skills": [
+    "mbse-automotive",
+    "mbse-baseline-review"
+  ],
+  "arm": "task-domain",
+  "full_catalog_exposed": false,
+  "case_bank_sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+  "files": {
+    ".agents/skills/mbse-automotive/SKILL.md": "2aa17179547acd2fd90a2125b1ec3ed888f7aa4a5a97f99f35769ec053dd9a6b",
+    ".agents/skills/mbse-automotive/agents/openai.yaml": "92da28aebaac3dbcdde3c37e332822c4ca1481097679892fc9f5c90b136e0993",
+    ".agents/skills/mbse-automotive/references/domain-analysis.md": "8536d858e96cd439def34e87ed8904e80030d659a51d18bd95f0bc64dd11728d",
+    ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    "request.md": "73695cc6e819f3744e00a57604a4fdb92396b36385507a9b4f5dfcdc01cbb43f"
+  },
+  "exposure": "Public inputs; packet separation is not a secure held-out environment."
+}

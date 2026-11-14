@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "proposed-independent-adjudication-required",
+  "rubrics": {
+    "HO-01": [
+      "Preserves N-01 through N-04 in requirements and links allocations",
+      "Defines timer/sample freshness and explicit stop/resume semantics",
+      "Keeps manager 50 ms proposal and weather/safe-state decisions unconfirmed",
+      "Provides usable interface/verification conditions and no executed-evidence claims"
+    ],
+    "HO-02": [
+      "Corrects general pump to 880.5725 Class II and unrelated hemodialysis basis",
+      "Assesses intended use/product code/pathway uncertainty",
+      "Separates software class and EU Rule 12 vs software Rule 11",
+      "Cites primary sources with access limits"
+    ],
+    "HO-03": [
+      "Criterion 3 can require TQL-5 rather than automatic exemption",
+      "Criterion 1 A/B/C/D map to TQL1/2/3/4",
+      "Criterion 2 A/B TQL4 and C/D TQL5 distinguished",
+      "Qualification depends on use, credit and independent verification; public FAA table scoped"
+    ],
+    "HO-04": [
+      "Recognizes 260 ms exceeds 200 ms and old 460 ms cannot support revised requirement",
+      "Locates affected requirement/interface/verification and proposes repairs",
+      "Treats absent report as planned and evidence stale",
+      "Separates structurally valid trace from semantic adequacy"
+    ],
+    "HO-05": [
+      "Separates structural/functional/requirements coverage",
+      "Detects bounded-vs-unbounded and overconstraint/vacuity problem",
+      "Names proof assumptions/configuration and hardware-target scope",
+      "No fabricated normative obligations"
+    ],
+    "HO-06": [
+      "Challenges unsupported incumbent failure claim",
+      "Evidence milestones reflect actual field access and resources",
+      "Whole-system and build/buy/partner trade evaluated",
+      "Measurable product-thesis failure conditions; uncertainty explicit"
+    ],
+    "HO-07": [
+      "Custody, authority, actor response and final state explicit",
+      "Exception recovery resolves stale commands/authorization without unconfirmed authority",
+      "Observations suitable for intended-use validation",
+      "No automatic expansion into drug choice or dosing"
+    ],
+    "HO-08": [
+      "Completes requested typo correction",
+      "No domain workflow or invented engineering artifact"
+    ]
+  }
+}

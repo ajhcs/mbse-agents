@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "kind": "se-judgment-score",
+  "benchmark": "systems-engineering-judgment",
+  "version": "0.1.0",
+  "bank_sha256": "b18f9b5dcc2ba5badd0e954c8a8f5a3a2755a885726c509b589e27eec91c3558",
+  "key_sha256": "e5d7e0194212ceddd4babff9f5fbe003e50fa0968667b3b04424f1b25c3545a7",
+  "packet_manifest_sha256": "781036a0b2c696b571429c0ac267e76f443ba7fdcac876de14ea9965e7fafc0c",
+  "answers_sha256": "e4711927d0d1595a3e3278089eb831c9b7e6defb6c7f7ff386b392f84a41ebac",
+  "arm": "task",
+  "run": {
+    "run_id": "quiz_task_skills-20261113T233534Z",
+    "producer": "quiz_task_skills",
+    "model": "inherited Codex model; exact model ID not exposed",
+    "host": "Codex collaboration subagent",
+    "settings": {
+      "inheritance": "inherited",
+      "model_settings": "unknown"
+    },
+    "started_at": "2026-11-13T23:35:34.761594+00:00",
+    "completed_at": "2026-11-13T23:38:12.582033+00:00",
+    "source_access": "packet-only",
+    "tools": [
+      "functions.exec",
+      "exec_command",
+      "bash",
+      "pwd",
+      "rg",
+      "cat",
+      "python (attempt failed)",
+      "python3"
+    ],
+    "tokens": null,
+    "latency_seconds": null,
+    "cost": null,
+    "exceptions": [
+      "The recorded started_at is the first captured UTC timestamp; initial packet discovery and reads preceded that timestamp. Full-run latency was not measured.",
+      "The python executable was unavailable (exit 127); continued with installed python3 without installing packages.",
+      "A metadata-reading script initially looked for questions instead of items in questions.json (KeyError); corrected to the supplied items key.",
+      "Some combined tool output was truncated. All question text was available in request.md; template, manifest, skill entrypoints and selected reference content were read in subsequent bounded calls.",
+      "Skill files used and read-access details are recorded in usage.json. No external sources, other evaluation arms, answer keys, memories or files outside this task directory were consulted.",
+      "Exact model settings, token usage and cost were not exposed; confidence percentages and full-run latency are not invented."
+    ]
+  },
+  "items": 24,
+  "answered": 24,
+  "selection_correct": 24,
+  "by_dimension": {
+    "framing": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "lifecycle": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "causal_reasoning": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "evidence": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "requirements": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "interfaces": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "tradeoffs": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "uncertainty": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "people_organizations": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "communication": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "source_judgment": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "change_review": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    }
+  },
+  "selection_accuracy": 1.0,
+  "macro_dimension_accuracy": 1.0,
+  "uniform_choice_reference": 0.23472222222222225,
+  "uniform_choice_definition": "Uniform random selection among single options, or among all nonempty subsets for multiple-choice items; a mathematical reference, not measured guessing behavior.",
+  "outcomes": [
+    {
+      "id": "SEJ-003",
+      "dimension": "framing",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-004",
+      "dimension": "framing",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-008",
+      "dimension": "lifecycle",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-009",
+      "dimension": "lifecycle",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-013",
+      "dimension": "causal_reasoning",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-014",
+      "dimension": "causal_reasoning",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-018",
+      "dimension": "evidence",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-019",
+      "dimension": "evidence",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-023",
+      "dimension": "requirements",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-024",
+      "dimension": "requirements",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-028",
+      "dimension": "interfaces",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-029",
+      "dimension": "interfaces",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-033",
+      "dimension": "tradeoffs",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-034",
+      "dimension": "tradeoffs",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-038",
+      "dimension": "uncertainty",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-039",
+      "dimension": "uncertainty",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-043",
+      "dimension": "people_organizations",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-044",
+      "dimension": "people_organizations",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-048",
+      "dimension": "communication",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-049",
+      "dimension": "communication",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-053",
+      "dimension": "source_judgment",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-054",
+      "dimension": "source_judgment",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-058",
+      "dimension": "change_review",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-059",
+      "dimension": "change_review",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    }
+  ],
+  "reasoning_review": {
+    "status": "not_reviewed"
+  },
+  "interpretation": "Selection accuracy against a proposed curated key; not a measure of explanation quality or overall engineering competence.",
+  "release_acceptance": "not_assessed"
+}

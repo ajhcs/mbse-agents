@@ -1,0 +1,8 @@
+{
+  "source_symlink": true,
+  "target_symlink": true,
+  "backup_root_symlink": true,
+  "late_target_change": true,
+  "rollback_local_change": true,
+  "uninstall_late_failure": true
+}

@@ -1,0 +1,3129 @@
+{
+  "schema_version": 1,
+  "kind": "se-question-shortcut-diagnostic",
+  "benchmark": "systems-engineering-judgment",
+  "version": "0.2.0",
+  "tie_rule": "First option in lexicographic label order when lengths tie.",
+  "groups": {
+    "all": {
+      "single_items": 55,
+      "key_positions": {
+        "D": 13,
+        "B": 14,
+        "A": 15,
+        "C": 13
+      },
+      "uniform_choice_reference": 0.25,
+      "shortcuts": {
+        "longest_characters": {
+          "correct": 17,
+          "accuracy": 0.3090909090909091,
+          "ties": 0,
+          "key_among_ties": 0
+        },
+        "shortest_characters": {
+          "correct": 6,
+          "accuracy": 0.10909090909090909,
+          "ties": 3,
+          "key_among_ties": 1
+        },
+        "longest_words": {
+          "correct": 7,
+          "accuracy": 0.12727272727272726,
+          "ties": 23,
+          "key_among_ties": 8
+        },
+        "shortest_words": {
+          "correct": 10,
+          "accuracy": 0.18181818181818182,
+          "ties": 16,
+          "key_among_ties": 12
+        }
+      }
+    },
+    "practice": {
+      "single_items": 21,
+      "key_positions": {
+        "D": 5,
+        "B": 5,
+        "A": 6,
+        "C": 5
+      },
+      "uniform_choice_reference": 0.25,
+      "shortcuts": {
+        "longest_characters": {
+          "correct": 7,
+          "accuracy": 0.3333333333333333,
+          "ties": 0,
+          "key_among_ties": 0
+        },
+        "shortest_characters": {
+          "correct": 3,
+          "accuracy": 0.14285714285714285,
+          "ties": 1,
+          "key_among_ties": 1
+        },
+        "longest_words": {
+          "correct": 1,
+          "accuracy": 0.047619047619047616,
+          "ties": 9,
+          "key_among_ties": 2
+        },
+        "shortest_words": {
+          "correct": 5,
+          "accuracy": 0.23809523809523808,
+          "ties": 7,
+          "key_among_ties": 7
+        }
+      }
+    },
+    "development": {
+      "single_items": 22,
+      "key_positions": {
+        "D": 5,
+        "C": 5,
+        "A": 6,
+        "B": 6
+      },
+      "uniform_choice_reference": 0.25,
+      "shortcuts": {
+        "longest_characters": {
+          "correct": 5,
+          "accuracy": 0.22727272727272727,
+          "ties": 0,
+          "key_among_ties": 0
+        },
+        "shortest_characters": {
+          "correct": 3,
+          "accuracy": 0.13636363636363635,
+          "ties": 2,
+          "key_among_ties": 0
+        },
+        "longest_words": {
+          "correct": 4,
+          "accuracy": 0.18181818181818182,
+          "ties": 8,
+          "key_among_ties": 4
+        },
+        "shortest_words": {
+          "correct": 4,
+          "accuracy": 0.18181818181818182,
+          "ties": 7,
+          "key_among_ties": 3
+        }
+      }
+    },
+    "evaluation-public": {
+      "single_items": 12,
+      "key_positions": {
+        "B": 3,
+        "C": 3,
+        "A": 3,
+        "D": 3
+      },
+      "uniform_choice_reference": 0.25,
+      "shortcuts": {
+        "longest_characters": {
+          "correct": 5,
+          "accuracy": 0.4166666666666667,
+          "ties": 0,
+          "key_among_ties": 0
+        },
+        "shortest_characters": {
+          "correct": 0,
+          "accuracy": 0.0,
+          "ties": 0,
+          "key_among_ties": 0
+        },
+        "longest_words": {
+          "correct": 2,
+          "accuracy": 0.16666666666666666,
+          "ties": 6,
+          "key_among_ties": 2
+        },
+        "shortest_words": {
+          "correct": 1,
+          "accuracy": 0.08333333333333333,
+          "ties": 2,
+          "key_among_ties": 2
+        }
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "SEJ-001",
+      "split": "practice",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 129,
+          "words": 18
+        },
+        "B": {
+          "characters": 138,
+          "words": 19
+        },
+        "C": {
+          "characters": 133,
+          "words": 18
+        },
+        "D": {
+          "characters": 125,
+          "words": 16
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": true,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": true,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-002",
+      "split": "practice",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 126,
+          "words": 16
+        },
+        "B": {
+          "characters": 149,
+          "words": 17
+        },
+        "C": {
+          "characters": 129,
+          "words": 18
+        },
+        "D": {
+          "characters": 118,
+          "words": 18
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": true,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-003",
+      "split": "development",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 140,
+          "words": 18
+        },
+        "B": {
+          "characters": 148,
+          "words": 18
+        },
+        "C": {
+          "characters": 131,
+          "words": 19
+        },
+        "D": {
+          "characters": 128,
+          "words": 19
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": true,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-005",
+      "split": "evaluation-public",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 135,
+          "words": 17
+        },
+        "B": {
+          "characters": 144,
+          "words": 16
+        },
+        "C": {
+          "characters": 142,
+          "words": 18
+        },
+        "D": {
+          "characters": 122,
+          "words": 13
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": true,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-006",
+      "split": "practice",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 159,
+          "words": 17
+        },
+        "B": {
+          "characters": 144,
+          "words": 19
+        },
+        "C": {
+          "characters": 133,
+          "words": 17
+        },
+        "D": {
+          "characters": 133,
+          "words": 17
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C",
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-007",
+      "split": "practice",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 137,
+          "words": 15
+        },
+        "B": {
+          "characters": 143,
+          "words": 17
+        },
+        "C": {
+          "characters": 149,
+          "words": 19
+        },
+        "D": {
+          "characters": 118,
+          "words": 13
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-009",
+      "split": "development",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 143,
+          "words": 19
+        },
+        "B": {
+          "characters": 115,
+          "words": 14
+        },
+        "C": {
+          "characters": 131,
+          "words": 15
+        },
+        "D": {
+          "characters": 135,
+          "words": 17
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-010",
+      "split": "evaluation-public",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 128,
+          "words": 16
+        },
+        "B": {
+          "characters": 99,
+          "words": 13
+        },
+        "C": {
+          "characters": 139,
+          "words": 15
+        },
+        "D": {
+          "characters": 136,
+          "words": 16
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": true,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-011",
+      "split": "practice",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 126,
+          "words": 17
+        },
+        "B": {
+          "characters": 135,
+          "words": 16
+        },
+        "C": {
+          "characters": 125,
+          "words": 15
+        },
+        "D": {
+          "characters": 129,
+          "words": 17
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": true,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-012",
+      "split": "practice",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 151,
+          "words": 17
+        },
+        "B": {
+          "characters": 126,
+          "words": 18
+        },
+        "C": {
+          "characters": 131,
+          "words": 18
+        },
+        "D": {
+          "characters": 127,
+          "words": 17
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B",
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-013",
+      "split": "development",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 127,
+          "words": 21
+        },
+        "B": {
+          "characters": 117,
+          "words": 17
+        },
+        "C": {
+          "characters": 120,
+          "words": 19
+        },
+        "D": {
+          "characters": 116,
+          "words": 19
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-014",
+      "split": "development",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 121,
+          "words": 16
+        },
+        "B": {
+          "characters": 150,
+          "words": 18
+        },
+        "C": {
+          "characters": 134,
+          "words": 20
+        },
+        "D": {
+          "characters": 113,
+          "words": 16
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-015",
+      "split": "evaluation-public",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 132,
+          "words": 18
+        },
+        "B": {
+          "characters": 136,
+          "words": 18
+        },
+        "C": {
+          "characters": 125,
+          "words": 17
+        },
+        "D": {
+          "characters": 140,
+          "words": 18
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-016",
+      "split": "practice",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 118,
+          "words": 19
+        },
+        "B": {
+          "characters": 132,
+          "words": 18
+        },
+        "C": {
+          "characters": 140,
+          "words": 18
+        },
+        "D": {
+          "characters": 105,
+          "words": 19
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": true,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B",
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-018",
+      "split": "development",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 130,
+          "words": 17
+        },
+        "B": {
+          "characters": 129,
+          "words": 17
+        },
+        "C": {
+          "characters": 128,
+          "words": 19
+        },
+        "D": {
+          "characters": 128,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C",
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A",
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-019",
+      "split": "development",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 131,
+          "words": 18
+        },
+        "B": {
+          "characters": 127,
+          "words": 15
+        },
+        "C": {
+          "characters": 84,
+          "words": 14
+        },
+        "D": {
+          "characters": 160,
+          "words": 19
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-020",
+      "split": "evaluation-public",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 109,
+          "words": 15
+        },
+        "B": {
+          "characters": 133,
+          "words": 17
+        },
+        "C": {
+          "characters": 119,
+          "words": 18
+        },
+        "D": {
+          "characters": 119,
+          "words": 15
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-021",
+      "split": "practice",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 124,
+          "words": 16
+        },
+        "B": {
+          "characters": 180,
+          "words": 21
+        },
+        "C": {
+          "characters": 159,
+          "words": 23
+        },
+        "D": {
+          "characters": 132,
+          "words": 19
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": true,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-022",
+      "split": "practice",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 162,
+          "words": 23
+        },
+        "B": {
+          "characters": 176,
+          "words": 24
+        },
+        "C": {
+          "characters": 150,
+          "words": 22
+        },
+        "D": {
+          "characters": 179,
+          "words": 22
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": true,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": true,
+          "candidates": [
+            "C",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-023",
+      "split": "development",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 121,
+          "words": 19
+        },
+        "B": {
+          "characters": 171,
+          "words": 23
+        },
+        "C": {
+          "characters": 124,
+          "words": 19
+        },
+        "D": {
+          "characters": 159,
+          "words": 22
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "longest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-024",
+      "split": "development",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 150,
+          "words": 25
+        },
+        "B": {
+          "characters": 156,
+          "words": 24
+        },
+        "C": {
+          "characters": 127,
+          "words": 24
+        },
+        "D": {
+          "characters": 175,
+          "words": 23
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": true,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-025",
+      "split": "evaluation-public",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 158,
+          "words": 23
+        },
+        "B": {
+          "characters": 159,
+          "words": 21
+        },
+        "C": {
+          "characters": 189,
+          "words": 23
+        },
+        "D": {
+          "characters": 132,
+          "words": 18
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-026",
+      "split": "practice",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 170,
+          "words": 21
+        },
+        "B": {
+          "characters": 115,
+          "words": 18
+        },
+        "C": {
+          "characters": 152,
+          "words": 19
+        },
+        "D": {
+          "characters": 151,
+          "words": 23
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-028",
+      "split": "development",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 167,
+          "words": 24
+        },
+        "B": {
+          "characters": 175,
+          "words": 22
+        },
+        "C": {
+          "characters": 133,
+          "words": 18
+        },
+        "D": {
+          "characters": 168,
+          "words": 19
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-029",
+      "split": "development",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 169,
+          "words": 22
+        },
+        "B": {
+          "characters": 166,
+          "words": 21
+        },
+        "C": {
+          "characters": 111,
+          "words": 17
+        },
+        "D": {
+          "characters": 142,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-030",
+      "split": "evaluation-public",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 171,
+          "words": 23
+        },
+        "B": {
+          "characters": 131,
+          "words": 17
+        },
+        "C": {
+          "characters": 146,
+          "words": 18
+        },
+        "D": {
+          "characters": 168,
+          "words": 22
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-031",
+      "split": "practice",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 141,
+          "words": 20
+        },
+        "B": {
+          "characters": 158,
+          "words": 23
+        },
+        "C": {
+          "characters": 115,
+          "words": 18
+        },
+        "D": {
+          "characters": 152,
+          "words": 24
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-032",
+      "split": "practice",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 179,
+          "words": 22
+        },
+        "B": {
+          "characters": 119,
+          "words": 15
+        },
+        "C": {
+          "characters": 166,
+          "words": 23
+        },
+        "D": {
+          "characters": 164,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-033",
+      "split": "development",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 135,
+          "words": 21
+        },
+        "B": {
+          "characters": 130,
+          "words": 17
+        },
+        "C": {
+          "characters": 171,
+          "words": 23
+        },
+        "D": {
+          "characters": 169,
+          "words": 23
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-034",
+      "split": "development",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 142,
+          "words": 17
+        },
+        "B": {
+          "characters": 162,
+          "words": 19
+        },
+        "C": {
+          "characters": 170,
+          "words": 24
+        },
+        "D": {
+          "characters": 191,
+          "words": 25
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "longest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-035",
+      "split": "evaluation-public",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 178,
+          "words": 23
+        },
+        "B": {
+          "characters": 181,
+          "words": 23
+        },
+        "C": {
+          "characters": 149,
+          "words": 19
+        },
+        "D": {
+          "characters": 101,
+          "words": 16
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "B"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-036",
+      "split": "practice",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 119,
+          "words": 15
+        },
+        "B": {
+          "characters": 166,
+          "words": 25
+        },
+        "C": {
+          "characters": 165,
+          "words": 20
+        },
+        "D": {
+          "characters": 172,
+          "words": 25
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "longest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-037",
+      "split": "practice",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 150,
+          "words": 21
+        },
+        "B": {
+          "characters": 108,
+          "words": 15
+        },
+        "C": {
+          "characters": 162,
+          "words": 23
+        },
+        "D": {
+          "characters": 182,
+          "words": 24
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-038",
+      "split": "development",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 169,
+          "words": 22
+        },
+        "B": {
+          "characters": 148,
+          "words": 19
+        },
+        "C": {
+          "characters": 164,
+          "words": 23
+        },
+        "D": {
+          "characters": 122,
+          "words": 16
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-039",
+      "split": "development",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 126,
+          "words": 17
+        },
+        "B": {
+          "characters": 153,
+          "words": 19
+        },
+        "C": {
+          "characters": 175,
+          "words": 22
+        },
+        "D": {
+          "characters": 153,
+          "words": 24
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "longest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-040",
+      "split": "evaluation-public",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 123,
+          "words": 18
+        },
+        "B": {
+          "characters": 160,
+          "words": 23
+        },
+        "C": {
+          "characters": 167,
+          "words": 24
+        },
+        "D": {
+          "characters": 133,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-041",
+      "split": "practice",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 137,
+          "words": 19
+        },
+        "B": {
+          "characters": 126,
+          "words": 19
+        },
+        "C": {
+          "characters": 138,
+          "words": 19
+        },
+        "D": {
+          "characters": 124,
+          "words": 19
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-042",
+      "split": "practice",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 157,
+          "words": 20
+        },
+        "B": {
+          "characters": 153,
+          "words": 20
+        },
+        "C": {
+          "characters": 152,
+          "words": 18
+        },
+        "D": {
+          "characters": 149,
+          "words": 18
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "B"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": true,
+          "candidates": [
+            "C",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-043",
+      "split": "development",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 149,
+          "words": 20
+        },
+        "B": {
+          "characters": 135,
+          "words": 18
+        },
+        "C": {
+          "characters": 139,
+          "words": 20
+        },
+        "D": {
+          "characters": 121,
+          "words": 15
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-044",
+      "split": "development",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 141,
+          "words": 20
+        },
+        "B": {
+          "characters": 151,
+          "words": 20
+        },
+        "C": {
+          "characters": 144,
+          "words": 18
+        },
+        "D": {
+          "characters": 158,
+          "words": 19
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "B"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": true,
+          "candidates": [
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-045",
+      "split": "evaluation-public",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 142,
+          "words": 19
+        },
+        "B": {
+          "characters": 144,
+          "words": 18
+        },
+        "C": {
+          "characters": 130,
+          "words": 18
+        },
+        "D": {
+          "characters": 113,
+          "words": 16
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": true,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-046",
+      "split": "practice",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 150,
+          "words": 20
+        },
+        "B": {
+          "characters": 147,
+          "words": 19
+        },
+        "C": {
+          "characters": 151,
+          "words": 20
+        },
+        "D": {
+          "characters": 136,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": true,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-047",
+      "split": "practice",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 162,
+          "words": 19
+        },
+        "B": {
+          "characters": 167,
+          "words": 20
+        },
+        "C": {
+          "characters": 148,
+          "words": 22
+        },
+        "D": {
+          "characters": 154,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-048",
+      "split": "development",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 151,
+          "words": 21
+        },
+        "B": {
+          "characters": 156,
+          "words": 20
+        },
+        "C": {
+          "characters": 148,
+          "words": 19
+        },
+        "D": {
+          "characters": 130,
+          "words": 19
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-049",
+      "split": "development",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 127,
+          "words": 19
+        },
+        "B": {
+          "characters": 123,
+          "words": 20
+        },
+        "C": {
+          "characters": 156,
+          "words": 19
+        },
+        "D": {
+          "characters": 144,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": true,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "B",
+          "correct": true,
+          "candidates": [
+            "B",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-050",
+      "split": "evaluation-public",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 172,
+          "words": 21
+        },
+        "B": {
+          "characters": 157,
+          "words": 21
+        },
+        "C": {
+          "characters": 166,
+          "words": 21
+        },
+        "D": {
+          "characters": 168,
+          "words": 21
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-051",
+      "split": "practice",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 159,
+          "words": 21
+        },
+        "B": {
+          "characters": 169,
+          "words": 19
+        },
+        "C": {
+          "characters": 160,
+          "words": 22
+        },
+        "D": {
+          "characters": 152,
+          "words": 22
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-052",
+      "split": "practice",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 160,
+          "words": 20
+        },
+        "B": {
+          "characters": 152,
+          "words": 21
+        },
+        "C": {
+          "characters": 136,
+          "words": 20
+        },
+        "D": {
+          "characters": 138,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-053",
+      "split": "development",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 140,
+          "words": 20
+        },
+        "B": {
+          "characters": 139,
+          "words": 19
+        },
+        "C": {
+          "characters": 148,
+          "words": 20
+        },
+        "D": {
+          "characters": 133,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": true,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-054",
+      "split": "development",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 135,
+          "words": 21
+        },
+        "B": {
+          "characters": 149,
+          "words": 21
+        },
+        "C": {
+          "characters": 137,
+          "words": 20
+        },
+        "D": {
+          "characters": 148,
+          "words": 21
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-055",
+      "split": "evaluation-public",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 137,
+          "words": 19
+        },
+        "B": {
+          "characters": 139,
+          "words": 21
+        },
+        "C": {
+          "characters": 154,
+          "words": 22
+        },
+        "D": {
+          "characters": 119,
+          "words": 15
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-057",
+      "split": "practice",
+      "key": "B",
+      "lengths": {
+        "A": {
+          "characters": 141,
+          "words": 17
+        },
+        "B": {
+          "characters": 158,
+          "words": 22
+        },
+        "C": {
+          "characters": 125,
+          "words": 20
+        },
+        "D": {
+          "characters": 140,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "B",
+          "correct": true,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "C",
+          "correct": false,
+          "candidates": [
+            "C"
+          ]
+        },
+        "longest_words": {
+          "selected": "B",
+          "correct": true,
+          "candidates": [
+            "B"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-058",
+      "split": "development",
+      "key": "C",
+      "lengths": {
+        "A": {
+          "characters": 147,
+          "words": 21
+        },
+        "B": {
+          "characters": 124,
+          "words": 21
+        },
+        "C": {
+          "characters": 157,
+          "words": 20
+        },
+        "D": {
+          "characters": 143,
+          "words": 20
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "C",
+          "correct": true,
+          "candidates": [
+            "C"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A",
+            "B"
+          ]
+        },
+        "shortest_words": {
+          "selected": "C",
+          "correct": true,
+          "candidates": [
+            "C",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-059",
+      "split": "development",
+      "key": "A",
+      "lengths": {
+        "A": {
+          "characters": 162,
+          "words": 21
+        },
+        "B": {
+          "characters": 138,
+          "words": 20
+        },
+        "C": {
+          "characters": 144,
+          "words": 20
+        },
+        "D": {
+          "characters": 138,
+          "words": 19
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B",
+            "D"
+          ]
+        },
+        "longest_words": {
+          "selected": "A",
+          "correct": true,
+          "candidates": [
+            "A"
+          ]
+        },
+        "shortest_words": {
+          "selected": "D",
+          "correct": false,
+          "candidates": [
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SEJ-060",
+      "split": "evaluation-public",
+      "key": "D",
+      "lengths": {
+        "A": {
+          "characters": 154,
+          "words": 20
+        },
+        "B": {
+          "characters": 144,
+          "words": 23
+        },
+        "C": {
+          "characters": 152,
+          "words": 23
+        },
+        "D": {
+          "characters": 161,
+          "words": 21
+        }
+      },
+      "shortcuts": {
+        "longest_characters": {
+          "selected": "D",
+          "correct": true,
+          "candidates": [
+            "D"
+          ]
+        },
+        "shortest_characters": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B"
+          ]
+        },
+        "longest_words": {
+          "selected": "B",
+          "correct": false,
+          "candidates": [
+            "B",
+            "C"
+          ]
+        },
+        "shortest_words": {
+          "selected": "A",
+          "correct": false,
+          "candidates": [
+            "A"
+          ]
+        }
+      }
+    }
+  ],
+  "interpretation": "Deterministic shortcuts identify possible presentation cues. Low shortcut accuracy does not validate content or demonstrate reasoning difficulty.",
+  "bank_sha256": "c0e4718be1ff37cb5449a3996e8e573f11f7a4d42470851220c4fc1bf241016e",
+  "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393"
+}

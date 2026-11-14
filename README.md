@@ -3,80 +3,95 @@
   <img alt="MBSE Agents" src=".github/images/logo-light.svg" width="520">
 </picture>
 
-# Engineering skills for reviewable system decisions
+# Systems engineering agents
 
-MBSE Agents turns system questions into usable concepts, scenarios, requirements,
-architectures, risk analyses, and verification/evidence plans. Its skills preserve
-domain analysis and review questions while giving GPT-6.1 Sol and GPT-6 Astra
-room to work. No persona claims, prescribed document size, or future-model promises.
+MBSE Agents helps an AI assistant investigate systems, understand relationships,
+explain engineering decisions, develop connected artifacts, and challenge claims
+against their evidence. It supports work from early concepts through operations,
+architecture, assurance and change review.
 
-The collection contains **13 skills: seven engineering tasks, five domains, and
-one founder review**. The [generated catalog](docs/skills.md) is the inventory.
-This is an instruction/resource library with offline maintenance tools; it is
-not a running agent service or an MBSE modeling engine. Model quality has not
-been comparatively evaluated for this release.
+The agent combines a systems-engineering reasoning core with task and domain
+skills. Use it to think through an unfamiliar problem, examine an existing
+project, or produce the particular artifacts a decision requires. The
+[skill catalog](docs/skills.md) describes the available entry points.
 
-## Start with a task
+## Start with your system
 
-Requires Python 3.10+ for the optional installer/checks; no packages or credentials.
-Clone the repository, then either launch Codex here (the `.agents/skills` folders
-are discoverable) or install selected packages into your own project:
+Launch Codex in this checkout, or install selected skills into an existing
+project. The local installer needs Python 3.10+ and no third-party packages or
+credentials. Use `python3` on Linux/macOS or `py` on Windows.
 
 ```sh
 git clone https://github.com/ajhcs/mbse-agents.git
 cd mbse-agents
-python scripts/install.py --list
-python scripts/install.py --project /path/to/project --skill mbse-requirements --skill mbse-architecture --dry-run
-python scripts/install.py --project /path/to/project --skill mbse-requirements --skill mbse-architecture
+python3 scripts/install.py --list
+python3 scripts/install.py --project /path/to/project --skill mbse-systems-engineering --skill mbse-requirements --skill mbse-architecture --dry-run
+python3 scripts/install.py --project /path/to/project --skill mbse-systems-engineering --skill mbse-requirements --skill mbse-architecture
 ```
 
-On Windows, replace `/path/to/project` with a quoted Windows path; use `py` if
-that is your Python launcher. The installer never overwrites `AGENTS.md` or model
-settings. Existing unmanaged or edited skills are preserved. Updates to unchanged
-managed packages require `--update` and retain backups.
+> Use $mbse-systems-engineering to investigate this system and the decision we
+> need to make. Work from the supplied material. Explain the boundary, relevant
+> stakeholders, dependencies and competing interpretations. Develop the necessary
+> engineering artifacts, retain source IDs and existing decisions, and identify
+> the evidence that would change your recommendation.
 
-> Use $mbse-requirements and $mbse-architecture on our system brief. Develop
-> measurable requirements, function/component allocations, interface contracts,
-> and design rationale. Carry source IDs through the artifacts and identify the
-> missing decisions that could change the design. Save a coherent reviewable draft.
+Choose a focused task skill when the work is already clear. Domain skills cover
+aerospace, defense, automotive, medical devices and electronic systems. The
+[workflows guide](docs/workflows.md) explains how to combine them, and the
+[first-use tutorial](docs/getting-started.md) supplies a brief and a complete
+path to reviewing the result.
 
-Add a domain skill when domain context matters: `mbse-aerospace`, `mbse-defense`,
-`mbse-automotive`, `mbse-medical-device`, or `mbse-electronic-systems`.
-For operations, use the concept, ConOps, or scenario skills. For assurance work,
-use verification/evidence or baseline review. See [task workflows](docs/workflows.md).
+## Learn from engineering work
 
-## Follow the evidence
+The [gallery](examples/README.md) connects domain baselines, executable teaching
+models and historical project studies. The [historical cases](docs/historical-gallery.md)
+emphasize projects from before 2015 and connect original source material to
+retrospective questions about system boundaries, interfaces, decisions,
+operations, organizations and evidence.
 
 The [cold-storage alarm walkthrough](examples/worked/cold-storage-alarm/README.md)
-carries a stakeholder brief through requirements, architecture, procedures, and
-actual local reference-model results. It demonstrates trace and evidence handling,
-with hardware validation still open. The [domain gallery](examples/README.md)
-retains 20 illustrative system baselines; their planned evidence is not executed
-or accepted evidence. It is teaching material, not an approved design.
+connects stakeholder needs, requirements, architecture, procedures and saved
+reference-model observations. [Domain simulation evidence](docs/simulation-evidence.md)
+identifies the exact models and assumptions behind generated analyses. Each case
+distinguishes original project evidence, new analysis, executed model results and
+work that still needs physical or program evidence.
 
-[Primary-source corrections](docs/sources.md) include the general infusion-pump
-classification and the aerospace tool-qualification mapping. Exact licensed
-standard clauses still need the program's applicable edition. Cole's formalized
-chapter/lecture methods will be integrated after the actual source material is
-supplied, with provenance.
+## Assess engineering judgment
 
-## Install, maintain, and contribute
+The [benchmark and quiz system](docs/benchmark.md) assesses problem framing,
+systems thinking, causal reasoning, evidence interpretation, technical judgment
+and communication. Artifact tasks assess existing-project review and change
+handling as well as drafting. Automatic quiz results and independently reviewed
+reasoning are reported separately.
 
-- [Codex](platform/codex/install.md), [ChatGPT](platform/chatgpt/install.md), and
-  [portable hosts](platform/generic/install.md): installation and discovery.
-- [Model choice and upgrades](docs/models.md): profiles that can change without
-  rewriting the engineering contracts.
-- [Evaluation](docs/evaluation.md): offline checks and separate behavioral review.
-- [Crosswalks](docs/crosswalk-reference.md): proposed relationships and export checks.
-- [Contributing](CONTRIBUTING.md): welcoming reports, features, and new skill/agent requests.
+Use [the evaluation protocol](docs/evaluation.md) to compare a model alone with
+the same model using the agent skills. Instruction changes should be supported
+by observed performance; a passing package check is not a model-quality result.
+
+## Use the host that fits your work
+
+[Codex](platform/codex/install.md), [Claude Code](platform/claude-code/install.md),
+[Databricks](platform/databricks/install.md), [ChatGPT](platform/chatgpt/install.md),
+and [portable hosts](platform/generic/install.md)
+have distinct discovery and installation mechanisms. Guides identify documented
+adaptations and the checks actually performed. [Plugin distribution](docs/SUBMISSIONS.md)
+describes the generated portable package; the source checkout keeps its canonical
+skills under `.agents/skills`.
+
+The installer preserves existing project instructions, host settings and local
+skill edits. CSE provides optional executable engineering analysis and model
+methods; Ingenium supports editable presentation. Available connectors determine
+which live tools the host can use. See [model and tool crosswalks](docs/crosswalk-reference.md).
+
+## Develop and verify
 
 ```sh
-python scripts/catalog.py --write
-python scripts/validate.py
-python -m unittest discover -s tests
+python3 scripts/catalog.py --write
+python3 scripts/validate.py
+python3 -m unittest discover -s tests
 ```
 
-Skills do not supply tool authentication, authority approvals, or access to a live
-model. Use available authorized tools or deliver a clearly labeled proposal.
-Standards remain the property of their publishers; this project synthesizes
-engineering guidance and does not reproduce their text. [MIT license](LICENSE).
+[Model guidance](docs/models.md), [source checks](docs/sources.md), and
+[contribution instructions](CONTRIBUTING.md) describe the maintained contracts.
+The source is [MIT-licensed](LICENSE). Referenced standards and historical
+materials remain under their publishers' terms.

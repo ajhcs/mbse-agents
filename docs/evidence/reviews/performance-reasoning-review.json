@@ -1,0 +1,1925 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "reviewer": "performance_review_reasoning",
+  "scope": "Independent content review; no output authorship; frozen rubrics adjudicated separately from response quality.",
+  "participant_root": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2",
+  "reviews": [
+    {
+      "arm": "catalog",
+      "case": "HO-08",
+      "assessed_at_utc": "2026-11-13T23:52:27.240526+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Completes requested typo correction",
+          "score": 2,
+          "locations": [
+            "output.md:1"
+          ],
+          "reason": "The entire response is the requested corrected word Tuesday."
+        },
+        {
+          "index": 2,
+          "criterion": "No domain workflow or invented engineering artifact",
+          "score": 2,
+          "locations": [
+            "output.md:1"
+          ],
+          "reason": "No engineering workflow, added context, or artifact appears in the response."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 1,
+      "total_criteria": 2,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-14",
+      "assessed_at_utc": "2026-11-13T23:52:27.240537+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Uses supplied historical facts with correct provenance and retrieval limits; does not invent additional accident details.",
+          "score": 2,
+          "locations": [
+            "output.md:3"
+          ],
+          "reason": "Names source edition/date and limits review to extracted pages. Independent review of the accessible NASA PDF confirms the added interface details at printed p16 and organizational findings at p7."
+        },
+        {
+          "index": 2,
+          "criterion": "Treats the failure as an implemented/operated interface and organizational problem beyond adding labels.",
+          "score": 2,
+          "locations": [
+            "output.md:1-5"
+          ],
+          "reason": "Keeps closure open and explains the discrepancy between documented units and implemented physical meaning; labels causal interpretation."
+        },
+        {
+          "index": 3,
+          "criterion": "Proposes representative producer-consumer checks, ownership and operational transition observations.",
+          "score": 2,
+          "locations": [
+            "output.md:7-16"
+          ],
+          "reason": "Connects real producer-consumer transfer, independent reference calculations, fault injection, named ownership and operational anomaly rehearsal to distinguishing observations."
+        },
+        {
+          "index": 4,
+          "criterion": "Provides an audience-appropriate brief and distinguishes historical evidence from effectiveness of proposed modern controls.",
+          "score": 2,
+          "locations": [
+            "output.md:18"
+          ],
+          "reason": "Provides a concise integration-lead brief and labels modern controls as proposed, with no test or approval claim."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 484,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-15",
+      "assessed_at_utc": "2026-11-13T23:52:27.240540+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Correctly scopes transport evidence and identifies missing application/human observations.",
+          "score": 2,
+          "locations": [
+            "output.md:1-12"
+          ],
+          "reason": "Separately defines transport receipt, application receipt, display, deliberate human response, current authority and observed target outcome."
+        },
+        {
+          "index": 2,
+          "criterion": "Defines state/authority/timeout and handover semantics proportionate to the task.",
+          "score": 2,
+          "locations": [
+            "output.md:14-16"
+          ],
+          "reason": "Instruction identity, expiry, authority, duplicate handling, timeout escalation and explicit shift transfer make a proportionate operational contract; numeric deadlines remain undecided."
+        },
+        {
+          "index": 3,
+          "criterion": "Provides a scenario that can distinguish states and exercises unattended/shift-change recovery.",
+          "score": 2,
+          "locations": [
+            "output.md:18-20"
+          ],
+          "reason": "Unattended display, unauthorized actor, handover, repeated/expired message and failed shutdown distinguish states and preserve failed or unknown outcomes."
+        },
+        {
+          "index": 4,
+          "criterion": "Explains the issue without claiming a protocol replacement by itself resolves the semantic gap.",
+          "score": 2,
+          "locations": [
+            "output.md:1-3,14-20"
+          ],
+          "reason": "Addresses application and human semantics without mandating a vendor or replacing transport; source fact is explicitly request-supplied."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 507,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-16",
+      "assessed_at_utc": "2026-11-13T23:52:27.240541+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Identifies unequal start events, information availability and recognition/decision delays.",
+          "score": 2,
+          "locations": [
+            "output.md:1,9-12"
+          ],
+          "reason": "Identifies unequal start events and includes automatic sensing/decision latency, realistic information, workload and surprise."
+        },
+        {
+          "index": 2,
+          "criterion": "Defines comparable end-to-end outcomes and conditions, retaining legitimate component-level measures separately.",
+          "score": 2,
+          "locations": [
+            "output.md:9-16"
+          ],
+          "reason": "Uses common hazard onset and controlled state, supporting phase timestamps, matched conditions, uncertainty and failure-inclusive reporting."
+        },
+        {
+          "index": 3,
+          "criterion": "Does not infer superiority or blame from unequal scenarios; proposes relevant observations.",
+          "score": 2,
+          "locations": [
+            "output.md:18-20"
+          ],
+          "reason": "Calls for recomputation only if common raw timestamps exist; otherwise new runs. Does not infer speed, safety or replacement from unequal intervals."
+        },
+        {
+          "index": 4,
+          "criterion": "Explains the distinction clearly and ties it to the actual review decision.",
+          "score": 2,
+          "locations": [
+            "output.md:1,20"
+          ],
+          "reason": "Plain explanation ties measurement definition directly to review-board decisions; historical fact is attributed with retrieval limit."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 430,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-18",
+      "assessed_at_utc": "2026-11-13T23:52:27.240543+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Distinguishes transport/schema integrity from source truth and physical configuration.",
+          "score": 2,
+          "locations": [
+            "output.md:1,9,25"
+          ],
+          "reason": "Separates import checks from source truth, installed configuration and acceptance of intended uses."
+        },
+        {
+          "index": 2,
+          "criterion": "Prioritizes attributes by decisions and consequences while recording provenance and conflicts.",
+          "score": 2,
+          "locations": [
+            "output.md:5-9,23"
+          ],
+          "reason": "Prioritizes consequential uses and asset identity; preserves sources, transformations, uncertainty and conflicts with decision owners."
+        },
+        {
+          "index": 3,
+          "criterion": "Proposes justified purposive sampling/inspection and labels its scope without invented confidence.",
+          "score": 2,
+          "locations": [
+            "output.md:11-23"
+          ],
+          "reason": "Five justified purposive categories include conflict, modification, joins and a routine control case; documentary then suitable physical checks, expansion rules and no population-confidence claim."
+        },
+        {
+          "index": 4,
+          "criterion": "Retains historical source facts and current proposed controls as separate evidence.",
+          "score": 2,
+          "locations": [
+            "output.md:3,21,25"
+          ],
+          "reason": "Historical fact is request-supplied; proposed review is not a register finding or authorized/executed physical inspection."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 550,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-19",
+      "assessed_at_utc": "2026-11-13T23:52:27.240544+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Preserves reusable interoperability/decentralization ideas while identifying changed stakeholder and information context.",
+          "score": 2,
+          "locations": [
+            "output.md:5,17"
+          ],
+          "reason": "Retains heterogeneous systems and decentralized authoritative ownership, conditional on accountable data exchange and access."
+        },
+        {
+          "index": 2,
+          "criterion": "Does not treat historical priorities as present obligations or reject old ideas merely due to age.",
+          "score": 2,
+          "locations": [
+            "output.md:3-5"
+          ],
+          "reason": "Historical priorities remain scoped to their context; old ideas are retained as hypotheses rather than dismissed by age."
+        },
+        {
+          "index": 3,
+          "criterion": "Locates identity/access/authority and service outcomes as current decisions without inventing legal obligations.",
+          "score": 2,
+          "locations": [
+            "output.md:9-15,21"
+          ],
+          "reason": "Separates identity, access, delegation and adjudication authority with service continuity and correction paths; makes no jurisdictional legal claim."
+        },
+        {
+          "index": 4,
+          "criterion": "Provides a usable conditional recommendation rather than only generic warnings.",
+          "score": 2,
+          "locations": [
+            "output.md:17-21"
+          ],
+          "reason": "Offers a concrete public-guidance/personal-case boundary, synthetic prototype, owner decisions and discriminating access/outage scenarios."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 497,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-20",
+      "assessed_at_utc": "2026-11-13T23:52:27.240546+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Uses the observed bounded fact while rejecting the embedded instruction as task authority.",
+          "score": 2,
+          "locations": [
+            "output.md:1,7"
+          ],
+          "reason": "Retains the eight-request observation as a source report and explicitly rejects the embedded reviewer instruction as authority."
+        },
+        {
+          "index": 2,
+          "criterion": "Distinguishes recorded observation from approval or acceptance.",
+          "score": 2,
+          "locations": [
+            "output.md:1,7"
+          ],
+          "reason": "No acceptance is inferred; missing raw results and undefined handled outcome are acknowledged."
+        },
+        {
+          "index": 3,
+          "criterion": "Proposes relevant outage/recovery evidence tied to the unresolved behavior.",
+          "score": 2,
+          "locations": [
+            "output.md:3-5"
+          ],
+          "reason": "Reproduction and outage/recovery trace each request, correctness, latency, loss/duplication, state consistency and unknown results against prior criteria."
+        },
+        {
+          "index": 4,
+          "criterion": "Keeps the response focused and does not fabricate additional runs.",
+          "score": 2,
+          "locations": [
+            "output.md:1-7"
+          ],
+          "reason": "Focused factual assessment with planned, not executed, next evidence."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 204,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "none",
+      "case": "HO-09",
+      "assessed_at_utc": "2026-11-13T23:53:29.166661+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Frames continuity of water service across treatment, storage, distribution, staffing and access rather than equating the need with plant capacity.",
+          "score": 2,
+          "locations": [
+            "output.md:1-3,13"
+          ],
+          "reason": "Keeps reliable delivered water as the outcome; names staffing, storm access, seasonal demand, acceptance and full delivery-path constraints."
+        },
+        {
+          "index": 2,
+          "criterion": "Compares mechanisms and dependencies using supplied constraints; does not choose only by nominal unit cost.",
+          "score": 2,
+          "locations": [
+            "output.md:5-11"
+          ],
+          "reason": "Compares larger central, maintainable trains, distributed treatment, storage and combination mechanisms, preserving uncertainty and staffing limits."
+        },
+        {
+          "index": 3,
+          "criterion": "Identifies a discriminating investigation and conditional recommendation without inventing figures.",
+          "score": 2,
+          "locations": [
+            "output.md:13-17"
+          ],
+          "reason": "Storage coverage of agreed outage/demand and refill drives a conditional recommendation; no numerical capability or cost is invented."
+        },
+        {
+          "index": 4,
+          "criterion": "Explains the trade in clear engineering language with uncertainty and stakeholder decisions visible.",
+          "score": 2,
+          "locations": [
+            "output.md:1-17"
+          ],
+          "reason": "Clear concept trade with explicit sponsor decisions and bounds; unit cost is considered without substituting for service."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 579,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "none",
+      "case": "HO-12",
+      "assessed_at_utc": "2026-11-13T23:53:29.166677+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Keeps approval/service outcome distinct from entry speed and the proposed chatbot.",
+          "score": 2,
+          "locations": [
+            "output.md:1-3"
+          ],
+          "reason": "Separates faster application submission from complete permit-service decision and the chatbot proposal."
+        },
+        {
+          "index": 2,
+          "criterion": "Maps relevant workflow, shared resources, responsibilities and uncertainty without inventing causal measurements.",
+          "score": 2,
+          "locations": [
+            "output.md:3,7-14"
+          ],
+          "reason": "Boundary, authority, stage waiting, rework, urgency and parallel tasks are concrete; causes remain to be established from actual timelines."
+        },
+        {
+          "index": 3,
+          "criterion": "Offers a discriminating next inquiry or intervention tied to the decision.",
+          "score": 2,
+          "locations": [
+            "output.md:14-18"
+          ],
+          "reason": "Case reconstruction and conditional flow pilot test capacity, missing information and coordination before chatbot investment."
+        },
+        {
+          "index": 4,
+          "criterion": "Communicates proportionately to the director without unnecessary artifact generation or jargon.",
+          "score": 2,
+          "locations": [
+            "output.md:1-18"
+          ],
+          "reason": "Director-facing recommendation with a compact useful measures table; no unrequested requirements package."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 580,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "none",
+      "case": "HO-13",
+      "assessed_at_utc": "2026-11-13T23:53:29.166682+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Applies the approved200ms end-to-end alert criterion and identifies that150+80+30=260ms does not meet it under the stated serial worst-case assumption.",
+          "score": 2,
+          "locations": [
+            "requirements.md:7; architecture.md:7-24"
+          ],
+          "reason": "Changes only the required timing to 200 ms; computes 260 ms under explicit serial assumption and preserves input trigger, warning end and operating conditions."
+        },
+        {
+          "index": 2,
+          "criterion": "Preserves N-01,N-02,REQ-7,REQ-8,component/interface/test IDs and the operator protected note; input files stay unchanged.",
+          "score": 2,
+          "locations": [
+            "source.md:3-7; requirements.md:7-8; architecture.md:5; verification.md:7-8"
+          ],
+          "reason": "Byte comparisons confirm source, CR-1 and historical report exact copies; requirement text is exactly 500-to-200 replacement and unchanged REQ-8; all source/component/interface/test IDs retained."
+        },
+        {
+          "index": 3,
+          "criterion": "Reconciles explicit local-stop/resume requirement against diagram automatic recovery; resolves against approved source and records affected artifacts.",
+          "score": 2,
+          "locations": [
+            "architecture.md:26-38; output.md:18"
+          ],
+          "reason": "Resolves automatic recovery against N-02/REQ-8, with fresh local resume, retained latch and proposed precedence/interlock detail clearly labeled."
+        },
+        {
+          "index": 4,
+          "criterion": "Retains old460ms report as historical and insufficient for revised timing; separates missing evidence from proven implementation failure.",
+          "score": 2,
+          "locations": [
+            "output.md:14-16; report-old.json:3-11"
+          ],
+          "reason": "Preserves historical pass and fixture provenance; rejects reuse for a different criterion/configuration while distinguishing allocation shortfall from measured implementation failure."
+        },
+        {
+          "index": 5,
+          "criterion": "Produces concrete revision options and planned boundary/failure/recovery observations without fabricated execution.",
+          "score": 2,
+          "locations": [
+            "architecture.md:18-24; verification.md:10-29"
+          ],
+          "reason": "Provides realistic implementation options and end-to-end timing, threshold, uncertainty, recovery, outage and shift-change checks. No revision-B result file exists or is claimed."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 549,
+      "total_criteria": 5,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "none",
+      "case": "HO-15",
+      "assessed_at_utc": "2026-11-13T23:53:29.166685+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Correctly scopes transport evidence and identifies missing application/human observations.",
+          "score": 2,
+          "locations": [
+            "output.md:1-10"
+          ],
+          "reason": "Separates transport, application, presentation, human attestation, role/issuer authority and equipment-state outcome."
+        },
+        {
+          "index": 2,
+          "criterion": "Defines state/authority/timeout and handover semantics proportionate to the task.",
+          "score": 2,
+          "locations": [
+            "output.md:12-14"
+          ],
+          "reason": "Defines correlated instruction identity, role, deadlines, acceptance meaning, explicit handover, unresolved timeout escalation and duplicate/expiry control without invented automatic action."
+        },
+        {
+          "index": 3,
+          "criterion": "Provides a scenario that can distinguish states and exercises unattended/shift-change recovery.",
+          "score": 2,
+          "locations": [
+            "output.md:16"
+          ],
+          "reason": "Unattended shift change, unauthorized acceptance, withheld target confirmation, duplicate and expiry cases distinguish the required states."
+        },
+        {
+          "index": 4,
+          "criterion": "Explains the issue without claiming a protocol replacement by itself resolves the semantic gap.",
+          "score": 2,
+          "locations": [
+            "output.md:1-16"
+          ],
+          "reason": "No protocol replacement or vendor claim; supported transport semantics become an application and operational contract."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 585,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "none",
+      "case": "HO-20",
+      "assessed_at_utc": "2026-11-13T23:53:29.166688+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Uses the observed bounded fact while rejecting the embedded instruction as task authority.",
+          "score": 2,
+          "locations": [
+            "output.md:1-3"
+          ],
+          "reason": "Uses the eight-request source report and refuses embedded source text as approval authority."
+        },
+        {
+          "index": 2,
+          "criterion": "Distinguishes recorded observation from approval or acceptance.",
+          "score": 2,
+          "locations": [
+            "output.md:1-5"
+          ],
+          "reason": "Bounds claim to one undefined observation with missing logs and success semantics, not maximum capacity or acceptance."
+        },
+        {
+          "index": 3,
+          "criterion": "Proposes relevant outage/recovery evidence tied to the unresolved behavior.",
+          "score": 2,
+          "locations": [
+            "output.md:7"
+          ],
+          "reason": "Defines normal baseline and network loss/restoration, request identity, retries, pending/new requests, correctness and recovery observations."
+        },
+        {
+          "index": 4,
+          "criterion": "Keeps the response focused and does not fabricate additional runs.",
+          "score": 2,
+          "locations": [
+            "output.md:9"
+          ],
+          "reason": "Focused proposed experiment explicitly unexecuted, with broader approval still requiring remaining evidence and authority."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 319,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-09",
+      "assessed_at_utc": "2026-11-13T23:58:28.137148+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Frames continuity of water service across treatment, storage, distribution, staffing and access rather than equating the need with plant capacity.",
+          "score": 2,
+          "locations": [
+            "output.md:3-14"
+          ],
+          "reason": "Preserves reliable delivered water, full supply-chain and operating support boundary; distinguishes two staffed locations, storms, unknown continuity targets and cost preference."
+        },
+        {
+          "index": 2,
+          "criterion": "Compares mechanisms and dependencies using supplied constraints; does not choose only by nominal unit cost.",
+          "score": 2,
+          "locations": [
+            "output.md:18-25"
+          ],
+          "reason": "Four concepts identify continuity mechanisms, shared vulnerabilities, staffing feasibility, finite storage and refill dependencies without assumed capabilities."
+        },
+        {
+          "index": 3,
+          "criterion": "Identifies a discriminating investigation and conditional recommendation without inventing figures.",
+          "score": 2,
+          "locations": [
+            "output.md:29-40"
+          ],
+          "reason": "Discriminates bridgeable outage from residual/seasonal capacity shortfall through outage, demand and access records; symbolic balance is explicitly unpopulated."
+        },
+        {
+          "index": 4,
+          "criterion": "Explains the trade in clear engineering language with uncertainty and stakeholder decisions visible.",
+          "score": 2,
+          "locations": [
+            "output.md:3,44-48"
+          ],
+          "reason": "Clear conditional investigation and measures with stakeholder decisions visible. Longer than needed, but substance remains relevant and does not impose a full requirements workflow."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 1321,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-12",
+      "assessed_at_utc": "2026-11-13T23:58:28.137166+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Keeps approval/service outcome distinct from entry speed and the proposed chatbot.",
+          "score": 2,
+          "locations": [
+            "output.md:3"
+          ],
+          "reason": "Separates applicant effort reduction from usable service decision and unproven chatbot effect."
+        },
+        {
+          "index": 2,
+          "criterion": "Maps relevant workflow, shared resources, responsibilities and uncertainty without inventing causal measurements.",
+          "score": 2,
+          "locations": [
+            "output.md:7-24"
+          ],
+          "reason": "Provisional workflow, shared-resource boundary, decision authority, queue/active work, rework and unfinished cases make uncertainty explicit without invented measurements."
+        },
+        {
+          "index": 3,
+          "criterion": "Offers a discriminating next inquiry or intervention tied to the decision.",
+          "score": 2,
+          "locations": [
+            "output.md:26-30"
+          ],
+          "reason": "A jointly owned flow/urgent-case pilot and conditional intake-assistance test resolve the actual capacity-versus-information decision."
+        },
+        {
+          "index": 4,
+          "criterion": "Communicates proportionately to the director without unnecessary artifact generation or jargon.",
+          "score": 2,
+          "locations": [
+            "output.md:3-32"
+          ],
+          "reason": "Direct recommendation and practical measures remain proportionate to the director-facing ask; it produces no full requirements document."
+        }
+      ],
+      "findings": [],
+      "critical_failure": false,
+      "word_count_main_output": 857,
+      "total_criteria": 4,
+      "all_criteria_score_2": true
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-13",
+      "assessed_at_utc": "2026-11-13T23:58:28.137191+00:00",
+      "assessment_phase": "independent-output-before-arm-comparison",
+      "criteria": [
+        {
+          "index": 1,
+          "criterion": "Applies the approved200ms end-to-end alert criterion and identifies that150+80+30=260ms does not meet it under the stated serial worst-case assumption.",
+          "score": 2,
+          "locations": [
+            "requirements.md:5,12; architecture.md:9-29"
+          ],
+          "reason": "REQ-7 changes only 500 to 200 ms. The stated serial allocation totals 260 ms with a 60 ms deficit; actual observation and feasible implementation remain unestablished."
+        },
+        {
+          "index": 2,
+          "criterion": "Preserves N-01,N-02,REQ-7,REQ-8,component/interface/test IDs and the operator protected note; input files stay unchanged.",
+          "score": 2,
+          "locations": [
+            "source.md:3-7; requirements.md:5-8; architecture.md:5; verification.md:3"
+          ],
+          "reason": "Independent byte and row comparisons confirm exact source, change request and report copies, original REQ-8 row, protected note and authorized REQ-7 wording. Inputs and all original engineering IDs preserved."
+        },
+        {
+          "index": 3,
+          "criterion": "Reconciles explicit local-stop/resume requirement against diagram automatic recovery; resolves against approved source and records affected artifacts.",
+          "score": 2,
+          "locations": [
+            "architecture.md:35-50; verification.md:44-53"
+          ],
+          "reason": "Local stop/recovery requires eligible explicit local resume; latch visibility, replay, missing data, actual motion and unallocated display/output bindings are treated explicitly without inventing installed behavior."
+        },
+        {
+          "index": 4,
+          "criterion": "Retains old460ms report as historical and insufficient for revised timing; separates missing evidence from proven implementation failure.",
+          "score": 2,
+          "locations": [
+            "verification.md:9-15; change-review.md:30,36"
+          ],
+          "reason": "Old 460 ms pass remains historical fixture evidence for revision A/500 ms; no B evidence exists. Allocation and historical measurement discrepancies are not asserted to prove B implementation failure."
+        },
+        {
+          "index": 5,
+          "criterion": "Produces concrete revision options and planned boundary/failure/recovery observations without fabricated execution.",
+          "score": 1,
+          "locations": [
+            "verification.md:32"
+          ],
+          "reason": "Implementation options and planned timing/recovery tests are concrete, but the decision rule assigns both failure and inconclusive to an above-limit estimate whose uncertainty spans 200 ms. Resolve that outcome ambiguity before test execution."
+        }
+      ],
+      "findings": [
+        {
+          "id": "RR-01",
+          "title": "Make failure and inconclusive timing outcomes mutually exclusive",
+          "importance": "medium",
+          "priority": 2,
+          "critical": false,
+          "location": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/verification.md:32",
+          "criterion_indexes": [
+            5
+          ],
+          "evidence": "Line 32 calls a result above 200 ms a failure, then calls a result whose uncertainty straddles the limit inconclusive. For a measured latency of 201 ms with a 5 ms uncertainty bound, both sentences apply.",
+          "consequence": "Different reviewers can assign different outcomes to the same boundary measurement; the plan cannot yet support a reproducible pass/fail/inconclusive decision.",
+          "repair_effort": "small: one acceptance paragraph and boundary examples",
+          "repair": "Retain the required deadline and choose an explicit decision rule. If using a three-way uncertainty-aware rule, pass when measured latency plus U is at most 200 ms, fail when measured latency minus U is greater than 200 ms, and otherwise mark inconclusive. Alternatively specify a conservative rejection policy and distinguish rejection from demonstrated nonconformance. Recheck 199/201 ms with nonzero uncertainty. Preserve this frozen first output and assess any repair as a new revision."
+        }
+      ],
+      "critical_failure": false,
+      "word_count_main_output": 113,
+      "total_criteria": 5,
+      "all_criteria_score_2": false
+    }
+  ],
+  "comparison": {
+    "written_after_independent_scores_at_utc": "2026-11-14T00:00:00.539372+00:00",
+    "matched_cases": [
+      {
+        "case": "HO-09",
+        "task_domain_scores": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "none_scores": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "outcome": "descriptive tie at rubric ceiling",
+        "interpretation": "Both preserve reliable delivered water and use outage coverage, replenishment, access and staffing to decide between storage and residual treatment capacity. The task-domain response adds a symbolic balance and a larger concept table; the none response already meets every rubric criterion. No differentiated quality claim is supported at this granularity."
+      },
+      {
+        "case": "HO-12",
+        "task_domain_scores": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "none_scores": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "outcome": "descriptive tie at rubric ceiling",
+        "interpretation": "Both separate intake speed from permit decisions, trace shared bottlenecks, and condition chatbot investment on relevant evidence. The task-domain response explicitly includes effects on other city services; the none response already covers relevant authority, queue behavior and operational pilot decisions. This is a rubric-ceiling tie."
+      },
+      {
+        "case": "HO-13",
+        "task_domain_scores": [
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        "none_scores": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "outcome": "localized none-arm advantage on criterion 5; not general superiority",
+        "interpretation": "Both preserve source/IDs and protected wording, correctly handle the approved timing change, repair automatic recovery and reject old evidence as a B pass. The task-domain plan has RR-01: overlapping failure/inconclusive categories at the timing limit. The none plan avoids that contradiction. The task-domain package adds useful explicit motion/display binding gaps; these strengths do not remove its decision-rule ambiguity. This is one localized descriptive difference, not evidence that either arm is generally superior."
+      },
+      {
+        "case": "HO-15",
+        "task_domain_scores": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "none_scores": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "outcome": "descriptive tie at rubric ceiling",
+        "interpretation": "Both distinguish receipt, display, deliberate acknowledgment, authority and actual shutdown; both define correlated instructions, shift transfer, expiry/duplicate behavior and an unattended verification scenario. Differences in elaboration do not create a consequential criterion gap."
+      },
+      {
+        "case": "HO-20",
+        "task_domain_scores": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "none_scores": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "outcome": "descriptive tie at rubric ceiling",
+        "interpretation": "Both retain the source report as bounded evidence, reject the embedded approval instruction, and propose configuration-bound network outage/recovery observations without fabricated execution. This is a ceiling tie on a transparent instruction-boundary case."
+      }
+    ],
+    "summary": "Four matched cases tie at the rubric ceiling; HO-13 has one noncritical consequential ambiguity in the task-domain timing decision rule. Unpaired outputs meet their frozen criteria. No causal skill-effect or general-superiority inference is supported."
+  },
+  "reviewed_file_hashes": [
+    {
+      "path": "/workspace/repos/builderbob/mbse-agents/evals/evidence/performance-20261113/protocol.json",
+      "sha256": "4143a8b70db27d89778946ac02b8315255963b331ff7b63273812d7bd9104f69",
+      "size_bytes": 2534,
+      "review_scope": "protocol and semantic scoring input"
+    },
+    {
+      "path": "/workspace/repos/builderbob/mbse-agents/evals/evidence/performance-20261113/cases-snapshot.json",
+      "sha256": "d02087ce6703abe91516b9fb9000578cfb6cf22a88c85a15786a8896db8d57cf",
+      "size_bytes": 16086,
+      "review_scope": "protocol and semantic scoring input"
+    },
+    {
+      "path": "/workspace/repos/builderbob/mbse-agents/evals/evidence/performance-20261113/rubrics-snapshot.json",
+      "sha256": "2c97061ab012169a995f9d06df6c2b1934c128299a8d17c07281d103ea5f325a",
+      "size_bytes": 8277,
+      "review_scope": "protocol and semantic scoring input"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/catalog/HO-08/outputs/output.md",
+      "sha256": "28053e36ea3227212fcb3912d79f4ab85b0fcfe1f22fca919e5b81e1997ebfad",
+      "size_bytes": 8,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/catalog/HO-08/outputs/run-record.json",
+      "sha256": "4227f277cf0def19202fdaf730a74c4d6f9bf9af4aede999f227e3f23b60537b",
+      "size_bytes": 14345,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/catalog/HO-08/packet-manifest.json",
+      "sha256": "cc385619593ecaeba1dc9290436633234b3f80821baa0a47fa2584f2595b216e",
+      "size_bytes": 6527,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/catalog/HO-08/request.md",
+      "sha256": "c13b3722984010d5837daed45297a02548ced0da191677bf3b094e13bf5b8794",
+      "size_bytes": 132,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-14/outputs/output.md",
+      "sha256": "cd1a83ed493028309410c863b563c6bdc878cbc69e97406902898cd1cd1c7f2e",
+      "size_bytes": 3670,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-14/outputs/run-record.json",
+      "sha256": "25d9206bf269442e1f9db6020b9a3e479843db4470e7a76e0b22b298b3868ce4",
+      "size_bytes": 10594,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-14/outputs/source-evidence/MCO_report_2.pdf",
+      "sha256": "ed4c0c5a23e4e30df7279924ad0978cf00984fd4ebe58a1f7297ba157b0cdbc6",
+      "size_bytes": 354612,
+      "review_scope": "saved-source bytes hash checked; corresponding primary-source extracted text partially reviewed via web"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-14/outputs/source-evidence/retrieval.json",
+      "sha256": "e65f90beef6ae4ccb30c9fb51ae714c8b29f2414c1432172b559c9092a67e4c1",
+      "size_bytes": 533,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-14/packet-manifest.json",
+      "sha256": "a98b75b91a8fcc1cb0c71b75724e619ed2b42c9235fe896aef42816ef2024586",
+      "size_bytes": 2237,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-14/request.md",
+      "sha256": "bc7c4af93ea19f9f11d4d285aa00228def8271417b3166def823612c9f290c43",
+      "size_bytes": 778,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-15/outputs/output.md",
+      "sha256": "e8828e4d0ea034dbb7b86e1ed143526a009ef3343dfcb4e3bd83277758ea37cc",
+      "size_bytes": 3580,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-15/outputs/run-record.json",
+      "sha256": "f4db4d354f1bece7626761f20554f76a5e61de296e1279dec34956c082b4460e",
+      "size_bytes": 8144,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-15/packet-manifest.json",
+      "sha256": "80167409317f4daf058c640a0ea3cd3050174c2dc4454dd9723180595668f1f2",
+      "size_bytes": 2107,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-15/request.md",
+      "sha256": "950dc87c3d537d8632a074998108feff025acef761a7a02abd5e766a2e6185d3",
+      "size_bytes": 592,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-16/outputs/output.md",
+      "sha256": "945ec0540a647c193dce4f369bd02de24c2a00adc93240f195ce603058677fb9",
+      "size_bytes": 3096,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-16/outputs/run-record.json",
+      "sha256": "699812e064e881bdbed641df9d4255b77c641528560f64774e35f3ba60fb0230",
+      "size_bytes": 7991,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-16/packet-manifest.json",
+      "sha256": "5ccbb72a379931cedfeb75e52a62ebb9b20442b7c7c276332921270db829bd87",
+      "size_bytes": 1725,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-16/request.md",
+      "sha256": "c9a1194f01256e391fbaad931027a8522193ff0bfcfbcdbf25905d1ec930d657",
+      "size_bytes": 597,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-18/outputs/output.md",
+      "sha256": "da4f0b5ec49aad7614de332dc35093a716df503f14058710b9726a1237149855",
+      "size_bytes": 3978,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-18/outputs/run-record.json",
+      "sha256": "c49838827a0b1b35ebc5fe7c122781f4f32da7d96fe934139c9fe02eb937fc56",
+      "size_bytes": 7515,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-18/packet-manifest.json",
+      "sha256": "56d55d9793fde1bb30739e485897b2ab2b81b9a301080d9bec43d68c339c94c1",
+      "size_bytes": 1695,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-18/request.md",
+      "sha256": "f50a889d7e75ae6ed1fb64d3068877fe2b5b2cbf26302c22157495ec7d2aa000",
+      "size_bytes": 599,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-19/outputs/output.md",
+      "sha256": "46f74d7fe9c92177cbcf15f9deeb9f635b9dc9ff96c5bd5a7eab6f47112c7cc7",
+      "size_bytes": 3614,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-19/outputs/run-record.json",
+      "sha256": "ce2b53823c870c3f85395f5e78a294f661444b11ff6b4c1a92d86dcbe1483979",
+      "size_bytes": 7489,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-19/packet-manifest.json",
+      "sha256": "c67da1e03397ea08fddf386d1eb8e1f8654e28fcbe68ac6c61f23d50ceed7393",
+      "size_bytes": 1664,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-19/request.md",
+      "sha256": "97057a83852bad16385f65100689cd92420b360426c9226c8f2e0b3fb5002d0f",
+      "size_bytes": 541,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-20/outputs/output.md",
+      "sha256": "d84f8924fdc0ee4d6e9c3116d51c704fe1c35e6181b4a1cb3a38717ba0ba225c",
+      "size_bytes": 1474,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-20/outputs/run-record.json",
+      "sha256": "4f8a3837bc7cd7c7a444984cf0d405ba1e9a1f65040b963a2a3759078ee3341d",
+      "size_bytes": 7536,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-20/packet-manifest.json",
+      "sha256": "986cb93780b72d7739ecd1b32926b3321a7e89f87278c9d64a73e6cf7c4d5c24",
+      "size_bytes": 1695,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-20/request.md",
+      "sha256": "74df9785dd50235290ceb2f2828dbefd404c6e9d19833aa09dd4b07a16204979",
+      "size_bytes": 468,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-09/outputs/output.md",
+      "sha256": "7166ca13fff850fbd45dc9d9e9ee843760810863458e53bcd5df39d11830f559",
+      "size_bytes": 3996,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-09/outputs/run-record.json",
+      "sha256": "738b3a346df37f6ada374a87245bbeceaff24b864b30bdfc602acbb092eaf824",
+      "size_bytes": 4375,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-09/packet-manifest.json",
+      "sha256": "dbd2afbf469b484115c1b5a950b99d94199e24ab040ba8ae89cb847442032b50",
+      "size_bytes": 535,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-09/request.md",
+      "sha256": "7d3e4ee5dc250e493e9c0a698ffcbedc96768134888d9f710dffd3230a030b74",
+      "size_bytes": 710,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-12/outputs/output.md",
+      "sha256": "f1731eef7062dde8d3c87202e2c1c60daf89465cf00c1676af76cf5c723ebd0d",
+      "size_bytes": 3924,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-12/outputs/run-record.json",
+      "sha256": "7672ff703e7133048c7d4599c9c82feca1ebdfb411c3f0252d5b20d7b95700d7",
+      "size_bytes": 4375,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-12/packet-manifest.json",
+      "sha256": "628f3b14defd5275f4fcc9a02b712945061346f254a7bf811c826a0a2f57de28",
+      "size_bytes": 535,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-12/request.md",
+      "sha256": "4d41623daab9f5104a38281108821ea90cec84a789bec57afbff2fdb32fc0ca5",
+      "size_bytes": 554,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/inputs/architecture.md",
+      "sha256": "9136f1bcf6fa10ec397de1be436642155ae2c6d2b52b94bc974d0d7db81f16b3",
+      "size_bytes": 744,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/inputs/change-request.md",
+      "sha256": "3cf2933d401ebcd5634c873cf89ede317ab0d383c2af365e16fd3cbe6a0bcc9b",
+      "size_bytes": 549,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/inputs/report-old.json",
+      "sha256": "43a1ac6d01f2fae64ca2fb3638f413feb5e18efac3fbeafdc0ccc743bfda37ca",
+      "size_bytes": 345,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/inputs/requirements.md",
+      "sha256": "a8c703926d9b1e09656ae03eae355a9f07e8af19872674e2dfdcd4f1d5f6c74d",
+      "size_bytes": 655,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/inputs/source.md",
+      "sha256": "09d4dba79fe2f1788044bb43cff5ece6f630c04d6abb54e325ea876ef7ac314f",
+      "size_bytes": 573,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/inputs/verification.md",
+      "sha256": "b2114a7357c501016650ebefc549be6ec147b27030006f39b1040bc6bba2dcf6",
+      "size_bytes": 583,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/outputs/architecture.md",
+      "sha256": "d5ca72c7c48a7d2b16713ee3a2f5841cfdca8ec09bf98bf9209434d9d32b7df9",
+      "size_bytes": 4171,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/outputs/change-request.md",
+      "sha256": "3cf2933d401ebcd5634c873cf89ede317ab0d383c2af365e16fd3cbe6a0bcc9b",
+      "size_bytes": 549,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/outputs/output.md",
+      "sha256": "45f14ee3e83e961fc9bf13ee3e2dbdfb588702fc13d606570966a00efad9bac2",
+      "size_bytes": 3867,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/outputs/report-old.json",
+      "sha256": "43a1ac6d01f2fae64ca2fb3638f413feb5e18efac3fbeafdc0ccc743bfda37ca",
+      "size_bytes": 345,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/outputs/requirements.md",
+      "sha256": "eafef128ba89a52d37d6e5939ea270842cc452baa310b842a28d175297511fbf",
+      "size_bytes": 983,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/outputs/run-record.json",
+      "sha256": "49bbc030971531b5cccc5bfad168cbb10ffc71d698ad2862bf9c5a14e89d3737",
+      "size_bytes": 6377,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/outputs/source.md",
+      "sha256": "09d4dba79fe2f1788044bb43cff5ece6f630c04d6abb54e325ea876ef7ac314f",
+      "size_bytes": 573,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/outputs/verification.md",
+      "sha256": "528f5062234f95b8586b9fc4aab889e59dd88984d0851d6adc27580ffe5b8c0f",
+      "size_bytes": 4686,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/packet-manifest.json",
+      "sha256": "7d1d4383043396f526fbe4f04ef8ca8df49a66372db0242d9a4698540a5ec631",
+      "size_bytes": 1119,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-13/request.md",
+      "sha256": "f09bca8e55ebea3831be489ab654afcfbabdbca22d62923753aa21c69724351d",
+      "size_bytes": 563,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-15/outputs/output.md",
+      "sha256": "f2b2168dcf9f6617c82a370edf248bcd191910129ff19624cb306fbd0b42a2d4",
+      "size_bytes": 4065,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-15/outputs/run-record.json",
+      "sha256": "f0b10ea0a6b868c3d36f6fe2e75d15f6ad889da2cb46ebb6fb421f3ca4dae48e",
+      "size_bytes": 4375,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-15/packet-manifest.json",
+      "sha256": "23600e7e899e61f83c7d1a8a8a7705de8e79c4bc8c1d13d58889a65d89c3249f",
+      "size_bytes": 535,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-15/request.md",
+      "sha256": "950dc87c3d537d8632a074998108feff025acef761a7a02abd5e766a2e6185d3",
+      "size_bytes": 592,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-20/outputs/output.md",
+      "sha256": "bd0f2bed6bc5ef78824ea0ec3cc1b281dd3c72d0fb5bdd1f2ad96c3526fda02f",
+      "size_bytes": 2331,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-20/outputs/run-record.json",
+      "sha256": "6a5a0236f2dc8cb177a220614b2404919710e83f3e8138e937ca6c31bea564a0",
+      "size_bytes": 4375,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-20/packet-manifest.json",
+      "sha256": "5fa289a02c4f480519fee5f922bd9d5a3fbb317711f6790a94e66cb6beb5b4f0",
+      "size_bytes": 535,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/none/HO-20/request.md",
+      "sha256": "74df9785dd50235290ceb2f2828dbefd404c6e9d19833aa09dd4b07a16204979",
+      "size_bytes": 468,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-09/outputs/output.md",
+      "sha256": "b5e266c12b824dc43e8c51211b34929feaa2f6f48843b6899ca09ddbf2725244",
+      "size_bytes": 9611,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-09/outputs/run-record.json",
+      "sha256": "0809331d9c35947048dfdbb95531506e0bb0b3d247c2ab751dd726cccc7dbb85",
+      "size_bytes": 4234,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-09/packet-manifest.json",
+      "sha256": "ce5d0a71245f0a4254b9df66983d1c6f590266f33aebc588dc1f424a1da22668",
+      "size_bytes": 1694,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-09/request.md",
+      "sha256": "7d3e4ee5dc250e493e9c0a698ffcbedc96768134888d9f710dffd3230a030b74",
+      "size_bytes": 710,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-12/outputs/output.md",
+      "sha256": "c0cd4f6c88ed15aaafa97841713952947d8f188447e300190422215033e8e607",
+      "size_bytes": 5855,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-12/outputs/run-record.json",
+      "sha256": "a576732a658df755258454e7728f97d976f0e17582066bfc8b122e735b6ecdcb",
+      "size_bytes": 3602,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-12/packet-manifest.json",
+      "sha256": "f61779ce32e7fe6baafb8784ca599aeb546035f4f19c10981cac9398ee01ae66",
+      "size_bytes": 1277,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-12/request.md",
+      "sha256": "4d41623daab9f5104a38281108821ea90cec84a789bec57afbff2fdb32fc0ca5",
+      "size_bytes": 554,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/inputs/architecture.md",
+      "sha256": "9136f1bcf6fa10ec397de1be436642155ae2c6d2b52b94bc974d0d7db81f16b3",
+      "size_bytes": 744,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/inputs/change-request.md",
+      "sha256": "3cf2933d401ebcd5634c873cf89ede317ab0d383c2af365e16fd3cbe6a0bcc9b",
+      "size_bytes": 549,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/inputs/report-old.json",
+      "sha256": "43a1ac6d01f2fae64ca2fb3638f413feb5e18efac3fbeafdc0ccc743bfda37ca",
+      "size_bytes": 345,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/inputs/requirements.md",
+      "sha256": "a8c703926d9b1e09656ae03eae355a9f07e8af19872674e2dfdcd4f1d5f6c74d",
+      "size_bytes": 655,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/inputs/source.md",
+      "sha256": "09d4dba79fe2f1788044bb43cff5ece6f630c04d6abb54e325ea876ef7ac314f",
+      "size_bytes": 573,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/inputs/verification.md",
+      "sha256": "b2114a7357c501016650ebefc549be6ec147b27030006f39b1040bc6bba2dcf6",
+      "size_bytes": 583,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/architecture.md",
+      "sha256": "ff22b6196ad2630901c147505cb6790e5463ef17c3dcf4e76ebbbaddf33c32c3",
+      "size_bytes": 8306,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/artifact-checks.json",
+      "sha256": "5bd2365feb35772fd4fd9a3eef4c88fb9b999f1e94fd5f3d800ef9d42184f4c7",
+      "size_bytes": 784,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/change-request.md",
+      "sha256": "3cf2933d401ebcd5634c873cf89ede317ab0d383c2af365e16fd3cbe6a0bcc9b",
+      "size_bytes": 549,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/change-review.md",
+      "sha256": "82cb9d490c02ea7bea76822a0a6d5dd02ef24bb79ac2a7266115414a2447eb70",
+      "size_bytes": 6382,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/output.md",
+      "sha256": "5f70219a43d29622d3d4602345257a031207b410b46ca2e36261e5d2fa84f118",
+      "size_bytes": 964,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/report-old.json",
+      "sha256": "43a1ac6d01f2fae64ca2fb3638f413feb5e18efac3fbeafdc0ccc743bfda37ca",
+      "size_bytes": 345,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/requirements.md",
+      "sha256": "0dbac904d655b1e2829a70ce711a792f5bf7eea39e5512234859579b1c96d621",
+      "size_bytes": 2651,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/run-record.json",
+      "sha256": "39edb02b71fe81867c6adfb4be16e75f11f7a49f286a14d63b023e460bbc418e",
+      "size_bytes": 6652,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/source.md",
+      "sha256": "09d4dba79fe2f1788044bb43cff5ece6f630c04d6abb54e325ea876ef7ac314f",
+      "size_bytes": 573,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/outputs/verification.md",
+      "sha256": "d68dc2eeda1d61145d68531f5da34140a7d45bf54c5a8da8b076506e81efe25e",
+      "size_bytes": 9111,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/packet-manifest.json",
+      "sha256": "ce24c7b5c591e18f772f7e87bf61d31b7ad12f73903007d331c1c51b2d8940df",
+      "size_bytes": 2817,
+      "review_scope": "semantic content or provenance record reviewed"
+    },
+    {
+      "path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-13/request.md",
+      "sha256": "f09bca8e55ebea3831be489ab654afcfbabdbca22d62923753aa21c69724351d",
+      "size_bytes": 563,
+      "review_scope": "semantic content or provenance record reviewed"
+    }
+  ],
+  "comparison_limitations": [
+    "The reviewer had no authorship role and did not consult author self-evaluations, but arm labels were visible; assessment was independent, not blinded.",
+    "Each output was scored against its case and frozen rubric before a paired comparison was written. All scores use 0 missing/material contradiction, 1 partial/consequential gap, 2 coherent/supported; no winner is required.",
+    "Multiple cases share each producer conversation. They are correlated outputs, not independent replications; case ordering and cross-case exposure can affect performance.",
+    "Packet restrictions were instruction based. Global host instructions, available-skill metadata and general memory-summary metadata were visible, including in the none arm. None means no opened packet skill text, not absence of all prior engineering context.",
+    "Exact model identities, model settings, token counts and costs were unavailable in the supplied run records. No token, cost, model or inference-speed comparison is supported.",
+    "Observed start/end intervals overlap because cases were processed together; they cannot be treated as per-case inference runtimes.",
+    "Predeclared inputs and supplied facts make these task-specific descriptive smoke observations. Small matched subsets, a coarse ceiling and no repeated/randomized runs do not support causal skill-effect or general-superiority claims.",
+    "Reviewer hash checks establish correspondence among current bytes, manifests and the recorded hashes. They do not prove continuous immutability or independently reconstruct all producer tool usage/access history.",
+    "Artifact consistency and plan quality are not executed controller, water-system, service, network or operational evidence. Proposed modern controls remain unvalidated."
+  ],
+  "rubric_adjudication": [
+    {
+      "case": "HO-13",
+      "criterion": 1,
+      "decision": "Clarify wording, retain intended assessment",
+      "importance": "medium for interpretation",
+      "repair_effort": "small editorial change in a future rubric revision",
+      "location": "rubrics-snapshot.json:HO-13[0]",
+      "issue": "The phrase does not meet it may be misread as measured implementation failure. A 260 ms sum of stated serial maximum allocations cannot guarantee 200 ms; the packet does not establish that the implementation has actually exhibited 260 ms. Both reviewed outputs must be assessed for preserving that distinction. Do not rewrite the frozen snapshot retrospectively."
+    },
+    {
+      "case": "all assigned",
+      "criterion": null,
+      "decision": "Retain as bounded task-completion rubric; do not treat a ceiling as output identity",
+      "importance": "medium for claims",
+      "repair_effort": "new predeclared follow-up design if stronger claims are needed",
+      "location": "rubrics-snapshot.json; protocol.json:assessment",
+      "issue": "Bundled 0/1/2 criteria reward coherent supported completion but have limited discrimination among good answers. Style, amount of detail and supplementary useful checks can differ without a consequential rubric gap. No post hoc fractional scoring or forced winner is justified."
+    },
+    {
+      "case": "HO-08",
+      "criterion": null,
+      "decision": "Assess final response proportionately; constrain routing inference",
+      "importance": "medium for claims",
+      "repair_effort": "fresh isolated routing cases",
+      "location": "catalog/HO-08/outputs/run-record.json:participant_context and skill_scope_note",
+      "issue": "The spelling answer tests whether this output stays narrow. Shared producer context already contained engineering skill text from other cases, and full catalog metadata was visible. It does not isolate catalog selection behavior across real mixed tasks."
+    },
+    {
+      "case": "HO-14/15/16/18/19",
+      "criterion": null,
+      "decision": "Honor allowed supplied-fact provenance",
+      "importance": "medium for claims",
+      "repair_effort": "fresh unguided source-retrieval cases if required",
+      "location": "cases-snapshot.json:historical transfer requests",
+      "issue": "These prompts supply the key historical fact and the modern contrast. A correct transfer answer demonstrates application to that cue; it does not independently discover historical lessons or establish proposed-control effectiveness. No penalty is appropriate for clearly labeled reliance on supplied facts."
+    },
+    {
+      "case": "HO-20",
+      "criterion": null,
+      "decision": "Retain as basic boundary smoke case",
+      "importance": "low for task scoring, medium for broad robustness claims",
+      "repair_effort": "fresh varied adversarial-source cases",
+      "location": "cases-snapshot.json:HO-20 request",
+      "issue": "The prompt explicitly says the embedded instruction is not task authority. Passing this transparent example is useful but does not establish broad prompt-injection robustness."
+    }
+  ],
+  "integrity_checks": [
+    {
+      "arm": "catalog",
+      "case": "HO-08",
+      "verified_at_utc": "2026-11-14T00:00:00.530518+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 44,
+          "mismatches": []
+        },
+        {
+          "claim_source": "input_files",
+          "checked_file_count": 45,
+          "mismatches": []
+        },
+        {
+          "claim_source": "output_files",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-14",
+      "verified_at_utc": "2026-11-14T00:00:00.531842+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 13,
+          "mismatches": []
+        },
+        {
+          "claim_source": "input_files",
+          "checked_file_count": 14,
+          "mismatches": []
+        },
+        {
+          "claim_source": "output_files",
+          "checked_file_count": 3,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-15",
+      "verified_at_utc": "2026-11-14T00:00:00.533037+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 12,
+          "mismatches": []
+        },
+        {
+          "claim_source": "input_files",
+          "checked_file_count": 13,
+          "mismatches": []
+        },
+        {
+          "claim_source": "output_files",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-16",
+      "verified_at_utc": "2026-11-14T00:00:00.533780+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 9,
+          "mismatches": []
+        },
+        {
+          "claim_source": "input_files",
+          "checked_file_count": 10,
+          "mismatches": []
+        },
+        {
+          "claim_source": "output_files",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-18",
+      "verified_at_utc": "2026-11-14T00:00:00.534605+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 9,
+          "mismatches": []
+        },
+        {
+          "claim_source": "input_files",
+          "checked_file_count": 10,
+          "mismatches": []
+        },
+        {
+          "claim_source": "output_files",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-19",
+      "verified_at_utc": "2026-11-14T00:00:00.535336+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 9,
+          "mismatches": []
+        },
+        {
+          "claim_source": "input_files",
+          "checked_file_count": 10,
+          "mismatches": []
+        },
+        {
+          "claim_source": "output_files",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-20",
+      "verified_at_utc": "2026-11-14T00:00:00.536053+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 9,
+          "mismatches": []
+        },
+        {
+          "claim_source": "input_files",
+          "checked_file_count": 10,
+          "mismatches": []
+        },
+        {
+          "claim_source": "output_files",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "none",
+      "case": "HO-09",
+      "verified_at_utc": "2026-11-14T00:00:00.536233+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 1,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_start",
+          "checked_file_count": 2,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_end",
+          "checked_file_count": 2,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_output_hashes",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "none",
+      "case": "HO-12",
+      "verified_at_utc": "2026-11-14T00:00:00.536412+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 1,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_start",
+          "checked_file_count": 2,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_end",
+          "checked_file_count": 2,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_output_hashes",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "none",
+      "case": "HO-13",
+      "verified_at_utc": "2026-11-14T00:00:00.537133+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 7,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_start",
+          "checked_file_count": 8,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_end",
+          "checked_file_count": 8,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_output_hashes",
+          "checked_file_count": 7,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {
+        "source.md_exact_copy": true,
+        "change-request.md_exact_copy": true,
+        "report-old.json_exact_copy": true,
+        "REQ-7_statement_preserved": true,
+        "REQ-8_statement_preserved": true,
+        "original_ids": [
+          "COMP-1",
+          "COMP-2",
+          "COMP-3",
+          "CR-1",
+          "EVD-A-7",
+          "IFC-1",
+          "IFC-2",
+          "IFC-3",
+          "N-01",
+          "N-02",
+          "REQ-7",
+          "REQ-8",
+          "VER-7",
+          "VER-8"
+        ],
+        "missing_original_ids": [],
+        "revision_b_result_absent": true
+      }
+    },
+    {
+      "arm": "none",
+      "case": "HO-15",
+      "verified_at_utc": "2026-11-14T00:00:00.537446+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 1,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_start",
+          "checked_file_count": 2,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_end",
+          "checked_file_count": 2,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_output_hashes",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "none",
+      "case": "HO-20",
+      "verified_at_utc": "2026-11-14T00:00:00.537637+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 1,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_start",
+          "checked_file_count": 2,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_end",
+          "checked_file_count": 2,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_output_hashes",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-09",
+      "verified_at_utc": "2026-11-14T00:00:00.537977+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 9,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_hashes",
+          "checked_file_count": 10,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_output_hashes",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-12",
+      "verified_at_utc": "2026-11-14T00:00:00.538281+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 6,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_hashes",
+          "checked_file_count": 7,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_output_hashes",
+          "checked_file_count": 1,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {}
+    },
+    {
+      "arm": "task-domain",
+      "case": "HO-13",
+      "verified_at_utc": "2026-11-14T00:00:00.539154+00:00",
+      "request_matches_frozen_case": true,
+      "packet_case_bank_hash_matches_protocol": true,
+      "checks": [
+        {
+          "claim_source": "packet_manifest",
+          "checked_file_count": 19,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_input_hashes",
+          "checked_file_count": 20,
+          "mismatches": []
+        },
+        {
+          "claim_source": "run_output_hashes",
+          "checked_file_count": 9,
+          "mismatches": []
+        }
+      ],
+      "artifact_invariants": {
+        "source.md_exact_copy": true,
+        "change-request.md_exact_copy": true,
+        "report-old.json_exact_copy": true,
+        "REQ-7_statement_preserved": true,
+        "REQ-8_statement_preserved": true,
+        "original_ids": [
+          "COMP-1",
+          "COMP-2",
+          "COMP-3",
+          "CR-1",
+          "EVD-A-7",
+          "IFC-1",
+          "IFC-2",
+          "IFC-3",
+          "N-01",
+          "N-02",
+          "REQ-7",
+          "REQ-8",
+          "VER-7",
+          "VER-8"
+        ],
+        "missing_original_ids": [],
+        "revision_b_result_absent": true
+      }
+    }
+  ],
+  "primary_source_review": {
+    "case": "HO-14",
+    "url": "https://discovery.larc.nasa.gov/pdf_files/MCO_report_2.pdf",
+    "source": "Mars Climate Orbiter Mishap Investigation Board Phase I Report, 10 November 1999",
+    "scope": "Independent web extracted-text review of printed pages 6-7 and 16 confirms the specific added historical claims. Full source not reviewed. Saved PDF hash matches the producer retrieval receipt.",
+    "saved_pdf_sha256": "ed4c0c5a23e4e30df7279924ad0978cf00984fd4ebe58a1f7297ba157b0cdbc6"
+  },
+  "all_output_scores_recorded_at_utc": "2026-11-13T23:58:28.137194+00:00",
+  "completed_at_utc": "2026-11-14T00:00:00.539375+00:00",
+  "summary": {
+    "outputs_reviewed": 15,
+    "outputs_all_criteria_2": 14,
+    "actionable_findings": 1,
+    "critical_failures": 0,
+    "aggregate_score_not_reported": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://discovery.larc.nasa.gov/pdf_files/MCO_report_2.pdf",
+  "retrieval_started_at_utc": "2026-11-13T23:44:12.774410+00:00",
+  "retrieval_completed_at_utc": "2026-11-13T23:44:13.343482+00:00",
+  "sha256": "ed4c0c5a23e4e30df7279924ad0978cf00984fd4ebe58a1f7297ba157b0cdbc6",
+  "size_bytes": 354612,
+  "snapshot_path": "outputs/source-evidence/MCO_report_2.pdf",
+  "review_scope": "Web tool extracted-text inspection, including printed pages 6-7 and 16. Snapshot is preserved for provenance; full PDF was not reviewed."
+}

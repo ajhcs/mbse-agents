@@ -1,6 +1,9 @@
 """Illustrative sampled alarm model; not deployed firmware or physical validation."""
 from dataclasses import dataclass, field
 import math
+import sys
+
+_LOADED_MODULE_CODE = sys._getframe().f_code
 
 
 @dataclass
@@ -20,7 +23,7 @@ class Alarm:
         if type(acknowledge) is not bool:
             raise ValueError("Acknowledge must be boolean")
         previous = (self.high, self.sensor_fault)
-        valid = type(temperature_c) in (int, float) and math.isfinite(temperature_c)
+        valid = type(temperature_c) is int or (type(temperature_c) is float and math.isfinite(temperature_c))
         if valid:
             self.invalid_since = None
             self.sensor_fault = False

@@ -1,0 +1,88 @@
+{
+  "version": "failure-analysis-1.0",
+  "id": "AEBDetection",
+  "revision": "gallery-hardening-1",
+  "basis": "Authored correction of the preserved gallery hazard model. Boolean event meanings and parameter scenarios are proposed teaching abstractions, not accepted field data.",
+  "events": {
+    "BE1": {
+      "description": "Camera algorithm misses obstacle",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE2": {
+      "description": "Camera hardware unavailable for demand",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE3": {
+      "description": "Camera-specific environmental degradation",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/100"
+    },
+    "BE4": {
+      "description": "Radar target return insufficient",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/20"
+    },
+    "BE5": {
+      "description": "Radar hardware unavailable for demand",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE6": {
+      "description": "Radar-specific multipath/clutter loss",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/100"
+    },
+    "BE7": {
+      "description": "Fusion suppresses otherwise usable obstacle detection",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE8": {
+      "description": "Shared environmental condition defeats both sensor paths",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    }
+  },
+  "gates": {
+    "G1": {
+      "operator": "or",
+      "inputs": [
+        "BE1",
+        "BE2",
+        "BE3"
+      ]
+    },
+    "G2": {
+      "operator": "or",
+      "inputs": [
+        "BE4",
+        "BE5",
+        "BE6"
+      ]
+    },
+    "G3": {
+      "operator": "and",
+      "inputs": [
+        "G1",
+        "G2"
+      ]
+    },
+    "TOP": {
+      "operator": "or",
+      "inputs": [
+        "G3",
+        "BE7",
+        "BE8"
+      ]
+    }
+  },
+  "top_event": "TOP",
+  "probability": {
+    "assumption": "mutually_independent",
+    "basis": "Synthetic demand scenarios; shared causes are reused event IDs.",
+    "mission": "One obstacle-detection demand within an explicitly selected operating condition; hardware unavailability must be estimated for this demand before using empirical data."
+  },
+  "fmea": {}
+}

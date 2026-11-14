@@ -1,0 +1,93 @@
+{
+  "version": "failure-analysis-1.0",
+  "id": "FMSGuidance",
+  "revision": "gallery-hardening-1",
+  "basis": "Authored correction of the preserved gallery hazard model. Boolean event meanings and parameter scenarios are proposed teaching abstractions, not accepted field data.",
+  "events": {
+    "BE1": {
+      "description": "Shared specification error produces consistent wrong guidance",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE2": {
+      "description": "Common tool error produces consistent wrong guidance",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE3": {
+      "description": "Consistent erroneous navigation sensor inputs",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE4": {
+      "description": "Corrupted navigation database accepted",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/100000"
+    },
+    "BE5": {
+      "description": "Common power/thermal corruption produces erroneous guidance",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/100000"
+    },
+    "BE6": {
+      "description": "Cross-channel comparator hardware misses disagreement",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE7": {
+      "description": "Crew cross-check does not detect the guidance error",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/100"
+    },
+    "BE8": {
+      "description": "Terrain warning does not detect this guidance error",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE9": {
+      "description": "Shared context/dependency defeats both external detection opportunities",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    }
+  },
+  "gates": {
+    "G1": {
+      "operator": "or",
+      "inputs": [
+        "BE1",
+        "BE2",
+        "BE3",
+        "BE4",
+        "BE5"
+      ]
+    },
+    "G2": {
+      "operator": "or",
+      "inputs": [
+        "G3",
+        "BE9"
+      ]
+    },
+    "G3": {
+      "operator": "and",
+      "inputs": [
+        "BE7",
+        "BE8"
+      ]
+    },
+    "TOP": {
+      "operator": "and",
+      "inputs": [
+        "G1",
+        "G2"
+      ]
+    }
+  },
+  "top_event": "TOP",
+  "probability": {
+    "assumption": "mutually_independent",
+    "basis": "Synthetic demand scenarios; shared causes are reused event IDs.",
+    "mission": "One guidance decision with an erroneous mutually consistent output possible; all probabilities are per this declared demand, not per flight hour."
+  },
+  "fmea": {}
+}

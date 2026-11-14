@@ -1,6 +1,6 @@
 # Architecture
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## System Context
 
@@ -130,7 +130,7 @@ The contactor safety monitor (CMP-HVC-01B) operates as an independent hardware w
 
 **Decision:** Use isoSPI daisy-chain for CMU-to-BMC communication rather than CAN bus.
 
-**Rationale:** isoSPI provides inherent galvanic isolation at each link in the daisy chain, eliminating the need for separate isolation components at each CMU. The daisy-chain topology reduces wiring harness weight and cost compared to a CAN star/bus topology for 16 modules. The battery cell measurement ASIC vendor provides integrated isoSPI interfaces, enabling single-chip per-module design.
+**Rationale:** The daisy chain is proposed to reduce harness complexity across 16 modules. The selected transceiver and isolation implementation must be specified; an interface name does not establish galvanic isolation. Review coupling components, insulation ratings, creepage, clearance, common-mode transients and single-link faults against the actual pack voltage and environment.
 
 **Trade-off:** Daisy-chain creates a single point of failure: a broken link isolates all downstream CMUs. Mitigated by dual-direction scan capability (scan from both ends of the chain) and fault detection for open/short links. Accepted because the wiring and isolation benefits outweigh the fault-tolerance complexity.
 
@@ -138,7 +138,7 @@ The contactor safety monitor (CMP-HVC-01B) operates as an independent hardware w
 
 **Decision:** Implement a hardware-independent contactor safety monitor (CMP-HVC-01B) separate from the BMC software.
 
-**Rationale:** The ASIL D contactor control path requires hardware fault detection that is independent of the BMC software. If the BMC software hangs or its MCU fails, the safety monitor detects the loss of alive signals and forces contactor opening. This satisfies the ISO 26262-5 requirement for an independent safety mechanism and provides the diagnostic coverage needed for ASIL D hardware fault metrics without requiring ASIL D software on the BMC.
+**Rationale:** The ASIL D contactor control path requires hardware fault detection that is independent of the BMC software. If the BMC software hangs or its MCU fails, the safety monitor detects the loss of alive signals and forces contactor opening. That behavior is a proposed control, not established diagnostic coverage. Inject frozen, late and plausible-but-wrong alive signals; assess shared power, clock and sensing faults; then calculate coverage and allocation from the defined failure modes and applicable safety case.
 
 **Trade-off:** Adds hardware cost and complexity. Accepted because it enables the BMC software to be developed at ASIL C (for monitoring functions) rather than ASIL D, significantly reducing software development cost and certification effort.
 

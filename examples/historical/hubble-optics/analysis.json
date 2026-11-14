@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "id": "HG-03",
+  "slug": "hubble-optics",
+  "title": "Hubble: verify the verifier",
+  "year": 1990,
+  "domain": "space",
+  "outcome": "failure_and_repair_opportunity",
+  "focus": "Independence concerns the assumptions and physical references behind a test, not just the number of test results.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-03-S1",
+      "title": "The Hubble Space Telescope Optical Systems Failure Report, NASA-TM-103443",
+      "url": "https://ntrs.nasa.gov/api/citations/19910003124/downloads/19910003124.pdf",
+      "publication_date": "1990-11",
+      "locator": "Executive summary; null-corrector investigation",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-03-F1",
+      "statement": "The board traced the primary-mirror figure error to an incorrectly assembled reflective null corrector used in manufacture and verification.",
+      "source_ids": [
+        "HG-03-S1"
+      ],
+      "locator": "Executive summary"
+    },
+    {
+      "id": "HG-03-F2",
+      "statement": "Other optical tests indicated an error, but their indications were discounted; the main corrector had not received an independent dimensional verification after assembly.",
+      "source_ids": [
+        "HG-03-S1"
+      ],
+      "locator": "Executive summary; null-corrector investigation"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Mirror, metrology fixture, fixture assembly, test interpretation, supplier oversight, and acceptance authority belong inside the optical acceptance boundary.",
+    "interfaces": [
+      "Fixture geometry → optical result: an incorrect reference can make repeatable measurements misleading.",
+      "Anomalous test → acceptance decision: contradictory evidence needs a recorded resolution."
+    ],
+    "decision": {
+      "question": "Should agreement with the production reference close an optical acceptance claim?",
+      "options": [
+        "Accept repeated agreement with the same reference.",
+        "Require an independent check of the reference and disposition conflicting measurements."
+      ],
+      "recommendation": "Choose evidence with a different failure mechanism and preserve unexplained disagreement.",
+      "uncertainty": "Independent measurement has its own uncertainty; two results are not a vote unless their error sources are understood."
+    },
+    "artifact": {
+      "id": "HG-03-A1",
+      "type": "Metrology evidence independence map",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Production measurement",
+          "Record reference geometry and calibration chain",
+          "As-assembled dimensions and uncertainty budget"
+        ],
+        [
+          "Cross-check",
+          "Use a different reference or physical principle",
+          "Analysis of shared assumptions"
+        ],
+        [
+          "Conflict",
+          "Keep acceptance claim open until resolved",
+          "Repeatable explanation of discrepant readings"
+        ]
+      ]
+    },
+    "questions": [
+      "Which dependencies make apparently separate tests correlated?",
+      "How would you distinguish a bad test from a bad article?",
+      "Write an acceptance statement that admits unresolved conflicting evidence."
+    ],
+    "answer_signals": [
+      "Maps shared fixtures, calibration, software, and assumptions.",
+      "Proposes a discriminating check before discarding an inconvenient result.",
+      "Keeps measurement repeatability separate from accuracy."
+    ],
+    "transfer_exercise": "Synthetic: two inspection systems use the same generated geometry file. Draft a third check that can detect an error in that file.",
+    "limits": "This case concerns the 1990 investigation. It does not claim that the proposed artifact was used by the project or that a new optical analysis was executed."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  },
+  "exercise_assets": [
+    {
+      "path": "review-task.md",
+      "label": "Connected review task",
+      "purpose": "A bounded review using multiple linked artifacts."
+    },
+    {
+      "path": "source-facts.csv",
+      "label": "Source fact register",
+      "purpose": "Attributed facts and exact report locators."
+    },
+    {
+      "path": "interfaces.csv",
+      "label": "Editable interface register",
+      "purpose": "New reconstruction with fact-level basis links."
+    },
+    {
+      "path": "claim-evidence.csv",
+      "label": "Claim and evidence register",
+      "purpose": "Supported observations separated from unexecuted checks."
+    },
+    {
+      "path": "change.json",
+      "label": "Synthetic change request",
+      "purpose": "A new transfer problem with affected teaching IDs."
+    },
+    {
+      "path": "relations.mmd",
+      "label": "Editable relation view",
+      "purpose": "Information dependencies with teaching IDs."
+    },
+    {
+      "path": "review-guide.md",
+      "label": "Public review guide",
+      "purpose": "Reasoning criteria and limitations for formative feedback."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "run_id": "47f37b3ff12374c9060f",
+  "executed_at": "2026-11-13T23:33:25.928453+00:00",
+  "python": "3.12.3",
+  "command": "python3 scripts/analyze_gallery.py",
+  "result_sha256": "841f49eca7ceff8241ebbb4bd2788ec341b850965a609ce6345be8edd8b29482",
+  "scope": "exhaustive_static_boolean_and_conditional_probability"
+}

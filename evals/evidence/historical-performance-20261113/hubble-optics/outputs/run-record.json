@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "case": "HG-03",
+  "slug": "hubble-optics",
+  "run_started_at_utc": "2026-11-13T23:47:03Z",
+  "start_basis": "First observed clock reading in this shared participant run; cases read in one context.",
+  "run_status": "completed_artifacts_only",
+  "input_sha256_at_start": {
+    "change.json": "05aeac36ab557373d6a7c38f4f77f53b14d344c2495c73fdae606c85783b2a47",
+    "claim-evidence.csv": "8596d4dcce8ca53993d5d776a516abb601aa27fb517bcb43b776b8776faff813",
+    "interfaces.csv": "3f79974b807341b8ac5b38833137695ff9836ba24142ce3c4c0fbe729a714bfb",
+    "packet-manifest.json": "2b2f39b6e4b24680105cc423e901dcfbeda277c75a7d073312f44364b2a3a14c",
+    "relations.mmd": "8ad2766b2813fd446038c7e3c8ef2b0cf0d870e30685a9a76a7e1520afce0044",
+    "request.md": "ce751b4537ad072cdd5d165a972af9ebcd698ccc158a5e0723f508477a140981",
+    "review-task.md": "2041e6a10d0242f5981418e2c922b29308d3e88da8c635d2d46fc41380aef655",
+    "skills/mbse-aerospace/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+    "skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+    "skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+    "skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+    "skills/mbse-baseline-review/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    "skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    "skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    "skills/mbse-systems-engineering/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    "skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    "skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    "skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+    "skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "skills/mbse-verification-evidence/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+    "skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+    "skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+    "source-facts.csv": "fe2070523f9bd5fefa69f7546c4f5e28c4ee20e3daf72acc9d9269a5c5d1463e",
+    "sources.json": "5733ebb59bfd8555e64c08f3fb9bb3a9e24bf4cf091b3579db327297f3e8c9c3"
+  },
+  "manifest_comparison": {
+    "mismatches": [],
+    "listed_files": 27,
+    "observed_input_files": 28
+  },
+  "run_completed_at_utc": "2026-11-13T23:57:20.764915+00:00",
+  "time_observation": "Start observed with clock__curr_time; completion observed with Python datetime in UTC during finalization. Cases were interleaved in one participant run, so the shared interval is not separate case execution time.",
+  "participant": {
+    "task_name": "/root/performance_historical",
+    "exact_inherited_model": "unknown",
+    "model_setting": "unknown",
+    "reasoning_effort": "unknown",
+    "temperature": "unknown",
+    "token_usage": "unknown",
+    "cost": "unknown",
+    "metadata_limit": "Exact inherited runtime settings, token accounting and cost were not exposed; no values inferred from labels or task context."
+  },
+  "shared_context": {
+    "case_slugs": [
+      "mars-climate-orbiter",
+      "hubble-optics",
+      "heathrow-terminal-5"
+    ],
+    "same_participant_and_context": true,
+    "limitation": "The three case results are connected work by one participant, not three independent runs. Supplied duplicate skills were read and content-deduplicated across cases. No other participant output, answer key, public guide, source repository or memory file was inspected.",
+    "reference_transfer": "Identity and evidence-state guidance read in the Mars skill copies was also applied to the other two cases; aerospace dependency guidance read there informed the Hubble review."
+  },
+  "authorized_input_scope": [
+    "/workspace/worktrees/builderbob/mbse-historical-performance-20261113/mars-climate-orbiter",
+    "/workspace/worktrees/builderbob/mbse-historical-performance-20261113/hubble-optics",
+    "/workspace/worktrees/builderbob/mbse-historical-performance-20261113/heathrow-terminal-5"
+  ],
+  "input_sha256_at_end": {
+    "relations.mmd": "8ad2766b2813fd446038c7e3c8ef2b0cf0d870e30685a9a76a7e1520afce0044",
+    "packet-manifest.json": "2b2f39b6e4b24680105cc423e901dcfbeda277c75a7d073312f44364b2a3a14c",
+    "sources.json": "5733ebb59bfd8555e64c08f3fb9bb3a9e24bf4cf091b3579db327297f3e8c9c3",
+    "interfaces.csv": "3f79974b807341b8ac5b38833137695ff9836ba24142ce3c4c0fbe729a714bfb",
+    "change.json": "05aeac36ab557373d6a7c38f4f77f53b14d344c2495c73fdae606c85783b2a47",
+    "source-facts.csv": "fe2070523f9bd5fefa69f7546c4f5e28c4ee20e3daf72acc9d9269a5c5d1463e",
+    "review-task.md": "2041e6a10d0242f5981418e2c922b29308d3e88da8c635d2d46fc41380aef655",
+    "claim-evidence.csv": "8596d4dcce8ca53993d5d776a516abb601aa27fb517bcb43b776b8776faff813",
+    "request.md": "ce751b4537ad072cdd5d165a972af9ebcd698ccc158a5e0723f508477a140981",
+    "skills/mbse-aerospace/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-aerospace/SKILL.md": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+    "skills/mbse-verification-evidence/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-verification-evidence/SKILL.md": "c96747ec527925c399d51848bd97c0f136d8f6a6864d97c8224ee5f24a70e321",
+    "skills/mbse-baseline-review/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    "skills/mbse-systems-engineering/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    "skills/mbse-aerospace/agents/openai.yaml": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+    "skills/mbse-aerospace/references/domain-analysis.md": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+    "skills/mbse-aerospace/references/software-tool-qualification.md": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+    "skills/mbse-verification-evidence/agents/openai.yaml": "21a6980d4a5bbb9810375b35c8855e10443241bb7a29deac47e4cb3c1169d059",
+    "skills/mbse-verification-evidence/references/evidence-contracts.md": "9b18f181a5efc47f9ab53c8d8f018b6969a5e5dada15c2fff39c708505943f7c",
+    "skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    "skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    "skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    "skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    "skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253"
+  },
+  "inputs_unchanged": true,
+  "skills_used": [
+    {
+      "skill": "mbse-systems-engineering",
+      "path": "skills/mbse-systems-engineering/SKILL.md",
+      "application": "Separated observations from proposals; connected technical and organizational consequences and reconsideration conditions."
+    },
+    {
+      "skill": "mbse-aerospace",
+      "path": "skills/mbse-aerospace/SKILL.md",
+      "application": "Kept historical space findings separate from synthetic integration/metrology decisions and avoided invented flight or certification credit."
+    },
+    {
+      "skill": "mbse-verification-evidence",
+      "path": "skills/mbse-verification-evidence/SKILL.md",
+      "application": "Compared discriminating checks, uncertainty and shared dependencies; kept execution, review and acceptance separate in HG-03."
+    },
+    {
+      "skill": "mbse-baseline-review",
+      "path": "skills/mbse-baseline-review/SKILL.md",
+      "application": "Challenged the supplied acceptance assertions, retained unresolved claims, and preserved original identities and evidence status. No review guide or answer analysis was read."
+    }
+  ],
+  "skill_references_read_in_case": [
+    "skills/mbse-verification-evidence/references/evidence-contracts.md"
+  ],
+  "skill_references_shared_from_other_case": [
+    "../mars-climate-orbiter/skills/mbse-systems-engineering/references/engineering-records.md",
+    "../mars-climate-orbiter/skills/mbse-aerospace/references/domain-analysis.md"
+  ],
+  "tools_used": [
+    {
+      "tool": "functions.exec",
+      "use": "Orchestrated allowed tools; batched independent reads/retrievals and inspections."
+    },
+    {
+      "tool": "tools.clock__curr_time",
+      "use": "Observed shared start UTC and later checkpoint."
+    },
+    {
+      "tool": "tools.exec_command",
+      "use": "Bash commands in allowed workspace; rg file inventory; Python 3 standard-library reads, SHA256, CSV/JSON creation, structural checks and timestamps.",
+      "runtime_observed": {
+        "python": "3.12.3",
+        "python_executable": "/usr/bin/python3"
+      }
+    },
+    {
+      "tool": "tools.web__run",
+      "use": "Opened only primary URLs supplied in sources.json; find/open within those URLs. No search engine query or linked secondary source used."
+    },
+    {
+      "tool": "collaboration.send_message",
+      "use": "Sent the assigning parent a progress update; no other participant information requested or inspected."
+    }
+  ],
+  "sources_used": {
+    "local": "request.md, review-task.md, packet-manifest.json, source-facts.csv, interfaces.csv, claim-evidence.csv, change.json, relations.mmd, sources.json, and listed supplied skill content.",
+    "remote": [
+      {
+        "source_id": "HG-03-S1",
+        "url": "https://ntrs.nasa.gov/api/citations/19910003124/downloads/19910003124.pdf",
+        "access": "Retrieved and inspected web-tool extracted executive-summary text, PDF pages 4-6.",
+        "limits": "Did not inspect all 116 PDF pages or historical raw optical data. OCR/extracted text used; no raw PDF bytes downloaded or SHA256 claimed."
+      }
+    ]
+  },
+  "actions_not_performed": [
+    "No engineering test or trial executed",
+    "No fixture, software ingress or airport service changed",
+    "No real approval or acceptance issued",
+    "No paid API, global installation or production action",
+    "No self-grade or benchmark score",
+    "No public review guide or case answer analysis sought"
+  ],
+  "exceptions": [
+    {
+      "event": "python command unavailable",
+      "observed": "Initial read command exited 127 with python: command not found.",
+      "handling": "Used available python3 successfully; no installation attempted."
+    },
+    {
+      "event": "omitted public guide and README link",
+      "observed": "review-task.md links to omitted review-guide.md and README.md; request.md explicitly directs use of sources.json and prohibits seeking the guide/answer analysis.",
+      "handling": "Used supplied source register and selected skills. Did not seek omitted material."
+    },
+    {
+      "event": "initial combined tool output truncated",
+      "observed": "The first combined primary-source/skill return exceeded displayed output budget.",
+      "handling": "Targeted follow-up opens exposed all Heathrow paragraphs relied upon; MCO find results exposed relevant verification passages. No claim of full-PDF inspection."
+    },
+    {
+      "event": "unknown runtime metadata and remote raw-byte hashes",
+      "handling": "Recorded unknown/null explicitly rather than inferred values."
+    },
+    {
+      "event": "role assignments and technical thresholds absent",
+      "handling": "Named proposed accountable roles; retained unavailable criteria and evidence as gaps. No fictitious owner appointment, tolerances, throughput or executed result."
+    }
+  ],
+  "artifact_checks": "artifact-checks.json",
+  "output_hash_policy": {
+    "algorithm": "SHA256",
+    "scope": "All finalized output payload files other than run-record.json and run-record.sha256.",
+    "record_hash": "run-record.sha256 binds the finalized run-record.json.",
+    "self_reference_exclusion": "A digest cannot include itself without a circular dependency; the digest sidecar is not self-hashed."
+  },
+  "output_sha256": {
+    "artifact-checks.json": "246b6bd2e0b4226a8d0bb55e77b92a50b5c469b35fbec02b91438b5ab643f3e9",
+    "check-options.csv": "0a0741e830546e6ea9e94e7151521ddf8ee60c091db90b5aa4bfbc8fd7e87266",
+    "claim-evidence.proposed.csv": "2f0a79070ee6123f3014f337aef84180786f69fefe2dea8f69516a3d2b2fa4a4",
+    "decision-brief.md": "96ca53ec43c0dca3b6c62eca08a2d141667eae6e7f8cb0d4159d60b7b74fb5a8",
+    "dependencies.proposed.mmd": "b0162d651e594a873525f074c5c1b6a0f13b3d59fe1786215ef1b69ea67d705d",
+    "evidence-plan.md": "82098770ff79f5aeb766e4dcbc39a28720913188ccbf9f5d1e87b7ebf79305f8",
+    "interfaces.proposed.csv": "116395a974784965de8abe7931fdd8a22b8afb1e79a4150a65c2c0bafc10c08d",
+    "source-access.json": "ec36cdf013bd12823f9e00f9ce6620afbf673d9628891ed28f49728163edf8fe"
+  }
+}

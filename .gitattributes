@@ -1,7 +1,20 @@
-* text=auto
+* text=auto eol=lf
 *.md text eol=lf
 *.py text eol=lf
 *.json text eol=lf
 *.yaml text eol=lf
 *.yml text eol=lf
-evals/evidence/ho01/** -text
+*.html text eol=lf
+*.svg text eol=lf
+*.csv text eol=lf
+*.mmd text eol=lf
+# Evaluation snapshots are byte-bound evidence, including original CSV newlines.
+evals/evidence/** -text
+evals/archive/** -text
+# These frozen participant CSVs use CRLF; retain and recognize their line endings.
+evals/evidence/historical-performance-20261113/*/outputs/*.csv whitespace=cr-at-eol
+docs/archive/plans/**/*.md.txt -text
+# Preserve the reviewed Markdown hard breaks in this frozen raw report.
+docs/evidence/reviews/performance-domain-review.md.txt whitespace=-blank-at-eol
+docs/site/** linguist-generated=true
+docs/preview.html linguist-generated=true

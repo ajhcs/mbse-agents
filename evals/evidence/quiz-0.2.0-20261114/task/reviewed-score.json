@@ -1,0 +1,615 @@
+{
+  "schema_version": 2,
+  "kind": "se-judgment-score",
+  "benchmark": "systems-engineering-judgment",
+  "packet": {
+    "packet_id": "d52663a4c8cd43a4a6abc3faedfede22",
+    "inputs_sha256": "ff0c78e6874c812914ae3693c0a9067e5ed56935bfb1bb76a787e3e4affd7ef3",
+    "bank_sha256": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+    "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393"
+  },
+  "version": "0.2.0",
+  "bank_sha256": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+  "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+  "packet_manifest_sha256": "02e3e208061157acc2a81706bf5ecd016e197eda294892d663721ceb4117a658",
+  "answers_sha256": "793ed0a90dc70d4d89648ec2b0b6812cf5a2c3c07426829f34fd6b1875e467c1",
+  "arm": "task",
+  "run": {
+    "run_id": "quiz-v020-task-d52663a4-20261114T000252Z",
+    "producer": "Codex agent /root/quiz_v020_task",
+    "model": "unknown",
+    "host": "builderbob",
+    "settings": {},
+    "started_at": "2026-11-14T00:02:52.246345+00:00",
+    "completed_at": "2026-11-14T00:06:18.998970+00:00",
+    "source_access": "packet-only",
+    "tools": [
+      "functions.exec",
+      "tools.exec_command"
+    ],
+    "tokens": null,
+    "latency_seconds": null,
+    "cost": null,
+    "exceptions": [
+      "Access was instruction-restricted to the supplied task packet, not technically isolated. Shared-host metadata and inherited conversation metadata were visible; outside sources were not opened or used to answer the questions.",
+      "The exact model identifier, model settings, token usage, total inference latency and cost were not exposed and were not guessed. The developer role describes Codex based on GPT-6, which is not an exact model identifier.",
+      "started_at is the first successfully recorded UTC timestamp, after an initial command attempted unavailable python and listed task files with rg; it is not an exact agent-launch timestamp. completed_at is answer-file finalization time before the subsequent structural readback.",
+      "The first combined source display was truncated by the tool; the template, manifest, all question bodies and choices, and the remaining request text were subsequently displayed in bounded reads.",
+      "Question metadata also names aerospace, defense and electronic-systems skills that were not supplied in this task packet. Those skills and their outside copies were not read.",
+      "Only input integrity, packet binding, JSON structure and completeness were checked. No answer key, rubric, other run, external research, paid API or production action was used; no self-grading was performed.",
+      "Postproduction metadata-only normalization: run.model changed from null to the explicit string unknown because the exact model identifier was unavailable and the response format requires a string. The original frozen answers.json SHA-256 is 7462f9a107e699b16e792963b8f0ee9fc5471351ecdccacaa933f5e776c75c9a. Answers, packet binding, run ID and original timestamps are unchanged; the original answers.json and usage.json are preserved."
+    ]
+  },
+  "items": 24,
+  "answered": 24,
+  "selection_correct": 24,
+  "by_dimension": {
+    "framing": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "lifecycle": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "causal_reasoning": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "evidence": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "requirements": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "interfaces": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "tradeoffs": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "uncertainty": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "people_organizations": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "communication": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "source_judgment": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "change_review": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    }
+  },
+  "selection_accuracy": 1.0,
+  "macro_dimension_accuracy": 1.0,
+  "uniform_choice_reference": 0.23472222222222225,
+  "uniform_choice_definition": "Uniform random selection among single options, or among all nonempty subsets for multiple-choice items; a mathematical reference, not measured guessing behavior.",
+  "outcomes": [
+    {
+      "id": "SEJ-003",
+      "dimension": "framing",
+      "split": "development",
+      "selection": [
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-004",
+      "dimension": "framing",
+      "split": "development",
+      "selection": [
+        "A",
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-008",
+      "dimension": "lifecycle",
+      "split": "development",
+      "selection": [
+        "B",
+        "C",
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-009",
+      "dimension": "lifecycle",
+      "split": "development",
+      "selection": [
+        "C"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-013",
+      "dimension": "causal_reasoning",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-014",
+      "dimension": "causal_reasoning",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-018",
+      "dimension": "evidence",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-019",
+      "dimension": "evidence",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-023",
+      "dimension": "requirements",
+      "split": "development",
+      "selection": [
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-024",
+      "dimension": "requirements",
+      "split": "development",
+      "selection": [
+        "C"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-028",
+      "dimension": "interfaces",
+      "split": "development",
+      "selection": [
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-029",
+      "dimension": "interfaces",
+      "split": "development",
+      "selection": [
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-033",
+      "dimension": "tradeoffs",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-034",
+      "dimension": "tradeoffs",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-038",
+      "dimension": "uncertainty",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-039",
+      "dimension": "uncertainty",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-043",
+      "dimension": "people_organizations",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-044",
+      "dimension": "people_organizations",
+      "split": "development",
+      "selection": [
+        "C"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-048",
+      "dimension": "communication",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-049",
+      "dimension": "communication",
+      "split": "development",
+      "selection": [
+        "B"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-053",
+      "dimension": "source_judgment",
+      "split": "development",
+      "selection": [
+        "C"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-054",
+      "dimension": "source_judgment",
+      "split": "development",
+      "selection": [
+        "D"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-058",
+      "dimension": "change_review",
+      "split": "development",
+      "selection": [
+        "C"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    },
+    {
+      "id": "SEJ-059",
+      "dimension": "change_review",
+      "split": "development",
+      "selection": [
+        "A"
+      ],
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "independently_reviewed"
+    }
+  ],
+  "reasoning_review": {
+    "status": "reviewer_reported",
+    "sha256": "8178a1375ac18b661d8ff524d8edcac1477f3eb0c0e0b4fd081bbf0e59b86b58",
+    "review": {
+      "schema_version": 2,
+      "answers_sha256": "793ed0a90dc70d4d89648ec2b0b6812cf5a2c3c07426829f34fd6b1875e467c1",
+      "packet_manifest_sha256": "02e3e208061157acc2a81706bf5ecd016e197eda294892d663721ceb4117a658",
+      "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+      "criteria_sha256": "b9b7a828031e868b61dba5c0605d9c9ab08885bdc020b61794652dc13e80edcd",
+      "reviewer": "Codex independent reasoning reviewer /root/quiz_reasoning_independent",
+      "independent_of_production": true,
+      "items": {
+        "SEJ-003": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/0/reasoning: Keeps supplier infrastructure outside the declared boundary while assigning the authority detection and response to delay; contract responsibility is separated from proved fallback capability.",
+          "critical_errors": []
+        },
+        "SEJ-004": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/1/reasoning: Uses the selected competing inspection/turnaround/change outcomes and cross-role timing study to build the decision basis; rejects ownership blame, an arbitrary best-case target and premature causal certainty.",
+          "critical_errors": []
+        },
+        "SEJ-008": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/2/reasoning: Addresses replacement supply, configuration verification and credential/data retirement over the stated life; makes disposal method depend on applicable requirements instead of prescribing destruction.",
+          "critical_errors": []
+        },
+        "SEJ-009": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/3/reasoning: Separates failure frequency from downtime and daily mission availability using specialist/access delays; supports conditional estimation while retaining cost, feasibility and restoration uncertainty.",
+          "critical_errors": []
+        },
+        "SEJ-013": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/4/reasoning: Factors the logic, demonstrates sufficiency and minimality of the two pairs, and retains A as a single shared event; separates structural results from probability assumptions.",
+          "critical_errors": []
+        },
+        "SEJ-014": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/5/reasoning: Models workload-dependent human acknowledgment and escalation after the threshold intervention; also identifies detection/reporting changes as alternative explanations of the unresolved-event count.",
+          "critical_errors": []
+        },
+        "SEJ-018": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/6/reasoning: Separates zero observed events over twenty unit-hours from zero probability; names process, condition, dependence and mission-duration assumptions without inventing a bound or discarding the data.",
+          "critical_errors": []
+        },
+        "SEJ-019": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/7/reasoning: Preserves conditional liveness evidence and extends the applicability question to outage, queue, recovery, resumption and scheduling; correctly avoids converting eventual service into a response-time guarantee.",
+          "critical_errors": []
+        },
+        "SEJ-023": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/8/reasoning: Gives a counterexample in which both diagnostics occur without shutdown, then repairs the missing response/allocation; does not infer redundant hardware or an unsupported deadline.",
+          "critical_errors": []
+        },
+        "SEJ-024": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/9/reasoning: Retains 40 kg as the contractual obligation and labels 45 kg candidates conditional on change approval; useful trades continue without recency being mistaken for authority.",
+          "critical_errors": []
+        },
+        "SEJ-028": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/10/reasoning: Uses the supplied existing-contract/incorrect-production facts to motivate actual semantic exchange checks and ownership; explicitly bounds this as transfer rather than an independently reconstructed history.",
+          "critical_errors": []
+        },
+        "SEJ-029": {
+          "criteria": [
+            2,
+            1
+          ],
+          "comment": "packet/answers.json#/answers/11/reasoning: Rejects nominal and mean timing as guarantees and specifies acquisition timestamps, clocks, loss and age concerns. It requests shared definitions but leaves producer reporting and consumer invalid-data detection/response responsibilities unallocated.",
+          "critical_errors": []
+        },
+        "SEJ-033": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/12/reasoning: Relates the changing six-month forecast to the year-long commitment, evaluates information/rollback/migration costs, and keeps trial representativeness and eventual choice uncertain.",
+          "critical_errors": []
+        },
+        "SEJ-034": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/13/reasoning: Includes field repair, maintenance-record integration, supply and access constraints with decision owners; does not invent a legal restriction or infer a sourcing winner.",
+          "critical_errors": []
+        },
+        "SEJ-038": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/14/reasoning: Restores assumption status at every use and traces affected conclusions, retaining conditional comparisons and sensitivity; rejects output relabeling or a larger input as fixes for false provenance.",
+          "critical_errors": []
+        },
+        "SEJ-039": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/15/reasoning: Explains how recognition and decision time change aircraft state and feasible options; keeps both immediate and delayed simulations conditional rather than resolving every return counterfactual.",
+          "critical_errors": []
+        },
+        "SEJ-043": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/16/reasoning: Requires mechanism, exposure/damage and applicability evidence while explaining how repeated organizational acceptance can substitute for that argument; preserves the unresolved disposition.",
+          "critical_errors": []
+        },
+        "SEJ-044": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/17/reasoning: Distinguishes commercial commitments from an executable shortfall response, rehearsing decision authority, reserves and handoffs while checking deployable capacity and activation gaps.",
+          "critical_errors": []
+        },
+        "SEJ-048": {
+          "criteria": [
+            2,
+            1
+          ],
+          "comment": "packet/answers.json#/answers/18/reasoning: Locates the materials-versus-seal-geometry applicability dispute and preserves the old evidence. It asks to name an investigation/decision but never specifies a mechanism comparison or targeted evidence that can resolve the dispute.",
+          "critical_errors": []
+        },
+        "SEJ-049": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/19/reasoning: Selects the view for the missing motion permissions by mode, with transitions and guards across startup, stop and recovery; distinguishes proposed rules and implementation enforcement.",
+          "critical_errors": []
+        },
+        "SEJ-053": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/20/reasoning: Keeps transport receipt distinct from operator action and requests correlated application observations with defined semantics; even a receipt button is not treated as proof of physical completion.",
+          "critical_errors": []
+        },
+        "SEJ-054": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/21/reasoning: Treats the RFC discussion as a trade principle and evaluates individual stale-value consequences and response; does not infer a permissible lifetime or mechanism from average updates or load savings.",
+          "critical_errors": []
+        },
+        "SEJ-058": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/22/reasoning: Follows the ordering-contract change into action prerequisites, state/authority and prior verification, rejecting schema/count sufficiency and unjustified buffering while bounding possible duplicates as a review assumption.",
+          "critical_errors": []
+        },
+        "SEJ-059": {
+          "criteria": [
+            2,
+            2
+          ],
+          "comment": "packet/answers.json#/answers/23/reasoning: Reopens the old coverage premise for actual indoor conditions and new battery support limits, retaining the earlier rationale and reevaluating criteria instead of mechanically switching technologies.",
+          "critical_errors": []
+        }
+      }
+    },
+    "interpretation": "Named review of the submitted explanation; rubric/key validity still requires expert adjudication."
+  },
+  "interpretation": "Selection accuracy against a proposed curated key; not a measure of explanation quality or overall engineering competence.",
+  "release_acceptance": "not_assessed"
+}

@@ -1,6 +1,6 @@
 # Quantum Processor Control System
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Overview
 
@@ -8,7 +8,7 @@ The Quantum Processor Control System (QPCS) provides cryogenic control electroni
 
 The QPCS manages the full lifecycle of qubit operations from initial cooldown through calibration, gate execution, and readout. The Room-Temperature Orchestrator (RTO) runs on a rack-mounted server coordinating five subsystems through a Timing Distribution Unit (TDU) that maintains sub-nanosecond synchronization across all control channels. RF Pulse Generator (RPG) cards produce microwave control pulses shaped to the calibrated parameters of each qubit, while the Cryogenic Readout Electronics (CRE) discriminate qubit states within the coherence window. The Flux Bias Controller (FBC) provides precision DC bias currents to tune individual qubit frequencies, enabling two-qubit gate operations through frequency-selective interactions.
 
-The safety-critical calibration subsystem is classified SIL 2 under IEC 61508, reflecting the risk that out-of-range RF power or flux bias could damage qubit arrays or cryogenic hardware worth millions of dollars. Control sequences are formally verified before execution. The standards landscape for quantum computing hardware is emerging, with IEC 61508 applied where applicable to safety-critical calibration functions and IEEE 1076/1800 governing the FPGA/ASIC design of the cryogenic readout electronics.
+The teaching design proposes a SIL 2 allocation for selected protection functions; it has no approved integrity determination. Equipment cost alone does not establish that allocation. The design calls for sequence prechecks and separate RF/current protection, with requirements, applicable editions, physical damage thresholds and tool evidence still to be established. The executed Boolean study examines protection dependencies; it does not verify quantum control sequences or certify the subsystem.
 
 ## System Boundary
 
@@ -80,3 +80,9 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 | IEC 61131-3    | Programmable logic controllers; applicable to safety PLC implementation of hardware interlock logic within the calibration safety subsystem |
 | IEEE 1588      | Precision Time Protocol; reference for TDU clock distribution architecture (adapted for sub-nanosecond requirements) |
 | IEC 62443      | Industrial cybersecurity; applicable to network interfaces between QPCS and external job schedulers |
+
+## Executed engineering study
+
+[Review the fault-model study](analysis/report.md) for complete static cuts, conditional parameter scenarios, proof obligations and retained counterexamples. [Source/applicability review](source-review.md) and [current review coverage](review-status.json) identify the remaining decisions. Original files are preserved in the historical JSON snapshot.
+
+[Draft next-control challenge procedures](analysis/control-challenges.md) specify stimuli, observations and evidence capture for the remaining control claims.

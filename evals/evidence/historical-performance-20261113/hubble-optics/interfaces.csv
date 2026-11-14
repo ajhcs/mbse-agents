@@ -1,0 +1,5 @@
+id,producer,consumer,meaning,basis_fact_ids,status
+HG-03-I1,Fixture assembly,Primary optical measurement,Reference geometry affects the result used for acceptance,HG-03-F1;HG-03-F2,new_retrospective_reconstruction
+HG-03-I2,Cross-check measurement,Acceptance review,Contradictory evidence needs an explicit disposition,HG-03-F2,new_retrospective_reconstruction
+HG-03-I3,Calibration record,Fixture assurance,A correct record must correspond to the as-assembled fixture,HG-03-F2,new_retrospective_reconstruction
+HG-03-I4,Primary optical measurement,Acceptance review,Production-reference results inform the acceptance claim,HG-03-F1;HG-03-F2,new_retrospective_reconstruction

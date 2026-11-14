@@ -1,0 +1,244 @@
+{
+  "case": "HO-14",
+  "started_at_utc": "2026-11-13T23:43:05.844883+00:00",
+  "input_files": [
+    {
+      "path": ".agents/skills/mbse-aerospace/SKILL.md",
+      "sha256": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+      "size_bytes": 2078
+    },
+    {
+      "path": ".agents/skills/mbse-aerospace/agents/openai.yaml",
+      "sha256": "366ec57119dcc71a2403012e86db3b2a5cd1df093354897716987516d7982131",
+      "size_bytes": 321
+    },
+    {
+      "path": ".agents/skills/mbse-aerospace/references/domain-analysis.md",
+      "sha256": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+      "size_bytes": 5563
+    },
+    {
+      "path": ".agents/skills/mbse-aerospace/references/software-tool-qualification.md",
+      "sha256": "31d7bef58c1c9e3cc7e1375cfaa607569562cf95ca94fb2e7afb85da6872e337",
+      "size_bytes": 1373
+    },
+    {
+      "path": ".agents/skills/mbse-baseline-review/SKILL.md",
+      "sha256": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+      "size_bytes": 1802
+    },
+    {
+      "path": ".agents/skills/mbse-baseline-review/agents/openai.yaml",
+      "sha256": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+      "size_bytes": 302
+    },
+    {
+      "path": ".agents/skills/mbse-baseline-review/references/review-records.md",
+      "sha256": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+      "size_bytes": 1286
+    },
+    {
+      "path": ".agents/skills/mbse-systems-engineering/SKILL.md",
+      "sha256": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+      "size_bytes": 4447
+    },
+    {
+      "path": ".agents/skills/mbse-systems-engineering/agents/openai.yaml",
+      "sha256": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+      "size_bytes": 319
+    },
+    {
+      "path": ".agents/skills/mbse-systems-engineering/references/connected-work.md",
+      "sha256": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+      "size_bytes": 2340
+    },
+    {
+      "path": ".agents/skills/mbse-systems-engineering/references/engineering-records.md",
+      "sha256": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+      "size_bytes": 7018
+    },
+    {
+      "path": ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md",
+      "sha256": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+      "size_bytes": 2864
+    },
+    {
+      "path": "packet-manifest.json",
+      "sha256": "a98b75b91a8fcc1cb0c71b75724e619ed2b42c9235fe896aef42816ef2024586",
+      "size_bytes": 2237
+    },
+    {
+      "path": "request.md",
+      "sha256": "bc7c4af93ea19f9f11d4d285aa00228def8271417b3166def823612c9f290c43",
+      "size_bytes": 778
+    }
+  ],
+  "schema_version": 1,
+  "kind": "artifact-performance-participant-run",
+  "arm": "task-domain",
+  "case_version": "1.0",
+  "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-14",
+  "output_written_at_utc": "2026-11-13T23:45:50.619782+00:00",
+  "record_finalized_at_utc": "2026-11-13T23:49:10.010601+00:00",
+  "timing_basis": "UTC wall-clock timestamps observed from Python datetime.now(timezone.utc). Packet start is the request/manifest read, not model inference start. Case work was interleaved in one participant context.",
+  "elapsed_packet_read_to_record_seconds": 364.165718,
+  "model": {
+    "exact_id": null,
+    "settings": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "total_tokens": null,
+    "cost": null,
+    "currency": null,
+    "reason": "Exact model identity, invocation settings, token accounting, and cost were not exposed; none inferred."
+  },
+  "participant_context": {
+    "group": "performance_transfer-20261113T234256Z",
+    "shared_across_cases": [
+      {
+        "case": "HO-14",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-14"
+      },
+      {
+        "case": "HO-15",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-15"
+      },
+      {
+        "case": "HO-16",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-16"
+      },
+      {
+        "case": "HO-18",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-18"
+      },
+      {
+        "case": "HO-19",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-19"
+      },
+      {
+        "case": "HO-20",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-20"
+      },
+      {
+        "case": "HO-08",
+        "packet_path": "/workspace/worktrees/builderbob/mbse-performance-20261113-v2/catalog/HO-08"
+      }
+    ],
+    "disclosure": "These seven cases share one participant conversation and model context. All seven requests/manifests were read before any response was written. Relevant skill text and the HO-14 source were also visible in shared context. Responses are separately authored artifacts, not independent model replications.",
+    "isolation_limits": "Inherited environment instructions and available-skill/memory summary metadata were present. No source-repository files, memory files, evaluation keys/rubrics, other-arm packet files, or prior participant outputs were accessed. Only assigned packet paths and the HO-14 permitted primary source were consulted for task content.",
+    "other_participant_outputs_accessed": false,
+    "subagents_spawned": false
+  },
+  "skill_selection": [
+    {
+      "name": "mbse-baseline-review",
+      "selected": true,
+      "used": true,
+      "use": "Challenge whether the proposal supports closure and separate documentation, implementation, operations, and approval evidence."
+    },
+    {
+      "name": "mbse-aerospace",
+      "selected": true,
+      "used": true,
+      "use": "Connect ground-segment interface behavior with lifecycle transition and operational ownership."
+    }
+  ],
+  "skill_read_events": [
+    {
+      "path": ".agents/skills/mbse-baseline-review/SKILL.md",
+      "observed_read_at_utc": "2026-11-13T23:43:26.158716+00:00",
+      "sha256": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+      "content_exposed_to_participant": true
+    },
+    {
+      "path": ".agents/skills/mbse-aerospace/SKILL.md",
+      "observed_read_at_utc": "2026-11-13T23:43:26.158716+00:00",
+      "sha256": "76e750ef07056562e493f2100fd359d9c92225f1766197a016e9549911a9f790",
+      "content_exposed_to_participant": true
+    },
+    {
+      "path": ".agents/skills/mbse-aerospace/references/domain-analysis.md",
+      "observed_read_at_utc": "2026-11-13T23:43:51.486003+00:00",
+      "sha256": "878245616911a7a0cf247f545552f78c621bbfbb676b466fff07729d950eedf4",
+      "content_exposed_to_participant": true,
+      "use": "Used relevant ground-segment, lifecycle, interface, and evidence-scope guidance. Unrelated civil-aircraft regulatory/tool-qualification content was not applied."
+    }
+  ],
+  "available_skills_not_selected": [
+    "mbse-systems-engineering"
+  ],
+  "skill_scope_note": "File inventory and byte hashing cover all supplied packages, but only paths in skill_read_events were exposed as skill text for this case. Other cases share the participant context.",
+  "tools": [
+    {
+      "name": "functions.exec",
+      "use": "Orchestrate local packet reads, output writes, and integrity recording."
+    },
+    {
+      "name": "exec_command",
+      "runtime": "bash with python3 standard library",
+      "use": "Read request/manifest and selected skill text; write output.md and run-record.json; compute SHA-256; observe UTC wall-clock times."
+    },
+    {
+      "name": "web__run",
+      "use": "Open the supplied NASA PDF and inspect extracted text near the executive summary and root-cause discussion. Two successful open calls; no search queries."
+    },
+    {
+      "name": "python3 urllib.request",
+      "use": "Retrieve the same primary-source PDF into outputs/source-evidence for a byte-hashed provenance snapshot."
+    }
+  ],
+  "local_checks": {
+    "packet_input_hashes_rechecked_at_utc": "2026-11-13T23:49:10.010601+00:00",
+    "packet_inputs_unchanged": true,
+    "changed_inputs": [],
+    "manifest_skill_and_request_hashes_match": true,
+    "manifest_hash_mismatches": [],
+    "scope": "Artifact integrity only; no engineering test, application execution, inspection, approval, or performance scoring was performed."
+  },
+  "exceptions": [
+    {
+      "type": "tool_availability",
+      "scope": "shared initial inventory",
+      "detail": "The first shell inventory attempt used python, which was not found. It was retried successfully with python3. No input changes occurred in that attempt; its exact start timestamp was not recorded."
+    },
+    {
+      "type": "context_limit",
+      "detail": "Shared participant context is disclosed and cannot support independent-replication or secure holdout claims."
+    }
+  ],
+  "self_grade": null,
+  "output_hashes_exclude": "run-record.json itself, to avoid a recursive self-hash.",
+  "external_sources": [
+    {
+      "url": "https://discovery.larc.nasa.gov/pdf_files/MCO_report_2.pdf",
+      "retrieval_started_at_utc": "2026-11-13T23:44:12.774410+00:00",
+      "retrieval_completed_at_utc": "2026-11-13T23:44:13.343482+00:00",
+      "sha256": "ed4c0c5a23e4e30df7279924ad0978cf00984fd4ebe58a1f7297ba157b0cdbc6",
+      "size_bytes": 354612,
+      "snapshot_path": "outputs/source-evidence/MCO_report_2.pdf",
+      "review_scope": "Web tool extracted-text inspection, including printed pages 6-7 and 16. Snapshot is preserved for provenance; full PDF was not reviewed.",
+      "access_status": "accessible",
+      "tool_text_inspection": "web__run open calls returned extracted text, including printed pages 6-7 and 16. No screenshot inspection and no claim to full-document review.",
+      "primary_source": true
+    }
+  ],
+  "output_files": [
+    {
+      "path": "outputs/output.md",
+      "sha256": "cd1a83ed493028309410c863b563c6bdc878cbc69e97406902898cd1cd1c7f2e",
+      "size_bytes": 3670
+    },
+    {
+      "path": "outputs/source-evidence/MCO_report_2.pdf",
+      "sha256": "ed4c0c5a23e4e30df7279924ad0978cf00984fd4ebe58a1f7297ba157b0cdbc6",
+      "size_bytes": 354612
+    },
+    {
+      "path": "outputs/source-evidence/retrieval.json",
+      "sha256": "e65f90beef6ae4ccb30c9fb51ae714c8b29f2414c1432172b559c9092a67e4c1",
+      "size_bytes": 533
+    }
+  ]
+}

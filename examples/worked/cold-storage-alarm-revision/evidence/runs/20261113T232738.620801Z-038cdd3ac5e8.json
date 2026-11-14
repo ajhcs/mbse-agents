@@ -1,0 +1,168 @@
+{
+  "schema_version": 2,
+  "scope": "illustrative-reference-model",
+  "execution": {
+    "run_id": "20261113T232738.620801Z-038cdd3ac5e8",
+    "started_at": "2026-11-13T23:27:38.620801+00:00",
+    "finished_at": "2026-11-13T23:27:38.621731+00:00",
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/repos/builderbob/mbse-agents/examples/worked/cold-storage-alarm-revision/run_checks.py"
+    ],
+    "python_version": "3.12.3",
+    "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39"
+  },
+  "tool": "Python 3.12.3",
+  "configuration": {
+    "reference_model.py": "1787b1d2625996b3e5541c28ffdea8e81ccdacd9ed244605f2ac1a442b35586e",
+    "run_checks.py": "cc4f7fbecc54974a7e544b8f379df577b4b9ca7b08ee9852b1daceb2b0704d5b",
+    "baseline.json": "0bce7d6e6904c0f62bab2e97f18637ac61d84c43c85576c29e7ee4e8da5aacc3",
+    "verification.md": "e6753ce233153338e3be470c7d45059d332e327475844cce3b12cb5d5dc1cfb2",
+    "requirements.md": "ab85c31b0b5727a5a564de4d1eb6e9a586629d51ddc55c484a4b37d010cb17d3",
+    "architecture.md": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1",
+    "brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974",
+    "evidence_io.py": "4c929f369f6718613dcc9f0347545da63681a204b5cc3ad5743c46f47a4cb6da",
+    "explore_states.py": "e4a96bfeb5cb532ec58fb80511e3284caf5f28c3d1c29f763be2e97a07c656e8",
+    "change-request.md": "aebd892704cce01a4de93042cbaf8e558e6b7541f626227e2784a21cc9309508"
+  },
+  "results": [
+    {
+      "verification": "VER-01",
+      "result": "pass",
+      "observed": {
+        "first_high_ms": 2000,
+        "asserted_before_2s": false
+      }
+    },
+    {
+      "verification": "VER-02",
+      "result": "pass",
+      "observed": {
+        "high_assertions": 0,
+        "below_threshold_ms": 1900
+      }
+    },
+    {
+      "verification": "VER-03",
+      "result": "fail",
+      "observed": {
+        "first_sensor_fault_ms": null
+      }
+    },
+    {
+      "verification": "VER-04",
+      "result": "pass",
+      "observed": {
+        "high_after_unsafe_ack": true,
+        "high_after_recovery_only": true,
+        "high_after_valid_ack": false
+      }
+    },
+    {
+      "verification": "VER-05",
+      "result": "pass",
+      "observed": {
+        "events": [
+          {
+            "time_ms": 2000,
+            "high": true,
+            "sensor_fault": false
+          },
+          {
+            "time_ms": 2300,
+            "high": false,
+            "sensor_fault": false
+          }
+        ],
+        "expected_event_count": 2
+      }
+    },
+    {
+      "verification": "VER-06",
+      "result": "fail",
+      "observed": {
+        "invalid_nan_fault": false,
+        "recovered": {
+          "high": false,
+          "sensor_fault": false,
+          "local_alarm": false
+        },
+        "events": []
+      }
+    },
+    {
+      "verification": "VER-07",
+      "result": "fail",
+      "observed": {
+        "states": 12,
+        "transitions": 71,
+        "counterexample": [
+          {
+            "input": "invalid",
+            "acknowledge": false
+          },
+          {
+            "input": "invalid",
+            "acknowledge": false
+          },
+          {
+            "input": "invalid",
+            "acknowledge": false
+          },
+          {
+            "input": "invalid",
+            "acknowledge": false
+          },
+          {
+            "input": "invalid",
+            "acknowledge": false
+          },
+          {
+            "input": "invalid",
+            "acknowledge": false
+          }
+        ],
+        "time_ms": 500,
+        "expected": {
+          "high": false,
+          "sensor_fault": true,
+          "local_alarm": true
+        },
+        "actual": {
+          "high": false,
+          "sensor_fault": false,
+          "local_alarm": false
+        },
+        "expected_events": [
+          {
+            "time_ms": 500,
+            "high": false,
+            "sensor_fault": true
+          }
+        ],
+        "actual_events": []
+      }
+    },
+    {
+      "verification": "VER-08",
+      "result": "fail",
+      "observed": {
+        "checked_cases": 17,
+        "invalid_temperature_classes": 8,
+        "failures": [
+          "none",
+          "nan",
+          "positive infinity",
+          "negative infinity",
+          "string",
+          "boolean",
+          "mapping",
+          "list"
+        ]
+      }
+    }
+  ],
+  "claim_support": "sampled-reference-model-only",
+  "acceptance": "not_accepted_for_hardware",
+  "review": "pending"
+}

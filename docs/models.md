@@ -1,15 +1,14 @@
 # Choosing and upgrading a model
 
-The skills are authored for GPT-6.1 Sol and GPT-6 Astra, using the same engineering
-contracts. No comparative model evaluation has been run for this release.
-OpenAI describes Sol as a balance of speed, cost, and intelligence, and Astra
-as the choice for demanding reasoning. Use Sol as a practical starting point;
-consider Astra for difficult cross-domain tradeoffs or unresolved review findings.
-This routing is a project recommendation to evaluate, not a measured advantage.
-See the [official GPT-6 guide](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra).
+The engineering contracts do not depend on a particular model. Choose a model
+available in the intended host, then evaluate it on the tasks and evidence limits
+that matter to the project. No comparative model advantage has been established
+for this release. Host discovery, tool access, context limits and model behavior
+need separate checks.
 
-`config/model-profiles.json` records editable model IDs and documentation links.
-It is informational; installing a skill does not change the host's model setting.
+`config/model-profiles.json` records optional candidate model IDs and documentation
+links, not a support guarantee or measured ranking. It is informational;
+installing a skill does not change the host's model setting.
 Choose a model and supported reasoning setting in your host. For Codex CLI,
 explicit selection looks like:
 
@@ -18,10 +17,10 @@ codex -m gpt-6.1-sol
 codex -m gpt-6-astra
 ```
 
-Check the models available to your account and the current CLI documentation.
-The documented API limitation is that these two models do not support `none`
-reasoning effort. This project deliberately has no API runner, credentials, or
-hardcoded budget defaults.
+These commands are candidate examples. Check model availability and supported
+settings in the actual account and host before use; a provider's API setting need
+not match a host's interface. This project supplies no credentials and does not
+silently change models, reasoning effort or spending limits.
 
 The [Astra skill guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra)
 informs our authoring choices: precise discovery descriptions, task-specific

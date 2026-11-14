@@ -1,0 +1,203 @@
+{
+  "schema_version": 2,
+  "answers_sha256": "1efc1704a1f6d9f4fcfa0a3d36cf4c4fbe3199cb9e021224bea9dc86e6c2d32d",
+  "packet_manifest_sha256": "34e89d6784157fe9843737ec4de2b0ef1fee141a7b4b24fe1938a310aa00a379",
+  "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+  "criteria_sha256": "b9b7a828031e868b61dba5c0605d9c9ab08885bdc020b61794652dc13e80edcd",
+  "reviewer": "Codex independent reasoning reviewer /root/quiz_reasoning_independent",
+  "independent_of_production": true,
+  "items": {
+    "SEJ-003": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/0/reasoning: Preserves the fixed supplier-excluding boundary, distinguishes accountability from implementation control, and gives the authority delayed-feed response ownership without inventing a fallback or acceptable age.",
+      "critical_errors": []
+    },
+    "SEJ-004": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/1/reasoning: Keeps turnaround, inspection and change-control outcomes together, then requests cross-role workflow timing; rejects signoff ownership as cause and the fastest case as an authorized target.",
+      "critical_errors": []
+    },
+    "SEJ-008": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/2/reasoning: Includes long-term support/spares, verified replacement configuration and removed-module credential/data outcomes; explicitly treats physical destruction and disposal sufficiency as requirements-dependent.",
+      "critical_errors": []
+    },
+    "SEJ-009": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/3/reasoning: Connects specialist/access/restoration conditions to mission downtime despite equal failure frequency; permits assumption-bound estimates without selecting an option or demanding only field evidence.",
+      "critical_errors": []
+    },
+    "SEJ-013": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/4/reasoning: Derives both sufficient minimal pairs, excludes insufficient singleton/other pairs and the nonminimal triple, and keeps repeated A identical without inventing probabilities or real-world completeness.",
+      "critical_errors": []
+    },
+    "SEJ-014": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/5/reasoning: Traces threshold intervention through workload, changing acknowledgment/escalation and unresolved events; retains reporting changes and untested causal links as limitations.",
+      "critical_errors": []
+    },
+    "SEJ-018": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/6/reasoning: Separates twenty unit-hours with zero observations from failure-probability inference; requires process/dependence/condition assumptions and uncertainty, rejecting unsupported reciprocal and single-mission interpretations.",
+      "critical_errors": []
+    },
+    "SEJ-019": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/7/reasoning: Keeps the continuous-availability proof conditional, then identifies outage/recovery request preservation, resumption and scheduling needed to assess deployed liveness without assuming it holds.",
+      "critical_errors": []
+    },
+    "SEJ-023": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/8/reasoning: Shows that successful diagnosis can coexist with continued operation, exposing the missing shutdown/responsibility chain; avoids inferring deadlines or redundant implementation from the parent.",
+      "critical_errors": []
+    },
+    "SEJ-024": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/9/reasoning: Preserves the 40 kg obligation and labels exploration at 45 kg as conditional on approval; a later proposal or favorable trade score does not erase the hard constraint.",
+      "critical_errors": []
+    },
+    "SEJ-028": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/10/reasoning: Separates supplied interface-specification/production mismatch from the proposed actual-exchange checks and discrepancy ownership; the transfer is bounded rather than treated as a complete universal verification regime.",
+      "critical_errors": []
+    },
+    "SEJ-029": {
+      "criteria": [
+        2,
+        1
+      ],
+      "comment": "packet/answers.json#/answers/11/reasoning: Explains why nominal interval and aggregate statistics do not guarantee usable measurement age; names clocks, timestamps, bounds and invalid-data response but leaves each party's detection/reporting/use responsibilities unallocated.",
+      "critical_errors": []
+    },
+    "SEJ-033": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/12/reasoning: Uses six-month demand change versus a year commitment to motivate learning and reversibility; retains migration, trial usefulness, constraint evidence and other decision criteria instead of declaring A best.",
+      "critical_errors": []
+    },
+    "SEJ-034": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/13/reasoning: Compares delivered field capability with repair, records, access and supply constraints plus their decision owners; keeps sourcing preference and any specific regulatory obligation unestablished.",
+      "critical_errors": []
+    },
+    "SEJ-038": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/14/reasoning: Restores assumption provenance wherever the value propagates and traces dependent conclusions; conditional calculations and sensitivity remain useful without inventing measurement or conservatism.",
+      "critical_errors": []
+    },
+    "SEJ-039": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/15/reasoning: Explains that an immediate return supplies a decision before recognition/interpretation and changes the attempted state; keeps counterfactual feasibility bounded by timing/information assumptions.",
+      "critical_errors": []
+    },
+    "SEJ-043": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/16/reasoning: Limits historical success, requests mechanism and current-versus-prior exposure/configuration evidence, and rejects organizational familiarity as technical justification for an unresolved anomaly disposition.",
+      "critical_errors": []
+    },
+    "SEJ-044": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/17/reasoning: Links shortfall rehearsals to real decision authority, reserves, activation and readiness; contracts and forecasts alone are insufficient, and exercised coverage does not imply universal readiness.",
+      "critical_errors": []
+    },
+    "SEJ-048": {
+      "criteria": [
+        2,
+        1
+      ],
+      "comment": "packet/answers.json#/answers/18/reasoning: Identifies changed geometry versus unchanged materials and asks whether old conditions/mechanisms cover the revision. It still requests a focused investigation without naming a concrete comparison, analysis or targeted test to resolve that applicability question.",
+      "critical_errors": []
+    },
+    "SEJ-049": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/19/reasoning: Selects state-dependent motion authority with guards and transfers across the named modes, preserving missing assignments as decisions instead of inventing components or treating a hierarchy as sufficient.",
+      "critical_errors": []
+    },
+    "SEJ-053": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/20/reasoning: Preserves transport acknowledgment scope and requests an action-linked application/human observation; delivery, display and task completion remain distinct without an irrelevant protocol change.",
+      "critical_errors": []
+    },
+    "SEJ-054": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/21/reasoning: Transfers a caching trade rather than a numeric rule, including stale-value consequences for individual control actions and missing application bounds; neither mean timing nor load savings settles acceptability.",
+      "critical_errors": []
+    },
+    "SEJ-058": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/22/reasoning: Traces the lost ordering guarantee into reachable states, action authority, recovery/timing and affected evidence; keeps possible duplicates conditional and rejects unchanged fields/components or an unbounded buffer as proof.",
+      "critical_errors": []
+    },
+    "SEJ-059": {
+      "criteria": [
+        2,
+        2
+      ],
+      "comment": "packet/answers.json#/answers/23/reasoning: Reopens the coverage-dependent rationale for indoor conditions and battery staffing while preserving historical reasoning and revisiting weights; does not assume infrastructure proves coverage or radio superiority.",
+      "critical_errors": []
+    }
+  }
+}

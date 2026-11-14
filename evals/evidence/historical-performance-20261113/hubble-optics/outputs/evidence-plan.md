@@ -1,0 +1,19 @@
+# HG-03 evidence plan and discrepancy record
+
+This plan is proposed and unexecuted. New V/D identifiers identify output proposals and do not replace supplied teaching IDs.
+
+**HG-03-V01 addresses HG-03-C3 through HG-03-I1 and HG-03-I3.** Configuration: replacement fixture as assembled, released definition, calibration chain, geometry generator version and source inputs, geometry-file hash, both computers' software/configuration and raw-input hashes, primary instrument identity, and auxiliary instrument identity. Unknown entries must be explicitly recorded before interpreting comparisons. Preserve the original state before adjustment; an adjustment creates a new identified configuration and requires applicability review of old evidence.
+
+Preconditions: available released dimensional requirements and tolerances; defined reference datums, relevant measurands and environmental limits; an independently reviewed metrology procedure with sufficient resolution; controlled measuring equipment with appropriate calibration and uncertainty; a decision rule agreed before reading the new result. If these are unavailable, V01 is not ready to support acceptance. Do not invent them from the desired outcome.
+
+Observation: record raw measurements and derived dimensions, uncertainty contributions and correlations, reference conditions, deviations, and the mapping from each result to the applicable tolerance. Independently reconcile the result with the physical fixture, released definition and generated geometry, without taking the generated file as an oracle. Where optical relevance depends on a sensitivity model, identify that model and its assumptions separately.
+
+Expected decision outcomes: outside the agreed acceptance region means keep the hold and investigate/correct; wholly within it may support the scoped dimensional claim after review; overlap or inadequate sensitivity means inconclusive. A scoped V01 result is not a complete fixture or optical-system acceptance.
+
+**HG-03-D01 — unresolved auxiliary disagreement.** Provenance: reported in synthetic HG-03-CH1; actual numbers and files are not supplied. Evidence state: reported discrepancy, raw evidence unavailable, no documented cause for the unreliable label. Preserve both the adverse result and the label as historical entries in this synthetic record; do not adopt the label as a finding.
+
+Acquire and retain primary and auxiliary raw readings, acquisition conditions, instrument and fixture identifiers, calibration histories, processing versions, reference geometry, timestamps, operator observations, and all prior handling or adjustment. Preserve original bytes and hashes alongside any corrected reductions. The analysis owner and auxiliary measurement owner jointly prepare a comparison on the same measurand/configuration with uncertainty and correlation considered. The metrology lead reviews whether a real conflict remains.
+
+A defensible disposition must identify the causal explanation, its supporting evidence, affected results and configurations, and what the corrected or additional measurement demonstrates. An explanation that the auxiliary instrument disagrees is circular. If a defect in that instrument is found, retain its original data, the defect evidence, correction history, and the limited scope of invalidated results. If the primary chain is at fault, re-evaluate both computer outputs. If the result remains unexplained, keep acceptance open.
+
+**Evidence ownership and retention:** the fixture custodian keeps configuration and change history; the analysis owner keeps file/software lineage; the metrology lead keeps V01 procedure, raw observations, uncertainty and review; the auxiliary owner keeps D01 evidence; the acceptance chair records claim-by-claim disposition and authorized scope separately from measurement outcomes. These roles are proposed and no role-holder approvals are asserted.

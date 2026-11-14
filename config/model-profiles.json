@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
-  "verified_on": "2026-10-12",
+  "last_documentation_review": "2026-10-12",
+  "availability_status": "check_in_target_host",
   "evaluation_status": "not_evaluated",
   "profiles": {
     "routine": {
@@ -12,5 +13,5 @@
       "documentation": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra"
     }
   },
-  "notes": "Informational profiles. Select settings in the host; no API calls or automatic model changes."
+  "notes": "Optional candidates inherited from the earlier documentation, not a measured ranking or current availability guarantee. Select settings in the host; installation never changes the model."
 }

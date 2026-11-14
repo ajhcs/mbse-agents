@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_kind": "packet-integrity-and-structure-receipt",
+  "packet": {
+    "packet_id": "9a2ebf161a904592b42612e312a2bb22",
+    "inputs_sha256": "eaf9f21ddf1638dfc0230585554ad188a8f2d7cad804c3be7079fb88e5d72596",
+    "bank_sha256": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+    "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393"
+  },
+  "checked_at": "2026-11-14T00:07:55.517109+00:00",
+  "answers_frozen_at": "2026-11-14T00:07:55.517109+00:00",
+  "answers_sha256": "d101342fd05334143f6e596fa2e282b33e0127b77f763d54742a414dc3122311",
+  "usage_sha256": "050424f06f2d9c34faa6865c7b2b4d5e585fcb49a3ffbe86497973fc7335c73c",
+  "manifest_sha256": "34e89d6784157fe9843737ec4de2b0ef1fee141a7b4b24fe1938a310aa00a379",
+  "manifested_input_files_verified": 39,
+  "manifest_itself_unchanged": true,
+  "input_hash_mismatches": [],
+  "response_template_schema_and_packet_binding_preserved": true,
+  "answer_count": 24,
+  "answer_ids_and_selection_shapes_complete": true,
+  "skill_count": 11,
+  "structure_and_integrity_checks_passed": true,
+  "self_graded": false,
+  "scope_limits": [
+    "Checks validate structure and input preservation, not answer correctness or model quality.",
+    "The packet aggregate, bank, key and catalog bindings were retained; out-of-packet source contents were not accessed or independently hashed.",
+    "Run isolation is an instruction restriction on a shared host, not technical isolation."
+  ]
+}

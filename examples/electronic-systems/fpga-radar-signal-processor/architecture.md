@@ -1,6 +1,6 @@
 # Architecture
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## System Context
 
@@ -135,6 +135,6 @@ The RF inhibit output (IFC-EXT-005) is driven by dedicated logic in CMP-BIT-01 t
 
 **Decision:** Implement the RF inhibit output as an active-low signal with a pull-up resistor, such that the default state (FPGA unconfigured, BIT not passed) inhibits radar transmission.
 
-**Rationale:** MIL-STD-882E requires that the system default to a safe state. If the FPGA fails to configure, loses power, or has a BIT failure, the RF inhibit remains asserted (low), preventing unintended radar emission. This fail-safe design ensures that no single FPGA fault can enable RF transmission without successful BIT completion.
+**Rationale:** An asserted inhibit during configuration failure, power loss and detected self-test failure is a proposed safety behavior. Establish the electrical default at both ends of the interface and test stuck output, broken connection, reset, brownout and shared-supply faults. A self-test completion indication alone cannot establish absence of every dangerous FPGA fault; safety credit depends on the defined fault set and measured inhibit behavior.
 
 **Trade-off:** Requires explicit de-assertion by the BIT controller after successful startup, adding approximately 500 ms to the radar warm-up time. Accepted because personnel safety from unintended radiation exposure takes priority over startup latency.

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "abd60c975770f723ddea",
+  "executed_at": "2026-11-13T23:56:54.998256+00:00",
+  "python": "3.12.3",
+  "command": [
+    "python3",
+    "-B",
+    "scripts/analyze_gallery.py",
+    "--cse-helper",
+    "/home/builderbob/.codex/plugins/cache/cse-local/computable-systems-engineering/0.2.0-alpha.8/skills/analyze-system-failures/scripts/failure_analysis.py"
+  ],
+  "entrypoint": "/workspace/repos/builderbob/mbse-agents/scripts/analyze_gallery.py",
+  "loaded_sources": {
+    "scripts/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b"
+  },
+  "result_sha256": "3340b2847a1a31e5a110ff3e487a8d0d32238b3446e97bdcf9699d99f54c57e0",
+  "scope": "exhaustive_static_boolean_and_conditional_probability"
+}

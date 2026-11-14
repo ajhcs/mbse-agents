@@ -1,0 +1,4 @@
+interface:
+  display_name: "Systems Engineering"
+  short_description: "Understand systems and reason through engineering decisions"
+  default_prompt: "Use $mbse-systems-engineering to understand this system problem, question consequential assumptions, connect the disciplines, and explain a defensible recommendation."

@@ -1,6 +1,6 @@
 # Assurance Evidence
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Assurance Framework
 
@@ -38,7 +38,7 @@ Their status is Planned. The Markdown teaching baseline is not an accepted QMS r
 
 ## Evidence Index
 
-| EVD ID   | Artifact Name                                         | Location                                               | Demonstrates                                                         | Standard Clause                     | Review Milestone       | Evidence Consumer              | Status   |
+| EVD ID   | Artifact Name                                         | Location                                               | Intended evidence scope                                                         | Standard Clause                     | Review Milestone       | Evidence Consumer              | Status   |
 |----------|-------------------------------------------------------|--------------------------------------------------------|----------------------------------------------------------------------|-------------------------------------|------------------------|--------------------------------|----------|
 | EVD-001  | Infusion Delivery Verification Test Report            | evidence/test-reports/infusion-delivery-verification.pdf | Flow rate accuracy, volume tracking, closed-loop control, trumpet curve compliance | IEC 60601-2-24 (exact applicability to verify); IEC 62304 (exact applicability to verify) | Design Verification | FDA reviewer; Notified Body | Planned |
 | EVD-002  | Safety Mechanism Test Report                          | evidence/test-reports/safety-mechanism-test.pdf         | Anti-free-flow clamp engagement, hardware rate limiter, door sensor, safe state transition | IEC 60601-2-24 (exact applicability to verify); ISO 14971 (exact applicability to verify) | Design Verification | FDA reviewer; Notified Body | Planned |
@@ -65,6 +65,9 @@ Their status is Planned. The Markdown teaching baseline is not an accepted QMS r
 | EVD-023  | Simulated Use Validation Report                       | evidence/test-reports/simulated-use-validation.pdf      | Device meets user needs under simulated clinical conditions; use-related risk mitigation confirmed | IEC 62366-1; 21 CFR 820.10(c) / ISO 13485 (exact applicability to verify) | Design Validation | FDA reviewer; Notified Body | Planned |
 | EVD-024  | Post-Market Surveillance Plan                         | evidence/plans/post-market-surveillance-plan.pdf        | DERS override trend monitoring, MAUDE complaint review, SOUP anomaly monitoring, field safety corrective action process | EU MDR Article 83; 21 CFR 803 | Design Transfer | Notified Body; FDA | Planned |
 | EVD-025  | Configuration Management Plan                         | evidence/plans/configuration-management-plan.pdf        | CM procedures for software, hardware, SOUP, drug library, and documentation baselines | IEC 62304 (exact applicability to verify); ISO 13485 (exact applicability to verify) | Design Input | FDA reviewer; Notified Body | Planned |
+| EVD-MODEL-001 | Exhaustive HZ-001 logic and conditional scenario results | evidence/analysis/model-results.json | Complete static Boolean cuts, declared-parameter arithmetic and retained counterexamples; no physical requirement closure | Authored model; source-review.md | Engineering model review | Systems engineer | Executed |
+| EVD-MODEL-002 | Temporal clamp-release fault-injection results | evidence/analysis/clamp-results.json | Sampled release/closing allocation and recovery behavior; ten retained criterion violations (six closure requirement-scope failures; four proposed combined-response violations); no physical occlusion | REQ-SAF-001/002 proposed timing | Engineering model review | Systems engineer | Executed |
+
 
 ## FDA Design Control Mapping
 
@@ -137,3 +140,7 @@ The proposed post-market plan (EVD-024) would include periodic review of the fol
 | Field safety corrective actions   | Quality system CAPA process           | As needed    | EVD-024  |
 | Post-market clinical follow-up    | Clinical literature review            | Annually     | EVD-024  |
 | Drug library effectiveness review | Override data + pharmacy feedback     | Semi-annually | EVD-024  |
+
+## Interpretation of the new execution records
+
+EVD-MODEL-001 records executed static analysis only. Its successful check outcome includes discovery of expected counterexamples; rejected claims remain false in those states. Lifecycle (drafted/executed), technical outcome, configuration identity, independent review and acceptance are separate facts. No original physical verification activity is marked complete by this addition. [The model study](analysis/report.md) identifies the supporting observations and remaining work.

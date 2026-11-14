@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "system": "flight-management-system",
+  "status": "current_proposed_teaching_baseline",
+  "scope": [
+    "declared_record_identity_and_table_links",
+    "requirement_source_claim_inventory",
+    "artifact_existence_by_lifecycle",
+    "bounded_local_markdown_paths"
+  ],
+  "source_reviews": [
+    {
+      "requirement": "REQ-FUN-001",
+      "candidate_basis": "Stakeholder need (airline operations); 14 CFR 25.1329",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-002",
+      "candidate_basis": "Stakeholder need (flight crew); CTL-005",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-003",
+      "candidate_basis": "Stakeholder need (ATC/airline operations); ARINC 702A",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-004",
+      "candidate_basis": "14 CFR 25.1329; operational integrity",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-005",
+      "candidate_basis": "14 CFR 25.1329; AC 90-105A (RNP operations)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-006",
+      "candidate_basis": "CTL-002; ARP4754A Section 5.2",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-007",
+      "candidate_basis": "AC 90-105A; RTCA DO-229F (GNSS MOPS)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-008",
+      "candidate_basis": "CTL-003; HZ-003",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-009",
+      "candidate_basis": "CTL-003; 14 CFR 25.1322 (crew alerting)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-010",
+      "candidate_basis": "AC 90-105A; 14 CFR 25.1329",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-011",
+      "candidate_basis": "Stakeholder need (airline operations)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-012",
+      "candidate_basis": "Stakeholder need (airline operations)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-013",
+      "candidate_basis": "Stakeholder need (flight crew); 14 CFR 25.1322",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-014",
+      "candidate_basis": "14 CFR 25.1329; CTL-004",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-015",
+      "candidate_basis": "14 CFR 25.1329; CTL-004",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-016",
+      "candidate_basis": "14 CFR 25.1329; CTL-007",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-017",
+      "candidate_basis": "14 CFR 25.1329; CTL-007",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-018",
+      "candidate_basis": "14 CFR 25.1329; 14 CFR 25.1322",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-019",
+      "candidate_basis": "Stakeholder need (flight crew)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-020",
+      "candidate_basis": "Stakeholder need (flight crew)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-021",
+      "candidate_basis": "CTL-010; 14 CFR 25.1309",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-022",
+      "candidate_basis": "CTL-009; THR-001",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-001",
+      "candidate_basis": "HZ-001; CTL-001",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-002",
+      "candidate_basis": "HZ-002; CTL-002",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-003",
+      "candidate_basis": "HZ-001; CTL-001; CTL-002; 14 CFR 25.1309",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-004",
+      "candidate_basis": "HZ-004; CTL-004",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-005",
+      "candidate_basis": "HZ-005; CTL-005",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-006",
+      "candidate_basis": "HZ-005; CTL-005",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-007",
+      "candidate_basis": "HZ-006; CTL-006",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-008",
+      "candidate_basis": "HZ-007; CTL-001; 14 CFR 25.1309",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-009",
+      "candidate_basis": "HZ-008; CTL-008",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-010",
+      "candidate_basis": "HZ-001; CTL-002; ARP4761A CMA",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SEC-001",
+      "candidate_basis": "THR-001; CTL-009",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SEC-002",
+      "candidate_basis": "THR-002",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SEC-003",
+      "candidate_basis": "THR-003; THR-004",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SEC-004",
+      "candidate_basis": "THR-005",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SEC-005",
+      "candidate_basis": "THR-006",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-001",
+      "candidate_basis": "AFCS ICD; 14 CFR 25.1329",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-002",
+      "candidate_basis": "IRS ICD; ARP4754A Section 5.2",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-003",
+      "candidate_basis": "DMC ICD",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-004",
+      "candidate_basis": "ACARS ICD; FANS-1/A",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-005",
+      "candidate_basis": "CTL-002; ARP4754A Section 5.2",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-006",
+      "candidate_basis": "TAWS ICD",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-007",
+      "candidate_basis": "Stakeholder need (maintenance organization)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-PRF-001",
+      "candidate_basis": "AC 90-105A; operational performance requirement",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-PRF-002",
+      "candidate_basis": "AC 90-105A; DO-229F",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-PRF-003",
+      "candidate_basis": "Stakeholder need (airline operations)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-PRF-004",
+      "candidate_basis": "CAST-32A; ARP4754A Section 5.2",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-PRF-005",
+      "candidate_basis": "Aircraft electrical load analysis; 14 CFR 25.1351",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    }
+  ],
+  "open_references": [
+    {
+      "id": "REQ-FUN-023",
+      "disposition": "Planned: derive REQ-FUN-023 for DCU FPGA bus arbitration at next requirements review",
+      "basis": "GAP-001 in traceability.md; reserved future requirement, not an existing declaration."
+    }
+  ],
+  "model_evidence": "executed_static_boolean_model",
+  "independent_engineering_review": "not_performed",
+  "licensed_standard_clause_audit": "not_performed",
+  "physical_validation": "not_performed",
+  "risk_acceptance": "not_assessed",
+  "historical_snapshot": "history/pre-hardening.json"
+}

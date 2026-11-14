@@ -29,6 +29,19 @@ well-established view-definition correction, but that page was not freshly
 retrieved here; verify the applicable official release before normative use.
 Other crosswalks are explicitly engineering proposals, not vendor mappings.
 
-Cole's chapter notes and lectures were not supplied. No method is attributed to
-them. Future integration needs the actual material, provenance, and a focused
-review; no textbook passages have been copied.
+## Expansion source records
+
+The initial checks above remain dated records of their stated scope. New work is
+tracked in [historical project sources](sources-historical.md) and
+[domain analysis sources](sources-domain.md), with the claim, locator and access
+limits attached to the applicable case. Historical source publication dates and
+the dates of new retrospective analyses are distinct.
+
+| Claim / implementation basis | Primary source and locator | What this establishes / limits |
+| --- | --- | --- |
+| Portable plugin manifest and fixed skills layout | [Agent Plugins 1.0.0 manifest schema](https://agent-plugins.org/schemas/1.0.0/plugin.schema.json), root properties and `additionalProperties`; [OpenAI packaging](https://developers.openai.com/plugins/build/plugins), “Create a plugin manually” and “Plugin structure”; accessed 2026-11-13 | Portable root `plugin.json`, root `skills/` and optional OpenAI extension. `config/plugin.json` is the release-build input; generated packages use the portable layout. Compatibility and live host operation require separate checks. |
+| Version-specific SysML concept names | [OMG SysML 2.0 Part 1](https://www.omg.org/spec/SysML/2.0/Language/PDF), formal/2026-03-02, March 2026, sections 7.6, 7.11–7.15, 7.17–7.18, 7.21 and 7.24; [1.7 catalog](https://www.omg.org/spec/SysML/1.7/), [2.0 catalog](https://www.omg.org/spec/SysML/2.0/); accessed 2026-11-13 | Names used in the crosswalk: definitions/usages, parts/ports, allocations, actions/states, requirements and verification cases. This establishes neither parser compatibility nor a complete transformation. The 1.7 PDF exceeded the retrieval limit; the retained v1-style column remains illustrative. |
+
+Private or unsupplied instructional material is handled through the archived
+[source-intake note](archive/maintainer-source-intake.md), not through public
+claims about available methods.

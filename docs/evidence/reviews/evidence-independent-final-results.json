@@ -1,0 +1,520 @@
+{
+  "focused_tests": {
+    "tests": 32,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "positive_commands": {
+    "reference_reproduction": {
+      "returncode": 0,
+      "stdout": "8 reference-model procedures pass; hardware acceptance remains open\n",
+      "stderr": ""
+    },
+    "repaired_reproduction": {
+      "returncode": 0,
+      "stdout": "8 reference-model procedures pass; hardware acceptance remains open\n",
+      "stderr": ""
+    },
+    "revision_comparison": {
+      "returncode": 0,
+      "stdout": "Prior pass, changed-requirement failure, repaired pass, and stale-evidence rejection reproduced; stable IDs preserved\n",
+      "stderr": ""
+    },
+    "reference_trace": {
+      "returncode": 0,
+      "stdout": "{\n  \"integrity\": \"valid\",\n  \"requirements\": 4,\n  \"requirements_with_passing_model_evidence\": 4,\n  \"reported_procedures\": 8,\n  \"executed_procedures\": 8,\n  \"passed_procedures\": 8,\n  \"failed_procedures\": 0,\n  \"inconclusive_procedures\": 0,\n  \"valid_execution_records\": [\n    \"EVD-01\"\n  ],\n  \"rejected_execution_records\": [],\n  \"scope\": \"illustrative-reference-model\",\n  \"claim_support\": \"recorded-sampled-model-outcomes-only\",\n  \"semantic_adequacy\": \"not_assessed\",\n  \"acceptance\": \"not_assessed\"\n}\n",
+      "stderr": ""
+    },
+    "failed_trace": {
+      "returncode": 0,
+      "stdout": "{\n  \"integrity\": \"valid\",\n  \"requirements\": 4,\n  \"requirements_with_passing_model_evidence\": 0,\n  \"reported_procedures\": 8,\n  \"executed_procedures\": 8,\n  \"passed_procedures\": 4,\n  \"failed_procedures\": 4,\n  \"inconclusive_procedures\": 0,\n  \"valid_execution_records\": [\n    \"EVD-01\"\n  ],\n  \"rejected_execution_records\": [],\n  \"scope\": \"illustrative-reference-model\",\n  \"claim_support\": \"recorded-sampled-model-outcomes-only\",\n  \"semantic_adequacy\": \"not_assessed\",\n  \"acceptance\": \"not_assessed\"\n}\n",
+      "stderr": ""
+    },
+    "repaired_trace": {
+      "returncode": 0,
+      "stdout": "{\n  \"integrity\": \"valid\",\n  \"requirements\": 4,\n  \"requirements_with_passing_model_evidence\": 4,\n  \"reported_procedures\": 8,\n  \"executed_procedures\": 8,\n  \"passed_procedures\": 8,\n  \"failed_procedures\": 0,\n  \"inconclusive_procedures\": 0,\n  \"valid_execution_records\": [\n    \"EVD-01\"\n  ],\n  \"rejected_execution_records\": [],\n  \"scope\": \"illustrative-reference-model\",\n  \"claim_support\": \"recorded-sampled-model-outcomes-only\",\n  \"semantic_adequacy\": \"not_assessed\",\n  \"acceptance\": \"not_assessed\"\n}\n",
+      "stderr": ""
+    },
+    "expected_failed_reproduction": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Failed: VER-03, VER-06, VER-07, VER-08\n"
+    }
+  },
+  "model_record_mutations": {
+    "reference": {
+      "empty_review": {
+        "reproduction": {
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Stored evidence is invalid/stale or disagrees with execution: missing reviewer identity, missing review artifact, invalid review artifact hash, missing or invalid review artifact\n"
+        },
+        "trace_errors": [
+          "EVD-01: missing reviewer identity",
+          "EVD-01: missing review artifact",
+          "EVD-01: invalid review artifact hash",
+          "EVD-01: missing or invalid review artifact"
+        ],
+        "trace_summary": {
+          "integrity": "invalid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 0,
+          "reported_procedures": 8,
+          "executed_procedures": 0,
+          "passed_procedures": 0,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [],
+          "rejected_execution_records": [
+            "EVD-01"
+          ],
+          "scope": "illustrative-reference-model",
+          "claim_support": "not_established",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      },
+      "stale_review": {
+        "reproduction": {
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Stored evidence is invalid/stale or disagrees with execution: missing or stale review artifact\n"
+        },
+        "trace_errors": [
+          "EVD-01: missing or stale review artifact"
+        ],
+        "trace_summary": {
+          "integrity": "invalid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 0,
+          "reported_procedures": 8,
+          "executed_procedures": 0,
+          "passed_procedures": 0,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [],
+          "rejected_execution_records": [
+            "EVD-01"
+          ],
+          "scope": "illustrative-reference-model",
+          "claim_support": "not_established",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      },
+      "valid_review": {
+        "reproduction": {
+          "returncode": 0,
+          "stdout": "8 reference-model procedures pass; hardware acceptance remains open\n",
+          "stderr": ""
+        },
+        "trace_errors": [],
+        "trace_summary": {
+          "integrity": "valid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 4,
+          "reported_procedures": 8,
+          "executed_procedures": 8,
+          "passed_procedures": 8,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [
+            "EVD-01"
+          ],
+          "rejected_execution_records": [],
+          "scope": "illustrative-reference-model",
+          "claim_support": "recorded-sampled-model-outcomes-only",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      },
+      "missing_bindings": {
+        "reproduction": {
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Stored evidence is invalid/stale or disagrees with execution: missing or mismatched loaded-source bindings\n"
+        },
+        "trace_errors": [],
+        "trace_summary": {
+          "integrity": "valid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 4,
+          "reported_procedures": 8,
+          "executed_procedures": 8,
+          "passed_procedures": 8,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [
+            "EVD-01"
+          ],
+          "rejected_execution_records": [],
+          "scope": "illustrative-reference-model",
+          "claim_support": "recorded-sampled-model-outcomes-only",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      },
+      "empty_bindings": {
+        "reproduction": {
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Stored evidence is invalid/stale or disagrees with execution: missing or mismatched loaded-source bindings\n"
+        },
+        "trace_errors": [
+          "EVD-01: loaded-source bindings differ from Python configuration"
+        ],
+        "trace_summary": {
+          "integrity": "invalid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 0,
+          "reported_procedures": 8,
+          "executed_procedures": 0,
+          "passed_procedures": 0,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [],
+          "rejected_execution_records": [
+            "EVD-01"
+          ],
+          "scope": "illustrative-reference-model",
+          "claim_support": "not_established",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      },
+      "altered_bindings": {
+        "reproduction": {
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Stored evidence is invalid/stale or disagrees with execution: missing or mismatched loaded-source bindings\n"
+        },
+        "trace_errors": [
+          "EVD-01: loaded-source bindings differ from Python configuration"
+        ],
+        "trace_summary": {
+          "integrity": "invalid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 0,
+          "reported_procedures": 8,
+          "executed_procedures": 0,
+          "passed_procedures": 0,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [],
+          "rejected_execution_records": [
+            "EVD-01"
+          ],
+          "scope": "illustrative-reference-model",
+          "claim_support": "not_established",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      }
+    },
+    "repaired": {
+      "empty_review": {
+        "reproduction": {
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Stored evidence is invalid/stale or disagrees with execution: missing reviewer identity, missing review artifact, invalid review artifact hash, missing or invalid review artifact\n"
+        },
+        "trace_errors": [
+          "EVD-01: missing reviewer identity",
+          "EVD-01: missing review artifact",
+          "EVD-01: invalid review artifact hash",
+          "EVD-01: missing or invalid review artifact"
+        ],
+        "trace_summary": {
+          "integrity": "invalid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 0,
+          "reported_procedures": 8,
+          "executed_procedures": 0,
+          "passed_procedures": 0,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [],
+          "rejected_execution_records": [
+            "EVD-01"
+          ],
+          "scope": "illustrative-reference-model",
+          "claim_support": "not_established",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      },
+      "stale_review": {
+        "reproduction": {
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Stored evidence is invalid/stale or disagrees with execution: missing or stale review artifact\n"
+        },
+        "trace_errors": [
+          "EVD-01: missing or stale review artifact"
+        ],
+        "trace_summary": {
+          "integrity": "invalid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 0,
+          "reported_procedures": 8,
+          "executed_procedures": 0,
+          "passed_procedures": 0,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [],
+          "rejected_execution_records": [
+            "EVD-01"
+          ],
+          "scope": "illustrative-reference-model",
+          "claim_support": "not_established",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      },
+      "valid_review": {
+        "reproduction": {
+          "returncode": 0,
+          "stdout": "8 reference-model procedures pass; hardware acceptance remains open\n",
+          "stderr": ""
+        },
+        "trace_errors": [],
+        "trace_summary": {
+          "integrity": "valid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 4,
+          "reported_procedures": 8,
+          "executed_procedures": 8,
+          "passed_procedures": 8,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [
+            "EVD-01"
+          ],
+          "rejected_execution_records": [],
+          "scope": "illustrative-reference-model",
+          "claim_support": "recorded-sampled-model-outcomes-only",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      },
+      "missing_bindings": {
+        "reproduction": {
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Stored evidence is invalid/stale or disagrees with execution: missing or mismatched loaded-source bindings\n"
+        },
+        "trace_errors": [],
+        "trace_summary": {
+          "integrity": "valid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 4,
+          "reported_procedures": 8,
+          "executed_procedures": 8,
+          "passed_procedures": 8,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [
+            "EVD-01"
+          ],
+          "rejected_execution_records": [],
+          "scope": "illustrative-reference-model",
+          "claim_support": "recorded-sampled-model-outcomes-only",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      },
+      "empty_bindings": {
+        "reproduction": {
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Stored evidence is invalid/stale or disagrees with execution: missing or mismatched loaded-source bindings\n"
+        },
+        "trace_errors": [
+          "EVD-01: loaded-source bindings differ from Python configuration"
+        ],
+        "trace_summary": {
+          "integrity": "invalid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 0,
+          "reported_procedures": 8,
+          "executed_procedures": 0,
+          "passed_procedures": 0,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [],
+          "rejected_execution_records": [
+            "EVD-01"
+          ],
+          "scope": "illustrative-reference-model",
+          "claim_support": "not_established",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      },
+      "altered_bindings": {
+        "reproduction": {
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Stored evidence is invalid/stale or disagrees with execution: missing or mismatched loaded-source bindings\n"
+        },
+        "trace_errors": [
+          "EVD-01: loaded-source bindings differ from Python configuration"
+        ],
+        "trace_summary": {
+          "integrity": "invalid",
+          "requirements": 4,
+          "requirements_with_passing_model_evidence": 0,
+          "reported_procedures": 8,
+          "executed_procedures": 0,
+          "passed_procedures": 0,
+          "failed_procedures": 0,
+          "inconclusive_procedures": 0,
+          "valid_execution_records": [],
+          "rejected_execution_records": [
+            "EVD-01"
+          ],
+          "scope": "illustrative-reference-model",
+          "claim_support": "not_established",
+          "semantic_adequacy": "not_assessed",
+          "acceptance": "not_assessed"
+        }
+      }
+    }
+  },
+  "receipt_mutations": {
+    "execution_missing": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Invalid workflow execution provenance: missing execution provenance\n"
+    },
+    "run_id_bad": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Invalid workflow execution provenance: missing or invalid run ID\n"
+    },
+    "timestamp_bad": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Invalid workflow execution provenance: invalid execution timestamps\n"
+    },
+    "command_empty": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Invalid workflow execution provenance: missing execution command\n"
+    },
+    "bindings_missing": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Workflow receipt has missing or stale loaded-source bindings\n"
+    },
+    "bindings_bad": {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Workflow receipt has missing or stale loaded-source bindings\n"
+    }
+  },
+  "invalid_acknowledgement": {
+    "passed": false,
+    "observed": {
+      "checked_cases": 17,
+      "invalid_temperature_classes": 8,
+      "failures": [
+        "changed state on rejected nonboolean acknowledgement"
+      ]
+    }
+  },
+  "changed_record_during_comparison": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Revision inputs changed during comparison\n",
+    "selected_receipt_unchanged": true
+  },
+  "reviewed_files_unchanged_during_verification": true,
+  "reviewed_file_sha256": {
+    "examples/worked/cold-storage-alarm/README.md": "a514daa23903809c29848de7127ab04320bc5c5ed7fad049dd8e2715de2e4fd9",
+    "examples/worked/cold-storage-alarm/architecture.md": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1",
+    "examples/worked/cold-storage-alarm/baseline.json": "b38b42079f40e8c99b61a0c2c4f7cbfdbbda76a09b0ce31d2aebb118e5a6611d",
+    "examples/worked/cold-storage-alarm/brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974",
+    "examples/worked/cold-storage-alarm/evidence/results.json": "374d759b9e4235617c73724d2118632fb857fe580a0acd31c0da0a1ff128c452",
+    "examples/worked/cold-storage-alarm/evidence/runs/20261113T232517.382966Z-68e458ccaab4.json": "1514ef4198d9e2a75ea7d4a9adeefeb2fa607a4a68d2fe5742043d0e26d58a4b",
+    "examples/worked/cold-storage-alarm/evidence/runs/20261113T232648.095660Z-2eeaccbb87e5.json": "3d3d7a10c84aeeb4e4ae34be7e343f5472067e57a7013e8af7cf1c6c0ec1f404",
+    "examples/worked/cold-storage-alarm/evidence/runs/20261113T233041.723126Z-6773b720b186.json": "1e911b4491284287d67615d8b396cf85d4db9b42655a406284e7b3d5114525ca",
+    "examples/worked/cold-storage-alarm/evidence/runs/20261113T233156.252399Z-b43b1a9df7e8.json": "1a0c79c4956b59a9445e1032130e4acb6a696e2ef7da3016eb7f0d3be7124dbb",
+    "examples/worked/cold-storage-alarm/evidence/runs/20261113T233915.381390Z-f1203db62aab.json": "ce84244ebe5865a42a7af02b63a57a591f24e72d21f65f241c89068991ee3af2",
+    "examples/worked/cold-storage-alarm/evidence/runs/20261113T234200.944400Z-a8fa5ee04065.json": "a5568929986ec0bc4e76c2a45be86676138b25cf08753a6c9bafbc072f03d711",
+    "examples/worked/cold-storage-alarm/evidence/runs/20261113T234412.778873Z-b651cf341133.json": "374d759b9e4235617c73724d2118632fb857fe580a0acd31c0da0a1ff128c452",
+    "examples/worked/cold-storage-alarm/evidence/runs/legacy-c0d02c5c8c83b81340b9514967da8a5b18622dcc14d8f51f605cb5d453c101ee.json": "c0d02c5c8c83b81340b9514967da8a5b18622dcc14d8f51f605cb5d453c101ee",
+    "examples/worked/cold-storage-alarm/evidence-contract.md": "540d6e8834899badf1cbbaa9e79bbadbc2b774d91607f50a91661c6ec962f103",
+    "examples/worked/cold-storage-alarm/evidence_io.py": "ec28a3d31bcb83ebe66833872f92809970df656a35f3d691211834fb7a3a4d37",
+    "examples/worked/cold-storage-alarm/explore_states.py": "24aa132f170640016bb2556dff613d758aebc4e486045faf13a62bd9a9c4840b",
+    "examples/worked/cold-storage-alarm/history/legacy-v1/README.md": "cef8248a54c19d38fb396a9334f21a97fa9cb1c508d722dae9a90a7410569a9b",
+    "examples/worked/cold-storage-alarm/history/legacy-v1/architecture.md": "866eabd62ebdb4f00b7e7cd7076d68e4bd73089a3294e375d8ae7f5d78c9e9bf",
+    "examples/worked/cold-storage-alarm/history/legacy-v1/baseline.json": "40276d1f87c61d5c5b9112e227850c1416a2c75df82700523d061ed6ba71b840",
+    "examples/worked/cold-storage-alarm/history/legacy-v1/brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974",
+    "examples/worked/cold-storage-alarm/history/legacy-v1/evidence/results.json": "c0d02c5c8c83b81340b9514967da8a5b18622dcc14d8f51f605cb5d453c101ee",
+    "examples/worked/cold-storage-alarm/history/legacy-v1/reference_model.py": "b297ead973c3b18d94b1b790d89528dba443b4b4fff82f9ba9631966e66f793a",
+    "examples/worked/cold-storage-alarm/history/legacy-v1/requirements.md": "bf196b5278fc248ce2934d61e31a03be197633e83260245d7894d980c95747dc",
+    "examples/worked/cold-storage-alarm/history/legacy-v1/run_checks.py": "6c30af77c3f42c7638651b639418143d218cd67d73e0e8a3718c1a85910fa966",
+    "examples/worked/cold-storage-alarm/history/legacy-v1/snapshot.json": "f7c86af1636e23d24b2da733391da85a9c51b10a40f87f71f47b934894a1d562",
+    "examples/worked/cold-storage-alarm/history/legacy-v1/verification.md": "d22c0793bb986e49fd6a4f78abf13265b9e47c58389a3712ecd269d9fe2f9bc1",
+    "examples/worked/cold-storage-alarm/reference_model.py": "cdb0960b6f68cec5c9b20214ae63474da530fcf2a8d56c60d0d1c3e8cdd02373",
+    "examples/worked/cold-storage-alarm/requirements.md": "bf196b5278fc248ce2934d61e31a03be197633e83260245d7894d980c95747dc",
+    "examples/worked/cold-storage-alarm/run_checks.py": "fb0d709ede255b998b11ae98bd1b6f7c5553361632812f1db6745d0d6e41582a",
+    "examples/worked/cold-storage-alarm/verification.md": "6a30bc539df4fed08501bfdbfff34839dac979f96495ccbd269370bc4520db52",
+    "examples/worked/cold-storage-alarm-revision/README.md": "766278b6a7e409bccad888dcfda2ac8a6ee9d11c84a2ef9cb94e0a9c8c21d256",
+    "examples/worked/cold-storage-alarm-revision/architecture.md": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1",
+    "examples/worked/cold-storage-alarm-revision/baseline.json": "0bce7d6e6904c0f62bab2e97f18637ac61d84c43c85576c29e7ee4e8da5aacc3",
+    "examples/worked/cold-storage-alarm-revision/brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974",
+    "examples/worked/cold-storage-alarm-revision/change-request.md": "aebd892704cce01a4de93042cbaf8e558e6b7541f626227e2784a21cc9309508",
+    "examples/worked/cold-storage-alarm-revision/compare_revisions.py": "5048c89b653011eae3f13f53d685b37079726bd77a9aece8c1817d4169fd6011",
+    "examples/worked/cold-storage-alarm-revision/evidence/results.json": "b9129029d90274c84bf819951a0136d51751f4c1464a694d8a91d233762f71ae",
+    "examples/worked/cold-storage-alarm-revision/evidence/revision-check.json": "1c17de504cbe079793a900d0bcd03f2fdace5e2a94e055dbf5f88d3cafcd4230",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T232648.095660Z-2eeaccbb87e5.json": "3d3d7a10c84aeeb4e4ae34be7e343f5472067e57a7013e8af7cf1c6c0ec1f404",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T232738.620801Z-038cdd3ac5e8.json": "f1990c460a5ab7f55d464c409e9c0e1e5e9b75ed5533bcc5eaa8409f7a9fc86f",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T232748.727294Z-a90b996e3ac3.json": "37775ea6301ef1a8ae8af7fd73c9ada9d02c0d36b9f2e2e55a4ecb4fc2dccdf2",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T232858.295593Z-d6a6da5c79e2.json": "f05a6767a85c1839754989443c58cd19bea9585357003f5924c7f12825706264",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T233041.764672Z-6198c7849f4b.json": "9498966fdf4ce14f4eebb2f5e18cdd5b3c57c9233470cfc6d83fd54094416bea",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T233041.800864Z-1a2bc062886a.json": "0868eac286ba9394062809838b2bd6667fde81d9c4d0d04e11bd14e7338a33c7",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T233156.297847Z-b4f903ead2e5.json": "8eb555e96ee00df00e812bc6a12c7a0ee0bcc04ffb0a22c13f55c4ce86a71692",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T233156.337481Z-c0a66091f50a.json": "1699538cb2defc051cb18a2fe5dae7582d9294eaf494cf79e43a9b4727c60bf4",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T234035.507294Z-aa2e225047c4.json": "b1b03333f3c2898ba73bbfb97e5c8fd1527eb941262d5a0a34f2a4ae9d765d4c",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T234035.554371Z-c5377c827e8b.json": "5ef4d4708f1d13f1d125048917a936b23d47df8f0374dc5c8cbb00fffcf41bad",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T234200.988415Z-80504c0a2025.json": "2211cfadff2afedf884f0b207bc9bb373bdd7bc47c39291544d252d060a7d8b4",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T234201.030134Z-66c65558b62c.json": "f33371fa687ec57863ea1846eab20922885b24539b441adb4792b3ccaaa2b4cd",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T234412.822918Z-21b0dfab3348.json": "b9129029d90274c84bf819951a0136d51751f4c1464a694d8a91d233762f71ae",
+    "examples/worked/cold-storage-alarm-revision/evidence/runs/20261113T234412.866122Z-6e44db250195.json": "1c17de504cbe079793a900d0bcd03f2fdace5e2a94e055dbf5f88d3cafcd4230",
+    "examples/worked/cold-storage-alarm-revision/evidence_io.py": "ec28a3d31bcb83ebe66833872f92809970df656a35f3d691211834fb7a3a4d37",
+    "examples/worked/cold-storage-alarm-revision/explore_states.py": "24aa132f170640016bb2556dff613d758aebc4e486045faf13a62bd9a9c4840b",
+    "examples/worked/cold-storage-alarm-revision/failed/README.md": "efcbcd0605ac8506859d05e98bda7cc5ee0e8ba72efa41382444ac47442c7df5",
+    "examples/worked/cold-storage-alarm-revision/failed/architecture.md": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1",
+    "examples/worked/cold-storage-alarm-revision/failed/baseline.json": "0bce7d6e6904c0f62bab2e97f18637ac61d84c43c85576c29e7ee4e8da5aacc3",
+    "examples/worked/cold-storage-alarm-revision/failed/brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974",
+    "examples/worked/cold-storage-alarm-revision/failed/change-request.md": "aebd892704cce01a4de93042cbaf8e558e6b7541f626227e2784a21cc9309508",
+    "examples/worked/cold-storage-alarm-revision/failed/evidence/results.json": "f1990c460a5ab7f55d464c409e9c0e1e5e9b75ed5533bcc5eaa8409f7a9fc86f",
+    "examples/worked/cold-storage-alarm-revision/failed/evidence_io.py": "4c929f369f6718613dcc9f0347545da63681a204b5cc3ad5743c46f47a4cb6da",
+    "examples/worked/cold-storage-alarm-revision/failed/explore_states.py": "e4a96bfeb5cb532ec58fb80511e3284caf5f28c3d1c29f763be2e97a07c656e8",
+    "examples/worked/cold-storage-alarm-revision/failed/reference_model.py": "1787b1d2625996b3e5541c28ffdea8e81ccdacd9ed244605f2ac1a442b35586e",
+    "examples/worked/cold-storage-alarm-revision/failed/requirements.md": "ab85c31b0b5727a5a564de4d1eb6e9a586629d51ddc55c484a4b37d010cb17d3",
+    "examples/worked/cold-storage-alarm-revision/failed/run_checks.py": "cc4f7fbecc54974a7e544b8f379df577b4b9ca7b08ee9852b1daceb2b0704d5b",
+    "examples/worked/cold-storage-alarm-revision/failed/verification.md": "e6753ce233153338e3be470c7d45059d332e327475844cce3b12cb5d5dc1cfb2",
+    "examples/worked/cold-storage-alarm-revision/prior/README.md": "76a3d38072fb1d8ae6474aba32e4e7aecf1c8b6140141862bd691ca329f11c15",
+    "examples/worked/cold-storage-alarm-revision/prior/architecture.md": "0d7860fdf8409877acd078c9a33df6814eff27ff2d2fd2301a32cfbf9994abf1",
+    "examples/worked/cold-storage-alarm-revision/prior/baseline.json": "b38b42079f40e8c99b61a0c2c4f7cbfdbbda76a09b0ce31d2aebb118e5a6611d",
+    "examples/worked/cold-storage-alarm-revision/prior/brief.md": "e32f121c6dd2a940154cc9704ffc7c540777d70075f72a31c75d93380c45f974",
+    "examples/worked/cold-storage-alarm-revision/prior/evidence/results.json": "3d3d7a10c84aeeb4e4ae34be7e343f5472067e57a7013e8af7cf1c6c0ec1f404",
+    "examples/worked/cold-storage-alarm-revision/prior/evidence_io.py": "4c929f369f6718613dcc9f0347545da63681a204b5cc3ad5743c46f47a4cb6da",
+    "examples/worked/cold-storage-alarm-revision/prior/explore_states.py": "e4a96bfeb5cb532ec58fb80511e3284caf5f28c3d1c29f763be2e97a07c656e8",
+    "examples/worked/cold-storage-alarm-revision/prior/reference_model.py": "1787b1d2625996b3e5541c28ffdea8e81ccdacd9ed244605f2ac1a442b35586e",
+    "examples/worked/cold-storage-alarm-revision/prior/requirements.md": "bf196b5278fc248ce2934d61e31a03be197633e83260245d7894d980c95747dc",
+    "examples/worked/cold-storage-alarm-revision/prior/run_checks.py": "ba1cc7850e0409b2b0369b28a0629c505544b517c3bd457f10637e0865393599",
+    "examples/worked/cold-storage-alarm-revision/prior/verification.md": "6a30bc539df4fed08501bfdbfff34839dac979f96495ccbd269370bc4520db52",
+    "examples/worked/cold-storage-alarm-revision/reference_model.py": "35e237cfc917467b399becf5f9c0e0b00c4724d35d62735d4b8ae8ca8fd3b9a7",
+    "examples/worked/cold-storage-alarm-revision/requirements.md": "ab85c31b0b5727a5a564de4d1eb6e9a586629d51ddc55c484a4b37d010cb17d3",
+    "examples/worked/cold-storage-alarm-revision/run_checks.py": "3837cb0afa2ab7f2795ebfcf97b94bd2f041fc9dc803f6f36455a3df1b057307",
+    "examples/worked/cold-storage-alarm-revision/verification.md": "e6753ce233153338e3be470c7d45059d332e327475844cce3b12cb5d5dc1cfb2",
+    "scripts/check_trace.py": "dcfa60e180280411a1357c0996f575d880402b98eb0943bf57d211cdef42dbe7",
+    "tests/test_reference_model.py": "6c1419c196c460bcaf306a3a08e2d537392630affabacb9ae20659bf444ec2f2",
+    "tests/test_trace.py": "bb28fbbc70e9f1781ede260d84f4231b582a68c91603bb4d03307db298d5e4ab"
+  }
+}

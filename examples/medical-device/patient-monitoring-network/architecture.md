@@ -1,6 +1,6 @@
 # Architecture
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## System Context
 
@@ -119,7 +119,7 @@ The architecture uses a layered monitoring model where each layer operates indep
 
 **Decision:** Deploy a physically dedicated Ethernet network for the monitoring system rather than using VLANs on the shared hospital network.
 
-**Rationale:** IEC 80001-1 risk management for the monitoring network identified that shared network congestion, broadcast storms, and security events on the hospital network could violate the 5-second alarm latency budget. A dedicated network eliminates cross-traffic interference and simplifies the network risk analysis. Physical separation also provides inherent electrical isolation for patient safety.
+**Rationale:** Shared congestion, broadcast storms and security events are candidate threats to the proposed 5-second alarm budget. A dedicated network can reduce some traffic dependencies, but shared switches, management paths, power and alarm endpoints must be inventoried. Verify latency under saturation, failover and endpoint faults. Network segregation alone is not evidence of patient electrical isolation; that needs the actual medical-device interface design and tests.
 
 **Trade-off:** Higher infrastructure cost (dedicated switches, cabling). Accepted because the alarm latency guarantee and patient safety isolation justify the dedicated infrastructure.
 

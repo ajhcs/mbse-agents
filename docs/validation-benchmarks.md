@@ -1,10 +1,12 @@
-# Historical domain question bank
+# Historical exploratory domain questions
+
+Use the [systems engineering judgment benchmark](benchmark.md) for current practice, performance cases and recorded assessment.
 
 These prompts came from the previous collection. Their former "correct answer"
 prose was not validated and has been removed. Use them as exploratory questions,
 not an answer oracle, score, or demonstration of expert experience. Verify exact
-claims against the applicable primary source and adopted edition. Current held-out
-inputs and reviewer criteria are separated under `evals`; see [evaluation](evaluation.md).
+claims against the applicable primary source and adopted edition. Current public
+exercise inputs and reviewer criteria are separated under `evals`; see [evaluation](evaluation.md).
 
 ## AQ-1: ARP4761 vs ARP4761A CMA Treatment Differences
 

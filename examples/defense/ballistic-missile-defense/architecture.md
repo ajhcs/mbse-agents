@@ -1,6 +1,6 @@
 # Architecture
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## System Context
 
@@ -122,7 +122,7 @@ The BMDE's primary partitioning strategy exploits the system-of-systems architec
 - The Fire Control Processor (CMP-ECP-01A) runs on a dedicated processor partition isolated from the Weapon-Target Pairing Optimizer (CMP-ECP-01C). A pairing algorithm fault does not affect fire control command integrity.
 - The COMSEC module (CMP-CGW-01B) enforces a cryptographic boundary between the BMDE internal network and all external datalinks.
 
-**Evidence**: MIL-STD-882E safety assessment verifies that no single BMDE failure can result in an inadvertent interceptor launch.
+**Planned evidence**: The no-single-failure safety claim requires a defined fault scope, complete assessment and authorized review; none is supplied here. The architecture description does not establish that property.
 
 ## Architecture Decisions
 

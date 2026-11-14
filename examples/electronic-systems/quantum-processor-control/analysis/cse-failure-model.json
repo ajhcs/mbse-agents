@@ -1,0 +1,95 @@
+{
+  "version": "failure-analysis-1.0",
+  "id": "QuantumRFProtection",
+  "revision": "gallery-hardening-1",
+  "basis": "Authored correction of the preserved gallery hazard model. Boolean event meanings and parameter scenarios are proposed teaching abstractions, not accepted field data.",
+  "events": {
+    "BE1": {
+      "description": "Software sequence requests excessive RF",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE2": {
+      "description": "AWG DAC hardware produces excessive RF after precheck",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE3": {
+      "description": "RF amplifier oscillation creates excessive power after precheck",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE4": {
+      "description": "Sequence verifier misses an excessive software request",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE5": {
+      "description": "Hardware RF power limiter fails",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE6": {
+      "description": "Analog comparator fails to trip",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE7": {
+      "description": "Passive attenuation cannot bound the delivered RF energy",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE8": {
+      "description": "Shared sensing/power dependency defeats limiter and comparator",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    }
+  },
+  "gates": {
+    "G1A": {
+      "operator": "and",
+      "inputs": [
+        "BE1",
+        "BE4"
+      ]
+    },
+    "G1": {
+      "operator": "or",
+      "inputs": [
+        "G1A",
+        "BE2",
+        "BE3"
+      ]
+    },
+    "G2": {
+      "operator": "or",
+      "inputs": [
+        "BE5",
+        "BE8"
+      ]
+    },
+    "G3": {
+      "operator": "or",
+      "inputs": [
+        "BE6",
+        "BE8"
+      ]
+    },
+    "TOP": {
+      "operator": "and",
+      "inputs": [
+        "G1",
+        "G2",
+        "G3",
+        "BE7"
+      ]
+    }
+  },
+  "top_event": "TOP",
+  "probability": {
+    "assumption": "mutually_independent",
+    "basis": "Synthetic demand scenarios; shared causes are reused event IDs.",
+    "mission": "One excessive-RF challenge at the defined protection boundary; probabilities are per challenge, not a demonstrated PFDavg or rate."
+  },
+  "fmea": {}
+}

@@ -1,4 +1,4 @@
 interface:
   display_name: "Defense Systems Engineering"
-  short_description: "Defense Systems Engineering analysis and evidence"
-  default_prompt: "Use $mbse-defense to develop or review the supplied baseline, connecting domain risks to architecture and evidence."
+  short_description: "Connect mission outcomes to system and lifecycle choices"
+  default_prompt: "Use $mbse-defense to connect this mission need to system behavior, organizational interfaces, acquisition constraints, and evidence for the next decision."

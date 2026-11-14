@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "original_path": "docs/superpowers/plans/2026-04-07-examples-gallery.md",
+      "archive_path": "docs/archive/plans/plans/2026-04-07-examples-gallery.md.txt",
+      "sha256": "d8b0fd900c7410405d9e806d75652c08d37fc0f30cbebaded4b314265cfd0594"
+    },
+    {
+      "original_path": "docs/superpowers/specs/2026-04-07-examples-gallery-design.md",
+      "archive_path": "docs/archive/plans/specs/2026-04-07-examples-gallery-design.md.txt",
+      "sha256": "42adca5fb6aa9193a05a0030db22f3b244a4467f5da807bcdba6ed4fc7d28d8f"
+    }
+  ]
+}

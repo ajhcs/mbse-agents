@@ -1,6 +1,6 @@
 # Smart Infusion Pump System
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Overview
 
@@ -34,7 +34,7 @@ For this teaching case, intended use is clinician-programmed IV fluid/medication
 
 The pump operates in acute care clinical settings including intensive care units, general medical/surgical wards, emergency departments, operating rooms, and ambulatory infusion centers. Environmental conditions span 10C to 40C ambient temperature, 20% to 80% relative humidity (non-condensing), and atmospheric pressure from 57 kPa to 106 kPa (equivalent to sea level through 4000 m altitude). The pump is designed for continuous operation (24/7) on AC mains power with battery backup providing a minimum of 2 hours of infusion at 125 mL/hr.
 
-The pump interfaces with hospital Wi-Fi networks operating on 2.4 GHz and 5 GHz bands. Electromagnetic compatibility is demonstrated per IEC 60601-1-2 for the intended use environment, including immunity to electrostatic discharge, radiated RF fields, and conducted disturbances typical of clinical settings with multiple active medical devices.
+The pump interfaces with hospital Wi-Fi networks operating on 2.4 GHz and 5 GHz bands. Electromagnetic compatibility is to be demonstrated by the planned physical qualification per IEC 60601-1-2 for the intended use environment, including immunity to electrostatic discharge, radiated RF fields, and conducted disturbances typical of clinical settings with multiple active medical devices.
 
 ## Operating Modes
 
@@ -87,3 +87,11 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 | IEC 62443-4-1       | Secure development lifecycle (referenced by FDA premarket cybersecurity guidance)                       |
 | IEC 60601-1-8       | Alarm systems for medical electrical equipment; alarm priority and signal characteristics               |
 | IEC 62366-1         | Usability engineering; use-related risk analysis and usability validation                               |
+
+## Executed engineering study
+
+[Review the fault-model study](analysis/report.md) for complete static cuts, conditional parameter scenarios, proof obligations and retained counterexamples. [Source/applicability review](source-review.md) and [current review coverage](review-status.json) identify the remaining decisions. Original files are preserved in the historical JSON snapshot.
+
+[The temporal clamp study](analysis/clamp-study.md) executes fault injection, timing allocations and recovery; physical occlusion and delivery remain unmeasured.
+
+[Draft next-control challenge procedures](analysis/control-challenges.md) specify stimuli, observations and evidence capture for the remaining control claims.

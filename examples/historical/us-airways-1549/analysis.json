@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-08",
+  "slug": "us-airways-1549",
+  "title": "US Airways 1549: model the decision-maker’s time",
+  "year": 2009,
+  "domain": "aviation",
+  "outcome": "recovery",
+  "focus": "Validate scenarios against the time and information available to the operator, including recognition and decision delays.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-08-S1",
+      "title": "NTSB Aircraft Accident Report AAR-10/03",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf",
+      "publication_date": "2010-05-04",
+      "locator": "Section 1.16.3, Operational Factors and Human Performance Simulations, printed pp. 49–50; section 2.3.2; footnotes 88–89",
+      "source_type": "original_investigation",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "Relevant sections inspected; this is not a reconstruction of every event or finding."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-08-F1",
+      "statement": "The investigation examined the loss of thrust in both engines after a bird encounter and the subsequent Hudson River ditching.",
+      "source_ids": [
+        "HG-08-S1"
+      ],
+      "locator": "Executive summary"
+    },
+    {
+      "id": "HG-08-F2",
+      "statement": "Immediate-turn simulator attempts omitted recognition and decision time. The report describes one delayed return-to-LaGuardia attempt with a 35-second delay that did not succeed.",
+      "source_ids": [
+        "HG-08-S1"
+      ],
+      "locator": "Section 1.16.3, printed pp. 49–50; section 2.3.2; footnotes 88–89"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Aircraft energy, available landing areas, crew cognition, procedures, air traffic control, cabin preparation, and rescue response form the emergency system.",
+    "interfaces": [
+      "Failure cues → crew action: detection, interpretation, decision, and execution consume time.",
+      "Flight deck → cabin: protective preparation must fit the remaining time and information."
+    ],
+    "decision": {
+      "question": "What does a favorable simulator outcome establish about an actual emergency choice?",
+      "options": [
+        "Treat the best trial as proof that a different choice was available.",
+        "Compare initial state, information, delays, training, and outcome variability before transferring a result."
+      ],
+      "recommendation": "Report scenario applicability before judging the historical decision.",
+      "uncertainty": "One delayed failed trial does not estimate a general success probability or prove all alternative paths impossible."
+    },
+    "artifact": {
+      "id": "HG-08-A1",
+      "type": "Scenario applicability matrix",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Initial state",
+          "Match position, energy, damage, and environment",
+          "Validated reconstruction and uncertainty"
+        ],
+        [
+          "Human timing",
+          "Include recognition and decision tasks",
+          "Observed timing or justified sensitivity range"
+        ],
+        [
+          "Outcome claim",
+          "State which tested conditions support the conclusion",
+          "All attempts, failures, and exclusions"
+        ]
+      ]
+    },
+    "questions": [
+      "Why is immediate response a strong modeling assumption?",
+      "What evidence would be needed to estimate success probability?",
+      "Explain the difference between a possible trajectory and an available decision."
+    ],
+    "answer_signals": [
+      "Includes information and action latency in the system model.",
+      "Avoids extrapolating one run into a universal conclusion.",
+      "Communicates the limits of counterfactual evidence."
+    ],
+    "transfer_exercise": "Synthetic: an emergency controller proposes a recovery action that succeeds only with zero delay. Specify a fair comparison protocol.",
+    "limits": "Simulation results are attributed to the NTSB. This repository did not rerun the flight or conduct new pilot trials."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

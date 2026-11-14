@@ -1,6 +1,6 @@
 # Architecture
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## System Context
 
@@ -114,7 +114,7 @@ The Audit and Data Integrity Service (CMP-AUD-01) runs as an independent process
 
 ### Node-Level Fault Isolation
 
-Each compute node runs an independent node agent (CMP-AGT-01) that monitors local hardware health. A hardware failure on one node (GPU error, memory ECC uncorrectable, NVMe failure) is contained to that node. The resource manager (CMP-RES-01) removes the failed node from the allocation pool, and the checkpoint service (CMP-CHK-01) coordinates with the remaining nodes to preserve consistent state for multi-node jobs that included the failed node. No single node failure can corrupt the job state on other nodes in the same multi-node job, because NCCL collective operations use timeout-based failure detection and the checkpoint protocol requires all participating nodes to reach a barrier before the checkpoint is committed.
+Each compute node runs an independent node agent (CMP-AGT-01) that monitors local hardware health. A hardware failure on one node (GPU error, memory ECC uncorrectable, NVMe failure) is contained to that node. The resource manager (CMP-RES-01) removes the failed node from the allocation pool, and the checkpoint service (CMP-CHK-01) coordinates with the remaining nodes to preserve consistent state for multi-node jobs that included the failed node. A barrier and timeout alone do not establish consistent recovery. The proposed protocol needs a failure model, atomic commit rule, durable checkpoint identity and recovery tests covering partial writes, coordinator loss, delayed participants and restart from the last committed state.
 
 ## Architecture Decisions
 
@@ -138,6 +138,6 @@ Each compute node runs an independent node agent (CMP-AGT-01) that monitors loca
 
 **Decision:** Enforce exclusive GPU assignment (one job per GPU, no MPS/MIG sharing) for all SIL 1 classified workloads.
 
-**Rationale:** GPU sharing (via NVIDIA MPS or MIG) introduces non-deterministic resource contention that can produce different numerical results across repeated runs of the same workload. For pharmaceutical simulation and reactor physics calculations, reproducibility of results is a regulatory requirement under ALCOA+ (accuracy, consistency). Exclusive GPU assignment eliminates this contention, ensuring bitwise reproducible results when combined with deterministic NCCL communication patterns.
+**Rationale:** Exclusive GPU allocation is proposed to reduce resource contention and simplify experiment configuration. It does not ensure bitwise reproducibility. Pin hardware, driver, library, kernel and input versions; specify deterministic algorithms and reduction order where supported; repeat representative workloads and compare the declared numeric observable. Determine applicable records obligations from the actual application rather than treating ALCOA+ as a universal bitwise-reproducibility requirement.
 
 **Trade-off:** Lower GPU utilization when SIL 1 workloads do not fully utilize the GPU. Mitigated by allowing non-SIL workloads to use GPU sharing during periods when the cluster is not running regulated jobs, with the scheduler enforcing exclusive mode only for workloads tagged as SIL 1.

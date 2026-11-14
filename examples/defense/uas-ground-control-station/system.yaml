@@ -15,4 +15,6 @@ summary: >
   Multi-vehicle ground control station for Group 4/5 UAS. C2 link
   management, mission planning, sensor payload control, airspace
   integration. MOSA/FACE compliant open architecture.
-evidence_status: planned
+evidence_status: partial_model_execution
+physical_evidence_status: planned
+risk_acceptance: not_assessed

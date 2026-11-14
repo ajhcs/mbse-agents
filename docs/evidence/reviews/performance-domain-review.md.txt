@@ -1,0 +1,211 @@
+# Independent domain-performance artifact review
+
+Review ID: `performance-domain-review-20261113`  
+Reviewed: 2026-11-13T23:55:17.567563+00:00  
+Reviewer: `performance_review_domains`, with no role in authoring these participant outputs.  
+Arm: `task-domain`; cases HO-01, HO-02, HO-03, HO-04, HO-05, HO-07, HO-10, HO-11 and HO-17.
+
+The nine outputs complete their requested draft or review tasks coherently. I found no critical evidence/authority error, consequential gap or minor correction requiring an artifact repair. The remaining design, classification and operational decisions are explicitly open. These are observations about these outputs; they do not establish general superiority, skill benefit, implementation verification or operational acceptance.
+
+The [structured review](/workspace/repos/builderbob/mbse-agents/.mbse-review/performance-domain-review.json) contains all criterion text, located rationales, input/output SHA-256 bindings, source checks, rubric qualifications and limits.
+
+## Integrity and method
+
+I read the frozen protocol, case and rubric snapshots and every response artifact, inspected actual files, and independently checked consequential public source claims. The protocol's case/rubric hashes match the snapshots. All 80 packet input/manifest entries and 27 output files were rehashed; every manifest, run-record hash map and supplied checksum index matched. Each request equals its frozen case text plus the packet's final newline. HO-01 retains N-01 through N-04 and their source wording; HO-04 retains REQ-7 and the timing history. No participant file was changed.
+
+During review, HO-01, HO-04 and HO-07 run-record hashes changed as the design producer finalized the six-case batch after early per-case completion. The parent subsequently declared the group frozen. I read the final records, verified their input/output maps against actual bytes and the parent collection-02 receipt, and rebound those metadata hashes. The engineering Markdown and inputs stayed unchanged; ratings were unaffected. The structured review retains both hashes and the amendment history. Earlier full run-record bytes were not copied by this reviewer, so an exact independent field-by-field diff is not claimed. The producer then supplied a read-only clarification listing five changes: added integrity checks, one tool entry, preparation metadata and access-limit metadata, and replaced end_utc. Earlier authoring-end values were overwritten rather than retained separately. Final timestamps therefore cannot establish isolated authoring latency; future runs should preserve separate completion/finalization times and immutable metadata revisions.
+
+The review uses the 0/1/2 scale: missing or contradicted / partial or consequential gap / coherent and supported. The proposed rubric was adjudicated against the request, not treated as an engineering oracle. Plans earn credit as usable plans only; none is counted as an executed test.
+
+Skill reads and use are participant-reported and consistent with the artifacts. The parent confirmed that no separate retained tool transcript authenticates individual reads. This review therefore establishes neither authenticated activation nor native host discovery. Hashing a supplied skill also does not show that it was used, and content consistency does not establish a causal skill effect.
+
+## Criterion ratings
+
+Criterion order follows the frozen rubric. There is no aggregate performance or leadership score.
+
+| Case | C1 | C2 | C3 | C4 | Corrective artifact repair |
+| --- | --- | --- | --- | --- | --- |
+| HO-01 | 2 | 2 | 2 | 2 | None identified |
+| HO-02 | 2 | 2 | 2 | 2 | None identified |
+| HO-03 | 2 | 2 | 2 | 2 | None identified |
+| HO-04 | 2 | 2 | 2 | 2 | None identified |
+| HO-05 | 2 | 2 | 2 | 2 | None identified |
+| HO-07 | 2 | 2 | 2 | 2 | None identified |
+| HO-10 | 2 | 2 | 2 | 2 | None identified |
+| HO-11 | 2 | 2 | 2 | 2 | None identified |
+| HO-17 | 2 | 2 | 2 | 2 | None identified |
+
+## HO-01
+
+Requested three Markdown engineering drafts plus a summary exist and link coherently. A substantial response is proportionate to the multi-artifact task.
+
+- **C1: 2.** All four source needs are reproduced without changing their wording and traced through R-01–R-12 to functions, components, and planned verification. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-01/outputs/requirements.md:7).
+- **C2: 2.** Independent inhibit causes, explicit eligible resume, timer reset, stale-data behavior and proposed startup rules are coherent. Sample continuity and freshness reference choices remain explicit decisions. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-01/outputs/architecture.md:23).
+- **C3: 2.** The 50 ms value remains unsupported; physical stopping, weather, safe position, timing tolerances, and reliability are left open with owners and evidence needs. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-01/outputs/requirements.md:39).
+- **C4: 2.** Actual requirements, architecture and verification files exist. Interfaces and boundary/recovery observations are actionable; all eight verification activities are explicitly planned, with zero executed/verified/accepted claims. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-01/outputs/verification.md:3).
+
+N-01 through N-04 wording and IDs preserved. Source obligations, candidate components, derived proposals and open decisions are distinguished.
+
+**Rubric adjudication:** Accept with interpretation: a reviewable draft may propose timer/freshness semantics and identify decisions; it should not invent missing thresholds merely to satisfy 'defines'.
+
+**Limits:** The proposed sample-continuity/freshness policy, response deadlines, stopping physics, remote scope and recovery authority are not accepted design facts. The direct local stop path is a design proposal, not demonstrated independence from MCU, power or mechanical failures.
+
+**Repair effort:** None identified for the requested draft. Completing D-01–D-07 is subsequent design work.
+
+## HO-02
+
+A short classification review with correction, consequence, proposed owner and missing evidence is supplied.
+
+- **C1: 2.** Correctly identifies 876.5820 as hemodialysis and uses 880.5725 Class II as a provisional starting point for the described external pump, without finalizing its submission route. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-02/outputs/output.md:5).
+- **C2: 2.** Requests intended-use/system-boundary, product-code, predicate and substantial-equivalence evidence; distinguishes the Class III-system exception and diagnostic control from local flow feedback. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-02/outputs/output.md:5).
+- **C3: 2.** Separates product class, software safety class and FDA documentation level; uses Rule 12 rather than Rule 11 as the pump rationale and retains Rule 3.3 and Rule 22 boundaries. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-02/outputs/output.md:6).
+- **C4: 2.** Current primary eCFR, FDA and MDCG content supports the principal corrections. The artifact accurately discloses inaccessible consolidated MDR text and unavailable licensed IEC clauses. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-02/outputs/output.md:5).
+
+Live primary-source checks corroborate the FDA/MDCG statements and edition/locator information. IEC publisher metadata confirms edition identity only; the output does not claim to have read its full classification method.
+
+Primary checks corroborate the [eCFR infusion-pump provision](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-880/subpart-F/section-880.5725), the unrelated [hemodialysis provision](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-876/subpart-F/section-876.5820), the [FDA guidance and software cover notice](https://www.fda.gov/media/78369/download), and [MDCG 2021-24 Rev.1](https://health.ec.europa.eu/system/files/2021-10/mdcg_2021-24_en_0.pdf). The [IEC publisher page](https://webstore.iec.ch/en/publication/22794) supports edition identity and lifecycle scope, not a full normative classification audit.
+
+**Rubric adjudication:** Qualify criterion 1: 880.5725/Class II is the justified starting point for this specified device, not a universal class/pathway for every pump. Rule 12 is conditional on hazardous administration; Rule 3.3 and Rule 22 matter to this boundary.
+
+**Limits:** No final product-code, 510(k)/PMA, EU classification or software class is established. Producer did not read the consolidated MDR legal text; nonbinding MDCG guidance is explicitly limited. The Class C discussion is conditional and still requires the adopted licensed IEC classification method and product risk analysis.
+
+**Repair effort:** None identified in the bounded review. Final classification needs the explicitly listed product evidence and adopted legal/standard texts.
+
+## HO-03
+
+Saves a clear boundary assessment, complete mapping table and minimum evidence package; appropriately leaves the final criterion open.
+
+- **C1: 2.** Correctly rejects Criterion 3 as an automatic exemption and distinguishes replacing the same log-checking activity from claiming credit to remove other processes. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-03/outputs/output.md:1).
+- **C2: 2.** Criterion 1 maps A/B/C/D to TQL-1/2/3/4, including the Level B correction; tool name alone is not used to assign qualification. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-03/outputs/output.md:15).
+- **C3: 2.** Criterion 2 maps A/B to TQL-4 and C/D to TQL-5; Criterion 3 remains TQL-5 where qualification is required. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-03/outputs/output.md:15).
+- **C4: 2.** Intended use, additional process credit, remaining output verification, exact configuration and program basis govern the decision. The public FAA Table 2 is correctly scoped as legacy-tool correlation, supported by NASA's public research explanation. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-03/outputs/output.md:3).
+
+Reviewer verified AC 20-115D paragraph 10 and Table 2 and NASA/CR-2017-219371 section 3.3.1, printed page 11. Sources are not represented as an authority decision or full licensed standard review.
+
+The mappings and legacy context agree with [FAA AC 20-115D, paragraph 10 and Table 2](https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-115D.pdf). The criterion distinction agrees with [NASA/CR-2017-219371, section 3.3.1, printed page 11](https://shemesh.larc.nasa.gov/fm/FMinCert/NASA-CR-2017-219371.pdf). The output retains both sources' limits.
+
+**Rubric adjudication:** Accept with qualification: mappings apply after establishing qualification need and intended-use criterion. Do not reward blanket qualification by tool name, or punish justified retention of criterion uncertainty.
+
+**Limits:** No authorization to eliminate current manual checking or completed tool qualification is claimed. Actual credited objectives, residual checks and operational use must be known before selecting Level A TQL-4 versus TQL-5.
+
+**Repair effort:** None identified. The requested credit ledger and program decision remain subsequent work.
+
+## HO-04
+
+The review delivers impact analysis, missing evidence and concrete conditional repairs without pretending that unseen reports/files were inspected.
+
+- **C1: 2.** Computes 260 ms and 60 ms deficit only for the assumed serial path, notes co-occurrence/endpoint uncertainty, and correctly refuses to count the old 460 ms observation as verification of 200 ms. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-04/outputs/output.md:7).
+- **C2: 2.** Locates REQ-7, allocations, interfaces, procedure, configuration and end-event impacts; repair options include reduced latency, genuine parallelism, design change and authorized requirement reconsideration. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-04/outputs/output.md:17).
+- **C3: 2.** Old evidence remains historical and conditionally reusable only for unchanged scope; the absent new report is explicitly planned with no outcome. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-04/outputs/output.md:28).
+- **C4: 2.** Separates trace navigation from semantic sufficiency and calls for actual current-configuration evidence, raw logs, timing uncertainty and a justified worst-case argument. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-04/outputs/output.md:34).
+
+Preserves REQ-7 and all supplied timing values. Does not invent stage order, missing overhead, test logs or a proven implementation failure.
+
+**Rubric adjudication:** Accept the frozen conditional wording. An upper-bound sum above the requirement does not by itself prove physical infeasibility or an observed implementation failure.
+
+**Limits:** The 260 ms calculation is conditional allocation analysis, not proof that all maxima coincide or that an actual run took 260 ms. The original and planned reports were not supplied as actual input files.
+
+**Repair effort:** None identified. The output already requests the endpoint/path evidence needed to resolve the actual design.
+
+## HO-05
+
+Provides a focused minimum artifact request and a concrete evidence plan for the request/service thread.
+
+- **C1: 2.** Separates line execution from functional/property and requirement evidence; requests the actual coverage denominator, exclusions, checkers and versioned results. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-05/outputs/output.md:1).
+- **C2: 2.** Identifies bounded-versus-unbounded reasoning and the grant-high environment's overconstraint. Correctly treats vacuity as something to test, and preserves the possibility of a genuine induction/completeness result. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-05/outputs/output.md:6).
+- **C3: 2.** Requests exact properties, assumptions, tool modes/configuration and proof artifacts; relates the logic result to arbiter contracts, implementation, clock/reset, timing and target observations. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-05/outputs/output.md:13).
+- **C4: 2.** Uses public tool-author documentation only as an example of result modes, discloses the unavailable paper and invents no standard clause, assurance class or executed run. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-05/outputs/output.md:9).
+
+Preserves the depth-20 and grant-always-high facts without claiming actual reports were inspected or that a particular formal tool was used.
+
+The example distinction among bounded safety, unbounded safety, liveness and cover modes is supported by the [tool-author SBY reference](https://yosyshq.readthedocs.io/projects/sby/en/latest/reference.html). The output correctly avoids inferring that the team used this tool.
+
+**Rubric adjudication:** Clarify 'vacuity problem': grant always high establishes a mismatch/overconstraint risk, not necessarily vacuity of every possible property. A valid unbounded proof can also have an internal depth; inspect result semantics.
+
+**Limits:** Actual property semantics, initialization, model abstraction and deployed environment are unknown. Unconditional eventual service may be impossible if the real environment can deny service forever; this is a conditional logical observation, not an asserted product finding.
+
+**Repair effort:** None identified. Actual evidence assessment awaits the requested files.
+
+## HO-07
+
+A coherent operational draft covers all requested exception and recovery paths. Its detail is useful for a multi-actor custody scenario; no fixed length was requested.
+
+- **C1: 2.** Names proposed responsibilities and distinguishes possession from accountability; normal, unavailable-recipient and authorized-return final states preserve custody. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-07/outputs/output.md:13).
+- **C2: 2.** Covers outages at different handoff stages, uncertain possession, stale/duplicate commands and explicit recovery; reconnection alone cannot authorize another transfer. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-07/outputs/output.md:53).
+- **C3: 2.** Five validation cases require observable possession, authority, records, staff responses and restoration behavior. Missing timing/staffing/platform capabilities remain decisions rather than invented performance. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-07/outputs/output.md:78).
+- **C4: 2.** Medication choice, dosing, administration and suitability decisions remain outside the transport boundary; clinical handling concerns are referred to the responsible service. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-07/outputs/output.md:3).
+
+Clearly separates supplied facts from proposed roles, custody policy and unverified platform capabilities.
+
+**Rubric adjudication:** Accept. A visibly unresolved, accountable hold is a legitimate final state; the rubric should not force a fabricated successful delivery or authorization.
+
+**Limits:** Custody-transfer policy, offline authority, no-response contingency, handling limits and platform capabilities require agreement/verification. No robot trial, clinical validation, legal compliance or safe operational acceptance is established.
+
+**Repair effort:** None identified for the draft. Operational agreements and platform capability work remain open.
+
+## HO-10
+
+Delivers an actionable reasoning review and next evidence package with conditional mitigation options.
+
+- **C1: 2.** Distinguishes perception insufficiency, triggering environment, systematic/calibration issues and possible random/undetected hardware malfunction; healthy diagnostics do not decide the cause. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-10/outputs/output.md:1).
+- **C2: 2.** Identifies shared optics, windscreen, power and further dependencies without claiming a second camera can never help. Requires joint-failure and mitigation-comparison evidence. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-10/outputs/output.md:7).
+- **C3: 2.** Scopes the daylight result and proposes relevant low-light, boundary, response, false-positive and dependency observations tied to an actual operating envelope. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-10/outputs/output.md:8).
+- **C4: 2.** Preserves driver/system responsibility and decision authority; declines unsupported ASIL, decomposition or risk acceptance. Public ISO scope claims are accurately bounded. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-10/outputs/output.md:14).
+
+ISO 21448:2022 and ISO 26262-1:2018 public scopes corroborate the narrow standards distinction; the output reports no licensed clause access or actual incident-log inspection.
+
+The narrow scope claims match the public publisher abstracts for [ISO 21448:2022](https://www.iso.org/standard/77490.html) and [ISO 26262-1:2018](https://www.iso.org/standard/68383.html). No licensed clause compliance was assessed.
+
+**Rubric adjudication:** Accept. Shared dependencies undermine an untested sufficiency/independence claim; they do not establish that every dual-camera design is useless.
+
+**Limits:** The cause of the reported miss is not established. Vehicle response, usable envelope, diagnostic scope, driver role and risk thresholds remain program decisions.
+
+**Repair effort:** None identified. The proposed discriminating observations are needed before mitigation acceptance.
+
+## HO-11
+
+Provides an operating concept and one coherent degraded scenario, with explicit staleness and restoration-dispute treatment.
+
+- **C1: 2.** Defines the delivery mission, center priority authority and autonomous team resource commitments; preserves original stock codes and units and excludes unrelated defense tasks. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-11/outputs/output.md:1).
+- **C2: 2.** The six-hour outage scenario covers loss detection, local authority, stock/capacity/route changes, messages, delivery evidence and restoration reconciliation. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-11/outputs/output.md:20).
+- **C3: 2.** Separates proposed agreements from accepted authority, treats six hours as outage duration rather than automatic priority validity, and preserves unresolved restoration disputes without inventing a joint arbiter. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-11/outputs/output.md:16).
+- **C4: 2.** Exercise evidence includes actual authority/delegation records, starting conditions, actions, delivered versus unmet quantities, reconciliation and workload. It avoids equating communications uptime with mission success. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-11/outputs/output.md:30).
+
+Added scenario events are explicitly synthetic injects. No real agreement, dispatch, external policy or military acquisition basis is claimed.
+
+**Rubric adjudication:** Accept. A justified unresolved hold is proper where agreement is absent; the scenario need not invent emergency powers to appear complete.
+
+**Limits:** No delegation, validity rule or dispute agreement exists in the supplied facts; the concept cannot itself authorize dispatch. A successful tabletop would not demonstrate real flood-delivery performance.
+
+**Repair effort:** None identified. Participants must agree the open operating rules before exercising them as accepted authority.
+
+## HO-17
+
+A concrete finite test-design proposal and independent observation contract are supplied. Missing instrument specifics are handled by explicit mapping and acceptance decisions.
+
+- **C1: 2.** Finds temporal/history/state interaction gaps in single-control coverage and separates the supplied historical fact from prototype behavior. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-17/outputs/output.md:1).
+- **C2: 2.** Twelve finite test families cover normal history comparisons, edit/cancel, boundary ordering, rapid transitions, interruption and recovery; independent physical observations distinguish hidden state, stale commands and unintended output. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-17/outputs/output.md:9).
+- **C3: 2.** Finite configurations/offsets and observation limits are explicit; residual histories, schedules, faults and measurement biases remain. No exhaustive coverage, accident-rate transfer or executed result is claimed. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-17/outputs/output.md:24).
+- **C4: 2.** Preserves the teaching/no-patient-use scope, marks invented state labels as test abstractions and supplies actionable laboratory reasoning without assigning medical classification. [Artifact locator](/workspace/worktrees/builderbob/mbse-performance-20261113-v2/task-domain/HO-17/outputs/output.md:3).
+
+Uses only the supplied Therac-25 fact and plainly states that the historical paper was not retrieved. Proposed states, invariants and sequences are not presented as device facts.
+
+**Rubric adjudication:** Accept as mechanism-oriented examples, not a mandatory canonical test list. Alternative finite suites may satisfy the task if they discriminate temporal/state defects.
+
+**Limits:** The twelve families still need mapping to real controls, configuration values, tolerances and a published finite execution schedule. No prototype, firmware, logs or instruments were available; no general safety or clinical conclusion follows.
+
+**Repair effort:** None identified in the proposed test design. Instantiation and execution remain subsequent laboratory work.
+
+## Claim limits
+
+- Only one output per case was reviewed. Multiple cases share each participant context and are correlated.
+- The cases and rubrics are public, the producer environment is instruction-separated rather than a securely held-out sandbox, and effective inherited exposure is not independently reconstructed.
+- Exact producer model/settings/tokens/cost remain unknown. Detailed tool/source/skill access metadata is participant self-report unless corroborated here by actual artifacts or independent source retrieval.
+- No separate retained transcript authenticated individual skill reads; no native host skill discovery or causal skill contribution is established.
+- The rubric is coarse and the nine cases are finite. Full criterion ratings indicate adequate responses to these requests, not exhaustive absence of errors or broad systems-engineering ability.
+- Generated verification plans and source citations do not count as executed system tests, product approval, regulatory acceptance or demonstrated real-world performance.
+- No paid API, production configuration or participant artifact was changed by this review.
+
+Public sources were retrieved as extracted text during the review. Original source-byte hashes are not claimed. The structured record retains the exact URLs, editions, locators and access limits. The IEC classification method and full licensed ISO/DO texts were not independently read. Historical transfer in HO-17 is judged against the supplied fact; no additional accident details are asserted.
+
+No passing maintenance test, generated plan or source citation is used as a substitute for model quality, actual device behavior, authorized agreements or accepted risk.

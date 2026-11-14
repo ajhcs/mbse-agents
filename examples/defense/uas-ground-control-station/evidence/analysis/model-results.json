@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "model": "GCSLinkLoss",
+  "hazard": "HZ-001",
+  "scope": "exhaustive_static_boolean_and_conditional_probability",
+  "mission": "One ground-station supervision interval during a communication-loss demand; no flight-hour rate or air-vehicle trajectory is calculated.",
+  "basic_events": 9,
+  "completed_assignments": 512,
+  "hazard_assignments": 125,
+  "cut_sets_complete": true,
+  "minimal_cut_sets": [
+    [
+      "BE7",
+      "BE8",
+      "BE9"
+    ],
+    [
+      "BE1",
+      "BE3",
+      "BE7",
+      "BE9"
+    ],
+    [
+      "BE1",
+      "BE4",
+      "BE7",
+      "BE9"
+    ],
+    [
+      "BE2",
+      "BE3",
+      "BE7",
+      "BE9"
+    ],
+    [
+      "BE2",
+      "BE4",
+      "BE7",
+      "BE9"
+    ],
+    [
+      "BE5",
+      "BE6",
+      "BE7",
+      "BE8"
+    ],
+    [
+      "BE1",
+      "BE3",
+      "BE5",
+      "BE6",
+      "BE7"
+    ],
+    [
+      "BE1",
+      "BE4",
+      "BE5",
+      "BE6",
+      "BE7"
+    ],
+    [
+      "BE2",
+      "BE3",
+      "BE5",
+      "BE6",
+      "BE7"
+    ],
+    [
+      "BE2",
+      "BE4",
+      "BE5",
+      "BE6",
+      "BE7"
+    ]
+  ],
+  "scenarios": [
+    {
+      "id": "nominal-synthetic",
+      "basis": "Synthetic supervision-demand inputs.",
+      "probability": "10121977898580560958001/100000000000000000000000000000000",
+      "decimal": 1.0121977898580562e-10,
+      "unit": "per_declared_demand",
+      "overrides": {}
+    },
+    {
+      "id": "shared-infrastructure-stress",
+      "basis": "Increase common communication and monitoring dependencies.",
+      "probability": "10012185723036065976001/1000000000000000000000000000000",
+      "decimal": 1.0012185723036065e-08,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE8": "1/1000",
+        "BE9": "1/1000"
+      }
+    },
+    {
+      "id": "heartbeat-independent",
+      "basis": "Hypothetical reliable heartbeat monitor and removal of its shared dependency.",
+      "probability": "0",
+      "decimal": 0.0,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE5": "0",
+        "BE9": "0"
+      }
+    },
+    {
+      "id": "operator-crosscheck-improved",
+      "basis": "Conditional improvement in operator detection opportunity; requires workload validation.",
+      "probability": "10121977898580560958001/1000000000000000000000000000000000",
+      "decimal": 1.012197789858056e-11,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE7": "1/1000"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "GCS-P1",
+      "description": "A functioning heartbeat monitor prevents an undetected loss when common monitoring failure is absent",
+      "expectation": "holds",
+      "property_holds": true,
+      "matched_assignments": 128,
+      "counterexamples": 0,
+      "first_counterexample": null,
+      "result": "pass"
+    },
+    {
+      "id": "GCS-P2",
+      "description": "An available BLOS path prevents total link loss without shared infrastructure failure",
+      "expectation": "holds",
+      "property_holds": true,
+      "matched_assignments": 64,
+      "counterexamples": 0,
+      "first_counterexample": null,
+      "result": "pass"
+    },
+    {
+      "id": "GCS-C1",
+      "description": "Separate LOS and BLOS equipment faults are necessary for total undetected loss",
+      "expectation": "counterexample",
+      "property_holds": false,
+      "matched_assignments": 32,
+      "counterexamples": 5,
+      "first_counterexample": {
+        "BE1": false,
+        "BE2": false,
+        "BE3": false,
+        "BE4": false,
+        "BE5": false,
+        "BE6": false,
+        "BE7": true,
+        "BE8": true,
+        "BE9": true
+      },
+      "result": "pass"
+    },
+    {
+      "id": "GCS-C2",
+      "description": "Two monitoring software modules establish independent detection",
+      "expectation": "counterexample",
+      "property_holds": false,
+      "matched_assignments": 128,
+      "counterexamples": 25,
+      "first_counterexample": {
+        "BE1": false,
+        "BE2": false,
+        "BE3": false,
+        "BE4": false,
+        "BE5": false,
+        "BE6": false,
+        "BE7": true,
+        "BE8": true,
+        "BE9": true
+      },
+      "result": "pass"
+    }
+  ],
+  "probability_assumption": "mutually_independent_basic_events_with_shared_causes_explicitly_reused",
+  "parameter_status": "synthetic_scenario_inputs_not_measured_failure_rates",
+  "physical_validation": "not_performed",
+  "risk_acceptance": "not_assessed",
+  "result": "pass",
+  "configuration": {
+    "analysis/failure-model.json": "fe48518bc4bbc9bb5b03910bd128ad387fa79005650cf3ddcd993eea99bfe840",
+    "scripts/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b",
+    "requirements.md": "db93cb7cf6038ad8ce51eddd4110fce0498b91d6b6f080c32dd90870cd28f9d1",
+    "architecture.md": "0c923b0600e7c05dd16a63dcd021e6c6fc2d8baace87e6bda6e57257ea16f910",
+    "hazard-analysis.md": "b72c3f7afa72d171425b68d9eeb5fd6fda3524ec40bb597190b78d683dae82fc"
+  },
+  "loaded_sources": {
+    "scripts/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b"
+  },
+  "run_id": "912a32b0850766c79567"
+}

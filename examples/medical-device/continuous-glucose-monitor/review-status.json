@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "system": "continuous-glucose-monitor",
+  "status": "current_proposed_teaching_baseline",
+  "scope": [
+    "declared_record_identity_and_table_links",
+    "requirement_source_claim_inventory",
+    "artifact_existence_by_lifecycle",
+    "bounded_local_markdown_paths"
+  ],
+  "source_reviews": [
+    {
+      "requirement": "REQ-FUN-001",
+      "candidate_basis": "FDA 510(k) predicate performance requirements; stakeholder need (patient, endocrinologist)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-002",
+      "candidate_basis": "Stakeholder need (patient); FDA 510(k) predicate",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-003",
+      "candidate_basis": "Stakeholder need (patient); IEC 62366-1 (usability)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-004",
+      "candidate_basis": "ISO 14971; stakeholder need (patient)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-005",
+      "candidate_basis": "Stakeholder need (endocrinologist); international consensus on CGM reporting",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-006",
+      "candidate_basis": "IMDRF SaMD N41; FDA SaMD guidance; ISO 14971",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-001",
+      "candidate_basis": "ISO 14971; stakeholder need (patient, endocrinologist)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-002",
+      "candidate_basis": "ISO 14971; FDA 510(k) predicate labeling",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-001",
+      "candidate_basis": "FDA premarket cybersecurity guidance; ISO 14971",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-002",
+      "candidate_basis": "FDA premarket cybersecurity guidance; HIPAA Security Rule",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-PRF-001",
+      "candidate_basis": "Stakeholder need (patient); architecture constraint",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    }
+  ],
+  "open_references": [],
+  "model_evidence": "no_system_model_execution",
+  "independent_engineering_review": "not_performed",
+  "licensed_standard_clause_audit": "not_performed",
+  "physical_validation": "not_performed",
+  "risk_acceptance": "not_assessed",
+  "historical_snapshot": "history/pre-hardening.json"
+}

@@ -1,0 +1,76 @@
+{
+  "case": "HO-09",
+  "participant": "performance_design",
+  "start_utc": "2026-11-13T23:42:52.164122+00:00",
+  "end_utc": "2026-11-13T23:56:20.964555+00:00",
+  "model_id": "unknown",
+  "settings": "unknown",
+  "tokens": "unknown",
+  "cost": "unknown",
+  "shared_context_limitation": "Six cases HO-01, HO-04, HO-07, HO-09, HO-12, HO-13 share one participant context. Outputs are not independent across cases.",
+  "skills_read": [
+    ".agents/skills/mbse-systems-engineering/SKILL.md",
+    ".agents/skills/mbse-system-concept/SKILL.md"
+  ],
+  "skills_used": [
+    ".agents/skills/mbse-systems-engineering/SKILL.md",
+    ".agents/skills/mbse-system-concept/SKILL.md"
+  ],
+  "references_read": [
+    ".agents/skills/mbse-systems-engineering/references/connected-work.md",
+    ".agents/skills/mbse-systems-engineering/references/engineering-records.md",
+    ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md",
+    ".agents/skills/mbse-system-concept/references/concept-decisions.md"
+  ],
+  "tools": [
+    "functions.exec",
+    "exec_command",
+    "bash",
+    "python3 pathlib/hashlib/json/datetime",
+    "cat (Markdown artifact creation)",
+    "python3 final hash/manifest and Markdown link check"
+  ],
+  "input_sha256": {
+    ".agents/skills/mbse-system-concept/SKILL.md": "a682ef0b2a662ced43e52a75c0adf3854c84005687741200db3efc2417f2efea",
+    ".agents/skills/mbse-system-concept/agents/openai.yaml": "694ba3ac7233e73452f57da1fb9b38570a1dfafd9d31d7da2795231add64d007",
+    ".agents/skills/mbse-system-concept/references/concept-decisions.md": "b4993f8378dbd2d90bbd13735ec8cc1b6836181fa0a7e4cce18432ae063cc4bb",
+    ".agents/skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    ".agents/skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    ".agents/skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    ".agents/skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253",
+    ".agents/skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "packet-manifest.json": "ce5d0a71245f0a4254b9df66983d1c6f590266f33aebc588dc1f424a1da22668",
+    "request.md": "7d3e4ee5dc250e493e9c0a698ffcbedc96768134888d9f710dffd3230a030b74"
+  },
+  "output_sha256": {
+    "outputs/output.md": "b5e266c12b824dc43e8c51211b34929feaa2f6f48843b6899ca09ddbf2725244"
+  },
+  "exceptions": [
+    "The python command is unavailable; python3 is used.",
+    "Demand, outage duration, quality basis, costs and staffing workload are absent; selection remains conditional.",
+    "Output hash map excludes run-record.json to avoid self-referential hashing."
+  ],
+  "status": "completed",
+  "execution": "Concept reasoning and symbolic water balance only; no populated model, field data, cost estimate or simulation.",
+  "artifact_integrity": {
+    "checked_utc": "2026-11-13T23:56:20.964553+00:00",
+    "all_inputs_match_initial_sha256": true,
+    "all_manifest_entries_match_sha256": true,
+    "all_output_sha256_match": true,
+    "local_markdown_links_resolve": true,
+    "scope": "Filesystem/byte integrity and artifact-link checks only; not controller, model quality or operational verification."
+  },
+  "shared_preparation": {
+    "workspace_mount_observed": "/workspace mounted from /dev/nvme1n1p1, ext4, rw,nosuid,nodev,relatime",
+    "preparation_tools": [
+      "findmnt",
+      "python (unavailable)",
+      "python3"
+    ],
+    "timing_note": "Case start is packet intake/hash initialization. All six requests were then read in one call and authored sequentially in shared context; intervals overlap and are not additive compute timings."
+  },
+  "access_limits_observed": [
+    "Used only assigned packet request, manifest, skill packages, references and HO-13 supplied inputs for task reasoning.",
+    "No source repository, memory, other arm, rubric/evaluation key, prior participant outputs, external sources, production systems or paid APIs accessed."
+  ]
+}

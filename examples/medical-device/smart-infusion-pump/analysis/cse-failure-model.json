@@ -1,0 +1,83 @@
+{
+  "version": "failure-analysis-1.0",
+  "id": "PumpOverinfusion",
+  "revision": "gallery-hardening-1",
+  "basis": "Authored correction of the preserved gallery hazard model. Boolean event meanings and parameter scenarios are proposed teaching abstractions, not accepted field data.",
+  "events": {
+    "BE1": {
+      "description": "Running infusion-control software commands excessive delivery",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE2": {
+      "description": "Motor driver runaway fault",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE3": {
+      "description": "Shared flow-sensor under-reading drives control and defeats deviation sensing",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE4": {
+      "description": "Independent deviation-monitor failure",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE5": {
+      "description": "Hardware rate limiter fails to inhibit excessive drive",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE6": {
+      "description": "Processor watchdog hardware fails",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE7": {
+      "description": "Shared motor-drive/limiter dependency defeats both functions",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    }
+  },
+  "gates": {
+    "G1": {
+      "operator": "or",
+      "inputs": [
+        "BE1",
+        "BE2",
+        "BE3",
+        "BE7"
+      ]
+    },
+    "G2": {
+      "operator": "or",
+      "inputs": [
+        "BE3",
+        "BE4"
+      ]
+    },
+    "G3": {
+      "operator": "or",
+      "inputs": [
+        "BE5",
+        "BE7"
+      ]
+    },
+    "TOP": {
+      "operator": "and",
+      "inputs": [
+        "G1",
+        "G2",
+        "G3"
+      ]
+    }
+  },
+  "top_event": "TOP",
+  "probability": {
+    "assumption": "mutually_independent",
+    "basis": "Synthetic demand scenarios; shared causes are reused event IDs.",
+    "mission": "One excessive-delivery challenge to the proposed flow-control architecture; physical flow, exposure duration, and harm are outside this static model."
+  },
+  "fmea": {}
+}

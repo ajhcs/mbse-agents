@@ -13,4 +13,6 @@ summary: >
   stack for a 100+ qubit superconducting quantum processor. RF pulse
   generation, qubit readout, error correction feedback loop,
   calibration automation.
-evidence_status: planned
+evidence_status: partial_model_execution
+physical_evidence_status: planned
+risk_acceptance: not_assessed

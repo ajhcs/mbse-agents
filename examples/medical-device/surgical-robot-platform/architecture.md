@@ -1,6 +1,6 @@
 # Architecture
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## System Context
 
@@ -118,7 +118,7 @@ The system uses physical separation and independent processors to contain faults
 
 **Decision:** Use a dedicated point-to-point fiber-optic link between the surgeon console and the system controller rather than routing over the hospital Ethernet network.
 
-**Rationale:** The teleoperation control loop requires deterministic sub-2 ms round-trip latency and near-zero packet loss. Hospital networks cannot guarantee this quality of service. A dedicated link also eliminates the cybersecurity attack surface of routing safety-critical motion commands over a shared network.
+**Rationale:** The teleoperation control loop requires deterministic sub-2 ms round-trip latency and near-zero packet loss. Hospital networks cannot guarantee this quality of service. A dedicated link reduces exposure to shared routing; endpoints, maintenance interfaces, message authenticity, availability and recovery still require threat analysis and testing.
 
 **Trade-off:** The surgeon console cannot be located in a geographically distant site. Accepted because the clinical use case is same-building teleoperation, not remote surgery.
 
@@ -136,4 +136,4 @@ The system uses physical separation and independent processors to contain faults
 
 **Rationale:** The maximum force limit (25 N per arm) must hold even under complete software failure. A hardware current limiter provides a force ceiling that is physically enforced regardless of commanded torque values, providing defense in depth against motion control software faults.
 
-**Trade-off:** The fixed hardware limit constrains the maximum achievable force even in legitimate high-force scenarios. Accepted because 25 N exceeds the force required for any intended surgical manipulation, and exceeding this force against tissue would constitute a hazardous condition.
+**Trade-off:** A fixed force limit constrains manipulation. The retained 25 N value is an unvalidated design hypothesis; appropriateness depends on instrument, tissue, contact geometry, direction, duration and intended procedure. Establish task-specific limits with representative physical and clinical evidence before accepting the setting.

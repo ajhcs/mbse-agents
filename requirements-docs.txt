@@ -1,0 +1,2 @@
+# Optional documentation build only; skill installation remains standard-library-only.
+Markdown==3.9

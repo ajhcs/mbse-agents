@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "system": "eva-suit-life-support",
+  "status": "current_proposed_teaching_baseline",
+  "scope": [
+    "declared_record_identity_and_table_links",
+    "requirement_source_claim_inventory",
+    "artifact_existence_by_lifecycle",
+    "bounded_local_markdown_paths"
+  ],
+  "source_reviews": [
+    {
+      "requirement": "REQ-FUN-001",
+      "candidate_basis": "NPR 8705.2; EVA suit pressure garment ICD",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-002",
+      "candidate_basis": "NASA-STD-3001 Vol. 2; crew health requirements",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-003",
+      "candidate_basis": "NASA-STD-3001 Vol. 2; SMAC limits for CO2",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-004",
+      "candidate_basis": "NASA-STD-3001 Vol. 2; thermal comfort guidelines",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-005",
+      "candidate_basis": "EVA crew health requirements; heritage PLSS design data",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-FUN-006",
+      "candidate_basis": "Artemis EVA requirements; stakeholder need (EVA flight controller)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-001",
+      "candidate_basis": "NPR 8705.2 Section 4.2; NASA-STD-8719.13",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-002",
+      "candidate_basis": "NPR 8705.2; REQ-FUN-006",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-003",
+      "candidate_basis": "NASA-STD-8719.13; NPR 8705.2",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-004",
+      "candidate_basis": "NASA-STD-3001 Vol. 2; crew health requirements",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-SAF-005",
+      "candidate_basis": "NASA-STD-5005; NPR 8705.2",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-001",
+      "candidate_basis": "EVA suit ICD; stakeholder need (crew equipment integration)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    },
+    {
+      "requirement": "REQ-IFC-002",
+      "candidate_basis": "EVA operations requirements; stakeholder need (EVA flight controller)",
+      "status": "candidate_basis_requires_applicability_review",
+      "decision": "Confirm factual support, edition, locator and applicability before treating this as an obligation."
+    }
+  ],
+  "open_references": [],
+  "model_evidence": "no_system_model_execution",
+  "independent_engineering_review": "not_performed",
+  "licensed_standard_clause_audit": "not_performed",
+  "physical_validation": "not_performed",
+  "risk_acceptance": "not_assessed",
+  "historical_snapshot": "history/pre-hardening.json"
+}

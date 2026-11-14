@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "independent-review-artifact-hashes",
+  "created_at": "2026-11-14T00:19:47.143856+00:00",
+  "files": {
+    "quiz-reasoning-review.md": "226344d82990c9bff875870fff599de66b9ae6dc2295a4a70e1d23b409cb1c9d",
+    "quiz-reasoning-review.json": "aad4a5fab6e5900781314419c7dd018996222a436a1508f531ff4917b7270d56",
+    "quiz-reasoning/source/input-verification.json": "5fb9a34a903fa289afdd77b1db5d6c077a60cb6c17efc577249148815e5f6362",
+    "quiz-reasoning/preservation-verification.json": "da3a52dbc00261cdce3662772da6c5d83fb309bcd1d9e39b63d60fcfede050ce",
+    "quiz-reasoning/score-report.json": "f279c87103fd6d818f48d55cc84a6342720b49fc5407740af7e4e05629d62d5a",
+    "quiz-reasoning/score-report-validation.json": "deb8237c66157d4c956e4273ce46f4b2c1f387ee13999d50fb695e04e34dc207",
+    "quiz-reasoning/none/review.json": "70cf3dd251cc1a9e2bd8b4304af815fad9ced3f759be2bd1d580cda47084421c",
+    "quiz-reasoning/none/assessment-checkpoint.json": "d415efde351dffdf20c4e1197f38384e9de1225567a90f91bf5c02be1fbb801c",
+    "quiz-reasoning/none/reviewed-score.json": "2004d6ae46cff1ba747a341d19191a7c2b2d95efb81f510914f5006d6f74814c",
+    "quiz-reasoning/none/original-parser-attempt.json": "9e860c87a6f6eb7fbff1b4f7ed3cb4ba796943b0237155ba5490f2e11bfb8313",
+    "quiz-reasoning/none/review-binding-validation.json": "673ef3224f362a576f9ecf296435df60cfcc898439bed783c7418b0448fcf6a1",
+    "quiz-reasoning/task/review.json": "8178a1375ac18b661d8ff524d8edcac1477f3eb0c0e0b4fd081bbf0e59b86b58",
+    "quiz-reasoning/task/assessment-checkpoint.json": "87989863b1994bdefb11b42ec04433a3d3f95fbe09da6f33b7c7733df22e7856",
+    "quiz-reasoning/task/reviewed-score.json": "97143d04f85a544bbebbc0ef49cc7ab8097bf38cda0a935916554c8ae224a2c7",
+    "quiz-reasoning/task/original-parser-attempt.json": "327602f11def235c8910d5e12e1a04b43a90a44d310b39b8dea6764ad2447c7d",
+    "quiz-reasoning/task/review-binding-validation.json": "551a85cddb3b1ca39cacea7105fed239df97799fe2b6cc7c29d6299fa40a149a",
+    "quiz-reasoning/task-domain/review.json": "326f6872f35e839902b08b6b7475942cd32db43ff8124d1dddff42db6793eae1",
+    "quiz-reasoning/task-domain/assessment-checkpoint.json": "84d2d88286165b92016d09be0fb9367a2442df27d214493edee79861f98bfe55",
+    "quiz-reasoning/task-domain/reviewed-score.json": "c030009dd582ec2ed7f7cb810fcdfaf16516af6b010f57b58132479da1b899ba",
+    "quiz-reasoning/task-domain/original-parser-attempt.json": "6c990815abbe5f4de754f1506c353ad2d9dd4ff9c712b4608e73589091492dc5",
+    "quiz-reasoning/task-domain/review-binding-validation.json": "a9e24e2c06784ffbf194b8e32183e44239c98b36bb5c40c736997f2953199989"
+  },
+  "note": "Does not include itself. Original input hashes are separately recorded in source/input-verification.json."
+}

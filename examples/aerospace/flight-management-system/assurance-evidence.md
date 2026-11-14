@@ -1,6 +1,6 @@
 # Assurance Evidence
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Assurance Framework
 
@@ -22,6 +22,7 @@ The evidence package supports concurrent review by the FAA Aircraft Certificatio
 | State     | Meaning                                                    |
 |-----------|------------------------------------------------------------|
 | Planned   | Artifact identified, not yet started                       |
+| Executed | Named procedure ran and recorded scoped observations; outcome and acceptance are separate |
 | Drafted   | Initial content exists, under development                  |
 | Reviewed  | Peer or independent review completed                       |
 | Approved  | Authority or designated reviewer accepted                  |
@@ -29,7 +30,7 @@ The evidence package supports concurrent review by the FAA Aircraft Certificatio
 
 ## Evidence Index
 
-| EVD ID   | Artifact Name                                         | Location                                               | Demonstrates                                              | Standard Clause                | Review Milestone | Evidence Consumer      | Status   |
+| EVD ID   | Artifact Name                                         | Location                                               | Intended evidence scope                                              | Standard Clause                | Review Milestone | Evidence Consumer      | Status   |
 |----------|-------------------------------------------------------|--------------------------------------------------------|-----------------------------------------------------------|-------------------------------|------------------|------------------------|----------|
 | EVD-001  | Navigation Position Accuracy Test Report              | evidence/test-reports/nav-position-accuracy.pdf         | Position accuracy meets 0.05 NM (95%); sensor fusion performance | DO-178C Table A-6 (req-based testing) | SOI #3          | DER (Software)         | Planned  |
 | EVD-002  | Quantitative Safety Analysis (FTA) Report             | evidence/safety/quantitative-fta-report.pdf             | HZ-001 probability ≤ 1e-9/FH; HZ-007 probability ≤ 1e-7/FH | ARP4761A Section 4.3          | SOI #3           | DER (Systems)          | Planned  |
@@ -55,15 +56,15 @@ The evidence package supports concurrent review by the FAA Aircraft Certificatio
 | EVD-022  | WCET and CAST-32A Interference Analysis               | evidence/analysis/wcet-cast32a-analysis.pdf              | Guidance WCET ≤ 15 ms; multi-core interference within budget | CAST-32A; DO-178C Table A-7  | SOI #3           | DER (Software)         | Planned  |
 | EVD-023  | Navigation Continuity Reliability Analysis            | evidence/analysis/nav-continuity-analysis.pdf            | Navigation output loss probability ≤ 1e-5/FH               | ARP4761A Section 4.3          | SOI #3           | DER (Systems)          | Planned  |
 | EVD-024  | Cross-Channel Comparator Independence Evidence Package | evidence/analysis/comparator-independence.pdf           | Hardware independence of comparator from both software channels | ARP4761A CMA; DO-254 Section 5 | SOI #3          | DER (Systems/Hardware) | Planned  |
-| EVD-025  | Plan for Software Aspects of Certification (PSAC)     | evidence/plans/psac.pdf                                  | Software lifecycle planning, standards, environment         | DO-178C Section 10.1          | SOI #1           | DER (Software), ACO    | Drafted  |
-| EVD-026  | Plan for Hardware Aspects of Certification (PHAC)     | evidence/plans/phac.pdf                                  | Hardware lifecycle planning, standards, environment         | DO-254 Section 10.1           | SOI #1           | DER (Hardware), ACO    | Drafted  |
-| EVD-027  | System Development Plan                               | evidence/plans/system-dev-plan.pdf                       | ARP4754A process planning, DAL allocation, review schedule  | ARP4754A Section 5.1          | SOI #1           | DER (Systems), ACO     | Drafted  |
-| EVD-028  | Functional Hazard Assessment (FHA)                    | evidence/safety/fha-report.pdf                           | Aircraft/system failure condition identification and classification | ARP4761A Section 4.2     | SOI #2           | DER (Systems), ACO     | Drafted  |
-| EVD-029  | Preliminary System Safety Assessment (PSSA)           | evidence/safety/pssa-report.pdf                          | Safety requirement allocation, fault tree construction       | ARP4761A Section 4.3          | SOI #2           | DER (Systems)          | Drafted  |
-| EVD-030  | Software Requirements Specification (SRS)             | evidence/development/srs.pdf                             | High-level software requirements                             | DO-178C Table A-3             | SOI #2           | DER (Software)         | Drafted  |
-| EVD-031  | Hardware Requirements Specification (HRS)             | evidence/development/hrs.pdf                             | Hardware requirements for FPGA components                    | DO-254 Section 5.1            | SOI #2           | DER (Hardware)         | Drafted  |
-| EVD-032  | Software Design Description (SDD)                     | evidence/development/sdd.pdf                             | Software architecture and low-level requirements             | DO-178C Table A-4             | SOI #2           | DER (Software)         | Drafted  |
-| EVD-033  | Security Risk Assessment Report                       | evidence/security/security-risk-assessment.pdf           | DO-326A threat assessment, asset identification, security requirements | DO-326A Section 5.2    | SOI #2           | DER (Systems/Security) | Drafted  |
+| EVD-025  | Plan for Software Aspects of Certification (PSAC)     | evidence/drafts/psac.md                                  | Software lifecycle planning, standards, environment         | DO-178C Section 10.1          | SOI #1           | DER (Software), ACO    | Drafted  |
+| EVD-026  | Plan for Hardware Aspects of Certification (PHAC)     | evidence/drafts/phac.md                                  | Hardware lifecycle planning, standards, environment         | DO-254 Section 10.1           | SOI #1           | DER (Hardware), ACO    | Drafted  |
+| EVD-027  | System Development Plan                               | evidence/drafts/system-dev-plan.md                       | ARP4754A process planning, DAL allocation, review schedule  | ARP4754A Section 5.1          | SOI #1           | DER (Systems), ACO     | Drafted  |
+| EVD-028  | Functional Hazard Assessment (FHA)                    | evidence/drafts/fha-report.md                           | Aircraft/system failure condition identification and classification | ARP4761A Section 4.2     | SOI #2           | DER (Systems), ACO     | Drafted  |
+| EVD-029  | Preliminary System Safety Assessment (PSSA)           | evidence/drafts/pssa-report.md                          | Safety requirement allocation, fault tree construction       | ARP4761A Section 4.3          | SOI #2           | DER (Systems)          | Drafted  |
+| EVD-030  | Software Requirements Specification (SRS)             | evidence/drafts/srs.md                             | High-level software requirements                             | DO-178C Table A-3             | SOI #2           | DER (Software)         | Drafted  |
+| EVD-031  | Hardware Requirements Specification (HRS)             | evidence/drafts/hrs.md                             | Hardware requirements for FPGA components                    | DO-254 Section 5.1            | SOI #2           | DER (Hardware)         | Drafted  |
+| EVD-032  | Software Design Description (SDD)                     | evidence/drafts/sdd.md                             | Software architecture and low-level requirements             | DO-178C Table A-4             | SOI #2           | DER (Software)         | Drafted  |
+| EVD-033  | Security Risk Assessment Report                       | evidence/drafts/security-risk-assessment.md           | DO-326A threat assessment, asset identification, security requirements | DO-326A Section 5.2    | SOI #2           | DER (Systems/Security) | Drafted  |
 | EVD-034  | Common Mode Analysis (CMA) Report                     | evidence/safety/cma-report.pdf                           | Independence and common-cause analysis for redundancy arguments | ARP4761A CMA             | SOI #3           | DER (Systems)          | Planned  |
 | EVD-035  | DO-178C Structural Coverage Analysis (MC/DC)          | evidence/test-reports/structural-coverage.pdf            | MC/DC coverage for Level A software                          | DO-178C Table A-7 Objective 7 | SOI #3          | DER (Software)         | Planned  |
 | EVD-036  | Code Generator Tool Qualification Report (DO-330)     | evidence/tool-qualification/code-gen-tqr.pdf             | TQL-1 qualification for auto-code generator                  | DO-330 Section 9              | SOI #2           | DER (Software), ACO    | Planned  |
@@ -73,6 +74,8 @@ The evidence package supports concurrent review by the FAA Aircraft Certificatio
 | EVD-040  | Configuration Index                                   | evidence/cm/configuration-index.pdf                      | Complete list of all controlled artifacts with version IDs   | DO-178C Table A-8; DO-254 Section 8 | SOI #4    | DER (Software/Hardware), ACO | Planned |
 | EVD-041  | Problem Report Disposition Summary                    | evidence/cm/problem-report-summary.pdf                   | All PRs dispositioned; no open safety-relevant PRs           | DO-178C Table A-9             | SOI #4           | DER (Software), ACO    | Planned  |
 | EVD-042  | Final Compliance Summary                              | evidence/compliance/final-compliance-summary.pdf          | Means of compliance complete for all applicable regulations  | ARP4754A Section 5.4; 14 CFR 25.1309 | SOI #4    | ACO                    | Planned  |
+| EVD-MODEL-001 | Exhaustive HZ-001 logic and conditional scenario results | evidence/analysis/model-results.json | Complete static Boolean cuts, declared-parameter arithmetic and retained counterexamples; no physical requirement closure | Authored model; source-review.md | Engineering model review | Systems engineer | Executed |
+
 
 ## DO-178C Table A Mapping (DAL A)
 
@@ -99,7 +102,7 @@ Hardware evidence for programmable components CMP-FMC-01J (FMC FPGA) and CMP-DCU
 |----------------|---------------------------------------|-------------------------------------------------------|--------------------| ---------|
 | Section 5.1    | Hardware Requirements                 | Hardware Requirements Specification                   | EVD-031            | Drafted  |
 | Section 5.2    | Conceptual Design                     | FPGA architecture description and block diagrams      | EVD-032            | Drafted  |
-| Section 5.3    | Detailed Design                       | HDL source, synthesis reports, timing analysis         | (internal to EVD-032) | Planned |
+| Section 5.3 | Detailed Design | HDL source, synthesis reports, timing analysis | (internal to EVD-032) | Drafted |
 | Section 5.4    | Implementation                        | FPGA place-and-route results, bitstream               | (build artifacts)  | Planned  |
 | Section 5.5    | Verification                          | FPGA functional verification, timing verification     | EVD-003, EVD-020   | Planned  |
 | Section 8      | Configuration Management              | FPGA configuration index, HDL baseline                | EVD-040            | Planned  |
@@ -137,3 +140,7 @@ The FMC navigation algorithms (CMP-FMC-01E, CMP-FMC-01F) are developed using mod
 | MB.6.3.4         | Model under configuration management                     | Model baseline in CM system                   | EVD-040  |
 | MB.6.3.5         | Model-to-code traceability established                   | Traceability matrix (model element to code)   | EVD-038  |
 | MB.6.4.4         | Model coverage analysis (if model used for verification) | Model coverage report                         | EVD-035  |
+
+## Interpretation of the new execution records
+
+EVD-MODEL-001 records executed static analysis only. Its successful check outcome includes discovery of expected counterexamples; rejected claims remain false in those states. Lifecycle (drafted/executed), technical outcome, configuration identity, independent review and acceptance are separate facts. No original physical verification activity is marked complete by this addition. [The model study](analysis/report.md) identifies the supporting observations and remaining work.

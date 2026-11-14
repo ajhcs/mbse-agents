@@ -1,6 +1,6 @@
 # Integrated Flight Management System
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. Executed abstract-model evidence and its exact scope are in [analysis/report.md](analysis/report.md). [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Overview
 
@@ -86,3 +86,9 @@ Mode IDs are referenced by hazard-analysis.md, requirements.md, and traceability
 | ARINC 429     | Legacy data bus standard for sensor and display interfaces                                        |
 | ARINC 664 P7  | AFDX networking standard for high-bandwidth inter-LRU and external interfaces                     |
 | 14 CFR 25.1309| Equipment, systems, and installations; primary airworthiness regulation for FMS                    |
+
+## Executed engineering study
+
+[Review the fault-model study](analysis/report.md) for complete static cuts, conditional parameter scenarios, proof obligations and retained counterexamples. [Source/applicability review](source-review.md) and [current review coverage](review-status.json) identify the remaining decisions. Original files are preserved in the historical JSON snapshot.
+
+[Draft next-control challenge procedures](analysis/control-challenges.md) specify stimuli, observations and evidence capture for the remaining control claims.

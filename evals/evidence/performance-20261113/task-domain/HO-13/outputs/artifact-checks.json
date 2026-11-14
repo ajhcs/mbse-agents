@@ -1,0 +1,24 @@
+{
+  "checked_utc": "2026-11-13T23:56:00.444332+00:00",
+  "scope": "Static artifact and wording checks only. No controller test or simulation.",
+  "checks": {
+    "source_copy_byte_identical": true,
+    "change_request_copy_byte_identical": true,
+    "historical_report_copy_byte_identical": true,
+    "REQ_8_full_row_unchanged": true,
+    "REQ_7_statement_only_500_to_200": true,
+    "source_note_retained_verbatim": true,
+    "parameter_note_unchanged": true,
+    "planned_revision_B_report_absent": true,
+    "architecture_ids_preserved": true,
+    "verification_ids_preserved": true
+  },
+  "arithmetic_ms": {
+    "serial_total": 260,
+    "deadline": 200,
+    "allocation_excess": 60,
+    "old_observation": 460,
+    "old_criterion": 500
+  },
+  "controller_tests_executed": false
+}

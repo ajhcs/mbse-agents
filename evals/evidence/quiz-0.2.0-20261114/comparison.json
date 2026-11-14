@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "kind": "se-judgment-comparison",
+  "benchmark": "systems-engineering-judgment",
+  "items": 24,
+  "runs": [
+    {
+      "run_id": "quiz-v020-baseline-184c374b-9a4a-46c4-8205-77838396ea0c",
+      "arm": "none",
+      "model": "unknown",
+      "selection_accuracy": 1.0,
+      "reasoning_review": "reviewer_reported",
+      "latency_seconds": null,
+      "cost": null
+    },
+    {
+      "run_id": "quiz-v020-task-d52663a4-20261114T000252Z",
+      "arm": "task",
+      "model": "unknown",
+      "selection_accuracy": 1.0,
+      "reasoning_review": "reviewer_reported",
+      "latency_seconds": null,
+      "cost": null
+    },
+    {
+      "run_id": "task-domain-20261114T000250Z",
+      "arm": "task-domain",
+      "model": "unknown",
+      "selection_accuracy": 1.0,
+      "reasoning_review": "reviewer_reported",
+      "latency_seconds": null,
+      "cost": null
+    }
+  ],
+  "interpretation": "Descriptive results only. Compare like hosts, settings, tools, exposure and independent samples; no automatic superiority or release claim."
+}

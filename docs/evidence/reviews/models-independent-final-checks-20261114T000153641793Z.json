@@ -1,0 +1,781 @@
+{
+  "reviewed_at": "20261114T000153641793Z",
+  "fixtures": "/workspace/repos/builderbob/mbse-agents/.mbse-review/models-final-fixtures-20261114T000153641793Z",
+  "hashes": {
+    "docs/simulation-evidence.md": "42a3f1b2b90b1e46765841135de8a74acaf87506911b66626e4aa7f8b6d8863c",
+    "docs/sources-domain.md": "b48221fd996cf2cf24f8190d68e137dd9390ea46e4ed21d3e9b65f7ed7be6d11",
+    "examples/aerospace/README.md": "c674eb716ac9f0874f75b63305f3169431d707213e87ed7e7be7329568793105",
+    "examples/aerospace/cubesat-constellation/README.md": "f916211ab661eefeb10e7ce72e76b72fd316460d3e49d9d3f5a8e826273233b6",
+    "examples/aerospace/cubesat-constellation/architecture.md": "f460ab821985b3706ce45b117baddfa315faf3346104643e1a23e6ecb5dc5ac3",
+    "examples/aerospace/cubesat-constellation/history/pre-hardening.json": "5b3230617a473a91abfa4e4fac736bd0238c3e3edaa6ceafd66e247d43d225e6",
+    "examples/aerospace/cubesat-constellation/requirements.md": "b8c8bbe750547bca381af56c9c4905084d55b16462242bf5d598748334bfa758",
+    "examples/aerospace/cubesat-constellation/review-status.json": "1e71f1806d20c5d5b706913726a1013fc85d24673e5b6dfdd1fa539ad6e7a966",
+    "examples/aerospace/cubesat-constellation/source-review.md": "d8fba27f9fc586547bce63eee2cafeb2b4593a3918455d18f0a9dce6210a1330",
+    "examples/aerospace/cubesat-constellation/system.yaml": "cb5eb3e6ef941b3446a9c962a65012bd8140ba5f696edff272746ea007a6747c",
+    "examples/aerospace/eva-suit-life-support/README.md": "3a7d9cf19f7c06958c5112a804ffb1428c8c1ca994033a1ee1ee83200e970ebd",
+    "examples/aerospace/eva-suit-life-support/architecture.md": "ce5178c77cf7392a8a71a114726f362e34462ba35100806d5294e63465d975c4",
+    "examples/aerospace/eva-suit-life-support/history/pre-hardening.json": "02e1574f79b38827951be1a9eda0127e2c024030026efde2d1792c69fb71e512",
+    "examples/aerospace/eva-suit-life-support/requirements.md": "cb005a11403d826cc795421827af18e99b46d69039c0afba9672053b8bf3acb7",
+    "examples/aerospace/eva-suit-life-support/review-status.json": "8e015cd21f0e473ea7102a3f41c5ec5e4de32f66ac6d4e3f2590e62a613d4b84",
+    "examples/aerospace/eva-suit-life-support/source-review.md": "5866edb750ffe24a32ee5c14cda41fc2d8769896e21ab404d18835e628b6ed42",
+    "examples/aerospace/eva-suit-life-support/system.yaml": "aa54d335a6b480751992dd019cd94ed178caacf8663350f27f37bd174573e9af",
+    "examples/aerospace/flight-management-system/README.md": "fec3c62fbddb21c6f172ef043fda048d2ce94956b862edd151a3a2662ffbe7e4",
+    "examples/aerospace/flight-management-system/analysis/control-challenges.md": "d8bdc27f00f983b47be91090621d42aa1928423cdf8a97ac70cf11a0311f5b6b",
+    "examples/aerospace/flight-management-system/analysis/cse-failure-model.json": "1a713566e738cb8762869a498f792faae9eaa82026a7f97352d11ff292ebd940",
+    "examples/aerospace/flight-management-system/analysis/failure-model.json": "3a85ac7ceea9d423881cf1ae675a6c798962d8007a4bf7a4bd1a805e520110a9",
+    "examples/aerospace/flight-management-system/analysis/report.md": "b4b5eb18ee1ac3841c71dac35edc02635268f60da153167ca3d469b00d0b6479",
+    "examples/aerospace/flight-management-system/architecture.md": "ea82fc615d15e3dde198a06d68ecdfc79074c90cb6a32f6b8a126a9118ef2c0b",
+    "examples/aerospace/flight-management-system/assurance-evidence.md": "9f5d9e4451cd13d157bd308dc0198a76bad25e0e3bbd0abb712b7d52cc3d71ca",
+    "examples/aerospace/flight-management-system/cybersecurity.md": "e4d47abc0bd44008f1625941022059686ca85ffced13c5b27fdb6bd66762b578",
+    "examples/aerospace/flight-management-system/evidence/analysis/cse-crosscheck.json": "35d693ad19dc95c82e532f46ebd3c85970101bf85fe14f2f5bc181bd785c7942",
+    "examples/aerospace/flight-management-system/evidence/analysis/cse-runs/35d693ad19dc95c82e532f46ebd3c85970101bf85fe14f2f5bc181bd785c7942.json": "35d693ad19dc95c82e532f46ebd3c85970101bf85fe14f2f5bc181bd785c7942",
+    "examples/aerospace/flight-management-system/evidence/analysis/cse-runs/90ecb17ac76fa674a825613c906da3a3df691ea5cf01d07ad4a18f02b5596b3c.json": "90ecb17ac76fa674a825613c906da3a3df691ea5cf01d07ad4a18f02b5596b3c",
+    "examples/aerospace/flight-management-system/evidence/analysis/model-results.json": "3340b2847a1a31e5a110ff3e487a8d0d32238b3446e97bdcf9699d99f54c57e0",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/45efd68a95171940840f/analyze_gallery.py": "0271c8466b040650737f318c8046601229d53c716e4718e8a17b4f8faf9f398a",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/45efd68a95171940840f/architecture.md.snapshot": "4b0254649b46ac6477eb82b48c9cebc2dc15e79b7a3036c89cd4ddeaf6826815",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/45efd68a95171940840f/execution.json": "11c13c4ee83085c8a4630a7906bd6df2ec86a85f68c8a6b20c818002d24d9f7c",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/45efd68a95171940840f/failure-model.json": "3a85ac7ceea9d423881cf1ae675a6c798962d8007a4bf7a4bd1a805e520110a9",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/45efd68a95171940840f/hazard-analysis.md.snapshot": "d82e44a7983bc906c2b58fb8f9aeb78ff3c9cd216d95831eecae18c211c9c146",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/45efd68a95171940840f/model-results.json": "59ff3d3b246c31ad375ccb0d41585817fdfa0ea0626f84dc0780520a568ba111",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/45efd68a95171940840f/requirements.md.snapshot": "17b3efc4f4049224a8d5c2dd3f2ccfa3b7a0d5fef710de02642e1fbb2ba3ccef",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/5b9f776e75b95878d9e6/execution.json": "5c845360adf6d6049b0dcb3438e892528cfa587f6b03c0efb94a724a1bdbff54",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/5b9f776e75b95878d9e6/model-results.json": "f0ebc6d2342de6fe0b698b697aeea9db5cebd25461d8cc23e205e35ff073ac50",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/5b9f776e75b95878d9e6.json": "6908aca5ca7eef94a153b6207b963c430b53b0abf13ef86630f9c7b55623c780",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/73e742da4a66f7dcc915/analyze_gallery.py": "53d61453efd2ef3e8c3035a6e9464a6b9daac2296f9a681156cea00be16c2521",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/73e742da4a66f7dcc915/architecture.md.snapshot": "ea82fc615d15e3dde198a06d68ecdfc79074c90cb6a32f6b8a126a9118ef2c0b",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/73e742da4a66f7dcc915/execution.json": "c91e330e79f5adada4c72b73819b745f3abbb74d6a9114e7538149eb84dce89f",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/73e742da4a66f7dcc915/failure-model.json": "3a85ac7ceea9d423881cf1ae675a6c798962d8007a4bf7a4bd1a805e520110a9",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/73e742da4a66f7dcc915/hazard-analysis.md.snapshot": "d82e44a7983bc906c2b58fb8f9aeb78ff3c9cd216d95831eecae18c211c9c146",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/73e742da4a66f7dcc915/model-results.json": "d8fd2b7e6fa8f271fe17a930f2b9c60598773fa7d2f6ed3037df664d900c3e8f",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/73e742da4a66f7dcc915/requirements.md.snapshot": "17b3efc4f4049224a8d5c2dd3f2ccfa3b7a0d5fef710de02642e1fbb2ba3ccef",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/abd60c975770f723ddea/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/abd60c975770f723ddea/architecture.md.snapshot": "ea82fc615d15e3dde198a06d68ecdfc79074c90cb6a32f6b8a126a9118ef2c0b",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/abd60c975770f723ddea/execution.json": "78d686f6ca3c9f1af6013909b85b352bcba3c20894e6462e5340a1b3e5625012",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/abd60c975770f723ddea/failure-model.json": "3a85ac7ceea9d423881cf1ae675a6c798962d8007a4bf7a4bd1a805e520110a9",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/abd60c975770f723ddea/hazard-analysis.md.snapshot": "d82e44a7983bc906c2b58fb8f9aeb78ff3c9cd216d95831eecae18c211c9c146",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/abd60c975770f723ddea/model-results.json": "3340b2847a1a31e5a110ff3e487a8d0d32238b3446e97bdcf9699d99f54c57e0",
+    "examples/aerospace/flight-management-system/evidence/analysis/runs/abd60c975770f723ddea/requirements.md.snapshot": "17b3efc4f4049224a8d5c2dd3f2ccfa3b7a0d5fef710de02642e1fbb2ba3ccef",
+    "examples/aerospace/flight-management-system/evidence/drafts/fha-report.md": "9f331984b74e3465dae663b9db636a03d48109922fa248fdbd6a8144b19cb865",
+    "examples/aerospace/flight-management-system/evidence/drafts/hrs.md": "57b1b8616bde284c6897b9ed7d10521c14e8c67693c1126d5c21ed5ff0322877",
+    "examples/aerospace/flight-management-system/evidence/drafts/phac.md": "8a76fba87859f2d4d9219964cb28b0161803bf6fbe5c2e7df77567f8d18d87db",
+    "examples/aerospace/flight-management-system/evidence/drafts/psac.md": "c6f318257d6103c259f8fcca8329822055556780c2d5a4a392fff1cee6047e5e",
+    "examples/aerospace/flight-management-system/evidence/drafts/pssa-report.md": "cf76d8842057bb01a608273a52eaebea1ed16262026b11e409cb56771aaccf39",
+    "examples/aerospace/flight-management-system/evidence/drafts/sdd.md": "fd4872ae5bf1a5d3805b866b77d4f46515c242353d7838662621b6c95b2765e0",
+    "examples/aerospace/flight-management-system/evidence/drafts/security-risk-assessment.md": "010be4dd3bbaf51fef2744d19fc8d26445d8692d9c92a9a79b4dfdf2db8753eb",
+    "examples/aerospace/flight-management-system/evidence/drafts/srs.md": "f2d0eccc72575b6c3a79a150857d11b89c6ddd1ba262476fdd8017842d419952",
+    "examples/aerospace/flight-management-system/evidence/drafts/system-dev-plan.md": "c3ed8071e70b568fbc85cd5c79e823c28139a09c01350b5b6e4fc2c35b1c8262",
+    "examples/aerospace/flight-management-system/hazard-analysis.md": "d82e44a7983bc906c2b58fb8f9aeb78ff3c9cd216d95831eecae18c211c9c146",
+    "examples/aerospace/flight-management-system/history/pre-hardening.json": "8f2c4b8ae8c99a0b3f4eff4c611b401701c990f8061bf69a90e6915ad6f2e882",
+    "examples/aerospace/flight-management-system/requirements.md": "17b3efc4f4049224a8d5c2dd3f2ccfa3b7a0d5fef710de02642e1fbb2ba3ccef",
+    "examples/aerospace/flight-management-system/review-status.json": "38fffd7092faab06eebedba737541b158be3640bd863623186eb8980fcd31e48",
+    "examples/aerospace/flight-management-system/source-review.md": "53ee0d54e25309af4c269e7590cf92e67dbcccff8ba3be58cb40a3b246a761d1",
+    "examples/aerospace/flight-management-system/system.yaml": "7943b21ab0d3cd7de1ea1dafc83bef76b6dd6f69aec66108ab8881ab6f5f2dfc",
+    "examples/aerospace/flight-management-system/traceability.md": "62a7acbbb2af61c1ec34a2f01899c7a8f00fd4c55422d84607fb7177b0a63a08",
+    "examples/aerospace/launch-vehicle-avionics/README.md": "b3a09b7a7ffcd41504fbcf48ae1f29389d721a16854ba71d85adb5522c222ec5",
+    "examples/aerospace/launch-vehicle-avionics/architecture.md": "95df60b3d59de2d0ea9f71302ee97a2deb218a17ec7adfdbafbc8c6a54f1a8e3",
+    "examples/aerospace/launch-vehicle-avionics/history/pre-hardening.json": "a07e5e822774fb92d308cb3a0ee542fb03341ec5867e0ddce38b6cecb1f403c6",
+    "examples/aerospace/launch-vehicle-avionics/requirements.md": "6b5c4b0d5b28de24a6e6ca5025593a17907cb77f907c0a55bde55b430c6e9d23",
+    "examples/aerospace/launch-vehicle-avionics/review-status.json": "1676bbe3c294651939b47f0e87283f425234b155ae2ae87292ef9bd665e7d938",
+    "examples/aerospace/launch-vehicle-avionics/source-review.md": "b8af65d93c993b355de68625b3e60cb1c43007a77cecbc37351fb92ae9e825c8",
+    "examples/aerospace/launch-vehicle-avionics/system.yaml": "917acaae3f97d665e6fdbb5eb17bf37e3bbc7fcda31b103eb1f7709e8ef53837",
+    "examples/automotive/README.md": "c1ed73cc9eba0568fef5f4a8a5b46b883a3201c7ee8476a3117435397dd208ed",
+    "examples/automotive/autonomous-emergency-braking/README.md": "d61de7e9f99faba6da3082a99a347c436fa64a5075e37d7196702b507a7bffd0",
+    "examples/automotive/autonomous-emergency-braking/analysis/control-challenges.md": "a41bc2b761ec939b4aaecd15c98113c563e69ee0580e7355928292c74ffd2a82",
+    "examples/automotive/autonomous-emergency-braking/analysis/cse-failure-model.json": "31159cb16687616f2dc0d992b203e9dd196c9407c5277cb2f39e45deea96a74d",
+    "examples/automotive/autonomous-emergency-braking/analysis/failure-model.json": "2ad026ef78f3e1d73456fcec50dc9c8e4806ddcbff39922d00eac2179df12944",
+    "examples/automotive/autonomous-emergency-braking/analysis/report.md": "68bd1c052a435cc6aa40c643eba10c9de5e9832bd370b8ed1262584ca85f7227",
+    "examples/automotive/autonomous-emergency-braking/architecture.md": "c29a3fce3291d5b39a58bfdda7d9ed49ac30fa5a8aad21f71026be8d87d6cac9",
+    "examples/automotive/autonomous-emergency-braking/assurance-evidence.md": "92ed1e3240e2644e7dbab6543833e88d664d4d88f9e6d41f935cbf770b4fcc40",
+    "examples/automotive/autonomous-emergency-braking/cybersecurity.md": "875b117c166d6890e82703fa17d1802ac4fa686fe9083ed88dfd20278069e861",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/cse-crosscheck.json": "e69e7056cbc0e41cfe249db11b8b759ee129c1fe2b812fa3175fa91cc0e6ad2d",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/cse-runs/a93ae0fc701f4254c4791dff6da308e67a053bbf2dfcbe306709b4bb80760ff6.json": "a93ae0fc701f4254c4791dff6da308e67a053bbf2dfcbe306709b4bb80760ff6",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/cse-runs/e69e7056cbc0e41cfe249db11b8b759ee129c1fe2b812fa3175fa91cc0e6ad2d.json": "e69e7056cbc0e41cfe249db11b8b759ee129c1fe2b812fa3175fa91cc0e6ad2d",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/model-results.json": "4c62c5e09f507a5925f77472120bcd94e4179248d7ebc36cd5dc5ce3971704f0",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/47f37b3ff12374c9060f/analyze_gallery.py": "0271c8466b040650737f318c8046601229d53c716e4718e8a17b4f8faf9f398a",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/47f37b3ff12374c9060f/architecture.md.snapshot": "f4c4d0fadb52716daf1151e8b0d27636c84606a4a5067f1e6c1efb1a94dfc7f4",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/47f37b3ff12374c9060f/execution.json": "cc60ebefac49c56d3dd856f49b35e2c7b176c03f3e22e0751942124303c2f3ce",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/47f37b3ff12374c9060f/failure-model.json": "2ad026ef78f3e1d73456fcec50dc9c8e4806ddcbff39922d00eac2179df12944",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/47f37b3ff12374c9060f/hazard-analysis.md.snapshot": "fe80faf1a50aa6f3cb61b0cb1278c41d709d43f8d11b8667ea843199e28b6292",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/47f37b3ff12374c9060f/model-results.json": "841f49eca7ceff8241ebbb4bd2788ec341b850965a609ce6345be8edd8b29482",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/47f37b3ff12374c9060f/requirements.md.snapshot": "ccace2743828e8d5c560ca3b9b68335383d2ca3d51f749fbfa6f6748ca84a529",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/55df4c44be42369fa826/analyze_gallery.py": "53d61453efd2ef3e8c3035a6e9464a6b9daac2296f9a681156cea00be16c2521",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/55df4c44be42369fa826/architecture.md.snapshot": "c29a3fce3291d5b39a58bfdda7d9ed49ac30fa5a8aad21f71026be8d87d6cac9",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/55df4c44be42369fa826/execution.json": "f35a01dbfbad48162f6795dce0ec9febd3619e27d2681b0fd4d7af1e345a292a",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/55df4c44be42369fa826/failure-model.json": "2ad026ef78f3e1d73456fcec50dc9c8e4806ddcbff39922d00eac2179df12944",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/55df4c44be42369fa826/hazard-analysis.md.snapshot": "fe80faf1a50aa6f3cb61b0cb1278c41d709d43f8d11b8667ea843199e28b6292",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/55df4c44be42369fa826/model-results.json": "5380d823a13491e34289d287323ac4ec4a092045a9a444544b95993fbdf0ba5b",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/55df4c44be42369fa826/requirements.md.snapshot": "ccace2743828e8d5c560ca3b9b68335383d2ca3d51f749fbfa6f6748ca84a529",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/8f51d44f1b5d3bd31165/execution.json": "ca4e6adf03dc3ba8ea19336c7bb2902262caccaf5df365c6ed34b7ffb0986033",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/8f51d44f1b5d3bd31165/model-results.json": "52fdecf682f6abebb3eb1250287f07c1162c4bb070c94742fcf69e0b1bd37129",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/8f51d44f1b5d3bd31165.json": "cb4328e1119ace421465410e664e552987e0faa58d69dce8cae088f7fc5074c5",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/fbabfc076dd0bf2fda20/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/fbabfc076dd0bf2fda20/architecture.md.snapshot": "c29a3fce3291d5b39a58bfdda7d9ed49ac30fa5a8aad21f71026be8d87d6cac9",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/fbabfc076dd0bf2fda20/execution.json": "a014ec81247d4967a7bf01baa93c8432160cfda988ef67d405ba1604ef1dd601",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/fbabfc076dd0bf2fda20/failure-model.json": "2ad026ef78f3e1d73456fcec50dc9c8e4806ddcbff39922d00eac2179df12944",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/fbabfc076dd0bf2fda20/hazard-analysis.md.snapshot": "fe80faf1a50aa6f3cb61b0cb1278c41d709d43f8d11b8667ea843199e28b6292",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/fbabfc076dd0bf2fda20/model-results.json": "4c62c5e09f507a5925f77472120bcd94e4179248d7ebc36cd5dc5ce3971704f0",
+    "examples/automotive/autonomous-emergency-braking/evidence/analysis/runs/fbabfc076dd0bf2fda20/requirements.md.snapshot": "ccace2743828e8d5c560ca3b9b68335383d2ca3d51f749fbfa6f6748ca84a529",
+    "examples/automotive/autonomous-emergency-braking/evidence/drafts/fsc-report.md": "2573ab5f6d508214b3119161b79df3c094c142d83753fe3f9c0a71e518534021",
+    "examples/automotive/autonomous-emergency-braking/evidence/drafts/hara-report.md": "beef86774d8892d6fe532ef85003f51f8f213a88078b3052d77ded6fb2f42f2f",
+    "examples/automotive/autonomous-emergency-braking/evidence/drafts/system-architecture.md": "14a4b84c6b897d1ab39d92077b34ba929b1c166644e84bcf27b1a83899f9f23d",
+    "examples/automotive/autonomous-emergency-braking/evidence/drafts/tara-report.md": "182e4de09b9fb7278fee4f9fd93a764e0b994fdfcaaa598438317f894376ee8f",
+    "examples/automotive/autonomous-emergency-braking/evidence/drafts/tsc-report.md": "25e4df9921bc1e2a2770622e49f345d7b528ba0c46b0378b7f1201ca03324e78",
+    "examples/automotive/autonomous-emergency-braking/evidence/drafts/tsr-report.md": "c32e670b4a12ba17ff59eb07fe52957b5450bc544082cd65c1eff6fc85d92fcc",
+    "examples/automotive/autonomous-emergency-braking/hazard-analysis.md": "fe80faf1a50aa6f3cb61b0cb1278c41d709d43f8d11b8667ea843199e28b6292",
+    "examples/automotive/autonomous-emergency-braking/history/pre-hardening.json": "10ac80ff96968654985d78c1e7ef96c23c2bd522d569bd3eb7e03d1fa2c96fd2",
+    "examples/automotive/autonomous-emergency-braking/requirements.md": "ccace2743828e8d5c560ca3b9b68335383d2ca3d51f749fbfa6f6748ca84a529",
+    "examples/automotive/autonomous-emergency-braking/review-status.json": "82440a109d091dfb8f0feff7968d16008be0df813309f36dd092f35c3b9814b6",
+    "examples/automotive/autonomous-emergency-braking/source-review.md": "e1e02849e04e081f342ed613d391c1cec17ce98fc29b5386ca86cc6002a85d4a",
+    "examples/automotive/autonomous-emergency-braking/system.yaml": "e41856342393f8bdfaeab2c5ba0053b4ed9a1987cc2dc333f76dae02542376fa",
+    "examples/automotive/autonomous-emergency-braking/traceability.md": "8205dce6f7591918fe23c1405b77f155b5954c85760cf69eee3dde6109d7c0a9",
+    "examples/automotive/ev-battery-management/README.md": "490b8cbbe88ddf0d16a57d849a34dbd1766bd5cfe5437b1dac487947ffcbc026",
+    "examples/automotive/ev-battery-management/architecture.md": "131dca4d9d5bcd1dcbd3569986acff7ffadc413799feac90e6c8e93ac804acb5",
+    "examples/automotive/ev-battery-management/history/pre-hardening.json": "cd4ad3f41cdf8afdc8ac95af6a855a10557b895f0fa0f863a2602d4d22dccde7",
+    "examples/automotive/ev-battery-management/requirements.md": "a13b3c46d135a5e950a124c35aa44b7ee5afeefa0d1245ef024fd3891433ce96",
+    "examples/automotive/ev-battery-management/review-status.json": "f15606e20d57414b8afb4b20fa881149b1a98236e159fd1a613b6c6da9633e8f",
+    "examples/automotive/ev-battery-management/source-review.md": "fc96ada4ba1308db93a5497195469471c049b6aa7fbe3eb3d01614e57677eb81",
+    "examples/automotive/ev-battery-management/system.yaml": "137f01d99a8327cd85d75cf10836372c050366da317c5939975863c959bb3ba9",
+    "examples/automotive/steer-by-wire/README.md": "54055e1500d80ef1d3db7577354461b4edd0d15366888f068d94b3b672a5d170",
+    "examples/automotive/steer-by-wire/architecture.md": "d03be1bd2bc614abbbc4c279ba37d62b81461a556ba3da3d49dcecf53fdce5f5",
+    "examples/automotive/steer-by-wire/history/pre-hardening.json": "c679d8be1b4449b980b12fa72c245b32d049e8433ca1951b8a6b07bb866071dc",
+    "examples/automotive/steer-by-wire/requirements.md": "31788441583cae087841ff3a3726fd05164663357790e4c3cf1658faf2f0ce2e",
+    "examples/automotive/steer-by-wire/review-status.json": "90a79fb2eec7d6e7c90e3b79cc4d4abd46758196e7fedc4ab6b434995ca55c5a",
+    "examples/automotive/steer-by-wire/source-review.md": "4c60fb36d9c2a93063c54c6b7267ce70d1cf396344957ee64ed301fe02a2c169",
+    "examples/automotive/steer-by-wire/system.yaml": "23fd5862c2b8584b42445e0570941429b384adbd9396a72499eec713192be19d",
+    "examples/automotive/v2x-communication/README.md": "db5172f0e2b17ce0032e1a0c85675484bb8189143dbacc879df63b260b933d49",
+    "examples/automotive/v2x-communication/architecture.md": "84ab7cea13d26ab1499d306201df992bf2000ea8000c6ce56e0ea97e71674b2f",
+    "examples/automotive/v2x-communication/history/pre-hardening.json": "85636665eb66957908e647823154c9e811d62bb53f9031a005fe538240e53d1b",
+    "examples/automotive/v2x-communication/requirements.md": "1b84a970ca585deacb652cccdffe14e4c03c5f3d81d95a1349347135d61a906f",
+    "examples/automotive/v2x-communication/review-status.json": "4ff1e8e2db3e52eece2da7eee77022787d18cc5c58bbf2bb3313f04d03932942",
+    "examples/automotive/v2x-communication/source-review.md": "9fd52ed88ea1de2ba6f395a2c2729a03f5e87eceb545ab97f26a39f1945e27bf",
+    "examples/automotive/v2x-communication/system.yaml": "8203d4f3edb05ef2858433805b92b396bc0f9bd6e13c4de35bd30f407ecb4f59",
+    "examples/defense/README.md": "96f889551016e66eedb36781fb2731463ee57f63b33c32ad8bf4895195479088",
+    "examples/defense/ballistic-missile-defense/README.md": "3d93200da3be4f4e7540a9fdadedca78cc161b6fa5f23eb91335c78c94b3baf5",
+    "examples/defense/ballistic-missile-defense/architecture.md": "283367a1364fd1a98d4da16cda5178a8db17cfb4d02b8a0d58f9cb552102c633",
+    "examples/defense/ballistic-missile-defense/history/pre-hardening.json": "b0f21b7f72e1dfb6d074d628ac1be3785f90c24b2ad5f1589ec0e8a7e21e93eb",
+    "examples/defense/ballistic-missile-defense/requirements.md": "cc4262d428417ffc49b4f84dcaf46528a5354f8a39a473418e8728790ff9e710",
+    "examples/defense/ballistic-missile-defense/review-status.json": "e76ac7b7699a8e1f33908417bf21206c8e487b9162c162d54f56d2f8078fe060",
+    "examples/defense/ballistic-missile-defense/source-review.md": "391f2ccac04d898056d46c3db0e77395ba95161becc86c03e9a5ed5f2f627195",
+    "examples/defense/ballistic-missile-defense/system.yaml": "d72a8399bd88e7fe994b455c1a67e3e2211b78a50d1e0b6404037155ea3d0d12",
+    "examples/defense/naval-combat-management/README.md": "928479cb513c3018950ff99b95bfd62acabde87458251c8d16cf250f520d26e1",
+    "examples/defense/naval-combat-management/architecture.md": "0d568b10ab28d32c52375ecb8c8f0f970d01bcf10a939c3f16db0b7b1add707a",
+    "examples/defense/naval-combat-management/history/pre-hardening.json": "c5132cf9ab14a9ebc188953118fb873e918ce5c8513929a2db223a6f209a3029",
+    "examples/defense/naval-combat-management/requirements.md": "c351bdebca2ed527de8857a5c5c91ad23d95b5f8de243df01fbd865f3cd8459e",
+    "examples/defense/naval-combat-management/review-status.json": "025f5104a3992a307abfee2b0029445314fd152707ebb68ab295ebf7190b0601",
+    "examples/defense/naval-combat-management/source-review.md": "2b5a422c8cdcc5107a6cfbe099a0d146f145653c3bf0acf216b5dbf1dfcb8171",
+    "examples/defense/naval-combat-management/system.yaml": "79c351144455500585c67ab037e986fb6a25f0ec25cbb0142dfcff46ea3d1792",
+    "examples/defense/tactical-sdr-radio/README.md": "4e4ee252899ccacb3404ebcf8351a7d69c5ba73960c6a709d97a2884cbb21576",
+    "examples/defense/tactical-sdr-radio/architecture.md": "9fedc41be939dbd492000fa315341f4689a287bba285dade4755a1931c69c314",
+    "examples/defense/tactical-sdr-radio/history/pre-hardening.json": "b82a448cbfaf2614e5ae8e340d1d5d823e7cb23bf45cb02a36905ea2b0f7cdaa",
+    "examples/defense/tactical-sdr-radio/requirements.md": "a9a2783f53b57c6a70dc1f4d6a631b175b2b5687b69b5d10a79fe7324c816e29",
+    "examples/defense/tactical-sdr-radio/review-status.json": "f461a9182ca8b6af237634465d59807fc154c2e9e19c3debdc3fb0f456f739db",
+    "examples/defense/tactical-sdr-radio/source-review.md": "c54dbc4794a4e7bd6220c9b6917a937265bb562b6c04a935da788d8898dd72c0",
+    "examples/defense/tactical-sdr-radio/system.yaml": "4d9e260067aa094ee4c516970fd085a8155738853ca547d9a891feee49b936ad",
+    "examples/defense/uas-ground-control-station/README.md": "99f9f658dbc5b0d155277334e8396bca2c21f39a2220a43193f2ec4f369de526",
+    "examples/defense/uas-ground-control-station/analysis/control-challenges.md": "3f5e9faebf6858f6b0c99b5c72f692be33db4e968f7de01ef4a6b89ae11ee8f2",
+    "examples/defense/uas-ground-control-station/analysis/cse-failure-model.json": "54017fb90a622e2f312559f2c31a7c2aecd5d067c7159255e91b443e4ae60d28",
+    "examples/defense/uas-ground-control-station/analysis/failure-model.json": "fe48518bc4bbc9bb5b03910bd128ad387fa79005650cf3ddcd993eea99bfe840",
+    "examples/defense/uas-ground-control-station/analysis/report.md": "99106b6c33219a7dce9a687d8ede9583452d24dfcd9391ccb3ab47ed1120a627",
+    "examples/defense/uas-ground-control-station/architecture.md": "0c923b0600e7c05dd16a63dcd021e6c6fc2d8baace87e6bda6e57257ea16f910",
+    "examples/defense/uas-ground-control-station/assurance-evidence.md": "3d772b4f97d75155ab2825f5d5bcdf49cbc37dd7c44c2e36bcdc78638bbbb6de",
+    "examples/defense/uas-ground-control-station/dodaf-views.md": "0fec89f030188546768e5a29af16df2d1c23618f32058cfd0c9f63c7c0387245",
+    "examples/defense/uas-ground-control-station/evidence/analysis/cse-crosscheck.json": "8b5dca1c1ae906b808590fc82f173f0e575708a68d3db0e014bcb38f9118f5cb",
+    "examples/defense/uas-ground-control-station/evidence/analysis/cse-runs/8b5dca1c1ae906b808590fc82f173f0e575708a68d3db0e014bcb38f9118f5cb.json": "8b5dca1c1ae906b808590fc82f173f0e575708a68d3db0e014bcb38f9118f5cb",
+    "examples/defense/uas-ground-control-station/evidence/analysis/cse-runs/9001a833614377ca26dde008ee96793fa0d930baf3aecd166eb8fc46c912dfe4.json": "9001a833614377ca26dde008ee96793fa0d930baf3aecd166eb8fc46c912dfe4",
+    "examples/defense/uas-ground-control-station/evidence/analysis/model-results.json": "656543032ea0adf431eb35b9eb4fb6a9ed420a6c6cc9a9a38d273e400ab74090",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/6935305cb7fba06bc017/analyze_gallery.py": "0271c8466b040650737f318c8046601229d53c716e4718e8a17b4f8faf9f398a",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/6935305cb7fba06bc017/architecture.md.snapshot": "0c923b0600e7c05dd16a63dcd021e6c6fc2d8baace87e6bda6e57257ea16f910",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/6935305cb7fba06bc017/execution.json": "394a84cf68612e8aa8ee8f50a346dcf3709bc499eb6fab166e051f9f6cca3777",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/6935305cb7fba06bc017/failure-model.json": "fe48518bc4bbc9bb5b03910bd128ad387fa79005650cf3ddcd993eea99bfe840",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/6935305cb7fba06bc017/hazard-analysis.md.snapshot": "b72c3f7afa72d171425b68d9eeb5fd6fda3524ec40bb597190b78d683dae82fc",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/6935305cb7fba06bc017/model-results.json": "a812785ddbb2878fc9c3b98262974683191e65eb13d9ba1058905382ff7bb2e6",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/6935305cb7fba06bc017/requirements.md.snapshot": "db93cb7cf6038ad8ce51eddd4110fce0498b91d6b6f080c32dd90870cd28f9d1",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/912a32b0850766c79567/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/912a32b0850766c79567/architecture.md.snapshot": "0c923b0600e7c05dd16a63dcd021e6c6fc2d8baace87e6bda6e57257ea16f910",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/912a32b0850766c79567/execution.json": "9660890c63ce693505fcbc6b6199171e6ecc52400bfffd4c315b954f98242c5e",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/912a32b0850766c79567/failure-model.json": "fe48518bc4bbc9bb5b03910bd128ad387fa79005650cf3ddcd993eea99bfe840",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/912a32b0850766c79567/hazard-analysis.md.snapshot": "b72c3f7afa72d171425b68d9eeb5fd6fda3524ec40bb597190b78d683dae82fc",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/912a32b0850766c79567/model-results.json": "656543032ea0adf431eb35b9eb4fb6a9ed420a6c6cc9a9a38d273e400ab74090",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/912a32b0850766c79567/requirements.md.snapshot": "db93cb7cf6038ad8ce51eddd4110fce0498b91d6b6f080c32dd90870cd28f9d1",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/c7e44620375612e24f4b/analyze_gallery.py": "53d61453efd2ef3e8c3035a6e9464a6b9daac2296f9a681156cea00be16c2521",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/c7e44620375612e24f4b/architecture.md.snapshot": "0c923b0600e7c05dd16a63dcd021e6c6fc2d8baace87e6bda6e57257ea16f910",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/c7e44620375612e24f4b/execution.json": "cb87ebbb8840634c27a6b7130438cf0bd0246394f98671f5fedc7b3da9950e20",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/c7e44620375612e24f4b/failure-model.json": "fe48518bc4bbc9bb5b03910bd128ad387fa79005650cf3ddcd993eea99bfe840",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/c7e44620375612e24f4b/hazard-analysis.md.snapshot": "b72c3f7afa72d171425b68d9eeb5fd6fda3524ec40bb597190b78d683dae82fc",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/c7e44620375612e24f4b/model-results.json": "f1aaf2842cb7fdc2df2daa3bf35c9afc5511913ee4fc7ac022bacbaaf0a67a19",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/c7e44620375612e24f4b/requirements.md.snapshot": "db93cb7cf6038ad8ce51eddd4110fce0498b91d6b6f080c32dd90870cd28f9d1",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/dbc51987c3c808c8f1da/execution.json": "7a110ab09136fdf9933a75ca3489d3e0f5201f88e24f640eee67bca7ec8531b4",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/dbc51987c3c808c8f1da/model-results.json": "b2d9e27b86bfc72b336713a3d53ca7ece81d23aea1d705c20270e7352c4aa49c",
+    "examples/defense/uas-ground-control-station/evidence/analysis/runs/dbc51987c3c808c8f1da.json": "425ea571f9e3c68f34804f093cd9655c5f89877e2fcfcc1ea230e6dd23c957e9",
+    "examples/defense/uas-ground-control-station/evidence/drafts/architecture-description.md": "ee79b19b0b65d51b39f0d4325167a60d7e5e72771fb862e5661a6e1ba9a9250c",
+    "examples/defense/uas-ground-control-station/evidence/drafts/dodaf-products.md": "869cebb1a7ef5a8f87db45d5265e581e86c404e8b4dcbdb547dfc727935ab231",
+    "examples/defense/uas-ground-control-station/evidence/drafts/icd.md": "b55dd0d019215e01f182e76c0449e15ce0a5a3a3fde1cd43ee95d393d5a3bcd3",
+    "examples/defense/uas-ground-control-station/evidence/drafts/pha.md": "043b4334a3dd2bbb36624f50b1ea7c69f98e50e8694f53b017d9bab2ab0d181a",
+    "examples/defense/uas-ground-control-station/evidence/drafts/srs.md": "6c6eff62c99ad8b3b8be3d4b99b17c1ecef161530cb820a85b4e2b5cc93e0219",
+    "examples/defense/uas-ground-control-station/evidence/drafts/ssar-initial.md": "d5536ba0d63d3a46338916f8aed6a63747310da8f72322f6b27e5656bcf2f51c",
+    "examples/defense/uas-ground-control-station/evidence/drafts/temp.md": "915848371ea8057c33cf07600951957e6d8e8a943819e48df4cd2bf0725b2c18",
+    "examples/defense/uas-ground-control-station/evidence/drafts/vtp.md": "c55aee2ec8f939be003dabb76aaee3a248976b19a80ff708c5ad6a0fe8000ef3",
+    "examples/defense/uas-ground-control-station/hazard-analysis.md": "b72c3f7afa72d171425b68d9eeb5fd6fda3524ec40bb597190b78d683dae82fc",
+    "examples/defense/uas-ground-control-station/history/pre-hardening.json": "a4d50f47d1a712ce0d35d0c278681953d06d26b78088c25b9caaacb8fb3fde77",
+    "examples/defense/uas-ground-control-station/requirements.md": "db93cb7cf6038ad8ce51eddd4110fce0498b91d6b6f080c32dd90870cd28f9d1",
+    "examples/defense/uas-ground-control-station/review-status.json": "f65067fbf225793a1f6bcdbc4d565aba00d723447c4640126e5c5e0675587074",
+    "examples/defense/uas-ground-control-station/source-review.md": "89385b859bc9b001e129384295ae5293bf5813081128896527e829c6aea10450",
+    "examples/defense/uas-ground-control-station/system.yaml": "635c9fcdf60856456021215a15af97110daa76b758dfab2f1c3414ec0bac2c2d",
+    "examples/defense/uas-ground-control-station/traceability.md": "ce7346202030dfd028e632b788e1654a5767609ce151e1852f7fa9ac3bb555f4",
+    "examples/electronic-systems/README.md": "96d8ee8feb0dcdf2b188d7adf646e3332f94d7ad454638bd45b00e09c7080580",
+    "examples/electronic-systems/fpga-radar-signal-processor/README.md": "cc1675cd7e2bc0873484139aec326205ad6941f497bcbcf5def406b60764b391",
+    "examples/electronic-systems/fpga-radar-signal-processor/architecture.md": "4f3085788dff3f33c9d18215e1e555cc9d83f21422d97f0e8b6537d0f9f71031",
+    "examples/electronic-systems/fpga-radar-signal-processor/history/pre-hardening.json": "21b75ca159581f6d0db456c4421912691d2e4ae136ed5962a18e29a20c0f8c02",
+    "examples/electronic-systems/fpga-radar-signal-processor/requirements.md": "8bc6feb223e30784831e1c1a0437301f67b9a0ae63e0f9723e9e132f83dbfe29",
+    "examples/electronic-systems/fpga-radar-signal-processor/review-status.json": "36fc516796ff14ed0126306302b066bb46eeb6d872a19e1c192499aef9efdf93",
+    "examples/electronic-systems/fpga-radar-signal-processor/source-review.md": "3580bb71d27db86b1b2dbd3ca8e585bd792ecf58b97789351e26bd67fdf5dc6c",
+    "examples/electronic-systems/fpga-radar-signal-processor/system.yaml": "6182d7de9753ca504c951d3a2a453cf3b8590943ce5ba541c984cef59b2138e8",
+    "examples/electronic-systems/hpc-cluster-orchestration/README.md": "6d65f6b7573cab2ba44f55e085b2b901037067b1dc9428313d46ab545039d197",
+    "examples/electronic-systems/hpc-cluster-orchestration/architecture.md": "214dc7416deb2983bbb629fec3ae27c226b96bc4e60486bdb531b2cd45cc0b06",
+    "examples/electronic-systems/hpc-cluster-orchestration/history/pre-hardening.json": "0d8503f85ecd05b259d9a81b372c71c4cf8d77435c262903798f75dd91059f68",
+    "examples/electronic-systems/hpc-cluster-orchestration/requirements.md": "1c5dbffb4894e6d9804cfea3768ee7074f46094155ec7c04c0fa1f2cd97765b8",
+    "examples/electronic-systems/hpc-cluster-orchestration/review-status.json": "09b7dad5edd450fc7fa7e7f3beba96d390ca5b742fa209852897781a8069f115",
+    "examples/electronic-systems/hpc-cluster-orchestration/source-review.md": "79d2039c860faf28e8c109a228ebcf155993fe5dd8d75e9ca6394f0ca11681d4",
+    "examples/electronic-systems/hpc-cluster-orchestration/system.yaml": "388cb29c09891329d07f5e59dab2ac0caea9f52d300008ffc67d1f4a2a70376a",
+    "examples/electronic-systems/quantum-processor-control/README.md": "8271518d2d9435fe18db1470e34972847e5daa51721acffc5eb215564abb7cd3",
+    "examples/electronic-systems/quantum-processor-control/analysis/control-challenges.md": "7e8a86e1945656aeaf1be9f2ac6ab46fb2bab205546ba8ff22ee0dd77152cf5d",
+    "examples/electronic-systems/quantum-processor-control/analysis/cse-failure-model.json": "8ed09239e16905519b9d72118a7273babd7651105961df54fb96d9f1677c4196",
+    "examples/electronic-systems/quantum-processor-control/analysis/failure-model.json": "2e397fa9cf4652cea822a3235735d32e9b5ee0f5e5fc12a1ef69fab05ca88e1e",
+    "examples/electronic-systems/quantum-processor-control/analysis/report.md": "eed13a88213e86e0140e27443fb434157b64fe6f8bc8fd2cc87e14ba17820996",
+    "examples/electronic-systems/quantum-processor-control/architecture.md": "23eb2eafb3afb632380c6b0417ec3b5c57144ac1ac0f0eb04e58444485501c11",
+    "examples/electronic-systems/quantum-processor-control/assurance-evidence.md": "46ec7e441cb043a2fa5ef5e0b6552a7309cdd58632d6b3da265a6936ea312ab1",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/cse-crosscheck.json": "7146261c3e36fd25b6214228cb024d39b4daaac916cead53ce891f882392bb62",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/cse-runs/7146261c3e36fd25b6214228cb024d39b4daaac916cead53ce891f882392bb62.json": "7146261c3e36fd25b6214228cb024d39b4daaac916cead53ce891f882392bb62",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/cse-runs/8c4894bf51c8ccc4fa263da22a6b509c696c90c7365936569cd47f1c831b6e83.json": "8c4894bf51c8ccc4fa263da22a6b509c696c90c7365936569cd47f1c831b6e83",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/model-results.json": "5a51482d48224770abcbd3bba3f072eb36ee28a9cd104c6bdd295ef32b30027b",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/4bcb470f52381d8ab8f6/analyze_gallery.py": "53d61453efd2ef3e8c3035a6e9464a6b9daac2296f9a681156cea00be16c2521",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/4bcb470f52381d8ab8f6/architecture.md.snapshot": "23eb2eafb3afb632380c6b0417ec3b5c57144ac1ac0f0eb04e58444485501c11",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/4bcb470f52381d8ab8f6/execution.json": "36fb620dd4f3db2fd637f9fbae7bde5839c83568d19e7f0246b806e086d194c3",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/4bcb470f52381d8ab8f6/failure-model.json": "2e397fa9cf4652cea822a3235735d32e9b5ee0f5e5fc12a1ef69fab05ca88e1e",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/4bcb470f52381d8ab8f6/hazard-analysis.md.snapshot": "d929ad33a704c6fdbe34150d9662a0ac461a67ecccfa6ea66af917d0ccbc468d",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/4bcb470f52381d8ab8f6/model-results.json": "af95f5f2bfdb5e25697e9400b01a34af2fc336879f633169f8c4107a07abd524",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/4bcb470f52381d8ab8f6/requirements.md.snapshot": "14402ffe249cb9d60875520640b55ebec54bfd281c4eac2fd96266beade162ad",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/8521891e8778be0a350b/analyze_gallery.py": "0271c8466b040650737f318c8046601229d53c716e4718e8a17b4f8faf9f398a",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/8521891e8778be0a350b/architecture.md.snapshot": "0adc1c223a031eb6fa35a8e1a55b6513bb5a88c32286f0f55caab6389e98f8d3",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/8521891e8778be0a350b/execution.json": "8b313b014b2a62e101aac3b2b1ea41facf2ab21926f848ee676de6c494e7b627",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/8521891e8778be0a350b/failure-model.json": "2e397fa9cf4652cea822a3235735d32e9b5ee0f5e5fc12a1ef69fab05ca88e1e",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/8521891e8778be0a350b/hazard-analysis.md.snapshot": "1f1861be427d60849d78c69fdfe1f5740c694229abb7b00bc01a8ce5d64b6cc9",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/8521891e8778be0a350b/model-results.json": "1d5a32845fa0b9cac23c31acf3eece98efc9c5f719dd956213ed05725d97130e",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/8521891e8778be0a350b/requirements.md.snapshot": "14402ffe249cb9d60875520640b55ebec54bfd281c4eac2fd96266beade162ad",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/9b3cbcb2aa68e5815853/execution.json": "72a74903956d3fccb1f2fbace11b8cc023b155a3082c0b772c44eb57a990c653",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/9b3cbcb2aa68e5815853/model-results.json": "813ba4bca54703f5f9f0f578230fa0961364199bec2feb24346e733605d941a5",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/9b3cbcb2aa68e5815853.json": "8bc0bf94e7a2b7b41f0a9d9f1be9a8dfc9fd998ea12590f7bbfc29a97627929a",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/ddf8d5fe353469a481aa/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/ddf8d5fe353469a481aa/architecture.md.snapshot": "23eb2eafb3afb632380c6b0417ec3b5c57144ac1ac0f0eb04e58444485501c11",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/ddf8d5fe353469a481aa/execution.json": "1d6c384c88e301100ebfd7f2d6d41356478f63c8be9a7e533ddeab686089486f",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/ddf8d5fe353469a481aa/failure-model.json": "2e397fa9cf4652cea822a3235735d32e9b5ee0f5e5fc12a1ef69fab05ca88e1e",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/ddf8d5fe353469a481aa/hazard-analysis.md.snapshot": "d929ad33a704c6fdbe34150d9662a0ac461a67ecccfa6ea66af917d0ccbc468d",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/ddf8d5fe353469a481aa/model-results.json": "5a51482d48224770abcbd3bba3f072eb36ee28a9cd104c6bdd295ef32b30027b",
+    "examples/electronic-systems/quantum-processor-control/evidence/analysis/runs/ddf8d5fe353469a481aa/requirements.md.snapshot": "14402ffe249cb9d60875520640b55ebec54bfd281c4eac2fd96266beade162ad",
+    "examples/electronic-systems/quantum-processor-control/evidence/drafts/architecture-description.md": "6d1feefdfb67d81681d17d9cd8018e29a4e2bd49003697fb18cf222c3cc7c926",
+    "examples/electronic-systems/quantum-processor-control/evidence/drafts/cm-plan.md": "2f83d5ab0448bb1ffa80d4b525814efb67b000d28e04f72fe7ade4b1b03abca9",
+    "examples/electronic-systems/quantum-processor-control/evidence/drafts/fmea-fmeca-report.md": "557a02094b4c8f36cb67a301e2fca807babf61d645672b45c29dedd5accb6911",
+    "examples/electronic-systems/quantum-processor-control/evidence/drafts/fs-management-plan.md": "b5bed35dbf9e51588cc955cfd7f2313304c1756ed81d3a45b3e830c1523e0729",
+    "examples/electronic-systems/quantum-processor-control/evidence/drafts/hazard-risk-analysis.md": "d106bfdbb9bfa99604c0192688991fbe8a14519b3a8ba7668e070140a15d5e91",
+    "examples/electronic-systems/quantum-processor-control/evidence/drafts/safety-function-design.md": "798bacde7b02fde5575eee2986c95b35cf6c4f7edeb987ec5ca64e73859ebd3b",
+    "examples/electronic-systems/quantum-processor-control/evidence/drafts/safety-requirements-spec.md": "ea5b5a345161b162bcb5db0a85f1cb3c2438f4c9de8c869c5fa766b41585d014",
+    "examples/electronic-systems/quantum-processor-control/evidence/drafts/v-and-v-plan.md": "440eec9cb19155c97c6ed3260d594c32a4613d7f6ba3bd16af48ad0930d8ba41",
+    "examples/electronic-systems/quantum-processor-control/hazard-analysis.md": "d929ad33a704c6fdbe34150d9662a0ac461a67ecccfa6ea66af917d0ccbc468d",
+    "examples/electronic-systems/quantum-processor-control/history/pre-hardening.json": "e13eecdd9a1eb2835595501ad81520ca64dba7835e101833028890b2dd911474",
+    "examples/electronic-systems/quantum-processor-control/requirements.md": "14402ffe249cb9d60875520640b55ebec54bfd281c4eac2fd96266beade162ad",
+    "examples/electronic-systems/quantum-processor-control/review-status.json": "0fc0afb8cabc951b8a88b59ebedc00b2fbe40c22d6e245da905a9bff3f499be4",
+    "examples/electronic-systems/quantum-processor-control/source-review.md": "e68e1405e0f91482129866e259ea4e62762afd8bac325df3d2644db35f1ed921",
+    "examples/electronic-systems/quantum-processor-control/system.yaml": "c422b4c85f47f61930a8be962bdf8eed5dbe5d081c7d852f3763222327070849",
+    "examples/electronic-systems/quantum-processor-control/traceability.md": "49e7ea3e0ca320e0c8a747ef3cb1dbb8f4da102bce4fcbad5d16d347389c0ffd",
+    "examples/electronic-systems/safety-critical-soc/README.md": "a0ac3db01fc3ecb58f7912ae7921f7c15c14eb625ca2322e6057d0737bb33caf",
+    "examples/electronic-systems/safety-critical-soc/architecture.md": "31c36282c3a4d45652c8eab519bf358d4ff827565bb5e7eabf2ea70cce4ed3ac",
+    "examples/electronic-systems/safety-critical-soc/history/pre-hardening.json": "6ea439a517425a9acb9e4421ccbb5b4c782322ea82ca5bac6343aa65a9ecf59b",
+    "examples/electronic-systems/safety-critical-soc/requirements.md": "faade5077cbf2f1cefb29d26262bf1473b87128d5f64b6c200aa8d0f60715625",
+    "examples/electronic-systems/safety-critical-soc/review-status.json": "ee0228de1fe5d04bb818ba8fa1c64b3d95a14d2bc67c3a3afc9c97eb23d27f85",
+    "examples/electronic-systems/safety-critical-soc/source-review.md": "07440c7480169daeb186075cf50612a9d6f22d675d8f143d1aa9c2cad2aa14e4",
+    "examples/electronic-systems/safety-critical-soc/system.yaml": "cf3409f110782dcfe56378a0fdf7e43bcfa5ceaa6f3667a8d7acb6baacf37185",
+    "examples/medical-device/README.md": "c73220f653975ea299e5062ae3eec4d731e73dcf55fbd8d5e2cc7024359029de",
+    "examples/medical-device/continuous-glucose-monitor/README.md": "0a6d7e4679d66be9d0d9d5a0d0f1f1db38e88d9a75c9da306efe0210ba6ef8ed",
+    "examples/medical-device/continuous-glucose-monitor/architecture.md": "3dc3df86d1e848ddebeedc034b61dd95e24d03bcb48b598504db35c915710679",
+    "examples/medical-device/continuous-glucose-monitor/history/pre-hardening.json": "2308a7d4b11e4af3c8fdccf3e67c6de60c38d37ffcbf02018c3a181856d73fa9",
+    "examples/medical-device/continuous-glucose-monitor/requirements.md": "bbfaf300da36e9332dee51e84fdedd8c327b6e0af7697eb3c5202c94eec86237",
+    "examples/medical-device/continuous-glucose-monitor/review-status.json": "0774c5418b61c0b23e85cf6a9bb58a06fb149f7ad30e431befa0fb2251515d5c",
+    "examples/medical-device/continuous-glucose-monitor/source-review.md": "c595f23ab30cedfbfd63f94df1e4ad837d5d108c78df930bf9138955d3d22589",
+    "examples/medical-device/continuous-glucose-monitor/system.yaml": "808eedb215ed8fa6b4e5e6f58eb3f89430626929c1b11b78456dead5c3ddbc93",
+    "examples/medical-device/patient-monitoring-network/README.md": "c09e90c1c800f518bdb0d4a11d5b64ab731465abc4e5dff6872e89ea1de36a19",
+    "examples/medical-device/patient-monitoring-network/architecture.md": "29a040fb66b5c7de95673f9cd2711bb1800c56a8d11634f01cf187ef33004c7f",
+    "examples/medical-device/patient-monitoring-network/history/pre-hardening.json": "2821655bafdd61ddbb3e58ae1045bd0a5f1b08ec2c964bddd6f7b23d449197ab",
+    "examples/medical-device/patient-monitoring-network/requirements.md": "6f6d4ca6fbd4bac97e8d5b00005f193780b406840b4fdc61665391247f93f234",
+    "examples/medical-device/patient-monitoring-network/review-status.json": "8be2f5af927e50a6861abf8a14db92cbe7a81e90d586f58cf4401dd22f4b2d08",
+    "examples/medical-device/patient-monitoring-network/source-review.md": "07122748b8ed2da24cbc36d18fa7813afe32e93d5edac9609ae4f7474f2d997b",
+    "examples/medical-device/patient-monitoring-network/system.yaml": "5bcb1f6529d4fe0f0a6533286b70231d8d2a86383635b924a9ee09d496bfbc8d",
+    "examples/medical-device/smart-infusion-pump/README.md": "266c7fc8ffd558165dfac7dabf4608221c93ed70a4050cc9df31ebbeee33c575",
+    "examples/medical-device/smart-infusion-pump/analysis/clamp-study.md": "de9dc5b2d3d2eacdc69eed7e817ad541e2841d0b07ede488f9497ee302bbb458",
+    "examples/medical-device/smart-infusion-pump/analysis/clamp_model.py": "f255fbf244c1a7da9c293507a7b71be7a4e1d5ef059d1ab5c2066800f3c888ea",
+    "examples/medical-device/smart-infusion-pump/analysis/control-challenges.md": "20f545bb9462aebbc53efbee0ffcd6d15f3020697f2ccda94c389ca4ecf8cd76",
+    "examples/medical-device/smart-infusion-pump/analysis/cse-failure-model.json": "c7da9330f91d449378dd58e02ddd57090b624342043e63a31e7a226edd9a37a1",
+    "examples/medical-device/smart-infusion-pump/analysis/failure-model.json": "011cc6dedc05dea6ac1f987d3dbe9f664f592b3a85f3afd6f7268cbbc8cd3f59",
+    "examples/medical-device/smart-infusion-pump/analysis/report.md": "a9685b3653ef4be82d1654ec0f776492f8335af52264512df114e3a02dfa6e50",
+    "examples/medical-device/smart-infusion-pump/analysis/run_clamp_checks.py": "61d693f61ca41b6d8690f314d3437e698e6114bda06db4778d0e421d54c4cbfb",
+    "examples/medical-device/smart-infusion-pump/architecture.md": "51181d1828c01393691da504260ac7ae752bbbbc907d1559239c0a7b24d31572",
+    "examples/medical-device/smart-infusion-pump/assurance-evidence.md": "a3a4bc73ffb29c0c1635a90ec4259b18c2c398c457d703ad0c3f75a81b0fe5c8",
+    "examples/medical-device/smart-infusion-pump/classification.md": "04d46dbc6e8c8bb0a8067d610050a9a70c8a4c87f12420fee142de91eed941ed",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/clamp-results.json": "27dc4acce6a7e49c394ba9c883f4c1b23b7318422997a0537790f5e508c482a2",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/cse-crosscheck.json": "9ab85ac500ecd2a3ffd7efbcd7974460a40a749ef360b90e53736d1fba2b028e",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/cse-runs/09cd8bd1f81eb5180f7c9573b2a65a0faef1b952ad2438f60ed29728f49d9522.json": "09cd8bd1f81eb5180f7c9573b2a65a0faef1b952ad2438f60ed29728f49d9522",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/cse-runs/9ab85ac500ecd2a3ffd7efbcd7974460a40a749ef360b90e53736d1fba2b028e.json": "9ab85ac500ecd2a3ffd7efbcd7974460a40a749ef360b90e53736d1fba2b028e",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/model-results.json": "6e4894cfb89f779bc8de825937a548ec3033682bd418f2391097f73a8a91765a",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/14908f6754183a202375/execution.json": "21f514eddfd547d2a1de8a3b078bd756aa94d447d7068f2409ba65f1a768e3bb",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/14908f6754183a202375/model-results.json": "368e14528f2be6dd8517fde065be89c11f4e95886668289928d354d1bcf1a94c",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/14908f6754183a202375.json": "73fbed86b423cb2097d85fe81bbefe071007b58f04f4fb1dd7ce985afcc9d061",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/56cc54305117c943a1bf/clamp-results.json": "27dc4acce6a7e49c394ba9c883f4c1b23b7318422997a0537790f5e508c482a2",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/56cc54305117c943a1bf/clamp_model.py": "f255fbf244c1a7da9c293507a7b71be7a4e1d5ef059d1ab5c2066800f3c888ea",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/56cc54305117c943a1bf/execution.json": "33f98bcc5ff002017fb9f011349f8cb90d98b7c851f330ad8ef32dc96c3b045e",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/56cc54305117c943a1bf/requirements.md.snapshot": "bb5863242c85ab1835300dd182e9b1961e1b444bfee03e3c3bae0b73dee94904",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/56cc54305117c943a1bf/run_clamp_checks.py": "61d693f61ca41b6d8690f314d3437e698e6114bda06db4778d0e421d54c4cbfb",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/8ef40b13dcdb9ebf8239/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/8ef40b13dcdb9ebf8239/architecture.md.snapshot": "51181d1828c01393691da504260ac7ae752bbbbc907d1559239c0a7b24d31572",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/8ef40b13dcdb9ebf8239/execution.json": "2c55242801a27ba428f0afc77dd2331baa60936ab68cc154b3b971047711516a",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/8ef40b13dcdb9ebf8239/failure-model.json": "011cc6dedc05dea6ac1f987d3dbe9f664f592b3a85f3afd6f7268cbbc8cd3f59",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/8ef40b13dcdb9ebf8239/hazard-analysis.md.snapshot": "5ea7ccd762ecad0076c2270cbce7b85b57e23fe29e994957f298e8b80885e128",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/8ef40b13dcdb9ebf8239/model-results.json": "6e4894cfb89f779bc8de825937a548ec3033682bd418f2391097f73a8a91765a",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/8ef40b13dcdb9ebf8239/requirements.md.snapshot": "bb5863242c85ab1835300dd182e9b1961e1b444bfee03e3c3bae0b73dee94904",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ad29071dd88ffdb13509/analyze_gallery.py": "53d61453efd2ef3e8c3035a6e9464a6b9daac2296f9a681156cea00be16c2521",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ad29071dd88ffdb13509/architecture.md.snapshot": "51181d1828c01393691da504260ac7ae752bbbbc907d1559239c0a7b24d31572",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ad29071dd88ffdb13509/execution.json": "4cb38ffa174e92231000d137c9d9447d25a7570718c6dc8c6440ff2a82fc62b9",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ad29071dd88ffdb13509/failure-model.json": "011cc6dedc05dea6ac1f987d3dbe9f664f592b3a85f3afd6f7268cbbc8cd3f59",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ad29071dd88ffdb13509/hazard-analysis.md.snapshot": "9e7b6a1ce499a6ef1b2d3795020989b04fab01bc141aa136b58452885151452e",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ad29071dd88ffdb13509/model-results.json": "7e818a935641683dc4493dadb741f9912e76983fc2ca89dc7807202532802e25",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ad29071dd88ffdb13509/requirements.md.snapshot": "bb5863242c85ab1835300dd182e9b1961e1b444bfee03e3c3bae0b73dee94904",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/cac64d5339c38d30c9fa/analyze_gallery.py": "0271c8466b040650737f318c8046601229d53c716e4718e8a17b4f8faf9f398a",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/cac64d5339c38d30c9fa/architecture.md.snapshot": "51181d1828c01393691da504260ac7ae752bbbbc907d1559239c0a7b24d31572",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/cac64d5339c38d30c9fa/execution.json": "aa6658e0c3ce1ff519f090f4fc458c867c9fa9d1a850f47093dd50c67730cabc",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/cac64d5339c38d30c9fa/failure-model.json": "011cc6dedc05dea6ac1f987d3dbe9f664f592b3a85f3afd6f7268cbbc8cd3f59",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/cac64d5339c38d30c9fa/hazard-analysis.md.snapshot": "9e7b6a1ce499a6ef1b2d3795020989b04fab01bc141aa136b58452885151452e",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/cac64d5339c38d30c9fa/model-results.json": "d2dfa5f058bab96dd71ceea089f894f6b8554b281112dec4e10cd18e0c090200",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/cac64d5339c38d30c9fa/requirements.md.snapshot": "bb5863242c85ab1835300dd182e9b1961e1b444bfee03e3c3bae0b73dee94904",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/e3156abb70c6ca045f94.json": "4bb7a68329611af831ada8a3278ae811f6f1eb3c6cb2e90970d48da9adeebd1a",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ea739d4876c48fadc755/clamp-results.json": "9753e385a030213d66a4945c373c1b22743006b02a6616a82779823ad26b123d",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ea739d4876c48fadc755/clamp_model.py": "0e1948d5282ec971d17d44d3eeea0fe941411bffdeda2e64a9e987c7a28781df",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ea739d4876c48fadc755/execution.json": "5071afd782dd52a74bd6ec9c821b4ae16f7661552253933582030675f251ccb5",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ea739d4876c48fadc755/requirements.md.snapshot": "bb5863242c85ab1835300dd182e9b1961e1b444bfee03e3c3bae0b73dee94904",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/ea739d4876c48fadc755/run_clamp_checks.py": "dab61acb86ec358e8983e33d33194f91784d1a2725184c23d9cb3d286524bb2f",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/f75e9bcbc0464d6c2ee9/clamp-results.json": "e39ef28b1428648d82b8e78b5119d87af82e6e7f367a893a9256c4523c276e60",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/f75e9bcbc0464d6c2ee9/clamp_model.py": "0e1948d5282ec971d17d44d3eeea0fe941411bffdeda2e64a9e987c7a28781df",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/f75e9bcbc0464d6c2ee9/execution.json": "b868a099df487f59c5a72d79601c325b211747296fc5adf5925468fccbd7875f",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/f75e9bcbc0464d6c2ee9/requirements.md.snapshot": "bb5863242c85ab1835300dd182e9b1961e1b444bfee03e3c3bae0b73dee94904",
+    "examples/medical-device/smart-infusion-pump/evidence/analysis/runs/f75e9bcbc0464d6c2ee9/run_clamp_checks.py": "d290838e4f4376e89bce8635b63c878c270be156e80c4fe87bb8ad0f0d44887c",
+    "examples/medical-device/smart-infusion-pump/hazard-analysis.md": "5ea7ccd762ecad0076c2270cbce7b85b57e23fe29e994957f298e8b80885e128",
+    "examples/medical-device/smart-infusion-pump/history/pre-hardening.json": "c18e457f7bb15350893a6302685ea75520b2839a2bfda9d2dfdbf214d9d7e884",
+    "examples/medical-device/smart-infusion-pump/requirements.md": "bb5863242c85ab1835300dd182e9b1961e1b444bfee03e3c3bae0b73dee94904",
+    "examples/medical-device/smart-infusion-pump/review-status.json": "26f1cf997f5b484ac75324f50f243dae23a7797ce0139e99943a2928dd6ce75b",
+    "examples/medical-device/smart-infusion-pump/source-review.md": "1b263c77ad3937ece471645b92f36af919990843cd841f6cdc9adddac1d8a56a",
+    "examples/medical-device/smart-infusion-pump/system.yaml": "ec67b7f73fb84598a65c05283b3d2528c751ce6886a43fd3295e604186e822ea",
+    "examples/medical-device/smart-infusion-pump/traceability.md": "dc5ac7d297c2a6ff9f09d55575ba999745e7777b9c257a190800293d20d3cb2d",
+    "examples/medical-device/surgical-robot-platform/README.md": "6f5aec96b90700aef7bf547b7f335d4c01028cb391ed7a360127bbe928911380",
+    "examples/medical-device/surgical-robot-platform/architecture.md": "b284630913793501319d1b70b46d737e54ddea04c7de9d9028cc4f1b0f048e49",
+    "examples/medical-device/surgical-robot-platform/history/pre-hardening.json": "e44010dc82ba658b087edc6b021f373cbcd4b851a553d6b6b4843725aee8f2f5",
+    "examples/medical-device/surgical-robot-platform/requirements.md": "a1aea4406d84cfcb91dacb959c76cbc699c418d887ddb9dff0ec007a79e45c4c",
+    "examples/medical-device/surgical-robot-platform/review-status.json": "b9acac1cc060bcff8263f27c9860f47e3f88d89336a482d0210852d86217dd56",
+    "examples/medical-device/surgical-robot-platform/source-review.md": "9a18190eda1929309a4f4225e21fa366090e22e4f4f544c565f5e86e9d49f19d",
+    "examples/medical-device/surgical-robot-platform/system.yaml": "0b6d6339520b5c41b35574600353d2bc947e4e341828c8cd114f30fbc3a26449",
+    "scripts/analyze_gallery.py": "262143209333039a16823df7b1a60d16f2b7209da6b23ce86fff0eb96b6ef63b",
+    "scripts/check_gallery.py": "c441ef4fb3ff2546f83808d9b43361e0717e9bb4beb28358a6661602fb32e805",
+    "tests/test_gallery.py": "fbcd8ae2bc77bc1183818e200455b6be606875437c1c6f37dca875ee30a54f07"
+  },
+  "checks": {
+    "clamp-runner-stale-cache": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-c",
+        "import run_clamp_checks; run_clamp_checks.main()"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/workspace/repos/builderbob/mbse-agents/.mbse-review/models-final-fixtures-20261114T000153641793Z/clamp-runner/examples/medical-device/smart-infusion-pump/analysis/run_clamp_checks.py\", line 32, in <module>\n    _BOUND_SOURCES = bind_loaded_sources()\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/repos/builderbob/mbse-agents/.mbse-review/models-final-fixtures-20261114T000153641793Z/clamp-runner/examples/medical-device/smart-infusion-pump/analysis/run_clamp_checks.py\", line 27, in bind_loaded_sources\n    raise ValueError(f\"Loaded code differs from source bytes: {name}\")\nValueError: Loaded code differs from source bytes: analysis/run_clamp_checks.py\n",
+      "selected_result_unchanged": true
+    },
+    "static-engine-stale-cache": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-c",
+        "import sys; sys.path.insert(0,'scripts'); import analyze_gallery; analyze_gallery.main()"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/workspace/repos/builderbob/mbse-agents/.mbse-review/models-final-fixtures-20261114T000153641793Z/static-engine/scripts/analyze_gallery.py\", line 61, in <module>\n    _BOUND_ENGINE_SHA = bind_loaded_source(Path(__file__), _LOADED_MODULE_CODE)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/repos/builderbob/mbse-agents/.mbse-review/models-final-fixtures-20261114T000153641793Z/static-engine/scripts/analyze_gallery.py\", line 57, in bind_loaded_source\n    raise ValueError(f\"Loaded code differs from source bytes: {path}\")\nValueError: Loaded code differs from source bytes: /workspace/repos/builderbob/mbse-agents/.mbse-review/models-final-fixtures-20261114T000153641793Z/static-engine/scripts/analyze_gallery.py\n",
+      "selected_result_unchanged": true
+    },
+    "clamp-wrong-origin": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-c",
+        "import sys; sys.path.insert(0,'/workspace/repos/builderbob/mbse-agents/.mbse-review/models-final-fixtures-20261114T000153641793Z/clamp-wrong-origin/other'); import clamp_model; sys.path.insert(0,'/workspace/repos/builderbob/mbse-agents/.mbse-review/models-final-fixtures-20261114T000153641793Z/clamp-wrong-origin/examples/medical-device/smart-infusion-pump/analysis'); import run_clamp_checks; run_clamp_checks.main()"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/workspace/repos/builderbob/mbse-agents/.mbse-review/models-final-fixtures-20261114T000153641793Z/clamp-wrong-origin/examples/medical-device/smart-infusion-pump/analysis/run_clamp_checks.py\", line 32, in <module>\n    _BOUND_SOURCES = bind_loaded_sources()\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/repos/builderbob/mbse-agents/.mbse-review/models-final-fixtures-20261114T000153641793Z/clamp-wrong-origin/examples/medical-device/smart-infusion-pump/analysis/run_clamp_checks.py\", line 23, in bind_loaded_sources\n    raise ValueError(f\"Loaded source origin differs: {name}\")\nValueError: Loaded source origin differs: analysis/clamp_model.py\n"
+    },
+    "input-during-execution": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-c",
+        "from pathlib import Path\nimport sys,json\nsys.path.insert(0,'scripts')\nimport analyze_gallery as m\np=next(Path('examples').glob('*/*/analysis/failure-model.json'))\noriginal=m.analyze\ndef edited(model):\n    result=original(model)\n    changed=json.loads(p.read_text()); changed['events']['BE1']['probability']='1/2'\n    p.write_text(json.dumps(changed))\n    return result\nm.analyze=edited\nm.main()\n"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Configuration changed during execution; no evidence published\n",
+      "selected_result_unchanged": true
+    },
+    "hold-open-power-independent-of-service": {
+      "trace": [
+        {
+          "time_ms": 100,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 200,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 300,
+          "release_ms": 100,
+          "latched": true,
+          "closed": false,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 400,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 500,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 600,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 700,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 800,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 900,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        },
+        {
+          "time_ms": 1000,
+          "release_ms": 100,
+          "latched": true,
+          "closed": true,
+          "watchdog": false,
+          "hold_open": false,
+          "powered_drive_permitted": false
+        }
+      ],
+      "no_watchdog_timeout": true,
+      "first_closed_ms": 400
+    },
+    "risk-matrix": {
+      "no_control_status_in_matrix": true,
+      "unadopted_boundary_retained": true
+    },
+    "criterion-wording": {
+      "ten_as_requirement_failure_removed": true,
+      "evidence_row": "| EVD-MODEL-002 | Temporal clamp-release fault-injection results | evidence/analysis/clamp-results.json | Sampled release/closing allocation and recovery behavior; ten retained criterion violations (six closure requirement-scope failures; four proposed combined-response violations); no physical occlusion | REQ-SAF-001/002 proposed timing | Engineering model review | Systems engineer | Executed |"
+    },
+    "cse-current-archive-corrupt": {
+      "errors": [
+        "examples/aerospace/flight-management-system: CSE receipt archive missing or differs from selected receipt"
+      ],
+      "rejected": true
+    }
+  },
+  "metadata_mutations": {
+    "flight-management-system:missing:schema_version": {
+      "rejected": true,
+      "reason": "Missing or unsupported execution provenance schema"
+    },
+    "flight-management-system:missing:run_id": {
+      "rejected": true,
+      "reason": "Execution provenance run identity or scope differs"
+    },
+    "flight-management-system:missing:scope": {
+      "rejected": true,
+      "reason": "Execution provenance run identity or scope differs"
+    },
+    "flight-management-system:missing:executed_at": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance timestamp"
+    },
+    "flight-management-system:missing:python": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance Python version"
+    },
+    "flight-management-system:missing:command": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance command"
+    },
+    "flight-management-system:missing:entrypoint": {
+      "rejected": true,
+      "reason": "Execution provenance entrypoint is missing or invalid"
+    },
+    "flight-management-system:missing:loaded_sources": {
+      "rejected": true,
+      "reason": "Execution provenance loaded-source bindings differ"
+    },
+    "flight-management-system:missing:result_sha256": {
+      "rejected": true,
+      "reason": "Execution provenance result hash differs"
+    },
+    "flight-management-system:invalid:executed_at:'2026-11-13T00:00:00'": {
+      "rejected": true,
+      "reason": "Execution provenance timestamp must include UTC offset"
+    },
+    "flight-management-system:invalid:executed_at:'nonsense'": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance timestamp"
+    },
+    "flight-management-system:invalid:python:''": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance Python version"
+    },
+    "flight-management-system:invalid:command:[]": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance command"
+    },
+    "flight-management-system:invalid:loaded_sources:{}": {
+      "rejected": true,
+      "reason": "Execution provenance loaded-source bindings differ"
+    },
+    "flight-management-system:invalid:run_id:'wrong'": {
+      "rejected": true,
+      "reason": "Execution provenance run identity or scope differs"
+    },
+    "smart-infusion-pump:missing:schema_version": {
+      "rejected": true,
+      "reason": "Missing or unsupported execution provenance schema"
+    },
+    "smart-infusion-pump:missing:run_id": {
+      "rejected": true,
+      "reason": "Execution provenance run identity or scope differs"
+    },
+    "smart-infusion-pump:missing:scope": {
+      "rejected": true,
+      "reason": "Execution provenance run identity or scope differs"
+    },
+    "smart-infusion-pump:missing:executed_at": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance timestamp"
+    },
+    "smart-infusion-pump:missing:python": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance Python version"
+    },
+    "smart-infusion-pump:missing:command": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance command"
+    },
+    "smart-infusion-pump:missing:entrypoint": {
+      "rejected": true,
+      "reason": "Execution provenance entrypoint is missing or invalid"
+    },
+    "smart-infusion-pump:missing:loaded_sources": {
+      "rejected": true,
+      "reason": "Execution provenance loaded-source bindings differ"
+    },
+    "smart-infusion-pump:missing:result_sha256": {
+      "rejected": true,
+      "reason": "Execution provenance result hash differs"
+    },
+    "smart-infusion-pump:invalid:executed_at:'2026-11-13T00:00:00'": {
+      "rejected": true,
+      "reason": "Execution provenance timestamp must include UTC offset"
+    },
+    "smart-infusion-pump:invalid:executed_at:'nonsense'": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance timestamp"
+    },
+    "smart-infusion-pump:invalid:python:''": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance Python version"
+    },
+    "smart-infusion-pump:invalid:command:[]": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance command"
+    },
+    "smart-infusion-pump:invalid:loaded_sources:{}": {
+      "rejected": true,
+      "reason": "Execution provenance loaded-source bindings differ"
+    },
+    "smart-infusion-pump:invalid:run_id:'wrong'": {
+      "rejected": true,
+      "reason": "Execution provenance run identity or scope differs"
+    },
+    "CSE:missing:schema_version": {
+      "rejected": true,
+      "reason": "Missing or unsupported execution provenance schema"
+    },
+    "CSE:missing:scope": {
+      "rejected": true,
+      "reason": "CSE provenance scope is missing or invalid"
+    },
+    "CSE:missing:executed_at": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance timestamp"
+    },
+    "CSE:missing:python": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance Python version"
+    },
+    "CSE:missing:command": {
+      "rejected": true,
+      "reason": "Missing or invalid execution provenance command"
+    },
+    "CSE:missing:helper_entrypoint": {
+      "rejected": true,
+      "reason": "CSE helper provenance entrypoint is missing or invalid"
+    },
+    "CSE:missing:helper_sources": {
+      "rejected": true,
+      "reason": "CSE helper provenance must contain all five declared source hashes"
+    },
+    "CSE:missing:helper_source_hash_scope": {
+      "rejected": true,
+      "reason": "CSE source inventory scope must distinguish it from a loaded-code binding"
+    },
+    "CSE:missing:bytecode_cache_policy": {
+      "rejected": true,
+      "reason": "CSE provenance command or cache policy differs from the declared execution"
+    }
+  },
+  "history": {
+    "initial_run_files": 96,
+    "run_file_mismatches": [],
+    "prior_CSE_receipts": [
+      {
+        "path": "examples/aerospace/flight-management-system/evidence/analysis/cse-crosscheck.json",
+        "preserved": true
+      },
+      {
+        "path": "examples/automotive/autonomous-emergency-braking/evidence/analysis/cse-crosscheck.json",
+        "preserved": true
+      },
+      {
+        "path": "examples/defense/uas-ground-control-station/evidence/analysis/cse-crosscheck.json",
+        "preserved": true
+      },
+      {
+        "path": "examples/electronic-systems/quantum-processor-control/evidence/analysis/cse-crosscheck.json",
+        "preserved": true
+      },
+      {
+        "path": "examples/medical-device/smart-infusion-pump/evidence/analysis/cse-crosscheck.json",
+        "preserved": true
+      }
+    ]
+  },
+  "production_checks": {
+    "static": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/analyze_gallery.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"models\": [\n    {\n      \"case\": \"flight-management-system\",\n      \"assignments\": 512,\n      \"cut_sets\": 10,\n      \"claims\": 4\n    },\n    {\n      \"case\": \"autonomous-emergency-braking\",\n      \"assignments\": 256,\n      \"cut_sets\": 11,\n      \"claims\": 4\n    },\n    {\n      \"case\": \"uas-ground-control-station\",\n      \"assignments\": 512,\n      \"cut_sets\": 10,\n      \"claims\": 4\n    },\n    {\n      \"case\": \"quantum-processor-control\",\n      \"assignments\": 256,\n      \"cut_sets\": 6,\n      \"claims\": 4\n    },\n    {\n      \"case\": \"smart-infusion-pump\",\n      \"assignments\": 128,\n      \"cut_sets\": 5,\n      \"claims\": 4\n    }\n  ],\n  \"physical_validation\": \"not_performed\",\n  \"risk_acceptance\": \"not_assessed\"\n}\n",
+      "stderr": ""
+    },
+    "clamp": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/workspace/repos/builderbob/mbse-agents/examples/medical-device/smart-infusion-pump/analysis/run_clamp_checks.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "28 temporal cases; 10 retained criterion violations (6 requirement-scope failures); no physical validation\n",
+      "stderr": ""
+    },
+    "gallery": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/check_gallery.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"scope\": \"declared_gallery_records_and_reproducible_abstract_models\",\n  \"systems\": [\n    {\n      \"case\": \"cubesat-constellation\",\n      \"identities\": {\n        \"REQ\": 12,\n        \"CMP\": 10,\n        \"FUN\": 10,\n        \"IFC\": 13,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"eva-suit-life-support\",\n      \"identities\": {\n        \"REQ\": 13,\n        \"CMP\": 12,\n        \"FUN\": 9,\n        \"IFC\": 13,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"flight-management-system\",\n      \"identities\": {\n        \"REQ\": 49,\n        \"CMP\": 20,\n        \"FUN\": 14,\n        \"IFC\": 19,\n        \"HZ\": 12,\n        \"CTL\": 10,\n        \"VER\": 57,\n        \"EVD\": 43\n      },\n      \"evidence\": {\n        \"planned\": 33,\n        \"drafted\": 9,\n        \"executed\": 1\n      },\n      \"open_references\": [\n        \"REQ-FUN-023\"\n      ],\n      \"boolean_assignments\": 512,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"launch-vehicle-avionics\",\n      \"identities\": {\n        \"REQ\": 13,\n        \"CMP\": 14,\n        \"FUN\": 10,\n        \"IFC\": 15,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"autonomous-emergency-braking\",\n      \"identities\": {\n        \"REQ\": 49,\n        \"CMP\": 26,\n        \"FUN\": 13,\n        \"IFC\": 16,\n        \"HZ\": 12,\n        \"CTL\": 11,\n        \"VER\": 57,\n        \"EVD\": 39\n      },\n      \"evidence\": {\n        \"planned\": 32,\n        \"drafted\": 6,\n        \"executed\": 1\n      },\n      \"open_references\": [\n        \"REQ-SAF-011\"\n      ],\n      \"boolean_assignments\": 256,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"ev-battery-management\",\n      \"identities\": {\n        \"REQ\": 13,\n        \"CMP\": 14,\n        \"FUN\": 9,\n        \"IFC\": 9,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"steer-by-wire\",\n      \"identities\": {\n        \"REQ\": 12,\n        \"CMP\": 13,\n        \"FUN\": 8,\n        \"IFC\": 13,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"v2x-communication\",\n      \"identities\": {\n        \"REQ\": 12,\n        \"CMP\": 9,\n        \"FUN\": 8,\n        \"IFC\": 10,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"ballistic-missile-defense\",\n      \"identities\": {\n        \"REQ\": 13,\n        \"CMP\": 12,\n        \"FUN\": 9,\n        \"IFC\": 11,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"naval-combat-management\",\n      \"identities\": {\n        \"REQ\": 13,\n        \"CMP\": 14,\n        \"FUN\": 10,\n        \"IFC\": 14,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"tactical-sdr-radio\",\n      \"identities\": {\n        \"REQ\": 13,\n        \"CMP\": 10,\n        \"FUN\": 10,\n        \"IFC\": 12,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"uas-ground-control-station\",\n      \"identities\": {\n        \"REQ\": 41,\n        \"CMP\": 19,\n        \"FUN\": 13,\n        \"IFC\": 19,\n        \"HZ\": 12,\n        \"CTL\": 12,\n        \"VER\": 48,\n        \"EVD\": 32\n      },\n      \"evidence\": {\n        \"planned\": 23,\n        \"drafted\": 8,\n        \"executed\": 1\n      },\n      \"open_references\": [\n        \"REQ-FUN-022\"\n      ],\n      \"boolean_assignments\": 512,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"continuous-glucose-monitor\",\n      \"identities\": {\n        \"REQ\": 11,\n        \"CMP\": 13,\n        \"FUN\": 7,\n        \"IFC\": 9,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"patient-monitoring-network\",\n      \"identities\": {\n        \"REQ\": 12,\n        \"CMP\": 15,\n        \"FUN\": 8,\n        \"IFC\": 10,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"smart-infusion-pump\",\n      \"identities\": {\n        \"REQ\": 43,\n        \"CMP\": 26,\n        \"FUN\": 14,\n        \"IFC\": 19,\n        \"HZ\": 12,\n        \"CTL\": 12,\n        \"VER\": 42,\n        \"EVD\": 27\n      },\n      \"evidence\": {\n        \"planned\": 25,\n        \"drafted\": 0,\n        \"executed\": 2\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 128,\n      \"temporal_cases\": 28,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"surgical-robot-platform\",\n      \"identities\": {\n        \"REQ\": 12,\n        \"CMP\": 19,\n        \"FUN\": 6,\n        \"IFC\": 10,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"fpga-radar-signal-processor\",\n      \"identities\": {\n        \"REQ\": 11,\n        \"CMP\": 11,\n        \"FUN\": 8,\n        \"IFC\": 12,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"hpc-cluster-orchestration\",\n      \"identities\": {\n        \"REQ\": 12,\n        \"CMP\": 12,\n        \"FUN\": 7,\n        \"IFC\": 12,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"quantum-processor-control\",\n      \"identities\": {\n        \"REQ\": 47,\n        \"CMP\": 27,\n        \"FUN\": 15,\n        \"IFC\": 21,\n        \"HZ\": 10,\n        \"CTL\": 12,\n        \"VER\": 54,\n        \"EVD\": 31\n      },\n      \"evidence\": {\n        \"planned\": 22,\n        \"drafted\": 8,\n        \"executed\": 1\n      },\n      \"open_references\": [\n        \"REQ-FUN-024\"\n      ],\n      \"boolean_assignments\": 256,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    },\n    {\n      \"case\": \"safety-critical-soc\",\n      \"identities\": {\n        \"REQ\": 13,\n        \"CMP\": 11,\n        \"FUN\": 8,\n        \"IFC\": 12,\n        \"HZ\": 0,\n        \"CTL\": 0,\n        \"VER\": 0,\n        \"EVD\": 0\n      },\n      \"evidence\": {\n        \"planned\": 0,\n        \"drafted\": 0,\n        \"executed\": 0\n      },\n      \"open_references\": [],\n      \"boolean_assignments\": 0,\n      \"temporal_cases\": 0,\n      \"standards_review\": \"partial\",\n      \"physical_validation\": \"not_performed\"\n    }\n  ],\n  \"physical_validation\": \"not_performed\",\n  \"risk_acceptance\": \"not_assessed\"\n}\n",
+      "stderr": ""
+    },
+    "focused_tests": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_gallery.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_boundary_and_tiny_probabilities_are_exact (test_gallery.ExactLogicTests.test_boundary_and_tiny_probabilities_are_exact) ... ok\ntest_counterexample_check_does_not_make_claim_true (test_gallery.ExactLogicTests.test_counterexample_check_does_not_make_claim_true) ... ok\ntest_duplicate_json_keys_are_rejected (test_gallery.ExactLogicTests.test_duplicate_json_keys_are_rejected) ... ok\ntest_independence_must_be_explicit_and_supported (test_gallery.ExactLogicTests.test_independence_must_be_explicit_and_supported) ... ok\ntest_malformed_graphs_and_records_are_rejected (test_gallery.ExactLogicTests.test_malformed_graphs_and_records_are_rejected) ... ok\ntest_probability_parser_rejects_unsafe_or_inexact_inputs (test_gallery.ExactLogicTests.test_probability_parser_rejects_unsafe_or_inexact_inputs) ... ok\ntest_repeated_event_is_idempotent (test_gallery.ExactLogicTests.test_repeated_event_is_idempotent) ... ok\ntest_shared_event_and_overlapping_cuts (test_gallery.ExactLogicTests.test_shared_event_and_overlapping_cuts) ... ok\ntest_unexpected_counterexample_fails_check (test_gallery.ExactLogicTests.test_unexpected_counterexample_fails_check) ... ok\ntest_broken_markdown_link_is_reported (test_gallery.GalleryContractTests.test_broken_markdown_link_is_reported) ... ok\ntest_clamp_source_drift_after_import_is_rejected (test_gallery.GalleryContractTests.test_clamp_source_drift_after_import_is_rejected) ... ok\ntest_clamp_stale_bytecode_is_rejected_even_with_B_flag (test_gallery.GalleryContractTests.test_clamp_stale_bytecode_is_rejected_even_with_B_flag) ... ok\ntest_collector_rejects_static_source_drift_after_import (test_gallery.GalleryContractTests.test_collector_rejects_static_source_drift_after_import) ... ok\ntest_cse_receipt_requires_timestamp_command_and_helper_inventory (test_gallery.GalleryContractTests.test_cse_receipt_requires_timestamp_command_and_helper_inventory) ... ok\ntest_cse_selected_receipt_requires_identical_archived_bytes (test_gallery.GalleryContractTests.test_cse_selected_receipt_requires_identical_archived_bytes) ... ok\ntest_dangling_table_reference_requires_explicit_disposition (test_gallery.GalleryContractTests.test_dangling_table_reference_requires_explicit_disposition) ... ok\ntest_drafted_artifact_must_exist (test_gallery.GalleryContractTests.test_drafted_artifact_must_exist) ... ok\ntest_duplicate_requirement_declaration (test_gallery.GalleryContractTests.test_duplicate_requirement_declaration) ... ok\ntest_escaping_evidence_path_is_rejected (test_gallery.GalleryContractTests.test_escaping_evidence_path_is_rejected) ... ok\ntest_execution_receipts_require_full_provenance (test_gallery.GalleryContractTests.test_execution_receipts_require_full_provenance) ... ok\ntest_historical_bytes_are_checked_but_not_current_claims (test_gallery.GalleryContractTests.test_historical_bytes_are_checked_but_not_current_claims) ... ok\ntest_parsed_input_change_during_analysis_is_rejected (test_gallery.GalleryContractTests.test_parsed_input_change_during_analysis_is_rejected) ... ok\ntest_planned_artifact_can_remain_unproduced (test_gallery.GalleryContractTests.test_planned_artifact_can_remain_unproduced) ... ok\ntest_real_gallery_results_and_archives_are_current (test_gallery.GalleryContractTests.test_real_gallery_results_and_archives_are_current) ... ok\ntest_repeated_status_cannot_silently_promote_evidence (test_gallery.GalleryContractTests.test_repeated_status_cannot_silently_promote_evidence) ... ok\ntest_source_review_must_cover_unique_current_requirements (test_gallery.GalleryContractTests.test_source_review_must_cover_unique_current_requirements) ... ok\ntest_stale_disposition_is_not_a_blanket_waiver (test_gallery.GalleryContractTests.test_stale_disposition_is_not_a_blanket_waiver) ... ok\ntest_tampered_report_and_archive_are_detected (test_gallery.GalleryContractTests.test_tampered_report_and_archive_are_detected) ... ok\ntest_valid_fixture_has_no_errors (test_gallery.GalleryContractTests.test_valid_fixture_has_no_errors) ... ok\ntest_hold_open_power_loss_does_not_imply_processor_service_loss (test_gallery.TemporalClampTests.test_hold_open_power_loss_does_not_imply_processor_service_loss) ... ok\ntest_jam_and_interlock_fault_preserve_uncovered_failures (test_gallery.TemporalClampTests.test_jam_and_interlock_fault_preserve_uncovered_failures) ... ok\ntest_power_recovery_requires_rearm_after_latched_release (test_gallery.TemporalClampTests.test_power_recovery_requires_rearm_after_latched_release) ... ok\ntest_sweep_retains_proposal_and_requirement_failures_separately (test_gallery.TemporalClampTests.test_sweep_retains_proposal_and_requirement_failures_separately) ... ok\ntest_unsafe_rearm_and_malformed_inputs_are_rejected (test_gallery.TemporalClampTests.test_unsafe_rearm_and_malformed_inputs_are_rejected) ... ok\ntest_watchdog_trips_at_boundary_and_closing_delay_is_separate (test_gallery.TemporalClampTests.test_watchdog_trips_at_boundary_and_closing_delay_is_separate) ... ok\n\n----------------------------------------------------------------------\nRan 35 tests in 0.588s\n\nOK\n"
+    }
+  },
+  "production_drift": []
+}

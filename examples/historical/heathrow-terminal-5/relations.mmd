@@ -1,0 +1,12 @@
+flowchart LR
+  F["HG-10 facility delivery"]
+  S["HG-10 staff familiarisation"]
+  L["HG-10 airline operations"]
+  T["HG-10 terminal operator"]
+  P["HG-10 front-line staff"]
+  R["HG-10 readiness authority"]
+  F -->|HG-10-I1 familiarisation| S
+  L -->|HG-10-I2 exception handover| T
+  P -->|HG-10-I3 unresolved concern| R
+  T -->|HG-10-C3 joint exercise evidence| R
+  S -->|HG-10-I4 performance evidence| R

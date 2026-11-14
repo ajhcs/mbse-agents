@@ -1,11 +1,13 @@
 ---
 name: mbse-automotive
-description: "Develop or review automotive functional safety, SOTIF, cybersecurity, E/E architectures, and safety evidence."
+description: "Understand and reason through vehicle-system behavior, connecting driver and operating context, E/E architecture, functional safety, SOTIF, cybersecurity, and lifecycle evidence."
 ---
 
 # Automotive Systems Engineering
 
 Connect vehicle behavior and operating context to safety goals, E/E architecture, interfaces, and verification. Keep malfunction safety, intended-function limitations, and cybersecurity analyses related but distinct.
+
+Explain how driver expectations, road/environment conditions, timing, shared resources, and degraded modes interact. Reconcile vehicle, supplier, software, hardware, and service assumptions before accepting a component-level conclusion. Consider production variation, calibration, updates, and field maintenance when they can change the behavior or the validity of earlier evidence.
 
 Start from the user's engineering decision, system boundary, operating context, and existing artifacts. Identify the governing program basis, jurisdiction, standards editions, and tool versions when they affect the answer. Distinguish obligations, guidance, and proposed practice; verify exact claims before relying on them. If a source is unavailable, mark the uncertainty and continue work that does not depend on it.
 

@@ -4,9 +4,10 @@ import re
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from install import install, ROOT
+from install import install, inspect, uninstall, restore, fingerprints, ROOT
 from catalog import entries
 
 
@@ -35,6 +36,7 @@ class InstallTests(unittest.TestCase):
             package = destination / "mbse-requirements"
             self.assertTrue((package / "references/requirement-contracts.md").is_file())
             self.assertTrue((package / "agents/openai.yaml").is_file())
+            self.assertEqual((package / "LICENSE").read_bytes(), (ROOT / "LICENSE").read_bytes())
             self.assertEqual(instructions.read_text(), "Local instructions")
             self.assertEqual(install(destination, ["mbse-requirements"]), [("mbse-requirements", "unchanged")])
 
@@ -66,6 +68,7 @@ class InstallTests(unittest.TestCase):
             skill = source / ".agents/skills/example"
             skill.mkdir(parents=True)
             source.joinpath("catalog.json").write_text(json.dumps({"skills": [{"name": "example", "path": ".agents/skills/example"}]}))
+            source.joinpath("LICENSE").write_bytes((ROOT / "LICENSE").read_bytes())
             skill.joinpath("SKILL.md").write_text('---\nname: example\ndescription: "An example task"\n---\nOld\n')
             destination = base / "project/skills"
             install(destination, ["example"], root=source)
@@ -88,3 +91,130 @@ class InstallTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     install(destination, names)
             self.assertFalse(destination.exists())
+
+    def make_source(self, base, names=("first", "second")):
+        source = base / "source"
+        source.mkdir()
+        source.joinpath("LICENSE").write_bytes((ROOT / "LICENSE").read_bytes())
+        source.joinpath("catalog.json").write_text(json.dumps({"skills": [
+            {"name": name, "path": f".agents/skills/{name}"} for name in names
+        ]}))
+        for name in names:
+            skill = source / ".agents/skills" / name
+            skill.mkdir(parents=True)
+            (skill / "SKILL.md").write_text(f'---\nname: {name}\ndescription: "A fixture task"\n---\nOld\n')
+        return source
+
+    def test_nested_receipt_named_file_is_a_local_edit(self):
+        with tempfile.TemporaryDirectory(prefix=".mbse-test-", dir=ROOT) as temp:
+            destination = Path(temp) / "skills"
+            install(destination, ["mbse-requirements"])
+            note = destination / "mbse-requirements/references/.mbse-install.json"
+            note.write_text("Local work")
+            with self.assertRaises(ValueError):
+                install(destination, ["mbse-requirements"], update=True)
+            self.assertEqual(note.read_text(), "Local work")
+
+    def test_staged_content_must_match_preflight(self):
+        import shutil
+        with tempfile.TemporaryDirectory(prefix=".mbse-test-", dir=ROOT) as temp:
+            base = Path(temp)
+            source = self.make_source(base, ("first",))
+            destination = base / "skills"
+            original_copy = shutil.copytree
+
+            def changing_copy(src, dst, *args, **kwargs):
+                result = original_copy(src, dst, *args, **kwargs)
+                (Path(dst) / "SKILL.md").write_text("Changed during copy")
+                return result
+
+            with patch("install.shutil.copytree", side_effect=changing_copy):
+                with self.assertRaisesRegex(ValueError, "Source changed"):
+                    install(destination, ["first"], root=source)
+            self.assertFalse((destination / "first").exists())
+
+    def test_late_commit_failure_restores_all_selected_packages(self):
+        with tempfile.TemporaryDirectory(prefix=".mbse-test-", dir=ROOT) as temp:
+            base = Path(temp)
+            source = self.make_source(base)
+            destination = base / "skills"
+            names = ["first", "second"]
+            install(destination, names, root=source)
+            old = {name: fingerprints(destination / name) for name in names}
+            for name in names:
+                path = source / ".agents/skills" / name / "SKILL.md"
+                path.write_text(path.read_text().replace("Old", "New"))
+            original_rename = Path.rename
+
+            def fail_second_stage(path, target):
+                if path.name == "second" and path.parent.name.startswith(".mbse-stage-"):
+                    raise OSError("Simulated second commit failure")
+                return original_rename(path, target)
+
+            with patch.object(Path, "rename", fail_second_stage):
+                with self.assertRaisesRegex(RuntimeError, "prior packages restored"):
+                    install(destination, names, root=source, update=True)
+            for name in names:
+                self.assertEqual(fingerprints(destination / name), old[name])
+
+    def test_inspection_separates_local_and_incoming_changes_without_writes(self):
+        with tempfile.TemporaryDirectory(prefix=".mbse-test-", dir=ROOT) as temp:
+            base = Path(temp)
+            source = self.make_source(base, ("first",))
+            destination = base / "skills"
+            install(destination, ["first"], root=source)
+            (destination / "first/notes.md").write_text("My local notes\n")
+            upstream = source / ".agents/skills/first/SKILL.md"
+            upstream.write_text(upstream.read_text().replace("Old", "New"))
+            before = fingerprints(destination / "first")
+            row = inspect(destination, ["first"], root=source, show_diff=True)[0]
+            self.assertEqual(row["state"], "modified")
+            self.assertEqual(row["local_changes"], {"notes.md": "added"})
+            self.assertEqual(row["incoming_changes"], {"SKILL.md": "changed"})
+            self.assertTrue(any("+New" in diff for diff in row["diffs"]))
+            self.assertEqual(fingerprints(destination / "first"), before)
+
+    def test_uninstall_and_restore_preserve_backups_and_dry_runs(self):
+        with tempfile.TemporaryDirectory(prefix=".mbse-test-", dir=ROOT) as temp:
+            destination = Path(temp) / "skills"
+            name = "mbse-requirements"
+            install(destination, [name])
+            old = fingerprints(destination / name)
+            uninstall(destination, [name], dry_run=True)
+            self.assertTrue((destination / name).is_dir())
+            self.assertFalse((destination.parent / ".mbse-backups").exists())
+            backup = Path(uninstall(destination, [name])[0][1])
+            self.assertFalse((destination / name).exists())
+            self.assertEqual(fingerprints(backup), old)
+            restore(destination, name, backup, dry_run=True)
+            self.assertFalse((destination / name).exists())
+            restore(destination, name, backup)
+            self.assertEqual(fingerprints(destination / name), old)
+            self.assertEqual(fingerprints(backup), old)
+            (destination / name / "notes.md").write_text("Local change")
+            with self.assertRaises(ValueError):
+                uninstall(destination, [name])
+            with self.assertRaises(ValueError):
+                restore(destination, name, backup)
+            (backup / "SKILL.md").write_text("Modified backup")
+            with self.assertRaisesRegex(ValueError, "unchanged managed backup"):
+                restore(destination, name, backup, dry_run=True)
+            with self.assertRaisesRegex(ValueError, "skill name"):
+                restore(destination, "../outside", backup, dry_run=True)
+
+    def test_restore_retains_current_package(self):
+        with tempfile.TemporaryDirectory(prefix=".mbse-test-", dir=ROOT) as temp:
+            base = Path(temp)
+            source = self.make_source(base, ("first",))
+            destination = base / "skills"
+            install(destination, ["first"], root=source)
+            old = fingerprints(destination / "first")
+            upstream = source / ".agents/skills/first/SKILL.md"
+            upstream.write_text(upstream.read_text().replace("Old", "New"))
+            install(destination, ["first"], root=source, update=True)
+            current = fingerprints(destination / "first")
+            backup = next((base / ".mbse-backups/first").iterdir())
+            previous = restore(destination, "first", backup)
+            self.assertEqual(fingerprints(destination / "first"), old)
+            self.assertEqual(fingerprints(previous), current)
+            self.assertEqual(fingerprints(backup), old)

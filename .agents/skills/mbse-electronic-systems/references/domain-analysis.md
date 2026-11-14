@@ -18,7 +18,7 @@ Derive verification objectives from requirements. Use simulation, UVM/other test
 
 For a formal result, identify property IDs and associated requirements, assumptions, reset/model scope, bounds, vacuity checks, tool/version, and outcomes. A bounded proof does not establish an unbounded property; an overconstrained environment can exclude the intended failure. A counterexample is useful evidence, not a reason to silently weaken the property.
 
-These are generic engineering practices, not methods attributed to Cole's unsupplied chapter notes. Include course methods only with the actual material and provenance.
+When applying a supplied course or organizational method, preserve its actual assumptions and provenance; do not attribute generic practices to material that was not provided.
 
 For coverage-driven simulation, define stimulus and bins from intended behavior, boundaries, and failure conditions. Retain seeds and configuration for reproducibility. Evaluate exclusions and unreachable bins with rationale; do not confuse an arbitrary percentage with an assurance objective.
 

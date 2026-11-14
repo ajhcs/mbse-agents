@@ -1,6 +1,7 @@
 # Example gallery
 
-Twenty domain teaching baselines plus one executed reference-model walkthrough.
+Domain teaching baselines, an executed reference-model walkthrough, and
+source-grounded historical cases.
 
 The domain gallery preserves illustrative requirements, architecture, hazards,
 trace links, and evidence plans. Its numeric assumptions and standards claims
@@ -8,6 +9,13 @@ need project/source review. Proposed evidence paths are not actual test reports.
 
 Start with [requirements to architecture to evidence](worked/cold-storage-alarm/README.md).
 That walkthrough has executed sampled-model checks; physical validation remains open.
+
+Explore the [historical systems engineering gallery](historical/README.md) for
+pre-2015 projects, design baselines, successes, recoveries, and failures across
+space, aviation, transport, infrastructure, energy, computing, and medical
+devices. Each case includes attributed source facts, an explicitly new teaching
+artifact, and questions about engineering judgment. Three connected review
+tasks add editable registers, hypothetical changes, and relation views.
 
 | Domain | Illustrative system |
 | --- | --- |

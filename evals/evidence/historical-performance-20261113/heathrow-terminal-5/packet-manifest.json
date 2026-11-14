@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "case": "HG-10",
+  "slug": "heathrow-terminal-5",
+  "arm": "task-domain",
+  "created_at": "2026-11-13T23:46:47.577417+00:00",
+  "files": {
+    "relations.mmd": "ede2074eeb785ee6f70361965b78b46c36738e0fe7c91f1dad03c43b2a28fd97",
+    "sources.json": "e55fb661babeda550fd827251b2198bb465591193552cad9e002dd02226dce5e",
+    "interfaces.csv": "b32bea9b9b1a25209c3f76e893266d29a0f0d8aeb682d2c7b42acf5115e3d4a1",
+    "change.json": "a35909f0550ea90e19dcfee6d8f1f3ec0abeb36ba57ec10cd06c6b308c231547",
+    "source-facts.csv": "26f369c625462d2e30fa2be7bac9dcc7e4ee3b9afd83f48387d32ac28505c117",
+    "review-task.md": "9cf9fa34d806de71da43f69c3aa11327186b83e821e91f842a5df2f876427703",
+    "claim-evidence.csv": "625124e71ec772f26199047e5d41d0de16d84a1d8128ff15b8b847a851c4d91f",
+    "request.md": "ce751b4537ad072cdd5d165a972af9ebcd698ccc158a5e0723f508477a140981",
+    "skills/mbse-operational-scenarios/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-operational-scenarios/SKILL.md": "746bc58ad68d587d4e41c0fde790f3e0cd1205eb9fe62d38085de30e3501059a",
+    "skills/mbse-conops/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-conops/SKILL.md": "c83f0c4df07572539acfa2e120803190315870fd7caf02ec1f3a7cc8c888ef81",
+    "skills/mbse-baseline-review/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    "skills/mbse-systems-engineering/LICENSE": "87de946d056dc5c85a74cd7faaf62007e938d6e47b9df2cd90c9022657a7c2a7",
+    "skills/mbse-systems-engineering/SKILL.md": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+    "skills/mbse-operational-scenarios/agents/openai.yaml": "7a8df0bda25eb76480ff63df64126811169e6c137dc60c39616ad0229117440b",
+    "skills/mbse-operational-scenarios/references/scenario-records.md": "7a071cc7c357761733aab04519f49d8478adaf9b47df73d3cc5b33918ce0536a",
+    "skills/mbse-conops/agents/openai.yaml": "a4efd0f65fd511ce073f0b01e52b14c462bf91eda413d38118bd5d1be6b284c3",
+    "skills/mbse-conops/references/operational-framing.md": "bee3b369f8cf6b4e948842c4ac4a6c9f9ead22af986374d382788d7dbfff6261",
+    "skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    "skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    "skills/mbse-systems-engineering/agents/openai.yaml": "22cc9351054968815df6eff549e27d99f3c80907b3d21918d43c79771dc6d6c3",
+    "skills/mbse-systems-engineering/references/connected-work.md": "3292f9852bb73d0d15ccc69e679e4565e6afc59233c6d2fbb1a3b85614f96535",
+    "skills/mbse-systems-engineering/references/reasoning-situations.md": "231f141cc3e169a79a241d6d6121c0be25c016822ce804f50ba6906af1ea0945",
+    "skills/mbse-systems-engineering/references/engineering-records.md": "9928ac80221c21550b9dc4056904f589fd530bc0868e36df6cbe95294bdaf253"
+  },
+  "skills": [
+    "mbse-systems-engineering",
+    "mbse-conops",
+    "mbse-operational-scenarios",
+    "mbse-baseline-review"
+  ],
+  "historical_sources": "attributed findings",
+  "change_status": "synthetic_transfer_exercise"
+}

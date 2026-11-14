@@ -1,4 +1,4 @@
 interface:
   display_name: "Develop Operational Scenarios"
-  short_description: "Draft or revise operational scenarios with actor actions, system"
-  default_prompt: "Use $mbse-operational-scenarios on the supplied artifacts and deliver a reviewable result with evidence and open decisions."
+  short_description: "Develop normal, exception, and recovery scenarios"
+  default_prompt: "Use $mbse-operational-scenarios to work through this operation, including exceptions and recovery, and identify observations that could change its design."

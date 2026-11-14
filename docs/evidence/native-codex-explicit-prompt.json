@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "scope": "native_prompt_assembly_only",
+  "executed_at": "2026-11-13T23:49:01.735170+00:00",
+  "command": [
+    "codex",
+    "-C",
+    "/workspace/repos/builderbob/mbse-agents",
+    "debug",
+    "prompt-input",
+    "Use $mbse-agents:mbse-systems-engineering to explain the system boundary for a maintenance outage. Do not change files."
+  ],
+  "model_call": false,
+  "invocation": "mbse-agents:mbse-systems-engineering",
+  "entrypoint_sha256": "a5f0e112befb91ca1da39071a23e9d5098ca680f0101b0cadf3f874d4307cb48",
+  "body_markers_present": [
+    false,
+    false
+  ],
+  "private_prompt_retained": false,
+  "interpretation": "Inspects prompt assembly, not model behavior or automatic skill selection."
+}

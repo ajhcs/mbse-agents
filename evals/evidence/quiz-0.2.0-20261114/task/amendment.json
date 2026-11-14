@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "kind": "postproduction-metadata-only-normalization",
+  "recorded_at": "2026-11-14T00:10:06.128771+00:00",
+  "producer": "Codex agent /root/quiz_v020_task",
+  "tools_used": [
+    "functions.exec",
+    "tools.exec_command"
+  ],
+  "source_file": "answers.json",
+  "source_sha256": "7462f9a107e699b16e792963b8f0ee9fc5471351ecdccacaa933f5e776c75c9a",
+  "corrected_file": "answers-metadata-corrected.json",
+  "corrected_sha256": "793ed0a90dc70d4d89648ec2b0b6812cf5a2c3c07426829f34fd6b1875e467c1",
+  "original_usage_file": "usage.json",
+  "original_usage_sha256": "4377265dcd4354942cb0967a49ded2684557fe8cc94a9b44752ab704d4758142",
+  "transform": [
+    {
+      "operation": "replace",
+      "path": "/run/model",
+      "old_value": null,
+      "new_value": "unknown"
+    },
+    {
+      "operation": "append",
+      "path": "/run/exceptions",
+      "value": "Postproduction metadata-only normalization: run.model changed from null to the explicit string unknown because the exact model identifier was unavailable and the response format requires a string. The original frozen answers.json SHA-256 is 7462f9a107e699b16e792963b8f0ee9fc5471351ecdccacaa933f5e776c75c9a. Answers, packet binding, run ID and original timestamps are unchanged; the original answers.json and usage.json are preserved."
+    }
+  ],
+  "verification": {
+    "original_answers_bytes_unchanged": true,
+    "original_usage_bytes_unchanged": true,
+    "schema_version_unchanged": true,
+    "answers_unchanged": true,
+    "packet_binding_unchanged": true,
+    "run_id_unchanged": true,
+    "original_timestamps_unchanged": true,
+    "all_other_response_fields_unchanged": true,
+    "corrected_json_read_back": true,
+    "corrected_file_frozen_mode": "0444",
+    "answer_keys_or_rubrics_accessed": false,
+    "scoring_or_self_grading_performed": false
+  }
+}

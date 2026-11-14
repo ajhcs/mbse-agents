@@ -1,6 +1,6 @@
 # Steer-by-Wire System
 
-> Illustrative proposed baseline. Numeric targets, allocations, risk ratings, and evidence paths are teaching assumptions. No executed tests, approved design, or regulatory acceptance is supplied. Verify exact standards claims for the applicable edition before use.
+> Proposed teaching baseline. Physical performance and risk acceptance remain open. [Source review](source-review.md) identifies candidate citations and unresolved applicability; [review status](review-status.json) identifies the checked scope.
 
 ## Overview
 
@@ -28,7 +28,7 @@ The Steer-by-Wire (SbW) system replaces the conventional mechanical steering col
 
 ## Operational Environment
 
-The SbW system operates in passenger vehicles designed for public road use at speeds from 0 km/h to the vehicle's maximum speed. The system must function across -40C to +85C ambient temperature. The rack actuators are exposed to road spray, vibration, and impact loads. The SCC is cabin-mounted. The system interfaces with the vehicle dynamics domain via CAN FD and with ADAS via Automotive Ethernet. UN R79 requires that steering functionality be maintained after any single fault, with a maximum 50 ms interruption in steering assist during fault switchover.
+The SbW system operates in passenger vehicles designed for public road use at speeds from 0 km/h to the vehicle's maximum speed. The system must function across -40C to +85C ambient temperature. The rack actuators are exposed to road spray, vibration, and impact loads. The SCC is cabin-mounted. The system interfaces with the vehicle dynamics domain via CAN FD and with ADAS via Automotive Ethernet. The 50 ms switchover interruption is a proposed project target. Verify the actual single-fault steering obligations against the applicable UN R79 series and vehicle configuration; this example has not established a universal regulatory 50 ms limit.
 
 ## Operating Modes
 
@@ -47,7 +47,7 @@ The SbW system operates in passenger vehicles designed for public road use at sp
 
 3. **Road-feel torque feedback synthesis.** Without a mechanical connection, the driver receives no natural steering feel. The handwheel feedback actuator must synthesize realistic road-feel torque that varies with speed, road surface, and steering angle, using a model-based approach that avoids instability or oscillation.
 
-4. **UN R79 single-fault performance.** UN R79 mandates that after a single fault the system must still provide steering capability meeting defined minimum performance criteria, including a maximum 50 ms interruption during switchover and continued steering at reduced capability.
+4. **UN R79 single-fault performance.** Verify the applicable UN R79 fault-performance requirements and demonstrate the project's proposed 50 ms switchover target under the specified fault cases and driving conditions.
 
 ## Stakeholders
 

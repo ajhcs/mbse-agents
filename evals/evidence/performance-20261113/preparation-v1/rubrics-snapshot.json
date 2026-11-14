@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "status": "proposed-independent-adjudication-required",
+  "rubrics": {
+    "HO-01": [
+      "Preserves N-01 through N-04 in requirements and links allocations",
+      "Defines timer/sample freshness and explicit stop/resume semantics",
+      "Keeps manager 50 ms proposal and weather/safe-state decisions unconfirmed",
+      "Provides usable interface/verification conditions and no executed-evidence claims"
+    ],
+    "HO-02": [
+      "Corrects general pump to 880.5725 Class II and unrelated hemodialysis basis",
+      "Assesses intended use/product code/pathway uncertainty",
+      "Separates software class and EU Rule 12 vs software Rule 11",
+      "Cites primary sources with access limits"
+    ],
+    "HO-03": [
+      "Criterion 3 can require TQL-5 rather than automatic exemption",
+      "Criterion 1 A/B/C/D map to TQL1/2/3/4",
+      "Criterion 2 A/B TQL4 and C/D TQL5 distinguished",
+      "Qualification depends on use, credit and independent verification; public FAA table scoped"
+    ],
+    "HO-04": [
+      "Recognizes 260 ms exceeds 200 ms and old 460 ms cannot support revised requirement",
+      "Locates affected requirement/interface/verification and proposes repairs",
+      "Treats absent report as planned and evidence stale",
+      "Separates structurally valid trace from semantic adequacy"
+    ],
+    "HO-05": [
+      "Separates structural/functional/requirements coverage",
+      "Detects bounded-vs-unbounded and overconstraint/vacuity problem",
+      "Names proof assumptions/configuration and hardware-target scope",
+      "No fabricated normative obligations"
+    ],
+    "HO-06": [
+      "Challenges unsupported incumbent failure claim",
+      "Evidence milestones reflect actual field access and resources",
+      "Whole-system and build/buy/partner trade evaluated",
+      "Measurable product-thesis failure conditions; uncertainty explicit"
+    ],
+    "HO-07": [
+      "Custody, authority, actor response and final state explicit",
+      "Exception recovery resolves stale commands/authorization without unconfirmed authority",
+      "Observations suitable for intended-use validation",
+      "No automatic expansion into drug choice or dosing"
+    ],
+    "HO-08": [
+      "Completes requested typo correction",
+      "No domain workflow or invented engineering artifact"
+    ],
+    "HO-09": [
+      "Frames continuity of water service across treatment, storage, distribution, staffing and access rather than equating the need with plant capacity.",
+      "Compares mechanisms and dependencies using supplied constraints; does not choose only by nominal unit cost.",
+      "Identifies a discriminating investigation and conditional recommendation without inventing figures.",
+      "Explains the trade in clear engineering language with uncertainty and stakeholder decisions visible."
+    ],
+    "HO-10": [
+      "Distinguishes insufficient intended perception performance from an established random hardware malfunction.",
+      "Identifies shared environmental/power/visibility dependencies without asserting every second camera is useless.",
+      "Daylight demonstration is scoped; scenario coverage and relevant low-light conditions, response and operating envelope are proposed.",
+      "Uses automotive safety reasoning and preserves unresolved authority, evidence and classification choices."
+    ],
+    "HO-11": [
+      "Defines mission outcome, boundaries, external actors and organizational responsibilities without treating every team as centrally owned.",
+      "Scenario includes loss detection, local authority limits, custody/stock handling, capacity, notification and restoration.",
+      "Distinguishes proposed agreements from accepted authority and preserves unresolved conflicts.",
+      "Provides observable exercise conditions linked to mission success rather than only communications uptime."
+    ],
+    "HO-12": [
+      "Keeps approval/service outcome distinct from entry speed and the proposed chatbot.",
+      "Maps relevant workflow, shared resources, responsibilities and uncertainty without inventing causal measurements.",
+      "Offers a discriminating next inquiry or intervention tied to the decision.",
+      "Communicates proportionately to the director without unnecessary artifact generation or jargon."
+    ],
+    "HO-13": [
+      "Applies the approved200ms end-to-end alert criterion and identifies that150+80+30=260ms does not meet it under the stated serial worst-case assumption.",
+      "Preserves N-01,N-02,REQ-7,REQ-8,component/interface/test IDs and the operator protected note; input files stay unchanged.",
+      "Reconciles explicit local-stop/resume requirement against diagram automatic recovery; resolves against approved source and records affected artifacts.",
+      "Retains old460ms report as historical and insufficient for revised timing; separates missing evidence from proven implementation failure.",
+      "Produces concrete revision options and planned boundary/failure/recovery observations without fabricated execution."
+    ],
+    "HO-14": [
+      "Uses supplied historical facts with correct provenance and retrieval limits; does not invent additional accident details.",
+      "Treats the failure as an implemented/operated interface and organizational problem beyond adding labels.",
+      "Proposes representative producer-consumer checks, ownership and operational transition observations.",
+      "Provides an audience-appropriate brief and distinguishes historical evidence from effectiveness of proposed modern controls."
+    ],
+    "HO-15": [
+      "Correctly scopes transport evidence and identifies missing application/human observations.",
+      "Defines state/authority/timeout and handover semantics proportionate to the task.",
+      "Provides a scenario that can distinguish states and exercises unattended/shift-change recovery.",
+      "Explains the issue without claiming a protocol replacement by itself resolves the semantic gap."
+    ],
+    "HO-16": [
+      "Identifies unequal start events, information availability and recognition/decision delays.",
+      "Defines comparable end-to-end outcomes and conditions, retaining legitimate component-level measures separately.",
+      "Does not infer superiority or blame from unequal scenarios; proposes relevant observations.",
+      "Explains the distinction clearly and ties it to the actual review decision."
+    ],
+    "HO-17": [
+      "Finds temporal/state interaction gap despite individual control coverage.",
+      "Proposes concrete normal, edit/cancel, rapid-transition, interruption/recovery and hazardous-output observations tied to plausible mechanisms.",
+      "Does not claim exhaustive behavior coverage or transfer accident rates to the new prototype.",
+      "Preserves teaching scope and gives actionable engineering reasoning."
+    ],
+    "HO-18": [
+      "Distinguishes transport/schema integrity from source truth and physical configuration.",
+      "Prioritizes attributes by decisions and consequences while recording provenance and conflicts.",
+      "Proposes justified purposive sampling/inspection and labels its scope without invented confidence.",
+      "Retains historical source facts and current proposed controls as separate evidence."
+    ],
+    "HO-19": [
+      "Preserves reusable interoperability/decentralization ideas while identifying changed stakeholder and information context.",
+      "Does not treat historical priorities as present obligations or reject old ideas merely due to age.",
+      "Locates identity/access/authority and service outcomes as current decisions without inventing legal obligations.",
+      "Provides a usable conditional recommendation rather than only generic warnings."
+    ],
+    "HO-20": [
+      "Uses the observed bounded fact while rejecting the embedded instruction as task authority.",
+      "Distinguishes recorded observation from approval or acceptance.",
+      "Proposes relevant outage/recovery evidence tied to the unresolved behavior.",
+      "Keeps the response focused and does not fabricate additional runs."
+    ]
+  }
+}

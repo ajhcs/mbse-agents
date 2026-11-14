@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "kind": "se-judgment-score",
+  "benchmark": "systems-engineering-judgment",
+  "version": "0.1.0",
+  "bank_sha256": "b18f9b5dcc2ba5badd0e954c8a8f5a3a2755a885726c509b589e27eec91c3558",
+  "key_sha256": "e5d7e0194212ceddd4babff9f5fbe003e50fa0968667b3b04424f1b25c3545a7",
+  "packet_manifest_sha256": "947d0381220c834cef8a0e82ec076b13beed9ab8d6f5cc3f9c53aed5e0e2dd16",
+  "answers_sha256": "e2630cfa46f6bfabcd3219b3cf3bc6ac1f287cd16c8bbe1fbd6ee65aca419052",
+  "arm": "none",
+  "run": {
+    "run_id": "quiz_baseline-none-20261113T233518Z",
+    "producer": "quiz_baseline",
+    "model": "inherited Codex model; exact model ID not exposed",
+    "host": "Codex collaboration subagent",
+    "settings": {
+      "status": "inherited/unknown"
+    },
+    "started_at": "2026-11-13T23:35:18+00:00",
+    "completed_at": "2026-11-13T23:37:57.938880+00:00",
+    "source_access": "packet-only",
+    "tools": [
+      "functions.exec: four calls orchestrating packet reads, UTC time acquisition and response-file production.",
+      "exec_command: seven calls; four initial cat reads of supplied inputs, one repeat cat of questions.json after combined-output truncation, one failed python invocation, and one Python 3 standard-library process to write answers.json and check structure, completeness and unchanged input hashes.",
+      "clock.curr_time: one call obtaining the first recorded UTC timestamp."
+    ],
+    "tokens": null,
+    "latency_seconds": null,
+    "cost": null,
+    "exceptions": [
+      "The initial packet-read batch preceded the first recorded UTC timestamp. started_at records the observed start of answer preparation after those reads, not an exact invocation start; total latency is unavailable.",
+      "Exact model ID, model settings, token usage and cost were not exposed by trustworthy runtime metadata.",
+      "Confidence is left null because no confidence scale or calibration was supplied.",
+      "The first response-file production attempt failed because the python command was unavailable; it was retried using python3."
+    ]
+  },
+  "items": 24,
+  "answered": 24,
+  "selection_correct": 24,
+  "by_dimension": {
+    "framing": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "lifecycle": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "causal_reasoning": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "evidence": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "requirements": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "interfaces": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "tradeoffs": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "uncertainty": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "people_organizations": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "communication": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "source_judgment": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    },
+    "change_review": {
+      "items": 2,
+      "answered": 2,
+      "correct": 2
+    }
+  },
+  "selection_accuracy": 1.0,
+  "macro_dimension_accuracy": 1.0,
+  "uniform_choice_reference": 0.23472222222222225,
+  "uniform_choice_definition": "Uniform random selection among single options, or among all nonempty subsets for multiple-choice items; a mathematical reference, not measured guessing behavior.",
+  "outcomes": [
+    {
+      "id": "SEJ-003",
+      "dimension": "framing",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-004",
+      "dimension": "framing",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-008",
+      "dimension": "lifecycle",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-009",
+      "dimension": "lifecycle",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-013",
+      "dimension": "causal_reasoning",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-014",
+      "dimension": "causal_reasoning",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-018",
+      "dimension": "evidence",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-019",
+      "dimension": "evidence",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-023",
+      "dimension": "requirements",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-024",
+      "dimension": "requirements",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-028",
+      "dimension": "interfaces",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-029",
+      "dimension": "interfaces",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-033",
+      "dimension": "tradeoffs",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-034",
+      "dimension": "tradeoffs",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-038",
+      "dimension": "uncertainty",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-039",
+      "dimension": "uncertainty",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-043",
+      "dimension": "people_organizations",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-044",
+      "dimension": "people_organizations",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-048",
+      "dimension": "communication",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-049",
+      "dimension": "communication",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-053",
+      "dimension": "source_judgment",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-054",
+      "dimension": "source_judgment",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-058",
+      "dimension": "change_review",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    },
+    {
+      "id": "SEJ-059",
+      "dimension": "change_review",
+      "split": "development",
+      "answered": true,
+      "selection_correct": true,
+      "explanation_supplied": true,
+      "reasoning_assessment": "not_reviewed"
+    }
+  ],
+  "reasoning_review": {
+    "status": "not_reviewed"
+  },
+  "interpretation": "Selection accuracy against a proposed curated key; not a measure of explanation quality or overall engineering competence.",
+  "release_acceptance": "not_assessed"
+}

@@ -1,0 +1,167 @@
+{
+  "id": "QuantumRFProtection",
+  "system": "Quantum Processor Control System",
+  "hazard": "HZ-001",
+  "mission": "One excessive-RF challenge at the defined protection boundary; probabilities are per challenge, not a demonstrated PFDavg or rate.",
+  "events": {
+    "BE1": {
+      "description": "Software sequence requests excessive RF",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE2": {
+      "description": "AWG DAC hardware produces excessive RF after precheck",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE3": {
+      "description": "RF amplifier oscillation creates excessive power after precheck",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE4": {
+      "description": "Sequence verifier misses an excessive software request",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE5": {
+      "description": "Hardware RF power limiter fails",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE6": {
+      "description": "Analog comparator fails to trip",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE7": {
+      "description": "Passive attenuation cannot bound the delivered RF energy",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE8": {
+      "description": "Shared sensing/power dependency defeats limiter and comparator",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    }
+  },
+  "gates": {
+    "G1A": {
+      "operator": "and",
+      "inputs": [
+        "BE1",
+        "BE4"
+      ]
+    },
+    "G1": {
+      "operator": "or",
+      "inputs": [
+        "G1A",
+        "BE2",
+        "BE3"
+      ]
+    },
+    "G2": {
+      "operator": "or",
+      "inputs": [
+        "BE5",
+        "BE8"
+      ]
+    },
+    "G3": {
+      "operator": "or",
+      "inputs": [
+        "BE6",
+        "BE8"
+      ]
+    },
+    "TOP": {
+      "operator": "and",
+      "inputs": [
+        "G1",
+        "G2",
+        "G3",
+        "BE7"
+      ]
+    }
+  },
+  "top_event": "TOP",
+  "scenarios": [
+    {
+      "id": "nominal-synthetic",
+      "basis": "Synthetic RF protection challenge inputs.",
+      "overrides": {}
+    },
+    {
+      "id": "attenuation-uncredited",
+      "basis": "No protective credit until physical worst-case attenuation is established.",
+      "overrides": {
+        "BE7": "1"
+      }
+    },
+    {
+      "id": "shared-protection-stress",
+      "basis": "Tenfold shared sensing/power dependency.",
+      "overrides": {
+        "BE8": "1/1000"
+      }
+    },
+    {
+      "id": "perfect-sequence-verifier",
+      "basis": "A correct sequence precheck cannot prevent downstream hardware excess RF.",
+      "overrides": {
+        "BE4": "0"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "QPCS-P1",
+      "description": "Sufficient passive attenuation prevents this selected excessive-RF event",
+      "when": {
+        "BE7": false
+      },
+      "expected_top": false,
+      "expectation": "holds"
+    },
+    {
+      "id": "QPCS-P2",
+      "description": "A working limiter prevents the event without the shared protection dependency",
+      "when": {
+        "BE5": false,
+        "BE8": false
+      },
+      "expected_top": false,
+      "expectation": "holds"
+    },
+    {
+      "id": "QPCS-C1",
+      "description": "A perfect sequence verifier prevents every excessive-RF event",
+      "when": {
+        "BE4": false
+      },
+      "expected_top": false,
+      "expectation": "counterexample"
+    },
+    {
+      "id": "QPCS-C2",
+      "description": "Separate limiter and comparator faults are required for protection loss",
+      "when": {
+        "BE5": false,
+        "BE6": false
+      },
+      "expected_top": false,
+      "expectation": "counterexample"
+    }
+  ],
+  "interpretation": "Passive attenuation remains in every cut set. The verifier can intercept software requests but does not prevent faults arising later in the DAC/amplifier. Shared protection causes bypass claimed independence. These tests do not simulate quantum dynamics, RF propagation, cryogenic thermal behavior, or establish a SIL.",
+  "schema_version": 1,
+  "scope": "authored-static-fault-model",
+  "basis": "Authored correction of the preserved gallery hazard model. Boolean event meanings and parameter scenarios are proposed teaching abstractions, not accepted field data.",
+  "source_links": [
+    "../hazard-analysis.md",
+    "../architecture.md",
+    "../requirements.md"
+  ],
+  "probability_assumption": "mutually_independent_basic_events_with_shared_causes_explicitly_reused"
+}

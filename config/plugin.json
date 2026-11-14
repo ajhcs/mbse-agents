@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mbse-agents",
+  "version": "2.0.0-alpha.1",
+  "description": "Systems engineering reasoning, domain review, connected artifacts, historical cases, and evidence-aware analysis.",
+  "author": {
+    "name": "Cole Lyons",
+    "url": "https://github.com/ajhcs"
+  },
+  "homepage": "https://github.com/ajhcs/mbse-agents",
+  "repository": "https://github.com/ajhcs/mbse-agents",
+  "license": "MIT",
+  "keywords": ["systems-engineering", "mbse", "requirements", "architecture", "verification", "engineering-judgment"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "MBSE Agents",
+        "shortDescription": "Reason, design, and review as a systems engineer",
+        "longDescription": "Develop system understanding, connect needs to architecture and evidence, review changes, and practice engineering judgment using source-grounded cases.",
+        "developerName": "Cole Lyons",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "Help me understand this system, identify the decisions that matter, and develop the engineering work needed to resolve them.",
+          "Review this engineering baseline and explain which claims are supported, which decisions need revision, and what evidence would settle them."
+        ]
+      }
+    }
+  }
+}

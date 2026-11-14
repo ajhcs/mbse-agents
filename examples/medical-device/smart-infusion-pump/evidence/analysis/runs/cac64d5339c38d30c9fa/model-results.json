@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "model": "PumpOverinfusion",
+  "hazard": "HZ-001",
+  "scope": "exhaustive_static_boolean_and_conditional_probability",
+  "mission": "One excessive-delivery challenge to the proposed flow-control architecture; physical flow, exposure duration, and harm are outside this static model.",
+  "basic_events": 7,
+  "completed_assignments": 128,
+  "hazard_assignments": 70,
+  "cut_sets_complete": true,
+  "minimal_cut_sets": [
+    [
+      "BE3",
+      "BE5"
+    ],
+    [
+      "BE3",
+      "BE7"
+    ],
+    [
+      "BE4",
+      "BE7"
+    ],
+    [
+      "BE1",
+      "BE4",
+      "BE5"
+    ],
+    [
+      "BE2",
+      "BE4",
+      "BE5"
+    ]
+  ],
+  "scenarios": [
+    {
+      "id": "nominal-synthetic",
+      "basis": "Synthetic architecture challenge probabilities.",
+      "probability": "299999869021999/1000000000000000000000",
+      "decimal": 2.99999869021999e-07,
+      "unit": "per_declared_demand",
+      "overrides": {}
+    },
+    {
+      "id": "shared-drive-stress",
+      "basis": "Tenfold shared motor/limiter dependency.",
+      "probability": "209900977012999/100000000000000000000",
+      "decimal": 2.09900977012999e-06,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE7": "1/1000"
+      }
+    },
+    {
+      "id": "perfect-watchdog",
+      "basis": "A processor-alive watchdog does not establish correct delivered flow.",
+      "probability": "299999869021999/1000000000000000000000",
+      "decimal": 2.99999869021999e-07,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE6": "0"
+      }
+    },
+    {
+      "id": "diverse-limiter",
+      "basis": "Hypothetical removal of modeled drive/limiter common cause.",
+      "probability": "10010988001/100000000000000000",
+      "decimal": 1.0010988001e-07,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE7": "0"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "PUMP-P1",
+      "description": "Working independent hardware limiter prevents this selected overdelivery event",
+      "expectation": "holds",
+      "property_holds": true,
+      "matched_assignments": 32,
+      "counterexamples": 0,
+      "first_counterexample": null,
+      "result": "pass"
+    },
+    {
+      "id": "PUMP-P2",
+      "description": "Working deviation sensing prevents the event when its shared under-reading mode is absent",
+      "expectation": "holds",
+      "property_holds": true,
+      "matched_assignments": 32,
+      "counterexamples": 0,
+      "first_counterexample": null,
+      "result": "pass"
+    },
+    {
+      "id": "PUMP-C1",
+      "description": "A functioning processor watchdog guarantees safe flow",
+      "expectation": "counterexample",
+      "property_holds": false,
+      "matched_assignments": 64,
+      "counterexamples": 35,
+      "first_counterexample": {
+        "BE1": false,
+        "BE2": false,
+        "BE3": false,
+        "BE4": true,
+        "BE5": false,
+        "BE6": false,
+        "BE7": true
+      },
+      "result": "pass"
+    },
+    {
+      "id": "PUMP-C2",
+      "description": "Independent monitor fault is necessary to miss overdelivery",
+      "expectation": "counterexample",
+      "property_holds": false,
+      "matched_assignments": 64,
+      "counterexamples": 24,
+      "first_counterexample": {
+        "BE1": false,
+        "BE2": false,
+        "BE3": true,
+        "BE4": false,
+        "BE5": false,
+        "BE6": false,
+        "BE7": true
+      },
+      "result": "pass"
+    }
+  ],
+  "probability_assumption": "mutually_independent_basic_events_with_shared_causes_explicitly_reused",
+  "parameter_status": "synthetic_scenario_inputs_not_measured_failure_rates",
+  "physical_validation": "not_performed",
+  "risk_acceptance": "not_assessed",
+  "result": "pass",
+  "configuration": {
+    "analysis/failure-model.json": "011cc6dedc05dea6ac1f987d3dbe9f664f592b3a85f3afd6f7268cbbc8cd3f59",
+    "scripts/analyze_gallery.py": "0271c8466b040650737f318c8046601229d53c716e4718e8a17b4f8faf9f398a",
+    "requirements.md": "bb5863242c85ab1835300dd182e9b1961e1b444bfee03e3c3bae0b73dee94904",
+    "architecture.md": "51181d1828c01393691da504260ac7ae752bbbbc907d1559239c0a7b24d31572",
+    "hazard-analysis.md": "9e7b6a1ce499a6ef1b2d3795020989b04fab01bc141aa136b58452885151452e"
+  },
+  "run_id": "cac64d5339c38d30c9fa"
+}

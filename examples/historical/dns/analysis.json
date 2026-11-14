@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "HG-16",
+  "slug": "dns",
+  "title": "DNS: distribute authority and manage stale information",
+  "year": 1987,
+  "domain": "communications_computing",
+  "outcome": "design_baseline",
+  "focus": "Scalability changes who owns data, how long others may reuse it, and what temporary disagreement means.",
+  "competencies": [
+    "problem_framing",
+    "boundaries_and_interfaces",
+    "tradeoffs_and_decisions",
+    "evidence_and_uncertainty",
+    "lifecycle_and_change",
+    "human_organization",
+    "communication"
+  ],
+  "sources": [
+    {
+      "id": "HG-16-S1",
+      "title": "RFC 1034, Domain Names — Concepts and Facilities",
+      "url": "https://www.rfc-editor.org/rfc/rfc1034.txt",
+      "publication_date": "1987-11",
+      "locator": "Sections 2.2–2.4, 4.2, and 5.2.3",
+      "source_type": "original_specification",
+      "access_status": "relevant_content_inspected",
+      "accessed_on": "2026-11-13",
+      "limitations": "The historical document has many later updates. Its design rationale is used here; it is not a complete current DNS deployment or security specification."
+    }
+  ],
+  "facts": [
+    {
+      "id": "HG-16-F1",
+      "statement": "The design goals call for distributed maintenance and caching rather than collecting a continuously consistent copy of the entire database.",
+      "source_ids": [
+        "HG-16-S1"
+      ],
+      "locator": "Section 2.2"
+    },
+    {
+      "id": "HG-16-F2",
+      "statement": "The document places the trade among acquisition cost, update speed, and cache accuracy under control of the data source.",
+      "source_ids": [
+        "HG-16-S1"
+      ],
+      "locator": "Section 2.2"
+    }
+  ],
+  "retrospective": {
+    "boundary": "Authoritative data owners, delegated zones, resolvers, caches, clients, and update operations form the naming system.",
+    "interfaces": [
+      "Authority → cache: reuse reduces load while retaining information that may become stale.",
+      "Delegation → organization: a naming boundary is also an administrative responsibility boundary."
+    ],
+    "decision": {
+      "question": "How should a team choose freshness behavior for a distributed lookup service?",
+      "options": [
+        "Demand instant global consistency without considering cost or failures.",
+        "Choose an explicit reuse window and update plan consistent with the consumer’s tolerance for stale data."
+      ],
+      "recommendation": "State authority, freshness, temporary-failure behavior, and rollback together.",
+      "uncertainty": "The acceptable window depends on the decision being supported; a historical design principle supplies no universal duration."
+    },
+    "artifact": {
+      "id": "HG-16-A1",
+      "type": "Authority and freshness contract",
+      "status": "new_teaching_proposal",
+      "columns": [
+        "Item",
+        "Proposed disposition",
+        "Evidence to seek"
+      ],
+      "rows": [
+        [
+          "Ownership",
+          "Identify the authoritative owner and delegated scope",
+          "Zone or dataset ownership record"
+        ],
+        [
+          "Reuse",
+          "State allowable age and conditions invalidating cached data",
+          "Consumer tolerance and measured update path"
+        ],
+        [
+          "Failure",
+          "Distinguish unavailable answer from absent entity",
+          "Fault scenario and recovery behavior"
+        ]
+      ]
+    },
+    "questions": [
+      "Why is cached information useful even when it is not current everywhere?",
+      "Which organizational failure can defeat a technically valid delegation?",
+      "Explain a stale answer without incorrectly calling it fabricated data."
+    ],
+    "answer_signals": [
+      "Makes consistency, availability, and operating cost explicit.",
+      "Connects technical delegation to ownership and handover.",
+      "Distinguishes freshness, authority, and truth."
+    ],
+    "transfer_exercise": "Synthetic: a fleet stores remote configuration locally during disconnection. Define who owns it, when it expires, and what operations remain allowed.",
+    "limits": "No live DNS changes or experiments were performed; security requirements for a present-day deployment require separate current evidence."
+  },
+  "evidence_status": {
+    "historical_facts": "attributed_to_identified_sources",
+    "analysis": "new_retrospective_teaching_synthesis",
+    "artifact": "proposed_not_historical",
+    "simulation": "not_performed"
+  }
+}

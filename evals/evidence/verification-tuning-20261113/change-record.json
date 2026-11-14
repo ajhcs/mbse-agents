@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-14T00:00:13.806887+00:00",
+  "finding": "HO-13 verification plan gives failure for any point estimate above200ms and inconclusive for an uncertainty interval straddling200ms, without precedence. A201\u00b15ms observation meets both.",
+  "evidence_path": "evals/evidence/performance-20261113/task-domain/HO-13/outputs/verification.md",
+  "evidence_sha256": "d68dc2eeda1d61145d68531f5da34140a7d45bf54c5a8da8b076506e81efe25e",
+  "source_observation": "Independent performance reviewer located output line32; original output and rating are retained.",
+  "change": "Explicitly require consistent pass/fail/inconclusive rules, distinguish uncertainty representations and acceptance policy, and exercise boundary/overlap examples. No universal metrology acceptance rule imposed.",
+  "changed_sources": {
+    ".agents/skills/mbse-verification-evidence/SKILL.md": "c9a7b3d95a9c01efd51e818184a773273a1f5583a28ade636eba6b32f17f6524",
+    ".agents/skills/mbse-verification-evidence/references/evidence-contracts.md": "7fce7846b8dedbcd5ff0f331d99c3238ccde5de6326be1886f334d09fb646bcb"
+  },
+  "reassessment": "Fresh measurement-decision variant will compare instruction-restricted participants with prior and revised guidance; no original-output rewriting or retrospective score improvement."
+}

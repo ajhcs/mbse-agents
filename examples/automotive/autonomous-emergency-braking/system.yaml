@@ -15,4 +15,6 @@ summary: >
   Camera + radar fusion AEB for passenger vehicles. ASIL D safety
   case, SOTIF analysis for perception limitations, ISO 21434
   cybersecurity TARA. AUTOSAR Classic/Adaptive split architecture.
-evidence_status: planned
+evidence_status: partial_model_execution
+physical_evidence_status: planned
+risk_acceptance: not_assessed

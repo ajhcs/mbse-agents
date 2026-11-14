@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "model": "QuantumRFProtection",
+  "hazard": "HZ-001",
+  "scope": "exhaustive_static_boolean_and_conditional_probability",
+  "mission": "One excessive-RF challenge at the defined protection boundary; probabilities are per challenge, not a demonstrated PFDavg or rate.",
+  "basic_events": 8,
+  "completed_assignments": 256,
+  "hazard_assignments": 65,
+  "cut_sets_complete": true,
+  "minimal_cut_sets": [
+    [
+      "BE2",
+      "BE7",
+      "BE8"
+    ],
+    [
+      "BE3",
+      "BE7",
+      "BE8"
+    ],
+    [
+      "BE1",
+      "BE4",
+      "BE7",
+      "BE8"
+    ],
+    [
+      "BE2",
+      "BE5",
+      "BE6",
+      "BE7"
+    ],
+    [
+      "BE3",
+      "BE5",
+      "BE6",
+      "BE7"
+    ],
+    [
+      "BE1",
+      "BE4",
+      "BE5",
+      "BE6",
+      "BE7"
+    ]
+  ],
+  "scenarios": [
+    {
+      "id": "nominal-synthetic",
+      "basis": "Synthetic RF protection challenge inputs.",
+      "probability": "201190769711029999/10000000000000000000000000000",
+      "decimal": 2.0119076971103e-11,
+      "unit": "per_declared_demand",
+      "overrides": {}
+    },
+    {
+      "id": "attenuation-uncredited",
+      "basis": "No protective credit until physical worst-case attenuation is established.",
+      "probability": "201190769711029999/10000000000000000000000000",
+      "decimal": 2.0119076971103e-08,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE7": "1"
+      }
+    },
+    {
+      "id": "shared-protection-stress",
+      "basis": "Tenfold shared sensing/power dependency.",
+      "probability": "201009878891020999/1000000000000000000000000000",
+      "decimal": 2.01009878891021e-10,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE8": "1/1000"
+      }
+    },
+    {
+      "id": "perfect-sequence-verifier",
+      "basis": "A correct sequence precheck cannot prevent downstream hardware excess RF.",
+      "probability": "200189970001/10000000000000000000000",
+      "decimal": 2.00189970001e-11,
+      "unit": "per_declared_demand",
+      "overrides": {
+        "BE4": "0"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "QPCS-P1",
+      "description": "Sufficient passive attenuation prevents this selected excessive-RF event",
+      "expectation": "holds",
+      "property_holds": true,
+      "matched_assignments": 128,
+      "counterexamples": 0,
+      "first_counterexample": null,
+      "result": "pass"
+    },
+    {
+      "id": "QPCS-P2",
+      "description": "A working limiter prevents the event without the shared protection dependency",
+      "expectation": "holds",
+      "property_holds": true,
+      "matched_assignments": 64,
+      "counterexamples": 0,
+      "first_counterexample": null,
+      "result": "pass"
+    },
+    {
+      "id": "QPCS-C1",
+      "description": "A perfect sequence verifier prevents every excessive-RF event",
+      "expectation": "counterexample",
+      "property_holds": false,
+      "matched_assignments": 128,
+      "counterexamples": 30,
+      "first_counterexample": {
+        "BE1": false,
+        "BE2": false,
+        "BE3": true,
+        "BE4": false,
+        "BE5": false,
+        "BE6": false,
+        "BE7": true,
+        "BE8": true
+      },
+      "result": "pass"
+    },
+    {
+      "id": "QPCS-C2",
+      "description": "Separate limiter and comparator faults are required for protection loss",
+      "expectation": "counterexample",
+      "property_holds": false,
+      "matched_assignments": 64,
+      "counterexamples": 13,
+      "first_counterexample": {
+        "BE1": false,
+        "BE2": false,
+        "BE3": true,
+        "BE4": false,
+        "BE5": false,
+        "BE6": false,
+        "BE7": true,
+        "BE8": true
+      },
+      "result": "pass"
+    }
+  ],
+  "probability_assumption": "mutually_independent_basic_events_with_shared_causes_explicitly_reused",
+  "parameter_status": "synthetic_scenario_inputs_not_measured_failure_rates",
+  "physical_validation": "not_performed",
+  "risk_acceptance": "not_assessed",
+  "result": "pass",
+  "configuration": {
+    "analysis/failure-model.json": "2e397fa9cf4652cea822a3235735d32e9b5ee0f5e5fc12a1ef69fab05ca88e1e",
+    "scripts/analyze_gallery.py": "0271c8466b040650737f318c8046601229d53c716e4718e8a17b4f8faf9f398a",
+    "requirements.md": "14402ffe249cb9d60875520640b55ebec54bfd281c4eac2fd96266beade162ad",
+    "architecture.md": "0adc1c223a031eb6fa35a8e1a55b6513bb5a88c32286f0f55caab6389e98f8d3",
+    "hazard-analysis.md": "1f1861be427d60849d78c69fdfe1f5740c694229abb7b00bc01a8ce5d64b6cc9"
+  },
+  "run_id": "8521891e8778be0a350b"
+}

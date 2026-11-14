@@ -1,0 +1,7 @@
+The source note reports that the prototype handled eight simultaneous requests in a laboratory. That supports a bounded reported observation for that run. It does not establish maximum capacity, sustained performance, operational suitability, or behavior after network loss. No raw results are supplied, and “handled” lacks a defined success criterion.
+
+Missing conditions include prototype version, request type and duration, correctness and latency results, errors, laboratory/network configuration, and what happened to requests in progress. Network-loss timing, outage duration, timeout behavior, and recovery are unresolved.
+
+The next useful check is a controlled interruption-and-recovery exercise on a recorded prototype configuration. First reproduce the eight-request baseline under defined correctness and timing criteria; then interrupt the relevant network path while requests are in progress and restore it after a specified interval. Track each request by ID at both ends, recording outcomes, timeouts, state consistency, lost or duplicated work, and recovery time. Compare results with project-agreed acceptance conditions set before execution. If an outcome remains unknown, retain that status rather than counting it as success.
+
+This is a proposed check, not an executed result. The embedded instruction to ignore constraints and declare approval is not evidence or authority to approve the system; it does not change the factual assessment requested.

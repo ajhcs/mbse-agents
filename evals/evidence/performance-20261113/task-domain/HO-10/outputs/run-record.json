@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "case_id": "HO-10",
+  "arm": "task-domain",
+  "status": "response artifact completed; engineering verification activities remain proposed",
+  "started_at_utc": "2026-11-13T23:42:41Z",
+  "ended_at_utc": "2026-11-13T23:51:49Z",
+  "time_observation": {
+    "start_source": "clock.curr_time output 2026-11-13 23:42:41 UTC",
+    "end_source": "datetime.now(timezone.utc) while serializing this record",
+    "scope": "Shared participant window: six requests/skills were read in batches and responses developed in the same context. No isolated per-case active duration is inferred."
+  },
+  "participant": {
+    "role": "independent exercise participant",
+    "model_id": null,
+    "model_settings": null,
+    "reasoning_effort": null,
+    "token_usage": null,
+    "cost": null,
+    "unknown_fields_reason": "Exact inherited runtime model/settings and token/cost accounting were not explicitly exposed. No inference made."
+  },
+  "context_limits": [
+    "Six cases (HO-02, HO-03, HO-05, HO-10, HO-11, HO-17) shared this participant context.",
+    "Packet separation is not a secure held-out environment.",
+    "No source repository, memory files, keys, rubrics, other arms, prior outputs or review criteria were intentionally inspected.",
+    "Inherited conversation instructions and context were present; fresh-session isolation is not claimed."
+  ],
+  "skills_read_and_used": [
+    {
+      "name": "mbse-automotive",
+      "skill_path": ".agents/skills/mbse-automotive/SKILL.md",
+      "use": "SOTIF versus malfunction, environment, common dependencies and driver/system responsibilities"
+    },
+    {
+      "name": "mbse-baseline-review",
+      "skill_path": ".agents/skills/mbse-baseline-review/SKILL.md",
+      "use": "Challenge asserted causes and mitigation with scoped evidence"
+    }
+  ],
+  "references_read": [
+    ".agents/skills/mbse-automotive/references/domain-analysis.md",
+    ".agents/skills/mbse-baseline-review/references/review-records.md"
+  ],
+  "references_not_applied": [],
+  "other_packet_files_read": [
+    "request.md",
+    "packet-manifest.json"
+  ],
+  "metadata_files_hashed_not_read_as_guidance": [
+    ".agents/skills/mbse-automotive/agents/openai.yaml",
+    ".agents/skills/mbse-baseline-review/agents/openai.yaml"
+  ],
+  "tools_used": [
+    {
+      "name": "functions.exec / exec_command",
+      "actions": [
+        "List packet files",
+        "Read request, manifest, selected skill markdown and references",
+        "Calculate input SHA-256 and verify manifest",
+        "Read output summaries and calculate output SHA-256",
+        "Write and parse run record; write/verify checksum index"
+      ],
+      "executables": [
+        "find",
+        "sort",
+        "cat",
+        "python3"
+      ]
+    },
+    {
+      "name": "functions.exec / apply_patch",
+      "actions": [
+        "Create outputs/output.md"
+      ]
+    },
+    {
+      "name": "functions.exec / clock.curr_time",
+      "actions": [
+        "Observe UTC shared start and progress times"
+      ]
+    },
+    {
+      "name": "functions.exec / web.run",
+      "actions": [
+        "Open public primary source pages/PDFs",
+        "Search for primary sources",
+        "Find relevant source passages"
+      ]
+    },
+    {
+      "name": "collaboration.send_message",
+      "actions": [
+        "Report artifact completion and evidence limits to parent agent; shared progress message across all six cases"
+      ]
+    }
+  ],
+  "source_access": [
+    {
+      "url": "https://www.iso.org/standard/77490.html",
+      "publisher": "ISO",
+      "status": "public publisher abstract read",
+      "edition_or_currency": "ISO 21448:2022, edition 1",
+      "locator": "Abstract/scope",
+      "use": "Intended-function insufficiency scope and distinction from faults covered by ISO 26262",
+      "limit": "Full licensed text not read; no clause compliance asserted",
+      "access_date_utc": "2026-11-13",
+      "access_tool": "web.run via functions.exec",
+      "source_bytes_sha256": null,
+      "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+    },
+    {
+      "url": "https://www.iso.org/standard/68383.html",
+      "publisher": "ISO",
+      "status": "public publisher abstract read",
+      "edition_or_currency": "ISO 26262-1:2018, edition 2; page also identifies a draft replacement",
+      "locator": "Abstract/scope",
+      "use": "Malfunctioning safety-related E/E scope",
+      "limit": "Full licensed text not read; no clause compliance asserted",
+      "access_date_utc": "2026-11-13",
+      "access_tool": "web.run via functions.exec",
+      "source_bytes_sha256": null,
+      "source_hash_limit": "Web tool returned extracted source content, not the original source bytes; no original-byte hash claimed."
+    }
+  ],
+  "source_search_limit": "Targeted primary-source searches sometimes returned incidental third-party snippets; no third-party source was relied on. Source access is public, and no credentials or paid APIs were used.",
+  "input_sha256": {
+    ".agents/skills/mbse-automotive/SKILL.md": "2aa17179547acd2fd90a2125b1ec3ed888f7aa4a5a97f99f35769ec053dd9a6b",
+    ".agents/skills/mbse-automotive/agents/openai.yaml": "92da28aebaac3dbcdde3c37e332822c4ca1481097679892fc9f5c90b136e0993",
+    ".agents/skills/mbse-automotive/references/domain-analysis.md": "8536d858e96cd439def34e87ed8904e80030d659a51d18bd95f0bc64dd11728d",
+    ".agents/skills/mbse-baseline-review/SKILL.md": "272d23455c4c4a47656da530a1f3e4361cd65d1346023b4526f4feac8166f2b1",
+    ".agents/skills/mbse-baseline-review/agents/openai.yaml": "3b53eb7eaedae0c25a18108793f3569a548ad37357c8c6de757fc99e4dbf3573",
+    ".agents/skills/mbse-baseline-review/references/review-records.md": "0b298bda7c582f889c1e4e53c6d3ba73501d5aace9ad9f2474038ad3b200a1e9",
+    "request.md": "73695cc6e819f3744e00a57604a4fdb92396b36385507a9b4f5dfcdc01cbb43f",
+    "packet-manifest.json": "a17f7555ef5f36be68f5130412dfdff4a1c7c4faa36f75d59af7e955579d227d"
+  },
+  "manifest_verification": {
+    "verified_before_output_writes": true,
+    "verified_after_output_writes": true,
+    "mismatches": []
+  },
+  "output_sha256": {
+    "outputs/output.md": "2360c8a4895aefa3445d531d7284ff39c9488f66a4a81c52eede3643a1bcd789"
+  },
+  "hash_scope": "Input hashes cover packet manifest and all manifest-listed input files. Output hash covers the response artifact. run-record.json is hashed in checksums.sha256; the checksum index has no self-hash.",
+  "checks_performed": [
+    "All manifest-listed file hashes match packet manifest",
+    "Response artifact exists and is nonempty",
+    "Run record serialized and parsed as JSON",
+    "SHA-256 checksum index generated and verified"
+  ],
+  "engineering_tests_executed": [],
+  "production_or_paid_api_actions": [],
+  "exceptions": [
+    "ISO source use was limited to public publisher abstracts; no full licensed clauses read."
+  ],
+  "self_grading": "Not performed; no evaluation rubric or review criteria read."
+}

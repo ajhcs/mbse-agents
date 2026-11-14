@@ -1,0 +1,155 @@
+{
+  "id": "PumpOverinfusion",
+  "system": "Smart Infusion Pump System",
+  "hazard": "HZ-001",
+  "mission": "One excessive-delivery challenge to the proposed flow-control architecture; physical flow, exposure duration, and harm are outside this static model.",
+  "events": {
+    "BE1": {
+      "description": "Running infusion-control software commands excessive delivery",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE2": {
+      "description": "Motor driver runaway fault",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE3": {
+      "description": "Shared flow-sensor under-reading drives control and defeats deviation sensing",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE4": {
+      "description": "Independent deviation-monitor failure",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/1000"
+    },
+    "BE5": {
+      "description": "Hardware rate limiter fails to inhibit excessive drive",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE6": {
+      "description": "Processor watchdog hardware fails",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    },
+    "BE7": {
+      "description": "Shared motor-drive/limiter dependency defeats both functions",
+      "basis": "Synthetic demand probability for sensitivity exploration; no measured reliability data supplied. Event meaning is an authored abstraction of the linked hazard.",
+      "probability": "1/10000"
+    }
+  },
+  "gates": {
+    "G1": {
+      "operator": "or",
+      "inputs": [
+        "BE1",
+        "BE2",
+        "BE3",
+        "BE7"
+      ]
+    },
+    "G2": {
+      "operator": "or",
+      "inputs": [
+        "BE3",
+        "BE4"
+      ]
+    },
+    "G3": {
+      "operator": "or",
+      "inputs": [
+        "BE5",
+        "BE7"
+      ]
+    },
+    "TOP": {
+      "operator": "and",
+      "inputs": [
+        "G1",
+        "G2",
+        "G3"
+      ]
+    }
+  },
+  "top_event": "TOP",
+  "scenarios": [
+    {
+      "id": "nominal-synthetic",
+      "basis": "Synthetic architecture challenge probabilities.",
+      "overrides": {}
+    },
+    {
+      "id": "shared-drive-stress",
+      "basis": "Tenfold shared motor/limiter dependency.",
+      "overrides": {
+        "BE7": "1/1000"
+      }
+    },
+    {
+      "id": "perfect-watchdog",
+      "basis": "A processor-alive watchdog does not establish correct delivered flow.",
+      "overrides": {
+        "BE6": "0"
+      }
+    },
+    {
+      "id": "diverse-limiter",
+      "basis": "Hypothetical removal of modeled drive/limiter common cause.",
+      "overrides": {
+        "BE7": "0"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "PUMP-P1",
+      "description": "Working independent hardware limiter prevents this selected overdelivery event",
+      "when": {
+        "BE5": false,
+        "BE7": false
+      },
+      "expected_top": false,
+      "expectation": "holds"
+    },
+    {
+      "id": "PUMP-P2",
+      "description": "Working deviation sensing prevents the event when its shared under-reading mode is absent",
+      "when": {
+        "BE3": false,
+        "BE4": false
+      },
+      "expected_top": false,
+      "expectation": "holds"
+    },
+    {
+      "id": "PUMP-C1",
+      "description": "A functioning processor watchdog guarantees safe flow",
+      "when": {
+        "BE6": false
+      },
+      "expected_top": false,
+      "expectation": "counterexample"
+    },
+    {
+      "id": "PUMP-C2",
+      "description": "Independent monitor fault is necessary to miss overdelivery",
+      "when": {
+        "BE4": false
+      },
+      "expected_top": false,
+      "expectation": "counterexample"
+    }
+  ],
+  "interpretation": "The same sensor under-reading event is reused in initiation and monitoring; multiplying it twice would understate the probability. A watchdog observes processor liveness, so BE6 is intentionally unused for running-but-wrong output. Clamp free-flow protection, actual flow dynamics, clinical risk, and physical independence require separate tests.",
+  "schema_version": 1,
+  "scope": "authored-static-fault-model",
+  "basis": "Authored correction of the preserved gallery hazard model. Boolean event meanings and parameter scenarios are proposed teaching abstractions, not accepted field data.",
+  "source_links": [
+    "../hazard-analysis.md",
+    "../architecture.md",
+    "../requirements.md"
+  ],
+  "probability_assumption": "mutually_independent_basic_events_with_shared_causes_explicitly_reused"
+}

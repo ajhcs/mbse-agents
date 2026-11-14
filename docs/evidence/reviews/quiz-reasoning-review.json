@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "kind": "independent-quiz-reasoning-review",
+  "completed_at": "2026-11-14T00:19:47.143303+00:00",
+  "benchmark_version": "0.2.0",
+  "split": "development",
+  "reviewer_method": {
+    "identity": "Codex independent reasoning reviewer /root/quiz_reasoning_independent",
+    "independent_of_production": true,
+    "role": "Explanation assessment only; no question, key, response or production-code authoring in this task.",
+    "model": "unknown inherited model; exact served reviewer model/settings unavailable",
+    "human_expert": false,
+    "scope": "All 72 original reasoning responses: the same 24 development questions in each of three arms, with 144 ordered criterion judgments. Original and metadata-corrected answer contents are identical.",
+    "order": [
+      "none",
+      "task",
+      "task-domain"
+    ],
+    "procedure": "Read one complete arm against each original scenario, choice set, frozen key rationale and ordered reasoning criteria; save its item ratings and completion checkpoint before reading the next arm reasoning. Compare only after all three assessments were saved. No other reviewer output was used.",
+    "blinding": "Arm identity, submitted selection, proposed key and coordinator statement of earlier full-bank adjudication were visible. This was not blind or independently calibrated human review. Only the selected 24 keys were rechecked here; the separate full 60-key adjudication was not reproduced.",
+    "scale": {
+      "0": "Missing or materially wrong.",
+      "1": "Partial, with a consequential gap against the stated criterion.",
+      "2": "Coherent and supported by the supplied facts."
+    },
+    "rating_basis": "Credit requires the reasoning to satisfy the actual criterion; a correct letter, length or repetition of a requested future activity is not by itself sufficient. Unknown physical details, numeric thresholds and named authorities were not demanded when absent from the vignette.",
+    "critical_error_definition": "A material false or unsupported reasoning claim that reverses a decision, destroys evidence scope or authorizes an unwarranted engineering conclusion. None found in these submitted explanations.",
+    "partial_criterion_rule": "For the two action-specific criteria, asking parties to define responsibilities does not itself allocate responsibilities, and saying to identify an investigation does not itself provide a concrete evidence-based resolution path.",
+    "comment_locations": "Each item comment uses a JSON pointer in its copied packet/answers.json; the corresponding corrected-answer reasoning is identical by parsed-value comparison.",
+    "source_policy": "Historical/technical premises were assessed as supplied exercise facts. No external source, paid API or production action was used; no new regulatory or standards claim was introduced.",
+    "tool_validation_limit": "Archived scorer success validates packet/input/review bindings and aggregate structure, not the correctness of this rater judgment."
+  },
+  "frozen_sources": {
+    "archive_original_root": "/workspace/repos/builderbob/mbse-agents/evals/archive/benchmark-0.2.0",
+    "archive_copy": "/workspace/repos/builderbob/mbse-agents/.mbse-review/quiz-reasoning/source/benchmark-0.2.0",
+    "archive_manifest_sha256": "c2e9138e64ee4ab65e6406b19e0f6772a6e142323870bc7a886ea68289988aa6",
+    "all_49_manifest_files_verified": true,
+    "bank_sha256": "b9a884d405c3df9fc793410e54bcdcc06f92d0a6eff0ebd55e63d2bacf8fb9f1",
+    "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+    "scorer_sha256": "f693899802f6e16752559f5df2df4f959703e295cce94b7cafe8f787d94b9a3d",
+    "catalog_sha256": "d22425e31f748d67266c41393c7e6d34cc14aba23d2ec21359ace165dfe0e32d",
+    "protocol_sha256": "63ba2fabb05dc96b976fb4c074cb7895b6d010cd7dd043b737a93c15a0fed571",
+    "full_input_receipt": "/workspace/repos/builderbob/mbse-agents/.mbse-review/quiz-reasoning/source/input-verification.json",
+    "full_input_receipt_sha256": "5fb9a34a903fa289afdd77b1db5d6c077a60cb6c17efc577249148815e5f6362",
+    "final_preservation_receipt": "/workspace/repos/builderbob/mbse-agents/.mbse-review/quiz-reasoning/preservation-verification.json",
+    "final_preservation_receipt_sha256": "da3a52dbc00261cdce3662772da6c5d83fb309bcd1d9e39b63d60fcfede050ce"
+  },
+  "arms": [
+    {
+      "arm": "none",
+      "run_id": "quiz-v020-baseline-184c374b-9a4a-46c4-8205-77838396ea0c",
+      "producer": "Codex subagent /root/quiz_v020_baseline",
+      "host": "builderbob",
+      "model_original": null,
+      "model_corrected": "unknown",
+      "packet_id": "0cdd0bb38d38408eaaae6930d3727148",
+      "questions": 24,
+      "selection_correct": 24,
+      "criterion_points": 94,
+      "criterion_maximum": 96,
+      "criterion_rating_counts": {
+        "0": 0,
+        "1": 2,
+        "2": 46
+      },
+      "fully_satisfied_items": 22,
+      "critical_error_count": 0,
+      "partials": [
+        {
+          "item_id": "SEJ-029",
+          "criterion_number": 2,
+          "criterion": "Assigns producer and consumer responsibilities for invalid data.",
+          "rating": 1,
+          "located_comment": "packet/answers.json#/answers/11/reasoning: Distinguishes nominal update rate from guaranteed freshness and names timestamp/clock/age issues. It asks both parties to agree invalid-data behavior but does not allocate supplier reporting versus consumer detection/use-response responsibilities."
+        },
+        {
+          "item_id": "SEJ-048",
+          "criterion_number": 2,
+          "criterion": "Provides a concrete resolution path while preserving uncertainty.",
+          "rating": 1,
+          "located_comment": "packet/answers.json#/answers/18/reasoning: Explains unchanged materials versus changed seal geometry and retains uncertainty. It calls for a technical investigation or decision but does not specify the geometry/mechanism comparison or targeted evidence that would resolve test applicability."
+        }
+      ],
+      "by_dimension": {
+        "framing": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "lifecycle": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "causal_reasoning": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "evidence": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "requirements": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "interfaces": {
+          "points": 7,
+          "maximum": 8,
+          "items": 2
+        },
+        "tradeoffs": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "uncertainty": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "people_organizations": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "communication": {
+          "points": 7,
+          "maximum": 8,
+          "items": 2
+        },
+        "source_judgment": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "change_review": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        }
+      },
+      "hashes": {
+        "original_answers_sha256": "1146be3e4f3c151ab3ef45c995bc4bd6c1eb0490df7295efd43e4c72e7efde00",
+        "metadata_corrected_answers_sha256": "db2393caeef1f256706618417f1a56d773cc359096d888367703a374d26dbe9b",
+        "amendment_sha256": "1fbe0533c0dfc6c1b649432e623a865a89f81cfb5e3fcc9ad80b500f350b0484",
+        "questions_sha256": "a72e1d075a35528d8a840caf972644905861372d73b74b0a05e73fbcc2188d96",
+        "packet_manifest_sha256": "cc63a5645d623a87a9707e65e43ee876c6cf3da5bad26ac9baeecac1ea9a59ca",
+        "review_template_sha256": "32171f2c82b0df2eed4c03739b2b75dd478842ff2988310dc9006c60efc7415d",
+        "review_sha256": "70cf3dd251cc1a9e2bd8b4304af815fad9ced3f759be2bd1d580cda47084421c",
+        "reviewed_score_sha256": "2004d6ae46cff1ba747a341d19191a7c2b2d95efb81f510914f5006d6f74814c",
+        "original_parser_attempt_sha256": "9e860c87a6f6eb7fbff1b4f7ed3cb4ba796943b0237155ba5490f2e11bfb8313",
+        "review_binding_validation_sha256": "673ef3224f362a576f9ecf296435df60cfcc898439bed783c7418b0448fcf6a1"
+      },
+      "bindings": {
+        "answers_sha256": "db2393caeef1f256706618417f1a56d773cc359096d888367703a374d26dbe9b",
+        "packet_manifest_sha256": "cc63a5645d623a87a9707e65e43ee876c6cf3da5bad26ac9baeecac1ea9a59ca",
+        "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+        "criteria_sha256": "b9b7a828031e868b61dba5c0605d9c9ab08885bdc020b61794652dc13e80edcd"
+      },
+      "amendment_verification": {
+        "exactly_documented_changes": true,
+        "answers_unchanged": true,
+        "changed_paths": [
+          "/run/exceptions/7",
+          "/run/model"
+        ]
+      },
+      "original_parser": {
+        "returncode": 1,
+        "message": "Missing run provenance: model; use explicit 'unknown' when unavailable"
+      },
+      "corrected_review_validation": {
+        "returncode": 0,
+        "reasoning_review_status": "reviewer_reported"
+      },
+      "assessment_checkpoint": {
+        "arm": "none",
+        "completed_at": "2026-11-14T00:14:00.201787+00:00",
+        "assessment_order": 1,
+        "other_arm_reasoning_read_before_completion": false,
+        "criterion_total": 94,
+        "criterion_maximum": 96,
+        "critical_error_count": 0
+      }
+    },
+    {
+      "arm": "task",
+      "run_id": "quiz-v020-task-d52663a4-20261114T000252Z",
+      "producer": "Codex agent /root/quiz_v020_task",
+      "host": "builderbob",
+      "model_original": null,
+      "model_corrected": "unknown",
+      "packet_id": "d52663a4c8cd43a4a6abc3faedfede22",
+      "questions": 24,
+      "selection_correct": 24,
+      "criterion_points": 94,
+      "criterion_maximum": 96,
+      "criterion_rating_counts": {
+        "0": 0,
+        "1": 2,
+        "2": 46
+      },
+      "fully_satisfied_items": 22,
+      "critical_error_count": 0,
+      "partials": [
+        {
+          "item_id": "SEJ-029",
+          "criterion_number": 2,
+          "criterion": "Assigns producer and consumer responsibilities for invalid data.",
+          "rating": 1,
+          "located_comment": "packet/answers.json#/answers/11/reasoning: Rejects nominal and mean timing as guarantees and specifies acquisition timestamps, clocks, loss and age concerns. It requests shared definitions but leaves producer reporting and consumer invalid-data detection/response responsibilities unallocated."
+        },
+        {
+          "item_id": "SEJ-048",
+          "criterion_number": 2,
+          "criterion": "Provides a concrete resolution path while preserving uncertainty.",
+          "rating": 1,
+          "located_comment": "packet/answers.json#/answers/18/reasoning: Locates the materials-versus-seal-geometry applicability dispute and preserves the old evidence. It asks to name an investigation/decision but never specifies a mechanism comparison or targeted evidence that can resolve the dispute."
+        }
+      ],
+      "by_dimension": {
+        "framing": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "lifecycle": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "causal_reasoning": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "evidence": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "requirements": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "interfaces": {
+          "points": 7,
+          "maximum": 8,
+          "items": 2
+        },
+        "tradeoffs": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "uncertainty": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "people_organizations": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "communication": {
+          "points": 7,
+          "maximum": 8,
+          "items": 2
+        },
+        "source_judgment": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "change_review": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        }
+      },
+      "hashes": {
+        "original_answers_sha256": "7462f9a107e699b16e792963b8f0ee9fc5471351ecdccacaa933f5e776c75c9a",
+        "metadata_corrected_answers_sha256": "793ed0a90dc70d4d89648ec2b0b6812cf5a2c3c07426829f34fd6b1875e467c1",
+        "amendment_sha256": "9031071e2b9faa6063d50c8f998e1afe1eaf57c975f6ab1b0807fbec84c1307b",
+        "questions_sha256": "a72e1d075a35528d8a840caf972644905861372d73b74b0a05e73fbcc2188d96",
+        "packet_manifest_sha256": "02e3e208061157acc2a81706bf5ecd016e197eda294892d663721ceb4117a658",
+        "review_template_sha256": "8083caf0756713358a1baeac1017857ff364939a39a68672c7bb3591c6b0a037",
+        "review_sha256": "8178a1375ac18b661d8ff524d8edcac1477f3eb0c0e0b4fd081bbf0e59b86b58",
+        "reviewed_score_sha256": "97143d04f85a544bbebbc0ef49cc7ab8097bf38cda0a935916554c8ae224a2c7",
+        "original_parser_attempt_sha256": "327602f11def235c8910d5e12e1a04b43a90a44d310b39b8dea6764ad2447c7d",
+        "review_binding_validation_sha256": "551a85cddb3b1ca39cacea7105fed239df97799fe2b6cc7c29d6299fa40a149a"
+      },
+      "bindings": {
+        "answers_sha256": "793ed0a90dc70d4d89648ec2b0b6812cf5a2c3c07426829f34fd6b1875e467c1",
+        "packet_manifest_sha256": "02e3e208061157acc2a81706bf5ecd016e197eda294892d663721ceb4117a658",
+        "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+        "criteria_sha256": "b9b7a828031e868b61dba5c0605d9c9ab08885bdc020b61794652dc13e80edcd"
+      },
+      "amendment_verification": {
+        "exactly_documented_changes": true,
+        "answers_unchanged": true,
+        "changed_paths": [
+          "/run/exceptions/6",
+          "/run/model"
+        ]
+      },
+      "original_parser": {
+        "returncode": 1,
+        "message": "Missing run provenance: model; use explicit 'unknown' when unavailable"
+      },
+      "corrected_review_validation": {
+        "returncode": 0,
+        "reasoning_review_status": "reviewer_reported"
+      },
+      "assessment_checkpoint": {
+        "arm": "task",
+        "completed_at": "2026-11-14T00:15:18.208229+00:00",
+        "assessment_order": 2,
+        "previous_arms_assessed": [
+          "none"
+        ],
+        "later_arms_reasoning_read_before_completion": false,
+        "criterion_total": 94,
+        "criterion_maximum": 96,
+        "critical_error_count": 0
+      }
+    },
+    {
+      "arm": "task-domain",
+      "run_id": "task-domain-20261114T000250Z",
+      "producer": "Codex sub-agent /root/quiz_v020_domain",
+      "host": "builderbob",
+      "model_original": null,
+      "model_corrected": "unknown",
+      "packet_id": "9a2ebf161a904592b42612e312a2bb22",
+      "questions": 24,
+      "selection_correct": 24,
+      "criterion_points": 94,
+      "criterion_maximum": 96,
+      "criterion_rating_counts": {
+        "0": 0,
+        "1": 2,
+        "2": 46
+      },
+      "fully_satisfied_items": 22,
+      "critical_error_count": 0,
+      "partials": [
+        {
+          "item_id": "SEJ-029",
+          "criterion_number": 2,
+          "criterion": "Assigns producer and consumer responsibilities for invalid data.",
+          "rating": 1,
+          "located_comment": "packet/answers.json#/answers/11/reasoning: Explains why nominal interval and aggregate statistics do not guarantee usable measurement age; names clocks, timestamps, bounds and invalid-data response but leaves each party's detection/reporting/use responsibilities unallocated."
+        },
+        {
+          "item_id": "SEJ-048",
+          "criterion_number": 2,
+          "criterion": "Provides a concrete resolution path while preserving uncertainty.",
+          "rating": 1,
+          "located_comment": "packet/answers.json#/answers/18/reasoning: Identifies changed geometry versus unchanged materials and asks whether old conditions/mechanisms cover the revision. It still requests a focused investigation without naming a concrete comparison, analysis or targeted test to resolve that applicability question."
+        }
+      ],
+      "by_dimension": {
+        "framing": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "lifecycle": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "causal_reasoning": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "evidence": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "requirements": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "interfaces": {
+          "points": 7,
+          "maximum": 8,
+          "items": 2
+        },
+        "tradeoffs": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "uncertainty": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "people_organizations": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "communication": {
+          "points": 7,
+          "maximum": 8,
+          "items": 2
+        },
+        "source_judgment": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        },
+        "change_review": {
+          "points": 8,
+          "maximum": 8,
+          "items": 2
+        }
+      },
+      "hashes": {
+        "original_answers_sha256": "d101342fd05334143f6e596fa2e282b33e0127b77f763d54742a414dc3122311",
+        "metadata_corrected_answers_sha256": "1efc1704a1f6d9f4fcfa0a3d36cf4c4fbe3199cb9e021224bea9dc86e6c2d32d",
+        "amendment_sha256": "b50219ba566c9c7d00b037a8e508fe9535025c0d1d14ef835241cf9fe8667a33",
+        "questions_sha256": "a72e1d075a35528d8a840caf972644905861372d73b74b0a05e73fbcc2188d96",
+        "packet_manifest_sha256": "34e89d6784157fe9843737ec4de2b0ef1fee141a7b4b24fe1938a310aa00a379",
+        "review_template_sha256": "c4301de6d0f06c755b107495d1218725803f735c19db6590b0376a02c76c9653",
+        "review_sha256": "326f6872f35e839902b08b6b7475942cd32db43ff8124d1dddff42db6793eae1",
+        "reviewed_score_sha256": "c030009dd582ec2ed7f7cb810fcdfaf16516af6b010f57b58132479da1b899ba",
+        "original_parser_attempt_sha256": "6c990815abbe5f4de754f1506c353ad2d9dd4ff9c712b4608e73589091492dc5",
+        "review_binding_validation_sha256": "a9e24e2c06784ffbf194b8e32183e44239c98b36bb5c40c736997f2953199989"
+      },
+      "bindings": {
+        "answers_sha256": "1efc1704a1f6d9f4fcfa0a3d36cf4c4fbe3199cb9e021224bea9dc86e6c2d32d",
+        "packet_manifest_sha256": "34e89d6784157fe9843737ec4de2b0ef1fee141a7b4b24fe1938a310aa00a379",
+        "key_sha256": "ba9143c387a663de8341e835e63a86f252d04b6b551d0489a949ee28cb479393",
+        "criteria_sha256": "b9b7a828031e868b61dba5c0605d9c9ab08885bdc020b61794652dc13e80edcd"
+      },
+      "amendment_verification": {
+        "exactly_documented_changes": true,
+        "answers_unchanged": true,
+        "changed_paths": [
+          "/run/exceptions/6",
+          "/run/model"
+        ]
+      },
+      "original_parser": {
+        "returncode": 1,
+        "message": "Missing run provenance: model; use explicit 'unknown' when unavailable"
+      },
+      "corrected_review_validation": {
+        "returncode": 0,
+        "reasoning_review_status": "reviewer_reported"
+      },
+      "assessment_checkpoint": {
+        "arm": "task-domain",
+        "completed_at": "2026-11-14T00:16:30.530711+00:00",
+        "assessment_order": 3,
+        "previous_arms_assessed": [
+          "none",
+          "task"
+        ],
+        "later_arms_reasoning_read_before_completion": false,
+        "criterion_total": 94,
+        "criterion_maximum": 96,
+        "critical_error_count": 0
+      }
+    }
+  ],
+  "aggregate": {
+    "responses_reviewed": 72,
+    "criterion_judgments": 144,
+    "selection_correct": 72,
+    "selection_total": 72,
+    "criterion_points": 282,
+    "criterion_maximum": 288,
+    "fully_satisfied_criteria": 138,
+    "partial_criteria": 6,
+    "missing_or_materially_wrong_criteria": 0,
+    "critical_errors": 0
+  },
+  "key_disposition": {
+    "selected_items_rechecked": 24,
+    "material_disagreements": [],
+    "scope": "Selected keys and rubrics only; all-bank prior adjudication supplied by coordinator and not reproduced."
+  },
+  "comparison": {
+    "observed_result": "All three arms tie at 24/24 selection matches and 94/96 reviewer criterion points. The same two action-specific criteria are partial in every arm.",
+    "relative_claim": "No observed reasoning advantage for either skill arm on this sample. This is not a causal performance, equivalence or superiority claim.",
+    "rater_sensitivity": "If a later adjudicator interprets the two action-specific criteria broadly enough to accept process-level requests, all three arms would move to 96/96 together; observed relative separation remains zero.",
+    "substantive_observation": "Across arms, explanations preserve supplied facts, conditional evidence, event identity and uncertainty. The unresolved gap is concrete assignment/resolution detail, not wrong selection or invented domain authority."
+  },
+  "repair_examples": {
+    "SEJ-029": "Allocate supplier timestamp/validity reporting and guaranteed-update obligations separately from consumer age/clock checks and response to stale or invalid measurements; leave actual limits subject to the controlled-process evidence.",
+    "SEJ-048": "Compare the previously tested configuration and environmental conditions with the revised seal geometry and relevant failure mechanism; identify the targeted analysis or test evidence and authorized applicability decision needed, without defaulting to full requalification."
+  },
+  "limitations": [
+    "One producer context per arm on 24 public development questions; no repetitions, uncertainty estimate or demonstrated generalization to difficult engineering artifact work.",
+    "The coordination context describes the same unknown inherited model across arms. Exact served model identifiers, sampling/reasoning settings, tokens, inference latency and cost were not exposed, so their equality cannot be independently verified.",
+    "Shared BuilderBob host and inherited system/developer context exposed global skill descriptions and general memory/host metadata. Packets were instruction-restricted rather than technically sandbox-isolated; no-skills does not demonstrate removal of all inherited skill knowledge.",
+    "A single model reviewer, unblinded to arm and key, used the same shared environment; no inter-rater agreement, calibrated human expert adjudication or causal estimate of skill benefit is established.",
+    "The selected authored key was checked against the supplied facts without a material disagreement. This is neither an authoritative engineering oracle nor a new validation of the historical source statements or all 60 bank keys.",
+    "All arms are at a selection ceiling and near the maximum on this rubric. Ties provide no observed separation in this sample; they do not prove equivalence, skill ineffectiveness, model superiority or release readiness.",
+    "Original submissions failed the archived parser because run.model was null. Only the explicitly documented metadata-corrected copies scored successfully; no original-submission parser success is claimed."
+  ],
+  "validation": {
+    "all_corrected_reviews_validated": true,
+    "original_parser_failures_reproduced": 3,
+    "aggregate_report_returncode": 0,
+    "aggregate_report_sha256": "f279c87103fd6d818f48d55cc84a6342720b49fc5407740af7e4e05629d62d5a",
+    "all_source_and_copied_input_bytes_preserved": true,
+    "only_output_location": "/workspace/repos/builderbob/mbse-agents/.mbse-review",
+    "production_code_or_original_responses_edited": false
+  },
+  "artifacts": {
+    "summary_markdown": "/workspace/repos/builderbob/mbse-agents/.mbse-review/quiz-reasoning-review.md",
+    "summary_json": "/workspace/repos/builderbob/mbse-agents/.mbse-review/quiz-reasoning-review.json",
+    "artifact_hash_manifest": "/workspace/repos/builderbob/mbse-agents/.mbse-review/quiz-reasoning/artifact-sha256.json",
+    "reviews": {
+      "none": "/workspace/repos/builderbob/mbse-agents/.mbse-review/quiz-reasoning/none/review.json",
+      "task": "/workspace/repos/builderbob/mbse-agents/.mbse-review/quiz-reasoning/task/review.json",
+      "task-domain": "/workspace/repos/builderbob/mbse-agents/.mbse-review/quiz-reasoning/task-domain/review.json"
+    }
+  }
+}
