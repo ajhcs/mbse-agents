@@ -3,7 +3,7 @@
 Historical JSON snapshots are verified for byte integrity and excluded from
 current claims. This checker does not validate standards or physical behavior.
 """
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 import argparse
 import datetime
 import hashlib
@@ -41,7 +41,10 @@ def validate_execution(receipt, report, result_sha256, entrypoint):
     if receipt.get("run_id") != report["run_id"] or receipt.get("scope") != report["scope"]:
         raise ValueError("Execution provenance run identity or scope differs")
     origin = receipt.get("entrypoint")
-    if not isinstance(origin, str) or not Path(origin).is_absolute() or Path(origin).name != entrypoint:
+    # A saved execution identity belongs to its producer's host, not this host.
+    if not isinstance(origin, str) or not any(
+            path.is_absolute() and path.name == entrypoint
+            for path in (PurePosixPath(origin), PureWindowsPath(origin))):
         raise ValueError("Execution provenance entrypoint is missing or invalid")
     if receipt.get("loaded_sources") != report["loaded_sources"]:
         raise ValueError("Execution provenance loaded-source bindings differ")
@@ -54,9 +57,10 @@ def validate_crosscheck_provenance(receipt):
     if receipt.get("scope") != "independent_implementation_crosscheck_not_independent_engineering_review":
         raise ValueError("CSE provenance scope is missing or invalid")
     helper = receipt.get("helper_entrypoint")
-    if not isinstance(helper, str) or not Path(helper).is_absolute() or len(Path(helper).parents) < 4:
+    # These CSE receipts declare a POSIX execution command and source inventory.
+    if not isinstance(helper, str) or not PurePosixPath(helper).is_absolute() or len(PurePosixPath(helper).parents) < 4:
         raise ValueError("CSE helper provenance entrypoint is missing or invalid")
-    helper = Path(helper)
+    helper = PurePosixPath(helper)
     runtime = helper.parents[3]
     required = {str(helper), *(str(runtime / name) for name in (
         "scripts/failure_analysis.py", "verifier/failure_analysis.py", "verifier/core.py", "verifier/foundation.py"))}
@@ -70,7 +74,7 @@ def validate_crosscheck_provenance(receipt):
     if (receipt.get("bytecode_cache_policy") != "fresh_empty_prefix_with_writes_disabled"
             or len(command) != 10 or command[1:3] != ["-B", "-X"]
             or not command[3].startswith("pycache_prefix=/") or command[4] != str(helper)
-            or Path(command[5]).name != "cse-failure-model.json"
+            or PurePosixPath(command[5]).name != "cse-failure-model.json"
             or command[6:] != ["--required", "fault_tree", "--required", "probability"]):
         raise ValueError("CSE provenance command or cache policy differs from the declared execution")
     if receipt["cse_result"].get("input_sha256") != receipt.get("input_sha256"):

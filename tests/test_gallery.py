@@ -1,7 +1,7 @@
 """Adversarial checks for exact logic, evidence boundaries and temporal behavior."""
 from copy import deepcopy
 from fractions import Fraction
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 import hashlib
 import json
 import os
@@ -11,6 +11,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -243,6 +244,14 @@ class GalleryContractTests(unittest.TestCase):
             report = analysis.load_json(copied / "evidence/analysis" / result_name)
             receipt = copied / "evidence/analysis/runs" / report["run_id"] / "execution.json"
             original = analysis.load_json(receipt)
+            # Read saved POSIX and Windows identities without host-native parsing.
+            with patch.object(gallery, "Path", PureWindowsPath):
+                gallery.validate_execution(original, report, analysis.digest(receipt.with_name(result_name)),
+                                           Path(original["entrypoint"]).name)
+            windows_receipt = deepcopy(original)
+            windows_receipt["entrypoint"] = "C:\\recorded-run\\" + Path(original["entrypoint"]).name
+            gallery.validate_execution(windows_receipt, report, analysis.digest(receipt.with_name(result_name)),
+                                       Path(original["entrypoint"]).name)
             receipt.write_text(json.dumps({"result_sha256": original["result_sha256"]}))
             errors, _ = gallery.check(self.root)
             with self.subTest(case=case):
@@ -253,6 +262,8 @@ class GalleryContractTests(unittest.TestCase):
         copied = self.copy_case("flight-management-system")
         receipt = copied / "evidence/analysis/cse-crosscheck.json"
         original = analysis.load_json(receipt)
+        with patch.object(gallery, "Path", PureWindowsPath):
+            gallery.validate_crosscheck_provenance(original)
         for field in ("executed_at", "command", "helper_sources"):
             value = deepcopy(original)
             del value[field]
