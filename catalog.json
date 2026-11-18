@@ -6,104 +6,104 @@
       "display_name": "Systems Engineering",
       "kind": "task",
       "path": ".agents/skills/mbse-systems-engineering",
-      "short_description": "Understand systems and reason through engineering decisions",
-      "default_prompt": "Use $mbse-systems-engineering to understand this system problem, question consequential assumptions, connect the disciplines, and explain a defensible recommendation."
+      "short_description": "Trace system behavior and test competing causes",
+      "default_prompt": "Use $mbse-systems-engineering to explain why this system misses its target. Check plausible causes against our observations and give me the check that would distinguish the remaining causes."
     },
     {
       "name": "mbse-system-concept",
       "display_name": "Develop a System Concept",
       "kind": "task",
       "path": ".agents/skills/mbse-system-concept",
-      "short_description": "Explore feasible system concepts and alternatives",
-      "default_prompt": "Use $mbse-system-concept to frame the problem in this brief, compare meaningful alternatives, and explain the preferred direction and its open feasibility questions."
+      "short_description": "Compare system concepts against feasibility limits",
+      "default_prompt": "Use $mbse-system-concept to compare ways to meet the outcome in this brief. Show which options meet the hard constraints and what evidence could change your recommendation."
     },
     {
       "name": "mbse-conops",
       "display_name": "Develop a Concept of Operations",
       "kind": "task",
       "path": ".agents/skills/mbse-conops",
-      "short_description": "Connect stakeholder needs to real operating conditions",
-      "default_prompt": "Use $mbse-conops to explain how this system will be used, reconcile stakeholder responsibilities, and develop the operating concept and unresolved decisions."
+      "short_description": "Define who operates, decides, and restores service",
+      "default_prompt": "Use $mbse-conops to draft how our team will run and support this system. Show who owns each handover and who can resume service after an outage with the staff and information available."
     },
     {
       "name": "mbse-operational-scenarios",
       "display_name": "Develop Operational Scenarios",
       "kind": "task",
       "path": ".agents/skills/mbse-operational-scenarios",
-      "short_description": "Develop normal, exception, and recovery scenarios",
-      "default_prompt": "Use $mbse-operational-scenarios to work through this operation, including exceptions and recovery, and identify observations that could change its design."
+      "short_description": "Trace normal, exception, and recovery paths",
+      "default_prompt": "Use $mbse-operational-scenarios to trace this operation from trigger to outcome. Walk through the interrupted case and show who can resume, under what condition, and where the path ends."
     },
     {
       "name": "mbse-requirements",
       "display_name": "Engineer Requirements",
       "kind": "task",
       "path": ".agents/skills/mbse-requirements",
-      "short_description": "Elicit and refine source-grounded requirements",
-      "default_prompt": "Use $mbse-requirements to interpret these stakeholder inputs, resolve conflicting meanings, and draft traceable requirements with acceptance conditions and open decisions."
+      "short_description": "Trace stakeholder needs to verifiable requirements",
+      "default_prompt": "Use $mbse-requirements to turn these stakeholder notes into reviewable requirements. Link each one to its source and give the conditions and observation a tester would use to judge it."
     },
     {
       "name": "mbse-architecture",
       "display_name": "Design a System Architecture",
       "kind": "task",
       "path": ".agents/skills/mbse-architecture",
-      "short_description": "Reason about functions, structure, and interfaces",
-      "default_prompt": "Use $mbse-architecture to connect this system’s behavior to alternative structures, explain the tradeoffs, and develop allocations and interface contracts."
+      "short_description": "Allocate behavior and check interfaces and budgets",
+      "default_prompt": "Use $mbse-architecture to allocate the functions in this brief. Trace the critical path through the proposed interfaces and show where timing, ownership, or a shared dependency could break it."
     },
     {
       "name": "mbse-verification-evidence",
       "display_name": "Plan Verification and Evidence",
       "kind": "task",
       "path": ".agents/skills/mbse-verification-evidence",
-      "short_description": "Connect engineering claims to credible evidence",
-      "default_prompt": "Use $mbse-verification-evidence to determine what evidence would establish these claims, assess the supplied results, and develop the remaining verification and validation work."
+      "short_description": "Judge whether evidence supports an engineering claim",
+      "default_prompt": "Use $mbse-verification-evidence to decide whether this test record closes the requirement. Show the decision rule, the result for each tested condition, and which configurations the evidence covers."
     },
     {
       "name": "mbse-baseline-review",
       "display_name": "Review an MBSE Baseline",
       "kind": "task",
       "path": ".agents/skills/mbse-baseline-review",
-      "short_description": "Challenge a baseline and explain change impacts",
-      "default_prompt": "Use $mbse-baseline-review to examine this baseline or change, explain consequential mismatches, and identify repairs and decisions supported by the evidence."
+      "short_description": "Find change impacts and check prior evidence",
+      "default_prompt": "Use $mbse-baseline-review to compare these two baseline revisions. Cite the affected requirements and interfaces, identify which test results still apply, and locate any evidence gaps that prevent approval."
     },
     {
       "name": "mbse-aerospace",
       "display_name": "Aerospace Systems Engineering",
       "kind": "domain",
       "path": ".agents/skills/mbse-aerospace",
-      "short_description": "Reason about aircraft and space system decisions",
-      "default_prompt": "Use $mbse-aerospace to reason through this aircraft or space system question, identify the applicable program context, and explain the design and assurance implications."
+      "short_description": "Check flight or mission claims against assurance evidence",
+      "default_prompt": "Use $mbse-aerospace to review this safety claim. Trace the affected flight or mission phase through the allocated control and identify which assurance evidence applies to the configuration."
     },
     {
       "name": "mbse-defense",
       "display_name": "Defense Systems Engineering",
       "kind": "domain",
       "path": ".agents/skills/mbse-defense",
-      "short_description": "Connect mission outcomes to system and lifecycle choices",
-      "default_prompt": "Use $mbse-defense to connect this mission need to system behavior, organizational interfaces, acquisition constraints, and evidence for the next decision."
+      "short_description": "Trace mission and sustainment decisions to program evidence",
+      "default_prompt": "Use $mbse-defense to review this sustainment plan against the mission and contract baselines. Identify who owns each handover and which records support the readiness decision."
     },
     {
       "name": "mbse-automotive",
       "display_name": "Automotive Systems Engineering",
       "kind": "domain",
       "path": ".agents/skills/mbse-automotive",
-      "short_description": "Reason about vehicle behavior and lifecycle assurance",
-      "default_prompt": "Use $mbse-automotive to explain this vehicle-system problem and connect operating conditions, driver behavior, architecture, safety, security, and evidence."
+      "short_description": "Trace vehicle responses to safety goals and evidence",
+      "default_prompt": "Use $mbse-automotive to review this degraded vehicle response. Show what the driver can observe, when mitigation must occur, and which evidence applies to that operating situation."
     },
     {
       "name": "mbse-medical-device",
       "display_name": "Medical Device Systems Engineering",
       "kind": "domain",
       "path": ".agents/skills/mbse-medical-device",
-      "short_description": "Connect intended use, device design, and patient risk",
-      "default_prompt": "Use $mbse-medical-device to reason through this device question from intended use, connect risks to design choices, and identify the evidence and decisions still needed."
+      "short_description": "Trace device risks from intended use to evidence",
+      "default_prompt": "Use $mbse-medical-device to review this device risk-control claim. Follow it from intended use through the clinical workflow and show which observations support the control in that setting."
     },
     {
       "name": "mbse-electronic-systems",
       "display_name": "Electronic Systems Engineering",
       "kind": "domain",
       "path": ".agents/skills/mbse-electronic-systems",
-      "short_description": "Reason about electronics, interfaces, and verification",
-      "default_prompt": "Use $mbse-electronic-systems to explain this hardware-system problem, reconcile physical and software assumptions, and identify design choices and meaningful verification."
+      "short_description": "Check HW/SW interfaces and implementation evidence",
+      "default_prompt": "Use $mbse-electronic-systems to review this hardware/software interface. Check startup and timing assumptions at both ends and identify what the supplied implementation evidence actually exercises."
     }
   ]
 }

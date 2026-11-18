@@ -1,4 +1,4 @@
 interface:
   display_name: "Aerospace Systems Engineering"
-  short_description: "Reason about aircraft and space system decisions"
-  default_prompt: "Use $mbse-aerospace to reason through this aircraft or space system question, identify the applicable program context, and explain the design and assurance implications."
+  short_description: "Check flight or mission claims against assurance evidence"
+  default_prompt: "Use $mbse-aerospace to review this safety claim. Trace the affected flight or mission phase through the allocated control and identify which assurance evidence applies to the configuration."

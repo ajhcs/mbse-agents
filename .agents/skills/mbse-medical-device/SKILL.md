@@ -1,18 +1,14 @@
 ---
 name: mbse-medical-device
-description: "Understand and reason through medical-device system questions, connecting intended use, clinical workflow, patient/user risk, architecture, software lifecycle, and regulatory evidence."
+description: "Assess medical device design and evidence against intended use, clinical workflow, patient and user risks, and regulatory context."
 ---
 
 # Medical Device Systems Engineering
 
-Connect intended use and patient/user risk to device requirements, architecture, software lifecycle, and evidence. Treat regulatory product class, software safety class, and submission documentation level as separate decisions.
+Start from the intended use, patient population, users, and care setting. Follow the device behavior through the clinical workflow, including the people who must detect, interpret, and respond to alarms or degraded operation. Tie any threshold used in the analysis to its actual design or clinical basis.
 
-Explain the interaction among the device, patient, operator, clinical workflow, environment, and support organization. Distinguish an engineering performance claim from clinical benefit or safe use in a representative setting. Question assumptions about operator attention, alarm interpretation, maintenance, and recovery when they carry part of the risk control; do not invent clinical thresholds.
+Connect consequential hazardous situations and use errors to implemented controls and effectiveness evidence. Keep bench performance, representative use validation, and clinical benefit as separate claims. Check jurisdiction, precise intended use, and the current source before assessing regulatory product class, software safety class, or submission documentation level. Each needs its own rationale.
 
-Start from the user's engineering decision, system boundary, operating context, and existing artifacts. Identify the governing program basis, jurisdiction, standards editions, and tool versions when they affect the answer. Distinguish obligations, guidance, and proposed practice; verify exact claims before relying on them. If a source is unavailable, mark the uncertainty and continue work that does not depend on it.
+Use [medical device analysis](references/domain-analysis.md) for risk controls, software lifecycle, human use, or submission evidence. Use the [pump classification example](references/pump-classification.md) for the specific infusion-pump distinction and check the facts of the device under review.
 
-Use [domain analysis and review](references/domain-analysis.md) for the relevant discipline. Select the applicable topics, retaining the user's task and chosen methods. Preserve IDs and carry derived requirements, architectural assumptions, risk controls, and evidence gaps across the baseline.
-
-For the illustrative infusion-pump classification correction, use [pump classification](references/pump-classification.md); do not generalize it to other intended uses.
-
-Produce the requested artifact or review with rationale, sources, assumptions, and open decisions. Complete consistency checks and authorized artifact work. No fictional professional history, invented authority approval, or implied live tool access belongs in the result. Combine with a task skill when useful; a full lifecycle itinerary is unnecessary for a focused question.
+Hand over a trace from the intended use and controlling sources to the affected requirements, device configuration, risk controls, and evidence. Name the use assumptions, evidence gaps, or regulatory decisions that limit the conclusion.

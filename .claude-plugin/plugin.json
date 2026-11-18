@@ -1,7 +1,7 @@
 {
   "name": "mbse-agents",
-  "version": "2.0.0-alpha.1",
-  "description": "Systems engineering reasoning, domain review, connected artifacts, historical cases, and evidence-aware analysis.",
+  "version": "2.0.0-alpha.2",
+  "description": "Investigate system behavior, compare designs, and review requirements, interfaces, and verification evidence.",
   "author": {
     "name": "Cole Lyons",
     "url": "https://github.com/ajhcs"

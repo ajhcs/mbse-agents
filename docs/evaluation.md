@@ -90,6 +90,22 @@ particular wording, prescribed document length or successful option guessing.
 Predeclare the workload-specific acceptance criteria; no automatic aggregate
 score authorizes publication, engineering acceptance or a claim of superiority.
 
+## GPT-6.2 prompt revision cases
+
+Use the synthetic panel-warning cases HO-21 through HO-23 to review scope and
+numerical decisions. A clerk asks for an exact title in HO-21. A review board
+asks whether timing evidence supports closing the requirement in HO-22 and
+HO-23. The same measurement record is used throughout. HO-24 checks whether
+a timing plan establishes what qualifies as a request for either supplier.
+
+For a comparison, preserve the case, model, reasoning effort, tools, and other
+visible skills across conditions. Record successful reads of skill files when
+assessing routing. Give a separate reviewer the unchanged answers and the
+case criteria from `evals/rubrics.json` after production. Compare the actual
+decision, scope, and evidence against those criteria. The published cases
+are for development. The rewritten prompts have offline package validation
+and no live behavioral qualification.
+
 ## Current evidence
 
 The [evidence index](../evals/evidence/README.md) links actual quiz responses,

@@ -1,6 +1,6 @@
 # Automotive analysis and review
 
-This reference preserves analysis and evidence questions, not a verified clause-by-clause reproduction of ISO standards. Use the adopted ISO 26262, ISO 21448, ISO/SAE 21434, AUTOSAR release, and applicable vehicle regulations for precise obligations.
+Use the part of this reference that addresses the disputed vehicle behavior or evidence. Establish precise obligations from the adopted ISO 26262, ISO 21448, ISO/SAE 21434, AUTOSAR release, and applicable vehicle regulations as relevant to that claim.
 
 ## Item and safety concept
 
@@ -39,4 +39,4 @@ Validate driver/operator behavior and degraded modes under representative condit
 
 Capella or SysML content can carry this trace; a DOORS baseline can carry requirements; simulation and vehicle tests supply scoped evidence. Confirm profile/version and export semantics before relying on model-generated records.
 
-Review pressure points: implausible controllability/exposure; unallocated safety goals; decomposition without independence; optimistic timing; unsupported diagnostic coverage; conflation of SOTIF and malfunction safety; platform labels used as safety proof; field/maintenance assumptions absent from the evidence plan.
+Before handoff, trace the safety goal through its operating situation, allocated behavior, vehicle response, and verification. Verify the timing budget, independence and diagnostic assumptions against the actual configuration where relied on. Check that the evidence plan covers the relevant SOTIF and malfunction paths, driver behavior, and field or service assumptions.

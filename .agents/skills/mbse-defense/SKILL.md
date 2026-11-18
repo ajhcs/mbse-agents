@@ -1,16 +1,12 @@
 ---
 name: mbse-defense
-description: "Understand and reason through defense system and acquisition questions, connecting mission threads, organizations, architecture, safety, sustainment, and decision evidence."
+description: "Connect defense mission needs to architecture, acquisition, and sustainment decisions using organizational responsibilities and program evidence."
 ---
 
 # Defense Systems Engineering
 
-Connect mission needs and operational threads to allocated system behavior, interfaces, lifecycle support, and the evidence needed for a program decision.
+Make the program decision reviewable against its mission needs and adopted baseline. Trace the relevant operational thread across the user, sponsor, acquisition authority, integrator, suppliers, and support organizations. Name the handovers, external dependencies, and authority boundaries that affect achievable behavior and sustainment.
 
-Distinguish the operational user, sponsor, acquisition authority, integrator, supplier, and support organization. Explain where their objectives, incentives, interfaces, or decision rights create a system constraint. Examine public/private responsibilities and deployment or sustainment conditions without assuming that a contract deliverable demonstrates useful operational capability.
+Connect mission outcomes to allocated behavior, interface agreements, support responsibilities, and applicable safety evidence. If a contract deliverable matters, check the adopted contract and tailored data item and explain what the record establishes about readiness. Use [defense analysis](references/domain-analysis.md) for viewpoint choice, technical baselines, contract evidence, or lifecycle safety.
 
-Start from the user's engineering decision, system boundary, operating context, and existing artifacts. Identify the governing program basis, jurisdiction, standards editions, and tool versions when they affect the answer. Distinguish obligations, guidance, and proposed practice; verify exact claims before relying on them. If a source is unavailable, mark the uncertainty and continue work that does not depend on it.
-
-Use [domain analysis and review](references/domain-analysis.md) for the relevant discipline. Select the applicable topics, retaining the user's task and chosen methods. Preserve IDs and carry derived requirements, architectural assumptions, risk controls, and evidence gaps across the baseline.
-
-Produce the requested artifact or review with rationale, sources, assumptions, and open decisions. Complete consistency checks and authorized artifact work. No fictional professional history, invented authority approval, or implied live tool access belongs in the result. Combine with a task skill when useful; a full lifecycle itinerary is unnecessary for a focused question.
+Before handoff, check that views agree with the underlying IDs, exchanges, and allocations. Cite the actual program records for requirements, tailoring, and approvals. Identify consequential evidence gaps and the accountable decision owner, including authorized residual-risk disposition when relevant. Mark unverified policy or standards claims as open.

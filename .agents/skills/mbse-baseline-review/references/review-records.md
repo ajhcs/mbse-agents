@@ -1,11 +1,11 @@
 # Review records
 
-Finding record: ID; affected artifact and locator; observed fact; requirement or rationale; consequence; severity or priority with rationale; repair options; owner/status. A useful finding can be reproduced from the evidence cited.
+Record each material finding so a reviewer can reproduce it from the cited revision and locator. Include the finding ID, observed fact, governing requirement or rationale, consequence, priority and its basis, repair options, owner, and status as useful.
 
-Trace sampling is a review strategy, not exhaustive verification. Explain why the selected threads matter and what was not inspected. A syntactically valid link can still connect a test that never exercises the requirement's operating conditions.
+If coverage is sampled, explain why those threads matter and where inspection stopped. Follow each sampled verification link to the observation and compare the test's actual operating conditions with the requirement.
 
-For quantitative claims, check units, time reference, operating envelope, uncertainty, and evidence configuration. For qualitative claims, inspect premises and counterexamples. For source claims, distinguish legal obligations, guidance, adopted standards, local process, and engineering judgment.
+For quantitative claims, check units, time reference, operating envelope, uncertainty, and evidence configuration. For qualitative claims, inspect premises and try a relevant counterexample. For source claims, identify the obligation, guidance, adopted standard, local process, or engineering judgment that applies.
 
 Keep reviewer disagreement visible until evidence or an authorized decision resolves it. A clean finding list does not establish certification or authorize release.
 
-For a change, identify the old and new revision, semantic change, affected IDs, preserved/retired/superseding records, applicability of prior results, and reopened decisions. Account for every original obligation after a split or merge. Separate a changed name or format from a change that alters the claim being verified.
+For a change, compare the old and new revision. Account for each original obligation after a split or merge and check which earlier observations still apply. A review is ready when a reader can find the preserved, retired, and superseding records, understand the change in meaning, and locate each reopened decision.

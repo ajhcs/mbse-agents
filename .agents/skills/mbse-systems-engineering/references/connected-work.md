@@ -1,10 +1,8 @@
 # Connected engineering work
 
-For work spanning skills or disciplines, establish one working baseline: authoritative input paths/revisions, system boundary, glossary, identifiers, adopted decisions, and open conflicts. Use the project's existing representation where practical. Do not create a parallel requirement set merely because a second skill is contributing.
+Agree on the authoritative inputs and revisions, system boundary, glossary, IDs, adopted decisions, and open conflicts. When a task skill and domain skill contribute to the same work, use the project representation and one shared baseline. For a medical device requirements task, for example, keep domain suggestions visible as proposed derived requirements or open questions until their basis and disposition are established.
 
-A task skill owns the requested kind of work; a domain skill supplies context and constraints. For example, a requirements task with medical and electronics context should produce one reconciled requirement baseline. Domain suggestions become proposed derived requirements or open questions until their basis is established; they do not silently replace stakeholder wording.
-
-Use task boundaries that reduce conflicting edits. When work is delegated, define the input revision, owned artifacts or decision, shared IDs/interfaces, expected result, and handoff evidence. Do not assume delegation is necessary or available. A specialist conclusion is an input to integration, not automatic authority over other disciplines.
+Delegate slices that can make progress from shared inputs without racing to edit the same artifacts. For example, one subagent can inspect field evidence while another checks the current interface allocation. Give each the input revision, owned artifact or question, shared IDs, and the observations the handoff must contain. Reconcile their conclusions and test the combined result. On a shared machine, coordinate costly builds and tests, reuse applicable results, and stop the jobs and remove the temporary files your task created when they are no longer needed.
 
 Reconcile handoffs by asking:
 
@@ -14,6 +12,6 @@ Reconcile handoffs by asking:
 - Which prior evidence still applies to this configuration, and which claims are reopened?
 - Who owns unresolved contradictions, and what evidence or decision will close them?
 
-Maintain one decision and assumption log when the work will continue across sessions. A useful handoff names changed artifacts/revisions, the conclusion and rationale, affected IDs, checks actually performed, unresolved decisions and owners, and the next work justified by the evidence. Read the baseline again before resuming; a previous conversation summary is not an authoritative configuration.
+For work that continues across sessions, maintain a shared record of decisions and assumptions. Hand off the changed artifacts and revisions, affected IDs, rationale, checks actually performed, and unresolved questions and owners. On resumption, confirm that the stated baseline still matches the actual artifacts.
 
-Completion is proportional to the request. An explanation can finish without creating a model. A changed controlled baseline needs reconciled artifacts and a visible disposition of affected evidence. A review can finish with unresolved issues when their consequence and required decision are explicit; it must not imply that the underlying engineering work is complete.
+An explanation can be complete once it establishes the mechanism and its limits. A controlled change needs reconciled artifacts and a visible disposition of affected evidence. A review can conclude with open issues when the consequence and required decision are clear.

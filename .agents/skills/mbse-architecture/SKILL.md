@@ -1,16 +1,14 @@
 ---
 name: mbse-architecture
-description: "Reason about system behavior and structure, explain architectural choices, and develop or review functions, allocations, interfaces, and design trades."
+description: "Allocate system functions, define interfaces, and compare architectures against required behavior and constraints."
 ---
 
 # Design a System Architecture
 
-Connect the required behavior to a workable system structure. Use the actual boundary, operating modes, requirements, and constraints. Decompose functions before treating a component list as a complete architecture. Consider alternative allocations or mechanisms when they affect performance, risk, maintainability, or feasibility.
+Show how the required behavior is realized within the system boundary. Allocate functions to responsible elements, including people and organizations that carry essential work. Compare credible allocations when their effects on feasibility, timing, risk, or support could change the choice. Trace the selected mechanism through a representative operating mode and the failure or recovery path that most challenges it.
 
-Explain how interactions produce the desired behavior and where delays, feedback, contention, or mismatched assumptions could defeat it. Reason at both system and element levels: a locally adequate component can still participate in an inadequate system. Include people, operational procedures, and external organizations when they carry essential functions.
+Make the interface contract explicit where behavior depends on it. Check direction, exchanged item, semantics, units, timing, validity, fault response, and ownership against the assumptions on both sides. Trace resource and timing budgets end to end where margins matter and account for feedback or contention. Inspect shared supplies, clocks, software, communications, and human or supplier dependencies before claiming redundancy or isolation.
 
-Define interfaces with direction, exchanged item, semantics, units, timing, validity, error handling, and responsibility as relevant. Make resource budgets and dependencies visible. Evaluate shared power, clocks, processors, data, suppliers, and human roles before claiming redundancy or isolation.
+For model work, use the project's tool where available and verify the model semantics there. For a visual deliverable, use the supplied reference or a representative project view for notation, hierarchy, and layout. Render the editable source, inspect labels, boundaries, and relationship directions at the intended viewing size, and correct ambiguities. Exercise the controls the viewer will use when the deliverable is interactive. Label proposed views and report the checks actually run.
 
-Deliver traceable function-to-component and requirement allocations, interface contracts, design decisions with rationale, and unresolved assumptions. Feed newly derived constraints back into requirements and risk analysis. Use the user's modeling tool when available; otherwise provide a clearly labeled textual or diagrammatic proposal without claiming a live model was changed.
-
-Use [architecture records](references/architecture-records.md) for deeper allocation or trade work. Continue until the requested architecture is consistent enough for review, with gaps explicitly located.
+The result is ready when reviewers can trace the required behaviors to allocations, check the interfaces and budgets supporting the decision, and locate design assumptions and derived requirements or risks. Use [architecture records](references/architecture-records.md) for detailed trade, dependency, or interchange work.

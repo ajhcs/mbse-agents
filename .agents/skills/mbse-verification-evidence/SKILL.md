@@ -1,18 +1,14 @@
 ---
 name: mbse-verification-evidence
-description: "Reason about what evidence can establish an engineering claim; plan or assess requirements verification, stakeholder validation, and configuration-controlled results."
+description: "Plan verification, replay operator decision tables, or assess evidence for a requirement or intended use, including uncertainty and configuration applicability."
 ---
 
 # Plan Verification and Evidence
 
-Build an evidence plan from requirements, stakeholder needs, risks, and the implemented or proposed configuration. Select test, analysis, inspection, demonstration, or formal analysis based on what can establish each claim. Distinguish verification of requirements from validation of intended use.
+State the claim under review and the configuration and conditions it applies to. For requirements verification, check the specified behavior or limit. For validation, check whether the system serves the users in their intended setting. Choose a test, inspection, demonstration, analysis, or proof that can settle the claim and explain what the resulting observation would establish.
 
-Explain the inference from observation to claim: what was exercised, what was measured, which assumptions connect the result to the system, and what credible alternative explanation remains. Choose a discriminating next check when more evidence could change the decision. Repeating a convenient test is not necessarily informative.
+Define input, environment, observation, and acceptance before drawing a conclusion. Exercise the normal, boundary, failure, and recovery cases that could change the result. For numerical limits, use the adopted decision rule and uncertainty interpretation. Check equality, both sides of a limit, and an uncertainty interval that crosses it for contradictory or missing dispositions. For event-triggered timing, match the test stimulus to a qualifying interface event, including the shortest permitted event when it could affect detection. See [evidence contracts](references/evidence-contracts.md) for these cases, controlled results, and proof scope.
 
-Define acceptance conditions, environment, stimuli, observations, uncertainties, and configuration before declaring success. Include relevant normal, boundary, failure, and recovery behavior. Check independence or qualification requirements against the actual program basis and tool use; do not assume a test name or tool output establishes compliance.
+When the deliverable is an operator decision table with numeric go/hold gates, derive expected actions from the sources independently of the draft, including boundary readings and the full fallback. Run the [operating gate replay](references/operating-gates.md) on the delivered table for supported formats and gates. Correct discrepancies, rerun the final file, and retain the exact result and its coverage limits.
 
-Make pass, fail, and inconclusive rules consistent, including at a numerical limit and when uncertainty crosses it. State the decision rule and the meaning of the uncertainty; do not let a point estimate and its interval assign conflicting outcomes to the same observation.
-
-Connect each verification activity to the requirements it addresses and the artifact that records its result. Keep lifecycle, execution outcome, configuration applicability, review, and acceptance distinct. Missing files, stale configurations, inconclusive results, and unresolved failures remain gaps. Describe the limited scope of simulations and proofs.
-
-Deliver a reviewable plan or evidence assessment and pursue authorized local execution through results and relevant repairs. Do not fabricate execution, certification, or approval. Use [evidence contracts](references/evidence-contracts.md) when creating a trace or evidence package.
+A reviewer should be able to trace each disposition from its claim and rule to the exact observations and configuration, or see the evidence still needed. Keep planned work, execution outcome, applicability, independent review, and authorized acceptance distinct. Verify any claimed tool or reviewer credit against the applicable basis. When execution is in scope, complete the checks, record failures and repairs, and bind the observations to the artifacts actually checked.

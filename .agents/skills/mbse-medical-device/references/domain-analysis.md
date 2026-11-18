@@ -1,6 +1,6 @@
 # Medical-device analysis and review
 
-This reference is engineering guidance. Exact requirements depend on jurisdiction, device intended use, applicable standards editions, and current regulatory text. Identify sources at the precision used and do not present a standard catalog as verification of its clauses.
+Use the sections relevant to the device and decision. Verify exact obligations against the jurisdiction, current regulatory text, intended use, and applicable standards editions. A publication listing can identify a standard. Check the actual text for a clause-level claim.
 
 ## Intended use and classification
 
@@ -43,4 +43,4 @@ Integrate cybersecurity with safety and lifecycle work: unauthorized configurati
 
 Use the project's Capella/SysML profile, requirements tool, and analysis tools to maintain consistent IDs and exports. Mappings are engineering proposals, not vendor-approved equivalences.
 
-Review pressure points: incorrect intended-use classification; software/product class conflation; missing hazardous situation; SOUP without risk assessment; outdated clause citation; unverified control; unsupported alarm/flow claims; network isolation stated without resource evidence; planned records called accepted evidence.
+Before handoff, check whether the intended use supports each classification rationale. Trace the consequential hazardous situation through the implemented control, actual configuration, and test or use observation. Identify planned or incomplete records and any unverified alarm, delivery, or isolation assumptions that affect the conclusion.

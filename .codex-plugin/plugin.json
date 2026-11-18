@@ -1,18 +1,18 @@
 {
   "interface": {
     "displayName": "MBSE Agents",
-    "shortDescription": "Reason, design, and review as a systems engineer",
-    "longDescription": "Develop system understanding, connect needs to architecture and evidence, review changes, and practice engineering judgment using source-grounded cases.",
+    "shortDescription": "Trace system decisions to their engineering evidence",
+    "longDescription": "Use the project baseline to explain system behavior, compare concepts, connect requirements to architecture, or check whether verification results support a change decision.",
     "developerName": "Cole Lyons",
     "category": "Productivity",
     "defaultPrompt": [
-      "Help me understand this system, identify the decisions that matter, and develop the engineering work needed to resolve them.",
-      "Review this engineering baseline and explain which claims are supported, which decisions need revision, and what evidence would settle them."
+      "Trace this outage through our interfaces. Check plausible causes against the logs and say what observation could settle it.",
+      "Compare these baseline revisions. Cite the affected requirements and show which earlier tests still cover the changed behavior."
     ]
   },
   "name": "mbse-agents",
-  "version": "2.0.0-alpha.1",
-  "description": "Systems engineering reasoning, domain review, connected artifacts, historical cases, and evidence-aware analysis.",
+  "version": "2.0.0-alpha.2",
+  "description": "Investigate system behavior, compare designs, and review requirements, interfaces, and verification evidence.",
   "author": {
     "name": "Cole Lyons",
     "url": "https://github.com/ajhcs"

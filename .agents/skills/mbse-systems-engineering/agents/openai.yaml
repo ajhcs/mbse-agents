@@ -1,4 +1,4 @@
 interface:
   display_name: "Systems Engineering"
-  short_description: "Understand systems and reason through engineering decisions"
-  default_prompt: "Use $mbse-systems-engineering to understand this system problem, question consequential assumptions, connect the disciplines, and explain a defensible recommendation."
+  short_description: "Trace system behavior and test competing causes"
+  default_prompt: "Use $mbse-systems-engineering to explain why this system misses its target. Check plausible causes against our observations and give me the check that would distinguish the remaining causes."

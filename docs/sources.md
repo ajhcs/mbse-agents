@@ -1,6 +1,6 @@
 # Source checks and limits
 
-Checked 2026-10-12. This ledger records narrow source checks, not verification of
+Checked 2026-10-12 unless a row gives a later date. This ledger records narrow source checks, not verification of
 the entire standards catalog. All linked material is primary; summaries and
 project recommendations remain distinct from normative text.
 
@@ -9,7 +9,8 @@ project recommendations remain distinct from normative text.
 | Task-specific discovery, progressive disclosure, proportionate instructions | [OpenAI Astra skills article](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra), “Better skills,” “Decision boundaries,” “Persistence” | Authoring approach, not measured MBSE performance |
 | Required skill entrypoint and resource/tool boundary | [OpenAI skills concepts](https://developers.openai.com/plugins/concepts/skills), “Skills” and “How skills activate” | Instructions/resources can work without MCP; skills do not grant authorization |
 | Local skill locations and invocation | [OpenAI skill authoring](https://learn.chatgpt.com/docs/build-skills), “Where Codex loads local skills” and “How ChatGPT and Codex use skills” | `.agents/skills` discovery; explicit/implicit use; host availability can differ |
-| Current model identities and settings | [GPT-6 guide](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra), model choices/limitations/prompting; [Sol model page](https://developers.openai.com/api/docs/models/gpt-6.1-sol), reasoning and snapshot fields | Sol/Astra IDs and family guidance; no local comparison or future-capability claim |
+| Candidate Codex models (2026-11-17) | [Codex model guide](https://learn.chatgpt.com/docs/models), “Recommended models”, and `codex debug models` in CLI 0.169.0 | The guide and local catalog list `gpt-6.2-sol` and `gpt-6.2-astra`. Check availability in the target host. |
+| GPT-6.2 prompting in Codex (2026-11-18) | [ChatGPT Learn guide](https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra), guidance on reasoning effort, parallel work, visual iteration, and project instructions | Basis for the review criteria and prompting examples in the skills. Model behavior requires its own evaluation. |
 | General infusion pump class | [21 CFR 880.5725](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-880/subpart-F/section-880.5725), (a)-(b) | General healthcare-facility pumps are Class II; actual intended use/product code still matters |
 | Former pump regulation was unrelated | [21 CFR 876.5820](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-876/subpart-F/section-876.5820), title and (a)-(b) | Hemodialysis systems/accessories; does not establish Class III for a general pump |
 | Pump submission context | [FDA infusion-pump guidance](https://www.fda.gov/media/78369/download), section 3, printed page 5 | Class II scope and Class III-system distinction; guidance is recommendations, not clearance |

@@ -14,11 +14,19 @@ They can be combined for a user goal without a fixed number of skills, mandatory
 stage order, or persona roleplay. The useful result can be a clear answer or a
 decision as well as a maintained engineering artifact.
 
-Instructions should define a useful result, decision criteria, and real failure
-conditions. Leave method selection and formatting flexible unless a process,
-interchange format, or fragile operation makes them necessary. Do not turn
-example thresholds into universal requirements. References disclose deeper
-material only for the relevant task and remain usable after copying a package.
+Write instructions as you would brief a colleague who knows the project. Name
+the decision or artifact and what the reviewer needs to check. Specify where
+coverage has to be exhaustive and which failures could change the decision.
+Leave methods and formatting flexible unless the task depends on a particular
+procedure or interchange. Put conditional methods and domain evidence in the
+references and keep those resources usable after copying a package.
+
+Support subagent use where the request and host allow it and the questions can
+proceed independently. The parent owns the reconciled baseline and final checks.
+For visual work, use the supplied or project reference, render and revise at the
+intended viewing size, and try the interaction the user will rely on. Keep
+project instructions focused on local requirements an agent cannot infer from
+the code and tests.
 
 Teach reasoning through engineering consequences: how behavior follows from
 mechanisms and interactions, which assumptions connect disciplines, what a
@@ -58,8 +66,9 @@ methods only after receiving the actual material, with permission and provenance
 at the section level. Do not attribute generic methods to Cole or reproduce
 textbook passages.
 
-This design follows [OpenAI skills](https://developers.openai.com/plugins/concepts/skills)
-and [current skill authoring/discovery guidance](https://learn.chatgpt.com/docs/build-skills).
+This design follows OpenAI's guidance on skill design and GPT-6.2 prompting.
+[OpenAI skills](https://developers.openai.com/plugins/concepts/skills) · [Prompting GPT-6.2 in Codex](https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra)
+
 Offline checks verify packaging and selected artifact invariants. Behavioral
 validation is a separate exercise with independent assessment. Evaluate varied
 engineering questions and explanations as well as artifact production; do not

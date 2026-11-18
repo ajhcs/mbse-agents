@@ -1,4 +1,4 @@
 interface:
   display_name: "Develop a Concept of Operations"
-  short_description: "Connect stakeholder needs to real operating conditions"
-  default_prompt: "Use $mbse-conops to explain how this system will be used, reconcile stakeholder responsibilities, and develop the operating concept and unresolved decisions."
+  short_description: "Define who operates, decides, and restores service"
+  default_prompt: "Use $mbse-conops to draft how our team will run and support this system. Show who owns each handover and who can resume service after an outage with the staff and information available."

@@ -1,6 +1,6 @@
 # Software tool qualification
 
-Use this reference for a civil-aviation software tool-credit question. It is not a hardware qualification process or a determination that a particular tool is qualified.
+Use this reference to review a specific civil aviation software tool use and the credit the program plans to claim. Use the hardware program basis for hardware tool assessment.
 
 Tool qualification is decided by tool use, potential impact, credit claimed, and checks on outputs. DO-178C section 12.2 supplies the decision framework; DO-330 supplies qualification objectives and lifecycle data. Criterion 3 can fail to detect an error in its intended use; it does **not** mean an output with no effect or automatic exemption.
 
@@ -13,4 +13,4 @@ Tool qualification is decided by tool use, potential impact, credit claimed, and
 | C | TQL-3 | TQL-5 | TQL-5 |
 | D | TQL-4 | TQL-5 | TQL-5 |
 
-Apply the licensed DO-178C Table 12-1 and actual qualification decision for a new use. A requirements repository, code generator, coverage analyzer, or equivalence checker is not assigned a criterion merely by its name. Explain which process is reduced or eliminated, how outputs are checked, and what faults could escape. Public FAA guidance does not verify every objective in the applicable licensed standards.
+For a new use, check the actual decision against the licensed DO-178C Table 12-1. A reviewer should be able to see which process is reduced or eliminated, which outputs are independently checked, and which errors could escape in this tool use. Cite the governing basis and identify what remains to be verified in the applicable licensed text.

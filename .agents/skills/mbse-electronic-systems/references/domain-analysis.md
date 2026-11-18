@@ -1,6 +1,6 @@
 # Electronic-systems analysis and review
 
-This reference preserves hardware engineering topics and review criteria. Exact obligations depend on the adopted DO-254, IEC 61508, ISO 26262 or other basis, toolchain, and technology. Consumer, industrial, avionics, automotive, and quantum-control designs have different assurance contexts.
+Follow the implementation boundary that matters to the claim. Confirm the assurance basis for the actual application and toolchain before making a DO-254, IEC 61508, ISO 26262, or other standards claim. Consumer, industrial, avionics, automotive, and quantum-control designs have different assurance contexts.
 
 ## Architecture and implementation
 
@@ -43,4 +43,4 @@ For quantum-control electronics, address waveform/sample fidelity, timing and sy
 
 Capella/SysML carry system relationships; HDL and EDA tools remain detailed design and analysis sources. Link them rather than duplicating unmaintainable content. Confirm profile/version, extraction, and reconciliation for controlled exports.
 
-Review pressure points: line coverage used as completeness proof; hidden unconstrained paths; unsupported diagnostic percentages; unassessed errata; missing register semantics; overconstrained formal models; obsolete implementation evidence; ignored manufacturing/thermal environment; software qualification rules asserted for hardware without an adopted basis.
+Before handoff, show the link from the hardware requirement and interface to the property, test, or implementation check that addresses it. Inspect coverage gaps, unconstrained paths, and model assumptions where they could invalidate a decision. Identify any evidence bound to an older implementation, different physical conditions, or an unverified tool qualification basis.

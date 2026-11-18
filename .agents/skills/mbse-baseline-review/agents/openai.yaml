@@ -1,4 +1,4 @@
 interface:
   display_name: "Review an MBSE Baseline"
-  short_description: "Challenge a baseline and explain change impacts"
-  default_prompt: "Use $mbse-baseline-review to examine this baseline or change, explain consequential mismatches, and identify repairs and decisions supported by the evidence."
+  short_description: "Find change impacts and check prior evidence"
+  default_prompt: "Use $mbse-baseline-review to compare these two baseline revisions. Cite the affected requirements and interfaces, identify which test results still apply, and locate any evidence gaps that prevent approval."

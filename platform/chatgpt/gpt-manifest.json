@@ -4,67 +4,67 @@
   "skills": [
     {
       "name": "mbse-systems-engineering",
-      "description": "Reason through system behavior, cross-discipline tradeoffs, and lifecycle decisions: understand the problem, question assumptions, synthesize evidence, and explain engineering recommendations.",
+      "description": "Diagnose system behavior and weigh cross-discipline tradeoffs when a decision spans several parts of a system or its lifecycle.",
       "source_file": ".agents/skills/mbse-systems-engineering/SKILL.md"
     },
     {
       "name": "mbse-system-concept",
-      "description": "Frame an engineering problem, develop or explain system concepts, and compare ways to achieve stakeholder outcomes within feasibility constraints.",
+      "description": "Compare system concepts and their feasibility when framing a problem or choosing how to meet stakeholder needs.",
       "source_file": ".agents/skills/mbse-system-concept/SKILL.md"
     },
     {
       "name": "mbse-conops",
-      "description": "Understand, explain, develop, or revise how a system will operate across stakeholders, boundaries, operating conditions, and lifecycle support.",
+      "description": "Develop or review a ConOps covering who operates and supports a system, under what conditions, and with what authority.",
       "source_file": ".agents/skills/mbse-conops/SKILL.md"
     },
     {
       "name": "mbse-operational-scenarios",
-      "description": "Explore or explain operational scenarios, then develop actor actions, system responses, modes, exchanges, exceptions, and recovery when a scenario artifact is needed.",
+      "description": "Trace an operational scenario from trigger to outcome through actor actions, system responses, exceptions, and recovery.",
       "source_file": ".agents/skills/mbse-operational-scenarios/SKILL.md"
     },
     {
       "name": "mbse-requirements",
-      "description": "Interpret stakeholder needs, question and reconcile engineering requirements, and develop or review their sources, acceptance conditions, and traceability.",
+      "description": "Draft or review requirements from stakeholder needs, reconcile conflicting sources, and define acceptance conditions.",
       "source_file": ".agents/skills/mbse-requirements/SKILL.md"
     },
     {
       "name": "mbse-architecture",
-      "description": "Reason about system behavior and structure, explain architectural choices, and develop or review functions, allocations, interfaces, and design trades.",
+      "description": "Allocate system functions, define interfaces, and compare architectures against required behavior and constraints.",
       "source_file": ".agents/skills/mbse-architecture/SKILL.md"
     },
     {
       "name": "mbse-verification-evidence",
-      "description": "Reason about what evidence can establish an engineering claim; plan or assess requirements verification, stakeholder validation, and configuration-controlled results.",
+      "description": "Plan verification, replay operator decision tables, or assess evidence for a requirement or intended use, including uncertainty and configuration applicability.",
       "source_file": ".agents/skills/mbse-verification-evidence/SKILL.md"
     },
     {
       "name": "mbse-baseline-review",
-      "description": "Challenge and explain an engineering baseline or change, examining system reasoning, consistency, allocations, risk controls, evidence, and decision readiness.",
+      "description": "Review a baseline or change for conflicts across requirements, interfaces, risk controls, and supporting evidence.",
       "source_file": ".agents/skills/mbse-baseline-review/SKILL.md"
     },
     {
       "name": "mbse-aerospace",
-      "description": "Understand and reason through aircraft or space system questions, connecting mission behavior, architecture, safety, development assurance, and program evidence.",
+      "description": "Assess aircraft or spacecraft design, mission behavior, safety, and assurance against the applicable program basis.",
       "source_file": ".agents/skills/mbse-aerospace/SKILL.md"
     },
     {
       "name": "mbse-defense",
-      "description": "Understand and reason through defense system and acquisition questions, connecting mission threads, organizations, architecture, safety, sustainment, and decision evidence.",
+      "description": "Connect defense mission needs to architecture, acquisition, and sustainment decisions using organizational responsibilities and program evidence.",
       "source_file": ".agents/skills/mbse-defense/SKILL.md"
     },
     {
       "name": "mbse-automotive",
-      "description": "Understand and reason through vehicle-system behavior, connecting driver and operating context, E/E architecture, functional safety, SOTIF, cybersecurity, and lifecycle evidence.",
+      "description": "Assess vehicle behavior, E/E architecture, and driver interactions for functional safety, SOTIF, and cybersecurity.",
       "source_file": ".agents/skills/mbse-automotive/SKILL.md"
     },
     {
       "name": "mbse-medical-device",
-      "description": "Understand and reason through medical-device system questions, connecting intended use, clinical workflow, patient/user risk, architecture, software lifecycle, and regulatory evidence.",
+      "description": "Assess medical device design and evidence against intended use, clinical workflow, patient and user risks, and regulatory context.",
       "source_file": ".agents/skills/mbse-medical-device/SKILL.md"
     },
     {
       "name": "mbse-electronic-systems",
-      "description": "Understand and reason through ASIC, FPGA, SoC, and control-electronics problems, connecting physical behavior, HW/SW interfaces, implementation choices, verification, and assurance.",
+      "description": "Assess ASIC, FPGA, SoC, and control-electronics designs where physical limits, HW/SW interfaces, or verification affect system behavior.",
       "source_file": ".agents/skills/mbse-electronic-systems/SKILL.md"
     }
   ]

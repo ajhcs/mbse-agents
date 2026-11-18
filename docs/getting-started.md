@@ -26,13 +26,12 @@ packages; see [distribution](SUBMISSIONS.md).
 Read [the cold-storage stakeholder brief](../examples/worked/cold-storage-alarm/brief.md).
 Copy that brief into your project as input, without the worked answer. Ask:
 
-> Use $mbse-systems-engineering to understand this cold-storage alarm problem.
-> Identify the system boundary, stakeholder outcomes, operating assumptions and
-> unresolved decisions. Use $mbse-requirements, $mbse-architecture and
-> $mbse-verification-evidence where they help. Preserve NEED-01 through NEED-04.
-> Save connected requirements, architecture, verification procedures and a short
-> decision register. Explain the system and your design choices in language a
-> project engineer can review. Label proposed values and do not invent test results.
+> Use $mbse-systems-engineering to turn this cold-storage alarm brief into
+> reviewable requirements, an architecture, and verification procedures. I’ll
+> check that NEED-01 through NEED-04 each have a disposition, the temperature
+> and timing conditions carry through to the tests, and the operator’s response
+> is reflected in the design. Mark proposed values, unresolved decisions, and
+> tests still to run.
 
 Review the actual output against the brief. Check whether it preserves the
 temperature/time conditions, identifies sensor failures and acknowledgement,

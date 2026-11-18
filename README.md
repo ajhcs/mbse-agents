@@ -29,11 +29,10 @@ python3 scripts/install.py --project /path/to/project --skill mbse-systems-engin
 python3 scripts/install.py --project /path/to/project --skill mbse-systems-engineering --skill mbse-requirements --skill mbse-architecture
 ```
 
-> Use $mbse-systems-engineering to investigate this system and the decision we
-> need to make. Work from the supplied material. Explain the boundary, relevant
-> stakeholders, dependencies and competing interpretations. Develop the necessary
-> engineering artifacts, retain source IDs and existing decisions, and identify
-> the evidence that would change your recommendation.
+> Use $mbse-systems-engineering to explain why recovery takes longer than our
+> operating plan allows. Trace the delay across the relevant interfaces and
+> teams. Show which observations support each plausible cause and identify the
+> next check that would distinguish the remaining causes.
 
 Choose a focused task skill when the work is already clear. Domain skills cover
 aerospace, defense, automotive, medical devices and electronic systems. The
@@ -65,8 +64,8 @@ handling as well as drafting. Automatic quiz results and independently reviewed
 reasoning are reported separately.
 
 Use [the evaluation protocol](docs/evaluation.md) to compare a model alone with
-the same model using the agent skills. Instruction changes should be supported
-by observed performance; a passing package check is not a model-quality result.
+the same model using the agent skills. Use observed performance on the target
+tasks to judge whether a prompt change improves the work.
 
 ## Use the host that fits your work
 
@@ -76,7 +75,8 @@ and [portable hosts](platform/generic/install.md)
 have distinct discovery and installation mechanisms. Guides identify documented
 adaptations and the checks actually performed. [Plugin distribution](docs/SUBMISSIONS.md)
 describes the generated portable package; the source checkout keeps its canonical
-skills under `.agents/skills`.
+skills under `.agents/skills`. Portable plugin and Databricks archives are available
+from [GitHub releases](https://github.com/ajhcs/mbse-agents/releases).
 
 The installer preserves existing project instructions, host settings and local
 skill edits. CSE provides optional executable engineering analysis and model
