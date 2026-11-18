@@ -1,16 +1,12 @@
 ---
 name: mbse-electronic-systems
-description: "Understand and reason through ASIC, FPGA, SoC, and control-electronics problems, connecting physical behavior, HW/SW interfaces, implementation choices, verification, and assurance."
+description: "Assess ASIC, FPGA, SoC, and control-electronics designs where physical limits, HW/SW interfaces, or verification affect system behavior."
 ---
 
 # Electronic Systems Engineering
 
-Connect hardware requirements and physical constraints to design choices, HW/SW interfaces, implementation verification, and evidence. Adapt assurance to the application rather than treating all electronics as avionics.
+Explain how the proposed or observed hardware behavior follows from the real implementation and its HW/SW interfaces. Focus on the clock, reset, timing, analog, power, thermal, manufacturing, or service assumptions that could change the decision. Follow the consequence from the affected element to the system behavior.
 
-Explain behavior across abstraction boundaries: an algorithm, RTL simulation, board implementation, and deployed system can rely on different timing and environment assumptions. Reconcile digital, analog, thermal, power, software, manufacturing, and maintenance considerations where they affect the decision. Use a system-level consequence to distinguish a meaningful issue from a merely unusual implementation.
+Check assumptions across algorithm, RTL, synthesized or routed design, board, and deployed system as applicable. Match each verification method to the claim it can establish. Use [electronics analysis](references/domain-analysis.md) for interface contracts, timing and domain crossing, formal results, or application-specific assurance.
 
-Start from the user's engineering decision, system boundary, operating context, and existing artifacts. Identify the governing program basis, jurisdiction, standards editions, and tool versions when they affect the answer. Distinguish obligations, guidance, and proposed practice; verify exact claims before relying on them. If a source is unavailable, mark the uncertainty and continue work that does not depend on it.
-
-Use [domain analysis and review](references/domain-analysis.md) for the relevant discipline. Select the applicable topics, retaining the user's task and chosen methods. Preserve IDs and carry derived requirements, architectural assumptions, risk controls, and evidence gaps across the baseline.
-
-Produce the requested artifact or review with rationale, sources, assumptions, and open decisions. Complete consistency checks and authorized artifact work. No fictional professional history, invented authority approval, or implied live tool access belongs in the result. Combine with a task skill when useful; a full lifecycle itinerary is unnecessary for a focused question.
+The result should let reviewers locate the affected requirements and interfaces, see which design revision and tool settings produced the evidence, and understand which physical or integration behavior still needs checking. Verify exact process obligations against the adopted edition and the actual application and tool use. Record open assumptions and derived constraints against the affected IDs.

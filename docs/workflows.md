@@ -1,11 +1,10 @@
 # Work through a systems engineering question
 
-Start with the question, the system, and the decision the user needs to make.
-The result may be an explanation, a better question, a diagnosis, a comparison,
-or an engineering baseline. Use `mbse-systems-engineering` for an open problem
-or connected work that needs reasoning across tasks and disciplines. Use a
-focused task directly when its purpose is already clear. Add a domain skill
-when its operating context or assurance basis changes the analysis.
+Start with the system, the decision or artifact you need, and what you will
+look for in review. State the scope where you need complete coverage. Use
+`mbse-systems-engineering` for a problem that spans tasks or disciplines.
+Use a focused skill directly when the work is clear. Add a domain skill when
+its operating context or assurance basis changes the analysis.
 
 For an older prompt-based installation, use the [migration guide](migration.md)
 to select current packages and preserve existing project instructions.
@@ -55,11 +54,11 @@ artifacts. A diagram cannot close a verification gap. Verification asks whether
 the specified requirements are met; validation asks whether the system serves
 stakeholder needs in the intended use context.
 
-For a small task, produce the relevant artifact directly. For sustained work,
-maintain a brief decision and assumption log so a later session can continue
-from the actual baseline. Ask about missing facts that could change the answer;
-make labeled provisional assumptions for independent work. Scale artifact depth
-to the decision, system risk, and user's chosen process.
+For sustained work, keep decisions and assumptions with the baseline so a later
+session can resume from the actual records. If parts can advance independently,
+specify whether Codex can use subagents and the shared revision, interfaces, or
+evidence you want checked before handoff. Set the depth by what could change the
+decision and what coverage you need to review.
 
 Record splits, merges, replacements, and retirements without recycling IDs or
 silently inheriting evidence. A useful handoff identifies the source revision,
@@ -71,16 +70,22 @@ and [connected work](../.agents/skills/mbse-systems-engineering/references/conne
 
 ## Example requests
 
-> Use $mbse-systems-engineering to explain why our proposed staffing and recovery
-> concept conflicts with the architecture team's assumptions. Identify the
-> decisions that need to change and give a recommendation grounded in the
-> supplied operating notes. Keep the answer useful to both teams.
+> Use $mbse-systems-engineering to check whether our staffing plan can support
+> the recovery promised by the architecture. Walk through an outage on an
+> unstaffed shift. Cite the conflicting assumptions and identify who owns the
+> decision. Use subagents as needed to inspect the operating notes and interface
+> records in parallel, then reconcile against the same baseline.
 
 > Use $mbse-requirements and $mbse-architecture on our cold-storage alarm brief.
 > Carry source IDs into measurable requirements and component allocations.
 > Continue through verification planning and run the local reference-model checks.
 > Deliver a linked baseline, executed evidence with its configuration, and open
 > hardware validation work. Save reviewable artifacts in the project workspace.
+
+> Use $mbse-architecture to update this interface view from the current model.
+> Match the notation in the attached reference. Render the result at the width
+> of our review slide, check that the exchange labels and directions are readable,
+> and deliver the editable source with the rendered view.
 
 See the [worked example](../examples/worked/cold-storage-alarm/README.md) and
 [model setup](models.md). This repository supplies instructions and offline

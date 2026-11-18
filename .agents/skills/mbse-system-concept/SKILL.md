@@ -1,16 +1,12 @@
 ---
 name: mbse-system-concept
-description: "Frame an engineering problem, develop or explain system concepts, and compare ways to achieve stakeholder outcomes within feasibility constraints."
+description: "Compare system concepts and their feasibility when framing a problem or choosing how to meet stakeholder needs."
 ---
 
 # Develop a System Concept
 
-Turn the user's problem into a defensible system direction. Understand whose outcome matters, the current situation, the system boundary, and the decision being made. Explore alternatives that differ meaningfully in how they deliver value, including changes to operations and the option to retain the current approach when relevant.
+Frame the choice around the outcome stakeholders need and the limitation in current operations. Establish the system boundary, decision owner, and hard constraints. If the brief starts with a preferred technology, recover the problem it is intended to solve. Include a change to operations or the current approach as a candidate when either could plausibly meet the need.
 
-Connect each candidate's essential functions to stakeholder outcomes and constraints. Examine enabling technologies, interfaces, human roles, lifecycle costs, supply dependencies, and uncertainty at the depth needed for the decision. Test ambitious options against concrete feasibility limits; avoid assuming the first proposed implementation is the system concept.
+Explain what would produce the desired outcome in each concept, what has to be true for it to work, and who carries the cost, workload, or risk. Check hard limits before weighing preferences. Investigate the uncertainties that could eliminate an option or change the recommendation, such as capacity, enabling technology, interface dependencies, human effort, supply, or lifecycle cost.
 
-Distinguish symptoms from the underlying problem and a stated solution from the outcome it is meant to achieve. Explain how each concept would produce the outcome, what must be true for it to work, and who absorbs its costs or burdens. Reconcile stakeholder disagreement explicitly; a preferred concept does not make conflicting objectives disappear.
-
-Deliver the preferred concept, alternatives considered, rationale, assumptions, and the next evidence that could change the choice. Identify infeasible constraints or conflicting outcomes plainly. Continue through a coherent draft and consistency review; ask about missing information that materially affects selection while developing independent parts.
-
-Use [concept decisions](references/concept-decisions.md) when a comparison or feasibility plan would help. A focused concept explanation can be the complete result; detailed operating narratives and component designs can follow as the user requests.
+Leave a decision a reviewer can reconstruct from the source needs, decisive comparisons, and feasibility bounds. State the preferred concept or the decision still open, the stakeholder tradeoff it creates, and the observation most likely to change the choice. Use [concept decisions](references/concept-decisions.md) when estimates or a feasibility experiment need to be reviewable.

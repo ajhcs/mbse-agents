@@ -1,16 +1,14 @@
 ---
 name: mbse-baseline-review
-description: "Challenge and explain an engineering baseline or change, examining system reasoning, consistency, allocations, risk controls, evidence, and decision readiness."
+description: "Review a baseline or change for conflicts across requirements, interfaces, risk controls, and supporting evidence."
 ---
 
 # Review an MBSE Baseline
 
-Review the artifacts against the user's actual decision, program basis, and baseline. Follow representative threads from need through requirement, architecture, risk control, verification, and evidence. Inspect uncovered obligations and changed interfaces as well as plausible-looking links.
+Give the decision owner findings they can reproduce and act on. Read the baseline and applicable sources at the revisions under review. Follow the claims most likely to change the decision from need through requirements, allocation, interfaces, controls, and evidence. Check for uncovered obligations and links that appear sound but lack the required operating conditions, causal mechanism, or applicable evidence.
 
-Prioritize findings by engineering consequence. Locate each finding, explain the mismatch or missing evidence, identify affected IDs and downstream impact, and offer a repair or required decision. Distinguish verified defects from open questions and editorial preferences. Challenge unsupported compliance, independence, test, or proof claims using the sources and artifacts available.
+For a change, compare the changed meaning as well as the changed files. Account for existing obligations and affected interfaces, suppliers, hazards, and dependent artifacts. For evidence proposed for reuse, check the actual configuration and conditions exercised against the new claim. Trace every affected thread when a release decision or stated scope requires full coverage. Identify what any sampling leaves open.
 
-Examine the argument as well as the records: does the proposed mechanism address the need, do specialist assumptions agree, and could interactions or lifecycle conditions invalidate the conclusion? Preserve sound decisions and useful uncertainty. Do not manufacture findings to make a review appear rigorous.
+Use subagents as needed where delegation is permitted and review slices can be assessed independently. Give them the same source revisions, criteria, and distinct threads to inspect. Reconcile their findings against shared interfaces and inspect the sources for consequential disagreements. Record who performed an independent assessment and its scope when claiming independence.
 
-For change reviews, compare the old and new configurations and identify affected requirements, hazards, interfaces, suppliers, verification, and accepted evidence. Reused evidence needs an applicability argument. Do not use the repository's teaching benchmarks as an answer oracle.
-
-Deliver a decision-focused review with findings, evidence examined, coverage limits, and residual gaps. Use [review records](references/review-records.md) for larger reviews. Independent review means a fresh assessment with an identified scope; do not claim independence from a self-review.
+Order findings by engineering consequence. Give each the exact location, affected IDs, source-backed mismatch or gap, downstream impact, and feasible repair or owner decision. Distinguish a verified defect, uncertainty, and editorial preference. Close the review with the scope actually examined and the remaining decision limits. Use [review records](references/review-records.md) for significant changes or a findings log.

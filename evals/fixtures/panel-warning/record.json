@@ -1,0 +1,15 @@
+{
+  "report_id": "TR-41",
+  "title": "Local panel warning timing",
+  "configuration": "panel revision C, firmware 3.2",
+  "requirement_id": "REQ-12",
+  "requirement": "In local mode the panel warning shall light within 250 ms of a valid input transition at each specified supply voltage.",
+  "limit_ms": 250,
+  "required_supply_voltages_v": [24, 28],
+  "method": "At each specified voltage, measure ten input transitions from the valid input edge to the optical indication on the panel. Apply the timing error bound to the largest elapsed time at each voltage.",
+  "decision_rule": "A voltage passes if the entire bounded interval is at or below the limit. It fails if the entire interval is above the limit. An interval that spans both sides is inconclusive. Closing REQ-12 for this configuration requires a pass at each specified voltage.",
+  "observations": [
+    {"supply_v": 24, "mode": "local", "transitions": 10, "max_elapsed_ms": 242},
+    {"supply_v": 28, "mode": "local", "transitions": 10, "max_elapsed_ms": 246}
+  ]
+}

@@ -1,6 +1,6 @@
 # Reasoning situations
 
-Use the questions that expose uncertainty in the current task. They are not an interview script or a required sequence.
+Choose the situation that best matches what the user needs to resolve. Use its reviewable result to decide where more investigation will matter.
 
 | Situation | Useful reasoning | Reviewable result |
 | --- | --- | --- |
@@ -12,8 +12,8 @@ Use the questions that expose uncertainty in the current task. They are not an i
 | A change improves one measure | Trace effects through interfaces, workloads, lifecycle costs, risks, and evidence; inspect who receives the benefit and who inherits the burden | A recommendation based on the whole-system consequence |
 | Evidence is incomplete | Separate what is known, inferred, proposed, and unresolved; choose the least costly observation that could change the decision | A provisional conclusion and an actionable uncertainty reduction step |
 
-A causal sketch does not establish causation. Measurements can be biased by the observation method or configuration; a model may omit the behavior that matters. A failed prediction should lead to examining assumptions, competing explanations, and the model's scope, not quietly weakening the claim.
+For a diagnosis, compare each candidate mechanism with the observations it predicts. Account for measurement bias, configuration, and relevant behavior the model omits. When a prediction fails, keep the discrepancy visible and revisit the assumptions and competing explanations.
 
-Use synthesis to connect evidence, not conceal disagreement. For example, if operations expects a person to recover an outage but the staffing concept provides no person at that time, the gap is a system responsibility decision. It cannot be resolved merely by assigning a software component a recovery function.
+Keep consequential disagreements visible in the combined result. If operations expects a person to recover an outage and staffing leaves the site unattended, identify who must resolve the responsibility and what automation would have to demonstrate before taking over.
 
-When explaining a recommendation, give the decisive premises, alternatives considered, and reason for the choice. State uncertainty in terms of its consequence: which conclusion depends on it and what information would reverse or strengthen that conclusion. Avoid invented confidence percentages.
+When explaining a recommendation, give the decisive premises, credible alternatives, and reason for the choice. Tie each consequential uncertainty to the conclusion it affects and an observation that could reverse or strengthen it.

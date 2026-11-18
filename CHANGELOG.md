@@ -1,5 +1,16 @@
 # Changes
 
+## 2.0.0-alpha.2
+
+- Rewrote all 13 skills and their starter prompts around the engineering result
+  and the checks a reviewer will use. Added guidance on reasoning effort,
+  parallel review, and checking diagrams at the intended viewing size.
+- Added a deterministic replay for numeric go/hold tables. It checks the issued
+  Markdown against independently derived cases and records the input hashes.
+- Added synthetic review cases for timing uncertainty and event qualification.
+  Offline checks cover packaging, discovery, and replay. Live model behavior
+  with the rewritten prompts remains untested.
+
 ## 2.0.0-alpha.1 — release candidate
 
 This candidate develops MBSE Agents into a connected systems-engineering agent

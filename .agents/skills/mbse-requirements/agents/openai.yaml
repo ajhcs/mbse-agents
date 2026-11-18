@@ -1,4 +1,4 @@
 interface:
   display_name: "Engineer Requirements"
-  short_description: "Elicit and refine source-grounded requirements"
-  default_prompt: "Use $mbse-requirements to interpret these stakeholder inputs, resolve conflicting meanings, and draft traceable requirements with acceptance conditions and open decisions."
+  short_description: "Trace stakeholder needs to verifiable requirements"
+  default_prompt: "Use $mbse-requirements to turn these stakeholder notes into reviewable requirements. Link each one to its source and give the conditions and observation a tester would use to judge it."

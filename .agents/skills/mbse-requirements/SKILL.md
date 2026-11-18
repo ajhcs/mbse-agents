@@ -1,18 +1,14 @@
 ---
 name: mbse-requirements
-description: "Interpret stakeholder needs, question and reconcile engineering requirements, and develop or review their sources, acceptance conditions, and traceability."
+description: "Draft or review requirements from stakeholder needs, reconcile conflicting sources, and define acceptance conditions."
 ---
 
 # Engineer Requirements
 
-Build a requirement baseline that supports design and verification. Work from stakeholder needs, scenarios, constraints, and existing artifacts. Preserve IDs and agreed wording when possible. Separate source obligations, derived requirements, design choices, and provisional proposals.
+Give the design and verification teams requirements they can interpret the same way. Find the source need, scenario, or adopted constraint for each claim. When sources disagree, locate the operating condition, scope, or intent that differs and identify who can resolve it. Carry a proposed assumption as provisional when it lets the work continue.
 
-Understand the need before improving its wording. Distinguish a stakeholder's desired outcome from their suggested solution, and explain disagreements in terms of operating conditions, scope, or competing objectives. Ask what evidence or decision would resolve a consequential ambiguity; do not turn uncertainty into an arbitrary numeric requirement.
+Name the responsible subject, observable behavior or constraint, conditions, and acceptance criterion. Set units, tolerance, time origin, and operating envelope where they affect the result. Trace each derived requirement to its basis and rationale, including consequences for the concept, architecture, or risk analysis. Leave unsupported thresholds and approvals open with an owner and a way to settle them.
 
-Write requirements with a responsible subject, observable behavior or constraint, relevant conditions, and measurable acceptance conditions. Use units, tolerances, timing reference points, and operating envelope where they affect meaning. Flag compound, ambiguous, conflicting, infeasible, or unverifiable requirements and propose repairs tied to their consequence.
+On a revision, retain the identity of a continuing requirement and preserve approved wording outside the authorized change. For a split, merge, replacement, or retirement, retain the earlier record and show where each original obligation went. Reassess allocations, verification intent, and evidence for the revised claim.
 
-Carry source and rationale links into decomposition. Identify derived requirements and feed their implications back to the concept, safety analysis, or stakeholder decision. Do not invent thresholds or standards obligations to make a table look complete.
-
-For revisions, distinguish continuing meaning from replacement, split, merge, or retirement. Preserve the original source and supersession history, then reassess affected allocations and evidence. A discussion about what a requirement means may need an explanation or a decision before it needs a new baseline.
-
-Deliver the requested baseline or located review findings, with allocations if known, verification intent, and unresolved decisions. Review coverage and consistency before handing off. Use [requirement contracts](references/requirement-contracts.md) for a structured baseline.
+Before handoff, check coverage in both directions. Each in-scope source need has a disposition, and each new or changed requirement has a basis and a meaningful way to judge satisfaction or a located open decision. For a review, identify the affected IDs and why the current wording could produce different design or verification outcomes. Use [requirement contracts](references/requirement-contracts.md) for structured records and identity changes.

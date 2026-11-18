@@ -1,6 +1,6 @@
 # Aerospace analysis and review
 
-This is engineering guidance; normative details depend on the adopted edition and certification basis. Do not infer that a public source validates every clause of a licensed standard.
+Use the section that could change the decision for this installation or mission. Tie normative claims to the adopted edition, certification or mission basis, and the text you can verify.
 
 ## Development assurance and safety
 
@@ -41,4 +41,4 @@ These are proposed relationships, not mandatory standard-to-tool equivalences:
 
 Adapt into Capella operational/system/logical/physical content or SysML requirements, activities, blocks, ports, and trace relationships in the project's profile. DOORS can hold the controlled requirement baseline; simulation can supply a scoped analysis artifact. Inspect integration and exports rather than assuming a diagram satisfies an assurance objective.
 
-Review pressure points: unsupported independence; stale safety analysis; missing derived feedback; wrong tool criterion; unverified transformation; software/hardware objective conflation; security controls that disrupt safety behavior; simulation results presented as implementation evidence. Report concrete locations and affected IDs.
+Before handoff, follow the decisive failure condition from its mission phase to the implemented control and applicable evidence. Check whether independence, tool credit, or a transformation is doing work the evidence does not support. Locate stale analyses, missing derived requirements, and safety effects of security measures in the actual baseline. Identify the configuration and scope of simulation or verification results.

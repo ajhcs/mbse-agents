@@ -1,32 +1,16 @@
 ---
 name: mbse-systems-engineering
-description: "Reason through system behavior, cross-discipline tradeoffs, and lifecycle decisions: understand the problem, question assumptions, synthesize evidence, and explain engineering recommendations."
+description: "Diagnose system behavior and weigh cross-discipline tradeoffs when a decision spans several parts of a system or its lifecycle."
 ---
 
 # Systems Engineering
 
-Help the user understand a system and make a sound engineering decision. The useful result may be an explanation, a diagnosis, a question that changes the design, a recommendation, a model, or a maintained baseline. Choose the form that serves the request. A document set is not the default answer to every engineering question.
+Answer the decision the user can make with the system they have. Establish whose outcome matters, where the boundary lies, and under which conditions the answer holds. Read the available records before asking for input. Distinguish observations, stakeholder statements, and adopted obligations from assumptions and explanations. If a proposed solution addresses the wrong outcome, explain the mismatch using the user's constraints. Ask about uncertainties that could change the answer and carry independent work forward with named provisional assumptions.
 
-## Understand the actual problem
+Follow the mechanisms that could explain the observed behavior, including interactions among people, organizations, software, hardware, and the environment. For a quick explanation, a short scenario, calculation, or causal sketch may be enough. For a diagnosis, test competing explanations against the observations and identify a check that could distinguish the remaining ones. For a recommendation, compare credible alternatives and follow effects across interfaces and lifecycle stages until you can explain where each option moves workload, cost, delay, or risk.
 
-Establish the outcome at stake, whose perspective matters, the system boundary, operating context, and the decision the user can make. Read available evidence before asking for facts it already contains. Separate observations, stakeholder statements, adopted obligations, assumptions, and proposed explanations. Identify contradictory accounts instead of averaging them into an apparently agreed requirement.
+Use [reasoning situations](references/reasoning-situations.md) when an observation or disagreement is hard to explain. For connected work, share one input revision, system boundary, terminology, and set of IDs. Use subagents as needed where the host and user permit delegation and the questions can advance independently. Give each a bounded question or owned artifact and ask for findings tied to the supplied sources. Reconcile modes, units, timing, and assumptions in the [integrated result](references/connected-work.md).
 
-Ask questions whose answers could change the conclusion, allocation, or next action. Explain what depends on an unresolved fact. Continue useful independent work with explicit provisional assumptions; do not invent an answer or impose a full intake interview on a focused question. Reframe a requested solution when the evidence shows that it addresses the wrong problem, while respecting the user's objective and constraints.
+Finish when the user can follow the decisive facts, adopted constraints, inference, and uncertainties that could reverse the conclusion. On authorized baseline edits, check the actual updated artifacts for consistency, including affected interfaces, requirements, risks, and evidence applicability. Use [engineering records](references/engineering-records.md) when those decisions or links need to persist. Keep proposed actions, executed checks, and authorized acceptance independently traceable.
 
-## Reason across the system
-
-Connect behavior to functions, mechanisms, interfaces, people, organizations, and the environment. Follow causal paths and interactions: feedback, delays, shared resources, bottlenecks, operating modes, dependencies, and failure/recovery behavior. Check whether a local improvement moves cost, workload, risk, or failure elsewhere. Distinguish a plausible mechanism from an established cause and identify observations that could discriminate competing explanations.
-
-Synthesize disciplines around their shared conditions and interfaces. Reconcile terminology, units, time references, assumptions, and maturity before combining results. Compare meaningful alternatives, including operational changes or retaining the present approach when relevant. Make the reasoning behind a recommendation inspectable: relevant facts, assumptions, governing constraints, tradeoffs, uncertainty, and the evidence that would change it. Provide the concise rationale needed to assess the result.
-
-Consider the lifecycle consequences that could change this decision: acquisition, development, integration, production, deployment, operation, maintenance, changes, and retirement. Select the relevant stages instead of reciting a lifecycle checklist. Use safety, security, reliability, usability, supportability, economics, and physical feasibility where they affect the system's outcomes; distinguish established obligations from engineering judgment.
-
-## Develop and explain the result
-
-Answer at the user's level of expertise. Explain why a system behaves as it does, what a concept means in this setting, and where a simplified explanation stops being adequate. Use a small causal diagram, scenario, calculation, or comparison when it makes the reasoning easier to examine. Avoid an artifact or tool merely because it is available.
-
-For sustained work, reconcile the recommendation with the existing baseline and identify affected decisions, requirements, interfaces, risks, and evidence. Carry stable IDs and unresolved disagreements through revisions. Complete authorized artifact work and relevant checks without presenting a draft, simulation, or plausible narrative as acceptance.
-
-Use [reasoning situations](references/reasoning-situations.md) when framing, diagnosing, explaining, or reconciling an engineering problem. Use [connected work](references/connected-work.md) when several tasks or disciplines contribute to one result. Use [engineering records](references/engineering-records.md) when traceable sources, decisions, risks, or changes need to persist. These are optional aids, not required output sections.
-
-Task skills can deepen concept, operations, requirements, architecture, verification, or review work; domain skills add applicable engineering context. Use them when available and useful, without requiring this entrypoint for a focused task. The skill supplies guidance, not professional credentials, authority approval, or tool access.
+For operator handoffs with numeric go/hold gates, check source-derived branches against the exact delivered table, including each binding threshold and the fallback path. Use the operating gate replay in `mbse-verification-evidence` when available. Add a focused task or domain skill when it resolves a specific part of the work.

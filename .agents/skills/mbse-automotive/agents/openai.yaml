@@ -1,4 +1,4 @@
 interface:
   display_name: "Automotive Systems Engineering"
-  short_description: "Reason about vehicle behavior and lifecycle assurance"
-  default_prompt: "Use $mbse-automotive to explain this vehicle-system problem and connect operating conditions, driver behavior, architecture, safety, security, and evidence."
+  short_description: "Trace vehicle responses to safety goals and evidence"
+  default_prompt: "Use $mbse-automotive to review this degraded vehicle response. Show what the driver can observe, when mitigation must occur, and which evidence applies to that operating situation."

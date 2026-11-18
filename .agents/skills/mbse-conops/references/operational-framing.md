@@ -1,9 +1,9 @@
 # Operational framing
 
-A useful ConOps may cover purpose and scope, current operations, proposed operations, stakeholders, operating environment, system context, modes and transitions, scenario summaries, support concept, constraints, evaluation, and open decisions. Pick the parts the actual task needs.
+Choose the sections the decision requires. A broader ConOps can cover current and proposed operations, stakeholder roles, environment, system context, modes and transitions, scenario summaries, support through retirement, evaluation, and open decisions.
 
-Questions that change an architecture: Which work is inside the system boundary? Who owns unavailable external services? What happens when communication, power, staffing, or data quality degrades? Can the operator detect the degradation? What does recovery require? What is the acceptable interruption for each stakeholder?
+To test a responsibility, walk through an outage or handover with the proposed staff and equipment. Identify who can detect degradation, who owns the unavailable service, how long each stakeholder can tolerate interruption, and what recovery requires.
 
-Operational measures can include task completion, workload, response time, quality, availability, or lifecycle effort. Give their context and observation method; avoid selecting a metric solely because it is easy to count.
+Choose measures from the outcome stakeholders care about, such as completion, workload, response time, quality, availability, or lifecycle effort. Give the operating conditions and observation method so a reviewer can assess whether the proposed measure represents that outcome.
 
-ConOps is an operational agreement. A component diagram alone does not describe the work, and an unconfirmed stakeholder assumption remains an assumption.
+Review the proposed agreement with the affected roles, especially where it changes how they work. Mark which responsibilities and assumptions still need their confirmation.

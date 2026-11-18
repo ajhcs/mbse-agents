@@ -1,4 +1,4 @@
 interface:
   display_name: "Develop Operational Scenarios"
-  short_description: "Develop normal, exception, and recovery scenarios"
-  default_prompt: "Use $mbse-operational-scenarios to work through this operation, including exceptions and recovery, and identify observations that could change its design."
+  short_description: "Trace normal, exception, and recovery paths"
+  default_prompt: "Use $mbse-operational-scenarios to trace this operation from trigger to outcome. Walk through the interrupted case and show who can resume, under what condition, and where the path ends."

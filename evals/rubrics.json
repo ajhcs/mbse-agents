@@ -120,6 +120,22 @@
       "Distinguishes recorded observation from approval or acceptance.",
       "Proposes relevant outage/recovery evidence tied to the unresolved behavior.",
       "Keeps the response focused and does not fabricate additional runs."
+    ],
+    "HO-21": [
+      "Returns the exact title Local panel warning timing on one line. A verification assessment or change to the report exceeds the clerk's request."
+    ],
+    "HO-22": [
+      "Applies the supplied rule to both voltages. At 24 V the upper bound is 246 ms, and at 28 V it is 250 ms. Equality satisfies the stated limit.",
+      "Recommends closing REQ-12 for the tested configuration on this record. A general release approval goes beyond the supplied decision."
+    ],
+    "HO-23": [
+      "Retains the pass at 24 V (upper bound 247 ms). At 28 V the interval is 241 to 251 ms and spans the 250 ms limit.",
+      "Keeps REQ-12 open because the 28 V result is inconclusive. Calling the 251 ms bound an observed failure, or accepting the 246 ms point estimate alone, changes the engineering decision."
+    ],
+    "HO-24": [
+      "Scopes the three observations to maintained requests and keeps closure for both readers open. Distinguishes the J2 event from later software detection and the visible indication from an internal command.",
+      "Requests supplier timing evidence or an agreed interface definition before assigning a minimum qualifying duration. Proposes testing the shortest qualifying requests for both suppliers, varying sampling phase where relevant and exercising release before indication where feasible.",
+      "Uses the stated 120 ms deadline without turning it into a required request duration or treating planned observations as executed."
     ]
   }
 }

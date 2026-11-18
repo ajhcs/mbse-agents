@@ -1,6 +1,6 @@
 # Defense analysis and review
 
-This reference is engineering guidance, not a substitute for the current contract, directives, or adopted standards. Acquisition frameworks, requirements governance, data item descriptions, and acceptance authorities change; verify the actual program documents instead of assuming a repository-wide date or policy transition.
+Use the sections relevant to the current program decision. Establish the contract, governing directives, adopted standards, and authority from the actual program records. Acquisition frameworks, requirements governance, and data items can change while an earlier basis still governs a program.
 
 ## Mission and architecture
 
@@ -45,4 +45,4 @@ Inspect interoperability beyond protocol names: message meaning, units, freshnes
 
 Use Capella for operational/functional/physical decomposition; use the chosen SysML/UAF profile for the corresponding concepts; use requirement and analysis tools as controlled linked sources. These mappings are proposed practice, not an interchange certification.
 
-Review pressure points: a view disconnected from data; missing mission-thread links; interface disagreement; misused SV-5a; unjustified risk acceptance; stale contract basis; unaddressed maintenance hazards; manufacturing/sustainment assumptions concealed by an attractive architecture.
+Check the delivered view against the underlying activities, functions, performers, exchanges, and IDs. Walk the decisive sustainment or handover condition and locate any missing owner, interface agreement, or evidence. For a technical review or risk decision, cite the controlling contract, affected baseline, and recorded disposition by the applicable authority.

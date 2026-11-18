@@ -1,4 +1,4 @@
 interface:
   display_name: "Electronic Systems Engineering"
-  short_description: "Reason about electronics, interfaces, and verification"
-  default_prompt: "Use $mbse-electronic-systems to explain this hardware-system problem, reconcile physical and software assumptions, and identify design choices and meaningful verification."
+  short_description: "Check HW/SW interfaces and implementation evidence"
+  default_prompt: "Use $mbse-electronic-systems to review this hardware/software interface. Check startup and timing assumptions at both ends and identify what the supplied implementation evidence actually exercises."
